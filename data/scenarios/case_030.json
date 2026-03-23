@@ -1,0 +1,183 @@
+{
+    "patient_id": "case_030",
+    "name": "Robert Tanner",
+    "age": 50,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 210,
+    "height_inches": 72,
+    "chief_complaint": "My back went out three days ago and now I'm having trouble controlling my bladder and my legs feel numb.",
+    "onset_description": "Was lifting heavy boxes at work 3 days ago when he felt a sudden pop in his lower back followed by severe pain. Pain initially was in the low back only but has progressively radiated to both legs. Yesterday developed numbness in his inner thighs and around his buttocks. This morning noticed difficulty starting his urine stream and feels like he cannot fully empty his bladder.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "low_back_pain": {
+            "description": "It started with a pop when I was lifting a heavy box. The pain is constant and deep in my lower back. It's bad but the numbness is what really scares me.",
+            "onset": "3 days ago, acute onset with lifting",
+            "character": "deep, constant, aching with sharp exacerbations",
+            "severity": "8/10",
+            "location": "lumbar spine, L4-S1 region",
+            "radiation": "bilateral lower extremities, posterior thighs to calves",
+            "aggravating_factors": ["bending forward", "sitting", "coughing", "straining", "Valsalva maneuver"],
+            "alleviating_factors": ["lying flat on back with knees bent", "ice", "ibuprofen minimally helpful"],
+            "associated_symptoms": ["bilateral leg pain", "saddle numbness", "urinary retention"]
+        },
+        "bilateral_leg_pain": {
+            "description": "Both my legs are aching and burning, from my butt all the way down to my feet. The left is worse than the right.",
+            "onset": "2 days ago, progressive",
+            "character": "burning, shooting pain in sciatic distribution bilaterally",
+            "severity": "7/10",
+            "location": "bilateral posterior thighs, calves, and feet, left greater than right",
+            "radiation": "from buttocks to feet bilaterally",
+            "aggravating_factors": ["sitting", "standing", "walking", "straight leg raise"],
+            "alleviating_factors": ["lying flat with knees bent"],
+            "associated_symptoms": ["numbness", "tingling", "weakness"]
+        },
+        "saddle_anesthesia": {
+            "description": "The area between my legs and around my rear end feels numb and tingly, like it's falling asleep. It's a really strange feeling.",
+            "onset": "Yesterday, progressive",
+            "character": "numbness and paresthesias in perineal and perianal distribution",
+            "severity": "7/10",
+            "location": "perineum, perianal area, inner thighs bilaterally",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["urinary retention", "decreased rectal tone"]
+        },
+        "urinary_retention": {
+            "description": "I can barely pee. I feel like I have to go really bad but when I try, it just trickles. And I've wet myself twice, which has never happened to me before.",
+            "onset": "This morning",
+            "character": "difficulty initiating stream, incomplete emptying, overflow incontinence",
+            "severity": "8/10",
+            "location": "suprapubic fullness",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["saddle numbness", "suprapubic discomfort"]
+        },
+        "bilateral_leg_weakness": {
+            "description": "My legs feel heavy and weak. I'm having trouble lifting my feet when I walk. I tripped twice on the way in because my feet are dragging.",
+            "onset": "Yesterday, progressive",
+            "character": "bilateral lower extremity weakness, worse distally, bilateral foot drop developing",
+            "severity": "7/10",
+            "location": "bilateral lower extremities, worse in ankles and feet",
+            "radiation": null,
+            "aggravating_factors": ["walking", "standing"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["gait instability", "leg pain"]
+        },
+        "numbness_and_tingling_legs": {
+            "description": "Both feet and lower legs are tingling and feel like they're going to sleep. The numbness is creeping up.",
+            "onset": "2 days ago, progressive",
+            "character": "progressive ascending numbness and paresthesias",
+            "severity": "7/10",
+            "location": "bilateral feet and lower legs, ascending to mid-thigh",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["weakness", "gait difficulty"]
+        }
+    },
+    "symptoms_absent": [
+        "fever", "unexplained weight loss", "history of cancer",
+        "chest pain", "shortness of breath", "abdominal pain",
+        "bowel incontinence (but reports decreased rectal sensation)",
+        "upper extremity symptoms", "headache", "neck pain",
+        "trauma other than lifting injury", "night sweats",
+        "IV drug use"
+    ],
+    "vitals": {
+        "heart_rate": 88,
+        "blood_pressure_systolic": 152,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 18,
+        "spo2": 98.0,
+        "temperature": 98.4,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 8.4, Hgb 15.2, Plt 234 - within normal limits",
+        "BMP": "Na 141, K 4.2, Cr 1.0, BUN 16, Glucose 98 - within normal limits",
+        "ESR": "12 mm/hr (normal)",
+        "CRP": "8 mg/L (mildly elevated, likely from acute injury)",
+        "urinalysis": "Clear, no infection, no blood",
+        "post_void_residual": "480 mL (markedly elevated, normal <100 mL, confirms urinary retention)",
+        "MRI_lumbar_spine": "Large central disc herniation at L4-L5 with significant compression of the cauda equina. Moderate central canal stenosis at L5-S1. No evidence of tumor or infection."
+    },
+    "past_medical_history": [
+        "Chronic low back pain (10 years, managed conservatively)",
+        "Lumbar disc bulge L4-L5 (diagnosed on MRI 5 years ago, was small and treated conservatively)",
+        "Hypertension (8 years)",
+        "Obesity (BMI 28.5)",
+        "Mild degenerative disc disease lumbar spine"
+    ],
+    "surgical_history": [
+        "Arthroscopic right knee surgery for meniscus tear (2010)",
+        "Tonsillectomy (1982)"
+    ],
+    "medications": [
+        "Lisinopril 20mg daily",
+        "Ibuprofen 800mg three times daily (started 3 days ago for back pain)",
+        "Cyclobenzaprine 10mg at bedtime (started 3 days ago)",
+        "Acetaminophen 1000mg every 6 hours (started 3 days ago)"
+    ],
+    "allergies": [
+        "No known drug allergies"
+    ],
+    "social_history": {
+        "smoking": "Former smoker, quit 8 years ago, 20 pack-year history",
+        "alcohol": "2-3 beers per week",
+        "drugs": "Denies",
+        "occupation": "Warehouse supervisor, involves heavy lifting and prolonged standing. Has been doing this for 25 years.",
+        "living_situation": "Lives with wife and 16-year-old son in a single-story home. Wife works full time as an administrative assistant.",
+        "exercise": "Used to play recreational softball and go to the gym. Has been less active the past few years due to back pain.",
+        "diet": "Regular diet, wife cooks most meals. Eats fast food for lunch at work."
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Chronic back problems, had spinal surgery at age 60, hypertension, alive at 78",
+            "mother": "Osteoarthritis, Type 2 Diabetes, alive at 76",
+            "brother": "Herniated disc, managed conservatively, healthy otherwise at 47"
+        }
+    },
+    "personality": "Stoic and tough, a working man who pushes through pain. Waited too long to come in because he thought the back pain would resolve on its own. Now genuinely frightened by the neurological symptoms but tries to mask his fear. Doesn't want to seem weak.",
+    "communication_style": "Matter-of-fact and brief. Gives short answers unless prompted for detail. Uses plain working-class language. Avoids eye contact when discussing embarrassing symptoms like incontinence. Needs to be asked directly about sensitive symptoms as he won't volunteer them.",
+    "pain_description_style": "Understates pain due to masculine stoicism. Says 'it's bad' rather than elaborating. When asked for a number, tends to rate lower than expected. Will wince or shift position to reveal true pain level. Describes pain in practical terms ('can't work,' 'can't sit').",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Cauda equina syndrome: saddle anesthesia + urinary retention + bilateral leg weakness = surgical emergency",
+            "Post-void residual 480 mL confirming neurogenic bladder",
+            "Progressive bilateral lower extremity weakness with developing foot drop",
+            "Large central disc herniation at L4-L5 compressing cauda equina on MRI",
+            "Progressive neurological deterioration over 3 days (delayed presentation worsens prognosis)",
+            "Bilateral positive straight leg raise",
+            "Decreased rectal tone on exam suggesting S2-S4 involvement",
+            "Time-critical: surgical decompression ideally within 24-48 hours of symptom onset for best outcomes"
+        ],
+        "diagnosis": "Cauda equina syndrome secondary to large central L4-L5 disc herniation",
+        "differential_diagnoses": [
+            "Conus medullaris syndrome",
+            "Epidural abscess (less likely without fever or risk factors)",
+            "Spinal epidural hematoma",
+            "Spinal tumor with cord compression",
+            "Severe bilateral lumbar radiculopathy without true cauda equina",
+            "Guillain-Barre syndrome"
+        ],
+        "recommended_interventions": [
+            "EMERGENT neurosurgery or spine surgery consult - this is a surgical emergency",
+            "Urgent surgical decompression (laminectomy and discectomy) - ideally within 24-48 hours",
+            "Foley catheter insertion for urinary retention",
+            "Strict bed rest and spine precautions",
+            "IV dexamethasone 10mg to reduce edema and inflammation",
+            "Pain management with IV opioids and muscle relaxants",
+            "Serial neurological examinations (motor, sensory, reflexes, rectal tone)",
+            "NPO for anticipated surgery",
+            "DVT prophylaxis with sequential compression devices",
+            "Type and screen for surgery",
+            "Pre-operative medical clearance",
+            "Educate patient about surgical urgency and potential for incomplete neurological recovery given delayed presentation",
+            "Social work consult for occupational disability and rehabilitation planning"
+        ]
+    }
+}

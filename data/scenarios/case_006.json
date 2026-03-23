@@ -1,0 +1,186 @@
+{
+    "patient_id": "case_006",
+    "name": "Priya Sharma",
+    "age": 48,
+    "sex": "Female",
+    "ethnicity": "South Asian (Indian American)",
+    "weight_lbs": 155,
+    "height_inches": 62,
+    "chief_complaint": "I have the worst headache of my life and my vision is blurry, I feel like my head is going to explode",
+    "onset_description": "Headache started about 5 hours ago and has been getting progressively worse. Noticed blurry vision about 2 hours ago. Took ibuprofen at home without relief. Coworker insisted she come to the ED when she looked 'really unwell' at work.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "Severe pounding headache all over, worst in the back of my head",
+            "onset": "5 hours ago, progressive worsening",
+            "character": "throbbing, pounding, constant",
+            "severity": "9/10",
+            "location": "diffuse, worst occipitally",
+            "radiation": "behind both eyes",
+            "aggravating_factors": ["light", "bending over", "any movement"],
+            "alleviating_factors": ["nothing, ibuprofen didn't help"],
+            "associated_symptoms": ["blurry vision", "nausea", "chest tightness"]
+        },
+        "visual_changes": {
+            "description": "Everything looks blurry and I'm seeing little spots floating around",
+            "onset": "about 2 hours ago",
+            "character": "bilateral blurry vision with floaters",
+            "severity": "7/10",
+            "location": "both eyes",
+            "radiation": null,
+            "aggravating_factors": ["trying to read or focus on anything"],
+            "alleviating_factors": ["closing eyes"],
+            "associated_symptoms": ["headache"]
+        },
+        "nausea": {
+            "description": "Very nauseous, vomited once in the car on the way here",
+            "onset": "about 3 hours ago",
+            "character": "persistent nausea with one episode of vomiting",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["movement", "trying to drink water"],
+            "alleviating_factors": ["staying still"],
+            "associated_symptoms": ["headache"]
+        },
+        "chest_tightness": {
+            "description": "Feels like a band around my chest, not really pain but very uncomfortable",
+            "onset": "about 3 hours ago",
+            "character": "tightness, pressure",
+            "severity": "5/10",
+            "location": "across the chest",
+            "radiation": null,
+            "aggravating_factors": ["anxiety", "deep breathing"],
+            "alleviating_factors": ["nothing specific"],
+            "associated_symptoms": ["shortness of breath"]
+        },
+        "shortness_of_breath": {
+            "description": "Feeling a little breathless, not terrible but noticeable",
+            "onset": "about 2 hours ago",
+            "character": "mild air hunger",
+            "severity": "4/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["walking"],
+            "alleviating_factors": ["sitting still"],
+            "associated_symptoms": ["chest tightness"]
+        },
+        "epistaxis": {
+            "description": "Nose started bleeding about an hour ago, hasn't fully stopped",
+            "onset": "1 hour ago",
+            "character": "oozing from left nostril",
+            "severity": "3/10",
+            "location": "left nostril",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["pinching nose"],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "fever", "cough", "leg swelling", "palpitations", "syncope",
+        "focal weakness", "numbness or tingling", "slurred speech",
+        "diarrhea", "abdominal pain", "rash", "joint pain",
+        "urinary symptoms", "seizures"
+    ],
+    "vitals": {
+        "heart_rate": 108,
+        "blood_pressure_systolic": 224,
+        "blood_pressure_diastolic": 132,
+        "respiratory_rate": 20,
+        "spo2": 97.0,
+        "temperature": 98.6,
+        "pain_scale": 9
+    },
+    "labs": {
+        "troponin": "0.06 ng/mL (mildly elevated, cardiac strain from severe hypertension)",
+        "BNP": "280 pg/mL (mildly elevated)",
+        "CBC": "WBC 8.8, Hgb 13.5, Plt 255 - within normal limits",
+        "BMP": "Na 138, K 3.6, Cr 1.4 (elevated), Glucose 98 - BUN 24",
+        "PT/INR": "11.5 sec / 1.0",
+        "urinalysis": "Protein 2+, no blood, no WBC - proteinuria suggesting hypertensive nephropathy",
+        "LDH": "260 U/L (mildly elevated)",
+        "peripheral_smear": "No schistocytes (rules out TTP/HUS)",
+        "urine_drug_screen": "Negative",
+        "TSH": "3.2 mIU/L (normal)",
+        "ECG": "Sinus tachycardia, left ventricular hypertrophy with strain pattern, no acute ST changes"
+    },
+    "past_medical_history": [
+        "Hypertension (12 years, poorly controlled)",
+        "Chronic kidney disease stage 2",
+        "Migraine headaches",
+        "Anxiety disorder"
+    ],
+    "surgical_history": [
+        "Cesarean section (2004)",
+        "Laparoscopic cholecystectomy (2018)"
+    ],
+    "medications": [
+        "Amlodipine 10mg daily",
+        "Losartan 100mg daily",
+        "Hydrochlorothiazide 25mg daily",
+        "Sumatriptan 50mg as needed for migraines",
+        "Sertraline 50mg daily"
+    ],
+    "allergies": [
+        "Lisinopril (severe dry cough)",
+        "Erythromycin (GI upset)"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "Rare, maybe a glass of wine at a celebration",
+        "drugs": "Denies",
+        "occupation": "Accountant at a large firm, currently very stressed with tax season deadlines",
+        "living_situation": "Lives with husband and two teenage children",
+        "exercise": "Used to do yoga regularly but hasn't had time for months due to work stress",
+        "diet": "Mostly home-cooked Indian food, admits to using a lot of salt in cooking and eating salty snacks at work"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Hypertension, Type 2 Diabetes, chronic kidney disease, alive at 76",
+            "mother": "Hypertension, had a stroke at age 62, alive at 74 with residual weakness",
+            "sister": "Hypertension diagnosed at age 38",
+            "maternal_grandmother": "Died of kidney failure"
+        }
+    },
+    "personality": "anxious and overwhelmed, a perfectionist who is used to being in control and is very scared right now",
+    "communication_style": "Articulate and detailed when describing symptoms. Asks a lot of questions because she wants to understand what is happening. May become tearful when discussing stress. Wants to know every lab result and what it means. Will ask 'Is this a stroke? Am I going to die?'",
+    "pain_description_style": "Very precise with descriptions, uses vivid language ('my head feels like it's in a vise,' 'pounding like a drum'). Rates pain accurately and doesn't minimize or exaggerate.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Blood pressure 224/132 - severely elevated meeting criteria for hypertensive emergency",
+            "End-organ damage: visual changes (hypertensive retinopathy risk), headache with vomiting (cerebral edema risk), epistaxis, elevated creatinine (renal involvement), proteinuria, elevated troponin (cardiac strain)",
+            "LVH with strain pattern on ECG indicating chronic uncontrolled hypertension",
+            "Absence of focal neurological deficits (important to document - rules out acute stroke)",
+            "Negative urine drug screen (rules out sympathomimetic cause)",
+            "Strong family history of hypertension, stroke, and kidney disease",
+            "Elevated work stress and high-sodium diet as contributing factors",
+            "History of migraines - must differentiate from hypertensive encephalopathy"
+        ],
+        "diagnosis": "Hypertensive Emergency with End-Organ Damage",
+        "differential_diagnoses": [
+            "Hypertensive urgency without end-organ damage",
+            "Acute stroke (ischemic or hemorrhagic)",
+            "Pheochromocytoma crisis",
+            "Severe migraine with aura",
+            "Subarachnoid hemorrhage",
+            "Preeclampsia (rule out pregnancy first)"
+        ],
+        "recommended_interventions": [
+            "IV access with continuous blood pressure monitoring (arterial line consideration)",
+            "IV antihypertensive: nicardipine or clevidipine drip (goal: reduce MAP by no more than 25% in first hour)",
+            "Stat CT head without contrast to rule out hemorrhagic stroke",
+            "Continuous cardiac monitoring",
+            "Fundoscopic exam to assess for papilledema and retinal hemorrhages",
+            "Serial neurological assessments",
+            "Urine pregnancy test",
+            "Serial troponins",
+            "Nephrology consult for renal involvement",
+            "Pain management for headache (avoid NSAIDs given renal function)",
+            "ICU admission for blood pressure titration",
+            "Stress management and dietary counseling prior to discharge"
+        ]
+    }
+}

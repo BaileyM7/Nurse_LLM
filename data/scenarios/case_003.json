@@ -1,0 +1,157 @@
+{
+    "patient_id": "case_003",
+    "name": "Robert Chen",
+    "age": 56,
+    "sex": "Male",
+    "ethnicity": "Chinese American",
+    "weight_lbs": 198,
+    "height_inches": 70,
+    "chief_complaint": "I keep getting this squeezing in my chest when I climb stairs or walk too fast, and it's been happening more and more this past week",
+    "onset_description": "Episodes started about 3 weeks ago with exertion but over the past week have been coming on with less and less activity. Today it happened just walking from the parking lot.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest_pain": {
+            "description": "Squeezing pressure across the chest that comes and goes with activity",
+            "onset": "3 weeks, worsening over past 7 days",
+            "character": "squeezing, like a tight band around my chest",
+            "severity": "6/10 at worst, currently 3/10 at rest",
+            "location": "across the front of the chest, more on the left side",
+            "radiation": "left shoulder and inner left arm",
+            "aggravating_factors": ["walking", "climbing stairs", "carrying groceries", "stress"],
+            "alleviating_factors": ["stopping and resting for a few minutes", "sitting down"],
+            "associated_symptoms": ["shortness of breath", "mild lightheadedness"]
+        },
+        "shortness_of_breath": {
+            "description": "Gets winded much easier than usual, especially when the chest squeezing happens",
+            "onset": "about 2 weeks ago",
+            "character": "feeling like I need to stop and catch my breath",
+            "severity": "5/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["exertion", "walking uphill"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["chest pressure"]
+        },
+        "lightheadedness": {
+            "description": "Feels a bit dizzy when the chest pain is at its worst",
+            "onset": "past week",
+            "character": "like the room tilts for a second",
+            "severity": "3/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["standing up quickly", "during chest pain episodes"],
+            "alleviating_factors": ["sitting down"],
+            "associated_symptoms": []
+        },
+        "fatigue": {
+            "description": "I just don't have the energy I used to, even simple things wipe me out",
+            "onset": "2-3 weeks",
+            "character": "general tiredness, low stamina",
+            "severity": "4/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any physical activity"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "fever", "cough", "nausea", "vomiting", "palpitations", "syncope",
+        "leg swelling", "orthopnea", "abdominal pain", "diaphoresis at rest",
+        "headache", "vision changes", "rash", "urinary symptoms"
+    ],
+    "vitals": {
+        "heart_rate": 88,
+        "blood_pressure_systolic": 162,
+        "blood_pressure_diastolic": 96,
+        "respiratory_rate": 18,
+        "spo2": 97.0,
+        "temperature": 98.4,
+        "pain_scale": 3
+    },
+    "labs": {
+        "troponin": "0.03 ng/mL (normal, but needs serial monitoring)",
+        "BNP": "120 pg/mL (mildly elevated)",
+        "CBC": "WBC 7.8, Hgb 14.6, Plt 230 - within normal limits",
+        "BMP": "Na 141, K 4.5, Cr 1.0, Glucose 118 (mildly elevated) - BUN 16",
+        "PT/INR": "11.8 sec / 1.0",
+        "lipid_panel": "Total cholesterol 272, LDL 182, HDL 34, Triglycerides 280",
+        "HbA1c": "6.3% (prediabetic range)",
+        "magnesium": "2.0 mg/dL (normal)"
+    },
+    "past_medical_history": [
+        "Hypertension (12 years)",
+        "Hyperlipidemia (8 years, poorly controlled)",
+        "Prediabetes (2 years)",
+        "Obesity",
+        "Obstructive sleep apnea (uses CPAP)"
+    ],
+    "surgical_history": [
+        "Arthroscopic knee surgery, right (2019)",
+        "Appendectomy (1992)"
+    ],
+    "medications": [
+        "Amlodipine 10mg daily",
+        "Atorvastatin 20mg at bedtime",
+        "Aspirin 81mg daily",
+        "Metformin 500mg twice daily"
+    ],
+    "allergies": [
+        "Sulfa drugs (hives and facial swelling)",
+        "Latex (contact dermatitis)"
+    ],
+    "social_history": {
+        "smoking": "Current smoker, about half a pack per day for 30 years (15 pack-year history)",
+        "alcohol": "2-3 beers on weekends",
+        "drugs": "Denies",
+        "occupation": "Software engineer, sedentary desk job",
+        "living_situation": "Lives with wife and teenage son in two-story house",
+        "exercise": "Very little, used to play basketball but stopped about 2 years ago",
+        "diet": "Eats out frequently, heavy on red meat and fried foods"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Coronary artery disease, had bypass surgery at age 58, Type 2 Diabetes",
+            "mother": "Hypertension, stroke at age 70, alive at 79",
+            "brother": "High cholesterol, age 52",
+            "paternal_uncle": "Died of heart attack at age 50"
+        }
+    },
+    "personality": "stoic and matter-of-fact, tends to downplay symptoms and needed convincing from wife to come to the ED",
+    "communication_style": "Brief and to the point. Answers questions directly without a lot of elaboration. Will say 'it's not that bad' frequently. His wife, who is at bedside, will sometimes add details he leaves out.",
+    "pain_description_style": "Uses simple, functional descriptions ('it squeezes,' 'it's tight'). Reluctant to rate pain highly. Will underreport if not pressed for specifics.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Progressive exertional chest pain with decreasing activity threshold (crescendo pattern)",
+            "Pain radiates to left shoulder and arm",
+            "Pain relieved by rest (classic anginal pattern)",
+            "Normal initial troponin requiring serial monitoring to rule out evolving MI",
+            "Significantly elevated LDL and triglycerides with low HDL",
+            "Strong family history of premature coronary artery disease",
+            "Active smoking with sedentary lifestyle",
+            "Uncontrolled hypertension"
+        ],
+        "diagnosis": "Unstable Angina",
+        "differential_diagnoses": [
+            "NSTEMI (pending serial troponins)",
+            "Stable angina with progression",
+            "Aortic stenosis",
+            "Hypertensive heart disease",
+            "Musculoskeletal chest pain"
+        ],
+        "recommended_interventions": [
+            "12-lead ECG immediately",
+            "Continuous cardiac monitoring and telemetry",
+            "IV access",
+            "Serial troponins every 3-6 hours",
+            "Nitroglycerin sublingual for chest pain",
+            "Heparin anticoagulation per ACS protocol",
+            "Beta-blocker initiation if not contraindicated",
+            "Cardiology consult for possible cardiac catheterization",
+            "Smoking cessation counseling",
+            "Lipid management optimization"
+        ]
+    }
+}

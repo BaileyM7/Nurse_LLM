@@ -1,0 +1,167 @@
+{
+    "patient_id": "case_019",
+    "name": "Robert \"Bob\" Jameson",
+    "age": 71,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 220,
+    "height_inches": 69,
+    "chief_complaint": "My wife says my face is drooping and I can't get my words out right. My left arm won't work like it should.",
+    "onset_description": "Wife noticed sudden onset of left facial droop, slurred speech, and left arm weakness at approximately 9:15 AM while patient was eating breakfast. Patient was reportedly normal when he woke at 7:30 AM. Last known well time is approximately 9:00 AM. It is now 10:45 AM.",
+    "severity": "critical",
+    "setting": "Emergency Department - Stroke Alert",
+    "symptoms_present": {
+        "left_sided_weakness": {
+            "description": "My left arm feels heavy and clumsy, I dropped my coffee cup. I can barely lift it. My left leg feels a little weak too but not as bad.",
+            "onset": "approximately 1.5 hours ago, sudden",
+            "character": "sudden onset, left arm much worse than left leg",
+            "severity": "left arm 2/5 strength, left leg 4/5 strength",
+            "location": "left upper and lower extremity, arm predominant",
+            "radiation": null,
+            "aggravating_factors": ["attempted use"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["facial droop", "speech difficulty"]
+        },
+        "facial_droop": {
+            "description": "Wife: 'The left side of his face is sagging, he can't smile right.'",
+            "onset": "sudden, noticed at same time as arm weakness",
+            "character": "left-sided facial asymmetry, lower face predominant",
+            "severity": "moderate",
+            "location": "left face",
+            "radiation": null,
+            "aggravating_factors": ["attempting to smile or show teeth"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["drooling from left side of mouth"]
+        },
+        "dysarthria": {
+            "description": "I know what I... want to shay... the wordsh come out all... mushed up",
+            "onset": "sudden, same time as other symptoms",
+            "character": "slurred speech, patient aware of deficit, comprehension intact",
+            "severity": "moderate - intelligible with effort",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["longer sentences", "speaking quickly"],
+            "alleviating_factors": ["speaking slowly"],
+            "associated_symptoms": ["facial droop"]
+        },
+        "left_arm_numbness": {
+            "description": "It feels tingly and numb, like it fell asleep but it won't wake up",
+            "onset": "same time as weakness",
+            "character": "tingling and decreased sensation",
+            "severity": "moderate",
+            "location": "entire left arm and hand",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["left arm weakness"]
+        }
+    },
+    "symptoms_absent": [
+        "headache", "vision loss", "double vision", "vertigo",
+        "nausea", "vomiting", "seizure", "loss of consciousness",
+        "chest pain", "shortness of breath", "neck stiffness",
+        "fever", "confusion", "right-sided weakness",
+        "difficulty swallowing"
+    ],
+    "vitals": {
+        "heart_rate": 88,
+        "blood_pressure_systolic": 178,
+        "blood_pressure_diastolic": 96,
+        "respiratory_rate": 16,
+        "spo2": 97,
+        "temperature": 98.4,
+        "pain_scale": 0
+    },
+    "labs": {
+        "CBC": "WBC 8.8, Hgb 14.5, Plt 195",
+        "BMP": "Na 141, K 4.3, Cr 1.2, Glucose 155 (elevated), BUN 22",
+        "PT/INR": "12.8 sec / 1.1 (normal - not on anticoagulants)",
+        "troponin": "0.02 ng/mL (normal)",
+        "lipid_panel": "Total cholesterol 265, LDL 178, HDL 34, Triglycerides 220",
+        "HbA1c": "7.8% (elevated - suboptimal diabetic control)",
+        "blood_glucose_POC": "162 mg/dL"
+    },
+    "past_medical_history": [
+        "Hypertension (15 years, poorly controlled)",
+        "Type 2 Diabetes Mellitus (10 years)",
+        "Hyperlipidemia",
+        "Atrial fibrillation (diagnosed 2 years ago, not on anticoagulation - patient refused warfarin)",
+        "Obesity",
+        "Obstructive sleep apnea (non-compliant with CPAP)"
+    ],
+    "surgical_history": [
+        "Coronary artery bypass graft x3 (2018)",
+        "Right carotid endarterectomy (2021)"
+    ],
+    "medications": [
+        "Metformin 1000mg twice daily",
+        "Glipizide 10mg twice daily",
+        "Amlodipine 10mg daily",
+        "Losartan 100mg daily",
+        "Atorvastatin 80mg daily",
+        "Aspirin 81mg daily",
+        "Metoprolol succinate 50mg daily"
+    ],
+    "allergies": [
+        "Warfarin (patient refused due to fear of bleeding - documented as 'patient preference', not true allergy)",
+        "Contrast dye (mild hives with prior CT - premedicated successfully)"
+    ],
+    "social_history": {
+        "smoking": "Quit 3 years ago after CABG, 40 pack-year history",
+        "alcohol": "1-2 beers a few times per week",
+        "drugs": "Denies",
+        "occupation": "Retired electrician (IBEW Local 134)",
+        "living_situation": "Lives with wife of 48 years in a two-story house. Wife is primary support.",
+        "exercise": "Very sedentary, wife encourages walks but he rarely goes",
+        "diet": "Enjoys meat and potatoes, red meat 4-5 times per week, low vegetable intake. Wife tries to cook healthy but he adds salt to everything."
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Stroke at age 65, died at 72 from second stroke",
+            "mother": "Hypertension, Type 2 Diabetes, died at 80",
+            "brother": "MI at age 60, atrial fibrillation",
+            "sister": "Hypertension"
+        }
+    },
+    "personality": "frustrated and frightened by his deficits but trying to remain composed, a proud man who hates being dependent, defers to his wife for history",
+    "communication_style": "Speaks slowly with slurred speech but is cognitively intact. Gets frustrated when he can't articulate words clearly. His wife fills in details. He nods or gives thumbs up with right hand to confirm. Occasionally says 'damn it' when struggling with words. Pre-morbid personality was reportedly a quiet, no-nonsense type.",
+    "pain_description_style": "Denies pain entirely. Focuses more on the functional deficits: 'I can't use my arm' rather than any discomfort. When asked about headache specifically, firmly denies it.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Acute onset left-sided hemiparesis with facial droop and dysarthria - classic stroke presentation",
+            "Last known well approximately 1.5 hours ago - within tPA window (< 4.5 hours)",
+            "Known atrial fibrillation WITHOUT anticoagulation - major cardioembolic stroke risk",
+            "Multiple stroke risk factors: AFib, HTN, DM2, hyperlipidemia, prior CVA/TIA, smoking history, obesity, family history",
+            "Hypertensive on presentation (178/96) - must manage carefully in acute stroke",
+            "History of contrast reaction - need premedication protocol for CTA",
+            "CHA2DS2-VASc score is high (age >75 with HTN, DM, vascular disease, likely >=5)",
+            "Prior carotid endarterectomy suggesting known cerebrovascular disease",
+            "Elevated glucose - must manage as hyperglycemia worsens stroke outcomes"
+        ],
+        "diagnosis": "Acute Ischemic Stroke (likely cardioembolic from atrial fibrillation)",
+        "differential_diagnoses": [
+            "Transient ischemic attack (TIA)",
+            "Hemorrhagic stroke",
+            "Hypoglycemia",
+            "Todd's paralysis (post-seizure)",
+            "Brain tumor with acute presentation",
+            "Bell's palsy (does not explain limb weakness)"
+        ],
+        "recommended_interventions": [
+            "STAT non-contrast CT head to rule out hemorrhage",
+            "CT angiography head and neck (with premedication for contrast allergy)",
+            "NIHSS scoring (likely moderate-severe, ~10-14)",
+            "IV alteplase (tPA) if no contraindications and CT negative for hemorrhage",
+            "Consider mechanical thrombectomy if large vessel occlusion on CTA",
+            "Continuous cardiac monitoring",
+            "Blood glucose management (target 140-180 mg/dL)",
+            "Permissive hypertension up to 220/120 if no tPA; if tPA given, target <185/110",
+            "Dysphagia screening before any oral intake",
+            "Neurology/stroke team consult STAT",
+            "Establish IV access - two sites",
+            "Initiate anticoagulation discussion once acute phase managed (given AFib)",
+            "Admit to stroke unit or neuro ICU"
+        ]
+    }
+}

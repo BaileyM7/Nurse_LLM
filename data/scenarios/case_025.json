@@ -1,0 +1,173 @@
+{
+    "patient_id": "case_025",
+    "name": "Raymond Kowalski",
+    "age": 52,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 267,
+    "height_inches": 70,
+    "chief_complaint": "My leg is all red and swollen and it's spreading fast. I feel like crap, honestly.",
+    "onset_description": "Noticed a small red area on his left shin 3 days ago after scratching a bug bite. Over the past 24 hours the redness has spread rapidly up the leg, and he developed fevers and chills last night.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "leg_redness_and_swelling": {
+            "description": "My whole lower leg is red and hot to the touch, it's way bigger than it was yesterday. I drew a line with a marker and it's past the line now.",
+            "onset": "3 days ago, rapidly worsening over 24 hours",
+            "character": "spreading erythema with well-demarcated borders, warm, edematous, tender",
+            "severity": "8/10",
+            "location": "left lower leg, from ankle to just below knee",
+            "radiation": "spreading proximally toward knee",
+            "aggravating_factors": ["standing", "walking", "dependent position"],
+            "alleviating_factors": ["elevation provides mild relief"],
+            "associated_symptoms": ["fever", "chills", "malaise"]
+        },
+        "fever": {
+            "description": "I've been running a fever since last night, felt like I was burning up",
+            "onset": "12 hours ago",
+            "character": "intermittent high fevers with chills",
+            "severity": "high",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["took Tylenol at home with minimal effect"],
+            "associated_symptoms": ["chills", "sweating", "body aches"]
+        },
+        "chills": {
+            "description": "Shivering spells that come and go, especially when the fever spikes",
+            "onset": "12 hours ago",
+            "character": "intermittent rigors",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["fever spikes"],
+            "alleviating_factors": ["warm blankets"],
+            "associated_symptoms": ["fever", "sweating"]
+        },
+        "malaise": {
+            "description": "I feel wiped out, just exhausted. No energy at all.",
+            "onset": "2 days ago, worsening",
+            "character": "profound fatigue and general ill feeling",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["activity"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["decreased appetite", "fever"]
+        },
+        "leg_pain": {
+            "description": "The whole shin is throbbing. Feels like it's going to burst.",
+            "onset": "2 days ago, progressive",
+            "character": "throbbing, constant, with tenderness to touch",
+            "severity": "8/10",
+            "location": "left lower leg",
+            "radiation": "toward the knee",
+            "aggravating_factors": ["touching", "walking", "weight bearing"],
+            "alleviating_factors": ["elevation", "ibuprofen gives slight relief"],
+            "associated_symptoms": ["swelling", "warmth", "redness"]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain", "shortness of breath", "cough", "abdominal pain",
+        "nausea or vomiting", "diarrhea", "headache", "neck stiffness",
+        "urinary symptoms", "rash elsewhere on body", "joint pain in other locations",
+        "numbness or tingling in foot", "crepitus in the leg"
+    ],
+    "vitals": {
+        "heart_rate": 104,
+        "blood_pressure_systolic": 148,
+        "blood_pressure_diastolic": 88,
+        "respiratory_rate": 20,
+        "spo2": 97.0,
+        "temperature": 101.9,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 16.8 (elevated with left shift, 8% bands), Hgb 14.2, Plt 212",
+        "BMP": "Na 137, K 4.4, Cr 1.2, BUN 22, Glucose 248 (elevated)",
+        "HbA1c": "9.4% (poorly controlled diabetes)",
+        "CRP": "124 mg/L (markedly elevated)",
+        "ESR": "68 mm/hr (elevated)",
+        "blood_cultures": "Drawn x2 sets, pending",
+        "wound_culture": "Pending (obtained from area of bullae drainage)",
+        "lactate": "2.1 mmol/L (mildly elevated)",
+        "procalcitonin": "1.8 ng/mL (elevated)"
+    },
+    "past_medical_history": [
+        "Type 2 Diabetes Mellitus (12 years, poorly controlled)",
+        "Obesity (BMI 38.3)",
+        "Hypertension (8 years)",
+        "Peripheral venous insufficiency, bilateral lower extremities",
+        "Tinea pedis, chronic",
+        "Hyperlipidemia",
+        "Previous cellulitis left leg (2 years ago)"
+    ],
+    "surgical_history": [
+        "Inguinal hernia repair (2015)",
+        "Wisdom teeth extraction (1992)"
+    ],
+    "medications": [
+        "Metformin 1000mg twice daily",
+        "Glimepiride 4mg daily",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg at bedtime",
+        "Aspirin 81mg daily",
+        "Ibuprofen 400mg as needed (takes 2-3 times daily)"
+    ],
+    "allergies": [
+        "Amoxicillin (hives and tongue swelling)",
+        "Latex (contact dermatitis)"
+    ],
+    "social_history": {
+        "smoking": "Current smoker, 1 pack per day for 30 years (30 pack-year history)",
+        "alcohol": "4-6 beers on weekends, occasionally more",
+        "drugs": "Denies current use, used marijuana in his 20s",
+        "occupation": "Long-haul truck driver, sits for extended periods",
+        "living_situation": "Lives alone in an apartment, divorced 5 years ago, two adult children who live out of state",
+        "exercise": "Very little, sedentary occupation and lifestyle",
+        "diet": "Fast food most meals, admits to poor dietary habits. Rarely checks blood sugar."
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Type 2 Diabetes, died at 64 from MI",
+            "mother": "Hypertension, alive at 78",
+            "brother": "Type 2 Diabetes, had a below-knee amputation at age 54"
+        }
+    },
+    "personality": "Gruff and somewhat impatient. Uses humor to deflect from how worried he actually is. Doesn't like being told what to do. Downplays his poor self-care but becomes defensive if pressed.",
+    "communication_style": "Blunt and direct. Uses casual, sometimes crude language. Interrupts with questions. Reluctant to give detailed answers and prefers short responses. Gets annoyed with repetitive questions.",
+    "pain_description_style": "Tends to use dramatic comparisons when the pain is bad ('feels like my leg is on fire') but will minimize it if he thinks it makes him look weak. Provides a number grudgingly if asked.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Rapidly spreading cellulitis with systemic signs (fever, tachycardia, leukocytosis)",
+            "Poorly controlled diabetes (HbA1c 9.4%) increasing infection risk",
+            "Elevated inflammatory markers (CRP 124, procalcitonin 1.8) suggesting systemic infection",
+            "Penicillin allergy (amoxicillin) limits antibiotic options",
+            "History of recurrent cellulitis suggesting chronic predisposing factors",
+            "Risk factors: obesity, venous insufficiency, tinea pedis, diabetes, smoking",
+            "Advancing erythema despite 3 days of progression"
+        ],
+        "diagnosis": "Cellulitis of left lower extremity with systemic inflammatory response",
+        "differential_diagnoses": [
+            "Necrotizing fasciitis (must rule out given rapid spread and systemic toxicity)",
+            "Deep vein thrombosis with secondary cellulitis",
+            "Abscess with surrounding cellulitis",
+            "Erysipelas",
+            "Septic arthritis of ankle or knee"
+        ],
+        "recommended_interventions": [
+            "IV antibiotics (non-penicillin based due to allergy: vancomycin + piperacillin-tazobactam or clindamycin)",
+            "Mark borders of erythema with time stamps to monitor progression",
+            "Blood cultures before antibiotics",
+            "Wound culture if any drainage or bullae present",
+            "Surgical consult if concern for necrotizing fasciitis (pain out of proportion, crepitus, rapid spread)",
+            "Elevate affected extremity",
+            "Glycemic control with insulin sliding scale (hold oral agents)",
+            "DVT ultrasound of left lower extremity to rule out concurrent DVT",
+            "Pain management",
+            "Diabetes education and outpatient follow-up planning",
+            "Smoking cessation counseling"
+        ]
+    }
+}

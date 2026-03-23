@@ -1,0 +1,189 @@
+{
+    "patient_id": "case_022",
+    "name": "Elena Vasquez-Torres",
+    "age": 32,
+    "sex": "Female",
+    "ethnicity": "Mexican-American",
+    "weight_lbs": 155,
+    "height_inches": 65,
+    "chief_complaint": "I don't really remember what happened. My coworkers say I was shaking all over and passed out at my desk. When I woke up I was confused and my tongue is bleeding.",
+    "onset_description": "Witnessed generalized tonic-clonic seizure at workplace approximately 45 minutes ago. Coworker reports sudden onset of whole-body stiffening followed by rhythmic jerking lasting approximately 2 minutes. Patient was unresponsive during the event. Post-ictally confused for approximately 15 minutes, gradually becoming more oriented. No prior seizure history.",
+    "severity": "high",
+    "setting": "Emergency Department - arrived via EMS",
+    "symptoms_present": {
+        "witnessed_seizure": {
+            "description": "Coworker witness: 'She suddenly got stiff all over, her eyes rolled back, and then she started shaking really hard. It lasted maybe two minutes. She was making a gurgling sound. After it stopped she was out of it for a while.'",
+            "onset": "45 minutes ago",
+            "character": "generalized tonic-clonic: initial tonic phase (stiffening) followed by clonic phase (rhythmic jerking)",
+            "severity": "significant - lasted approximately 2 minutes",
+            "location": "generalized, bilateral",
+            "radiation": null,
+            "aggravating_factors": ["unknown trigger"],
+            "alleviating_factors": ["self-resolved"],
+            "associated_symptoms": ["tongue laceration", "urinary incontinence", "post-ictal confusion"]
+        },
+        "tongue_laceration": {
+            "description": "My tongue hurts really bad, I think I bit it. It's bleeding.",
+            "onset": "during the seizure",
+            "character": "lateral tongue bite, left side, actively oozing",
+            "severity": "moderate",
+            "location": "left lateral tongue",
+            "radiation": null,
+            "aggravating_factors": ["talking", "eating"],
+            "alleviating_factors": ["applying pressure with gauze"],
+            "associated_symptoms": []
+        },
+        "post_ictal_confusion": {
+            "description": "When I came to, I didn't know where I was or what happened. Things are getting clearer now but I still feel foggy.",
+            "onset": "immediately after seizure, lasting approximately 15 minutes, now improving",
+            "character": "disorientation, confusion, gradually clearing",
+            "severity": "moderate, improving",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["time"],
+            "associated_symptoms": ["fatigue", "headache"]
+        },
+        "headache": {
+            "description": "I have a really bad headache now, it's throbbing everywhere",
+            "onset": "after the seizure, post-ictal",
+            "character": "diffuse, throbbing",
+            "severity": "6/10",
+            "location": "generalized",
+            "radiation": null,
+            "aggravating_factors": ["bright lights", "noise"],
+            "alleviating_factors": ["closing eyes, resting"],
+            "associated_symptoms": ["fatigue"]
+        },
+        "muscle_soreness": {
+            "description": "My whole body aches like I ran a marathon, especially my arms and legs and back",
+            "onset": "after the seizure",
+            "character": "diffuse muscle soreness",
+            "severity": "5/10",
+            "location": "generalized, extremities and back",
+            "radiation": null,
+            "aggravating_factors": ["movement"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": []
+        },
+        "urinary_incontinence": {
+            "description": "I wet myself during it... I'm so embarrassed. That's never happened before.",
+            "onset": "during the seizure",
+            "character": "loss of bladder control during tonic-clonic activity",
+            "severity": null,
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "fever", "neck stiffness", "focal weakness", "numbness",
+        "vision changes", "speech difficulty", "chest pain",
+        "shortness of breath", "abdominal pain", "nausea", "vomiting",
+        "prior aura or warning", "recent head trauma",
+        "rash"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 148,
+        "blood_pressure_diastolic": 88,
+        "respiratory_rate": 18,
+        "spo2": 98,
+        "temperature": 99.2,
+        "pain_scale": 6
+    },
+    "labs": {
+        "CBC": "WBC 11.8 (mildly elevated post-ictal stress response), Hgb 12.5, Plt 280",
+        "BMP": "Na 138, K 4.2, Cr 0.7, Glucose 165 (elevated - post-ictal stress response), BUN 12, Ca 9.0, Mg 1.6 (low-normal)",
+        "liver_function": "AST 32, ALT 28, within normal limits",
+        "lactate": "3.8 mmol/L (elevated - post-ictal, expected to normalize)",
+        "CK": "450 U/L (elevated from muscle contractions during seizure)",
+        "prolactin": "42 ng/mL (elevated - supports generalized seizure, drawn within 30 min)",
+        "urine_drug_screen": "Negative",
+        "ethanol_level": "< 10 mg/dL (negative)",
+        "urinalysis": "Yellow, trace blood (likely from incontinence collection), otherwise normal, beta-hCG negative",
+        "TSH": "2.4 mIU/L (normal)"
+    },
+    "past_medical_history": [
+        "No prior seizure history",
+        "Migraine headaches (2-3 per month)",
+        "Depression (diagnosed 3 years ago)",
+        "Iron deficiency anemia (currently resolved)",
+        "Irregular menstrual cycles"
+    ],
+    "surgical_history": [
+        "Tonsillectomy (childhood)",
+        "Ovarian cyst removal, laparoscopic (2020)"
+    ],
+    "medications": [
+        "Fluoxetine 40mg daily",
+        "Sumatriptan 100mg as needed for migraines",
+        "Oral contraceptive (levonorgestrel-ethinyl estradiol) daily",
+        "Melatonin 5mg at bedtime"
+    ],
+    "allergies": [
+        "Keflex/cephalexin (hives and swelling)",
+        "Bactrim/trimethoprim-sulfamethoxazole (severe rash)"
+    ],
+    "social_history": {
+        "smoking": "Never",
+        "alcohol": "Drinks socially, 1-2 glasses of wine on weekends. Denies binge drinking.",
+        "drugs": "Denies any illicit drug use. Has never used recreational drugs.",
+        "occupation": "Graphic designer at an advertising firm, works at a computer all day",
+        "living_situation": "Lives with her boyfriend in an apartment",
+        "exercise": "Goes to spin class twice a week, hikes on weekends occasionally",
+        "diet": "Generally balanced, vegetarian for the past 5 years"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Epilepsy (diagnosed in her 30s, well-controlled on medication), Migraines",
+            "father": "Type 2 Diabetes, Hypertension, alive at 60",
+            "maternal_uncle": "Seizure disorder",
+            "sister": "Migraines, otherwise healthy, age 29"
+        }
+    },
+    "personality": "scared and embarrassed, keeps apologizing. Normally creative, articulate, and a bit perfectionistic. Very worried about what this means for her driving and her job.",
+    "communication_style": "Initially post-ictal and giving short, disjointed answers. As she clears, becomes more coherent and asks many questions: 'Does this mean I have epilepsy?' 'Can I still drive?' 'Will this happen again?' Becomes tearful when discussing the incontinence. Wants her boyfriend called.",
+    "pain_description_style": "Focuses more on the emotional distress than physical pain. Describes headache as 'throbbing' and body aches as 'like I worked out for hours.' Rates pain when asked but is more concerned about the implications of the seizure itself.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "First-time generalized tonic-clonic seizure in a 32-year-old with no prior history",
+            "Witnessed event with classic tonic-clonic description, tongue bite, and urinary incontinence confirming true seizure",
+            "Family history of epilepsy (mother and maternal uncle) - strong genetic risk factor",
+            "Elevated prolactin (42) drawn within 30 minutes supports generalized seizure diagnosis",
+            "Negative urine drug screen and ethanol level rule out substance-related seizure",
+            "Normal electrolytes and glucose rule out metabolic causes",
+            "Post-ictal confusion pattern consistent with generalized seizure",
+            "Elevated CK (450) from sustained muscle contractions",
+            "Takes fluoxetine - SSRIs can lower seizure threshold at higher doses"
+        ],
+        "diagnosis": "New Onset Generalized Tonic-Clonic Seizure (unprovoked, likely new-onset epilepsy given family history)",
+        "differential_diagnoses": [
+            "Epilepsy (new onset)",
+            "Provoked seizure (metabolic, toxic - less likely given normal labs)",
+            "Syncope with convulsive movements (less likely given witnessed tonic-clonic activity and tongue bite)",
+            "Brain tumor or structural lesion (must rule out with imaging)",
+            "Cerebral venous thrombosis (young woman on OCPs)",
+            "Autoimmune encephalitis",
+            "Psychogenic non-epileptic seizure (less likely given objective findings)"
+        ],
+        "recommended_interventions": [
+            "MRI brain with and without contrast (preferred over CT for first seizure workup)",
+            "CT head without contrast if MRI not immediately available",
+            "EEG (routine, ideally within 24 hours; consider prolonged monitoring)",
+            "Seizure precautions: padded side rails, bed in lowest position, suction at bedside",
+            "IV access maintained",
+            "Neurology consult",
+            "Discuss antiepileptic medication initiation (levetiracetam is first-line, well-tolerated)",
+            "Monitor for recurrent seizure activity",
+            "Driving restrictions counseling (state-specific laws, typically 3-12 months seizure-free)",
+            "Evaluate fluoxetine dose and seizure threshold implications",
+            "Education: seizure first aid, safety precautions, when to call 911",
+            "Observation period (minimum 6-12 hours) before discharge consideration",
+            "Follow-up with neurology as outpatient"
+        ]
+    }
+}

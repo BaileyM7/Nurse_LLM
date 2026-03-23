@@ -1,0 +1,157 @@
+{
+    "patient_id": "case_018",
+    "name": "Brittany Nguyen-O'Brien",
+    "age": 38,
+    "sex": "Female",
+    "ethnicity": "Vietnamese-Irish American",
+    "weight_lbs": 198,
+    "height_inches": 64,
+    "chief_complaint": "I'm having really bad pain under my right ribs, it started after dinner and just won't go away. I feel nauseous and kind of feverish.",
+    "onset_description": "Acute onset of right upper quadrant pain approximately 8 hours ago following a fast-food dinner. Has had similar but milder episodes over the past few months that resolved on their own. This episode is the most severe and has not relented.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "right_upper_quadrant_pain": {
+            "description": "It's a really intense, steady pain right under my ribs on the right side. It grabs and doesn't let go.",
+            "onset": "8 hours ago after eating fried chicken and fries",
+            "character": "constant, sharp, with intermittent intensification",
+            "severity": "8/10",
+            "location": "right upper quadrant, below costal margin",
+            "radiation": "right shoulder blade and right shoulder tip",
+            "aggravating_factors": ["deep inspiration (stops breathing in mid-breath)", "palpation", "fatty food intake", "movement"],
+            "alleviating_factors": ["nothing, tried ibuprofen and heating pad with no relief"],
+            "associated_symptoms": ["nausea", "vomiting", "fever"]
+        },
+        "nausea": {
+            "description": "I feel really sick to my stomach, threw up twice already",
+            "onset": "7 hours ago",
+            "character": "persistent",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["fatty food", "movement"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["vomiting"]
+        },
+        "vomiting": {
+            "description": "I threw up twice, mostly what I ate for dinner, then just dry heaving",
+            "onset": "about 6 hours ago",
+            "character": "non-bloody, food contents then dry heaves",
+            "severity": "2 episodes",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any movement"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["nausea", "RUQ pain"]
+        },
+        "fever": {
+            "description": "I've been feeling hot and clammy, my husband said I felt warm",
+            "onset": "about 4 hours ago",
+            "character": "low-grade, with chills",
+            "severity": "mild",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["took Tylenol but it didn't help much"],
+            "associated_symptoms": ["chills"]
+        }
+    },
+    "symptoms_absent": [
+        "jaundice", "dark urine", "clay-colored stools", "diarrhea",
+        "constipation", "hematemesis", "melena", "chest pain",
+        "shortness of breath", "urinary symptoms", "back pain",
+        "vaginal discharge", "headache", "weight loss"
+    ],
+    "vitals": {
+        "heart_rate": 96,
+        "blood_pressure_systolic": 142,
+        "blood_pressure_diastolic": 86,
+        "respiratory_rate": 18,
+        "spo2": 98,
+        "temperature": 101.2,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 14.2 (elevated with 80% neutrophils), Hgb 13.5, Plt 255",
+        "BMP": "Na 139, K 4.0, Cr 0.8, Glucose 108, BUN 16 - within normal limits",
+        "liver_function": "AST 48 (mildly elevated), ALT 55 (mildly elevated), Alk Phos 145 (elevated), Total Bilirubin 1.8 (mildly elevated), Direct Bilirubin 1.0 (elevated), GGT 95 (elevated), Albumin 3.8",
+        "lipase": "52 U/L (normal)",
+        "CRP": "8.5 mg/dL (elevated)",
+        "urinalysis": "Normal, negative beta-hCG"
+    },
+    "past_medical_history": [
+        "Obesity (BMI 34)",
+        "Polycystic ovary syndrome (PCOS)",
+        "Gestational diabetes during both pregnancies",
+        "Recurrent biliary colic episodes over past 6 months (never evaluated)",
+        "Iron deficiency anemia (resolved)"
+    ],
+    "surgical_history": [
+        "Cesarean section (2018)",
+        "Cesarean section (2021)"
+    ],
+    "medications": [
+        "Oral contraceptive pill (norgestimate-ethinyl estradiol) daily",
+        "Ibuprofen 400mg as needed",
+        "Prenatal vitamin (continued out of habit)"
+    ],
+    "allergies": [
+        "Amoxicillin (anaphylaxis - throat swelling, required epinephrine)",
+        "Adhesive tape (skin blistering)"
+    ],
+    "social_history": {
+        "smoking": "Quit 5 years ago when pregnant with first child, smoked half a pack per day for 10 years prior",
+        "alcohol": "Occasional glass of wine, maybe once a week",
+        "drugs": "Denies",
+        "occupation": "Elementary school teacher, currently on spring break",
+        "living_situation": "Married, lives with husband and two young children ages 4 and 7",
+        "exercise": "Tries to walk but limited time with young kids. Does a home workout video once or twice a week.",
+        "diet": "Busy schedule, eats a lot of convenience food and fast food. Knows she should eat better."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Gallstones (had cholecystectomy at age 45), Type 2 Diabetes",
+            "father": "Hypertension, high cholesterol",
+            "maternal_aunt": "Gallstones",
+            "sister": "PCOS, obesity"
+        }
+    },
+    "personality": "friendly and chatty but clearly in pain, apologetic about being in the ED ('I'm sure it's nothing serious'), worried about her kids at home",
+    "communication_style": "Talkative and personable. Apologizes frequently for 'bothering' the staff. Mentions her kids often. Will downplay symptoms initially but is honest when asked directly. Uses phrases like 'I probably should have come in sooner' and 'my husband made me come in.'",
+    "pain_description_style": "Points to exact location under right ribs. Demonstrates how taking a deep breath makes it worse by catching her breath mid-inhale (positive Murphy's sign equivalent). Describes pain as 'grabbing' and 'it won't let up.' Says previous episodes went away on their own but this one is different.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Persistent RUQ pain with fever (101.2F) - classic acute cholecystitis presentation",
+            "Positive Murphy's sign equivalent (catches breath with deep inspiration)",
+            "Leukocytosis (WBC 14.2) with neutrophil predominance",
+            "Elevated inflammatory markers (CRP 8.5)",
+            "Mildly elevated liver enzymes and bilirubin suggesting possible CBD involvement",
+            "Classic risk factors: Female, Forty (close), Fat (BMI 34), Fertile, Family history",
+            "History of recurrent biliary colic episodes never previously evaluated",
+            "Amoxicillin anaphylaxis - critical for antibiotic selection",
+            "Pain radiation to right shoulder (phrenic nerve irritation)"
+        ],
+        "diagnosis": "Acute Cholecystitis",
+        "differential_diagnoses": [
+            "Choledocholithiasis",
+            "Biliary colic (uncomplicated)",
+            "Acute cholangitis",
+            "Hepatitis",
+            "Right lower lobe pneumonia",
+            "Peptic ulcer disease"
+        ],
+        "recommended_interventions": [
+            "Right upper quadrant ultrasound (gallbladder wall thickening, pericholecystic fluid, gallstones, CBD dilation)",
+            "NPO status",
+            "IV fluid resuscitation",
+            "IV analgesics (ketorolac and/or opioids)",
+            "IV antiemetics (ondansetron)",
+            "IV antibiotics - avoid penicillin-based (anaphylaxis history) - use fluoroquinolone plus metronidazole, or aztreonam",
+            "Surgical consult for cholecystectomy (ideally within 72 hours)",
+            "HIDA scan if ultrasound equivocal",
+            "Monitor for signs of cholangitis (Charcot's triad, Reynolds' pentad)",
+            "Use non-adhesive dressings and hypoallergenic tape (tape allergy)"
+        ]
+    }
+}

@@ -1,0 +1,212 @@
+{
+    "patient_id": "case_034",
+    "name": "Danielle Foster",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 122,
+    "height_inches": 66,
+    "chief_complaint": "My heart is racing out of my chest, I feel like I'm burning up, and I can't stop shaking. Everything is going a million miles an hour.",
+    "onset_description": "Patient has a history of Graves' disease diagnosed 2 years ago. Stopped taking her methimazole 3 weeks ago because she ran out and could not afford the refill. Developed progressively worsening palpitations, heat intolerance, tremor, and agitation over the past week. Today became acutely worse with fever, confusion, and extreme agitation after a dental procedure this morning (possible triggering event).",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "palpitations_and_tachycardia": {
+            "description": "My heart is going crazy fast. It feels like it's going to beat right out of my chest. It won't slow down no matter what I do.",
+            "onset": "1 week progressive, acutely worse today",
+            "character": "persistent severe tachycardia, regular rhythm, forceful pounding",
+            "severity": "9/10",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": ["any activity", "anxiety", "being hot"],
+            "alleviating_factors": ["nothing relieves it"],
+            "associated_symptoms": ["dyspnea", "anxiety", "tremor"]
+        },
+        "fever": {
+            "description": "I'm burning up. I feel like I'm on fire from the inside out. I've been hot all week but today is the worst.",
+            "onset": "today, acutely",
+            "character": "high fever with profuse diaphoresis, flushed skin",
+            "severity": "high",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["blankets", "warm environment"],
+            "alleviating_factors": ["cool cloths", "fan"],
+            "associated_symptoms": ["diaphoresis", "flushing"]
+        },
+        "agitation_and_confusion": {
+            "description": "I can't sit still, I can't focus, everything is too loud and too bright. I feel like I'm losing my mind. My thoughts are racing.",
+            "onset": "today, progressive worsening over hours",
+            "character": "severe psychomotor agitation, restlessness, flight of ideas, intermittent confusion",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["stimulation", "noise", "being touched"],
+            "alleviating_factors": ["quiet environment"],
+            "associated_symptoms": ["insomnia", "emotional lability"]
+        },
+        "tremor": {
+            "description": "My hands are shaking so bad I can't hold a glass of water. Look at them — they won't stop.",
+            "onset": "1 week progressive, worse today",
+            "character": "fine bilateral hand tremor, now visible at rest",
+            "severity": "7/10",
+            "location": "bilateral hands and fingers",
+            "radiation": null,
+            "aggravating_factors": ["attempting fine motor tasks"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["palpitations", "weakness"]
+        },
+        "diarrhea": {
+            "description": "I've been having diarrhea for the past week, going 5-6 times a day. Loose and watery.",
+            "onset": "1 week ago",
+            "character": "frequent loose watery stools, non-bloody",
+            "severity": "6/10",
+            "location": "abdominal",
+            "radiation": null,
+            "aggravating_factors": ["eating"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["abdominal cramping", "dehydration"]
+        },
+        "weight_loss": {
+            "description": "I've lost about 12 pounds in the last month and I've been eating more than usual. My clothes are hanging off me.",
+            "onset": "progressive over 1 month",
+            "character": "unintentional weight loss despite increased appetite",
+            "severity": "moderate",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["increased appetite", "diarrhea"]
+        },
+        "heat_intolerance": {
+            "description": "I can't tolerate any warmth at all. I've had the AC cranked and fans on all week. Everyone else is cold and I'm drenched in sweat.",
+            "onset": "2-3 weeks, progressively worsening",
+            "character": "severe heat intolerance with profuse sweating",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["warm environment", "physical activity", "blankets"],
+            "alleviating_factors": ["cold environment", "cool cloths"],
+            "associated_symptoms": ["diaphoresis", "flushing"]
+        },
+        "dyspnea": {
+            "description": "I feel short of breath even just sitting here. Like I can't get enough air.",
+            "onset": "today",
+            "character": "exertional dyspnea progressing to resting dyspnea",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["exertion", "lying flat"],
+            "alleviating_factors": ["sitting upright"],
+            "associated_symptoms": ["tachycardia"]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain (other than palpitations)", "cough", "hemoptysis",
+        "headache", "neck pain or stiffness", "rash",
+        "joint pain", "urinary symptoms", "blood in stool",
+        "seizures", "syncope", "leg swelling"
+    ],
+    "vitals": {
+        "heart_rate": 162,
+        "blood_pressure_systolic": 168,
+        "blood_pressure_diastolic": 58,
+        "respiratory_rate": 24,
+        "spo2": 97.0,
+        "temperature": 104.2,
+        "pain_scale": 5
+    },
+    "labs": {
+        "TSH": "<0.01 mIU/L (undetectable, critically suppressed)",
+        "free_T4": "7.8 ng/dL (markedly elevated, normal 0.8-1.8)",
+        "free_T3": "22.4 pg/mL (markedly elevated, normal 2.3-4.2)",
+        "CBC": "WBC 11.2, Hgb 12.8, Plt 210",
+        "BMP": "Na 136, K 3.4 (low), Cr 0.8, BUN 12, Glucose 168 (elevated, hypermetabolic state), Ca 11.2 (elevated)",
+        "liver_function": "AST 86 (elevated), ALT 72 (elevated), Alk Phos 148 (elevated), Total Bilirubin 1.6 (mildly elevated)",
+        "troponin": "0.06 ng/mL (mildly elevated, demand ischemia from tachycardia)",
+        "cortisol": "28 mcg/dL (elevated, stress response)",
+        "BNP": "380 pg/mL (elevated, suggesting cardiac strain)",
+        "ECG": "Sinus tachycardia at 162 bpm, no ST changes, no atrial fibrillation",
+        "chest_xray": "Mild cardiomegaly, no pulmonary edema, no consolidation"
+    },
+    "past_medical_history": [
+        "Graves' disease (diagnosed 2 years ago)",
+        "Anxiety disorder (predates Graves' diagnosis, worsened with thyrotoxicosis)",
+        "Mild asthma",
+        "Iron deficiency anemia (resolved)"
+    ],
+    "surgical_history": [
+        "Laparoscopic cholecystectomy (2020)",
+        "Dental extraction under local anesthesia (today, possible trigger)"
+    ],
+    "medications": [
+        "Methimazole 20mg daily (STOPPED 3 WEEKS AGO — could not afford refill)",
+        "Alprazolam 0.5mg as needed for anxiety (takes 2-3 times per week)",
+        "Albuterol inhaler as needed (rarely used)",
+        "Multivitamin daily"
+    ],
+    "allergies": [
+        "Propylthiouracil/PTU (liver enzyme elevation)",
+        "Iodine-based contrast (hives — relevant for future imaging)"
+    ],
+    "social_history": {
+        "smoking": "Social smoker, 2-3 cigarettes per day",
+        "alcohol": "Glass of wine 3-4 nights per week, more when stressed",
+        "drugs": "Denies",
+        "occupation": "Freelance graphic designer, works from home. Recently lost a major client and has been under financial stress.",
+        "living_situation": "Lives alone in an apartment. Recently separated from husband (3 months ago). Has a 6-year-old daughter who stays with her most of the time. No nearby family support — parents live out of state.",
+        "exercise": "Used to do yoga and cycling but has been too anxious and shaky to exercise recently",
+        "diet": "Eating more than usual but losing weight. Diet is erratic. Relies on quick convenience foods. Often forgets to eat when working."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Hashimoto's thyroiditis, depression, alive at 62",
+            "father": "Hypertension, alive at 64",
+            "maternal_grandmother": "Graves' disease, had thyroidectomy",
+            "sister": "Healthy at 30"
+        }
+    },
+    "personality": "Normally creative and energetic but currently in an extreme hyperadrenergic state. Speaks rapidly, is emotionally labile (laughing then crying), and is difficult to redirect. Becomes angry when asked to slow down. Underneath the agitation is real fear — she knows something is seriously wrong. Worried about her daughter.",
+    "communication_style": "Pressured speech, tangential, jumps between topics. Speaks rapidly and loudly. Interrupts frequently. Difficult to get a linear history from. Gets frustrated and tearful. May need to be redirected gently and repeatedly. A calm, structured approach works best. Do not try to match her pace.",
+    "pain_description_style": "Does not focus on pain per se but on the overwhelming sensation of her body being out of control. Describes symptoms in emotional terms ('my heart is going to explode,' 'I feel like I'm on fire'). The subjective distress is more prominent than a specific pain complaint.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Thyroid storm: Burch-Wartofsky score likely >45 (fever 104.2, HR 162, agitation/confusion, GI symptoms, precipitating event)",
+            "Severely elevated thyroid hormones (free T4 7.8, free T3 22.4) with undetectable TSH",
+            "Stopped methimazole 3 weeks ago due to cost — medication non-adherence from financial barrier",
+            "PTU allergy limits antithyroid drug options (but PTU may be used cautiously in thyroid storm given severity)",
+            "Widened pulse pressure (168/58) indicating high-output cardiac state",
+            "Elevated troponin (demand ischemia) and BNP (cardiac strain) from sustained tachycardia",
+            "Hepatic dysfunction (elevated LFTs) from thyrotoxicosis",
+            "Hypercalcemia (11.2) from thyroid hormone-mediated bone resorption",
+            "Dental procedure today as possible precipitating trigger",
+            "Lives alone with young child — safety concern while acutely ill"
+        ],
+        "diagnosis": "Thyroid storm (thyrotoxic crisis) secondary to Graves' disease with medication non-compliance",
+        "differential_diagnoses": [
+            "Severe thyrotoxicosis without storm",
+            "Sepsis (dental procedure as source)",
+            "Sympathomimetic drug ingestion (cocaine, amphetamines)",
+            "Pheochromocytoma crisis",
+            "Neuroleptic malignant syndrome",
+            "Heat stroke",
+            "Panic disorder (diagnosis of exclusion)"
+        ],
+        "recommended_interventions": [
+            "Methimazole 20-40mg loading dose (or PTU 500-1000mg if methimazole unavailable, despite history — risk-benefit in life-threatening situation)",
+            "Iodine solution (SSKI or Lugol's) — given at least 1 hour AFTER antithyroid drug to block new hormone synthesis",
+            "Propranolol IV for heart rate control (preferred beta-blocker in thyroid storm — also blocks T4 to T3 conversion)",
+            "Hydrocortisone 100mg IV q8h (blocks T4 to T3 conversion and addresses possible relative adrenal insufficiency)",
+            "Aggressive cooling measures for hyperthermia (cooling blanket, acetaminophen — AVOID aspirin as it displaces thyroid hormone from binding proteins)",
+            "IV fluids for dehydration from diarrhea, fever, and hypermetabolic state",
+            "Continuous cardiac monitoring and telemetry",
+            "Electrolyte monitoring and replacement (K+ 3.4, replace)",
+            "Glucose monitoring (hypermetabolic state can cause hypoglycemia)",
+            "ICU admission — thyroid storm has 10-30% mortality",
+            "Hepatic function monitoring (thyrotoxic hepatopathy)",
+            "Social work to arrange care for 6-year-old daughter",
+            "Medication assistance program referral to prevent future non-compliance",
+            "Endocrinology consult for definitive treatment planning (radioactive iodine vs. thyroidectomy given recurrence)"
+        ]
+    }
+}

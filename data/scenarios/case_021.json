@@ -1,0 +1,193 @@
+{
+    "patient_id": "case_021",
+    "name": "Jaylen Washington",
+    "age": 20,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 185,
+    "height_inches": 73,
+    "chief_complaint": "I have a killer headache, my neck is super stiff, the light hurts my eyes, and I feel really hot. I've been throwing up all morning.",
+    "onset_description": "Progressive headache, fever, and neck stiffness developing over the past 18 hours. Started as a mild headache yesterday afternoon. Woke this morning with severe headache, high fever, and vomiting. Roommate brought him to the ED when he seemed confused and couldn't tolerate light.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "My head is pounding, it's like the worst headache I've ever had, it just keeps getting worse",
+            "onset": "18 hours ago, started mild, progressively worsening",
+            "character": "constant, diffuse, throbbing, severe",
+            "severity": "9/10",
+            "location": "diffuse, frontal and occipital",
+            "radiation": "down the back of the neck",
+            "aggravating_factors": ["light", "noise", "neck flexion", "any movement"],
+            "alleviating_factors": ["nothing - took Tylenol and Advil with no relief"],
+            "associated_symptoms": ["fever", "neck stiffness", "photophobia", "vomiting"]
+        },
+        "fever": {
+            "description": "I've been burning up since last night, soaking through my sheets with sweat",
+            "onset": "approximately 12 hours ago",
+            "character": "high, persistent with rigors",
+            "severity": "high",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["Tylenol brought it down slightly but it came right back"],
+            "associated_symptoms": ["chills", "diaphoresis", "headache"]
+        },
+        "neck_stiffness": {
+            "description": "I can't bend my neck forward at all, it's completely locked up and it makes the headache way worse if I try",
+            "onset": "noticed this morning, about 8 hours ago",
+            "character": "severe nuchal rigidity",
+            "severity": "severe",
+            "location": "posterior neck",
+            "radiation": null,
+            "aggravating_factors": ["flexion", "any movement"],
+            "alleviating_factors": ["lying still"],
+            "associated_symptoms": ["headache"]
+        },
+        "photophobia": {
+            "description": "The lights are killing me, I can't open my eyes all the way, it's way too bright in here",
+            "onset": "this morning",
+            "character": "severe light sensitivity",
+            "severity": "severe",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["fluorescent lights", "phone screen", "sunlight"],
+            "alleviating_factors": ["dark room", "covering eyes"],
+            "associated_symptoms": ["headache"]
+        },
+        "vomiting": {
+            "description": "I've thrown up like four or five times since this morning, can't keep anything down",
+            "onset": "this morning",
+            "character": "non-bloody, initially food then bile",
+            "severity": "4-5 episodes",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["movement", "sitting up"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["nausea", "headache"]
+        },
+        "altered_mental_status": {
+            "description": "Roommate reports: 'He was saying weird stuff this morning, didn't know what day it was, seemed out of it.' Patient is oriented to person and place but not date. Intermittently confused.",
+            "onset": "this morning, noticed by roommate",
+            "character": "intermittent confusion, disorientation to time",
+            "severity": "moderate",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["fever", "headache"]
+        },
+        "rash": {
+            "description": "Roommate: 'I noticed some reddish-purple spots on his legs and stomach.' Patient has scattered petechiae on lower extremities and trunk.",
+            "onset": "noticed this morning but may have been developing overnight",
+            "character": "non-blanching petechiae, scattered",
+            "severity": "moderate",
+            "location": "lower extremities and trunk",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["fever"]
+        }
+    },
+    "symptoms_absent": [
+        "focal weakness", "numbness", "seizure", "vision loss",
+        "ear pain", "sore throat (initially had mild one yesterday, now overshadowed by other symptoms)",
+        "chest pain", "shortness of breath", "abdominal pain",
+        "diarrhea", "urinary symptoms", "joint swelling",
+        "recent head trauma"
+    ],
+    "vitals": {
+        "heart_rate": 118,
+        "blood_pressure_systolic": 104,
+        "blood_pressure_diastolic": 62,
+        "respiratory_rate": 22,
+        "spo2": 97,
+        "temperature": 103.4,
+        "pain_scale": 9
+    },
+    "labs": {
+        "CBC": "WBC 22.5 (markedly elevated with 90% neutrophils and 8% bands - left shift), Hgb 14.8, Plt 125 (low - early DIC concern)",
+        "BMP": "Na 133 (low), K 4.0, Cr 1.3 (mildly elevated - dehydration), Glucose 92, BUN 24",
+        "CRP": "28.5 mg/dL (markedly elevated)",
+        "procalcitonin": "8.2 ng/mL (markedly elevated - suggests bacterial infection)",
+        "lactate": "3.2 mmol/L (elevated - tissue hypoperfusion)",
+        "PT/INR": "14.5 sec / 1.3 (mildly prolonged)",
+        "blood_cultures": "Drawn x2 from separate sites, pending",
+        "CSF_analysis": "Pending LP - expected findings for bacterial meningitis: elevated WBC (neutrophil predominant), elevated protein, low glucose, positive Gram stain"
+    },
+    "past_medical_history": [
+        "Generally healthy",
+        "Mild asthma (childhood, uses inhaler rarely)",
+        "Concussion from basketball (2 years ago, fully recovered)"
+    ],
+    "surgical_history": [
+        "Wisdom teeth extraction (2024)"
+    ],
+    "medications": [
+        "Albuterol inhaler as needed (hasn't used in over a year)",
+        "Acetaminophen 500mg taken x4 in last 24 hours",
+        "Ibuprofen 400mg taken x2 in last 24 hours"
+    ],
+    "allergies": [
+        "No known drug allergies"
+    ],
+    "social_history": {
+        "smoking": "Denies",
+        "alcohol": "Drinks on weekends with friends, maybe 5-6 drinks when going out",
+        "drugs": "Occasional marijuana",
+        "occupation": "College sophomore, biology major, lives in dormitory",
+        "living_situation": "Lives in a double dorm room on campus. Shares bathroom with the floor. Roommate is present and providing history.",
+        "exercise": "Plays intramural basketball 3 times per week, works out at campus gym",
+        "diet": "Campus dining hall, protein shakes, typical college diet"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Asthma, otherwise healthy, age 48",
+            "father": "Hypertension, healthy, age 50",
+            "sister": "Sickle cell trait (carrier), healthy, age 17",
+            "maternal_grandfather": "Died of stroke at 75"
+        }
+    },
+    "personality": "normally outgoing and confident but currently very ill and frightened. Compliant with care. His roommate is more anxious than he is and keeps asking if he'll be okay.",
+    "communication_style": "When lucid, speaks in short sentences due to pain. Uses young adult language: 'this is the worst, bro' and 'I feel like I'm dying.' Intermittently confused and may give inconsistent answers. Roommate provides supplemental history. Becomes more cooperative when addressed calmly.",
+    "pain_description_style": "Says 'my head is about to explode' and rates it 9/10. Keeps eyes squeezed shut. Holds his head in his hands. Moans with movement. During confused periods, may not reliably rate pain.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Classic meningitis triad: fever (103.4F), neck stiffness (nuchal rigidity), altered mental status",
+            "Non-blanching petechial rash - concerning for meningococcemia (Neisseria meningitidis)",
+            "Markedly elevated WBC (22.5) with bandemia (left shift) indicating severe bacterial infection",
+            "Elevated procalcitonin (8.2) strongly suggesting bacterial etiology",
+            "Elevated lactate (3.2) suggesting early sepsis/tissue hypoperfusion",
+            "Tachycardia (118) and relative hypotension (104/62) - early sepsis presentation",
+            "Thrombocytopenia (Plt 125) and prolonged INR - early DIC concern",
+            "College dormitory living - high-risk setting for meningococcal transmission",
+            "Progressive deterioration over 18 hours with confusion developing"
+        ],
+        "diagnosis": "Bacterial Meningitis (suspected Neisseria meningitidis given petechial rash and demographics)",
+        "differential_diagnoses": [
+            "Viral meningitis (less likely given severity and labs)",
+            "Subarachnoid hemorrhage",
+            "Viral encephalitis (HSV)",
+            "Brain abscess",
+            "Sepsis from another source",
+            "Rocky Mountain Spotted Fever (petechial rash)"
+        ],
+        "recommended_interventions": [
+            "DO NOT delay antibiotics for lumbar puncture - start empiric antibiotics IMMEDIATELY",
+            "IV ceftriaxone 2g plus IV vancomycin (empiric coverage)",
+            "IV dexamethasone 0.15mg/kg before or with first dose of antibiotics (reduces complications)",
+            "Lumbar puncture as soon as feasible (send CSF for cell count, protein, glucose, Gram stain, culture, meningitis PCR panel)",
+            "Blood cultures x2 from separate sites",
+            "Aggressive IV fluid resuscitation (sepsis protocol - 30mL/kg crystalloid bolus)",
+            "Continuous cardiac monitoring",
+            "Droplet isolation precautions until meningococcal disease excluded",
+            "Close contacts (roommate) need chemoprophylaxis (rifampin or ciprofloxacin)",
+            "Notify public health department",
+            "Neuro checks every 1 hour",
+            "IV antipyretics (acetaminophen)",
+            "Admit to ICU",
+            "Monitor for signs of increased intracranial pressure, DIC, adrenal crisis (Waterhouse-Friderichsen syndrome)"
+        ]
+    }
+}

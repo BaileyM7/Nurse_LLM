@@ -1,0 +1,190 @@
+{
+    "patient_id": "case_032",
+    "name": "Kayla Simmons",
+    "age": 19,
+    "sex": "Female",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 118,
+    "height_inches": 65,
+    "chief_complaint": "I can't stop throwing up and I feel so weak I can barely stand. My stomach is killing me and everything smells weird.",
+    "onset_description": "College student who has had Type 1 Diabetes since age 11. Came down with a stomach bug 2 days ago and was unable to keep food or fluids down. Ran out of her long-acting insulin 4 days ago and has only been taking her rapid-acting insulin sporadically. Roommate called 911 when she found patient confused and breathing rapidly on the dorm room floor.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "nausea_and_vomiting": {
+            "description": "I've been throwing up nonstop for two days. I can't even keep water down. My stomach just won't stop churning.",
+            "onset": "2 days ago",
+            "character": "persistent nausea with frequent non-bloody emesis, initially food contents then bilious",
+            "severity": "9/10",
+            "location": "epigastric and diffuse abdominal",
+            "radiation": null,
+            "aggravating_factors": ["any oral intake", "sitting up", "movement"],
+            "alleviating_factors": ["nothing has helped"],
+            "associated_symptoms": ["abdominal pain", "dehydration"]
+        },
+        "abdominal_pain": {
+            "description": "My whole stomach hurts, it's crampy and constant. It's been getting worse all day.",
+            "onset": "2 days ago, worsening",
+            "character": "diffuse, crampy abdominal pain, nonspecific",
+            "severity": "7/10",
+            "location": "diffuse abdomen, worse in epigastric region",
+            "radiation": null,
+            "aggravating_factors": ["vomiting", "eating"],
+            "alleviating_factors": ["lying in fetal position"],
+            "associated_symptoms": ["nausea", "vomiting"]
+        },
+        "rapid_breathing": {
+            "description": "I can't catch my breath. I keep having to take these big deep breaths. My roommate said I was breathing really fast and weird.",
+            "onset": "12 hours ago, progressive",
+            "character": "Kussmaul respirations — deep, rapid, labored breathing as metabolic compensation for acidosis",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["fruity odor to breath"]
+        },
+        "confusion_and_lethargy": {
+            "description": "Everything is foggy. I can't think straight. My roommate says I wasn't making sense when she found me.",
+            "onset": "6-8 hours ago, progressive",
+            "character": "altered mental status ranging from confusion to drowsiness, GCS approximately 13",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["dehydration", "acidosis"]
+        },
+        "excessive_thirst_and_urination": {
+            "description": "Before the vomiting started I was drinking water constantly and peeing all the time. Like going to the bathroom every 30 minutes.",
+            "onset": "4 days ago (correlating with running out of long-acting insulin)",
+            "character": "polydipsia and polyuria preceding the acute illness",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["weight loss"]
+        },
+        "weakness_and_fatigue": {
+            "description": "I have zero energy. My muscles feel like jelly. I could barely walk to the bathroom this morning.",
+            "onset": "3 days ago, progressive",
+            "character": "profound generalized weakness",
+            "severity": "8/10",
+            "location": "generalized",
+            "radiation": null,
+            "aggravating_factors": ["any activity"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["dehydration", "electrolyte imbalance"]
+        }
+    },
+    "symptoms_absent": [
+        "fever", "chest pain", "headache", "neck stiffness",
+        "diarrhea", "blood in vomit", "seizures", "focal neurological deficits",
+        "rash", "joint pain", "sore throat", "cough",
+        "vaginal discharge", "recent pregnancy or missed period"
+    ],
+    "vitals": {
+        "heart_rate": 128,
+        "blood_pressure_systolic": 92,
+        "blood_pressure_diastolic": 56,
+        "respiratory_rate": 32,
+        "spo2": 99.0,
+        "temperature": 97.8,
+        "pain_scale": 7
+    },
+    "labs": {
+        "BMP": "Na 128 (low), K 5.6 (high — critical), Cl 92 (low), CO2 8 (critically low), Cr 1.8 (elevated), BUN 34 (elevated), Glucose 486 mg/dL (critically elevated)",
+        "ABG": "pH 7.12 (severe acidosis), pCO2 18 (compensatory hyperventilation), pO2 108, HCO3 6 (critically low)",
+        "anion_gap": "28 (markedly elevated, normal 8-12)",
+        "serum_ketones": "beta-hydroxybutyrate 8.2 mmol/L (critically elevated, >3 is significant)",
+        "CBC": "WBC 14.2 (elevated, stress response common in DKA), Hgb 15.8 (hemoconcentrated), Plt 278",
+        "phosphorus": "1.8 mg/dL (low)",
+        "magnesium": "1.4 mEq/L (low)",
+        "serum_osmolality": "318 mOsm/kg (elevated)",
+        "urinalysis": "Large ketones, large glucose, specific gravity 1.035 (concentrated)",
+        "lipase": "42 U/L (normal, rules out pancreatitis as cause of abdominal pain)",
+        "HbA1c": "12.1% (severely uncontrolled)"
+    },
+    "past_medical_history": [
+        "Type 1 Diabetes Mellitus (diagnosed age 11)",
+        "Previous DKA episode (age 15, during adolescent non-compliance)",
+        "Generalized anxiety disorder",
+        "History of disordered eating (insulin omission for weight management — 'diabulimia' concern)"
+    ],
+    "surgical_history": [
+        "None"
+    ],
+    "medications": [
+        "Insulin glargine 18 units at bedtime (RAN OUT 4 DAYS AGO)",
+        "Insulin lispro per carb counting ratio (1:10), has been using sporadically",
+        "Sertraline 50mg daily",
+        "Combined oral contraceptive pill (levonorgestrel/ethinyl estradiol)"
+    ],
+    "allergies": [
+        "Adhesive tape (contact dermatitis — relevant for insulin pump or CGM if used)"
+    ],
+    "social_history": {
+        "smoking": "Never",
+        "alcohol": "Admits to drinking at college parties 1-2 times per week, sometimes binge drinking",
+        "drugs": "Occasional marijuana edibles",
+        "occupation": "Full-time college sophomore, studying psychology",
+        "living_situation": "Lives in a dorm room with one roommate. Parents live 3 hours away. No car on campus.",
+        "exercise": "Runs 3-4 times per week, has been losing weight recently",
+        "diet": "Irregular eating schedule. Sometimes skips meals. Roommate reports she has been eating less and less. Has mentioned wanting to lose weight."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Hashimoto's thyroiditis, anxiety disorder, alive at 46",
+            "father": "Healthy at 48",
+            "brother": "Type 1 Diabetes, well-controlled, age 16",
+            "maternal_aunt": "Type 1 Diabetes, celiac disease"
+        }
+    },
+    "personality": "Scared and embarrassed. Knows she messed up by running out of insulin and not refilling it. Alternates between tearful and defensive. Downplays her non-compliance. May not be fully honest about insulin omission for weight control unless asked in a non-judgmental way.",
+    "communication_style": "Speaks in short phrases when confused, more articulate as she improves. Uses casual young adult language. May deflect serious questions with humor or sarcasm when uncomfortable. Becomes emotional when parents are mentioned. Answers questions about diabetes management evasively.",
+    "pain_description_style": "Describes nausea and abdominal pain more than anything else. Rates pain functionally ('I can't eat anything,' 'I can't stop puking'). Not focused on the pain number — more focused on how terrible she feels overall.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Severe DKA: glucose 486, pH 7.12, HCO3 6, anion gap 28, beta-hydroxybutyrate 8.2",
+            "Critical hyperkalemia (K+ 5.6) — risk of cardiac arrhythmia (will drop rapidly with insulin and fluid therapy)",
+            "Severe dehydration with hypotension (BP 92/56) and tachycardia (HR 128)",
+            "Altered mental status (GCS ~13) indicating severe DKA",
+            "Insulin non-compliance: ran out of long-acting insulin 4 days ago",
+            "Concern for diabulimia (insulin omission for weight management) — needs sensitive screening",
+            "HbA1c 12.1% indicating chronic poor glycemic control",
+            "Hypokalemia will develop rapidly once insulin therapy begins — must replace K+ aggressively",
+            "Low phosphorus and magnesium requiring monitoring and replacement",
+            "Alcohol and marijuana use may contribute to management challenges"
+        ],
+        "diagnosis": "Diabetic Ketoacidosis (DKA), severe",
+        "differential_diagnoses": [
+            "Alcoholic ketoacidosis",
+            "Starvation ketosis",
+            "Hyperosmolar hyperglycemic state (HHS) — usually Type 2",
+            "Sepsis-triggered DKA (no clear infectious source here)",
+            "Toxic ingestion causing metabolic acidosis",
+            "Pancreatitis (ruled out by normal lipase)"
+        ],
+        "recommended_interventions": [
+            "Aggressive IV fluid resuscitation: 0.9% NS 1-2L bolus, then 250-500 mL/hr",
+            "Continuous IV insulin infusion at 0.1 units/kg/hr (do NOT bolus)",
+            "Potassium replacement: add 20-40 mEq KCl per liter of IV fluids once K+ drops below 5.3 (it will drop rapidly with insulin)",
+            "Hourly blood glucose monitoring",
+            "Q2-4 hour BMP for electrolyte monitoring (especially potassium)",
+            "Transition to D5 0.45% NS when glucose reaches 200-250 mg/dL (continue insulin until gap closes)",
+            "Phosphorus and magnesium replacement",
+            "Continuous cardiac monitoring for arrhythmias (hyperkalemia risk then hypokalemia risk)",
+            "Strict I&O with Foley catheter",
+            "Serial ABGs or venous blood gases until acidosis resolves",
+            "Transition to subcutaneous insulin only AFTER gap closes AND patient tolerates PO",
+            "Overlap IV and subQ insulin by 1-2 hours before stopping drip",
+            "Endocrinology consult",
+            "Social work and psychology consult for diabetes management barriers, diabulimia screening",
+            "Contact parents per patient's wishes",
+            "Diabetes self-management education before discharge",
+            "Ensure insulin prescription is accessible (pharmacy, cost, insurance)"
+        ]
+    }
+}

@@ -1,0 +1,191 @@
+{
+    "patient_id": "case_010",
+    "name": "Aaliyah Washington",
+    "age": 22,
+    "sex": "Female",
+    "ethnicity": "African American",
+    "weight_lbs": 135,
+    "height_inches": 64,
+    "chief_complaint": "I can't breathe, my inhaler isn't helping, please help me",
+    "onset_description": "Was at a friend's house where there were two cats. Within 30 minutes started wheezing. Used her rescue inhaler 4 times over the past 2 hours with minimal relief. Symptoms rapidly escalating.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "severe_dyspnea": {
+            "description": "Can barely get words out between breaths, feels like chest is closing up",
+            "onset": "2 hours ago, rapidly worsening",
+            "character": "can't move air in or out, chest feels locked",
+            "severity": "9/10",
+            "location": "chest, diffuse",
+            "radiation": null,
+            "aggravating_factors": ["talking", "any movement", "lying down"],
+            "alleviating_factors": ["nothing currently providing relief", "tripod position slightly better"],
+            "associated_symptoms": ["wheezing", "chest tightness", "anxiety"]
+        },
+        "wheezing": {
+            "description": "Loud whistling sounds with every breath, can hear it without a stethoscope",
+            "onset": "2 hours ago",
+            "character": "diffuse bilateral expiratory wheezing, also some inspiratory wheezing",
+            "severity": "9/10",
+            "location": "bilateral lungs",
+            "radiation": null,
+            "aggravating_factors": ["attempted deep breaths"],
+            "alleviating_factors": ["none currently"],
+            "associated_symptoms": ["dyspnea", "chest tightness"]
+        },
+        "chest_tightness": {
+            "description": "Feels like someone wrapped a belt around my chest and keeps tightening it",
+            "onset": "2 hours ago",
+            "character": "constricting, squeezing",
+            "severity": "8/10",
+            "location": "entire chest, bilateral",
+            "radiation": null,
+            "aggravating_factors": ["breathing attempts", "coughing"],
+            "alleviating_factors": ["none"],
+            "associated_symptoms": ["wheezing", "dyspnea", "cough"]
+        },
+        "cough": {
+            "description": "Dry, hacking cough that won't stop, makes it even harder to breathe",
+            "onset": "2 hours ago",
+            "character": "non-productive, spasmodic, tight",
+            "severity": "7/10",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": ["talking", "attempting deep breaths"],
+            "alleviating_factors": ["none"],
+            "associated_symptoms": ["worsening dyspnea"]
+        },
+        "anxiety": {
+            "description": "I'm really scared, I feel like I'm going to die, this is the worst attack I've ever had",
+            "onset": "1.5 hours ago",
+            "character": "intense fear, sense of impending doom",
+            "severity": "9/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["inability to breathe", "inhaler not working"],
+            "alleviating_factors": ["reassurance from staff"],
+            "associated_symptoms": ["tachycardia", "diaphoresis"]
+        },
+        "diaphoresis": {
+            "description": "Sweating all over even though I'm cold",
+            "onset": "1 hour ago",
+            "character": "diffuse sweating",
+            "severity": null,
+            "location": "generalized",
+            "radiation": null,
+            "aggravating_factors": ["work of breathing"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["anxiety", "dyspnea"]
+        }
+    },
+    "symptoms_absent": [
+        "fever",
+        "productive sputum",
+        "hemoptysis",
+        "sharp or pleuritic chest pain",
+        "leg swelling or calf pain",
+        "sore throat",
+        "nasal congestion",
+        "vomiting",
+        "abdominal pain",
+        "rash or hives",
+        "syncope",
+        "headache"
+    ],
+    "vitals": {
+        "heart_rate": 132,
+        "blood_pressure_systolic": 142,
+        "blood_pressure_diastolic": 78,
+        "respiratory_rate": 34,
+        "spo2": 89.0,
+        "temperature": 98.4,
+        "pain_scale": 7
+    },
+    "labs": {
+        "ABG": "pH 7.44, pCO2 33 mmHg, pO2 62 mmHg (hypoxemia with respiratory alkalosis — concerning if pCO2 normalizes or rises, signals fatigue)",
+        "CBC": "WBC 8.9, Hgb 13.5, Plt 280, Eosinophils 6% (mildly elevated)",
+        "BMP": "Na 140, K 3.6, Cr 0.7, Glucose 142 (mild stress response), BUN 12",
+        "peak_flow": "120 L/min (predicted ~440 L/min, approximately 27% of predicted — severe obstruction)",
+        "lactate": "2.4 mmol/L (mildly elevated, reflecting work of breathing)",
+        "chest_xray": "Hyperinflated lungs, no infiltrates, no pneumothorax, no effusions"
+    },
+    "past_medical_history": [
+        "Asthma (diagnosed at age 6, classified as moderate persistent)",
+        "Allergic rhinitis",
+        "Eczema (childhood, mostly resolved)",
+        "2 prior ED visits for asthma exacerbations (ages 14 and 19)",
+        "1 prior ICU admission at age 14 for status asthmaticus"
+    ],
+    "surgical_history": [
+        "None"
+    ],
+    "medications": [
+        "Fluticasone/salmeterol (Advair) 250/50mcg inhaled twice daily (admits she's been inconsistent lately)",
+        "Albuterol (Ventolin) 90mcg HFA inhaler PRN",
+        "Montelukast (Singulair) 10mg daily",
+        "Cetirizine (Zyrtec) 10mg daily"
+    ],
+    "allergies": [
+        "Cats (severe asthma trigger and rhinitis)",
+        "Dust mites (asthma and rhinitis)",
+        "Pollen (seasonal rhinitis)",
+        "Ibuprofen (worsens wheezing)"
+    ],
+    "social_history": {
+        "smoking": "Never smoked, avoids secondhand smoke",
+        "alcohol": "Occasional social drinking, 1-2 drinks on weekends",
+        "drugs": "Denies",
+        "occupation": "College senior, studying nursing",
+        "living_situation": "Lives in a campus apartment with one roommate. No pets. Carpet in bedroom.",
+        "exercise": "Plays intramural volleyball, runs 2-3 times per week (when asthma controlled)",
+        "diet": "Generally healthy, vegetarian for 2 years"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Asthma (mild), allergic rhinitis",
+            "father": "Healthy",
+            "maternal_grandmother": "Asthma, died at 78 from stroke",
+            "brother_age_18": "Eczema and food allergies"
+        }
+    },
+    "personality": "normally outgoing and articulate but currently terrified and struggling to communicate due to respiratory distress, cooperative and eager to do whatever is needed to feel better",
+    "communication_style": "Speaks in fragmented, short phrases between gasps. Nods or shakes head for yes/no when too winded to talk. Very honest about medication non-compliance when asked. Will text her mom on her phone if she can't verbalize answers. Uses generation-appropriate language.",
+    "pain_description_style": "Describes the chest tightness vividly ('like my lungs are in a fist') but differentiates it from pain clearly. Knows her asthma well and can tell you this is her worst episode. Rates things quickly on a number scale when asked.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "SpO2 89% on room air — significant hypoxemia",
+            "Peak flow 27% of predicted — severe obstruction",
+            "Tachycardia at 132 bpm reflecting severity and albuterol use",
+            "Tachypnea at 34 breaths/min with accessory muscle use",
+            "Failed rescue inhaler therapy (4 doses without relief)",
+            "History of prior ICU admission for status asthmaticus",
+            "Cat exposure as known trigger",
+            "Non-compliance with controller medication (Advair)",
+            "NSAID sensitivity (ibuprofen worsens wheezing)",
+            "pCO2 still low at 33 — if it normalizes, patient is tiring and may need intubation"
+        ],
+        "diagnosis": "Severe Acute Asthma Exacerbation (Status Asthmaticus)",
+        "differential_diagnoses": [
+            "Anaphylaxis",
+            "Vocal cord dysfunction",
+            "Foreign body aspiration",
+            "Pneumothorax",
+            "Panic attack with hyperventilation"
+        ],
+        "recommended_interventions": [
+            "Immediate supplemental oxygen to maintain SpO2 > 93%",
+            "Continuous nebulized albuterol",
+            "Nebulized ipratropium bromide (Atrovent)",
+            "IV magnesium sulfate 2g over 20 minutes",
+            "Systemic corticosteroids (IV methylprednisolone 125mg or oral prednisone 60mg)",
+            "Continuous cardiorespiratory monitoring and pulse oximetry",
+            "Serial peak flow measurements",
+            "Serial ABGs — monitor for rising pCO2 (sign of respiratory fatigue)",
+            "ICU admission if no improvement within 1-2 hours",
+            "Prepare for possible intubation if clinical deterioration",
+            "Avoid NSAID-containing medications",
+            "Asthma action plan education and controller medication compliance counseling at discharge"
+        ]
+    }
+}

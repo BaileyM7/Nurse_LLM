@@ -1,0 +1,188 @@
+{
+    "patient_id": "case_029",
+    "name": "Evelyn O'Brien",
+    "age": 84,
+    "sex": "Female",
+    "ethnicity": "Caucasian/Irish American",
+    "weight_lbs": 128,
+    "height_inches": 62,
+    "chief_complaint": "I fell in the bathroom this morning and I can't move my leg. The pain is just terrible.",
+    "onset_description": "Patient fell at home this morning while getting out of the bathtub. Landed on her right side. Was unable to bear weight or move her right leg afterward. Daughter found her on the bathroom floor approximately 30 minutes after the fall and called 911.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "hip_pain": {
+            "description": "The pain is in my right hip and up into my groin. It's excruciating. Every little movement sends a shooting pain through me.",
+            "onset": "3 hours ago, immediately after fall",
+            "character": "severe, constant aching with sharp exacerbations on any movement",
+            "severity": "9/10",
+            "location": "right hip and groin",
+            "radiation": "radiates to right groin and anterior thigh",
+            "aggravating_factors": ["any movement of right leg", "internal or external rotation", "weight bearing attempt", "log rolling"],
+            "alleviating_factors": ["absolute immobilization", "IV morphine provided by EMS helped slightly"],
+            "associated_symptoms": ["inability to bear weight", "leg shortening and external rotation"]
+        },
+        "inability_to_bear_weight": {
+            "description": "I can't put any weight on it at all. When the paramedics tried to help me up I nearly screamed.",
+            "onset": "immediately after fall",
+            "character": "complete inability to bear weight on right lower extremity",
+            "severity": "10/10",
+            "location": "right lower extremity",
+            "radiation": null,
+            "aggravating_factors": ["any attempt to stand or move"],
+            "alleviating_factors": ["keeping leg completely still"],
+            "associated_symptoms": ["hip pain"]
+        },
+        "right_leg_deformity": {
+            "description": "My leg looks funny, it's turned outward and seems shorter than the other one",
+            "onset": "immediately after fall",
+            "character": "right leg shortened and externally rotated, classic hip fracture positioning",
+            "severity": null,
+            "location": "right lower extremity",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["hip pain", "inability to bear weight"]
+        },
+        "bruising": {
+            "description": "There's a big bruise forming on my hip already",
+            "onset": "developing since fall",
+            "character": "ecchymosis over right greater trochanter region",
+            "severity": "mild",
+            "location": "right lateral hip",
+            "radiation": null,
+            "aggravating_factors": ["palpation"],
+            "alleviating_factors": [],
+            "associated_symptoms": []
+        },
+        "anxiety_and_fear": {
+            "description": "I'm so scared. My neighbor broke her hip and she was never the same after that. She died six months later.",
+            "onset": "since the fall",
+            "character": "significant anxiety about prognosis and loss of independence",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["being alone", "talk of surgery", "uncertainty"],
+            "alleviating_factors": ["daughter's presence", "reassurance", "information about plan"],
+            "associated_symptoms": ["tearfulness", "trembling"]
+        }
+    },
+    "symptoms_absent": [
+        "head injury or loss of consciousness", "neck pain", "back pain",
+        "chest pain", "shortness of breath", "dizziness before the fall",
+        "palpitations before the fall", "numbness or tingling in right foot",
+        "inability to wiggle toes", "open wound or bleeding at hip",
+        "pain in other extremities", "abdominal pain", "confusion"
+    ],
+    "vitals": {
+        "heart_rate": 98,
+        "blood_pressure_systolic": 162,
+        "blood_pressure_diastolic": 88,
+        "respiratory_rate": 20,
+        "spo2": 96.0,
+        "temperature": 98.2,
+        "pain_scale": 9
+    },
+    "labs": {
+        "CBC": "WBC 10.2, Hgb 11.4 (mildly low), Plt 198",
+        "BMP": "Na 140, K 4.0, Cr 0.9, BUN 18, Glucose 112",
+        "PT_INR": "13.0 sec / 1.1 (normal, not on anticoagulants)",
+        "type_and_screen": "O positive, antibody screen negative",
+        "urinalysis": "Clear, no infection",
+        "troponin": "0.02 ng/mL (normal, obtained to rule out cardiac cause of fall)",
+        "calcium": "8.2 mg/dL (low-normal)",
+        "vitamin_D": "18 ng/mL (deficient)",
+        "albumin": "3.2 g/dL (low)",
+        "xray_pelvis_and_right_hip": "Displaced intracapsular fracture of the right femoral neck (Garden type III)"
+    },
+    "past_medical_history": [
+        "Osteoporosis (diagnosed 15 years ago, T-score -3.2 at last DEXA)",
+        "Hypertension (20 years)",
+        "Atrial fibrillation (paroxysmal, rate controlled)",
+        "Gastroesophageal reflux disease",
+        "Macular degeneration (bilateral, affects vision)",
+        "Mild cognitive impairment (not dementia)",
+        "Previous compression fracture T12 (2023)",
+        "Vitamin D deficiency",
+        "History of falls (2 falls in the past year)"
+    ],
+    "surgical_history": [
+        "Cholecystectomy (1990)",
+        "Bilateral cataract surgery (2016, 2017)",
+        "Vertebroplasty T12 (2023)"
+    ],
+    "medications": [
+        "Amlodipine 5mg daily",
+        "Metoprolol tartrate 25mg twice daily",
+        "Omeprazole 20mg daily",
+        "Denosumab 60mg subcutaneous every 6 months (last dose 4 months ago)",
+        "Calcium carbonate 600mg twice daily",
+        "Vitamin D3 2000 IU daily",
+        "Flecainide 50mg twice daily",
+        "Eye vitamins (AREDS2 formula) daily"
+    ],
+    "allergies": [
+        "Morphine (severe nausea, but tolerates hydromorphone)",
+        "Ibuprofen (GI bleeding history)"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "Glass of sherry occasionally, maybe once a week",
+        "drugs": "Denies",
+        "occupation": "Retired librarian",
+        "living_situation": "Lives alone in a two-story house (bedroom upstairs). Widowed 8 years ago. Daughter lives 10 minutes away. Has been independent with ADLs but uses a cane for outdoor walks. No home health aide.",
+        "exercise": "Walks to mailbox daily, attends chair exercise class at senior center weekly. Uses a cane outdoors.",
+        "diet": "Good appetite usually. Eats regular meals. Daughter helps with grocery shopping. Moderate calcium intake."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Osteoporosis, hip fracture at age 80, died at 86 from pneumonia",
+            "father": "Died at 78 from prostate cancer",
+            "sister": "Osteoporosis, wrist fracture, alive at 81",
+            "brother": "Died at 72 from heart attack"
+        }
+    },
+    "personality": "Fiercely independent and proud. Devastated at the idea of losing her autonomy. Was active and sharp-minded despite her age. Becomes tearful when discussing the possibility of not returning home. Worries she will be a burden on her daughter.",
+    "communication_style": "Articulate and educated. Uses proper grammar and complete sentences. Tends to give thorough, organized answers. Occasionally loses her train of thought but recovers quickly. Asks insightful questions about her care. Gets frustrated when people speak to her loudly as though she's deaf or confused.",
+    "pain_description_style": "Precise and descriptive. Uses words like 'excruciating' and 'stabbing.' Will give accurate pain scale numbers. Becomes terse and clipped when pain spikes. May grip the bedrail and close her eyes during painful assessments.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Displaced intracapsular femoral neck fracture requiring surgical intervention",
+            "Known severe osteoporosis (T-score -3.2) and vitamin D deficiency",
+            "Fall risk: history of 2 falls in past year, macular degeneration, lives alone in two-story home",
+            "Morphine allergy (can tolerate hydromorphone - important for pain management)",
+            "NSAID contraindication (GI bleeding history) limits analgesic options",
+            "Paroxysmal atrial fibrillation (anesthesia and surgical risk)",
+            "Advanced age (84) with increased perioperative mortality risk",
+            "Living alone with stairs - significant discharge planning needs",
+            "Vitamin D deficiency (18 ng/mL) despite supplementation",
+            "Mild cognitive impairment (assess for delirium risk postoperatively)"
+        ],
+        "diagnosis": "Displaced intracapsular right femoral neck fracture (Garden III)",
+        "differential_diagnoses": [
+            "Intertrochanteric fracture (ruled out by imaging)",
+            "Subtrochanteric fracture",
+            "Pathologic fracture from metastatic disease",
+            "Pelvic fracture",
+            "Hip dislocation",
+            "Pubic ramus fracture"
+        ],
+        "recommended_interventions": [
+            "Orthopedic surgery consult for hip arthroplasty (hemiarthroplasty or total hip replacement given displaced intracapsular fracture)",
+            "Pain management with IV hydromorphone (avoid morphine - allergy, avoid NSAIDs - GI bleed history)",
+            "Keep NPO for likely surgical intervention",
+            "Preoperative assessment and medical optimization",
+            "DVT prophylaxis (mechanical and pharmacologic)",
+            "Type and crossmatch for surgery",
+            "Cardiology consult for atrial fibrillation management perioperatively",
+            "Hold flecainide per anesthesia guidance",
+            "Foley catheter for OR",
+            "Pressure injury prevention (turn carefully with hip precautions)",
+            "Delirium prevention protocol (reorient, minimize medications, sleep hygiene)",
+            "Social work consult for discharge planning (rehab facility vs. home with support)",
+            "Fall prevention assessment and home safety evaluation",
+            "Continue denosumab schedule postoperatively"
+        ]
+    }
+}

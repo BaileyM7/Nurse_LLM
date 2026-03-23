@@ -1,0 +1,199 @@
+{
+    "patient_id": "case_036",
+    "name": "Brian Callahan",
+    "age": 44,
+    "sex": "Male",
+    "ethnicity": "Caucasian/Irish American",
+    "weight_lbs": 195,
+    "height_inches": 70,
+    "chief_complaint": "I'm just... I don't know why I'm here. My ex-wife called the cops because I said something stupid on the phone. I guess she thinks I'm going to hurt myself.",
+    "onset_description": "Patient was brought to the ED by police on a mental health hold after his ex-wife called 911. She reported that during a phone call he said 'the kids would be better off without me' and 'I'm tired of all of this, I just want it to stop.' He has been increasingly depressed since losing his job 6 weeks ago and has been drinking heavily. Upon questioning, he admits to thinking about ending his life and has a plan.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "suicidal_ideation": {
+            "description": "When asked directly and sensitively: Yeah, I've been thinking about it. A lot, actually. I just feel like there's no point anymore. I've thought about using my hunting rifle. It's in the closet at my apartment.",
+            "onset": "Thoughts present for past 3-4 weeks, intensifying over past week",
+            "character": "Active suicidal ideation with specific plan (firearm) and access to means",
+            "severity": "critical",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["alcohol use", "isolation", "thinking about children", "financial stress", "insomnia"],
+            "alleviating_factors": ["thinking about his kids", "brief distraction"],
+            "associated_symptoms": ["depression", "hopelessness", "insomnia", "alcohol use"]
+        },
+        "depressed_mood": {
+            "description": "I feel empty. Like nothing matters. I used to love coaching my kids' soccer team. Now I can't even get out of bed most mornings. Everything feels gray.",
+            "onset": "2-3 months, worsening since job loss 6 weeks ago",
+            "character": "persistent sad, empty, hopeless mood, worse in mornings, all-day duration",
+            "severity": "9/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["mornings", "being alone", "thinking about failures", "alcohol"],
+            "alleviating_factors": ["time with children (diminishing effect)", "staying busy"],
+            "associated_symptoms": ["anhedonia", "guilt", "worthlessness"]
+        },
+        "insomnia": {
+            "description": "I can't sleep. I lie there for hours staring at the ceiling, thinking. Sometimes I fall asleep around 3 or 4 AM and then can't get up in the morning.",
+            "onset": "6 weeks, correlating with job loss",
+            "character": "initial insomnia, lying awake with ruminative thoughts, sleeping 2-3 hours per night",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["quiet/darkness", "being alone", "alcohol withdrawal in middle of night"],
+            "alleviating_factors": ["alcohol initially helps onset but causes middle-of-night awakening"],
+            "associated_symptoms": ["fatigue", "poor concentration"]
+        },
+        "anhedonia": {
+            "description": "Nothing makes me happy anymore. I don't want to see friends, I don't want to eat, I don't even want to watch the games anymore. Things I used to love feel pointless.",
+            "onset": "2 months, progressive",
+            "character": "complete loss of interest in previously enjoyed activities",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["social withdrawal", "decreased appetite"]
+        },
+        "appetite_changes_and_weight_loss": {
+            "description": "I've barely been eating. My clothes are looser. I just don't have an appetite. Sometimes I don't eat all day and then realize I haven't had anything.",
+            "onset": "6 weeks",
+            "character": "markedly decreased appetite with unintentional weight loss of approximately 15 pounds",
+            "severity": "moderate",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["fatigue", "depression"]
+        },
+        "hopelessness_and_worthlessness": {
+            "description": "I'm a failure. I lost my job, my wife left me, I barely see my kids. What's the point of any of this? Everyone would move on without me.",
+            "onset": "progressive over 2-3 months",
+            "character": "pervasive hopelessness, worthlessness, and guilt. Cognitive distortions including minimizing positives and catastrophizing.",
+            "severity": "9/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["isolation", "alcohol", "rumination"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["suicidal ideation"]
+        },
+        "fatigue": {
+            "description": "I'm exhausted all the time but I can't sleep. I have no energy for anything. Getting dressed feels like climbing a mountain.",
+            "onset": "6 weeks",
+            "character": "constant fatigue unrelieved by rest",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["insomnia", "poor nutrition", "alcohol"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["insomnia", "psychomotor retardation"]
+        }
+    },
+    "symptoms_absent": [
+        "manic episodes or elevated mood", "psychotic symptoms (hallucinations, delusions)",
+        "homicidal ideation", "prior suicide attempts", "chest pain",
+        "shortness of breath", "fever", "neurological symptoms",
+        "seizures", "abdominal pain", "active alcohol withdrawal symptoms currently",
+        "current intoxication (last drink 6 hours ago)"
+    ],
+    "vitals": {
+        "heart_rate": 82,
+        "blood_pressure_systolic": 142,
+        "blood_pressure_diastolic": 88,
+        "respiratory_rate": 16,
+        "spo2": 98.0,
+        "temperature": 98.4,
+        "pain_scale": 0
+    },
+    "labs": {
+        "CBC": "WBC 7.4, Hgb 14.8, Plt 156 (low-normal)",
+        "BMP": "Na 138, K 3.6, Cr 1.0, BUN 16, Glucose 88",
+        "liver_function": "AST 68 (elevated), ALT 52 (elevated), GGT 128 (elevated, consistent with heavy alcohol use), Alk Phos 92, Albumin 3.6",
+        "blood_alcohol_level": "0.00 g/dL (currently sober)",
+        "urine_drug_screen": "Negative",
+        "TSH": "2.8 mIU/L (normal)",
+        "vitamin_B12": "320 pg/mL (low-normal)",
+        "folate": "6.2 ng/mL (normal)",
+        "urine_toxicology": "Negative for all substances"
+    },
+    "past_medical_history": [
+        "Major depressive disorder (first episode diagnosed 2 years ago during divorce proceedings)",
+        "Hypertension (5 years)",
+        "Alcohol use disorder (has been escalating, previously moderate)",
+        "Chronic low back pain from old sports injury",
+        "GERD"
+    ],
+    "surgical_history": [
+        "ACL reconstruction, right knee (2005)",
+        "Inguinal hernia repair (2015)"
+    ],
+    "medications": [
+        "Sertraline 100mg daily (has not been taking consistently for past 3 weeks)",
+        "Lisinopril 10mg daily",
+        "Omeprazole 20mg daily",
+        "Acetaminophen 500mg as needed for back pain"
+    ],
+    "allergies": [
+        "Cephalosporins (rash)"
+    ],
+    "social_history": {
+        "smoking": "Quit 5 years ago, 15 pack-year history. Has restarted smoking in the past month, about half a pack per day.",
+        "alcohol": "Has been drinking 6-10 beers per day for the past 6 weeks since job loss. Prior to that, drank 2-3 per day. Drinks alone in his apartment. Last drink approximately 6 hours ago.",
+        "drugs": "Denies illicit drugs. Denies misuse of prescription medications.",
+        "occupation": "Former IT project manager, laid off 6 weeks ago during company downsizing. Has not been job searching. Financial stress is mounting — behind on rent.",
+        "living_situation": "Lives alone in a one-bedroom apartment since divorce 1.5 years ago. Has two children (ages 10 and 7) who he has every other weekend. Has become increasingly isolated — stopped returning friends' calls.",
+        "exercise": "Used to play in an adult basketball league and coach kids' soccer. Has stopped all activities in the past 2 months.",
+        "diet": "Eating very little. Mostly cereal, frozen meals, or nothing. Significant unintentional weight loss."
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Alcohol use disorder, depression, died by suicide at age 52 (patient was 18)",
+            "mother": "Anxiety disorder, alive at 72",
+            "brother": "Alcohol use disorder, alive at 46",
+            "uncle_paternal": "Died by suicide at age 48"
+        }
+    },
+    "personality": "Initially defensive and dismissive, presenting a tough exterior. Uses sarcasm and deflection. Underneath is profound pain and exhaustion. Will gradually open up if the interviewer is patient, non-judgmental, and genuine. Shows emotion when talking about his children. Ashamed of his drinking and of being brought in by police.",
+    "communication_style": "Starts with short, guarded answers. Uses deflection ('I'm fine, this is all overblown'). Makes self-deprecating comments. Avoids eye contact. Becomes more honest and emotional as trust builds. Uses dark humor. May shut down if he feels judged or rushed. Responds best to calm, direct, honest communication without false reassurance.",
+    "pain_description_style": "Does not describe physical pain. Emotional pain is described in terms of emptiness, heaviness, and numbness rather than acute distress. Says 'I just feel nothing' more than 'I feel sad.'",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "ACTIVE suicidal ideation with specific PLAN (firearm) and ACCESS TO MEANS (hunting rifle in closet)",
+            "Multiple HIGH-RISK factors: male, age 40-60, access to firearms, alcohol use disorder, recent losses (job, marriage), family history of suicide (father and uncle), social isolation, insomnia, hopelessness",
+            "Family history of completed suicide in first-degree relative (father) and second-degree relative (uncle)",
+            "Escalating alcohol use (6-10 beers/day) — alcohol is a major risk factor for suicide completion",
+            "Discontinued antidepressant (sertraline) 3 weeks ago — abrupt cessation may worsen depression",
+            "Elevated GGT and liver enzymes consistent with significant alcohol use",
+            "Stated his children would be 'better off without me' — a warning sign of resolved plan",
+            "Progressive social withdrawal and functional decline",
+            "Currently sober and not in withdrawal — can engage in safety assessment meaningfully"
+        ],
+        "diagnosis": "Major Depressive Disorder, severe, with active suicidal ideation with plan and means",
+        "differential_diagnoses": [
+            "Alcohol-induced depressive disorder",
+            "Adjustment disorder with depressed mood",
+            "Bipolar II disorder (depressive episode — screen for prior hypomania)",
+            "Substance-induced mood disorder",
+            "Complicated grief",
+            "Hypothyroidism (ruled out by normal TSH)"
+        ],
+        "recommended_interventions": [
+            "Immediate suicide risk assessment using validated tool (Columbia Suicide Severity Rating Scale)",
+            "1:1 constant observation (suicide precautions)",
+            "Remove all means of self-harm in ED (search belongings per protocol)",
+            "CRITICAL: Means restriction counseling — someone must secure or remove the firearm from his apartment before discharge",
+            "Psychiatric consult for admission evaluation — likely requires inpatient psychiatric hospitalization",
+            "Restart sertraline (or consider switch if not effective) — coordinate with psychiatry",
+            "CIWA protocol monitoring for alcohol withdrawal risk given heavy daily use (symptoms may emerge 12-24 hours after last drink)",
+            "Thiamine 100mg IV/IM, folate, multivitamin for nutritional deficiency from alcohol use",
+            "Assess for medical clearance for psychiatric admission (labs, vitals, BAL)",
+            "Social work consult for housing, financial resources, employment support",
+            "Safety planning intervention (Stanley-Brown Safety Plan)",
+            "Contact identified supports with patient's permission (ex-wife for child safety, brother or friends)",
+            "Substance abuse treatment referral (dual diagnosis program)",
+            "National Suicide Prevention Lifeline information: 988",
+            "If discharged (unlikely given acuity): safety plan, means restriction confirmed, follow-up within 24-48 hours, crisis resources"
+        ]
+    }
+}

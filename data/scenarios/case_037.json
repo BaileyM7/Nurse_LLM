@@ -1,0 +1,210 @@
+{
+    "patient_id": "case_037",
+    "name": "Dennis Kowalczyk",
+    "age": 55,
+    "sex": "Male",
+    "ethnicity": "Polish American",
+    "weight_lbs": 180,
+    "height_inches": 69,
+    "chief_complaint": "I need a drink bad. My hands won't stop shaking and I feel like bugs are crawling on me. I know I need to quit but you gotta give me something or I'm going to lose it.",
+    "onset_description": "Patient presents to the ED stating he has been a daily heavy drinker for over 20 years and abruptly stopped drinking 48 hours ago after his girlfriend threatened to leave. Since then he has developed progressive tremor, sweating, nausea, anxiety, and in the last few hours has been seeing things that are not there. He is agitated, tremulous, and appears acutely ill. He has had two prior episodes of alcohol withdrawal requiring hospitalization, including one episode of withdrawal seizures 3 years ago.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "tremor": {
+            "description": "Look at my hands — they're shaking so bad I can't even hold a cup. My whole body feels like it's vibrating. This is worse than last time.",
+            "onset": "36 hours ago, progressively worsening",
+            "character": "coarse, generalized tremor, worse in upper extremities, present at rest and with action",
+            "severity": "8/10",
+            "location": "bilateral hands, generalized",
+            "radiation": null,
+            "aggravating_factors": ["movement", "stress", "lack of alcohol"],
+            "alleviating_factors": ["nothing currently"],
+            "associated_symptoms": ["anxiety", "diaphoresis", "nausea"]
+        },
+        "diaphoresis": {
+            "description": "I'm soaking wet. I can't stop sweating. I've changed my shirt twice today.",
+            "onset": "24 hours ago",
+            "character": "profuse sweating, autonomic hyperactivity",
+            "severity": "7/10",
+            "location": "generalized",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["tremor", "tachycardia"]
+        },
+        "visual_hallucinations": {
+            "description": "I keep seeing things. There were bugs crawling on the wall of my apartment. And I swear I saw a man standing in the corner of this room when I came in. I know they're not real... I think... but they look real.",
+            "onset": "4-6 hours ago",
+            "character": "visual hallucinations — insects, shadowy figures. Partial insight maintained currently.",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["dim lighting", "quiet environment", "closing eyes"],
+            "alleviating_factors": ["bright lights", "direct engagement/distraction"],
+            "associated_symptoms": ["agitation", "anxiety", "paranoia"]
+        },
+        "severe_anxiety_and_agitation": {
+            "description": "I feel like I'm going to jump out of my skin. I can't sit still, I can't relax. Something terrible is going to happen, I can feel it. My heart is racing.",
+            "onset": "24 hours ago, escalating",
+            "character": "severe anxiety, psychomotor agitation, restlessness, sense of impending doom",
+            "severity": "9/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["hallucinations", "being alone", "noise"],
+            "alleviating_factors": ["human presence", "reassurance", "nothing fully alleviates"],
+            "associated_symptoms": ["tachycardia", "hypertension", "tremor"]
+        },
+        "nausea": {
+            "description": "My stomach is in knots. I've been dry heaving. I tried to eat a cracker and almost threw up.",
+            "onset": "36 hours ago",
+            "character": "persistent nausea with dry heaving, unable to tolerate oral intake",
+            "severity": "6/10",
+            "location": "epigastric",
+            "radiation": null,
+            "aggravating_factors": ["any oral intake", "movement"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["decreased appetite", "dehydration"]
+        },
+        "insomnia": {
+            "description": "I haven't slept in two days. Every time I close my eyes I see things. My body won't shut down.",
+            "onset": "48 hours ago (since cessation of alcohol)",
+            "character": "complete insomnia, unable to fall asleep at all",
+            "severity": "9/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["anxiety", "hallucinations", "tremor"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["fatigue", "irritability", "confusion"]
+        },
+        "tactile_disturbances": {
+            "description": "I feel things crawling on my skin, especially my arms. I keep brushing things off but there's nothing there.",
+            "onset": "6 hours ago",
+            "character": "formication — tactile hallucinations of insects crawling on skin",
+            "severity": "7/10",
+            "location": "bilateral arms, chest",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["visual hallucinations", "agitation"]
+        }
+    },
+    "symptoms_absent": [
+        "seizure activity currently (but history of withdrawal seizures)",
+        "chest pain", "shortness of breath", "focal neurological deficits",
+        "abdominal pain other than nausea", "blood in vomit or stool",
+        "headache", "neck stiffness", "fever currently",
+        "urinary symptoms", "suicidal ideation"
+    ],
+    "vitals": {
+        "heart_rate": 118,
+        "blood_pressure_systolic": 172,
+        "blood_pressure_diastolic": 102,
+        "respiratory_rate": 22,
+        "spo2": 97.0,
+        "temperature": 100.2,
+        "pain_scale": 3
+    },
+    "labs": {
+        "CBC": "WBC 9.8, Hgb 12.4 (mildly low), Plt 102 (low — thrombocytopenia from chronic alcohol use)",
+        "BMP": "Na 132 (low), K 3.0 (low — critical), Cr 1.1, BUN 22, Glucose 78 (low-normal), Cl 94 (low), CO2 20 (low), Mg 1.2 (critically low)",
+        "liver_function": "AST 186 (elevated, AST:ALT ratio >2:1), ALT 82 (elevated), GGT 312 (markedly elevated), Alk Phos 142, Total Bilirubin 2.1 (elevated), Albumin 2.8 (low)",
+        "phosphorus": "1.6 mg/dL (low)",
+        "blood_alcohol_level": "0.00 g/dL (confirms abstinence)",
+        "ammonia": "48 mcmol/L (mildly elevated)",
+        "PT_INR": "14.8 sec / 1.3 (mildly elevated — impaired synthetic function)",
+        "lipase": "52 U/L (normal)",
+        "urine_drug_screen": "Negative for all substances",
+        "lactate": "1.6 mmol/L (normal)",
+        "thiamine_level": "Not immediately available but empiric replacement indicated"
+    },
+    "past_medical_history": [
+        "Alcohol use disorder, severe (daily heavy drinking for 20+ years)",
+        "Previous alcohol withdrawal with seizures (3 years ago, required ICU admission)",
+        "Previous alcohol withdrawal requiring benzodiazepine protocol (5 years ago)",
+        "Alcoholic hepatitis",
+        "Chronic pancreatitis",
+        "Gastritis",
+        "Peripheral neuropathy (alcohol-related)",
+        "Hypertension",
+        "History of alcohol withdrawal seizure (grand mal, 3 years ago)"
+    ],
+    "surgical_history": [
+        "Exploratory laparotomy for perforated duodenal ulcer (2018)",
+        "Right wrist fracture ORIF (2012, fell while intoxicated)"
+    ],
+    "medications": [
+        "Lisinopril 20mg daily (takes inconsistently)",
+        "Omeprazole 40mg daily",
+        "Thiamine 100mg daily (prescribed but rarely takes it)",
+        "Folic acid 1mg daily (prescribed but rarely takes it)",
+        "Multivitamin (rarely takes)"
+    ],
+    "allergies": [
+        "Phenytoin (Stevens-Johnson syndrome — CRITICAL: relevant for seizure management, cannot use phenytoin)"
+    ],
+    "social_history": {
+        "smoking": "1 pack per day for 35 years (35 pack-year history)",
+        "alcohol": "Vodka and beer daily for 20+ years. Typically 1 pint of vodka plus 6-8 beers daily. Has tried to quit multiple times. Last drink approximately 48 hours ago. Longest sobriety was 3 months (4 years ago during rehab).",
+        "drugs": "Occasional cocaine in his 30s and 40s, none in the past 5 years. Denies IV drug use.",
+        "occupation": "Works construction when able. Inconsistent employment. Currently employed but has missed the past week of work.",
+        "living_situation": "Lives with his girlfriend in a rented house. She is supportive but exhausted. Has threatened to leave if he doesn't stop drinking. Estranged from his two adult children from a prior marriage.",
+        "exercise": "None",
+        "diet": "Poor nutrition. Often drinks instead of eating. When he does eat, it's fast food or whatever his girlfriend prepares. Frequently skips meals."
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Severe alcohol use disorder, died at 58 from cirrhosis",
+            "mother": "Depression, alive at 80",
+            "brother": "Alcohol use disorder, in recovery for 5 years",
+            "sister": "Healthy at 50"
+        }
+    },
+    "personality": "Raw, desperate, and afraid. Knows he is very sick and that this could kill him. No pretense or bravado — genuinely asking for help. Has moments of dark humor between waves of agitation and fear. Remorseful about his drinking but overwhelmed by the physical withdrawal. Cooperative with medical care when he can focus.",
+    "communication_style": "Fluctuates with level of agitation and orientation. When calm: direct, honest, working-class language, uses profanity casually. When agitated: fragmented, repetitive, may not track questions. Becomes disoriented and confused during symptom spikes. May suddenly look at something that isn't there and need to be reoriented. Best approached with calm, clear, simple instructions.",
+    "pain_description_style": "Physical pain is not the primary complaint — it's the unbearable subjective distress of withdrawal. Describes it in visceral terms: 'crawling out of my skin,' 'electric current running through me,' 'everything is turned up to 11.' Rates the overall experience rather than any single pain point.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Severe alcohol withdrawal with hallucinations (visual and tactile) — at high risk for delirium tremens",
+            "History of prior withdrawal SEIZURES — dramatically increases risk of recurrent seizures and DTs",
+            "CIWA-Ar score likely >20 indicating severe withdrawal requiring aggressive pharmacotherapy",
+            "Critically low potassium (3.0) and magnesium (1.2) — seizure threshold lowered, cardiac arrhythmia risk",
+            "Phenytoin allergy (Stevens-Johnson syndrome) — CANNOT use phenytoin for seizure prophylaxis",
+            "48 hours since last drink — peak risk window for DTs is 48-96 hours",
+            "Abnormal liver function with AST:ALT >2:1 pattern typical of alcoholic hepatitis",
+            "Thrombocytopenia (Plt 102) and elevated INR (1.3) indicating hepatic synthetic dysfunction",
+            "Hyponatremia, hypochloremia, and metabolic derangements from chronic alcohol use and poor nutrition",
+            "Low-grade fever (100.2) — could be withdrawal-related but must rule out occult infection"
+        ],
+        "diagnosis": "Severe alcohol withdrawal syndrome with hallucinations, high risk for delirium tremens and withdrawal seizures",
+        "differential_diagnoses": [
+            "Delirium tremens (may be evolving into DTs)",
+            "Alcohol withdrawal seizure (impending)",
+            "Wernicke encephalopathy (confusion, possible oculomotor dysfunction — must treat empirically)",
+            "Hepatic encephalopathy (elevated ammonia, liver disease)",
+            "Sepsis or occult infection causing delirium",
+            "Meningitis or encephalitis",
+            "Subdural hematoma (alcoholic, fall risk, coagulopathy)"
+        ],
+        "recommended_interventions": [
+            "CIWA-Ar protocol with symptom-triggered benzodiazepine dosing (diazepam or lorazepam preferred)",
+            "Front-loading with diazepam 10-20mg IV q15-30 min until CIWA <10 (if liver function permits; use lorazepam if hepatic function severely impaired)",
+            "Thiamine 500mg IV BEFORE any glucose-containing fluids (prevent Wernicke encephalopathy)",
+            "Aggressive electrolyte replacement: IV magnesium sulfate 2-4g, IV potassium 40-80 mEq",
+            "IV fluid resuscitation with D5NS",
+            "Folate 1mg IV and multivitamin in IV fluids",
+            "Continuous cardiac monitoring (electrolyte abnormalities + tachycardia = arrhythmia risk)",
+            "Seizure precautions (padded rails, suction at bedside, oxygen ready)",
+            "If seizures occur: lorazepam 2-4mg IV (NOT phenytoin — allergy), may repeat",
+            "Frequent neurological checks and CIWA scoring q1h",
+            "Blood glucose monitoring q4h (risk of hypoglycemia with depleted glycogen stores)",
+            "Consider ICU admission given hallucinations, history of withdrawal seizures, and electrolyte derangements",
+            "CT head if confusion does not improve with treatment (rule out SDH)",
+            "Hepatology or GI consult for liver disease management",
+            "Addiction medicine or substance abuse consult before discharge",
+            "Social work consult for inpatient rehab placement when medically stable",
+            "Assess for and address barriers to sobriety (support system, housing, insurance)"
+        ]
+    }
+}

@@ -1,0 +1,151 @@
+{
+    "patient_id": "case_001",
+    "name": "Maria Santos",
+    "age": 67,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 165,
+    "height_inches": 63,
+    "chief_complaint": "I've been having this tightness in my chest for a couple hours now",
+    "onset_description": "Started about 2 hours ago while watching TV. Came on gradually.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest_pain": {
+            "description": "Pressure-like tightness in the center of chest",
+            "onset": "2 hours ago",
+            "character": "pressure, like someone sitting on my chest",
+            "severity": "7/10",
+            "location": "substernal",
+            "radiation": "left arm and jaw",
+            "aggravating_factors": ["deep breathing", "walking to the car"],
+            "alleviating_factors": ["sitting still", "resting"],
+            "associated_symptoms": ["shortness of breath", "mild nausea"]
+        },
+        "shortness_of_breath": {
+            "description": "Feeling like I can't catch my breath, especially with the chest pressure",
+            "onset": "about 1 hour ago",
+            "severity": "5/10",
+            "location": null,
+            "radiation": null,
+            "character": "can't get a full breath",
+            "aggravating_factors": ["exertion", "lying flat"],
+            "alleviating_factors": ["sitting upright"],
+            "associated_symptoms": []
+        },
+        "diaphoresis": {
+            "description": "I've been sweating a lot even though I'm not hot",
+            "onset": "about 1.5 hours ago",
+            "severity": null,
+            "location": null,
+            "radiation": null,
+            "character": "cold sweat",
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": []
+        },
+        "nausea": {
+            "description": "My stomach feels a little queasy, not terrible though",
+            "onset": "about 1 hour ago",
+            "severity": "3/10",
+            "location": null,
+            "radiation": null,
+            "character": "mild queasiness",
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "fever", "cough", "vomiting", "diarrhea", "headache", "dizziness",
+        "leg swelling", "palpitations", "syncope", "abdominal pain",
+        "back pain", "urinary symptoms", "rash", "vision changes"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 158,
+        "blood_pressure_diastolic": 94,
+        "respiratory_rate": 22,
+        "spo2": 94.0,
+        "temperature": 98.6,
+        "pain_scale": 7
+    },
+    "labs": {
+        "troponin": "0.8 ng/mL (elevated)",
+        "BNP": "450 pg/mL (elevated)",
+        "CBC": "WBC 9.2, Hgb 13.1, Plt 245 - within normal limits",
+        "BMP": "Na 139, K 4.2, Cr 1.1, Glucose 187 (elevated) - BUN 18",
+        "PT/INR": "12.5 sec / 1.0",
+        "lipid_panel": "Total cholesterol 248, LDL 165, HDL 38, Triglycerides 210"
+    },
+    "past_medical_history": [
+        "Hypertension (10 years)",
+        "Type 2 Diabetes Mellitus (8 years)",
+        "Hyperlipidemia",
+        "Obesity"
+    ],
+    "surgical_history": [
+        "Cholecystectomy (2018)",
+        "C-section x2 (1985, 1988)"
+    ],
+    "medications": [
+        "Metformin 1000mg twice daily",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 40mg at bedtime",
+        "Aspirin 81mg daily",
+        "Metoprolol 25mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin (rash)",
+        "Shellfish (hives)"
+    ],
+    "social_history": {
+        "smoking": "Quit 5 years ago, smoked 1 pack/day for 30 years (30 pack-year history)",
+        "alcohol": "Glass of wine with dinner 2-3 times per week",
+        "drugs": "Denies",
+        "occupation": "Retired school teacher",
+        "living_situation": "Lives with husband in single-story home",
+        "exercise": "Walks around the neighborhood a few times a week, has been less active recently",
+        "diet": "Tries to eat healthy but admits to not always following diabetic diet"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Myocardial infarction at age 55, died at 62 from heart failure",
+            "mother": "Type 2 Diabetes, Hypertension, alive at 89",
+            "brother": "Hypertension, high cholesterol",
+            "sister": "Healthy"
+        }
+    },
+    "personality": "anxious but cooperative, tends to be a bit verbose when nervous",
+    "communication_style": "Wants to minimize her symptoms at first ('I'm sure it's nothing') but becomes more forthcoming when asked directly. Uses everyday language, not medical terms.",
+    "pain_description_style": "Describes pain with metaphors ('like an elephant sitting on my chest') rather than precise medical terms. Will give a number if asked for pain scale.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Substernal chest pressure with left arm and jaw radiation",
+            "Elevated troponin suggesting myocardial injury",
+            "Risk factors: DM2, HTN, hyperlipidemia, family history of MI, smoking history",
+            "Elevated blood glucose suggesting poorly controlled diabetes",
+            "Tachycardia and hypertension on vitals",
+            "Decreased SpO2 at 94%"
+        ],
+        "diagnosis": "NSTEMI (Non-ST Elevation Myocardial Infarction)",
+        "differential_diagnoses": [
+            "Unstable angina",
+            "STEMI",
+            "Pulmonary embolism",
+            "Aortic dissection",
+            "GERD with atypical presentation"
+        ],
+        "recommended_interventions": [
+            "12-lead ECG immediately",
+            "Continuous cardiac monitoring",
+            "IV access",
+            "Aspirin (if not already taken)",
+            "Nitroglycerin for chest pain",
+            "Supplemental oxygen for SpO2 < 95%",
+            "Serial troponins",
+            "Cardiology consult"
+        ]
+    }
+}

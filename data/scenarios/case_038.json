@@ -1,0 +1,198 @@
+{
+    "patient_id": "case_038",
+    "name": "Gloria Washington",
+    "age": 68,
+    "sex": "Female",
+    "ethnicity": "African American",
+    "weight_lbs": 155,
+    "height_inches": 64,
+    "chief_complaint": "I've been so dizzy and weak. I had that stomach bug for a few days and I just can't seem to bounce back. I think something is wrong with me.",
+    "onset_description": "Patient developed gastroenteritis with vomiting and diarrhea 5 days ago. Symptoms of GI illness have mostly resolved but she has remained weak, dizzy, and has noticed she is producing very little urine despite trying to drink fluids. She has been taking ibuprofen for body aches and continued taking her lisinopril and diuretic throughout the illness. Daughter brought her to the ED today when she found her confused and unable to stand.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "decreased_urine_output": {
+            "description": "I've barely been going to the bathroom. Used to go 5-6 times a day but now I've only gone twice today and it was just a tiny bit, real dark.",
+            "onset": "3 days ago, progressive",
+            "character": "oliguria with dark concentrated urine, decreased frequency",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["increased fluid intake marginally"],
+            "associated_symptoms": ["dehydration", "weakness"]
+        },
+        "dizziness_and_lightheadedness": {
+            "description": "Every time I try to stand up the room starts spinning and I see spots. I nearly fainted twice yesterday.",
+            "onset": "4 days ago, worsening",
+            "character": "orthostatic dizziness, pre-syncopal episodes",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["standing", "sitting up quickly", "walking"],
+            "alleviating_factors": ["lying down"],
+            "associated_symptoms": ["weakness", "near-syncope"]
+        },
+        "weakness_and_fatigue": {
+            "description": "I have no strength at all. I couldn't even get out of bed on my own this morning. My arms and legs feel like lead.",
+            "onset": "4 days ago, progressive",
+            "character": "profound generalized weakness, unable to perform ADLs independently",
+            "severity": "8/10",
+            "location": "generalized",
+            "radiation": null,
+            "aggravating_factors": ["any activity"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["fatigue", "dizziness"]
+        },
+        "confusion": {
+            "description": "I'm not thinking clearly. My daughter says I've been saying things that don't make sense. I couldn't remember what day it was this morning.",
+            "onset": "2 days ago, worsening",
+            "character": "mild to moderate confusion, disoriented to date, fluctuating attention",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["dehydration", "uremia"]
+        },
+        "nausea": {
+            "description": "My stomach is still queasy. Not throwing up anymore but the thought of food makes me sick. Everything tastes metallic.",
+            "onset": "Residual from GI illness, ongoing",
+            "character": "persistent low-grade nausea with metallic taste (uremic symptom)",
+            "severity": "5/10",
+            "location": "epigastric",
+            "radiation": null,
+            "aggravating_factors": ["food smells", "eating"],
+            "alleviating_factors": ["sipping ginger ale"],
+            "associated_symptoms": ["decreased appetite", "metallic taste"]
+        },
+        "dry_mouth_and_thirst": {
+            "description": "My mouth is so dry even after I drink water. My lips are cracking.",
+            "onset": "4 days ago",
+            "character": "severe thirst, dry mucous membranes, cracked lips",
+            "severity": "6/10",
+            "location": "oral",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["small sips of water, but never fully relieved"],
+            "associated_symptoms": ["poor skin turgor", "dehydration"]
+        }
+    },
+    "symptoms_absent": [
+        "fever", "chest pain", "shortness of breath", "active vomiting",
+        "active diarrhea", "hematuria", "flank pain", "dysuria",
+        "leg swelling", "palpitations", "seizures",
+        "abdominal pain", "rash", "joint pain"
+    ],
+    "vitals": {
+        "heart_rate": 104,
+        "blood_pressure_systolic": 88,
+        "blood_pressure_diastolic": 52,
+        "respiratory_rate": 18,
+        "spo2": 96.0,
+        "temperature": 97.8,
+        "pain_scale": 2
+    },
+    "labs": {
+        "BMP": "Na 128 (low), K 5.8 (critically high), Cr 4.2 (markedly elevated, baseline 1.0), BUN 68 (elevated), BUN:Cr ratio 16:1 (consistent with prerenal), Glucose 102, Cl 92 (low), CO2 18 (low)",
+        "CBC": "WBC 7.6, Hgb 11.2 (mildly low), Plt 210",
+        "urinalysis": "Specific gravity 1.032 (concentrated), no protein, no blood, no casts, no bacteria",
+        "urine_sodium": "8 mEq/L (low, <20 consistent with prerenal AKI — kidneys avidly reabsorbing sodium)",
+        "fractional_excretion_sodium": "0.4% (<1%, consistent with prerenal etiology)",
+        "urine_osmolality": "620 mOsm/kg (elevated, kidneys still concentrating appropriately — prerenal)",
+        "CRP": "12 mg/L (mildly elevated)",
+        "phosphorus": "5.8 mg/dL (elevated)",
+        "calcium": "7.8 mg/dL (low, corrected for albumin: 8.4)",
+        "magnesium": "1.6 mEq/L (low-normal)",
+        "liver_function": "AST 24, ALT 20, Albumin 3.0 (low) - otherwise normal",
+        "ABG": "pH 7.30 (mildly acidotic), pCO2 32, pO2 88, HCO3 16 (low)",
+        "ECG": "Sinus tachycardia 104 bpm, peaked T waves in precordial leads (hyperkalemia changes)"
+    },
+    "past_medical_history": [
+        "Hypertension (15 years)",
+        "Type 2 Diabetes Mellitus (10 years, well-controlled)",
+        "Chronic kidney disease stage 2 (baseline Cr 1.0, GFR 72)",
+        "Osteoarthritis (knees and hips)",
+        "Hyperlipidemia",
+        "Heart failure with preserved ejection fraction (EF 55%)"
+    ],
+    "surgical_history": [
+        "Total knee replacement, left (2021)",
+        "Hysterectomy for fibroids (2002)",
+        "Bilateral carpal tunnel release (2015)"
+    ],
+    "medications": [
+        "Lisinopril 20mg daily (continued during illness — nephrotoxic in dehydration)",
+        "Hydrochlorothiazide 25mg daily (continued during illness — worsens dehydration)",
+        "Metformin 1000mg twice daily (continued — risk of lactic acidosis with AKI)",
+        "Atorvastatin 40mg at bedtime",
+        "Aspirin 81mg daily",
+        "Ibuprofen 600mg three times daily (started 5 days ago for body aches — nephrotoxic)",
+        "Metoprolol succinate 25mg daily"
+    ],
+    "allergies": [
+        "Ciprofloxacin (tendon pain)",
+        "Contrast dye (prior mild reaction — nausea, important for CT planning)"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "Rare, a glass of wine on holidays",
+        "drugs": "Denies",
+        "occupation": "Retired school bus driver",
+        "living_situation": "Lives alone in a senior apartment complex. Daughter lives 15 minutes away and calls daily. Has a medical alert pendant but was not wearing it during illness. Church community is a major support.",
+        "exercise": "Walks to church (3 blocks) twice weekly. Attends water aerobics at the YMCA when feeling well.",
+        "diet": "Generally good diet, cooks for herself. Follows low-sodium diet for hypertension. Has been eating very little for the past 5 days."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Hypertension, chronic kidney disease, died at 74 from stroke",
+            "father": "Type 2 Diabetes, died at 69 from heart attack",
+            "sister": "Hypertension, chronic kidney disease stage 3, alive at 72",
+            "brother": "Healthy at 65"
+        }
+    },
+    "personality": "Warm, conversational, and trusting of medical professionals. She is a devout churchgoer who references her faith during the visit. Apologizes for 'bothering' the nurses. Worries about her independence and doesn't want her daughter to have to take care of her. Pragmatic and resilient.",
+    "communication_style": "Speaks freely and warmly once engaged. Tells stories and gives context without being asked. Will answer questions honestly but may circle back to prior topics. Uses expressions like 'Lord have mercy' and 'bless your heart.' Asks questions about her condition in a straightforward way. Appreciates being explained to in plain language.",
+    "pain_description_style": "Pain is not the primary issue — she describes her symptoms in terms of function ('I can't do for myself,' 'I couldn't make it to the bathroom'). When asked about pain, she rates it low and focuses more on the weakness and dizziness. Does not complain easily.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Acute kidney injury (Cr 4.2 from baseline 1.0) — prerenal etiology confirmed by low FeNa (0.4%), low urine sodium, concentrated urine",
+            "Critical hyperkalemia (K+ 5.8) with ECG changes (peaked T waves) — immediate cardiac risk",
+            "Triple whammy nephrotoxicity: ACE inhibitor (lisinopril) + NSAID (ibuprofen) + diuretic (HCTZ) in setting of volume depletion",
+            "Hypovolemia from gastroenteritis with continued diuretic use",
+            "Hypotension (88/52) with tachycardia (104) indicating significant volume depletion",
+            "Metabolic acidosis (pH 7.30, HCO3 16) from AKI and poor perfusion",
+            "Metformin must be stopped immediately — risk of life-threatening lactic acidosis with AKI",
+            "Contrast dye allergy complicates CT imaging if needed",
+            "Altered mental status likely from uremia and dehydration",
+            "Hyperphosphatemia and hypocalcemia from AKI"
+        ],
+        "diagnosis": "Acute Kidney Injury, prerenal, secondary to dehydration from gastroenteritis compounded by nephrotoxic medications",
+        "differential_diagnoses": [
+            "Intrinsic AKI (acute tubular necrosis) from prolonged prerenal state",
+            "NSAID-induced interstitial nephritis",
+            "Obstructive uropathy (post-renal cause — unlikely given prerenal lab pattern)",
+            "Sepsis-related AKI (no clear infectious source currently)",
+            "Cardiorenal syndrome (HFpEF exacerbation contributing to renal hypoperfusion)",
+            "Contrast nephropathy (no recent contrast)"
+        ],
+        "recommended_interventions": [
+            "IMMEDIATE: Treat hyperkalemia — IV calcium gluconate 1g for cardiac membrane stabilization, followed by IV insulin 10 units + D50 to shift potassium intracellularly, sodium polystyrene sulfonate (Kayexalate) 30g PO/PR",
+            "Continuous cardiac monitoring for hyperkalemia-related arrhythmias",
+            "Aggressive IV fluid resuscitation with 0.9% NS (isotonic crystalloid) — 1-2L bolus then reassess",
+            "STOP all nephrotoxic medications immediately: ibuprofen, lisinopril, hydrochlorothiazide, metformin",
+            "Foley catheter for strict I&O monitoring",
+            "Recheck BMP in 2 hours (potassium, creatinine, BUN)",
+            "Renal ultrasound to rule out obstruction (standard for new AKI)",
+            "Serial creatinine monitoring — expect improvement with rehydration if prerenal",
+            "Phosphate binder if hyperphosphatemia persists",
+            "Correct metabolic acidosis with IV fluids; consider bicarbonate if pH drops below 7.20",
+            "Nephrology consult if no improvement with fluid resuscitation or if dialysis may be needed",
+            "Reassess blood pressure frequently — may need to cautiously restart antihypertensives once volume replete",
+            "Nutrition consult — low potassium, low phosphorus diet",
+            "Educate patient on sick-day medication rules (stop ACE inhibitors, diuretics, NSAIDs, metformin when dehydrated or ill)",
+            "Social work for home safety assessment and follow-up care coordination"
+        ]
+    }
+}

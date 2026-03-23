@@ -1,0 +1,169 @@
+{
+    "patient_id": "case_008",
+    "name": "Patricia Novak",
+    "age": 62,
+    "sex": "Female",
+    "ethnicity": "Caucasian (Czech American)",
+    "weight_lbs": 185,
+    "height_inches": 65,
+    "chief_complaint": "My left leg has been hurting and swelling up for the past 3 days and today the calf is red and really tender to touch",
+    "onset_description": "Noticed some left calf soreness 3 days ago, thought she pulled a muscle. Swelling started 2 days ago and has been getting progressively worse. The redness started today. She called her primary care doctor who told her to go to the emergency department immediately.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "leg_pain": {
+            "description": "Deep aching pain in my left calf that throbs, really hurts when I walk or flex my foot",
+            "onset": "3 days ago, progressively worsening",
+            "character": "deep, aching, throbbing",
+            "severity": "6/10 at rest, 8/10 with walking or dorsiflexion",
+            "location": "left posterior calf, extending toward the inner knee",
+            "radiation": "up toward the back of the knee",
+            "aggravating_factors": ["walking", "standing", "pointing foot up toward shin", "any pressure on the calf"],
+            "alleviating_factors": ["elevating the leg", "rest", "ibuprofen takes the edge off slightly"],
+            "associated_symptoms": ["leg swelling", "redness", "warmth"]
+        },
+        "leg_swelling": {
+            "description": "Left leg is noticeably bigger than the right, from the foot up past the knee now",
+            "onset": "2 days ago, getting worse",
+            "character": "unilateral swelling, tense, non-pitting becoming pitting",
+            "severity": "7/10",
+            "location": "left lower extremity, foot to above knee",
+            "radiation": null,
+            "aggravating_factors": ["standing", "dangling leg down"],
+            "alleviating_factors": ["elevation helps slightly"],
+            "associated_symptoms": ["skin tightness", "warmth"]
+        },
+        "erythema_and_warmth": {
+            "description": "The skin over my calf is red and feels hot to the touch, started this morning",
+            "onset": "today",
+            "character": "diffuse redness over posterior calf, warm",
+            "severity": null,
+            "location": "left posterior calf",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["tenderness"]
+        },
+        "mild_shortness_of_breath": {
+            "description": "I've been a little winded the last day or so, nothing terrible but I noticed it going up the stairs",
+            "onset": "1-2 days",
+            "character": "mild exertional dyspnea, new",
+            "severity": "3/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["exertion", "climbing stairs"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "chest pain", "palpitations", "syncope", "hemoptysis", "fever",
+        "cough", "bilateral leg swelling", "nausea", "vomiting",
+        "abdominal pain", "headache", "rash elsewhere", "joint pain",
+        "urinary symptoms", "recent trauma to the leg"
+    ],
+    "vitals": {
+        "heart_rate": 96,
+        "blood_pressure_systolic": 144,
+        "blood_pressure_diastolic": 84,
+        "respiratory_rate": 18,
+        "spo2": 96.0,
+        "temperature": 99.2,
+        "pain_scale": 6
+    },
+    "labs": {
+        "D-dimer": "4.2 mg/L (markedly elevated, normal <0.5)",
+        "CBC": "WBC 9.4, Hgb 12.8, Plt 310 - within normal limits",
+        "BMP": "Na 139, K 4.1, Cr 0.8, Glucose 110 - BUN 15 - all within normal limits",
+        "PT/INR": "12.0 sec / 1.0",
+        "PTT": "28 sec (normal)",
+        "troponin": "0.02 ng/mL (normal)",
+        "BNP": "65 pg/mL (normal)",
+        "liver_panel": "AST 24, ALT 28, Alk Phos 78 - within normal limits",
+        "duplex_ultrasound": "Non-compressible left common femoral vein extending to popliteal vein. Acute thrombus visualized. No flow detected in affected segments. Consistent with extensive proximal DVT."
+    },
+    "past_medical_history": [
+        "Hypertension (8 years)",
+        "Osteoarthritis bilateral knees",
+        "Obesity",
+        "Left total knee replacement 3 weeks ago (recent surgery is major risk factor)",
+        "History of varicose veins"
+    ],
+    "surgical_history": [
+        "Left total knee replacement (3 weeks ago)",
+        "Right total knee replacement (2023)",
+        "Cesarean section (1990)",
+        "Bilateral varicose vein stripping (2015)"
+    ],
+    "medications": [
+        "Lisinopril 10mg daily",
+        "Acetaminophen 1000mg three times daily for post-surgical pain",
+        "Oxycodone 5mg every 6 hours as needed (taking 2-3 times daily currently)",
+        "Aspirin 81mg daily (resumed 1 week post-op per surgeon)",
+        "Omeprazole 20mg daily",
+        "Calcium 600mg with Vitamin D twice daily"
+    ],
+    "allergies": [
+        "Heparin (history of heparin-induced thrombocytopenia with prior hospitalization - CRITICAL ALLERGY)",
+        "Morphine (severe itching and respiratory depression)"
+    ],
+    "social_history": {
+        "smoking": "Smokes about 5 cigarettes a day, has smoked for 35 years (approximately 9 pack-year history)",
+        "alcohol": "1-2 glasses of wine in the evenings",
+        "drugs": "Denies",
+        "occupation": "Office manager at a dental practice, currently on medical leave recovering from knee surgery",
+        "living_situation": "Lives with husband, has been mostly sedentary recovering from surgery, spending most of the day in her recliner",
+        "exercise": "None currently due to surgical recovery, was doing physical therapy but missed last two appointments because of the leg pain",
+        "diet": "Generally balanced, has been eating more comfort food during recovery"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "DVT at age 58, pulmonary embolism at age 65, on blood thinners, alive at 85",
+            "father": "Died of lung cancer at age 70, was a heavy smoker",
+            "sister": "Blood clots during pregnancy, age 59",
+            "daughter": "Factor V Leiden carrier (heterozygous), age 32"
+        }
+    },
+    "personality": "worried but practical, wants to understand the treatment plan and timeline, concerned about how this affects her knee recovery",
+    "communication_style": "Organized and methodical - will give a clear timeline of events if allowed to tell the story in order. Asks practical questions ('How long will I be on blood thinners? Can I still do physical therapy? Will this delay my knee recovery?'). May get frustrated if she feels she's not getting straight answers.",
+    "pain_description_style": "Compares it to known experiences ('It's not like the knee surgery pain, it's deeper, more of a throbbing ache'). Good at distinguishing between surgical pain and this new pain. Will accurately point to where it hurts and describe what makes it worse.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Extensive proximal DVT (common femoral to popliteal vein) - high risk for pulmonary embolism",
+            "CRITICAL: History of heparin-induced thrombocytopenia (HIT) - CANNOT use heparin or LMWH",
+            "Recent surgery (TKR 3 weeks ago) as major DVT risk factor",
+            "New mild dyspnea - must evaluate for concurrent pulmonary embolism",
+            "Markedly elevated D-dimer at 4.2 mg/L",
+            "Strong family history of VTE (mother with DVT/PE, sister with pregnancy clots, daughter with Factor V Leiden)",
+            "Family history suggests possible inherited thrombophilia (Factor V Leiden in daughter)",
+            "Prolonged immobility during surgical recovery",
+            "Active smoker and obese - additional VTE risk factors",
+            "Tachycardia (HR 96) and low-grade temperature may indicate clot burden"
+        ],
+        "diagnosis": "Acute Proximal Deep Vein Thrombosis, Left Lower Extremity",
+        "differential_diagnoses": [
+            "Cellulitis",
+            "Superficial thrombophlebitis",
+            "Post-surgical hematoma",
+            "Baker's cyst rupture",
+            "Lymphedema",
+            "Muscular strain or tear"
+        ],
+        "recommended_interventions": [
+            "AVOID ALL HEPARIN PRODUCTS (unfractionated heparin AND LMWH) due to HIT history",
+            "Initiate non-heparin anticoagulation: argatroban IV drip or fondaparinux, then transition to DOAC",
+            "CT pulmonary angiography given new dyspnea to rule out pulmonary embolism",
+            "Leg elevation above heart level",
+            "Compression stockings (after acute phase, not on acutely swollen leg initially)",
+            "Serial leg circumference measurements",
+            "Platelet monitoring (though using non-heparin agent)",
+            "Hematology consult for HIT history and possible thrombophilia workup",
+            "Vascular surgery consult if considering catheter-directed therapy for extensive proximal DVT",
+            "Smoking cessation counseling",
+            "Coordinate with orthopedic surgeon regarding knee recovery timeline",
+            "Thrombophilia workup after acute treatment (Factor V Leiden, prothrombin gene mutation, antiphospholipid antibodies)",
+            "Pain management avoiding immobility"
+        ]
+    }
+}

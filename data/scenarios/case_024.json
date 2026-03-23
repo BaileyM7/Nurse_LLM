@@ -1,0 +1,204 @@
+{
+    "patient_id": "case_024",
+    "name": "Dorothy Pemberton",
+    "age": 76,
+    "sex": "Female",
+    "ethnicity": "African American",
+    "weight_lbs": 142,
+    "height_inches": 62,
+    "chief_complaint": "I just feel so awful... I'm confused and I can't stop shaking",
+    "onset_description": "Nursing home staff noticed patient became increasingly confused and lethargic over the past 12 hours. Had been complaining of burning with urination for 2 days prior. Found this morning with a fever of 102.8 and altered mental status.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "altered_mental_status": {
+            "description": "Patient is intermittently confused, not oriented to time or place, was alert and oriented at baseline per nursing home staff",
+            "onset": "12 hours ago, progressive worsening",
+            "character": "waxing and waning confusion, difficulty following commands",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["fever", "chills", "lethargy"]
+        },
+        "fever": {
+            "description": "Staff says I had a high temperature this morning, I do feel very hot",
+            "onset": "12 hours ago",
+            "character": "high fever with rigors",
+            "severity": "high",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["cool cloth on forehead"],
+            "associated_symptoms": ["chills", "sweating"]
+        },
+        "dysuria": {
+            "description": "It burns real bad when I go to the bathroom, been that way for a couple days",
+            "onset": "2-3 days ago",
+            "character": "burning, stinging pain with urination",
+            "severity": "6/10",
+            "location": "suprapubic and urethral",
+            "radiation": null,
+            "aggravating_factors": ["urination"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["urinary frequency", "cloudy urine", "foul-smelling urine"]
+        },
+        "urinary_frequency": {
+            "description": "I've been going to the bathroom every hour, but only a little comes out",
+            "onset": "2 days ago",
+            "character": "frequent small volume voids",
+            "severity": "5/10",
+            "location": "suprapubic",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["dysuria", "urgency"]
+        },
+        "chills_and_rigors": {
+            "description": "I can't stop shaking, even under the blankets",
+            "onset": "8 hours ago",
+            "character": "severe shaking chills, teeth chattering",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["warm blankets provide minimal relief"],
+            "associated_symptoms": ["fever", "diaphoresis"]
+        },
+        "hypotension_symptoms": {
+            "description": "I feel dizzy when they try to sit me up",
+            "onset": "6 hours ago",
+            "character": "lightheadedness, near-syncope with position changes",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["sitting up", "standing"],
+            "alleviating_factors": ["lying flat"],
+            "associated_symptoms": ["weakness", "fatigue"]
+        },
+        "flank_pain": {
+            "description": "My back hurts down low on both sides, but worse on the right",
+            "onset": "1 day ago",
+            "character": "dull, constant aching",
+            "severity": "5/10",
+            "location": "bilateral flanks, right greater than left",
+            "radiation": null,
+            "aggravating_factors": ["palpation of costovertebral angle"],
+            "alleviating_factors": ["lying still"],
+            "associated_symptoms": ["dysuria", "fever"]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain", "shortness of breath at baseline", "cough", "headache",
+        "nausea or vomiting", "diarrhea", "rash", "neck stiffness",
+        "focal neurological deficits", "abdominal pain", "hematuria",
+        "joint pain", "sore throat", "vision changes"
+    ],
+    "vitals": {
+        "heart_rate": 118,
+        "blood_pressure_systolic": 82,
+        "blood_pressure_diastolic": 48,
+        "respiratory_rate": 24,
+        "spo2": 93.0,
+        "temperature": 102.8,
+        "pain_scale": 5
+    },
+    "labs": {
+        "CBC": "WBC 22.4 (elevated, left shift with 15% bands), Hgb 10.8, Plt 98 (low)",
+        "BMP": "Na 131 (low), K 5.1 (high), Cr 2.8 (elevated from baseline 1.1), BUN 42 (elevated), Glucose 168 (elevated)",
+        "lactate": "4.8 mmol/L (critically elevated, >4 indicates severe sepsis)",
+        "urinalysis": "Positive nitrites, positive leukocyte esterase, >100 WBC/hpf, many bacteria, trace blood",
+        "urine_culture": "Pending (preliminary gram-negative rods)",
+        "blood_cultures": "Drawn x2 sets, pending",
+        "procalcitonin": "8.6 ng/mL (markedly elevated, consistent with bacterial sepsis)",
+        "PT_INR": "15.2 sec / 1.4 (mildly elevated)",
+        "CRP": "186 mg/L (markedly elevated)",
+        "liver_function": "AST 52, ALT 48 (mildly elevated), Alk Phos 98, Total Bilirubin 1.8",
+        "ABG": "pH 7.28 (acidotic), pCO2 28 (compensatory respiratory alkalosis), pO2 72, HCO3 16 (low), Base Excess -8"
+    },
+    "past_medical_history": [
+        "Hypertension (20 years)",
+        "Type 2 Diabetes Mellitus (15 years)",
+        "Atrial fibrillation",
+        "Chronic kidney disease stage 2 (baseline Cr 1.1)",
+        "Recurrent urinary tract infections (3 in past year)",
+        "Dementia (mild, baseline oriented x3)",
+        "Osteoporosis",
+        "History of stroke (2022, left-sided weakness resolved)"
+    ],
+    "surgical_history": [
+        "Total knee replacement, right (2019)",
+        "Hysterectomy (1995)",
+        "Appendectomy (1968)"
+    ],
+    "medications": [
+        "Metformin 500mg twice daily",
+        "Glipizide 5mg daily",
+        "Lisinopril 10mg daily",
+        "Apixaban 5mg twice daily",
+        "Metoprolol succinate 50mg daily",
+        "Alendronate 70mg weekly",
+        "Donepezil 10mg at bedtime",
+        "Calcium 600mg with Vitamin D 400IU twice daily"
+    ],
+    "allergies": [
+        "Sulfa drugs (severe rash and facial swelling)",
+        "Codeine (nausea and vomiting)"
+    ],
+    "social_history": {
+        "smoking": "Quit 30 years ago, 15 pack-year history",
+        "alcohol": "None for over 20 years",
+        "drugs": "Denies any illicit drug use",
+        "occupation": "Retired postal worker",
+        "living_situation": "Resides in Sunrise Skilled Nursing Facility for the past 2 years, widowed, daughter visits weekly",
+        "exercise": "Walks short distances with a walker, participates in seated exercises at facility",
+        "diet": "Diabetic diet per nursing facility, fair appetite until 2 days ago"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Died at 82 from stroke",
+            "father": "Died at 70 from colon cancer",
+            "sister": "Type 2 Diabetes, hypertension, alive at 80",
+            "brother": "Died at 65 from heart attack"
+        }
+    },
+    "personality": "Normally pleasant and cooperative but currently confused and frightened. When lucid, she is soft-spoken and polite. Defers to authority figures and doesn't want to be a bother.",
+    "communication_style": "Intermittently coherent. When lucid, speaks in short simple sentences. Sometimes repeats questions or gives tangential answers. Staff from nursing home can provide most of the history. Uses old-fashioned expressions.",
+    "pain_description_style": "Understates pain significantly. Will say 'it's not too bad' even when clearly uncomfortable. Needs gentle, specific prompting to give accurate pain information.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Sepsis criteria met: suspected infection with SOFA score elevation (hypotension, altered mental status, elevated creatinine, thrombocytopenia)",
+            "Lactate 4.8 mmol/L indicating tissue hypoperfusion",
+            "Hypotension (MAP < 65) requiring aggressive fluid resuscitation",
+            "Urinary source of infection with positive UA and likely urosepsis",
+            "Acute kidney injury superimposed on CKD (Cr 2.8 from baseline 1.1)",
+            "Thrombocytopenia concerning for early DIC",
+            "Metabolic acidosis with respiratory compensation",
+            "Altered mental status from baseline (significant change from mild dementia)"
+        ],
+        "diagnosis": "Sepsis secondary to urinary tract infection (Urosepsis)",
+        "differential_diagnoses": [
+            "Septic shock progressing to multiorgan dysfunction",
+            "Pyelonephritis with bacteremia",
+            "Urinary obstruction with secondary infection",
+            "Meningitis (altered mental status with fever)",
+            "Decompensated heart failure with secondary infection"
+        ],
+        "recommended_interventions": [
+            "Initiate SEP-1 sepsis bundle within 1 hour",
+            "30 mL/kg crystalloid bolus for hypotension",
+            "Blood cultures x2 before antibiotics",
+            "Broad-spectrum IV antibiotics (avoid sulfa - allergy) within 1 hour",
+            "Hold metformin due to acute kidney injury and lactic acidosis risk",
+            "Arterial blood gas monitoring",
+            "Continuous hemodynamic monitoring",
+            "Foley catheter for accurate urine output monitoring (goal >0.5 mL/kg/hr)",
+            "Vasopressors if hypotension persists after fluid resuscitation (norepinephrine first line)",
+            "Lactate reassessment in 2-4 hours",
+            "Consider ICU admission",
+            "Notify family and nursing home of critical status"
+        ]
+    }
+}

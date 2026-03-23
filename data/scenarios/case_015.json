@@ -1,0 +1,168 @@
+{
+    "patient_id": "case_015",
+    "name": "Gerald \"Gerry\" Kowalski",
+    "age": 56,
+    "sex": "Male",
+    "ethnicity": "Caucasian/Polish-American",
+    "weight_lbs": 205,
+    "height_inches": 71,
+    "chief_complaint": "I've been throwing up blood since last night, looks like coffee grounds, and my stools are black and tarry",
+    "onset_description": "Started vomiting dark material resembling coffee grounds approximately 10 hours ago. Noticed black, foul-smelling stools this morning. Has had worsening epigastric pain for the past 2 weeks. Feels lightheaded when standing.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "hematemesis": {
+            "description": "Threw up three times, looked like dark coffee grounds mixed in with it",
+            "onset": "10 hours ago",
+            "character": "dark brown/black emesis with granular appearance",
+            "severity": "moderate volume, approximately 200-300mL total",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["eating", "drinking alcohol"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["epigastric pain", "dizziness", "weakness"]
+        },
+        "melena": {
+            "description": "My stool is black and sticky like tar, smells awful",
+            "onset": "this morning, two episodes",
+            "character": "black, tarry, malodorous",
+            "severity": null,
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["hematemesis"]
+        },
+        "epigastric_pain": {
+            "description": "Burning pain right here in the pit of my stomach, been going on a couple weeks but got way worse yesterday",
+            "onset": "2 weeks, acutely worsened 24 hours ago",
+            "character": "burning, gnawing",
+            "severity": "6/10",
+            "location": "epigastric",
+            "radiation": "slightly to the back",
+            "aggravating_factors": ["eating", "alcohol", "NSAIDs", "lying flat"],
+            "alleviating_factors": ["antacids provided mild temporary relief"],
+            "associated_symptoms": ["nausea", "hematemesis"]
+        },
+        "dizziness": {
+            "description": "I get real woozy when I stand up, almost blacked out in the bathroom",
+            "onset": "this morning",
+            "character": "lightheadedness, worse with position changes",
+            "severity": "moderate",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["standing", "walking"],
+            "alleviating_factors": ["lying down"],
+            "associated_symptoms": ["weakness", "tachycardia"]
+        },
+        "weakness": {
+            "description": "I feel wiped out, no energy at all, legs feel like jelly",
+            "onset": "progressive over last 12 hours",
+            "character": "generalized fatigue and weakness",
+            "severity": "moderate",
+            "location": "generalized",
+            "radiation": null,
+            "aggravating_factors": ["exertion"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["dizziness"]
+        }
+    },
+    "symptoms_absent": [
+        "bright red blood per rectum", "chest pain", "shortness of breath",
+        "fever", "abdominal distension", "jaundice", "confusion",
+        "urinary symptoms", "joint pain", "rash", "vision changes",
+        "dysphagia", "weight loss"
+    ],
+    "vitals": {
+        "heart_rate": 112,
+        "blood_pressure_systolic": 98,
+        "blood_pressure_diastolic": 62,
+        "respiratory_rate": 20,
+        "spo2": 97,
+        "temperature": 98.2,
+        "pain_scale": 6
+    },
+    "labs": {
+        "CBC": "WBC 10.1, Hgb 8.2 (low - baseline likely ~14), Plt 135 (low-normal)",
+        "BMP": "Na 137, K 3.4 (low-normal), Cr 1.3 (mildly elevated), Glucose 98, BUN 42 (elevated - suggests upper GI bleed)",
+        "PT/INR": "14.2 sec / 1.3 (mildly prolonged)",
+        "liver_function": "AST 68 (elevated), ALT 52 (elevated), Alk Phos 95, Total Bilirubin 1.4, Albumin 3.0 (low)",
+        "lipase": "38 U/L (normal)",
+        "lactate": "2.8 mmol/L (elevated)",
+        "type_and_screen": "O positive, antibody screen negative",
+        "ethanol_level": "45 mg/dL (positive)"
+    },
+    "past_medical_history": [
+        "GERD (5 years, poorly managed)",
+        "Hypertension (8 years)",
+        "History of peptic ulcer disease (diagnosed 3 years ago, non-compliant with treatment)",
+        "Alcoholic fatty liver disease"
+    ],
+    "surgical_history": [
+        "Right knee arthroscopy (2010)",
+        "Hernia repair (2005)"
+    ],
+    "medications": [
+        "Ibuprofen 600mg three times daily (self-medicating for chronic knee pain)",
+        "Lisinopril 10mg daily (admits to missing doses frequently)",
+        "Omeprazole 20mg daily (stopped taking it 2 months ago because he 'felt fine')"
+    ],
+    "allergies": [
+        "Codeine (severe nausea and vomiting)"
+    ],
+    "social_history": {
+        "smoking": "1 pack per day for 35 years",
+        "alcohol": "6-8 beers daily, more on weekends. Drinks whiskey too. Last drink was yesterday evening.",
+        "drugs": "Denies",
+        "occupation": "Auto mechanic, self-employed",
+        "living_situation": "Divorced, lives alone in a house. Ex-wife brought him to the ED.",
+        "exercise": "None",
+        "diet": "Irregular meals, lots of fried food, eats out most meals"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Died of cirrhosis at age 62",
+            "mother": "Hypertension, alive at 80",
+            "brother": "Alcoholism, gastric ulcers"
+        }
+    },
+    "personality": "gruff and irritable, defensive about his drinking, impatient with the process but underneath is scared",
+    "communication_style": "Blunt and sometimes rude. Minimizes his alcohol use when first asked. Gets defensive if pressed about lifestyle. Uses profanity casually. Will eventually open up if treated with respect and without judgment. Asks 'how long is this gonna take?' frequently.",
+    "pain_description_style": "Understates pain. Describes it in functional terms like 'it ain't nothing I can't handle' but then grimaces. Uses working-class analogies: 'feels like battery acid in my gut.'",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Active upper GI hemorrhage with hematemesis and melena",
+            "Hemodynamic instability: tachycardia (HR 112) and hypotension (98/62)",
+            "Significant anemia (Hgb 8.2) suggesting substantial blood loss",
+            "Elevated BUN:Cr ratio consistent with upper GI bleed",
+            "High-risk NSAID use (ibuprofen 600mg TID) with known PUD history",
+            "Heavy alcohol use with elevated liver enzymes and positive ethanol level",
+            "Discontinued PPI therapy 2 months ago",
+            "Elevated lactate suggesting tissue hypoperfusion",
+            "Mildly prolonged INR suggesting hepatic synthetic dysfunction"
+        ],
+        "diagnosis": "Upper GI Bleed - likely peptic ulcer (NSAID and alcohol-related)",
+        "differential_diagnoses": [
+            "Gastric ulcer with active bleeding",
+            "Duodenal ulcer with active bleeding",
+            "Mallory-Weiss tear",
+            "Esophageal varices (given alcohol history)",
+            "Erosive gastritis",
+            "Gastric malignancy"
+        ],
+        "recommended_interventions": [
+            "Two large-bore IV access (18 gauge or larger)",
+            "Aggressive IV fluid resuscitation with crystalloids",
+            "Type and crossmatch for 4 units pRBCs",
+            "Transfuse pRBCs for Hgb < 7 or hemodynamic instability",
+            "IV pantoprazole 80mg bolus then 8mg/hr drip",
+            "NPO status",
+            "Urgent GI consult for emergent EGD",
+            "Discontinue all NSAIDs immediately",
+            "Foley catheter for urine output monitoring",
+            "Serial hemoglobin checks every 4-6 hours",
+            "ICU admission for close monitoring"
+        ]
+    }
+}

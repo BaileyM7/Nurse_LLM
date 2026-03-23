@@ -1,0 +1,171 @@
+{
+    "patient_id": "case_020",
+    "name": "Catherine \"Cat\" Morales",
+    "age": 45,
+    "sex": "Female",
+    "ethnicity": "Filipina-American",
+    "weight_lbs": 140,
+    "height_inches": 63,
+    "chief_complaint": "I have the worst headache of my entire life, it hit me like a thunderbolt. I feel like my head is going to explode.",
+    "onset_description": "Sudden, explosive onset of severe headache while straining during a bowel movement approximately 2 hours ago. Described as instantaneous, reaching maximum intensity within seconds. Associated with nausea, vomiting, neck stiffness, and photophobia. No preceding aura or warning signs.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "It's the worst pain I have ever felt in my life, it just slammed into me all at once. It feels like my head is being crushed from the inside out.",
+            "onset": "2 hours ago, instantaneous maximum intensity (thunderclap onset)",
+            "character": "explosive, diffuse, throbbing, constant",
+            "severity": "10/10",
+            "location": "diffuse, worst at the back of the head and neck",
+            "radiation": "down the back of the neck",
+            "aggravating_factors": ["light", "noise", "any movement", "straining", "coughing"],
+            "alleviating_factors": ["nothing - tried ibuprofen at home, no relief"],
+            "associated_symptoms": ["nausea", "vomiting", "neck stiffness", "photophobia"]
+        },
+        "neck_stiffness": {
+            "description": "My neck is so stiff I can't bend it forward, it makes the headache way worse when I try",
+            "onset": "within 30 minutes of headache onset",
+            "character": "nuchal rigidity",
+            "severity": "severe",
+            "location": "posterior neck",
+            "radiation": null,
+            "aggravating_factors": ["flexion of the neck", "any movement"],
+            "alleviating_factors": ["lying completely still"],
+            "associated_symptoms": ["headache"]
+        },
+        "vomiting": {
+            "description": "I've thrown up three times since it started, the headache is so bad it makes me vomit",
+            "onset": "within 15 minutes of headache onset",
+            "character": "projectile initially, now dry heaving",
+            "severity": "3 episodes",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any movement", "attempting to sit up"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["headache", "nausea"]
+        },
+        "photophobia": {
+            "description": "The light is killing me, please turn it off, it makes everything worse",
+            "onset": "shortly after headache onset",
+            "character": "severe light sensitivity",
+            "severity": "severe",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["bright lights", "screens"],
+            "alleviating_factors": ["dark room", "eyes closed"],
+            "associated_symptoms": ["headache"]
+        },
+        "nausea": {
+            "description": "I feel constantly nauseous, can't escape it",
+            "onset": "with the headache",
+            "character": "persistent, severe",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["movement", "light"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["vomiting"]
+        }
+    },
+    "symptoms_absent": [
+        "focal weakness", "numbness or tingling", "vision loss",
+        "double vision", "seizure", "loss of consciousness",
+        "fever", "rash", "ear pain", "recent trauma",
+        "speech difficulty", "gait problems", "confusion"
+    ],
+    "vitals": {
+        "heart_rate": 92,
+        "blood_pressure_systolic": 168,
+        "blood_pressure_diastolic": 98,
+        "respiratory_rate": 18,
+        "spo2": 98,
+        "temperature": 99.0,
+        "pain_scale": 10
+    },
+    "labs": {
+        "CBC": "WBC 12.1 (mildly elevated), Hgb 13.2, Plt 240",
+        "BMP": "Na 138, K 4.1, Cr 0.7, Glucose 128, BUN 14 - within normal limits",
+        "PT/INR": "11.8 sec / 1.0 (normal)",
+        "troponin": "< 0.01 ng/mL (normal)",
+        "liver_function": "AST 25, ALT 28, within normal limits",
+        "ESR": "18 mm/hr (normal)",
+        "blood_glucose_POC": "132 mg/dL"
+    },
+    "past_medical_history": [
+        "Hypertension (8 years, on medication)",
+        "Migraines (occasional, but patient clearly states this is completely different from any migraine)",
+        "Polycystic kidney disease (autosomal dominant, monitored by nephrologist)",
+        "Anxiety disorder"
+    ],
+    "surgical_history": [
+        "Laparoscopic cholecystectomy (2019)",
+        "Diagnostic laparoscopy for endometriosis (2010)"
+    ],
+    "medications": [
+        "Lisinopril 20mg daily",
+        "Sumatriptan 50mg as needed for migraines (last used 3 months ago)",
+        "Sertraline 50mg daily",
+        "Ibuprofen 200mg as needed"
+    ],
+    "allergies": [
+        "No known drug allergies"
+    ],
+    "social_history": {
+        "smoking": "Quit 10 years ago, smoked half a pack per day for 12 years",
+        "alcohol": "Glass of wine 2-3 times per week",
+        "drugs": "Denies",
+        "occupation": "Hospital billing coordinator (works at this hospital)",
+        "living_situation": "Divorced, lives alone in a condo. Adult daughter lives 20 minutes away.",
+        "exercise": "Zumba classes 3 times per week, walks on off days",
+        "diet": "Generally healthy, cooks most meals at home, watches sodium intake"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Polycystic kidney disease, died at 55 from ruptured cerebral aneurysm",
+            "mother": "Hypertension, Type 2 Diabetes, alive at 72",
+            "brother": "Polycystic kidney disease, brain aneurysm (clipped at age 42)",
+            "daughter": "Healthy, being monitored for PKD"
+        }
+    },
+    "personality": "terrified, keeps eyes closed, speaks in a whisper because talking loudly worsens the headache. Usually a composed, organized professional but is visibly shaken. Keeps saying 'something is really wrong.'",
+    "communication_style": "Speaks softly and minimally due to pain. Answers questions but keeps responses brief. Very insistent that this headache is 'nothing like my migraines.' When asked about family history, becomes tearful and says 'my dad died from a brain bleed.' Needs a darkened, quiet room for assessment.",
+    "pain_description_style": "Dramatic but accurate - 'it felt like a bomb went off in my head.' Rates it 10/10 without hesitation. Clutches her head. Cries quietly. Says 'I've had migraines my whole life, this is completely different - this one could kill me.'",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Thunderclap headache (instantaneous maximum intensity) - pathognomonic for SAH until proven otherwise",
+            "Worst headache of life in a patient who knows her baseline migraines",
+            "Meningeal signs: nuchal rigidity and photophobia",
+            "Family history of cerebral aneurysm rupture (father died of SAH, brother had aneurysm)",
+            "Autosomal dominant polycystic kidney disease - strong association with intracranial aneurysms (8-12% prevalence)",
+            "Hypertension (168/98) on presentation",
+            "Onset with Valsalva (straining at stool) - classic aneurysm rupture trigger",
+            "No focal neurological deficits currently (Hunt-Hess Grade II)"
+        ],
+        "diagnosis": "Subarachnoid Hemorrhage (likely ruptured intracranial aneurysm)",
+        "differential_diagnoses": [
+            "Thunderclap migraine",
+            "Intracerebral hemorrhage",
+            "Cerebral venous sinus thrombosis",
+            "Arterial dissection (carotid or vertebral)",
+            "Reversible cerebral vasoconstriction syndrome (RCVS)",
+            "Meningitis"
+        ],
+        "recommended_interventions": [
+            "STAT non-contrast CT head (sensitivity >95% within 6 hours for SAH)",
+            "If CT negative: lumbar puncture to evaluate for xanthochromia",
+            "CT angiography of head to identify aneurysm source",
+            "Neurosurgery consult STAT",
+            "Blood pressure control (target SBP < 160 with nicardipine or labetalol drip)",
+            "IV analgesics for pain (avoid aspirin/NSAIDs, use acetaminophen and opioids)",
+            "IV antiemetics (ondansetron)",
+            "Seizure precautions",
+            "Strict bed rest with head of bed elevated 30 degrees",
+            "Dark quiet room, minimize stimulation",
+            "Nimodipine 60mg every 4 hours (if SAH confirmed - prevents vasospasm)",
+            "Continuous cardiac monitoring (risk of neurogenic cardiac stunning)",
+            "Neuro checks every 1 hour",
+            "Admit to neuro ICU"
+        ]
+    }
+}

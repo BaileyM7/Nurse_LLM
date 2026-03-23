@@ -1,0 +1,207 @@
+{
+    "patient_id": "case_027",
+    "name": "Eleanor Matsuda",
+    "age": 80,
+    "sex": "Female",
+    "ethnicity": "Japanese American",
+    "weight_lbs": 118,
+    "height_inches": 60,
+    "chief_complaint": "I thought it was just the flu but now I can hardly breathe and I can't stop coughing",
+    "onset_description": "Developed typical flu symptoms 5 days ago with fever, body aches, and dry cough. Seemed to improve slightly on day 3, but then worsened dramatically on day 4 with productive cough, worsening shortness of breath, and high fever returning.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "cough": {
+            "description": "The cough started out dry but now I'm bringing up this thick yellow-green stuff. It hurts my chest every time I cough.",
+            "onset": "5 days ago dry, became productive 2 days ago",
+            "character": "Initially dry, now productive with thick yellow-green sputum",
+            "severity": "8/10",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": ["deep breathing", "lying flat", "talking"],
+            "alleviating_factors": ["sitting upright", "sipping warm water"],
+            "associated_symptoms": ["shortness of breath", "pleuritic chest pain"]
+        },
+        "shortness_of_breath": {
+            "description": "I get so winded just walking to the bathroom. Today I could barely get out of bed without feeling like I was suffocating.",
+            "onset": "3 days ago, progressively worsening",
+            "character": "dyspnea on minimal exertion, now present at rest",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["exertion", "lying flat", "coughing fits"],
+            "alleviating_factors": ["sitting upright", "pursed lip breathing"],
+            "associated_symptoms": ["cough", "fatigue", "tachypnea"]
+        },
+        "fever": {
+            "description": "My temperature went up to 103 last night. I was sweating through my nightgown.",
+            "onset": "5 days ago, biphasic pattern (improved then worsened)",
+            "character": "high fever with rigors, biphasic pattern suggesting secondary infection",
+            "severity": "high",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["acetaminophen with partial response"],
+            "associated_symptoms": ["chills", "night sweats", "malaise"]
+        },
+        "pleuritic_chest_pain": {
+            "description": "There's a sharp pain on my right side when I take a deep breath or cough. It catches me.",
+            "onset": "2 days ago",
+            "character": "sharp, stabbing, reproducible with inspiration",
+            "severity": "6/10",
+            "location": "right lateral chest",
+            "radiation": null,
+            "aggravating_factors": ["deep inspiration", "coughing", "movement"],
+            "alleviating_factors": ["shallow breathing", "splinting with pillow"],
+            "associated_symptoms": ["cough", "shortness of breath"]
+        },
+        "body_aches": {
+            "description": "My whole body aches, especially my muscles. Even my skin feels sore to touch.",
+            "onset": "5 days ago",
+            "character": "diffuse myalgias with skin hypersensitivity",
+            "severity": "6/10",
+            "location": "generalized, worst in back and legs",
+            "radiation": null,
+            "aggravating_factors": ["movement", "touch"],
+            "alleviating_factors": ["rest", "warm compress"],
+            "associated_symptoms": ["fever", "fatigue"]
+        },
+        "fatigue": {
+            "description": "I have no energy at all. I feel completely drained. My daughter had to practically carry me to the car.",
+            "onset": "5 days ago, worsening",
+            "character": "profound exhaustion, unable to perform ADLs",
+            "severity": "9/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any activity"],
+            "alleviating_factors": ["rest provides minimal relief"],
+            "associated_symptoms": ["decreased appetite", "dehydration"]
+        },
+        "decreased_oral_intake": {
+            "description": "I haven't been able to eat much of anything for days. Just sips of water and tea.",
+            "onset": "4 days ago",
+            "character": "poor appetite with minimal fluid intake",
+            "severity": "moderate",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["nausea with coughing"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["dehydration", "weakness"]
+        }
+    },
+    "symptoms_absent": [
+        "hemoptysis", "wheezing", "leg swelling", "abdominal pain",
+        "diarrhea", "urinary symptoms", "rash", "joint swelling",
+        "confusion or altered mental status", "neck stiffness",
+        "sore throat currently", "ear pain"
+    ],
+    "vitals": {
+        "heart_rate": 108,
+        "blood_pressure_systolic": 102,
+        "blood_pressure_diastolic": 62,
+        "respiratory_rate": 28,
+        "spo2": 88.0,
+        "temperature": 102.6,
+        "pain_scale": 6
+    },
+    "labs": {
+        "CBC": "WBC 19.6 (elevated with left shift, 12% bands), Hgb 12.4, Plt 178",
+        "BMP": "Na 132 (low), K 3.6, Cr 1.4 (elevated from baseline 0.8), BUN 32 (elevated), Glucose 138",
+        "CRP": "168 mg/L (markedly elevated)",
+        "procalcitonin": "3.4 ng/mL (elevated, consistent with bacterial infection)",
+        "influenza_test": "Influenza A positive (rapid molecular assay)",
+        "blood_cultures": "Drawn x2 sets, pending",
+        "sputum_culture": "Pending (gram stain shows numerous WBCs, gram-positive diplococci)",
+        "lactate": "2.4 mmol/L (mildly elevated)",
+        "ABG": "pH 7.44, pCO2 30 (low, hyperventilating), pO2 56 (low), HCO3 21, A-a gradient elevated",
+        "chest_xray": "Right middle and lower lobe consolidation with air bronchograms, consistent with pneumonia. Small right-sided pleural effusion.",
+        "BNP": "210 pg/mL (mildly elevated, likely stress-related)"
+    },
+    "past_medical_history": [
+        "COPD (moderate, on home oxygen 1L at night only)",
+        "Hypertension (25 years)",
+        "Osteoarthritis (knees and hands)",
+        "Osteoporosis",
+        "Gastroesophageal reflux disease",
+        "Hypothyroidism",
+        "History of shingles (2023)"
+    ],
+    "surgical_history": [
+        "Right total knee replacement (2018)",
+        "Cataract surgery bilateral (2020, 2021)",
+        "Appendectomy (1962)"
+    ],
+    "medications": [
+        "Tiotropium inhaler 18mcg daily",
+        "Albuterol inhaler 2 puffs every 4-6 hours as needed",
+        "Lisinopril 10mg daily",
+        "Levothyroxine 50mcg daily",
+        "Omeprazole 20mg daily",
+        "Alendronate 70mg weekly",
+        "Acetaminophen 500mg as needed for arthritis pain",
+        "Calcium 600mg with Vitamin D 800IU daily"
+    ],
+    "allergies": [
+        "Erythromycin (severe nausea and vomiting)",
+        "Aspirin (gastric bleeding)"
+    ],
+    "social_history": {
+        "smoking": "Never smoked, but husband smoked heavily (secondhand smoke exposure for 40+ years until his death)",
+        "alcohol": "Rare, glass of sake on special occasions",
+        "drugs": "Denies",
+        "occupation": "Retired schoolteacher, taught elementary school for 35 years",
+        "living_situation": "Lives alone in a small house, widowed 6 years ago. Daughter lives 20 minutes away and checks on her daily. Has a home health aide 3 times per week.",
+        "exercise": "Light gardening, walks around the house. Limited by arthritis and dyspnea.",
+        "diet": "Eats small balanced meals, traditional Japanese diet with rice, fish, and vegetables. Daughter brings meals several times per week."
+    },
+    "family_history": {
+        "conditions": {
+            "husband": "Deceased, lung cancer (heavy smoker)",
+            "mother": "Died at 88 from pneumonia",
+            "father": "Died at 75 from stroke",
+            "daughter": "Healthy at 52",
+            "son": "Asthma, otherwise healthy at 50"
+        }
+    },
+    "personality": "Gentle, dignified, and stoic. Does not want to be a burden to her daughter. Tends to minimize symptoms. Very polite and formal in interactions. Expresses gratitude frequently even when suffering.",
+    "communication_style": "Soft-spoken and measured. Uses polite, formal language. May nod and agree even when she doesn't fully understand. Occasionally pauses to catch her breath mid-sentence. Defers difficult questions to her daughter when possible.",
+    "pain_description_style": "Extremely reluctant to report pain or discomfort. Will say 'it's manageable' or 'I don't want to complain.' Needs very gentle and specific questioning. Cultural tendency to endure pain quietly.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Influenza A with secondary bacterial pneumonia (biphasic illness pattern)",
+            "Hypoxemia (SpO2 88%, PaO2 56) requiring supplemental oxygen",
+            "Tachypnea and respiratory distress (RR 28)",
+            "Underlying COPD increasing risk of respiratory failure",
+            "Dehydration with acute kidney injury (Cr 1.4 from 0.8)",
+            "Age 80 with multiple comorbidities - high mortality risk",
+            "Sputum gram stain suggesting Streptococcus pneumoniae superinfection",
+            "Did not receive flu vaccine this season (should be assessed)",
+            "Aspirin allergy (relevant for fever management)"
+        ],
+        "diagnosis": "Influenza A complicated by secondary bacterial pneumonia (likely Streptococcus pneumoniae)",
+        "differential_diagnoses": [
+            "Primary viral pneumonia from influenza",
+            "COPD exacerbation triggered by influenza",
+            "Pulmonary embolism",
+            "Congestive heart failure exacerbation",
+            "Lung abscess",
+            "Empyema"
+        ],
+        "recommended_interventions": [
+            "Supplemental oxygen to maintain SpO2 > 92% (titrate carefully with COPD history)",
+            "Oseltamivir 75mg BID for 5 days (antiviral for influenza, even late presentation)",
+            "IV antibiotics for community-acquired pneumonia (respiratory fluoroquinolone or beta-lactam + macrolide, avoid erythromycin)",
+            "IV fluid resuscitation for dehydration and AKI",
+            "Serial ABGs or continuous SpO2 monitoring",
+            "Respiratory isolation precautions for influenza",
+            "Bronchodilator treatments (nebulized albuterol and ipratropium)",
+            "Blood cultures before antibiotics",
+            "Consider BiPAP if respiratory status does not improve",
+            "CURB-65 score calculation for disposition (likely warrants admission)",
+            "Incentive spirometry when able",
+            "Assess vaccination status (pneumococcal and influenza)",
+            "Notify close contacts about influenza exposure"
+        ]
+    }
+}

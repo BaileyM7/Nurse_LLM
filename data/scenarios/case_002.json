@@ -1,0 +1,159 @@
+{
+    "patient_id": "case_002",
+    "name": "James Thompson",
+    "age": 45,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 210,
+    "height_inches": 71,
+    "chief_complaint": "I can't breathe right, and I've been coughing up some nasty stuff",
+    "onset_description": "Breathing got worse over the past 3 days. Cough started about a week ago.",
+    "severity": "medium",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "Short of breath, worse when I try to walk or do anything",
+            "onset": "3 days ago, gradually worsening",
+            "character": "feels like breathing through a straw",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["exertion", "lying flat", "talking too much"],
+            "alleviating_factors": ["sitting upright", "using inhaler"],
+            "associated_symptoms": ["cough", "chest tightness"]
+        },
+        "productive_cough": {
+            "description": "Coughing up thick yellow-green mucus, sometimes streaked with a tiny bit of blood",
+            "onset": "about a week ago",
+            "character": "wet, productive cough",
+            "severity": "5/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["deep breathing", "cold air", "nighttime"],
+            "alleviating_factors": ["cough medicine helps a little"],
+            "associated_symptoms": []
+        },
+        "fever": {
+            "description": "I've been running a fever on and off, had chills last night",
+            "onset": "3 days ago",
+            "character": "intermittent with chills",
+            "severity": null,
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["nighttime"],
+            "alleviating_factors": ["Tylenol brings it down for a few hours"],
+            "associated_symptoms": ["night sweats", "chills"]
+        },
+        "chest_tightness": {
+            "description": "My chest feels tight, not really a pain, more like pressure when I breathe deep",
+            "onset": "2 days ago",
+            "character": "tightness, not sharp",
+            "severity": "4/10",
+            "location": "right side of chest mostly",
+            "radiation": null,
+            "aggravating_factors": ["deep breathing", "coughing"],
+            "alleviating_factors": ["shallow breathing"],
+            "associated_symptoms": []
+        },
+        "fatigue": {
+            "description": "I'm just wiped out, no energy at all",
+            "onset": "about 5 days ago",
+            "character": "constant tiredness",
+            "severity": null,
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any activity"],
+            "alleviating_factors": ["rest helps a little"],
+            "associated_symptoms": ["decreased appetite"]
+        }
+    },
+    "symptoms_absent": [
+        "nausea", "vomiting", "diarrhea", "abdominal pain", "headache",
+        "leg swelling", "palpitations", "syncope", "rash", "joint pain",
+        "urinary symptoms", "weight loss", "vision changes"
+    ],
+    "vitals": {
+        "heart_rate": 98,
+        "blood_pressure_systolic": 132,
+        "blood_pressure_diastolic": 84,
+        "respiratory_rate": 24,
+        "spo2": 91.0,
+        "temperature": 101.8,
+        "pain_scale": 4
+    },
+    "labs": {
+        "CBC": "WBC 15.8 (elevated), Hgb 14.2, Plt 310",
+        "BMP": "Na 136, K 4.0, Cr 0.9, Glucose 105, BUN 15",
+        "procalcitonin": "1.2 ng/mL (elevated, suggestive of bacterial infection)",
+        "blood_cultures": "Pending",
+        "sputum_culture": "Pending",
+        "ABG": "pH 7.46, pCO2 32, pO2 68, HCO3 22 (respiratory alkalosis with hypoxemia)",
+        "chest_xray": "Right lower lobe consolidation with air bronchograms. Small right pleural effusion."
+    },
+    "past_medical_history": [
+        "Asthma (since childhood, uses inhaler as needed)",
+        "Hypertension (5 years)",
+        "Prediabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy (2005)",
+        "Right knee arthroscopy (2019)"
+    ],
+    "medications": [
+        "Albuterol inhaler as needed",
+        "Amlodipine 5mg daily",
+        "Multivitamin daily"
+    ],
+    "allergies": [
+        "Sulfa drugs (severe rash and swelling)"
+    ],
+    "social_history": {
+        "smoking": "Current smoker, about half a pack per day for 20 years (10 pack-year history)",
+        "alcohol": "A few beers on weekends, maybe 4-6 per week",
+        "drugs": "Smoked marijuana occasionally in the past, not currently",
+        "occupation": "Construction foreman, works outdoors frequently",
+        "living_situation": "Lives alone in an apartment, recently divorced",
+        "exercise": "Usually fairly active at work, hasn't been able to work this week",
+        "diet": "Mostly fast food, doesn't cook much since the divorce"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Asthma, COPD, alive at 70",
+            "father": "Hypertension, stroke at 65, deceased",
+            "brother": "Healthy"
+        }
+    },
+    "personality": "stoic, tries to downplay symptoms, a bit impatient",
+    "communication_style": "Short answers unless pressed for details. Gets frustrated if asked to repeat things. Prefers direct questions over open-ended ones.",
+    "pain_description_style": "Reluctant to admit pain. Uses phrases like 'it's not that bad' or 'I've had worse'. Will give a number if asked directly but usually lowballs it.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Productive cough with yellow-green sputum and hemoptysis",
+            "Fever with elevated WBC and procalcitonin indicating bacterial infection",
+            "SpO2 of 91% requiring supplemental oxygen",
+            "Current smoker with significant pack-year history",
+            "Right lower lobe consolidation on chest X-ray",
+            "History of asthma as comorbidity",
+            "Sulfa allergy (affects antibiotic choices)"
+        ],
+        "diagnosis": "Community-Acquired Pneumonia (right lower lobe)",
+        "differential_diagnoses": [
+            "Acute exacerbation of asthma with secondary infection",
+            "Acute bronchitis",
+            "Tuberculosis (given hemoptysis and risk factors)",
+            "Lung abscess",
+            "Pulmonary embolism"
+        ],
+        "recommended_interventions": [
+            "Supplemental oxygen to maintain SpO2 > 94%",
+            "Blood cultures before antibiotics",
+            "Empiric antibiotics (avoid sulfa drugs due to allergy)",
+            "IV fluids for hydration",
+            "Incentive spirometry",
+            "Monitor respiratory status closely",
+            "Smoking cessation counseling",
+            "Chest X-ray follow-up"
+        ]
+    }
+}

@@ -1,0 +1,187 @@
+{
+    "patient_id": "case_035",
+    "name": "Jessica Rivera",
+    "age": 31,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 145,
+    "height_inches": 64,
+    "chief_complaint": "I think I'm having a heart attack. I can't breathe, my chest is tight, my heart is pounding, and I feel like I'm going to die. Please help me.",
+    "onset_description": "Patient was in a work meeting when she suddenly developed chest tightness, palpitations, shortness of breath, tingling in her hands and face, and an overwhelming sense of doom. Coworkers called 911 because she was hyperventilating and clutching her chest. Symptoms peaked over approximately 10 minutes. EMS performed a 12-lead ECG en route which was normal sinus rhythm with sinus tachycardia. This is her third ED visit in 2 months with similar symptoms.",
+    "severity": "medium",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest_tightness": {
+            "description": "My chest feels tight, like someone is squeezing it. It's not exactly a sharp pain, more like a heavy pressure that comes and goes. It's terrifying.",
+            "onset": "45 minutes ago, peaked within 10 minutes",
+            "character": "non-exertional, diffuse chest tightness, not pleuritic, not positional",
+            "severity": "7/10 at peak, now 4/10 and improving",
+            "location": "diffuse chest, difficult to localize",
+            "radiation": null,
+            "aggravating_factors": ["anxiety", "hyperventilation", "thinking about it"],
+            "alleviating_factors": ["slow breathing", "reassurance", "time"],
+            "associated_symptoms": ["palpitations", "shortness of breath", "fear of dying"]
+        },
+        "palpitations": {
+            "description": "My heart is racing so fast. I can feel every single beat. It's pounding in my chest and my neck and my ears.",
+            "onset": "45 minutes ago",
+            "character": "awareness of rapid, forceful heartbeat, regular rhythm",
+            "severity": "7/10 at peak, now 4/10",
+            "location": "chest, neck",
+            "radiation": null,
+            "aggravating_factors": ["anxiety", "caffeine"],
+            "alleviating_factors": ["calming down", "reassurance"],
+            "associated_symptoms": ["chest tightness", "shortness of breath"]
+        },
+        "shortness_of_breath": {
+            "description": "I couldn't catch my breath at all. I was gasping and it felt like I was suffocating even though I know logically there's air. I still feel a little breathless.",
+            "onset": "45 minutes ago",
+            "character": "subjective dyspnea, hyperventilation, air hunger",
+            "severity": "8/10 at peak, now 3/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["anxiety", "rapid breathing"],
+            "alleviating_factors": ["slow deep breathing", "paper bag technique (tried by coworker)"],
+            "associated_symptoms": ["perioral tingling", "hand tingling"]
+        },
+        "paresthesias": {
+            "description": "My hands and face were tingling and going numb. My fingers curled up and I couldn't straighten them. That's when I really thought I was dying.",
+            "onset": "40 minutes ago, correlating with hyperventilation",
+            "character": "bilateral hand and perioral tingling and numbness, carpopedal spasm from respiratory alkalosis",
+            "severity": "6/10 at peak, now 2/10",
+            "location": "bilateral hands (fingers), perioral area",
+            "radiation": null,
+            "aggravating_factors": ["hyperventilation"],
+            "alleviating_factors": ["normalizing breathing"],
+            "associated_symptoms": ["hyperventilation"]
+        },
+        "sense_of_impending_doom": {
+            "description": "I had this overwhelming feeling that something terrible was happening, that I was dying. It's the most scared I've ever been. I know it sounds crazy but it felt absolutely real.",
+            "onset": "45 minutes ago",
+            "character": "intense fear of death, derealization",
+            "severity": "9/10 at peak, now 4/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["physical symptoms reinforcing fear"],
+            "alleviating_factors": ["reassurance", "normal test results", "time"],
+            "associated_symptoms": ["diaphoresis", "trembling"]
+        },
+        "diaphoresis": {
+            "description": "I broke out in a cold sweat. My palms are still clammy.",
+            "onset": "45 minutes ago",
+            "character": "cold, clammy perspiration, autonomic response",
+            "severity": "moderate",
+            "location": "generalized, especially palms and forehead",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["calming down"],
+            "associated_symptoms": ["anxiety", "palpitations"]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain with exertion", "pain radiating to arm or jaw",
+        "fever", "cough", "leg swelling or asymmetry", "hemoptysis",
+        "syncope or loss of consciousness", "seizure",
+        "focal neurological deficits", "suicidal ideation",
+        "auditory or visual hallucinations", "nausea or vomiting",
+        "abdominal pain", "recent travel or immobilization"
+    ],
+    "vitals": {
+        "heart_rate": 108,
+        "blood_pressure_systolic": 138,
+        "blood_pressure_diastolic": 82,
+        "respiratory_rate": 22,
+        "spo2": 99.0,
+        "temperature": 98.4,
+        "pain_scale": 4
+    },
+    "labs": {
+        "troponin": "0.01 ng/mL (normal)",
+        "BMP": "Na 140, K 3.6, Cr 0.7, BUN 12, Glucose 118, Cl 104, CO2 22 (mildly low from hyperventilation)",
+        "CBC": "WBC 8.2, Hgb 13.6, Plt 268 - within normal limits",
+        "TSH": "2.1 mIU/L (normal)",
+        "D_dimer": "0.3 mcg/mL (normal, PE unlikely)",
+        "ECG": "Normal sinus rhythm, rate 108, normal axis, normal intervals, no ST-T changes, no Q waves",
+        "chest_xray": "Clear lung fields, normal heart size, no acute abnormality",
+        "urine_drug_screen": "Negative"
+    },
+    "past_medical_history": [
+        "Panic disorder (diagnosed 6 months ago, had symptoms for 2 years before diagnosis)",
+        "Generalized anxiety disorder (since college)",
+        "Mitral valve prolapse (diagnosed on echo 1 month ago, mild, asymptomatic)",
+        "Migraine headaches (2-3 per month)",
+        "Irritable bowel syndrome"
+    ],
+    "surgical_history": [
+        "Tonsillectomy (age 8)",
+        "Laparoscopic appendectomy (2018)"
+    ],
+    "medications": [
+        "Sertraline 100mg daily (started 3 months ago)",
+        "Alprazolam 0.25mg as needed for panic attacks (prescribed but she tries to avoid taking it)",
+        "Sumatriptan 50mg as needed for migraines",
+        "Combined oral contraceptive pill"
+    ],
+    "allergies": [
+        "No known drug allergies"
+    ],
+    "social_history": {
+        "smoking": "Never",
+        "alcohol": "1-2 glasses of wine per week, has been drinking slightly more lately due to stress",
+        "drugs": "Denies",
+        "occupation": "Marketing manager at a large company, high-pressure role with frequent presentations and deadlines. Recently promoted 4 months ago with increased responsibility.",
+        "living_situation": "Lives alone in a condo. In a long-term relationship but partner travels frequently for work. Close with her mother who lives nearby.",
+        "exercise": "Attends spin class 3 times per week. Has not gone in 2 weeks because she is afraid of elevated heart rate triggering an attack.",
+        "diet": "Generally healthy but has increased caffeine intake to 4-5 cups of coffee daily due to work stress and poor sleep."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Generalized anxiety disorder, panic disorder, alive at 58",
+            "father": "Hypertension, hyperlipidemia, alive at 62",
+            "sister": "Social anxiety disorder, alive at 28",
+            "maternal_grandmother": "Anxiety, depression"
+        }
+    },
+    "personality": "Bright, high-achieving, and self-aware but caught in a cycle of health anxiety. Intellectually knows her symptoms are likely panic but emotionally cannot convince herself she is not having a cardiac event. Frustrated and embarrassed about repeat ED visits. Worried she is wasting medical resources but cannot stop herself from seeking care when symptoms occur.",
+    "communication_style": "Articulate and insightful when calm. During active panic, speech is rapid and disorganized. Tearful and apologetic ('I know you probably think I'm crazy'). Responds well to validation and calm, structured communication. Asks for repeated reassurance about test results. May need the same information explained multiple times.",
+    "pain_description_style": "Describes symptoms in terms of sensations and fear rather than traditional pain. Says 'tight' and 'squeezing' but clarifies it is not true pain when asked directly. Pain scale decreases rapidly with reassurance and time. Hyperaware of body sensations.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Third ED visit in 2 months for similar symptoms — indicates inadequately treated panic disorder",
+            "All cardiac workup negative (troponin, ECG, D-dimer, CXR) — important to document for reassurance",
+            "Known mild mitral valve prolapse — may contribute to palpitation awareness but not dangerous",
+            "Excessive caffeine intake (4-5 cups/day) likely exacerbating panic symptoms",
+            "Avoidance of exercise due to fear of triggering symptoms (developing agoraphobic patterns)",
+            "Sertraline only started 3 months ago — may need dose optimization or augmentation",
+            "Has alprazolam but avoids using it — explore barriers to appropriate PRN use",
+            "Strong family history of anxiety disorders",
+            "Hyperventilation-induced respiratory alkalosis causing carpopedal spasm and paresthesias",
+            "Important: must rule out cardiac causes before attributing to panic, but pattern is highly consistent with panic disorder"
+        ],
+        "diagnosis": "Acute panic attack (panic disorder with recurrent episodes)",
+        "differential_diagnoses": [
+            "Acute coronary syndrome (ruled out by normal troponin and ECG)",
+            "Pulmonary embolism (ruled out by normal D-dimer and low pretest probability)",
+            "Thyrotoxicosis (ruled out by normal TSH)",
+            "Pheochromocytoma (rare but paroxysmal symptoms)",
+            "Cardiac arrhythmia (sinus tachycardia only on ECG)",
+            "Stimulant use (negative drug screen)",
+            "Mitral valve prolapse syndrome (known MVP, but symptoms out of proportion)"
+        ],
+        "recommended_interventions": [
+            "Validate patient's experience — do not dismiss symptoms as 'just anxiety'",
+            "Reassure with concrete test results (normal ECG, normal troponin, normal D-dimer)",
+            "Offer alprazolam 0.25-0.5mg for acute symptom relief if still distressed",
+            "Teach and practice diaphragmatic breathing technique in the ED",
+            "Strongly recommend psychiatric/therapy follow-up for panic disorder management",
+            "Cognitive behavioral therapy (CBT) referral — gold standard for panic disorder",
+            "Consider increasing sertraline dose (may not be at therapeutic level yet) in coordination with PCP/psychiatrist",
+            "Counsel on caffeine reduction (major exacerbating factor)",
+            "Educate about panic attack physiology — understanding the mechanism reduces fear",
+            "Encourage graduated return to exercise (desensitization to elevated heart rate)",
+            "Provide crisis resources and follow-up plan to reduce future ED utilization",
+            "Safety plan: if symptoms differ from usual panic pattern (exertional, radiating to arm, with syncope), return to ED"
+        ]
+    }
+}

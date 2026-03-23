@@ -1,0 +1,178 @@
+{
+    "patient_id": "case_011",
+    "name": "Priya Nair",
+    "age": 35,
+    "sex": "Female",
+    "ethnicity": "Indian American",
+    "weight_lbs": 152,
+    "height_inches": 65,
+    "chief_complaint": "I have this sharp pain in my side when I breathe in, and I've been feeling really short of breath since yesterday",
+    "onset_description": "Noticed mild shortness of breath yesterday evening that she attributed to jet lag. Woke up this morning with sudden sharp right-sided chest pain worse with deep breathing. Became increasingly short of breath over a few hours. Returned from a 14-hour flight from Mumbai 3 days ago.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "pleuritic_chest_pain": {
+            "description": "Sharp, stabbing pain on the right side of my chest, it catches every time I take a breath in",
+            "onset": "This morning, sudden",
+            "character": "sharp, stabbing, catches with inspiration",
+            "severity": "7/10",
+            "location": "right lateral chest",
+            "radiation": "right shoulder",
+            "aggravating_factors": ["deep inspiration", "coughing", "lying on right side"],
+            "alleviating_factors": ["shallow breathing", "lying on left side", "sitting upright"],
+            "associated_symptoms": ["dyspnea", "anxiety"]
+        },
+        "dyspnea": {
+            "description": "I feel like I can't get enough air, even just sitting still. It's not normal for me.",
+            "onset": "Yesterday evening, worsened significantly this morning",
+            "character": "air hunger at rest, worse with exertion",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["walking", "climbing stairs", "deep breathing attempts"],
+            "alleviating_factors": ["sitting upright and still"],
+            "associated_symptoms": ["pleuritic chest pain", "tachycardia"]
+        },
+        "tachycardia_sensation": {
+            "description": "My heart has been racing all morning, I can feel it pounding",
+            "onset": "This morning",
+            "character": "rapid, regular pounding",
+            "severity": "5/10",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": ["anxiety", "exertion"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["dyspnea", "anxiety"]
+        },
+        "right_calf_pain": {
+            "description": "Now that you mention it, my right calf has been sore and a little swollen since the flight. I thought it was just from sitting so long.",
+            "onset": "Noticed 2 days ago after the flight",
+            "character": "dull aching, mild swelling",
+            "severity": "4/10",
+            "location": "right posterior calf",
+            "radiation": null,
+            "aggravating_factors": ["walking", "dorsiflexion of foot"],
+            "alleviating_factors": ["elevation", "rest"],
+            "associated_symptoms": ["mild warmth to touch in calf area"]
+        },
+        "anxiety": {
+            "description": "I'm very worried. I'm normally healthy, this isn't like me at all.",
+            "onset": "This morning with worsening symptoms",
+            "character": "worry, apprehension",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["worsening symptoms", "not knowing what's wrong"],
+            "alleviating_factors": ["information from medical team"],
+            "associated_symptoms": ["tachycardia"]
+        }
+    },
+    "symptoms_absent": [
+        "fever",
+        "productive cough",
+        "hemoptysis",
+        "wheezing",
+        "orthopnea",
+        "leg swelling bilateral",
+        "syncope",
+        "nausea or vomiting",
+        "abdominal pain",
+        "headache",
+        "rash",
+        "joint pain or swelling",
+        "recent trauma"
+    ],
+    "vitals": {
+        "heart_rate": 118,
+        "blood_pressure_systolic": 128,
+        "blood_pressure_diastolic": 76,
+        "respiratory_rate": 24,
+        "spo2": 92.0,
+        "temperature": 99.3,
+        "pain_scale": 7
+    },
+    "labs": {
+        "D-dimer": "4.2 mcg/mL FEU (markedly elevated, normal <0.5)",
+        "troponin": "0.08 ng/mL (mildly elevated, suggests right heart strain)",
+        "BNP": "210 pg/mL (mildly elevated, suggests right ventricular strain)",
+        "CBC": "WBC 10.2, Hgb 13.8, Plt 265 - within normal limits",
+        "BMP": "Na 141, K 4.0, Cr 0.8, Glucose 98, BUN 14",
+        "PT/INR": "12.8 sec / 1.0",
+        "ABG": "pH 7.47, pCO2 30 mmHg, pO2 68 mmHg (respiratory alkalosis with hypoxemia)",
+        "CT_angiography_chest": "Bilateral pulmonary emboli: large saddle embolus at main pulmonary artery bifurcation with extension into right and left main pulmonary arteries. Right ventricle enlarged (RV/LV ratio 1.3).",
+        "lower_extremity_duplex": "Acute deep vein thrombosis in right popliteal and posterior tibial veins"
+    },
+    "past_medical_history": [
+        "Migraine headaches",
+        "Iron deficiency anemia (resolved)",
+        "No prior blood clots",
+        "No prior surgeries"
+    ],
+    "surgical_history": [
+        "None"
+    ],
+    "medications": [
+        "Combined oral contraceptive pill (ethinyl estradiol 30mcg/norgestimate 0.25mg) — for 6 years",
+        "Sumatriptan 50mg PRN for migraines (uses 1-2x per month)",
+        "Iron supplements 325mg daily (recently discontinued)",
+        "Multivitamin daily"
+    ],
+    "allergies": [
+        "Amoxicillin (hives as a child)"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "1-2 glasses of wine per week",
+        "drugs": "Denies",
+        "occupation": "Software engineer at a tech company, mostly desk work. Frequent international travel for work.",
+        "living_situation": "Lives with her husband in a two-bedroom condo",
+        "exercise": "Usually does yoga 3x/week and walks daily, has been sedentary since the trip due to fatigue",
+        "diet": "Mostly vegetarian, balanced diet"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Hypothyroidism, healthy otherwise",
+            "father": "Type 2 diabetes, hypertension",
+            "maternal_aunt": "Had a DVT at age 42 (no further workup done)",
+            "paternal_grandfather": "Died of stroke at age 70"
+        }
+    },
+    "personality": "calm, analytical, and detail-oriented — approaches her own symptoms almost like debugging a problem. Polite and respectful but asks a lot of thoughtful questions about what tests mean and what the plan is.",
+    "communication_style": "Articulate and precise. Provides well-organized answers with timelines. Will ask clarifying questions back. May downplay the calf pain unless specifically asked about leg symptoms. Uses some medical terminology she's picked up from reading online but is not a medical professional.",
+    "pain_description_style": "Very specific and descriptive. 'It's a sharp 7 out of 10 that's localized to my right lower chest and worsens on inspiration.' Comfortable with rating scales. Will mention she looked up her symptoms online and is worried about a blood clot.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Bilateral pulmonary emboli with saddle embolus — submassive PE",
+            "Right ventricular enlargement (RV/LV ratio 1.3) indicating right heart strain",
+            "Elevated troponin and BNP confirming hemodynamic significance",
+            "Concurrent DVT in right popliteal and posterior tibial veins",
+            "Major risk factors: combined OCP use + prolonged immobilization (14-hour flight)",
+            "Family history of DVT (maternal aunt)",
+            "SpO2 92% with tachycardia at 118 — hemodynamically significant",
+            "Markedly elevated D-dimer at 4.2"
+        ],
+        "diagnosis": "Submassive (Intermediate-Risk) Pulmonary Embolism with concurrent DVT",
+        "differential_diagnoses": [
+            "Pneumonia with pleurisy",
+            "Pneumothorax",
+            "Pericarditis",
+            "Musculoskeletal chest wall pain",
+            "Acute coronary syndrome"
+        ],
+        "recommended_interventions": [
+            "Immediate systemic anticoagulation with IV heparin drip (weight-based protocol)",
+            "Supplemental oxygen to maintain SpO2 > 95%",
+            "Continuous cardiorespiratory monitoring",
+            "IV access with fluid resuscitation (cautious — avoid volume overload with RV strain)",
+            "Echocardiogram to assess RV function",
+            "Pulmonology and/or interventional radiology consult",
+            "Monitor for hemodynamic deterioration — if develops hypotension, escalate to massive PE protocol (consider thrombolytics)",
+            "Discontinue oral contraceptive pill immediately",
+            "Pain management (avoid NSAIDs if anticoagulated — use acetaminophen)",
+            "Hypercoagulability workup after acute phase (Factor V Leiden, prothrombin gene mutation, antiphospholipid antibodies)",
+            "Compression stockings for DVT",
+            "Transition to oral anticoagulation (rivaroxaban or warfarin with heparin bridge) when stable"
+        ]
+    }
+}

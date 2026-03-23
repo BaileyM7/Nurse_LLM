@@ -1,0 +1,143 @@
+{
+    "patient_id": "case_014",
+    "name": "Marcus Rivera",
+    "age": 24,
+    "sex": "Male",
+    "ethnicity": "Latino",
+    "weight_lbs": 175,
+    "height_inches": 70,
+    "chief_complaint": "My stomach really hurts, it started around my belly button but now it's all down on the right side",
+    "onset_description": "Started about 12 hours ago as a vague ache around the umbilicus, gradually shifted to the right lower quadrant over the last 4-5 hours. Getting worse.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal_pain": {
+            "description": "Sharp, constant pain that got way worse when I moved or coughed",
+            "onset": "12 hours ago, migrated to RLQ 4-5 hours ago",
+            "character": "started dull and achy, now sharp and constant",
+            "severity": "8/10",
+            "location": "right lower quadrant, started periumbilical",
+            "radiation": "none",
+            "aggravating_factors": ["movement", "coughing", "walking", "riding in the car over bumps"],
+            "alleviating_factors": ["lying still with knees drawn up"],
+            "associated_symptoms": ["nausea", "loss of appetite", "low-grade fever"]
+        },
+        "nausea": {
+            "description": "I feel like I'm gonna throw up but I haven't yet",
+            "onset": "about 8 hours ago",
+            "character": "persistent queasiness",
+            "severity": "5/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["eating", "the smell of food"],
+            "alleviating_factors": ["nothing really"],
+            "associated_symptoms": ["loss of appetite"]
+        },
+        "anorexia": {
+            "description": "I haven't been able to eat anything all day, just the thought of food makes me feel sick",
+            "onset": "about 10 hours ago",
+            "character": "complete loss of appetite",
+            "severity": null,
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["nausea"]
+        },
+        "fever": {
+            "description": "I feel a little warm but not like burning up or anything",
+            "onset": "noticed a few hours ago",
+            "character": "low-grade",
+            "severity": "mild",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["took some Tylenol but it didn't help the belly pain"],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "vomiting", "diarrhea", "constipation", "bloody stool", "melena",
+        "dysuria", "urinary frequency", "hematuria", "chest pain",
+        "shortness of breath", "back pain", "testicular pain",
+        "jaundice", "shoulder pain"
+    ],
+    "vitals": {
+        "heart_rate": 98,
+        "blood_pressure_systolic": 132,
+        "blood_pressure_diastolic": 78,
+        "respiratory_rate": 18,
+        "spo2": 99,
+        "temperature": 100.8,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 14.8 (elevated, left shift with 82% neutrophils), Hgb 15.2, Plt 260",
+        "BMP": "Na 140, K 3.9, Cr 0.9, Glucose 102, BUN 14 - within normal limits",
+        "lipase": "45 U/L (normal)",
+        "urinalysis": "Clear, no WBC, no RBC, no nitrites, no leukocyte esterase",
+        "CRP": "6.8 mg/dL (elevated)",
+        "lactate": "1.2 mmol/L (normal)"
+    },
+    "past_medical_history": [
+        "None significant"
+    ],
+    "surgical_history": [
+        "None"
+    ],
+    "medications": [
+        "None regular, took Acetaminophen 500mg x2 about 6 hours ago"
+    ],
+    "allergies": [
+        "Sulfa drugs (rash and swelling)"
+    ],
+    "social_history": {
+        "smoking": "Denies",
+        "alcohol": "Drinks beer on weekends, maybe 4-6 per weekend",
+        "drugs": "Occasional marijuana",
+        "occupation": "Warehouse worker, lots of heavy lifting",
+        "living_situation": "Lives with two roommates in an apartment",
+        "exercise": "Plays recreational soccer twice a week, goes to the gym 3 times a week",
+        "diet": "Eats a lot of fast food, admits to not cooking much"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Type 2 Diabetes",
+            "mother": "Healthy",
+            "brother": "Healthy",
+            "maternal_grandmother": "Colon cancer at age 68"
+        }
+    },
+    "personality": "stoic and tough, tries to downplay pain but clearly uncomfortable, a little embarrassed about coming to the ER",
+    "communication_style": "Short answers, doesn't elaborate unless prompted. Says things like 'I'm fine' while visibly guarding his abdomen. Uses slang and casual language. Needs direct questions to open up.",
+    "pain_description_style": "Rates pain lower than it appears. Says 'it's not that bad' while wincing. When pressed, admits it's the worst stomach pain he's ever had. Describes it as 'like someone stabbing me.'",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Classic migration of pain from periumbilical to RLQ",
+            "Rebound tenderness and guarding pattern (pain worse with movement/coughing)",
+            "Leukocytosis with left shift (WBC 14.8, 82% neutrophils)",
+            "Low-grade fever of 100.8F",
+            "Anorexia preceding pain onset",
+            "Elevated CRP indicating acute inflammation"
+        ],
+        "diagnosis": "Acute Appendicitis",
+        "differential_diagnoses": [
+            "Mesenteric lymphadenitis",
+            "Meckel's diverticulitis",
+            "Right-sided kidney stone",
+            "Testicular torsion",
+            "Crohn's disease (initial presentation)"
+        ],
+        "recommended_interventions": [
+            "CT abdomen/pelvis with IV contrast",
+            "NPO status",
+            "IV fluid resuscitation",
+            "IV analgesics (morphine or ketorolac)",
+            "IV antiemetics",
+            "Surgical consult for likely appendectomy",
+            "IV antibiotics (piperacillin-tazobactam or cefoxitin)",
+            "Serial abdominal exams"
+        ]
+    }
+}

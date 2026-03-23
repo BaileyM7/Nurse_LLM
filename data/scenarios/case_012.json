@@ -1,0 +1,162 @@
+{
+    "patient_id": "case_012",
+    "name": "Ethan Morales-Chen",
+    "age": 19,
+    "sex": "Male",
+    "ethnicity": "Mixed (Filipino and Hispanic)",
+    "weight_lbs": 145,
+    "height_inches": 75,
+    "chief_complaint": "My chest just suddenly started hurting really bad on the left side and I can't take a deep breath",
+    "onset_description": "Was sitting in his dorm room playing video games when he felt a sudden sharp pop in his left chest followed by immediate pain and difficulty breathing. No trauma, no heavy lifting. Symptoms started about 45 minutes ago and are not improving.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "acute_chest_pain": {
+            "description": "It felt like something popped in my chest and then it just started killing me on the left side",
+            "onset": "45 minutes ago, sudden",
+            "character": "sharp, stabbing, constant with pleuritic component",
+            "severity": "8/10",
+            "location": "left chest, apex region",
+            "radiation": "left shoulder and back",
+            "aggravating_factors": ["deep breathing", "coughing", "movement", "lying flat"],
+            "alleviating_factors": ["sitting upright and still", "shallow breathing"],
+            "associated_symptoms": ["dyspnea", "sensation of popping in chest"]
+        },
+        "dyspnea": {
+            "description": "I can't take a full breath, it's like my left lung just stopped working or something",
+            "onset": "45 minutes ago, immediately after chest pain",
+            "character": "inability to take deep breaths, air hunger",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["deep breathing attempts", "exertion", "talking"],
+            "alleviating_factors": ["sitting still", "shallow rapid breathing"],
+            "associated_symptoms": ["chest pain", "anxiety"]
+        },
+        "dry_cough": {
+            "description": "I keep getting this tickle that makes me want to cough but coughing makes the pain way worse",
+            "onset": "30 minutes ago",
+            "character": "dry, non-productive, irritative",
+            "severity": "3/10",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": ["deep breathing"],
+            "alleviating_factors": ["suppressing the urge"],
+            "associated_symptoms": ["worsened chest pain with coughing"]
+        },
+        "left_shoulder_pain": {
+            "description": "My left shoulder aches, it started around the same time as the chest pain",
+            "onset": "45 minutes ago",
+            "character": "dull ache, referred",
+            "severity": "4/10",
+            "location": "left shoulder, top",
+            "radiation": null,
+            "aggravating_factors": ["deep breathing"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["chest pain"]
+        }
+    },
+    "symptoms_absent": [
+        "fever",
+        "productive cough",
+        "hemoptysis",
+        "wheezing",
+        "leg swelling or calf pain",
+        "palpitations",
+        "syncope",
+        "nausea or vomiting",
+        "abdominal pain",
+        "trauma or injury",
+        "recent illness or URI",
+        "weight loss",
+        "night sweats",
+        "diaphoresis"
+    ],
+    "vitals": {
+        "heart_rate": 105,
+        "blood_pressure_systolic": 132,
+        "blood_pressure_diastolic": 72,
+        "respiratory_rate": 22,
+        "spo2": 94.0,
+        "temperature": 98.2,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 8.1, Hgb 15.2, Plt 230 - within normal limits",
+        "BMP": "Na 140, K 4.1, Cr 0.9, Glucose 102, BUN 14",
+        "chest_xray": "Moderate left-sided pneumothorax, approximately 30-35% collapse. Visible visceral pleural line. No mediastinal shift. No effusion. Right lung clear.",
+        "ABG": "pH 7.43, pCO2 36 mmHg, pO2 78 mmHg (mildly decreased pO2)",
+        "troponin": "< 0.01 ng/mL (normal)",
+        "ECG": "Sinus tachycardia at 105 bpm, no ST changes, no axis deviation"
+    },
+    "past_medical_history": [
+        "No significant medical history",
+        "Wisdom teeth removal (2024)",
+        "No prior pneumothorax episodes"
+    ],
+    "surgical_history": [
+        "Wisdom teeth extraction under general anesthesia (2024)"
+    ],
+    "medications": [
+        "None prescribed",
+        "Takes whey protein supplement daily",
+        "Occasional ibuprofen for headaches"
+    ],
+    "allergies": [
+        "No known drug allergies",
+        "Seasonal pollen allergy (mild, no medications needed)"
+    ],
+    "social_history": {
+        "smoking": "Vapes nicotine (JUUL) for about 2 years, roughly 1 pod every 2-3 days",
+        "alcohol": "Drinks on weekends at college, 4-6 beers typically",
+        "drugs": "Smoked marijuana a few times, last time about a month ago",
+        "occupation": "College freshman, studying computer science",
+        "living_situation": "Lives in a dorm room with one roommate on campus",
+        "exercise": "Plays pickup basketball 2-3 times per week, lifts weights occasionally",
+        "diet": "Typical college diet — dining hall food, ramen, fast food. Takes protein shakes."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Healthy",
+            "father": "Mild asthma",
+            "paternal_uncle": "Had a collapsed lung in his twenties",
+            "grandparents": "All living, no significant pulmonary history"
+        }
+    },
+    "personality": "a little scared but tries to play it cool, uses humor to cope with anxiety, respectful but fidgety and restless, asks 'am I going to be okay?' multiple times",
+    "communication_style": "Uses casual young-adult language ('bro it just popped', 'this is insane'). Answers questions directly but may need to be asked about vaping specifically — doesn't consider it 'smoking.' Will downplay alcohol and marijuana use unless asked in a nonjudgmental way. Texts friends updates from the ER between questions.",
+    "pain_description_style": "Dramatic but genuine — 'dude this is like an 8, easily the worst pain I've ever felt.' Uses comparisons ('it feels like my lung deflated like a balloon'). Quick to give a number on pain scale. Winces visibly when taking deeper breaths.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Moderate (30-35%) left-sided pneumothorax on chest X-ray",
+            "Classic primary spontaneous pneumothorax demographic: tall, thin, young male",
+            "Acute onset pleuritic chest pain with dyspnea and no trauma",
+            "SpO2 94% — reduced from expected baseline",
+            "Nicotine vaping history — risk factor for pneumothorax",
+            "Family history of pneumothorax (paternal uncle)",
+            "No mediastinal shift (not tension pneumothorax currently)",
+            "Referred left shoulder pain (phrenic nerve irritation — classic finding)"
+        ],
+        "diagnosis": "Primary Spontaneous Pneumothorax (Left-Sided, Moderate)",
+        "differential_diagnoses": [
+            "Tension pneumothorax (must rule out — no mediastinal shift currently)",
+            "Pulmonary embolism",
+            "Pleuritis",
+            "Musculoskeletal chest pain",
+            "Pericarditis"
+        ],
+        "recommended_interventions": [
+            "Supplemental oxygen via non-rebreather mask (accelerates pneumothorax reabsorption)",
+            "Chest tube insertion (pigtail catheter or small-bore tube) for 30-35% pneumothorax with symptoms",
+            "Continuous pulse oximetry and cardiorespiratory monitoring",
+            "Serial chest X-rays to assess lung re-expansion",
+            "Pain management (IV ketorolac or morphine, avoid excessive sedation that may suppress respiratory drive)",
+            "Monitor for tension pneumothorax (tracheal deviation, hypotension, JVD)",
+            "Thoracic surgery consult if lung does not re-expand or for recurrence prevention discussion",
+            "Vaping cessation counseling",
+            "Education about recurrence risk (~30% within 1-2 years) and when to seek emergency care",
+            "Avoid air travel and scuba diving until resolved"
+        ]
+    }
+}

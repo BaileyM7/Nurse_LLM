@@ -1,0 +1,177 @@
+{
+    "patient_id": "case_009",
+    "name": "Gerald \"Jerry\" Kowalski",
+    "age": 68,
+    "sex": "Male",
+    "ethnicity": "Polish-American",
+    "weight_lbs": 178,
+    "height_inches": 70,
+    "chief_complaint": "I can't breathe worth a damn today, way worse than my usual",
+    "onset_description": "Has had COPD for years but worsening shortness of breath over the past 3 days. Got significantly worse this morning, couldn't walk to the bathroom without stopping twice.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "shortness_of_breath": {
+            "description": "Can barely walk across the room without gasping. Much worse than my normal breathing problems.",
+            "onset": "Worsening over 3 days, severe since this morning",
+            "character": "feels like breathing through a straw, can't get enough air in",
+            "severity": "8/10",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": ["any exertion", "lying flat", "talking in full sentences"],
+            "alleviating_factors": ["sitting upright", "leaning forward on table", "pursed lip breathing"],
+            "associated_symptoms": ["productive cough", "wheezing", "fatigue"]
+        },
+        "productive_cough": {
+            "description": "Coughing up a lot more junk than usual, it's thicker and turned greenish-yellow",
+            "onset": "4 days ago, getting worse",
+            "character": "deep, wet, rattling cough",
+            "severity": "6/10",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": ["deep breathing", "cold air", "lying down at night"],
+            "alleviating_factors": ["nebulizer treatments", "sitting upright"],
+            "associated_symptoms": ["shortness of breath", "wheezing"]
+        },
+        "wheezing": {
+            "description": "My chest sounds like a squeezebox, I can hear it myself when I breathe out",
+            "onset": "3 days ago",
+            "character": "high-pitched whistling, especially on exhale",
+            "severity": "6/10",
+            "location": "bilateral chest",
+            "radiation": null,
+            "aggravating_factors": ["exertion", "cold air"],
+            "alleviating_factors": ["albuterol inhaler"],
+            "associated_symptoms": ["shortness of breath", "cough"]
+        },
+        "fatigue": {
+            "description": "I'm wiped out. Even just sitting here I'm exhausted from trying to breathe.",
+            "onset": "3 days",
+            "character": "constant tiredness, no energy",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any physical activity"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["shortness of breath"]
+        },
+        "chest_tightness": {
+            "description": "My chest feels like it's in a vice, not really pain but just tight",
+            "onset": "3 days",
+            "character": "band-like tightness around chest",
+            "severity": "5/10",
+            "location": "bilateral chest",
+            "radiation": null,
+            "aggravating_factors": ["coughing", "deep breathing attempts"],
+            "alleviating_factors": ["bronchodilator use"],
+            "associated_symptoms": ["wheezing", "dyspnea"]
+        }
+    },
+    "symptoms_absent": [
+        "fever",
+        "hemoptysis",
+        "chest pain (sharp or stabbing)",
+        "leg swelling or calf pain",
+        "palpitations",
+        "syncope",
+        "nausea or vomiting",
+        "abdominal pain",
+        "headache",
+        "weight loss",
+        "night sweats",
+        "orthopnea at baseline (new symptom this exacerbation)"
+    ],
+    "vitals": {
+        "heart_rate": 108,
+        "blood_pressure_systolic": 148,
+        "blood_pressure_diastolic": 88,
+        "respiratory_rate": 28,
+        "spo2": 87.0,
+        "temperature": 99.1,
+        "pain_scale": 4
+    },
+    "labs": {
+        "ABG": "pH 7.32, pCO2 52 mmHg, pO2 58 mmHg, HCO3 28 mEq/L (respiratory acidosis with mild compensation)",
+        "CBC": "WBC 13.8 (elevated), Hgb 16.2 (polycythemia from chronic hypoxia), Plt 210 - within normal limits",
+        "BMP": "Na 137, K 4.5, Cr 1.0, Glucose 118, BUN 16",
+        "BNP": "180 pg/mL (mildly elevated, may reflect right heart strain)",
+        "procalcitonin": "0.35 ng/mL (borderline, suggests possible bacterial component)",
+        "sputum_culture": "Pending",
+        "chest_xray": "Hyperinflated lungs, flattened diaphragms, no focal consolidation or pneumothorax"
+    },
+    "past_medical_history": [
+        "COPD (diagnosed 12 years ago, GOLD Stage III)",
+        "Hypertension (15 years)",
+        "Peripheral vascular disease",
+        "Osteoarthritis bilateral knees",
+        "Depression"
+    ],
+    "surgical_history": [
+        "Right inguinal hernia repair (2005)",
+        "Left knee arthroscopy (2015)"
+    ],
+    "medications": [
+        "Tiotropium (Spiriva) 18mcg inhaled daily",
+        "Fluticasone/salmeterol (Advair) 250/50mcg inhaled twice daily",
+        "Albuterol (ProAir) 90mcg inhaler PRN (using 6-8 times daily past 3 days)",
+        "Lisinopril 10mg daily",
+        "Sertraline 50mg daily",
+        "Acetaminophen 500mg PRN for knee pain"
+    ],
+    "allergies": [
+        "Sulfa drugs (severe rash and facial swelling)",
+        "Codeine (nausea and vomiting)"
+    ],
+    "social_history": {
+        "smoking": "Smoked 1.5 packs/day for 45 years, quit 5 years ago (67.5 pack-year history)",
+        "alcohol": "2-3 beers on weekends, used to drink more heavily",
+        "drugs": "Denies illicit drug use",
+        "occupation": "Retired auto mechanic, 40 years of occupational exposure to fumes and solvents",
+        "living_situation": "Lives alone in a ranch-style house. Daughter checks on him daily. Has home oxygen at 2L but admits he doesn't always wear it.",
+        "exercise": "Very limited, can only walk about half a block before needing to stop",
+        "diet": "Eats a lot of canned soups and frozen dinners. Daughter brings him a home-cooked meal a couple times a week."
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Died at 59 from lung cancer, heavy smoker",
+            "mother": "COPD, died at 74 from respiratory failure",
+            "brother": "Emphysema, currently on home oxygen",
+            "sister": "Healthy, never smoked"
+        }
+    },
+    "personality": "gruff and matter-of-fact, minimizes symptoms because he's 'been through worse', dry sense of humor, gets impatient with what he sees as obvious questions",
+    "communication_style": "Short, blunt answers. Uses blue-collar language and occasional mild profanity. Doesn't volunteer information — you have to pull it out of him. Gets winded mid-sentence and needs to pause to catch his breath.",
+    "pain_description_style": "Downplays everything. 'It's not pain exactly, just can't breathe.' Reluctant to assign numbers to pain scale but will if pressed. More likely to describe function ('I couldn't make it to the john') than sensation.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "SpO2 of 87% indicating significant hypoxemia",
+            "Respiratory acidosis on ABG (pH 7.32, pCO2 52)",
+            "Increased sputum production with purulent change suggesting infectious exacerbation",
+            "Markedly increased rescue inhaler use (6-8x/day vs normal PRN)",
+            "67.5 pack-year smoking history with occupational exposure",
+            "Tachypnea at 28 breaths/min with accessory muscle use",
+            "Elevated WBC suggesting infectious component",
+            "Non-compliance with home oxygen therapy"
+        ],
+        "diagnosis": "Acute COPD Exacerbation (likely infectious trigger)",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Acute heart failure exacerbation",
+            "Pulmonary embolism",
+            "Lung cancer",
+            "Pneumothorax"
+        ],
+        "recommended_interventions": [
+            "Supplemental oxygen titrated to SpO2 88-92% (avoid over-oxygenation in COPD)",
+            "Nebulized albuterol and ipratropium (DuoNeb)",
+            "Systemic corticosteroids (prednisone 40mg or IV methylprednisolone)",
+            "Antibiotics covering common COPD exacerbation pathogens (azithromycin or doxycycline)",
+            "Repeat ABG after interventions",
+            "Continuous pulse oximetry",
+            "Consider BiPAP if no improvement",
+            "Sputum culture",
+            "Smoking cessation reinforcement and home oxygen compliance counseling"
+        ]
+    }
+}

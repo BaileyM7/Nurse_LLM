@@ -1,0 +1,174 @@
+{
+    "patient_id": "case_023",
+    "name": "Aisha Patel",
+    "age": 28,
+    "sex": "Female",
+    "ethnicity": "South Asian/Indian-American",
+    "weight_lbs": 128,
+    "height_inches": 64,
+    "chief_complaint": "I have a really awful headache that started with these weird zigzag lights in my vision. Now I feel like I'm going to throw up and the light is making it so much worse.",
+    "onset_description": "Patient experienced approximately 25 minutes of visual aura (scintillating scotoma with zigzag lines in the right visual field) which began about 3 hours ago. This was followed by progressive left-sided throbbing headache that has intensified over the past 2.5 hours. Associated with nausea, photophobia, and phonophobia. Has history of migraines but this is one of the worst episodes. Came to the ED because her usual medication did not work.",
+    "severity": "medium",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "It's throbbing and pounding on the left side of my head, behind my eye and into my temple. It's relentless.",
+            "onset": "2.5 hours ago, after the visual symptoms resolved",
+            "character": "unilateral, pulsating/throbbing, crescendo pattern",
+            "severity": "8/10",
+            "location": "left temporal and retro-orbital",
+            "radiation": "left side of face and into the neck on the left",
+            "aggravating_factors": ["bright light", "loud noise", "bending forward", "physical activity", "strong smells"],
+            "alleviating_factors": ["dark quiet room", "cold compress on forehead", "lying still"],
+            "associated_symptoms": ["nausea", "photophobia", "phonophobia", "visual aura (resolved)"]
+        },
+        "visual_aura": {
+            "description": "Before the headache started I got these zigzag shimmering lines in my right eye, like a kaleidoscope. It lasted about 20-25 minutes then went away, and then the headache hit.",
+            "onset": "3 hours ago, lasted approximately 25 minutes, now resolved",
+            "character": "scintillating scotoma, zigzag/fortification lines, right visual field",
+            "severity": "moderately disruptive to vision",
+            "location": "right visual field (both eyes)",
+            "radiation": null,
+            "aggravating_factors": ["trying to focus on screen"],
+            "alleviating_factors": ["closing eyes"],
+            "associated_symptoms": ["followed by headache onset"]
+        },
+        "nausea": {
+            "description": "I feel really nauseous, like I could throw up any second. The smell of anything makes it worse.",
+            "onset": "about 2 hours ago, with the headache",
+            "character": "persistent, waxing and waning",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["smells", "movement", "light"],
+            "alleviating_factors": ["lying still"],
+            "associated_symptoms": ["headache"]
+        },
+        "photophobia": {
+            "description": "The lights in here are brutal. Even my phone screen hurts. Can you please dim them?",
+            "onset": "with the headache",
+            "character": "severe sensitivity to all light sources",
+            "severity": "severe",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["fluorescent lights", "screens", "sunlight"],
+            "alleviating_factors": ["dark room", "sunglasses (wearing them now)"],
+            "associated_symptoms": ["headache worsening"]
+        },
+        "phonophobia": {
+            "description": "Even normal talking volume feels really loud. Please talk softly if you can.",
+            "onset": "with the headache",
+            "character": "sensitivity to normal conversational volume",
+            "severity": "moderate",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["loud conversations", "alarms", "overhead announcements"],
+            "alleviating_factors": ["quiet environment"],
+            "associated_symptoms": ["headache worsening"]
+        }
+    },
+    "symptoms_absent": [
+        "fever", "neck stiffness", "focal weakness", "numbness or tingling (beyond what she gets during typical auras)",
+        "speech difficulty", "confusion", "loss of consciousness", "seizure",
+        "worst headache of life (confirms this is severe but recognizable as her migraine pattern)",
+        "vomiting", "rash", "eye redness or pain",
+        "jaw claudication", "scalp tenderness", "weight loss"
+    ],
+    "vitals": {
+        "heart_rate": 78,
+        "blood_pressure_systolic": 122,
+        "blood_pressure_diastolic": 76,
+        "respiratory_rate": 16,
+        "spo2": 99,
+        "temperature": 98.4,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 7.2, Hgb 13.0, Plt 245 - within normal limits",
+        "BMP": "Na 140, K 4.0, Cr 0.6, Glucose 88, BUN 10 - within normal limits",
+        "ESR": "8 mm/hr (normal)",
+        "CRP": "0.4 mg/dL (normal)",
+        "TSH": "2.1 mIU/L (normal)",
+        "urinalysis": "Normal, beta-hCG negative",
+        "magnesium": "1.8 mg/dL (low-normal)"
+    },
+    "past_medical_history": [
+        "Migraine with aura (diagnosed age 16, approximately 3-4 episodes per month, worsening in frequency over past year)",
+        "Anxiety disorder (generalized)",
+        "Irritable bowel syndrome",
+        "Insomnia"
+    ],
+    "surgical_history": [
+        "None"
+    ],
+    "medications": [
+        "Sumatriptan 100mg as needed for migraines (took one 2 hours ago with no relief - reason for ED visit)",
+        "Topiramate 50mg twice daily (migraine prophylaxis, started 2 months ago)",
+        "Escitalopram 10mg daily",
+        "Melatonin 3mg at bedtime as needed",
+        "Oral contraceptive pill (desogestrel-ethinyl estradiol) daily"
+    ],
+    "allergies": [
+        "Propranolol (severe bradycardia and near-syncope)",
+        "Metoclopramide (dystonic reaction - neck spasms)"
+    ],
+    "social_history": {
+        "smoking": "Never",
+        "alcohol": "Rarely, maybe once a month. Has noticed red wine triggers migraines, so she avoids it.",
+        "drugs": "Denies",
+        "occupation": "Second-year law student, currently in finals period",
+        "living_situation": "Lives alone in a studio apartment near campus",
+        "exercise": "Runs 3-4 times per week, practices yoga regularly. Has been too busy with finals to exercise this past week.",
+        "diet": "Generally healthy, mostly plant-based. Has been surviving on coffee and takeout during finals. Skipped lunch today. Identifies red wine, aged cheese, and chocolate as migraine triggers."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Migraine with aura (similar pattern), anxiety",
+            "father": "Healthy, age 56",
+            "maternal_grandmother": "Migraines, stroke at age 70",
+            "sister": "Migraine without aura, age 25"
+        }
+    },
+    "personality": "intelligent and self-aware about her condition, a bit Type-A, frustrated that her usual medication didn't work, anxious about missing study time for finals",
+    "communication_style": "Knowledgeable about her migraine history and can describe symptoms precisely. Knows her triggers and medication history in detail. Somewhat impatient with the process because she's been through it before. May say things like 'I know this is a migraine, I just need something stronger for the pain.' Polite but direct. Will advocate for herself. Speaks softly due to phonophobia.",
+    "pain_description_style": "Very precise and medically informed: 'It's a left-sided pulsatile headache with retro-orbital component, preceded by a typical visual aura.' Rates pain accurately. Can describe the aura in detail if asked. Compares this episode to previous ones: 'This is worse than my usual migraines, probably an 8 out of 10, my usual ones are more like a 5 or 6.'",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Migraine with aura pattern consistent with established diagnosis (visual aura preceding unilateral throbbing headache)",
+            "Failed outpatient treatment (sumatriptan non-responsive this episode)",
+            "Identifiable triggers: stress (law school finals), sleep deprivation, skipped meals, increased caffeine, missed exercise",
+            "Important allergies affecting treatment options: propranolol (bradycardia) and metoclopramide (dystonia)",
+            "Taking combined oral contraceptives WITH migraine with aura - increased stroke risk (WHO Category 4 contraindication)",
+            "Family history of migraine with aura and maternal grandmother with stroke",
+            "Increasing migraine frequency over past year despite prophylaxis initiation",
+            "Normal vital signs and neurological exam reassuring against secondary headache",
+            "Low-normal magnesium (1.8) - supplementation may help"
+        ],
+        "diagnosis": "Migraine with Aura (status migrainosus - refractory to first-line abortive therapy)",
+        "differential_diagnoses": [
+            "Migraine without aura (aura was typical and resolved)",
+            "Tension-type headache (less likely given unilateral pulsating quality with aura)",
+            "Medication overuse headache (if triptan use is frequent)",
+            "Secondary headache - must consider given severity (subarachnoid hemorrhage, meningitis - ruled out by history and normal vitals/exam)",
+            "Cerebral venous thrombosis (young woman on OCPs with headache - low suspicion but worth considering)",
+            "Giant cell arteritis (extremely unlikely at age 28)"
+        ],
+        "recommended_interventions": [
+            "IV fluid bolus (often dehydrated from nausea and poor intake)",
+            "IV prochlorperazine 10mg or IV ondansetron 4mg for nausea (avoid metoclopramide per allergy)",
+            "IV ketorolac 30mg (first-line ED migraine treatment)",
+            "IV magnesium sulfate 1-2g (especially with low-normal magnesium level)",
+            "IV dexamethasone 10mg (reduces migraine recurrence within 72 hours)",
+            "Diphenhydramine 25mg IV if using prochlorperazine (prevents akathisia/dystonia)",
+            "Dark, quiet room",
+            "Neurological exam to confirm no focal deficits",
+            "CRITICAL: Counsel patient and refer to OB/GYN to discontinue combined oral contraceptives - migraine with aura is a WHO Category 4 contraindication due to increased stroke risk. Switch to progestin-only method.",
+            "Neurology referral for worsening migraine frequency and prophylaxis optimization",
+            "Lifestyle counseling: stress management, regular sleep, regular meals, exercise maintenance",
+            "Consider increasing topiramate dose or alternative prophylaxis",
+            "Headache diary recommendation",
+            "Discharge with rescue medication plan"
+        ]
+    }
+}

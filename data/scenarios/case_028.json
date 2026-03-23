@@ -1,0 +1,182 @@
+{
+    "patient_id": "case_028",
+    "name": "Priya Chakraborty",
+    "age": 29,
+    "sex": "Female",
+    "ethnicity": "South Asian",
+    "weight_lbs": 132,
+    "height_inches": 64,
+    "chief_complaint": "I have the worst pain in my back and side, and it hurts so bad when I pee. I think I have a really bad kidney infection.",
+    "onset_description": "Started with mild burning during urination 4 days ago which she attributed to not drinking enough water. Yesterday developed severe right flank pain, high fever, and nausea. Pain has been escalating and is now the worst she has ever experienced.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "flank_pain": {
+            "description": "There's this deep, horrible pain in my right side toward my back. It's constant but it also comes in waves where it gets even worse. I can't find a comfortable position.",
+            "onset": "24 hours ago, acutely worsened",
+            "character": "deep, constant aching with intermittent sharp exacerbations",
+            "severity": "9/10",
+            "location": "right flank and costovertebral angle",
+            "radiation": "radiates to right lower abdomen and groin",
+            "aggravating_factors": ["movement", "palpation of right CVA", "deep breathing", "jarring motions"],
+            "alleviating_factors": ["nothing provides significant relief", "slight relief with knees drawn up"],
+            "associated_symptoms": ["nausea", "vomiting", "fever"]
+        },
+        "dysuria": {
+            "description": "It burns like fire every time I pee. It started a few days ago but it's gotten so much worse.",
+            "onset": "4 days ago",
+            "character": "severe burning pain throughout urination",
+            "severity": "7/10",
+            "location": "urethral and suprapubic",
+            "radiation": null,
+            "aggravating_factors": ["urination"],
+            "alleviating_factors": [],
+            "associated_symptoms": ["urinary frequency", "urgency", "cloudy urine"]
+        },
+        "fever": {
+            "description": "I started feeling really hot last night and I took my temperature and it was 103. I've been alternating between shivering and sweating.",
+            "onset": "18 hours ago",
+            "character": "high fever with rigors",
+            "severity": "high",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["ibuprofen taken at home with minimal effect"],
+            "associated_symptoms": ["chills", "diaphoresis"]
+        },
+        "nausea_and_vomiting": {
+            "description": "I've thrown up three times since this morning. I can't keep anything down, not even water.",
+            "onset": "12 hours ago",
+            "character": "persistent nausea with intermittent non-bloody, non-bilious emesis",
+            "severity": "7/10",
+            "location": "epigastric",
+            "radiation": null,
+            "aggravating_factors": ["eating or drinking", "movement", "pain spikes"],
+            "alleviating_factors": ["lying still"],
+            "associated_symptoms": ["flank pain", "decreased oral intake"]
+        },
+        "urinary_frequency": {
+            "description": "I'm running to the bathroom constantly but only tiny amounts come out each time",
+            "onset": "4 days ago",
+            "character": "frequent small-volume voids with urgency",
+            "severity": "6/10",
+            "location": "suprapubic",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["dysuria", "urgency"]
+        },
+        "chills": {
+            "description": "I get these terrible shaking episodes where my teeth chatter. My roommate said I was shivering so hard the bed was shaking.",
+            "onset": "18 hours ago",
+            "character": "severe rigors",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["fever spikes"],
+            "alleviating_factors": ["warm blankets temporarily"],
+            "associated_symptoms": ["fever", "diaphoresis"]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain", "shortness of breath", "cough", "headache",
+        "vaginal discharge", "missed period", "diarrhea", "constipation",
+        "hematuria visible to patient", "rash", "joint pain",
+        "history of kidney stones", "back injury"
+    ],
+    "vitals": {
+        "heart_rate": 112,
+        "blood_pressure_systolic": 108,
+        "blood_pressure_diastolic": 68,
+        "respiratory_rate": 20,
+        "spo2": 98.0,
+        "temperature": 103.2,
+        "pain_scale": 9
+    },
+    "labs": {
+        "CBC": "WBC 16.4 (elevated with left shift), Hgb 13.2, Plt 224",
+        "BMP": "Na 136, K 3.8, Cr 1.0, BUN 20, Glucose 102",
+        "urinalysis": "Large leukocyte esterase, positive nitrites, >100 WBC/hpf, many bacteria, 10-20 RBC/hpf, moderate blood",
+        "urine_culture": "Pending (gram stain shows gram-negative rods)",
+        "blood_cultures": "Drawn x2 sets, pending",
+        "CRP": "78 mg/L (elevated)",
+        "procalcitonin": "1.6 ng/mL (elevated)",
+        "lactate": "1.8 mmol/L (mildly elevated)",
+        "pregnancy_test": "Negative",
+        "liver_function": "AST 22, ALT 18, Alk Phos 65, Total Bilirubin 0.8 - all within normal limits"
+    },
+    "past_medical_history": [
+        "Recurrent urinary tract infections (2-3 per year for past 3 years)",
+        "Polycystic ovary syndrome",
+        "Mild intermittent asthma",
+        "Iron deficiency anemia (resolved with supplementation)"
+    ],
+    "surgical_history": [
+        "None"
+    ],
+    "medications": [
+        "Combined oral contraceptive pill (ethinyl estradiol/norgestimate) daily",
+        "Albuterol inhaler as needed (rarely used)",
+        "Cranberry supplement 500mg daily",
+        "Multivitamin daily"
+    ],
+    "allergies": [
+        "Nitrofurantoin (severe GI upset, unable to tolerate)",
+        "Bactrim/Trimethoprim-sulfamethoxazole (rash)"
+    ],
+    "social_history": {
+        "smoking": "Never",
+        "alcohol": "Socially, 2-3 drinks on weekends",
+        "drugs": "Denies",
+        "occupation": "Software engineer at a tech company, long hours at desk",
+        "living_situation": "Lives with a roommate in an apartment. In a relationship, partner does not live with her.",
+        "exercise": "Yoga 3 times per week, occasional running",
+        "diet": "Mostly vegetarian, occasionally eats chicken and fish. Admits to not drinking enough water during busy work days."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Recurrent UTIs, kidney stones, Type 2 Diabetes, alive at 56",
+            "father": "Hypertension, hyperlipidemia, alive at 60",
+            "sister": "PCOS, otherwise healthy at 26",
+            "maternal_grandmother": "Chronic kidney disease, died at 72"
+        }
+    },
+    "personality": "Articulate and health-literate. Has done her own research and has specific questions about her treatment. Somewhat anxious and wants reassurance but maintains composure. Frustrated that prior UTIs were not more thoroughly investigated.",
+    "communication_style": "Clear and organized in describing symptoms. Uses some medical terminology from her own research. Asks pointed questions about diagnosis and treatment plan. Wants to understand the reasoning behind decisions. Can become slightly impatient if she feels she is not being heard.",
+    "pain_description_style": "Very precise about pain descriptions. Uses the 0-10 scale comfortably. Differentiates between types of pain (burning vs. aching vs. sharp). Will advocate for pain management actively.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Acute pyelonephritis with systemic inflammatory response (high fever, tachycardia, leukocytosis)",
+            "History of recurrent UTIs (2-3/year) requiring workup for underlying cause",
+            "Multiple antibiotic allergies/intolerances limiting treatment options (nitrofurantoin, TMP-SMX)",
+            "Nausea and vomiting precluding oral antibiotic/fluid intake",
+            "Right CVA tenderness with flank pain and positive UA confirming upper tract infection",
+            "Mildly elevated lactate suggesting early sepsis risk",
+            "Positive nitrites and gram-negative rods on gram stain consistent with E. coli or similar uropathogen",
+            "Negative pregnancy test (important to document before imaging and treatment)"
+        ],
+        "diagnosis": "Acute pyelonephritis, right-sided",
+        "differential_diagnoses": [
+            "Renal abscess or perinephric abscess",
+            "Nephrolithiasis with superimposed infection",
+            "Ectopic pregnancy (ruled out with negative pregnancy test)",
+            "Appendicitis (right-sided pain, fever)",
+            "Ovarian torsion or ruptured ovarian cyst",
+            "Lower lobe pneumonia with referred flank pain"
+        ],
+        "recommended_interventions": [
+            "IV antibiotics (fluoroquinolone or ceftriaxone given allergy to TMP-SMX and nitrofurantoin intolerance)",
+            "IV fluid resuscitation for dehydration from vomiting",
+            "IV antiemetics (ondansetron) for nausea/vomiting",
+            "Pain management (IV ketorolac and/or opioids for severe pain)",
+            "Blood cultures before antibiotics",
+            "Renal ultrasound to rule out obstruction, abscess, or stones",
+            "Urine culture with sensitivities to guide antibiotic de-escalation",
+            "Monitor urine output",
+            "Consider CT abdomen/pelvis if no improvement in 48-72 hours",
+            "Urology or primary care referral for recurrent UTI workup (voiding cystourethrogram, cystoscopy consideration)",
+            "Admit for IV antibiotics given inability to tolerate PO and systemic illness"
+        ]
+    }
+}

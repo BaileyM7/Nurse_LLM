@@ -1,0 +1,198 @@
+{
+    "patient_id": "case_033",
+    "name": "Harold Chen",
+    "age": 72,
+    "sex": "Male",
+    "ethnicity": "Chinese American",
+    "weight_lbs": 158,
+    "height_inches": 66,
+    "chief_complaint": "My wife found me on the kitchen floor. I don't really remember what happened. She says I was shaking and sweating and talking nonsense.",
+    "onset_description": "Patient's wife found him on the kitchen floor at approximately 6:30 AM, confused, diaphoretic, and tremulous. He had not eaten breakfast yet but had taken his morning insulin as usual. Wife gave him orange juice and called 911. EMS found blood glucose of 28 mg/dL and administered IV dextrose en route with improvement in mental status, though patient remains somewhat confused.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "altered_mental_status": {
+            "description": "I'm a little foggy. I remember getting up and going to the kitchen, then the next thing I know the paramedics were there. My wife says I was talking gibberish.",
+            "onset": "Approximately 1 hour ago, improving after dextrose",
+            "character": "confusion, disorientation, brief unresponsiveness, now improving post-treatment",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["IV dextrose administration"],
+            "associated_symptoms": ["diaphoresis", "tremor", "amnesia for event"]
+        },
+        "diaphoresis": {
+            "description": "I was drenched in sweat. My pajamas were soaked through. I'm still sweating a little.",
+            "onset": "1 hour ago",
+            "character": "profuse cold sweating, adrenergic response to hypoglycemia",
+            "severity": "moderate",
+            "location": "generalized",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["glucose correction"],
+            "associated_symptoms": ["tremor", "tachycardia"]
+        },
+        "tremor": {
+            "description": "My hands are still shaking. My wife says my whole body was shaking when she found me.",
+            "onset": "1 hour ago, improving",
+            "character": "fine tremor of extremities, adrenergic response",
+            "severity": "5/10",
+            "location": "bilateral hands, generalized",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["glucose correction"],
+            "associated_symptoms": ["diaphoresis", "anxiety"]
+        },
+        "weakness": {
+            "description": "I feel wrung out, like I ran a marathon. My legs are wobbly.",
+            "onset": "1 hour ago",
+            "character": "generalized weakness, post-hypoglycemic fatigue",
+            "severity": "6/10",
+            "location": "generalized",
+            "radiation": null,
+            "aggravating_factors": ["standing", "walking"],
+            "alleviating_factors": ["rest", "glucose repletion"],
+            "associated_symptoms": ["fatigue", "lightheadedness"]
+        },
+        "headache": {
+            "description": "I have a dull headache now. Not terrible but it's there.",
+            "onset": "since regaining awareness",
+            "character": "dull, diffuse headache",
+            "severity": "4/10",
+            "location": "diffuse, bilateral frontal",
+            "radiation": null,
+            "aggravating_factors": ["bright lights"],
+            "alleviating_factors": [],
+            "associated_symptoms": []
+        },
+        "palpitations": {
+            "description": "My heart was racing. I can still feel it pounding.",
+            "onset": "1 hour ago, improving",
+            "character": "awareness of rapid heart rate, adrenergic response",
+            "severity": "4/10",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["glucose correction, calming down"],
+            "associated_symptoms": ["anxiety", "diaphoresis"]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain", "shortness of breath", "seizure witnessed by wife",
+        "tongue biting", "urinary incontinence during event",
+        "focal neurological deficits", "slurred speech (beyond confusion)",
+        "facial droop", "limb weakness on one side", "fever",
+        "abdominal pain", "nausea or vomiting", "vision changes"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 168,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 18,
+        "spo2": 98.0,
+        "temperature": 98.0,
+        "pain_scale": 4
+    },
+    "labs": {
+        "glucose_EMS": "28 mg/dL (critically low)",
+        "glucose_ED_arrival": "142 mg/dL (after IV dextrose and oral juice)",
+        "BMP": "Na 138, K 4.0, Cr 1.6 (elevated, baseline 1.4), BUN 28, Glucose 142",
+        "CBC": "WBC 8.8, Hgb 11.2 (mildly low), Plt 186",
+        "HbA1c": "7.8% (above target but not severely uncontrolled)",
+        "liver_function": "AST 28, ALT 32, Alk Phos 88, Albumin 3.4 - within normal limits",
+        "TSH": "2.4 mIU/L (normal)",
+        "troponin": "0.03 ng/mL (normal, obtained due to tachycardia and age)",
+        "CT_head": "No acute intracranial abnormality. Age-appropriate atrophy. No evidence of stroke."
+    },
+    "past_medical_history": [
+        "Type 2 Diabetes Mellitus (22 years, on insulin for 8 years)",
+        "Chronic kidney disease stage 3a (baseline Cr 1.4, GFR 48)",
+        "Hypertension (18 years)",
+        "Coronary artery disease (status post stent 2019)",
+        "Hyperlipidemia",
+        "Benign prostatic hyperplasia",
+        "Diabetic retinopathy (non-proliferative)",
+        "Peripheral neuropathy (reduces hypoglycemia awareness)",
+        "Previous hypoglycemic episode requiring EMS (1 year ago)"
+    ],
+    "surgical_history": [
+        "Coronary artery stent placement (2019)",
+        "Cataract surgery, left eye (2022)",
+        "Transurethral resection of prostate (2020)"
+    ],
+    "medications": [
+        "Insulin glargine 32 units at bedtime",
+        "Insulin lispro 8 units before meals (fixed dose, does not carb count)",
+        "Metformin 500mg twice daily",
+        "Glipizide 10mg twice daily",
+        "Lisinopril 20mg daily",
+        "Metoprolol succinate 50mg daily",
+        "Atorvastatin 80mg at bedtime",
+        "Aspirin 81mg daily",
+        "Clopidogrel 75mg daily",
+        "Tamsulosin 0.4mg at bedtime"
+    ],
+    "allergies": [
+        "ACE inhibitor cough (tried lisinopril alternatives, tolerates current dose)",
+        "Shellfish (anaphylaxis — contrast dye precaution)"
+    ],
+    "social_history": {
+        "smoking": "Quit 15 years ago, 40 pack-year history",
+        "alcohol": "Rare, a small glass of wine at family gatherings",
+        "drugs": "Denies",
+        "occupation": "Retired electrical engineer",
+        "living_situation": "Lives with wife of 48 years in a single-story home. Wife manages most of his medications and meals. Two adult children live locally and are involved in care.",
+        "exercise": "Walks around the neighborhood daily for 20-30 minutes. Less active in winter.",
+        "diet": "Wife prepares balanced meals, follows diabetic diet fairly well. Eats at regular times. Recently has had decreased appetite."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Type 2 Diabetes, died at 78 from renal failure",
+            "father": "Gastric cancer, died at 65",
+            "brother": "Type 2 Diabetes, hypertension, alive at 74",
+            "sister": "Healthy at 68"
+        }
+    },
+    "personality": "Quiet and reserved. Somewhat embarrassed about the incident. Defers to his wife for details. Meticulous about following doctor's orders but does not fully understand his medication regimen. Does not want to bother anyone.",
+    "communication_style": "Soft-spoken with a slight accent. Gives concise, polite answers. His wife often supplements or corrects his responses. May say he understands when he doesn't. Nods a lot. Becomes visibly uncomfortable with too many questions at once. Prefers simple, clear explanations.",
+    "pain_description_style": "Minimizes discomfort. Will say he feels 'okay' even when he clearly does not. Relies on his wife to report how he really looked. Rates pain low on the scale even when other signs suggest otherwise.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Severe hypoglycemia (glucose 28 mg/dL) with altered mental status requiring EMS intervention",
+            "Recurrent hypoglycemia (prior episode 1 year ago) indicating systemic management problem",
+            "Polypharmacy contributing to hypoglycemia risk: basal insulin + bolus insulin + glipizide + metformin is aggressive for a 72-year-old with CKD",
+            "CKD stage 3a reduces renal clearance of insulin and glipizide, prolonging hypoglycemic effect",
+            "Metoprolol masks adrenergic symptoms of hypoglycemia (tachycardia, tremor)",
+            "Peripheral neuropathy further reduces hypoglycemia awareness",
+            "Fixed-dose mealtime insulin without carb counting increases hypoglycemia risk with variable intake",
+            "Recently decreased appetite reported by wife — reduced food intake with unchanged insulin = hypoglycemia",
+            "Age and comorbidities make tight glycemic control (target HbA1c <7%) inappropriate — less stringent targets recommended"
+        ],
+        "diagnosis": "Severe hypoglycemia secondary to insulin and sulfonylurea use in the setting of CKD and decreased oral intake",
+        "differential_diagnoses": [
+            "Transient ischemic attack or stroke (ruled out by CT and improving mental status with glucose)",
+            "Seizure disorder (no witnessed seizure activity)",
+            "Syncope from cardiac arrhythmia",
+            "Insulinoma (rare, but consider if recurrent unexplained hypoglycemia)",
+            "Adrenal insufficiency",
+            "Sepsis (no infectious signs)"
+        ],
+        "recommended_interventions": [
+            "Continuous glucose monitoring in ED (check every 30-60 minutes for rebound hypoglycemia)",
+            "D10 infusion to maintain glucose > 100 mg/dL (sulfonylurea-induced hypoglycemia can recur for 24-72 hours)",
+            "HOLD glipizide — strongly recommend discontinuation given CKD and recurrent hypoglycemia",
+            "REDUCE insulin glargine dose (32 units likely too high given decreased appetite and renal function)",
+            "Reassess need for fixed-dose mealtime insulin vs. carb-counting approach",
+            "Consider relaxing HbA1c target to <8% given age, CKD, coronary disease, and hypoglycemia history",
+            "Observation for at least 12-24 hours (glipizide has long duration of action, especially in CKD)",
+            "Endocrinology consult for medication adjustment",
+            "CT head to rule out stroke (obtained, normal)",
+            "Educate patient AND wife about hypoglycemia recognition and treatment",
+            "Provide glucagon kit prescription for home use",
+            "Continuous glucose monitor (CGM) referral with hypoglycemia alerts",
+            "Assess and treat any underlying cause of decreased appetite"
+        ]
+    }
+}

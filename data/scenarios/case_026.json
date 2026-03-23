@@ -1,0 +1,184 @@
+{
+    "patient_id": "case_026",
+    "name": "James Whitfield",
+    "age": 64,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 224,
+    "height_inches": 71,
+    "chief_complaint": "My foot has gotten real bad. There's a sore on the bottom that won't heal and now it smells terrible.",
+    "onset_description": "Patient has had a chronic foot ulcer on the plantar surface of his right foot for 6 weeks that he has been managing at home with over-the-counter bandages. Over the past week, the wound has become increasingly painful, started draining foul-smelling yellowish fluid, and the redness has spread up to his ankle.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "foot_wound": {
+            "description": "There's this sore on the bottom of my foot that I got from a new pair of shoes. I've been putting bandages on it but it just keeps getting worse. Now there's this nasty yellow stuff coming out of it.",
+            "onset": "6 weeks ago, acutely worsened over past 5-7 days",
+            "character": "Full-thickness ulcer approximately 3cm x 2cm on plantar surface, necrotic base with purulent drainage, surrounding erythema and induration extending to dorsum of foot and ankle",
+            "severity": "7/10",
+            "location": "plantar surface of right foot at first metatarsal head",
+            "radiation": "redness and swelling spreading to dorsum of foot and ankle",
+            "aggravating_factors": ["weight bearing", "touching", "wearing shoes"],
+            "alleviating_factors": ["keeping weight off it", "elevation"],
+            "associated_symptoms": ["foul odor", "purulent drainage", "foot swelling", "fever"]
+        },
+        "foot_swelling": {
+            "description": "My whole foot is puffed up like a balloon. Can't even get my shoe on anymore.",
+            "onset": "5 days ago, progressive",
+            "character": "diffuse swelling of entire right foot extending to ankle",
+            "severity": "7/10",
+            "location": "right foot and ankle",
+            "radiation": null,
+            "aggravating_factors": ["standing", "dependent position"],
+            "alleviating_factors": ["elevation"],
+            "associated_symptoms": ["redness", "warmth"]
+        },
+        "fever": {
+            "description": "I've been feeling hot and cold the past two days. My wife made me take my temperature and it was almost 102.",
+            "onset": "2 days ago",
+            "character": "intermittent fevers",
+            "severity": "moderate",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["acetaminophen provides partial relief"],
+            "associated_symptoms": ["chills", "malaise", "decreased appetite"]
+        },
+        "decreased_sensation_feet": {
+            "description": "I can't really feel the bottom of my feet very well. Been that way for years. That's probably why I didn't notice the sore getting bad.",
+            "onset": "Chronic, several years",
+            "character": "decreased sensation to light touch, pinprick, and temperature in stocking distribution bilaterally",
+            "severity": "chronic",
+            "location": "bilateral feet and lower legs",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["tingling", "numbness"]
+        },
+        "malaise": {
+            "description": "I've been feeling run down and tired for the last few days. Just not myself.",
+            "onset": "3-4 days ago",
+            "character": "generalized fatigue and weakness",
+            "severity": "5/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["activity"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["decreased appetite", "fever"]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain", "shortness of breath", "cough", "abdominal pain",
+        "nausea or vomiting", "diarrhea", "headache", "urinary symptoms",
+        "crepitus in the foot", "visible bone in wound", "contralateral leg symptoms",
+        "recent trauma other than shoe friction", "joint pain elsewhere"
+    ],
+    "vitals": {
+        "heart_rate": 96,
+        "blood_pressure_systolic": 158,
+        "blood_pressure_diastolic": 84,
+        "respiratory_rate": 18,
+        "spo2": 97.0,
+        "temperature": 101.4,
+        "pain_scale": 7
+    },
+    "labs": {
+        "CBC": "WBC 18.2 (elevated with 10% bands), Hgb 11.8 (low), Plt 288",
+        "BMP": "Na 135, K 4.6, Cr 1.6 (mildly elevated), BUN 28, Glucose 342 (markedly elevated)",
+        "HbA1c": "11.2% (severely uncontrolled diabetes)",
+        "CRP": "96 mg/L (elevated)",
+        "ESR": "82 mm/hr (elevated)",
+        "wound_culture": "Pending (polymicrobial on gram stain: gram-positive cocci, gram-negative rods, anaerobes suspected)",
+        "blood_cultures": "Drawn x2 sets, pending",
+        "procalcitonin": "1.2 ng/mL (elevated)",
+        "albumin": "2.8 g/dL (low, indicating poor nutritional status)",
+        "ABI_right": "0.6 (abnormal, indicates peripheral arterial disease)",
+        "ABI_left": "0.82 (borderline)"
+    },
+    "past_medical_history": [
+        "Type 2 Diabetes Mellitus (18 years, poorly controlled)",
+        "Diabetic peripheral neuropathy",
+        "Peripheral arterial disease",
+        "Hypertension (15 years)",
+        "Hyperlipidemia",
+        "Chronic kidney disease stage 3a (baseline Cr 1.4)",
+        "Obesity (BMI 31.2)",
+        "Previous diabetic foot ulcer, left foot (healed 2023)",
+        "Diabetic retinopathy (had laser treatment)"
+    ],
+    "surgical_history": [
+        "Left great toe amputation (2022, diabetic osteomyelitis)",
+        "Coronary artery stent placement (2020)",
+        "Retinal laser photocoagulation bilateral (2021)"
+    ],
+    "medications": [
+        "Insulin glargine 42 units at bedtime",
+        "Insulin lispro sliding scale before meals",
+        "Metformin 1000mg twice daily",
+        "Lisinopril 40mg daily",
+        "Amlodipine 10mg daily",
+        "Atorvastatin 80mg at bedtime",
+        "Aspirin 81mg daily",
+        "Clopidogrel 75mg daily",
+        "Gabapentin 300mg three times daily"
+    ],
+    "allergies": [
+        "No known drug allergies"
+    ],
+    "social_history": {
+        "smoking": "Quit 3 years ago after heart stent, smoked 1.5 packs/day for 35 years (52.5 pack-year history)",
+        "alcohol": "Occasional beer, 1-2 per week",
+        "drugs": "Denies",
+        "occupation": "Retired factory foreman, on disability",
+        "living_situation": "Lives with wife in a two-story home. Bedroom is upstairs. Wife helps with medication management.",
+        "exercise": "Very limited due to foot pain and neuropathy. Mostly sedentary.",
+        "diet": "Wife cooks most meals, tries to follow diabetic diet but admits to frequently eating sweets and large portions. Skips insulin doses occasionally."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Type 2 Diabetes with bilateral below-knee amputations, died at 71 from renal failure",
+            "father": "Hypertension, died at 68 from stroke",
+            "sister": "Type 2 Diabetes, on dialysis",
+            "brother": "Healthy at 60"
+        }
+    },
+    "personality": "Quiet and resigned. Feels guilty about not taking better care of himself. Knows he should have come in sooner. Worried about losing his foot like his mother did. Becomes emotional when discussing amputation risk.",
+    "communication_style": "Soft-spoken and thoughtful. Gives honest answers but needs time to formulate responses. Won't volunteer information unless directly asked. Becomes withdrawn when anxious. Wife often fills in details when present.",
+    "pain_description_style": "Due to neuropathy, describes pain differently than expected. Notes 'pressure' and 'throbbing' more than sharp pain. Rates pain by functional impact rather than sensation. Says 'the pain isn't as bad as it looks' because of decreased sensation.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Diabetic foot infection with systemic signs (fever, leukocytosis, elevated inflammatory markers)",
+            "Severely uncontrolled diabetes (HbA1c 11.2%, glucose 342) impairing wound healing",
+            "Peripheral arterial disease (ABI 0.6) compromising perfusion to affected extremity",
+            "History of contralateral toe amputation for osteomyelitis (high risk for recurrence)",
+            "Polymicrobial infection requiring broad-spectrum antibiotics",
+            "Low albumin indicating poor nutritional status and impaired healing",
+            "Peripheral neuropathy masking severity of infection",
+            "Chronic kidney disease limiting contrast studies and certain antibiotics"
+        ],
+        "diagnosis": "Diabetic foot infection (deep soft tissue) with possible osteomyelitis",
+        "differential_diagnoses": [
+            "Osteomyelitis of first metatarsal",
+            "Charcot foot with secondary infection",
+            "Cellulitis without deep space involvement",
+            "Necrotizing fasciitis",
+            "Septic arthritis of first MTP joint",
+            "Peripheral arterial disease with ischemic ulcer and secondary infection"
+        ],
+        "recommended_interventions": [
+            "IV broad-spectrum antibiotics covering gram-positives, gram-negatives, and anaerobes (e.g., vancomycin + piperacillin-tazobactam)",
+            "Urgent surgical/podiatry consult for wound assessment, possible debridement",
+            "X-ray of right foot to evaluate for osteomyelitis and gas in tissues",
+            "MRI of right foot if osteomyelitis suspected (preferred over bone scan)",
+            "Tight glycemic control with IV insulin drip, hold metformin",
+            "Wound care with appropriate dressings",
+            "Vascular surgery consult given low ABI for revascularization assessment",
+            "Non-weight bearing on right foot",
+            "Nutritional optimization",
+            "Blood cultures before antibiotics",
+            "Deep wound culture (not superficial swab)",
+            "Social work consult for home support and adherence barriers"
+        ]
+    }
+}

@@ -1,0 +1,313 @@
+﻿Presentation 2: Progress Update Plan
+AI-Powered Nursing Assessment Chatbot
+
+
+Overwriting Notes:
+Use case flow: user selects patient from left side bar (has sex, age, maybe fake name) → right side bar has sex, age, chief complaint, and then as the user asks questions about their status/condition (like let me check your heart rate) it populates those stats on the side → continues back and forth on questions until user ends session → shows assessment coverage score, where they were lacking & true diagnosis, treatment, etc.
+Have a side panel to show test results of each inquired test from the user. No side bar of assessment coverage during the session. Timer to track time it takes for students to talk to the patients. Assessment score at the end of session of how well the questions covered the session.
+Memory tracking: small LocalStorage JSON file in Streamlit that will track which scenarios the user has completed and their stats.
+Stretch: Priority for each patient maybe (like heart attach symptoms would get looked at first)
+Cost: Getting OpenAI gpt-4o mini would probably cost under 5 dollars one person can put money in their account.
+1. System Design & Implementation Plan
+Rubric criteria: Restate use case/constraints, present system architecture, justify stack choices, define success criteria.
+1.1 Use Case Restatement
+Nursing students use an AI-powered chatbot to practice patient assessment through simulated patient interactions and receive structured feedback on assessment completeness. The system targets nursing education environments (simulation labs, coursework, self-study).
+Constraints (Unchanged from P1)
+* Privacy/Compliance: No live patient data; all scenarios use public or synthetic cases. FERPA considerations for student interaction logs.
+* Cost: OpenAI API token usage must remain within academic budget (~$50/month). Context window management is critical.
+* Reliability: System must gracefully handle API failures and not produce clinically dangerous hallucinations.
+* Scope: Limited to assessment practice only — no diagnosis, treatment, or prescription guidance.
+1.2 System Architecture
+The system follows a three-layer architecture. Below is a detailed description of each component and how data flows through the pipeline.
+Layer
+	Components
+	Details
+	Data Layer
+	Case Database + Scenario Schema
+	30–50 structured patient cases from OpenLabyrinth, PhysioNet (discharge summaries), and synthetic scenarios. Each case encoded as JSON with: demographics, chief complaint, history, symptoms (present/absent), expected assessment questions, and rubric.
+	Application Layer
+	LangChain Orchestration + OpenAI API + Assessment Tracker
+	LangChain manages prompt templates, conversation memory, and chain-of-thought routing. The Assessment Tracker monitors which clinical domains the student has explored (e.g., HPI, ROS, PMH, medications, allergies, social history) and updates coverage in real time.
+	Presentation Layer
+	Streamlit Web UI
+	Chat interface with: scenario selector, live conversation window, assessment coverage dashboard (progress bar per domain), and post-session feedback report. Deployed locally or on Streamlit Cloud for user testing.
+	
+
+Data Flow
+1. User selects a scenario by patient’s name (BOB)  from the case library via the Streamlit UI.
+2. The scenario JSON is loaded and injected into the system prompt as the patient persona.
+3. User types assessment questions; LangChain routes them through the conversation chain.
+4. OpenAI API (GPT-4o-mini) generates patient responses, constrained by the scenario data (only reveals symptoms listed in the case).
+5. The Assessment Tracker parses each user question, classifies it into a clinical domain, and updates the coverage matrix.
+6. When the uses ends the session (or hits a turn limit), the Feedback Generator produces a structured report: domains covered vs. missed, quality of questioning, and suggestions.
+1.3 Stack Justification
+Tool
+	Choice
+	Justification
+	LLM
+	GPT-4o-mini (OpenAI)
+	Best cost/quality ratio for conversational simulation. Supports structured output and function calling for assessment tracking. Fallback: GPT-3.5-turbo if budget constrained.
+	Orchestration
+	LangChain (Python)
+	Mature prompt templating, conversation memory (buffer + summary), and chain composition. Enables swapping LLM providers without rewriting logic.
+	UI
+	Streamlit
+	Rapid prototyping of chat interfaces with built-in session state. Sufficient for academic prototype; no frontend engineering overhead.
+	Data Storage
+	JSON files + SQLite
+	JSON for scenario definitions (version-controlled). SQLite for session logs (student interactions, timestamps, coverage data) to support evaluation.
+	Deployment
+	Streamlit Cloud / Local
+	Free tier for academic use. Local deployment for user study sessions to control latency and data.
+	Evaluation
+	Python (scikit-learn, pandas)
+	Standard libraries for computing metrics, generating plots, and running statistical tests on feedback quality.
+	
+
+1.4 Success Criteria
+Metric Type
+	Metric
+	Target
+	Model
+	Patient response fidelity (stays in character, no hallucinated symptoms)
+	≥90% of turns rated faithful by manual review
+	Model
+	Assessment domain classification accuracy (tracker correctly categorizes student questions)
+	≥85% accuracy vs. human labels
+	Product
+	Assessment coverage detection (system correctly identifies which domains were explored)
+	Correlation ≥0.8 with expert ratings
+	Product
+	Feedback quality (structured report matches expert debrief rubric)
+	≥75% agreement with faculty evaluation
+	Business/Proxy
+	Student engagement (avg. turns per session, completion rate)
+	≥15 turns avg., ≥80% completion
+	Business/Proxy
+	Student satisfaction (post-session survey, 1–5 scale)
+	≥4.0 average rating
+	
+
+2. Progress Made with Evidence
+Rubric criteria: Demonstrate tangible artifacts, at least one measurable result, clearly separate completed/in-progress/not-started.
+2.1 Component Status Overview
+Component
+	Status
+	Evidence / Notes
+	Dataset curation (30–50 cases)
+	COMPLETED
+	Cases collected from OpenLabyrinth + PhysioNet. Structured into JSON schema. Demographics varied across age, sex, acuity.
+	Scenario JSON schema definition
+	COMPLETED
+	Schema includes: patient_id, demographics, chief_complaint, history, symptom_map (present/absent), assessment_rubric, expected_domains.
+	Rule-based baseline (scripted patient)
+	COMPLETED
+	Keyword-matching patient that gives canned responses. No conversational flexibility. Serves as lower-bound baseline.
+	Few-shot LLM baseline (no tracking)
+	COMPLETED
+	GPT-4o-mini with 3-shot prompt. Patient simulation works but has no assessment tracking or feedback generation. Baseline for comparison.
+	LangChain pipeline with assessment tracker
+	IN PROGRESS
+	Conversation chain functional. Assessment domain classifier ~80% on dev set. Coverage matrix updating correctly. Needs prompt tuning.
+	Feedback generation module
+	IN PROGRESS
+	Template-based report generates after session end. Needs refinement: currently too generic, not specific enough to student’s actual performance.
+	Streamlit UI
+	IN PROGRESS
+	Basic chat interface working. Scenario selector done. Coverage dashboard (progress bars) partially implemented.
+	User study with nursing students
+	NOT STARTED
+	IRB not required (educational tool evaluation). Recruitment plan in place: 8–12 nursing students via VT College of Nursing contact.
+	Final evaluation & error analysis
+	NOT STARTED
+	Planned: manual annotation of 100 conversation turns, inter-rater reliability, error taxonomy.
+	
+
+2.2 Preliminary Results (Quantitative)
+Present at least one table/plot on your slides. Suggested results to show:
+Baseline Comparison Table (Example Format)
+System
+	Response Fidelity
+	Domain Classification
+	Feedback Quality
+	Rule-based baseline
+	62% (canned only)
+	N/A (no tracker)
+	N/A
+	Few-shot LLM (no tracking)
+	84%
+	N/A (no tracker)
+	N/A
+	Full pipeline (current)
+	87% (preliminary)
+	~80% (dev set)
+	TBD
+	Interpretation: The full pipeline with assessment tracking shows marginal improvement in response fidelity over the few-shot baseline, but the key value-add is the domain classification capability (absent in baselines). The ~80% accuracy on domain classification is promising but needs prompt engineering to handle ambiguous questions (e.g., open-ended questions that span multiple domains).
+Additional Artifacts to Show on Slides
+* Screenshot of Streamlit chat interface with a sample patient interaction
+* Coverage dashboard showing progress bars for each assessment domain (HPI, ROS, PMH, Meds, Allergies, Social Hx, Family Hx)[a]
+* Example feedback report generated after a session
+* Confusion matrix for domain classifier (which domains get misclassified most often)
+3. Testing & Evaluation Readiness
+Rubric criteria: Specify testing plan, include baseline comparison, address deployment concerns.
+3.1 Evaluation Plan
+Evaluation Type
+	Method
+	Metrics
+	Offline — Response Fidelity
+	Manual annotation of 100 sampled conversation turns (2 annotators). Check: Does the patient response stay faithful to the scenario? Any hallucinated symptoms?
+	Fidelity rate (%), inter-rater agreement (Cohen’s kappa)
+	Offline — Domain Classification
+	Held-out test set (20% of annotated questions). Each student question labeled with ground-truth assessment domain.
+	Accuracy, precision/recall per domain, confusion matrix
+	Offline — Feedback Quality
+	Compare system-generated feedback reports against expert rubric for 20 complete sessions. Faculty member rates agreement.
+	Agreement rate (%), qualitative gap analysis
+	Functional — Edge Cases
+	Test with adversarial inputs: off-topic questions, requests for diagnosis/treatment, gibberish, attempts to break character.
+	Pass/fail per edge case category, guardrail trigger rate
+	User Study
+	8–12 nursing students complete 2–3 scenarios each. Post-session survey (Likert scale) + open-ended feedback. Compare perceived learning vs. expectations.
+	Satisfaction score, engagement metrics (turns, time, completion), qualitative themes
+	
+
+3.2 Baselines for Comparison
+* Simple baseline (rule-based scripted patient): Fixed keyword-response mappings. No conversational flexibility, no tracking. Represents the floor.
+* Relevant baseline (few-shot LLM without tracking): GPT-4o-mini with scenario context but no assessment tracker or feedback generator. Isolates the value of the tracking/feedback components.
+* Optional stretch baseline: Existing commercial nursing simulation tool (if accessible) or published benchmarks from nursing education literature.
+3.3 Failure Modes & Diagnostic Checks
+Failure Mode
+	Detection Method
+	Mitigation
+	Hallucinated symptoms
+	Compare patient responses against scenario symptom_map. Flag any symptom mentioned that isn’t in the case definition.
+	Add explicit negative constraint in system prompt: “Only mention symptoms listed in the case. If asked about unlisted symptoms, deny them.”
+	Character breaks
+	Detect when the LLM drops the patient persona (e.g., says “As an AI” or gives medical advice).
+	Strengthen persona instructions. Add post-processing filter to catch and regenerate broken responses.
+	Domain misclassification
+	Confusion matrix analysis on held-out test set. Identify which domain pairs are most confused.
+	Add few-shot examples for ambiguous question types. Consider multi-label classification for questions spanning domains.
+	Feedback too generic
+	Manual review: does the feedback reference specific student actions or just repeat template text?
+	Switch from template-based to LLM-generated feedback with explicit instructions to cite specific conversation turns.
+	API rate limits / failures
+	Monitor API response codes and latency.
+	Implement retry logic with exponential backoff. Cache common scenario prompts. Fallback to GPT-3.5-turbo.
+	
+
+4. Challenges, Risks, and Mitigation Plan
+Rubric criteria: Identify blockers, propose specific mitigations with decision points, state contingency plan.
+Risk
+	Severity
+	Mitigation
+	Decision Point / Fallback
+	Data quality — public cases lack depth
+	Medium
+	Augment with 10–15 synthetic cases co-designed with a nursing faculty advisor. Validate realism with 2–3 nursing students before full study.
+	If cases still feel unrealistic by Week 6 → reduce scope to 15–20 high-quality cases and focus evaluation on those.
+	Token cost exceeds budget
+	Medium
+	Use GPT-4o-mini (cheaper). Limit conversation to 30 turns. Summarize conversation history after 15 turns to reduce context.
+	If costs still too high → switch to GPT-3.5-turbo for patient simulation, keep GPT-4o-mini only for feedback generation.
+	Assessment tracker accuracy too low
+	High
+	Iterative prompt engineering with error analysis. Add few-shot examples for each domain. Consider fine-tuning a small classifier as fallback.
+	If accuracy stays <75% by Week 6 → simplify to binary tracking (asked/not asked per domain) instead of nuanced classification.
+	User study recruitment
+	Medium
+	Leverage VT College of Nursing contacts. Offer extra credit or small incentive. Minimum viable study: 5 participants.
+	If <5 participants by Week 7 → pivot to expert evaluation only (3 nursing faculty rate the system).
+	Scope creep into diagnosis
+	Low
+	Hard guardrails in system prompt. Post-processing filter rejects responses containing diagnostic language.
+	Already mitigated by design. Monitor in testing.
+	Integration complexity
+	Medium
+	Modular architecture: each component testable independently. Integration tests run after each sprint.
+	If end-to-end integration fails → present strong offline prototype + evaluation + screenshots as deliverable.
+	
+
+Contingency Plan (If End-to-End Deployment Infeasible)
+If the full deployed system cannot be completed, the team will deliver: (1) a strong offline prototype with working conversation pipeline and assessment tracking, (2) comprehensive offline evaluation with baseline comparisons and error analysis, (3) UI mockups / screenshots demonstrating the intended user experience, and (4) a detailed analysis of what worked, what didn’t, and lessons learned for future development. This still demonstrates significant engineering and evaluation work.
+5. Next Steps, Timeline, and Accountability
+Rubric criteria: Week-by-week plan, per-member completed work and next tasks with owner + deadline.
+5.1 Next Steps
+Completed Work
+	Next Tasks (Owner + Deadline)
+	Led dataset curation: collected and structured 35 cases from OpenLabyrinth and PhysioNet. Defined JSON schema. Cleaned and validated all case files.
+	Create 10–15 synthetic cases with nursing advisor (Week 5). Lead user study recruitment and coordination (Week 6–7). Co-write final report: data section (Week 8).
+	Built LangChain conversation pipeline. Implemented conversation memory (buffer + summary). Integrated OpenAI API with prompt templates for patient simulation.
+	Refine assessment domain classifier prompts (Week 5). Implement multi-label classification for ambiguous questions (Week 6). Lead error analysis on conversation quality (Week 7).
+	Developed assessment tracker module: domain classification logic, coverage matrix, real-time update during conversations. Built rule-based baseline.
+	Complete feedback generation module with turn-specific citations (Week 5). Implement edge-case guardrails (Week 6). Co-write final report: system design + results (Week 8).
+	Built Streamlit UI: chat interface, scenario selector, session state management. Created few-shot LLM baseline for comparison.
+	Finish coverage dashboard with progress bars (Week 5). Integrate feedback report display (Week 6). Lead presentation design and final demo preparation (Week 7–8).
+	
+
+5.2 Week-by-Week Timeline to Final Deliverables
+Week
+	Milestones
+	Week 5
+	Synthetic case creation complete. Assessment classifier accuracy ≥85%. Feedback module v1 done. Coverage dashboard in UI.
+	Week 6
+	Full pipeline integration tested end-to-end. Edge-case guardrails implemented and tested. Multi-label domain classification deployed.
+	Week 7
+	User study with 8–12 nursing students (2–3 sessions each). Collect survey responses and session logs. Begin evaluation and error analysis.
+	Week 8
+	Complete evaluation: baseline comparison table, confusion matrices, feedback quality ratings. Write final report. Polish final presentation and demo.
+	
+
+Appendix: Slide-by-Slide Guide for 7-Minute Presentation
+Suggested timing and content for each slide, aligned to the Industry-Focused rubric.
+Slide
+	Title
+	Content
+	Time
+	1
+	Title + Progress Headline
+	Team name, use case (1 sentence), and a bold progress headline: e.g., “Full pipeline running, assessment tracker at 80% accuracy, UI demo ready.” Briefly note any scope changes from P1 (none expected).
+	~45 sec
+	2
+	System Architecture
+	Architecture diagram (3-layer: Data → Application → UI). Label each component. Show data flow with arrows. Justify key stack choices in 1–2 bullets below the diagram.
+	~1.5 min
+	3
+	Evidence of Progress
+	Show the baseline comparison table (rule-based vs. few-shot vs. full pipeline). Include a screenshot of the Streamlit UI. Show the coverage dashboard. Color-code component status: green (done), yellow (in progress), gray (not started).
+	~1.5 min
+	4
+	Testing & Diagnostics
+	Evaluation plan summary (offline + user study). Show confusion matrix for domain classifier. Discuss top 2–3 failure modes discovered so far and how you’re addressing them.
+	~1.5 min
+	5
+	Timeline + Risks + Ownership
+	Week-by-week timeline table. Per-member: what they did, what they’ll do next. Top 3 risks with mitigations. Contingency plan in 1 sentence.
+	~1.5 min
+	6
+	Stretch Goals (Optional)
+	If on track: user study expansion, additional scenario types, integration with LMS. If behind: contingency deliverable (offline prototype + evaluation). End with “Questions?”
+	~15 sec
+	
+
+
+
+
+
+Potential Datasets:
+** all from kaggle, so if you have better ones that cover the needed info, please use instead. Like actual medical ones
+
+
+disease - symptom & precaution
+
+
+disease and symptoms
+
+
+symptoms & disease w small demo
+
+
+symptoms, disease, medication
+
+
+[a]only if we can find all these things

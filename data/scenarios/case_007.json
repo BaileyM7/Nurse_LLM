@@ -1,0 +1,155 @@
+{
+    "patient_id": "case_007",
+    "name": "Marcus Thompson",
+    "age": 28,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 175,
+    "height_inches": 71,
+    "chief_complaint": "I've got this sharp pain right in the middle of my chest that gets worse when I breathe in or lean back, and I had a cold about a week ago",
+    "onset_description": "Started yesterday afternoon with mild chest discomfort that he initially thought was muscle soreness from the gym. Woke up this morning and the pain was much worse, especially with deep breaths. Got scared it might be a heart attack and came to the ED.",
+    "severity": "medium",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest_pain": {
+            "description": "Sharp, stabbing pain right in the center of my chest, gets way worse when I take a deep breath or lean back",
+            "onset": "yesterday afternoon, significantly worse this morning",
+            "character": "sharp, stabbing, pleuritic",
+            "severity": "7/10 with deep breath, 4/10 at rest",
+            "location": "retrosternal, central chest",
+            "radiation": "to the left side of the neck and left trapezius area",
+            "aggravating_factors": ["deep inspiration", "lying flat", "leaning backward", "coughing"],
+            "alleviating_factors": ["sitting up and leaning forward", "shallow breathing"],
+            "associated_symptoms": ["mild shortness of breath from guarding"]
+        },
+        "shortness_of_breath": {
+            "description": "Not really short of breath, more like I'm afraid to take a deep breath because it hurts so bad",
+            "onset": "this morning",
+            "character": "splinting due to pain rather than true dyspnea",
+            "severity": "3/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["deep breathing"],
+            "alleviating_factors": ["shallow breathing"],
+            "associated_symptoms": ["chest pain"]
+        },
+        "low_grade_fever": {
+            "description": "Been feeling warm and achy since last night, kind of like the tail end of being sick",
+            "onset": "last night",
+            "character": "mild warmth, general achiness",
+            "severity": "2/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["ibuprofen helped some"],
+            "associated_symptoms": ["malaise"]
+        },
+        "malaise": {
+            "description": "Just feeling run down, like I'm not over this cold yet",
+            "onset": "past few days",
+            "character": "general fatigue and body aches",
+            "severity": "4/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["activity"],
+            "alleviating_factors": ["rest"],
+            "associated_symptoms": ["low-grade fever"]
+        }
+    },
+    "symptoms_absent": [
+        "cough currently", "sore throat currently", "palpitations", "syncope",
+        "leg swelling", "orthopnea", "diaphoresis", "nausea", "vomiting",
+        "abdominal pain", "dizziness", "rash", "joint pain", "urinary symptoms",
+        "hemoptysis"
+    ],
+    "vitals": {
+        "heart_rate": 92,
+        "blood_pressure_systolic": 124,
+        "blood_pressure_diastolic": 76,
+        "respiratory_rate": 18,
+        "spo2": 98.0,
+        "temperature": 100.4,
+        "pain_scale": 7
+    },
+    "labs": {
+        "troponin": "0.15 ng/mL (mildly elevated - myopericarditis involvement)",
+        "BNP": "45 pg/mL (normal)",
+        "CBC": "WBC 11.2 (mildly elevated), Hgb 14.8, Plt 280 - mild leukocytosis",
+        "BMP": "Na 140, K 4.3, Cr 0.9, Glucose 92 - BUN 14 - all within normal limits",
+        "CRP": "48 mg/L (elevated - normal <10)",
+        "ESR": "38 mm/hr (elevated)",
+        "D-dimer": "0.3 mg/L (normal, <0.5)",
+        "ECG": "Diffuse ST elevation with PR depression in leads II, III, aVF, and V3-V6. No reciprocal ST depression. Consistent with acute pericarditis."
+    },
+    "past_medical_history": [
+        "Seasonal allergies",
+        "Mild asthma (childhood, mostly outgrown)",
+        "Recent viral upper respiratory infection (resolved 5 days ago)"
+    ],
+    "surgical_history": [
+        "Wisdom teeth extraction (2018)"
+    ],
+    "medications": [
+        "Cetirizine 10mg daily as needed for allergies",
+        "Albuterol inhaler as needed (rarely uses)",
+        "Ibuprofen 400mg as needed (took some yesterday)"
+    ],
+    "allergies": [
+        "No known drug allergies"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "Social drinker, maybe 2-3 drinks on weekends with friends",
+        "drugs": "Occasional marijuana, maybe once or twice a month",
+        "occupation": "Graduate student in computer science",
+        "living_situation": "Lives with two roommates in an apartment near campus",
+        "exercise": "Very active - lifts weights 4 times a week, runs 3 times a week",
+        "diet": "Tries to eat high protein for muscle building, tracks macros, eats fairly healthy"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Hypertension, age 55, otherwise healthy",
+            "mother": "Healthy, age 53",
+            "brother": "Healthy, age 25",
+            "maternal_grandfather": "Died of colon cancer at age 72"
+        }
+    },
+    "personality": "anxious young man who is health-conscious and frightened this might be a heart attack at his age, otherwise friendly and cooperative",
+    "communication_style": "Polite and engaged. Will ask a lot of questions driven by anxiety ('Could this be a heart attack? I'm only 28'). Has done some Googling of his symptoms and may reference things he read online. Responds well to reassurance with clear explanations. Open and honest about all habits including marijuana use.",
+    "pain_description_style": "Descriptive and specific ('it's like someone stabbing me when I breathe in'). Can clearly identify what makes it better and worse. Will demonstrate positions that help (leaning forward). Distinguishes well between pain at rest versus with breathing.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Classic pericarditis presentation: sharp pleuritic chest pain relieved by leaning forward",
+            "Pain radiates to left trapezius (pathognomonic for pericarditis)",
+            "Recent viral URI as likely etiology (post-viral pericarditis)",
+            "ECG showing diffuse ST elevation with PR depression (classic pericarditis pattern without reciprocal changes)",
+            "Elevated troponin suggesting myopericarditis component",
+            "Elevated inflammatory markers (CRP 48, ESR 38)",
+            "Low-grade fever consistent with inflammatory/infectious etiology",
+            "Normal D-dimer helps rule out pulmonary embolism",
+            "Young patient with minimal cardiac risk factors - important to differentiate from ACS"
+        ],
+        "diagnosis": "Acute Pericarditis (likely viral/post-viral) with Myopericarditis",
+        "differential_diagnoses": [
+            "Acute coronary syndrome (STEMI - must differentiate ECG pattern)",
+            "Pulmonary embolism",
+            "Myocarditis without pericarditis",
+            "Pneumonia with pleurisy",
+            "Costochondritis",
+            "Pneumothorax"
+        ],
+        "recommended_interventions": [
+            "Continuous cardiac monitoring (given troponin elevation)",
+            "IV access",
+            "Ibuprofen 600mg TID (first-line NSAID for pericarditis) with GI protection",
+            "Colchicine 0.5mg BID (reduces recurrence by 50%)",
+            "Echocardiogram to rule out pericardial effusion and assess cardiac function",
+            "Serial troponins to ensure trending down",
+            "Avoid strenuous exercise until symptoms resolve and inflammatory markers normalize",
+            "Cardiology consult given troponin elevation",
+            "Return precautions: worsening chest pain, syncope, worsening shortness of breath",
+            "Follow-up inflammatory markers in 1-2 weeks"
+        ]
+    }
+}

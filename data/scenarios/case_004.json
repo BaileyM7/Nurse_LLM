@@ -1,0 +1,190 @@
+{
+    "patient_id": "case_004",
+    "name": "Dorothy Williams",
+    "age": 73,
+    "sex": "Female",
+    "ethnicity": "African American",
+    "weight_lbs": 210,
+    "height_inches": 64,
+    "chief_complaint": "I can't breathe when I lay down anymore and my legs are so swollen I can barely get my shoes on",
+    "onset_description": "Has been getting worse over the past 2 weeks. Woke up last night gasping for air and had to sleep sitting up in her recliner. Daughter brought her in this morning.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "shortness_of_breath": {
+            "description": "Can barely walk to the bathroom without getting out of breath, much worse when lying flat",
+            "onset": "gradually worsening over 2 weeks, severe since last night",
+            "character": "feels like drowning, can't get enough air",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["lying flat", "any exertion", "walking more than a few steps"],
+            "alleviating_factors": ["sitting upright", "propping up on 3-4 pillows", "sleeping in recliner"],
+            "associated_symptoms": ["cough", "leg swelling", "fatigue"]
+        },
+        "orthopnea": {
+            "description": "Can't lie flat at all without feeling like she's suffocating, needs 4 pillows or the recliner",
+            "onset": "about 1 week ago, was using 2 pillows before, now needs 4",
+            "character": "immediate breathlessness when reclining",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["lying flat", "reclining below 45 degrees"],
+            "alleviating_factors": ["sitting bolt upright"],
+            "associated_symptoms": ["cough when lying down"]
+        },
+        "peripheral_edema": {
+            "description": "Both legs swollen from feet up to knees, skin feels tight and shiny",
+            "onset": "noticed about 2 weeks ago, getting worse daily",
+            "character": "pitting edema, 3+ bilateral",
+            "severity": "7/10",
+            "location": "bilateral lower extremities, feet to knees",
+            "radiation": null,
+            "aggravating_factors": ["standing", "sitting with feet down", "end of day"],
+            "alleviating_factors": ["elevating legs helps a little but doesn't go away completely"],
+            "associated_symptoms": ["skin tightness", "difficulty wearing shoes"]
+        },
+        "cough": {
+            "description": "Dry cough that gets worse at night and when trying to lie down",
+            "onset": "about 10 days",
+            "character": "dry, non-productive, worse at night",
+            "severity": "4/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["lying flat", "nighttime"],
+            "alleviating_factors": ["sitting up"],
+            "associated_symptoms": ["shortness of breath"]
+        },
+        "fatigue": {
+            "description": "So tired she can barely do anything around the house, sleeps poorly because of breathing",
+            "onset": "3 weeks, getting worse",
+            "character": "overwhelming exhaustion",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any activity"],
+            "alleviating_factors": ["rest, but never feels fully rested"],
+            "associated_symptoms": []
+        },
+        "weight_gain": {
+            "description": "Gained about 12 pounds in the last 2 weeks without eating more",
+            "onset": "2 weeks",
+            "character": "rapid weight gain from fluid retention",
+            "severity": null,
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["leg swelling", "abdominal bloating"]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain", "fever", "palpitations", "syncope", "hemoptysis",
+        "nausea", "vomiting", "diarrhea", "headache", "dizziness",
+        "urinary symptoms", "rash", "joint pain", "vision changes"
+    ],
+    "vitals": {
+        "heart_rate": 96,
+        "blood_pressure_systolic": 168,
+        "blood_pressure_diastolic": 88,
+        "respiratory_rate": 26,
+        "spo2": 91.0,
+        "temperature": 98.2,
+        "pain_scale": 2
+    },
+    "labs": {
+        "troponin": "0.04 ng/mL (borderline, may reflect cardiac strain)",
+        "BNP": "1840 pg/mL (markedly elevated)",
+        "CBC": "WBC 8.1, Hgb 11.2 (mildly low), Plt 198 - mild anemia",
+        "BMP": "Na 132 (low - dilutional hyponatremia), K 4.8, Cr 1.6 (elevated), Glucose 142 (elevated) - BUN 32 (elevated)",
+        "PT/INR": "12.0 sec / 1.0",
+        "liver_panel": "AST 42, ALT 38, Alk Phos 110 - mildly elevated suggesting hepatic congestion",
+        "albumin": "3.0 g/dL (low)",
+        "TSH": "2.8 mIU/L (normal)",
+        "chest_xray": "Cardiomegaly, bilateral pleural effusions, pulmonary vascular congestion, cephalization of vessels"
+    },
+    "past_medical_history": [
+        "Heart failure with reduced ejection fraction (EF 30%, diagnosed 4 years ago)",
+        "Hypertension (20 years)",
+        "Type 2 Diabetes Mellitus (15 years)",
+        "Atrial fibrillation (on rate control)",
+        "Chronic kidney disease stage 3",
+        "Obesity"
+    ],
+    "surgical_history": [
+        "ICD placement (2023)",
+        "Total knee replacement, left (2019)",
+        "Hysterectomy (2005)"
+    ],
+    "medications": [
+        "Carvedilol 25mg twice daily",
+        "Lisinopril 40mg daily",
+        "Furosemide 40mg daily",
+        "Spironolactone 25mg daily",
+        "Metformin 1000mg twice daily",
+        "Eliquis (apixaban) 5mg twice daily",
+        "Digoxin 0.125mg daily",
+        "Potassium chloride 20mEq daily"
+    ],
+    "allergies": [
+        "ACE inhibitor cough (lisinopril - tolerates it but has mild chronic cough)",
+        "Codeine (severe nausea and vomiting)"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "Denies, stopped drinking when diagnosed with heart failure",
+        "drugs": "Denies",
+        "occupation": "Retired postal worker",
+        "living_situation": "Lives alone in a single-story apartment, daughter lives nearby and checks on her daily",
+        "exercise": "Very limited due to shortness of breath, used to walk but can barely get around the apartment now",
+        "diet": "Supposed to be on low-sodium diet but admits she's been eating canned soups and her neighbor brought over some ham last week"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Heart failure, died at age 68",
+            "father": "Hypertension, stroke, died at age 72",
+            "sister": "Type 2 Diabetes, Hypertension, age 70",
+            "brother": "Died of heart attack at age 65"
+        }
+    },
+    "personality": "warm and talkative, calls everyone 'baby' and 'sweetheart,' but clearly frightened underneath the cheerfulness",
+    "communication_style": "Very social and will chat about her grandchildren and church if given the opportunity. Tells long stories to get to a point. Needs gentle redirection to stay on topic but is never rude about it. Will admit to dietary non-compliance if asked without judgment.",
+    "pain_description_style": "Focuses more on functional limitations ('I can't do my laundry anymore') than pain ratings. Doesn't complain much about pain per se but clearly distressed by inability to breathe.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Known HFrEF with EF 30% presenting with acute decompensation",
+            "Orthopnea requiring 4-pillow elevation and paroxysmal nocturnal dyspnea",
+            "12-pound weight gain in 2 weeks indicating significant fluid overload",
+            "Bilateral 3+ pitting edema to knees",
+            "BNP markedly elevated at 1840 pg/mL",
+            "SpO2 91% indicating hypoxemia",
+            "Dilutional hyponatremia (Na 132) suggesting severe fluid overload",
+            "Elevated creatinine suggesting worsening renal function (cardiorenal syndrome)",
+            "Dietary non-compliance with high-sodium foods as likely precipitant",
+            "Lives alone with limited functional capacity"
+        ],
+        "diagnosis": "Acute Decompensated Heart Failure (CHF Exacerbation)",
+        "differential_diagnoses": [
+            "Pneumonia with fluid overload",
+            "Pulmonary embolism",
+            "Acute kidney injury with volume overload",
+            "Acute coronary syndrome precipitating decompensation",
+            "Medication non-compliance"
+        ],
+        "recommended_interventions": [
+            "Supplemental oxygen to maintain SpO2 > 94%",
+            "IV furosemide (higher dose than home oral dose)",
+            "Strict intake and output monitoring",
+            "Daily weights",
+            "Fluid restriction (1.5L/day)",
+            "Low-sodium diet education",
+            "Continuous cardiac monitoring",
+            "Electrolyte monitoring (especially potassium and magnesium) with diuresis",
+            "Echocardiogram to reassess ejection fraction",
+            "Renal function monitoring during diuresis",
+            "Cardiology consult",
+            "Social work consult for home support assessment"
+        ]
+    }
+}

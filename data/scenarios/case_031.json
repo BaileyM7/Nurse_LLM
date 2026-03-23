@@ -1,0 +1,169 @@
+{
+    "patient_id": "case_031",
+    "name": "Marcus Johnson",
+    "age": 25,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 185,
+    "height_inches": 71,
+    "chief_complaint": "My leg is killing me. The pain is way worse than it should be for the fracture. Something feels really wrong.",
+    "onset_description": "Sustained a closed tibial shaft fracture of his right leg in a motorcycle accident 8 hours ago. Was splinted in the ED and admitted for observation. Pain has been escalating despite IV pain medication and is now severe, constant, and out of proportion to injury. Nursing staff called the physician because patient is in extreme distress.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "severe_leg_pain": {
+            "description": "This is not normal fracture pain. I've broken bones before. Something is seriously wrong. It feels like my leg is going to explode. The pressure is unbearable.",
+            "onset": "Pain escalating over past 4-6 hours despite fracture being splinted",
+            "character": "deep, unrelenting, pressure-like pain out of proportion to injury. Not relieved by immobilization or IV opioids.",
+            "severity": "10/10",
+            "location": "right anterior lower leg (anterior compartment)",
+            "radiation": "diffuse throughout entire lower leg",
+            "aggravating_factors": ["passive stretch of toes (especially dorsiflexion)", "palpation of anterior compartment", "any movement", "elevation does not help"],
+            "alleviating_factors": ["nothing provides relief", "IV morphine 4mg given x3 with minimal effect"],
+            "associated_symptoms": ["foot numbness", "tightness of leg", "inability to move toes"]
+        },
+        "leg_tightness_and_swelling": {
+            "description": "My whole lower leg feels rock hard and swollen. It's way bigger than the other side. The skin feels like it's going to split.",
+            "onset": "Progressive over past 4-6 hours",
+            "character": "tense, woody-hard anterior compartment. Circumference significantly greater than contralateral leg.",
+            "severity": "severe",
+            "location": "right lower leg, anterior and lateral compartments",
+            "radiation": null,
+            "aggravating_factors": ["palpation"],
+            "alleviating_factors": ["none"],
+            "associated_symptoms": ["pain", "numbness"]
+        },
+        "foot_numbness": {
+            "description": "I'm losing feeling in my foot. The space between my big toe and second toe is numb. I'm scared I'm going to lose my leg.",
+            "onset": "2 hours ago, progressive",
+            "character": "numbness in first web space (deep peroneal nerve distribution), progressing",
+            "severity": "8/10",
+            "location": "right foot, first web space and dorsum of foot",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["pain", "weakness of toe dorsiflexion"]
+        },
+        "inability_to_move_toes": {
+            "description": "I can't pull my toes up anymore. I could move them fine earlier but now they barely move.",
+            "onset": "1-2 hours ago, progressive",
+            "character": "progressive weakness of toe and ankle dorsiflexion (anterior compartment muscles)",
+            "severity": "severe",
+            "location": "right foot and ankle",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["numbness", "pain"]
+        },
+        "anxiety_and_distress": {
+            "description": "Something is really wrong and nobody is listening to me. I keep telling the nurses the pain meds aren't working and something is different. Please help me.",
+            "onset": "escalating over several hours",
+            "character": "extreme anxiety and agitation from uncontrolled pain and fear of limb loss",
+            "severity": "9/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["feeling unheard", "worsening symptoms", "delays in care"],
+            "alleviating_factors": ["being taken seriously", "clear communication about plan"],
+            "associated_symptoms": ["diaphoresis", "tachycardia"]
+        }
+    },
+    "symptoms_absent": [
+        "open fracture or visible bone", "absence of distal pulses (pulses still present but diminished)",
+        "fever", "chest pain", "shortness of breath", "abdominal pain",
+        "head injury or loss of consciousness during accident",
+        "back pain or spinal symptoms", "contralateral leg pain",
+        "rash", "bleeding from leg"
+    ],
+    "vitals": {
+        "heart_rate": 122,
+        "blood_pressure_systolic": 158,
+        "blood_pressure_diastolic": 94,
+        "respiratory_rate": 22,
+        "spo2": 99.0,
+        "temperature": 98.8,
+        "pain_scale": 10
+    },
+    "labs": {
+        "CBC": "WBC 12.4 (mildly elevated, stress response), Hgb 13.8, Plt 256",
+        "BMP": "Na 139, K 4.8, Cr 1.0, BUN 14, Glucose 132 (stress response)",
+        "CK": "2,840 U/L (markedly elevated, indicating muscle damage/rhabdomyolysis)",
+        "myoglobin": "385 ng/mL (elevated)",
+        "lactate": "2.8 mmol/L (elevated)",
+        "PT_INR": "12.1 sec / 1.0 (normal)",
+        "type_and_screen": "A positive, antibody screen negative",
+        "compartment_pressure": "Right anterior compartment: 48 mmHg (critically elevated; diastolic BP 94, delta pressure = 46 mmHg, threshold for fasciotomy is delta <30 mmHg)",
+        "xray_right_tibia": "Transverse midshaft tibial fracture with minimal displacement, intact fibula. No gas in soft tissues."
+    },
+    "past_medical_history": [
+        "No significant past medical history",
+        "Right forearm fracture from skateboarding at age 14 (healed without complication)"
+    ],
+    "surgical_history": [
+        "ORIF right radius fracture (2015)",
+        "Wisdom teeth extraction (2020)"
+    ],
+    "medications": [
+        "None daily",
+        "Ibuprofen as needed for occasional headaches",
+        "Whey protein supplement daily"
+    ],
+    "allergies": [
+        "No known drug allergies"
+    ],
+    "social_history": {
+        "smoking": "Never",
+        "alcohol": "Socially, 3-4 drinks on weekends",
+        "drugs": "Occasional marijuana use (last use 1 week ago)",
+        "occupation": "Personal trainer at a gym",
+        "living_situation": "Lives with girlfriend in a second-floor apartment (stairs). No elevator.",
+        "exercise": "Very active, works out 6 days a week. Weightlifting, running, and cycling. Rides a motorcycle for recreation.",
+        "diet": "High protein diet, meal preps. Takes protein supplements."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Healthy at 52",
+            "father": "Hypertension, otherwise healthy at 55",
+            "sister": "Healthy at 22",
+            "paternal_grandfather": "Type 2 Diabetes, died at 70 from stroke"
+        }
+    },
+    "personality": "Normally confident and assertive. Currently panicked and vocal about his distress. Not a complainer — the fact that he is in this much distress is itself a clinical sign. Becomes frustrated and scared when he feels his concerns are being minimized. Desperate for someone to take action.",
+    "communication_style": "Direct, loud, and urgent. Not trying to be difficult — genuinely terrified. Uses emphatic language to convey severity. Repeats that 'something is wrong' and 'this is different from the fracture pain.' Cooperative when he feels heard and a plan is being made. Uses profanity from pain.",
+    "pain_description_style": "Describes pain with urgency and intensity. Uses words like 'exploding,' 'bursting,' 'pressure.' Clearly distinguishes this pain from his prior fracture experience. Says the pain medication 'isn't touching it.' Physically cannot stay still — writhing, gripping bedrails, sweating.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Compartment syndrome: the 5 P's — Pain out of proportion, Pain with passive stretch, Pressure (tense compartment), Paresthesias, Paralysis (progressive motor deficit)",
+            "Compartment pressure 48 mmHg with delta pressure of 46 mmHg (diastolic 94 - compartment 48 = 46; normal delta >30, his is critically close)",
+            "Progressive neurological deficit: loss of dorsiflexion and first web space sensation (deep peroneal nerve compromise)",
+            "Elevated CK (2,840) indicating ongoing muscle necrosis/rhabdomyolysis",
+            "Pain refractory to IV opioids — hallmark of compartment syndrome",
+            "Time-critical emergency: irreversible muscle death occurs within 6-8 hours of onset",
+            "Note: presence of distal pulses does NOT rule out compartment syndrome — pulses are often preserved until very late"
+        ],
+        "diagnosis": "Acute compartment syndrome of the right lower leg (anterior compartment)",
+        "differential_diagnoses": [
+            "Worsening fracture displacement",
+            "Deep vein thrombosis",
+            "Arterial injury with limb ischemia",
+            "Rhabdomyolysis without compartment syndrome",
+            "Neuropraxia from fracture",
+            "Fat embolism syndrome"
+        ],
+        "recommended_interventions": [
+            "EMERGENT orthopedic surgery consult for fasciotomy — do NOT delay",
+            "Four-compartment fasciotomy of the right lower leg",
+            "Remove all constrictive dressings and splints immediately",
+            "Keep limb at heart level (do NOT elevate — reduces perfusion pressure)",
+            "Aggressive IV fluid resuscitation to prevent renal damage from myoglobinuria",
+            "Monitor urine output (Foley catheter, target >1 mL/kg/hr)",
+            "Serial CK and renal function monitoring for rhabdomyolysis",
+            "Pain management (will improve significantly after fasciotomy)",
+            "Monitor for hyperkalemia from muscle breakdown (K+ 4.8 already trending up)",
+            "Serial neurovascular checks every 30 minutes until surgery",
+            "NPO for surgery",
+            "Document timing of symptom onset for medicolegal purposes",
+            "Consider alkalinization of urine with IV bicarbonate if myoglobinuria develops"
+        ]
+    }
+}

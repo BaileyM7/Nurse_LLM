@@ -1,0 +1,173 @@
+{
+    "patient_id": "case_005",
+    "name": "James Kowalski",
+    "age": 58,
+    "sex": "Male",
+    "ethnicity": "Polish American",
+    "weight_lbs": 225,
+    "height_inches": 72,
+    "chief_complaint": "My heart's been going crazy all day, it feels like it's fluttering and racing and I can't catch my breath",
+    "onset_description": "Woke up this morning feeling his heart pounding and racing. Has had episodes of 'skipped beats' before but nothing like this. Tried to go about his day but felt increasingly unwell.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "palpitations": {
+            "description": "Heart feels like it's flopping around in my chest, beating fast and irregular",
+            "onset": "since waking up this morning, about 8 hours ago",
+            "character": "rapid, irregular, fluttering sensation",
+            "severity": "8/10",
+            "location": "entire chest",
+            "radiation": null,
+            "aggravating_factors": ["any movement", "walking", "getting anxious about it"],
+            "alleviating_factors": ["nothing has helped"],
+            "associated_symptoms": ["shortness of breath", "lightheadedness", "fatigue"]
+        },
+        "shortness_of_breath": {
+            "description": "Feels winded doing anything, even just talking makes me a little breathless",
+            "onset": "started a few hours after the palpitations began",
+            "character": "can't take a full satisfying breath",
+            "severity": "6/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["exertion", "talking at length"],
+            "alleviating_factors": ["sitting still"],
+            "associated_symptoms": ["palpitations"]
+        },
+        "lightheadedness": {
+            "description": "Felt woozy and unsteady, like I might pass out, especially when I stood up",
+            "onset": "about 4 hours ago",
+            "character": "unsteady, room doesn't spin but feels off-balance",
+            "severity": "5/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["standing up", "walking"],
+            "alleviating_factors": ["sitting or lying down"],
+            "associated_symptoms": ["near-syncope episode earlier today"]
+        },
+        "chest_discomfort": {
+            "description": "Not really pain, more like an uncomfortable pressure or tightness that comes and goes",
+            "onset": "about 6 hours ago",
+            "character": "vague pressure, not sharp",
+            "severity": "4/10",
+            "location": "center of chest",
+            "radiation": null,
+            "aggravating_factors": ["when heart is racing fastest"],
+            "alleviating_factors": ["unclear"],
+            "associated_symptoms": ["palpitations"]
+        },
+        "fatigue": {
+            "description": "Completely wiped out, no energy at all today",
+            "onset": "all day",
+            "character": "profound exhaustion",
+            "severity": "7/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any activity"],
+            "alleviating_factors": ["rest helps slightly"],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "fever", "cough", "leg swelling", "orthopnea", "syncope (had near-syncope but did not lose consciousness)",
+        "nausea", "vomiting", "abdominal pain", "headache", "vision changes",
+        "hemoptysis", "rash", "joint pain", "urinary symptoms"
+    ],
+    "vitals": {
+        "heart_rate": 148,
+        "blood_pressure_systolic": 136,
+        "blood_pressure_diastolic": 82,
+        "respiratory_rate": 22,
+        "spo2": 95.0,
+        "temperature": 98.8,
+        "pain_scale": 4
+    },
+    "labs": {
+        "troponin": "0.05 ng/mL (mildly elevated, likely demand ischemia from tachycardia)",
+        "BNP": "380 pg/mL (elevated)",
+        "CBC": "WBC 7.5, Hgb 15.2, Plt 210 - within normal limits",
+        "BMP": "Na 140, K 3.4 (low), Cr 1.1, Glucose 105 - BUN 20",
+        "PT/INR": "12.2 sec / 1.0",
+        "TSH": "0.8 mIU/L (normal)",
+        "magnesium": "1.6 mg/dL (low)",
+        "calcium": "9.2 mg/dL (normal)",
+        "liver_panel": "AST 28, ALT 32, Alk Phos 85 - within normal limits",
+        "ECG": "Atrial fibrillation with rapid ventricular response, rate 148, no acute ST changes, left ventricular hypertrophy"
+    },
+    "past_medical_history": [
+        "Hypertension (15 years)",
+        "Paroxysmal atrial fibrillation (diagnosed 2 years ago, has had 3 prior episodes)",
+        "Obstructive sleep apnea (does not use CPAP consistently)",
+        "Hyperlipidemia",
+        "GERD",
+        "Obesity"
+    ],
+    "surgical_history": [
+        "Rotator cuff repair, right shoulder (2020)",
+        "Hernia repair (2015)"
+    ],
+    "medications": [
+        "Metoprolol succinate 100mg daily",
+        "Eliquis (apixaban) 5mg twice daily",
+        "Lisinopril 20mg daily",
+        "Rosuvastatin 10mg at bedtime",
+        "Omeprazole 20mg daily"
+    ],
+    "allergies": [
+        "Amiodarone (thyroid dysfunction - developed hyperthyroidism on previous trial)",
+        "Iodine contrast dye (hives - premedicate if needed)"
+    ],
+    "social_history": {
+        "smoking": "Quit 10 years ago, smoked 1 pack/day for 20 years (20 pack-year history)",
+        "alcohol": "Drinks 3-4 beers most nights, more on weekends. Had about 8 beers at a cookout yesterday.",
+        "drugs": "Denies",
+        "occupation": "Construction foreman, physically demanding job",
+        "living_situation": "Divorced, lives alone in a house",
+        "exercise": "Gets exercise through work but no formal exercise routine",
+        "diet": "Lots of fast food, high-sodium. Doesn't cook much for himself."
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Atrial fibrillation, pacemaker, died at age 80 from pneumonia",
+            "mother": "Hypertension, alive at 82",
+            "brother": "Healthy, age 55",
+            "sister": "High blood pressure, age 61"
+        }
+    },
+    "personality": "gruff and impatient, frustrated about being in the hospital, wants to know when he can leave",
+    "communication_style": "Blunt and direct. Doesn't like to repeat himself. Gets irritated with what he perceives as unnecessary questions. Uses some profanity when frustrated. Will cooperate if treated with straightforward respect but shuts down if he feels condescended to.",
+    "pain_description_style": "Reluctant to call anything 'pain' - prefers 'discomfort' or 'it's annoying.' Focuses on how symptoms affect his ability to work. Will say things like 'I just need you to fix this so I can get back to the job site.'",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Known paroxysmal AFib now presenting with RVR at rate 148",
+            "Hemodynamically stable but symptomatic with lightheadedness and near-syncope",
+            "Low potassium (3.4) and low magnesium (1.6) - electrolyte abnormalities may be perpetuating arrhythmia",
+            "Heavy alcohol use with binge episode yesterday (holiday heart syndrome as likely trigger)",
+            "Already on Eliquis for anticoagulation (reduces stroke risk consideration)",
+            "Amiodarone allergy limits antiarrhythmic options",
+            "Non-compliant with CPAP for sleep apnea (OSA contributes to AFib)",
+            "Mildly elevated troponin suggesting demand ischemia from tachycardia"
+        ],
+        "diagnosis": "Atrial Fibrillation with Rapid Ventricular Response",
+        "differential_diagnoses": [
+            "Atrial flutter with rapid conduction",
+            "SVT (supraventricular tachycardia)",
+            "New-onset heart failure precipitated by tachycardia",
+            "Hyperthyroidism-induced tachycardia",
+            "Acute coronary syndrome with secondary arrhythmia"
+        ],
+        "recommended_interventions": [
+            "Continuous cardiac monitoring",
+            "IV access",
+            "Rate control with IV diltiazem or IV metoprolol",
+            "Aggressive electrolyte replacement (IV potassium and IV magnesium)",
+            "Verify anticoagulation compliance (CHA2DS2-VASc score assessment)",
+            "Serial troponins to trend",
+            "Echocardiogram to assess cardiac function",
+            "Alcohol cessation counseling",
+            "CPAP compliance counseling",
+            "Electrophysiology consult if recurrent episodes despite rate control",
+            "Reassess oral rate control medication dosing at discharge"
+        ]
+    }
+}

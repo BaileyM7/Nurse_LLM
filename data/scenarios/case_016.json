@@ -1,0 +1,157 @@
+{
+    "patient_id": "case_016",
+    "name": "Priya Chakraborty",
+    "age": 42,
+    "sex": "Female",
+    "ethnicity": "South Asian/Indian-American",
+    "weight_lbs": 185,
+    "height_inches": 63,
+    "chief_complaint": "I have terrible pain in my upper stomach that goes straight through to my back, and I can't stop vomiting",
+    "onset_description": "Severe epigastric pain began approximately 6 hours ago after a large family dinner. Pain is constant, boring in nature, and radiates to the back. Multiple episodes of vomiting. Pain is the worst she has ever experienced.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "epigastric_pain": {
+            "description": "It's like a knife going straight through my stomach to my back. It's absolutely unbearable, I've never felt anything like this",
+            "onset": "6 hours ago, after dinner",
+            "character": "constant, boring, deep",
+            "severity": "9/10",
+            "location": "epigastric, band-like across upper abdomen",
+            "radiation": "straight through to the mid-back",
+            "aggravating_factors": ["lying flat", "eating", "deep breathing"],
+            "alleviating_factors": ["leaning forward slightly", "nothing really helps"],
+            "associated_symptoms": ["vomiting", "nausea"]
+        },
+        "vomiting": {
+            "description": "I've thrown up five or six times now, it's just bile at this point, nothing is staying down",
+            "onset": "5 hours ago",
+            "character": "initially food contents, now bilious",
+            "severity": "persistent",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any attempt to eat or drink", "movement"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["epigastric pain", "nausea"]
+        },
+        "nausea": {
+            "description": "I feel sick to my stomach constantly, even between vomiting episodes",
+            "onset": "6 hours ago, with the pain",
+            "character": "constant, severe",
+            "severity": "8/10",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["smell of food", "movement"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["vomiting"]
+        },
+        "abdominal_distension": {
+            "description": "My belly feels bloated and tight, especially up top",
+            "onset": "about 4 hours ago",
+            "character": "diffuse bloating, worse in upper abdomen",
+            "severity": "moderate",
+            "location": "upper abdomen",
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": [],
+            "associated_symptoms": ["decreased bowel sounds"]
+        }
+    },
+    "symptoms_absent": [
+        "diarrhea", "constipation", "hematemesis", "melena", "hematochezia",
+        "fever", "chest pain", "shortness of breath", "jaundice",
+        "urinary symptoms", "vaginal bleeding", "headache",
+        "dark urine", "clay-colored stools"
+    ],
+    "vitals": {
+        "heart_rate": 108,
+        "blood_pressure_systolic": 145,
+        "blood_pressure_diastolic": 88,
+        "respiratory_rate": 22,
+        "spo2": 96,
+        "temperature": 100.2,
+        "pain_scale": 9
+    },
+    "labs": {
+        "lipase": "1850 U/L (markedly elevated, normal < 60)",
+        "amylase": "620 U/L (elevated)",
+        "CBC": "WBC 13.5 (elevated), Hgb 13.8, Plt 230",
+        "BMP": "Na 136, K 3.6, Cr 1.0, Glucose 185 (elevated), BUN 20, Ca 8.4 (low-normal)",
+        "liver_function": "AST 110 (elevated), ALT 145 (elevated), Alk Phos 180 (elevated), Total Bilirubin 2.1 (elevated), Direct Bilirubin 1.4 (elevated), Albumin 3.5",
+        "triglycerides": "195 mg/dL (borderline high)",
+        "lactate": "2.1 mmol/L (mildly elevated)",
+        "CRP": "12.4 mg/dL (elevated)"
+    },
+    "past_medical_history": [
+        "Cholelithiasis (gallstones diagnosed 2 years ago, declined surgery at the time)",
+        "Type 2 Diabetes Mellitus (4 years)",
+        "Obesity (BMI 32.8)",
+        "Hyperlipidemia"
+    ],
+    "surgical_history": [
+        "Cesarean section (2012)",
+        "Cesarean section (2015)"
+    ],
+    "medications": [
+        "Metformin 500mg twice daily",
+        "Atorvastatin 20mg daily",
+        "Omeprazole 20mg daily",
+        "Calcium with Vitamin D supplement daily"
+    ],
+    "allergies": [
+        "Morphine (severe itching and hives)",
+        "Latex (contact dermatitis)"
+    ],
+    "social_history": {
+        "smoking": "Never",
+        "alcohol": "Rare, maybe a glass of wine at special occasions, 2-3 times per year",
+        "drugs": "Denies",
+        "occupation": "Software project manager, works from home",
+        "living_situation": "Married, lives with husband and two children ages 10 and 13",
+        "exercise": "Tries to walk 30 minutes daily, does yoga twice a week",
+        "diet": "Mostly home-cooked Indian food. Admits the family dinner last night was very rich and heavy with fried foods."
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Type 2 Diabetes, gallstones, died at 70 from MI",
+            "mother": "Cholelithiasis (had cholecystectomy), Hypertension, alive at 68",
+            "sister": "Gallstones, Type 2 Diabetes"
+        }
+    },
+    "personality": "articulate and well-informed, asks detailed questions about her care, very anxious about her children and work obligations",
+    "communication_style": "Educated and precise in describing symptoms. Uses some medical terminology from her own research. Asks 'what does that mean?' when given lab results. Frequently mentions her kids and husband waiting in the lobby. Wants to understand the plan.",
+    "pain_description_style": "Very descriptive and specific about pain quality, location, and timeline. Rates pain accurately. Says things like 'it's a deep, boring pain that radiates straight through to my back, worse when I lie flat.' Does not exaggerate or minimize.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Markedly elevated lipase (1850 U/L) confirming acute pancreatitis",
+            "Known gallstone history with elevated liver enzymes and bilirubin suggesting gallstone pancreatitis",
+            "Classic presentation: epigastric pain radiating to back, worse lying flat, better leaning forward",
+            "Tachycardia and low-grade fever suggesting inflammatory response",
+            "Elevated glucose in known diabetic may indicate pancreatic endocrine dysfunction",
+            "Elevated direct bilirubin and hepatic enzymes suggesting common bile duct obstruction",
+            "Morphine allergy - important for pain management planning",
+            "History of known gallstones with prior refusal of cholecystectomy"
+        ],
+        "diagnosis": "Acute Gallstone Pancreatitis",
+        "differential_diagnoses": [
+            "Acute cholecystitis",
+            "Choledocholithiasis with cholangitis",
+            "Perforated peptic ulcer",
+            "Mesenteric ischemia",
+            "Inferior myocardial infarction (epigastric pain presentation)"
+        ],
+        "recommended_interventions": [
+            "Aggressive IV fluid resuscitation (Lactated Ringer's at 250-500mL/hr initially)",
+            "NPO status",
+            "IV analgesics - hydromorphone or fentanyl (avoid morphine per allergy)",
+            "IV antiemetics (ondansetron)",
+            "Right upper quadrant ultrasound to evaluate for CBD dilation and gallstones",
+            "MRCP or EUS if CBD stone suspected",
+            "GI/surgery consult for likely cholecystectomy during same admission",
+            "Monitor glucose closely with insulin sliding scale",
+            "Serial lipase and liver function tests",
+            "Assess BISAP or Ranson's criteria for severity scoring",
+            "Monitor for organ dysfunction (renal, respiratory)"
+        ]
+    }
+}

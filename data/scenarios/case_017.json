@@ -1,0 +1,163 @@
+{
+    "patient_id": "case_017",
+    "name": "Dorothy Mae Henderson",
+    "age": 78,
+    "sex": "Female",
+    "ethnicity": "African American",
+    "weight_lbs": 145,
+    "height_inches": 62,
+    "chief_complaint": "My belly is all swollen up and I've been vomiting this green stuff. I haven't had a bowel movement in four days.",
+    "onset_description": "Progressive abdominal distension and crampy pain over the past 3 days. No flatus or bowel movements for 4 days. Vomiting began 12 hours ago, initially food contents, now bilious. Pain is intermittent and colicky.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal_pain": {
+            "description": "It comes in waves, cramps up real bad then lets up for a little bit, then comes right back",
+            "onset": "3 days ago, progressively worsening",
+            "character": "colicky, cramping, intermittent waves",
+            "severity": "7/10 during cramps, 4/10 between",
+            "location": "diffuse, worse periumbilical",
+            "radiation": "none",
+            "aggravating_factors": ["eating", "drinking"],
+            "alleviating_factors": ["vomiting provides brief relief"],
+            "associated_symptoms": ["abdominal distension", "vomiting", "obstipation"]
+        },
+        "vomiting": {
+            "description": "I keep throwing up this green bitter stuff, can't keep anything down, not even water",
+            "onset": "12 hours ago",
+            "character": "initially food contents, progressed to bilious (green/yellow)",
+            "severity": "6-7 episodes",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": ["any oral intake"],
+            "alleviating_factors": ["briefly relieves cramping"],
+            "associated_symptoms": ["abdominal pain"]
+        },
+        "abdominal_distension": {
+            "description": "My stomach is puffed out like a balloon, my clothes don't fit right anymore",
+            "onset": "gradual over 3 days",
+            "character": "progressive, tympanic",
+            "severity": "marked distension",
+            "location": "diffuse",
+            "radiation": null,
+            "aggravating_factors": ["eating or drinking"],
+            "alleviating_factors": ["nothing"],
+            "associated_symptoms": ["high-pitched bowel sounds"]
+        },
+        "obstipation": {
+            "description": "Haven't passed gas or had a bowel movement in four days, that's not normal for me",
+            "onset": "4 days ago",
+            "character": "complete absence of flatus and stool",
+            "severity": null,
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [],
+            "alleviating_factors": ["tried prune juice and milk of magnesia at home with no result"],
+            "associated_symptoms": ["abdominal distension"]
+        }
+    },
+    "symptoms_absent": [
+        "fever", "bloody stool", "hematemesis", "chest pain",
+        "shortness of breath", "urinary symptoms", "back pain",
+        "diarrhea", "jaundice", "weight loss", "rectal bleeding",
+        "confusion", "dizziness"
+    ],
+    "vitals": {
+        "heart_rate": 95,
+        "blood_pressure_systolic": 138,
+        "blood_pressure_diastolic": 76,
+        "respiratory_rate": 20,
+        "spo2": 96,
+        "temperature": 99.1,
+        "pain_scale": 7
+    },
+    "labs": {
+        "CBC": "WBC 11.2 (mildly elevated), Hgb 11.8 (mildly low for age), Plt 210",
+        "BMP": "Na 132 (low - hyponatremia from vomiting), K 3.1 (low - hypokalemia from vomiting), Cr 1.4 (elevated - dehydration), Glucose 110, BUN 32 (elevated), Cl 90 (low), CO2 30 (mildly elevated - metabolic alkalosis)",
+        "lactate": "1.8 mmol/L (mildly elevated)",
+        "lipase": "42 U/L (normal)",
+        "liver_function": "AST 28, ALT 22, Alk Phos 88, Total Bilirubin 0.9 - within normal limits",
+        "PT/INR": "12.0 sec / 1.0 (normal)",
+        "urinalysis": "Concentrated, specific gravity 1.035, trace ketones"
+    },
+    "past_medical_history": [
+        "Hypertension (20 years)",
+        "Osteoarthritis (knees and hips)",
+        "Hypothyroidism",
+        "History of colon cancer (stage II, treated 6 years ago)",
+        "Diverticulosis",
+        "Chronic constipation"
+    ],
+    "surgical_history": [
+        "Open right hemicolectomy for colon cancer (2020)",
+        "Total abdominal hysterectomy (1995)",
+        "Bilateral knee replacements (2017 and 2019)",
+        "Appendectomy (1970s)"
+    ],
+    "medications": [
+        "Amlodipine 10mg daily",
+        "Levothyroxine 75mcg daily",
+        "Acetaminophen 500mg as needed for joint pain",
+        "Polyethylene glycol (MiraLAX) daily for constipation",
+        "Calcium 600mg with Vitamin D twice daily",
+        "Multivitamin daily"
+    ],
+    "allergies": [
+        "Aspirin (GI bleeding)",
+        "Erythromycin (severe stomach upset)"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "Quit 20 years ago, used to drink socially",
+        "drugs": "Denies",
+        "occupation": "Retired postal worker",
+        "living_situation": "Lives alone in her own home. Daughter checks on her daily. Son lives out of state.",
+        "exercise": "Limited by arthritis, uses a walker. Moves around the house.",
+        "diet": "Regular diet but admits to not drinking enough water. Daughter brings meals."
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Died of colon cancer at 72",
+            "father": "Hypertension, died of stroke at 68",
+            "daughter": "Healthy",
+            "son": "High blood pressure"
+        }
+    },
+    "personality": "sweet and grandmotherly, patient and kind, but worried. Refers to the nurse as 'baby' or 'sweetheart.' Very trusting of medical staff.",
+    "communication_style": "Warm and talkative, tells stories when answering questions. May need gentle redirection to stay on topic. Will mention her daughter and grandchildren. Uses expressions like 'Lord have mercy' and 'I tell you what.' Provides thorough answers when asked directly.",
+    "pain_description_style": "Describes pain in waves: 'It cramps up something awful, then it eases off for a minute, then here it comes again.' Uses the phrase 'tolerable' even when in significant pain. Will pray quietly during bad cramps.",
+    "rubric": {
+        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "critical_findings": [
+            "Complete obstipation (no flatus or stool for 4 days)",
+            "Bilious vomiting progressing from food to bile",
+            "Significant surgical history with multiple abdominal operations (adhesion risk)",
+            "Colicky/cramping pain pattern classic for mechanical bowel obstruction",
+            "Electrolyte derangements from vomiting: hyponatremia (132), hypokalemia (3.1)",
+            "Dehydration evidenced by elevated BUN/Cr ratio and concentrated urine",
+            "History of colon cancer and right hemicolectomy - adhesive SBO most likely",
+            "Metabolic alkalosis from protracted vomiting"
+        ],
+        "diagnosis": "Small Bowel Obstruction (adhesive, secondary to prior abdominal surgeries)",
+        "differential_diagnoses": [
+            "Large bowel obstruction (recurrent colon cancer)",
+            "Incarcerated hernia",
+            "Ileus (pseudo-obstruction)",
+            "Volvulus",
+            "Ogilvie syndrome"
+        ],
+        "recommended_interventions": [
+            "Abdominal X-ray (KUB) - look for dilated loops and air-fluid levels",
+            "CT abdomen/pelvis with IV contrast (no oral contrast)",
+            "NPO status",
+            "Nasogastric tube placement for decompression",
+            "Aggressive IV fluid resuscitation with normal saline",
+            "Electrolyte replacement: IV potassium supplementation",
+            "Foley catheter for strict I&O monitoring",
+            "Surgical consult",
+            "Serial abdominal exams to monitor for strangulation signs",
+            "IV analgesics and antiemetics",
+            "DVT prophylaxis"
+        ]
+    }
+}
