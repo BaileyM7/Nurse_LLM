@@ -18,9 +18,19 @@
             "severity": "9/10",
             "location": "chest",
             "radiation": null,
-            "aggravating_factors": ["any activity", "anxiety", "being hot"],
-            "alleviating_factors": ["nothing relieves it"],
-            "associated_symptoms": ["dyspnea", "anxiety", "tremor"]
+            "aggravating_factors": [
+                "any activity",
+                "anxiety",
+                "being hot"
+            ],
+            "alleviating_factors": [
+                "nothing relieves it"
+            ],
+            "associated_symptoms": [
+                "dyspnea",
+                "anxiety",
+                "tremor"
+            ]
         },
         "fever": {
             "description": "I'm burning up. I feel like I'm on fire from the inside out. I've been hot all week but today is the worst.",
@@ -29,9 +39,18 @@
             "severity": "high",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["blankets", "warm environment"],
-            "alleviating_factors": ["cool cloths", "fan"],
-            "associated_symptoms": ["diaphoresis", "flushing"]
+            "aggravating_factors": [
+                "blankets",
+                "warm environment"
+            ],
+            "alleviating_factors": [
+                "cool cloths",
+                "fan"
+            ],
+            "associated_symptoms": [
+                "diaphoresis",
+                "flushing"
+            ]
         },
         "agitation_and_confusion": {
             "description": "I can't sit still, I can't focus, everything is too loud and too bright. I feel like I'm losing my mind. My thoughts are racing.",
@@ -40,20 +59,34 @@
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["stimulation", "noise", "being touched"],
-            "alleviating_factors": ["quiet environment"],
-            "associated_symptoms": ["insomnia", "emotional lability"]
+            "aggravating_factors": [
+                "stimulation",
+                "noise",
+                "being touched"
+            ],
+            "alleviating_factors": [
+                "quiet environment"
+            ],
+            "associated_symptoms": [
+                "insomnia",
+                "emotional lability"
+            ]
         },
         "tremor": {
-            "description": "My hands are shaking so bad I can't hold a glass of water. Look at them — they won't stop.",
+            "description": "My hands are shaking so bad I can't hold a glass of water. Look at them \u00e2\u20ac\u201d they won't stop.",
             "onset": "1 week progressive, worse today",
             "character": "fine bilateral hand tremor, now visible at rest",
             "severity": "7/10",
             "location": "bilateral hands and fingers",
             "radiation": null,
-            "aggravating_factors": ["attempting fine motor tasks"],
+            "aggravating_factors": [
+                "attempting fine motor tasks"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["palpitations", "weakness"]
+            "associated_symptoms": [
+                "palpitations",
+                "weakness"
+            ]
         },
         "diarrhea": {
             "description": "I've been having diarrhea for the past week, going 5-6 times a day. Loose and watery.",
@@ -62,9 +95,14 @@
             "severity": "6/10",
             "location": "abdominal",
             "radiation": null,
-            "aggravating_factors": ["eating"],
+            "aggravating_factors": [
+                "eating"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["abdominal cramping", "dehydration"]
+            "associated_symptoms": [
+                "abdominal cramping",
+                "dehydration"
+            ]
         },
         "weight_loss": {
             "description": "I've lost about 12 pounds in the last month and I've been eating more than usual. My clothes are hanging off me.",
@@ -75,7 +113,10 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["increased appetite", "diarrhea"]
+            "associated_symptoms": [
+                "increased appetite",
+                "diarrhea"
+            ]
         },
         "heat_intolerance": {
             "description": "I can't tolerate any warmth at all. I've had the AC cranked and fans on all week. Everyone else is cold and I'm drenched in sweat.",
@@ -84,9 +125,19 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["warm environment", "physical activity", "blankets"],
-            "alleviating_factors": ["cold environment", "cool cloths"],
-            "associated_symptoms": ["diaphoresis", "flushing"]
+            "aggravating_factors": [
+                "warm environment",
+                "physical activity",
+                "blankets"
+            ],
+            "alleviating_factors": [
+                "cold environment",
+                "cool cloths"
+            ],
+            "associated_symptoms": [
+                "diaphoresis",
+                "flushing"
+            ]
         },
         "dyspnea": {
             "description": "I feel short of breath even just sitting here. Like I can't get enough air.",
@@ -95,16 +146,31 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["exertion", "lying flat"],
-            "alleviating_factors": ["sitting upright"],
-            "associated_symptoms": ["tachycardia"]
+            "aggravating_factors": [
+                "exertion",
+                "lying flat"
+            ],
+            "alleviating_factors": [
+                "sitting upright"
+            ],
+            "associated_symptoms": [
+                "tachycardia"
+            ]
         }
     },
     "symptoms_absent": [
-        "chest pain (other than palpitations)", "cough", "hemoptysis",
-        "headache", "neck pain or stiffness", "rash",
-        "joint pain", "urinary symptoms", "blood in stool",
-        "seizures", "syncope", "leg swelling"
+        "chest pain (other than palpitations)",
+        "cough",
+        "hemoptysis",
+        "headache",
+        "neck pain or stiffness",
+        "rash",
+        "joint pain",
+        "urinary symptoms",
+        "blood in stool",
+        "seizures",
+        "syncope",
+        "leg swelling"
     ],
     "vitals": {
         "heart_rate": 162,
@@ -139,21 +205,21 @@
         "Dental extraction under local anesthesia (today, possible trigger)"
     ],
     "medications": [
-        "Methimazole 20mg daily (STOPPED 3 WEEKS AGO — could not afford refill)",
+        "Methimazole 20mg daily (STOPPED 3 WEEKS AGO \u00e2\u20ac\u201d could not afford refill)",
         "Alprazolam 0.5mg as needed for anxiety (takes 2-3 times per week)",
         "Albuterol inhaler as needed (rarely used)",
         "Multivitamin daily"
     ],
     "allergies": [
         "Propylthiouracil/PTU (liver enzyme elevation)",
-        "Iodine-based contrast (hives — relevant for future imaging)"
+        "Iodine-based contrast (hives \u00e2\u20ac\u201d relevant for future imaging)"
     ],
     "social_history": {
         "smoking": "Social smoker, 2-3 cigarettes per day",
         "alcohol": "Glass of wine 3-4 nights per week, more when stressed",
         "drugs": "Denies",
         "occupation": "Freelance graphic designer, works from home. Recently lost a major client and has been under financial stress.",
-        "living_situation": "Lives alone in an apartment. Recently separated from husband (3 months ago). Has a 6-year-old daughter who stays with her most of the time. No nearby family support — parents live out of state.",
+        "living_situation": "Lives alone in an apartment. Recently separated from husband (3 months ago). Has a 6-year-old daughter who stays with her most of the time. No nearby family support \u00e2\u20ac\u201d parents live out of state.",
         "exercise": "Used to do yoga and cycling but has been too anxious and shaky to exercise recently",
         "diet": "Eating more than usual but losing weight. Diet is erratic. Relies on quick convenience foods. Often forgets to eat when working."
     },
@@ -165,22 +231,30 @@
             "sister": "Healthy at 30"
         }
     },
-    "personality": "Normally creative and energetic but currently in an extreme hyperadrenergic state. Speaks rapidly, is emotionally labile (laughing then crying), and is difficult to redirect. Becomes angry when asked to slow down. Underneath the agitation is real fear — she knows something is seriously wrong. Worried about her daughter.",
+    "personality": "Normally creative and energetic but currently in an extreme hyperadrenergic state. Speaks rapidly, is emotionally labile (laughing then crying), and is difficult to redirect. Becomes angry when asked to slow down. Underneath the agitation is real fear \u00e2\u20ac\u201d she knows something is seriously wrong. Worried about her daughter.",
     "communication_style": "Pressured speech, tangential, jumps between topics. Speaks rapidly and loudly. Interrupts frequently. Difficult to get a linear history from. Gets frustrated and tearful. May need to be redirected gently and repeatedly. A calm, structured approach works best. Do not try to match her pace.",
     "pain_description_style": "Does not focus on pain per se but on the overwhelming sensation of her body being out of control. Describes symptoms in emotional terms ('my heart is going to explode,' 'I feel like I'm on fire'). The subjective distress is more prominent than a specific pain complaint.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Thyroid storm: Burch-Wartofsky score likely >45 (fever 104.2, HR 162, agitation/confusion, GI symptoms, precipitating event)",
             "Severely elevated thyroid hormones (free T4 7.8, free T3 22.4) with undetectable TSH",
-            "Stopped methimazole 3 weeks ago due to cost — medication non-adherence from financial barrier",
+            "Stopped methimazole 3 weeks ago due to cost \u00e2\u20ac\u201d medication non-adherence from financial barrier",
             "PTU allergy limits antithyroid drug options (but PTU may be used cautiously in thyroid storm given severity)",
             "Widened pulse pressure (168/58) indicating high-output cardiac state",
             "Elevated troponin (demand ischemia) and BNP (cardiac strain) from sustained tachycardia",
             "Hepatic dysfunction (elevated LFTs) from thyrotoxicosis",
             "Hypercalcemia (11.2) from thyroid hormone-mediated bone resorption",
             "Dental procedure today as possible precipitating trigger",
-            "Lives alone with young child — safety concern while acutely ill"
+            "Lives alone with young child \u00e2\u20ac\u201d safety concern while acutely ill"
         ],
         "diagnosis": "Thyroid storm (thyrotoxic crisis) secondary to Graves' disease with medication non-compliance",
         "differential_diagnoses": [
@@ -193,20 +267,21 @@
             "Panic disorder (diagnosis of exclusion)"
         ],
         "recommended_interventions": [
-            "Methimazole 20-40mg loading dose (or PTU 500-1000mg if methimazole unavailable, despite history — risk-benefit in life-threatening situation)",
-            "Iodine solution (SSKI or Lugol's) — given at least 1 hour AFTER antithyroid drug to block new hormone synthesis",
-            "Propranolol IV for heart rate control (preferred beta-blocker in thyroid storm — also blocks T4 to T3 conversion)",
+            "Methimazole 20-40mg loading dose (or PTU 500-1000mg if methimazole unavailable, despite history \u00e2\u20ac\u201d risk-benefit in life-threatening situation)",
+            "Iodine solution (SSKI or Lugol's) \u00e2\u20ac\u201d given at least 1 hour AFTER antithyroid drug to block new hormone synthesis",
+            "Propranolol IV for heart rate control (preferred beta-blocker in thyroid storm \u00e2\u20ac\u201d also blocks T4 to T3 conversion)",
             "Hydrocortisone 100mg IV q8h (blocks T4 to T3 conversion and addresses possible relative adrenal insufficiency)",
-            "Aggressive cooling measures for hyperthermia (cooling blanket, acetaminophen — AVOID aspirin as it displaces thyroid hormone from binding proteins)",
+            "Aggressive cooling measures for hyperthermia (cooling blanket, acetaminophen \u00e2\u20ac\u201d AVOID aspirin as it displaces thyroid hormone from binding proteins)",
             "IV fluids for dehydration from diarrhea, fever, and hypermetabolic state",
             "Continuous cardiac monitoring and telemetry",
             "Electrolyte monitoring and replacement (K+ 3.4, replace)",
             "Glucose monitoring (hypermetabolic state can cause hypoglycemia)",
-            "ICU admission — thyroid storm has 10-30% mortality",
+            "ICU admission \u00e2\u20ac\u201d thyroid storm has 10-30% mortality",
             "Hepatic function monitoring (thyrotoxic hepatopathy)",
             "Social work to arrange care for 6-year-old daughter",
             "Medication assistance program referral to prevent future non-compliance",
             "Endocrinology consult for definitive treatment planning (radioactive iodine vs. thyroidectomy given recurrence)"
         ]
-    }
+    },
+    "category": "Endocrine"
 }

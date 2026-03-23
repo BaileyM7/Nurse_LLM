@@ -36,6 +36,7 @@ class ScenarioService:
                 age=s.age,
                 sex=s.sex,
                 chief_complaint=s.chief_complaint,
+                category=s.category,
                 severity=s.severity,
             )
             for s in self._scenarios.values()

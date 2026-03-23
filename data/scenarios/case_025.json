@@ -18,9 +18,19 @@
             "severity": "8/10",
             "location": "left lower leg, from ankle to just below knee",
             "radiation": "spreading proximally toward knee",
-            "aggravating_factors": ["standing", "walking", "dependent position"],
-            "alleviating_factors": ["elevation provides mild relief"],
-            "associated_symptoms": ["fever", "chills", "malaise"]
+            "aggravating_factors": [
+                "standing",
+                "walking",
+                "dependent position"
+            ],
+            "alleviating_factors": [
+                "elevation provides mild relief"
+            ],
+            "associated_symptoms": [
+                "fever",
+                "chills",
+                "malaise"
+            ]
         },
         "fever": {
             "description": "I've been running a fever since last night, felt like I was burning up",
@@ -30,8 +40,14 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["took Tylenol at home with minimal effect"],
-            "associated_symptoms": ["chills", "sweating", "body aches"]
+            "alleviating_factors": [
+                "took Tylenol at home with minimal effect"
+            ],
+            "associated_symptoms": [
+                "chills",
+                "sweating",
+                "body aches"
+            ]
         },
         "chills": {
             "description": "Shivering spells that come and go, especially when the fever spikes",
@@ -40,9 +56,16 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["fever spikes"],
-            "alleviating_factors": ["warm blankets"],
-            "associated_symptoms": ["fever", "sweating"]
+            "aggravating_factors": [
+                "fever spikes"
+            ],
+            "alleviating_factors": [
+                "warm blankets"
+            ],
+            "associated_symptoms": [
+                "fever",
+                "sweating"
+            ]
         },
         "malaise": {
             "description": "I feel wiped out, just exhausted. No energy at all.",
@@ -51,9 +74,16 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["activity"],
-            "alleviating_factors": ["rest"],
-            "associated_symptoms": ["decreased appetite", "fever"]
+            "aggravating_factors": [
+                "activity"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
+            "associated_symptoms": [
+                "decreased appetite",
+                "fever"
+            ]
         },
         "leg_pain": {
             "description": "The whole shin is throbbing. Feels like it's going to burst.",
@@ -62,16 +92,36 @@
             "severity": "8/10",
             "location": "left lower leg",
             "radiation": "toward the knee",
-            "aggravating_factors": ["touching", "walking", "weight bearing"],
-            "alleviating_factors": ["elevation", "ibuprofen gives slight relief"],
-            "associated_symptoms": ["swelling", "warmth", "redness"]
+            "aggravating_factors": [
+                "touching",
+                "walking",
+                "weight bearing"
+            ],
+            "alleviating_factors": [
+                "elevation",
+                "ibuprofen gives slight relief"
+            ],
+            "associated_symptoms": [
+                "swelling",
+                "warmth",
+                "redness"
+            ]
         }
     },
     "symptoms_absent": [
-        "chest pain", "shortness of breath", "cough", "abdominal pain",
-        "nausea or vomiting", "diarrhea", "headache", "neck stiffness",
-        "urinary symptoms", "rash elsewhere on body", "joint pain in other locations",
-        "numbness or tingling in foot", "crepitus in the leg"
+        "chest pain",
+        "shortness of breath",
+        "cough",
+        "abdominal pain",
+        "nausea or vomiting",
+        "diarrhea",
+        "headache",
+        "neck stiffness",
+        "urinary symptoms",
+        "rash elsewhere on body",
+        "joint pain in other locations",
+        "numbness or tingling in foot",
+        "crepitus in the leg"
     ],
     "vitals": {
         "heart_rate": 104,
@@ -138,7 +188,15 @@
     "communication_style": "Blunt and direct. Uses casual, sometimes crude language. Interrupts with questions. Reluctant to give detailed answers and prefers short responses. Gets annoyed with repetitive questions.",
     "pain_description_style": "Tends to use dramatic comparisons when the pain is bad ('feels like my leg is on fire') but will minimize it if he thinks it makes him look weak. Provides a number grudgingly if asked.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Rapidly spreading cellulitis with systemic signs (fever, tachycardia, leukocytosis)",
             "Poorly controlled diabetes (HbA1c 9.4%) increasing infection risk",
@@ -169,5 +227,6 @@
             "Diabetes education and outpatient follow-up planning",
             "Smoking cessation counseling"
         ]
-    }
+    },
+    "category": "Infectious"
 }

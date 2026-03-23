@@ -18,9 +18,21 @@
             "severity": "9/10",
             "location": "diffuse, frontal and occipital",
             "radiation": "down the back of the neck",
-            "aggravating_factors": ["light", "noise", "neck flexion", "any movement"],
-            "alleviating_factors": ["nothing - took Tylenol and Advil with no relief"],
-            "associated_symptoms": ["fever", "neck stiffness", "photophobia", "vomiting"]
+            "aggravating_factors": [
+                "light",
+                "noise",
+                "neck flexion",
+                "any movement"
+            ],
+            "alleviating_factors": [
+                "nothing - took Tylenol and Advil with no relief"
+            ],
+            "associated_symptoms": [
+                "fever",
+                "neck stiffness",
+                "photophobia",
+                "vomiting"
+            ]
         },
         "fever": {
             "description": "I've been burning up since last night, soaking through my sheets with sweat",
@@ -30,8 +42,14 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["Tylenol brought it down slightly but it came right back"],
-            "associated_symptoms": ["chills", "diaphoresis", "headache"]
+            "alleviating_factors": [
+                "Tylenol brought it down slightly but it came right back"
+            ],
+            "associated_symptoms": [
+                "chills",
+                "diaphoresis",
+                "headache"
+            ]
         },
         "neck_stiffness": {
             "description": "I can't bend my neck forward at all, it's completely locked up and it makes the headache way worse if I try",
@@ -40,9 +58,16 @@
             "severity": "severe",
             "location": "posterior neck",
             "radiation": null,
-            "aggravating_factors": ["flexion", "any movement"],
-            "alleviating_factors": ["lying still"],
-            "associated_symptoms": ["headache"]
+            "aggravating_factors": [
+                "flexion",
+                "any movement"
+            ],
+            "alleviating_factors": [
+                "lying still"
+            ],
+            "associated_symptoms": [
+                "headache"
+            ]
         },
         "photophobia": {
             "description": "The lights are killing me, I can't open my eyes all the way, it's way too bright in here",
@@ -51,9 +76,18 @@
             "severity": "severe",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["fluorescent lights", "phone screen", "sunlight"],
-            "alleviating_factors": ["dark room", "covering eyes"],
-            "associated_symptoms": ["headache"]
+            "aggravating_factors": [
+                "fluorescent lights",
+                "phone screen",
+                "sunlight"
+            ],
+            "alleviating_factors": [
+                "dark room",
+                "covering eyes"
+            ],
+            "associated_symptoms": [
+                "headache"
+            ]
         },
         "vomiting": {
             "description": "I've thrown up like four or five times since this morning, can't keep anything down",
@@ -62,9 +96,17 @@
             "severity": "4-5 episodes",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["movement", "sitting up"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["nausea", "headache"]
+            "aggravating_factors": [
+                "movement",
+                "sitting up"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "headache"
+            ]
         },
         "altered_mental_status": {
             "description": "Roommate reports: 'He was saying weird stuff this morning, didn't know what day it was, seemed out of it.' Patient is oriented to person and place but not date. Intermittently confused.",
@@ -75,7 +117,10 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["fever", "headache"]
+            "associated_symptoms": [
+                "fever",
+                "headache"
+            ]
         },
         "rash": {
             "description": "Roommate: 'I noticed some reddish-purple spots on his legs and stomach.' Patient has scattered petechiae on lower extremities and trunk.",
@@ -86,14 +131,24 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["fever"]
+            "associated_symptoms": [
+                "fever"
+            ]
         }
     },
     "symptoms_absent": [
-        "focal weakness", "numbness", "seizure", "vision loss",
-        "ear pain", "sore throat (initially had mild one yesterday, now overshadowed by other symptoms)",
-        "chest pain", "shortness of breath", "abdominal pain",
-        "diarrhea", "urinary symptoms", "joint swelling",
+        "focal weakness",
+        "numbness",
+        "seizure",
+        "vision loss",
+        "ear pain",
+        "sore throat (initially had mild one yesterday, now overshadowed by other symptoms)",
+        "chest pain",
+        "shortness of breath",
+        "abdominal pain",
+        "diarrhea",
+        "urinary symptoms",
+        "joint swelling",
         "recent head trauma"
     ],
     "vitals": {
@@ -152,7 +207,15 @@
     "communication_style": "When lucid, speaks in short sentences due to pain. Uses young adult language: 'this is the worst, bro' and 'I feel like I'm dying.' Intermittently confused and may give inconsistent answers. Roommate provides supplemental history. Becomes more cooperative when addressed calmly.",
     "pain_description_style": "Says 'my head is about to explode' and rates it 9/10. Keeps eyes squeezed shut. Holds his head in his hands. Moans with movement. During confused periods, may not reliably rate pain.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Classic meningitis triad: fever (103.4F), neck stiffness (nuchal rigidity), altered mental status",
             "Non-blanching petechial rash - concerning for meningococcemia (Neisseria meningitidis)",
@@ -189,5 +252,6 @@
             "Admit to ICU",
             "Monitor for signs of increased intracranial pressure, DIC, adrenal crisis (Waterhouse-Friderichsen syndrome)"
         ]
-    }
+    },
+    "category": "Neuro"
 }

@@ -12,15 +12,25 @@
     "setting": "Emergency Department",
     "symptoms_present": {
         "tremor": {
-            "description": "Look at my hands — they're shaking so bad I can't even hold a cup. My whole body feels like it's vibrating. This is worse than last time.",
+            "description": "Look at my hands \u00e2\u20ac\u201d they're shaking so bad I can't even hold a cup. My whole body feels like it's vibrating. This is worse than last time.",
             "onset": "36 hours ago, progressively worsening",
             "character": "coarse, generalized tremor, worse in upper extremities, present at rest and with action",
             "severity": "8/10",
             "location": "bilateral hands, generalized",
             "radiation": null,
-            "aggravating_factors": ["movement", "stress", "lack of alcohol"],
-            "alleviating_factors": ["nothing currently"],
-            "associated_symptoms": ["anxiety", "diaphoresis", "nausea"]
+            "aggravating_factors": [
+                "movement",
+                "stress",
+                "lack of alcohol"
+            ],
+            "alleviating_factors": [
+                "nothing currently"
+            ],
+            "associated_symptoms": [
+                "anxiety",
+                "diaphoresis",
+                "nausea"
+            ]
         },
         "diaphoresis": {
             "description": "I'm soaking wet. I can't stop sweating. I've changed my shirt twice today.",
@@ -31,18 +41,32 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["tremor", "tachycardia"]
+            "associated_symptoms": [
+                "tremor",
+                "tachycardia"
+            ]
         },
         "visual_hallucinations": {
             "description": "I keep seeing things. There were bugs crawling on the wall of my apartment. And I swear I saw a man standing in the corner of this room when I came in. I know they're not real... I think... but they look real.",
             "onset": "4-6 hours ago",
-            "character": "visual hallucinations — insects, shadowy figures. Partial insight maintained currently.",
+            "character": "visual hallucinations \u00e2\u20ac\u201d insects, shadowy figures. Partial insight maintained currently.",
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["dim lighting", "quiet environment", "closing eyes"],
-            "alleviating_factors": ["bright lights", "direct engagement/distraction"],
-            "associated_symptoms": ["agitation", "anxiety", "paranoia"]
+            "aggravating_factors": [
+                "dim lighting",
+                "quiet environment",
+                "closing eyes"
+            ],
+            "alleviating_factors": [
+                "bright lights",
+                "direct engagement/distraction"
+            ],
+            "associated_symptoms": [
+                "agitation",
+                "anxiety",
+                "paranoia"
+            ]
         },
         "severe_anxiety_and_agitation": {
             "description": "I feel like I'm going to jump out of my skin. I can't sit still, I can't relax. Something terrible is going to happen, I can feel it. My heart is racing.",
@@ -51,9 +75,21 @@
             "severity": "9/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["hallucinations", "being alone", "noise"],
-            "alleviating_factors": ["human presence", "reassurance", "nothing fully alleviates"],
-            "associated_symptoms": ["tachycardia", "hypertension", "tremor"]
+            "aggravating_factors": [
+                "hallucinations",
+                "being alone",
+                "noise"
+            ],
+            "alleviating_factors": [
+                "human presence",
+                "reassurance",
+                "nothing fully alleviates"
+            ],
+            "associated_symptoms": [
+                "tachycardia",
+                "hypertension",
+                "tremor"
+            ]
         },
         "nausea": {
             "description": "My stomach is in knots. I've been dry heaving. I tried to eat a cracker and almost threw up.",
@@ -62,9 +98,15 @@
             "severity": "6/10",
             "location": "epigastric",
             "radiation": null,
-            "aggravating_factors": ["any oral intake", "movement"],
+            "aggravating_factors": [
+                "any oral intake",
+                "movement"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["decreased appetite", "dehydration"]
+            "associated_symptoms": [
+                "decreased appetite",
+                "dehydration"
+            ]
         },
         "insomnia": {
             "description": "I haven't slept in two days. Every time I close my eyes I see things. My body won't shut down.",
@@ -73,28 +115,45 @@
             "severity": "9/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["anxiety", "hallucinations", "tremor"],
+            "aggravating_factors": [
+                "anxiety",
+                "hallucinations",
+                "tremor"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["fatigue", "irritability", "confusion"]
+            "associated_symptoms": [
+                "fatigue",
+                "irritability",
+                "confusion"
+            ]
         },
         "tactile_disturbances": {
             "description": "I feel things crawling on my skin, especially my arms. I keep brushing things off but there's nothing there.",
             "onset": "6 hours ago",
-            "character": "formication — tactile hallucinations of insects crawling on skin",
+            "character": "formication \u00e2\u20ac\u201d tactile hallucinations of insects crawling on skin",
             "severity": "7/10",
             "location": "bilateral arms, chest",
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["visual hallucinations", "agitation"]
+            "associated_symptoms": [
+                "visual hallucinations",
+                "agitation"
+            ]
         }
     },
     "symptoms_absent": [
         "seizure activity currently (but history of withdrawal seizures)",
-        "chest pain", "shortness of breath", "focal neurological deficits",
-        "abdominal pain other than nausea", "blood in vomit or stool",
-        "headache", "neck stiffness", "fever currently",
-        "urinary symptoms", "suicidal ideation"
+        "chest pain",
+        "shortness of breath",
+        "focal neurological deficits",
+        "abdominal pain other than nausea",
+        "blood in vomit or stool",
+        "headache",
+        "neck stiffness",
+        "fever currently",
+        "urinary symptoms",
+        "suicidal ideation"
     ],
     "vitals": {
         "heart_rate": 118,
@@ -106,13 +165,13 @@
         "pain_scale": 3
     },
     "labs": {
-        "CBC": "WBC 9.8, Hgb 12.4 (mildly low), Plt 102 (low — thrombocytopenia from chronic alcohol use)",
-        "BMP": "Na 132 (low), K 3.0 (low — critical), Cr 1.1, BUN 22, Glucose 78 (low-normal), Cl 94 (low), CO2 20 (low), Mg 1.2 (critically low)",
+        "CBC": "WBC 9.8, Hgb 12.4 (mildly low), Plt 102 (low \u00e2\u20ac\u201d thrombocytopenia from chronic alcohol use)",
+        "BMP": "Na 132 (low), K 3.0 (low \u00e2\u20ac\u201d critical), Cr 1.1, BUN 22, Glucose 78 (low-normal), Cl 94 (low), CO2 20 (low), Mg 1.2 (critically low)",
         "liver_function": "AST 186 (elevated, AST:ALT ratio >2:1), ALT 82 (elevated), GGT 312 (markedly elevated), Alk Phos 142, Total Bilirubin 2.1 (elevated), Albumin 2.8 (low)",
         "phosphorus": "1.6 mg/dL (low)",
         "blood_alcohol_level": "0.00 g/dL (confirms abstinence)",
         "ammonia": "48 mcmol/L (mildly elevated)",
-        "PT_INR": "14.8 sec / 1.3 (mildly elevated — impaired synthetic function)",
+        "PT_INR": "14.8 sec / 1.3 (mildly elevated \u00e2\u20ac\u201d impaired synthetic function)",
         "lipase": "52 U/L (normal)",
         "urine_drug_screen": "Negative for all substances",
         "lactate": "1.6 mmol/L (normal)",
@@ -141,7 +200,7 @@
         "Multivitamin (rarely takes)"
     ],
     "allergies": [
-        "Phenytoin (Stevens-Johnson syndrome — CRITICAL: relevant for seizure management, cannot use phenytoin)"
+        "Phenytoin (Stevens-Johnson syndrome \u00e2\u20ac\u201d CRITICAL: relevant for seizure management, cannot use phenytoin)"
     ],
     "social_history": {
         "smoking": "1 pack per day for 35 years (35 pack-year history)",
@@ -160,28 +219,36 @@
             "sister": "Healthy at 50"
         }
     },
-    "personality": "Raw, desperate, and afraid. Knows he is very sick and that this could kill him. No pretense or bravado — genuinely asking for help. Has moments of dark humor between waves of agitation and fear. Remorseful about his drinking but overwhelmed by the physical withdrawal. Cooperative with medical care when he can focus.",
+    "personality": "Raw, desperate, and afraid. Knows he is very sick and that this could kill him. No pretense or bravado \u00e2\u20ac\u201d genuinely asking for help. Has moments of dark humor between waves of agitation and fear. Remorseful about his drinking but overwhelmed by the physical withdrawal. Cooperative with medical care when he can focus.",
     "communication_style": "Fluctuates with level of agitation and orientation. When calm: direct, honest, working-class language, uses profanity casually. When agitated: fragmented, repetitive, may not track questions. Becomes disoriented and confused during symptom spikes. May suddenly look at something that isn't there and need to be reoriented. Best approached with calm, clear, simple instructions.",
-    "pain_description_style": "Physical pain is not the primary complaint — it's the unbearable subjective distress of withdrawal. Describes it in visceral terms: 'crawling out of my skin,' 'electric current running through me,' 'everything is turned up to 11.' Rates the overall experience rather than any single pain point.",
+    "pain_description_style": "Physical pain is not the primary complaint \u00e2\u20ac\u201d it's the unbearable subjective distress of withdrawal. Describes it in visceral terms: 'crawling out of my skin,' 'electric current running through me,' 'everything is turned up to 11.' Rates the overall experience rather than any single pain point.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
-            "Severe alcohol withdrawal with hallucinations (visual and tactile) — at high risk for delirium tremens",
-            "History of prior withdrawal SEIZURES — dramatically increases risk of recurrent seizures and DTs",
+            "Severe alcohol withdrawal with hallucinations (visual and tactile) \u00e2\u20ac\u201d at high risk for delirium tremens",
+            "History of prior withdrawal SEIZURES \u00e2\u20ac\u201d dramatically increases risk of recurrent seizures and DTs",
             "CIWA-Ar score likely >20 indicating severe withdrawal requiring aggressive pharmacotherapy",
-            "Critically low potassium (3.0) and magnesium (1.2) — seizure threshold lowered, cardiac arrhythmia risk",
-            "Phenytoin allergy (Stevens-Johnson syndrome) — CANNOT use phenytoin for seizure prophylaxis",
-            "48 hours since last drink — peak risk window for DTs is 48-96 hours",
+            "Critically low potassium (3.0) and magnesium (1.2) \u00e2\u20ac\u201d seizure threshold lowered, cardiac arrhythmia risk",
+            "Phenytoin allergy (Stevens-Johnson syndrome) \u00e2\u20ac\u201d CANNOT use phenytoin for seizure prophylaxis",
+            "48 hours since last drink \u00e2\u20ac\u201d peak risk window for DTs is 48-96 hours",
             "Abnormal liver function with AST:ALT >2:1 pattern typical of alcoholic hepatitis",
             "Thrombocytopenia (Plt 102) and elevated INR (1.3) indicating hepatic synthetic dysfunction",
             "Hyponatremia, hypochloremia, and metabolic derangements from chronic alcohol use and poor nutrition",
-            "Low-grade fever (100.2) — could be withdrawal-related but must rule out occult infection"
+            "Low-grade fever (100.2) \u00e2\u20ac\u201d could be withdrawal-related but must rule out occult infection"
         ],
         "diagnosis": "Severe alcohol withdrawal syndrome with hallucinations, high risk for delirium tremens and withdrawal seizures",
         "differential_diagnoses": [
             "Delirium tremens (may be evolving into DTs)",
             "Alcohol withdrawal seizure (impending)",
-            "Wernicke encephalopathy (confusion, possible oculomotor dysfunction — must treat empirically)",
+            "Wernicke encephalopathy (confusion, possible oculomotor dysfunction \u00e2\u20ac\u201d must treat empirically)",
             "Hepatic encephalopathy (elevated ammonia, liver disease)",
             "Sepsis or occult infection causing delirium",
             "Meningitis or encephalitis",
@@ -196,7 +263,7 @@
             "Folate 1mg IV and multivitamin in IV fluids",
             "Continuous cardiac monitoring (electrolyte abnormalities + tachycardia = arrhythmia risk)",
             "Seizure precautions (padded rails, suction at bedside, oxygen ready)",
-            "If seizures occur: lorazepam 2-4mg IV (NOT phenytoin — allergy), may repeat",
+            "If seizures occur: lorazepam 2-4mg IV (NOT phenytoin \u00e2\u20ac\u201d allergy), may repeat",
             "Frequent neurological checks and CIWA scoring q1h",
             "Blood glucose monitoring q4h (risk of hypoglycemia with depleted glycogen stores)",
             "Consider ICU admission given hallucinations, history of withdrawal seizures, and electrolyte derangements",
@@ -206,5 +273,6 @@
             "Social work consult for inpatient rehab placement when medically stable",
             "Assess for and address barriers to sobriety (support system, housing, insurance)"
         ]
-    }
+    },
+    "category": "Psych"
 }

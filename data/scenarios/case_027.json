@@ -18,9 +18,19 @@
             "severity": "8/10",
             "location": "chest",
             "radiation": null,
-            "aggravating_factors": ["deep breathing", "lying flat", "talking"],
-            "alleviating_factors": ["sitting upright", "sipping warm water"],
-            "associated_symptoms": ["shortness of breath", "pleuritic chest pain"]
+            "aggravating_factors": [
+                "deep breathing",
+                "lying flat",
+                "talking"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "sipping warm water"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "pleuritic chest pain"
+            ]
         },
         "shortness_of_breath": {
             "description": "I get so winded just walking to the bathroom. Today I could barely get out of bed without feeling like I was suffocating.",
@@ -29,9 +39,20 @@
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["exertion", "lying flat", "coughing fits"],
-            "alleviating_factors": ["sitting upright", "pursed lip breathing"],
-            "associated_symptoms": ["cough", "fatigue", "tachypnea"]
+            "aggravating_factors": [
+                "exertion",
+                "lying flat",
+                "coughing fits"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "pursed lip breathing"
+            ],
+            "associated_symptoms": [
+                "cough",
+                "fatigue",
+                "tachypnea"
+            ]
         },
         "fever": {
             "description": "My temperature went up to 103 last night. I was sweating through my nightgown.",
@@ -41,8 +62,14 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["acetaminophen with partial response"],
-            "associated_symptoms": ["chills", "night sweats", "malaise"]
+            "alleviating_factors": [
+                "acetaminophen with partial response"
+            ],
+            "associated_symptoms": [
+                "chills",
+                "night sweats",
+                "malaise"
+            ]
         },
         "pleuritic_chest_pain": {
             "description": "There's a sharp pain on my right side when I take a deep breath or cough. It catches me.",
@@ -51,9 +78,19 @@
             "severity": "6/10",
             "location": "right lateral chest",
             "radiation": null,
-            "aggravating_factors": ["deep inspiration", "coughing", "movement"],
-            "alleviating_factors": ["shallow breathing", "splinting with pillow"],
-            "associated_symptoms": ["cough", "shortness of breath"]
+            "aggravating_factors": [
+                "deep inspiration",
+                "coughing",
+                "movement"
+            ],
+            "alleviating_factors": [
+                "shallow breathing",
+                "splinting with pillow"
+            ],
+            "associated_symptoms": [
+                "cough",
+                "shortness of breath"
+            ]
         },
         "body_aches": {
             "description": "My whole body aches, especially my muscles. Even my skin feels sore to touch.",
@@ -62,9 +99,18 @@
             "severity": "6/10",
             "location": "generalized, worst in back and legs",
             "radiation": null,
-            "aggravating_factors": ["movement", "touch"],
-            "alleviating_factors": ["rest", "warm compress"],
-            "associated_symptoms": ["fever", "fatigue"]
+            "aggravating_factors": [
+                "movement",
+                "touch"
+            ],
+            "alleviating_factors": [
+                "rest",
+                "warm compress"
+            ],
+            "associated_symptoms": [
+                "fever",
+                "fatigue"
+            ]
         },
         "fatigue": {
             "description": "I have no energy at all. I feel completely drained. My daughter had to practically carry me to the car.",
@@ -73,9 +119,16 @@
             "severity": "9/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any activity"],
-            "alleviating_factors": ["rest provides minimal relief"],
-            "associated_symptoms": ["decreased appetite", "dehydration"]
+            "aggravating_factors": [
+                "any activity"
+            ],
+            "alleviating_factors": [
+                "rest provides minimal relief"
+            ],
+            "associated_symptoms": [
+                "decreased appetite",
+                "dehydration"
+            ]
         },
         "decreased_oral_intake": {
             "description": "I haven't been able to eat much of anything for days. Just sips of water and tea.",
@@ -84,16 +137,29 @@
             "severity": "moderate",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["nausea with coughing"],
+            "aggravating_factors": [
+                "nausea with coughing"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["dehydration", "weakness"]
+            "associated_symptoms": [
+                "dehydration",
+                "weakness"
+            ]
         }
     },
     "symptoms_absent": [
-        "hemoptysis", "wheezing", "leg swelling", "abdominal pain",
-        "diarrhea", "urinary symptoms", "rash", "joint swelling",
-        "confusion or altered mental status", "neck stiffness",
-        "sore throat currently", "ear pain"
+        "hemoptysis",
+        "wheezing",
+        "leg swelling",
+        "abdominal pain",
+        "diarrhea",
+        "urinary symptoms",
+        "rash",
+        "joint swelling",
+        "confusion or altered mental status",
+        "neck stiffness",
+        "sore throat currently",
+        "ear pain"
     ],
     "vitals": {
         "heart_rate": 108,
@@ -167,7 +233,15 @@
     "communication_style": "Soft-spoken and measured. Uses polite, formal language. May nod and agree even when she doesn't fully understand. Occasionally pauses to catch her breath mid-sentence. Defers difficult questions to her daughter when possible.",
     "pain_description_style": "Extremely reluctant to report pain or discomfort. Will say 'it's manageable' or 'I don't want to complain.' Needs very gentle and specific questioning. Cultural tendency to endure pain quietly.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Influenza A with secondary bacterial pneumonia (biphasic illness pattern)",
             "Hypoxemia (SpO2 88%, PaO2 56) requiring supplemental oxygen",
@@ -203,5 +277,6 @@
             "Assess vaccination status (pneumococcal and influenza)",
             "Notify close contacts about influenza exposure"
         ]
-    }
+    },
+    "category": "Infectious"
 }

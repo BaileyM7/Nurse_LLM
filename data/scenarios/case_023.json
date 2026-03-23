@@ -18,9 +18,24 @@
             "severity": "8/10",
             "location": "left temporal and retro-orbital",
             "radiation": "left side of face and into the neck on the left",
-            "aggravating_factors": ["bright light", "loud noise", "bending forward", "physical activity", "strong smells"],
-            "alleviating_factors": ["dark quiet room", "cold compress on forehead", "lying still"],
-            "associated_symptoms": ["nausea", "photophobia", "phonophobia", "visual aura (resolved)"]
+            "aggravating_factors": [
+                "bright light",
+                "loud noise",
+                "bending forward",
+                "physical activity",
+                "strong smells"
+            ],
+            "alleviating_factors": [
+                "dark quiet room",
+                "cold compress on forehead",
+                "lying still"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "photophobia",
+                "phonophobia",
+                "visual aura (resolved)"
+            ]
         },
         "visual_aura": {
             "description": "Before the headache started I got these zigzag shimmering lines in my right eye, like a kaleidoscope. It lasted about 20-25 minutes then went away, and then the headache hit.",
@@ -29,9 +44,15 @@
             "severity": "moderately disruptive to vision",
             "location": "right visual field (both eyes)",
             "radiation": null,
-            "aggravating_factors": ["trying to focus on screen"],
-            "alleviating_factors": ["closing eyes"],
-            "associated_symptoms": ["followed by headache onset"]
+            "aggravating_factors": [
+                "trying to focus on screen"
+            ],
+            "alleviating_factors": [
+                "closing eyes"
+            ],
+            "associated_symptoms": [
+                "followed by headache onset"
+            ]
         },
         "nausea": {
             "description": "I feel really nauseous, like I could throw up any second. The smell of anything makes it worse.",
@@ -40,9 +61,17 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["smells", "movement", "light"],
-            "alleviating_factors": ["lying still"],
-            "associated_symptoms": ["headache"]
+            "aggravating_factors": [
+                "smells",
+                "movement",
+                "light"
+            ],
+            "alleviating_factors": [
+                "lying still"
+            ],
+            "associated_symptoms": [
+                "headache"
+            ]
         },
         "photophobia": {
             "description": "The lights in here are brutal. Even my phone screen hurts. Can you please dim them?",
@@ -51,9 +80,18 @@
             "severity": "severe",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["fluorescent lights", "screens", "sunlight"],
-            "alleviating_factors": ["dark room", "sunglasses (wearing them now)"],
-            "associated_symptoms": ["headache worsening"]
+            "aggravating_factors": [
+                "fluorescent lights",
+                "screens",
+                "sunlight"
+            ],
+            "alleviating_factors": [
+                "dark room",
+                "sunglasses (wearing them now)"
+            ],
+            "associated_symptoms": [
+                "headache worsening"
+            ]
         },
         "phonophobia": {
             "description": "Even normal talking volume feels really loud. Please talk softly if you can.",
@@ -62,17 +100,35 @@
             "severity": "moderate",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["loud conversations", "alarms", "overhead announcements"],
-            "alleviating_factors": ["quiet environment"],
-            "associated_symptoms": ["headache worsening"]
+            "aggravating_factors": [
+                "loud conversations",
+                "alarms",
+                "overhead announcements"
+            ],
+            "alleviating_factors": [
+                "quiet environment"
+            ],
+            "associated_symptoms": [
+                "headache worsening"
+            ]
         }
     },
     "symptoms_absent": [
-        "fever", "neck stiffness", "focal weakness", "numbness or tingling (beyond what she gets during typical auras)",
-        "speech difficulty", "confusion", "loss of consciousness", "seizure",
+        "fever",
+        "neck stiffness",
+        "focal weakness",
+        "numbness or tingling (beyond what she gets during typical auras)",
+        "speech difficulty",
+        "confusion",
+        "loss of consciousness",
+        "seizure",
         "worst headache of life (confirms this is severe but recognizable as her migraine pattern)",
-        "vomiting", "rash", "eye redness or pain",
-        "jaw claudication", "scalp tenderness", "weight loss"
+        "vomiting",
+        "rash",
+        "eye redness or pain",
+        "jaw claudication",
+        "scalp tenderness",
+        "weight loss"
     ],
     "vitals": {
         "heart_rate": 78,
@@ -133,7 +189,15 @@
     "communication_style": "Knowledgeable about her migraine history and can describe symptoms precisely. Knows her triggers and medication history in detail. Somewhat impatient with the process because she's been through it before. May say things like 'I know this is a migraine, I just need something stronger for the pain.' Polite but direct. Will advocate for herself. Speaks softly due to phonophobia.",
     "pain_description_style": "Very precise and medically informed: 'It's a left-sided pulsatile headache with retro-orbital component, preceded by a typical visual aura.' Rates pain accurately. Can describe the aura in detail if asked. Compares this episode to previous ones: 'This is worse than my usual migraines, probably an 8 out of 10, my usual ones are more like a 5 or 6.'",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Migraine with aura pattern consistent with established diagnosis (visual aura preceding unilateral throbbing headache)",
             "Failed outpatient treatment (sumatriptan non-responsive this episode)",
@@ -170,5 +234,6 @@
             "Headache diary recommendation",
             "Discharge with rescue medication plan"
         ]
-    }
+    },
+    "category": "Neuro"
 }

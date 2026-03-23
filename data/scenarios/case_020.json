@@ -18,9 +18,22 @@
             "severity": "10/10",
             "location": "diffuse, worst at the back of the head and neck",
             "radiation": "down the back of the neck",
-            "aggravating_factors": ["light", "noise", "any movement", "straining", "coughing"],
-            "alleviating_factors": ["nothing - tried ibuprofen at home, no relief"],
-            "associated_symptoms": ["nausea", "vomiting", "neck stiffness", "photophobia"]
+            "aggravating_factors": [
+                "light",
+                "noise",
+                "any movement",
+                "straining",
+                "coughing"
+            ],
+            "alleviating_factors": [
+                "nothing - tried ibuprofen at home, no relief"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "vomiting",
+                "neck stiffness",
+                "photophobia"
+            ]
         },
         "neck_stiffness": {
             "description": "My neck is so stiff I can't bend it forward, it makes the headache way worse when I try",
@@ -29,9 +42,16 @@
             "severity": "severe",
             "location": "posterior neck",
             "radiation": null,
-            "aggravating_factors": ["flexion of the neck", "any movement"],
-            "alleviating_factors": ["lying completely still"],
-            "associated_symptoms": ["headache"]
+            "aggravating_factors": [
+                "flexion of the neck",
+                "any movement"
+            ],
+            "alleviating_factors": [
+                "lying completely still"
+            ],
+            "associated_symptoms": [
+                "headache"
+            ]
         },
         "vomiting": {
             "description": "I've thrown up three times since it started, the headache is so bad it makes me vomit",
@@ -40,9 +60,17 @@
             "severity": "3 episodes",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any movement", "attempting to sit up"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["headache", "nausea"]
+            "aggravating_factors": [
+                "any movement",
+                "attempting to sit up"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "headache",
+                "nausea"
+            ]
         },
         "photophobia": {
             "description": "The light is killing me, please turn it off, it makes everything worse",
@@ -51,9 +79,17 @@
             "severity": "severe",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["bright lights", "screens"],
-            "alleviating_factors": ["dark room", "eyes closed"],
-            "associated_symptoms": ["headache"]
+            "aggravating_factors": [
+                "bright lights",
+                "screens"
+            ],
+            "alleviating_factors": [
+                "dark room",
+                "eyes closed"
+            ],
+            "associated_symptoms": [
+                "headache"
+            ]
         },
         "nausea": {
             "description": "I feel constantly nauseous, can't escape it",
@@ -62,16 +98,32 @@
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["movement", "light"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["vomiting"]
+            "aggravating_factors": [
+                "movement",
+                "light"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "vomiting"
+            ]
         }
     },
     "symptoms_absent": [
-        "focal weakness", "numbness or tingling", "vision loss",
-        "double vision", "seizure", "loss of consciousness",
-        "fever", "rash", "ear pain", "recent trauma",
-        "speech difficulty", "gait problems", "confusion"
+        "focal weakness",
+        "numbness or tingling",
+        "vision loss",
+        "double vision",
+        "seizure",
+        "loss of consciousness",
+        "fever",
+        "rash",
+        "ear pain",
+        "recent trauma",
+        "speech difficulty",
+        "gait problems",
+        "confusion"
     ],
     "vitals": {
         "heart_rate": 92,
@@ -131,7 +183,15 @@
     "communication_style": "Speaks softly and minimally due to pain. Answers questions but keeps responses brief. Very insistent that this headache is 'nothing like my migraines.' When asked about family history, becomes tearful and says 'my dad died from a brain bleed.' Needs a darkened, quiet room for assessment.",
     "pain_description_style": "Dramatic but accurate - 'it felt like a bomb went off in my head.' Rates it 10/10 without hesitation. Clutches her head. Cries quietly. Says 'I've had migraines my whole life, this is completely different - this one could kill me.'",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Thunderclap headache (instantaneous maximum intensity) - pathognomonic for SAH until proven otherwise",
             "Worst headache of life in a patient who knows her baseline migraines",
@@ -167,5 +227,6 @@
             "Neuro checks every 1 hour",
             "Admit to neuro ICU"
         ]
-    }
+    },
+    "category": "Neuro"
 }

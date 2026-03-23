@@ -18,9 +18,17 @@
             "severity": "significant - lasted approximately 2 minutes",
             "location": "generalized, bilateral",
             "radiation": null,
-            "aggravating_factors": ["unknown trigger"],
-            "alleviating_factors": ["self-resolved"],
-            "associated_symptoms": ["tongue laceration", "urinary incontinence", "post-ictal confusion"]
+            "aggravating_factors": [
+                "unknown trigger"
+            ],
+            "alleviating_factors": [
+                "self-resolved"
+            ],
+            "associated_symptoms": [
+                "tongue laceration",
+                "urinary incontinence",
+                "post-ictal confusion"
+            ]
         },
         "tongue_laceration": {
             "description": "My tongue hurts really bad, I think I bit it. It's bleeding.",
@@ -29,8 +37,13 @@
             "severity": "moderate",
             "location": "left lateral tongue",
             "radiation": null,
-            "aggravating_factors": ["talking", "eating"],
-            "alleviating_factors": ["applying pressure with gauze"],
+            "aggravating_factors": [
+                "talking",
+                "eating"
+            ],
+            "alleviating_factors": [
+                "applying pressure with gauze"
+            ],
             "associated_symptoms": []
         },
         "post_ictal_confusion": {
@@ -41,8 +54,13 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["time"],
-            "associated_symptoms": ["fatigue", "headache"]
+            "alleviating_factors": [
+                "time"
+            ],
+            "associated_symptoms": [
+                "fatigue",
+                "headache"
+            ]
         },
         "headache": {
             "description": "I have a really bad headache now, it's throbbing everywhere",
@@ -51,9 +69,16 @@
             "severity": "6/10",
             "location": "generalized",
             "radiation": null,
-            "aggravating_factors": ["bright lights", "noise"],
-            "alleviating_factors": ["closing eyes, resting"],
-            "associated_symptoms": ["fatigue"]
+            "aggravating_factors": [
+                "bright lights",
+                "noise"
+            ],
+            "alleviating_factors": [
+                "closing eyes, resting"
+            ],
+            "associated_symptoms": [
+                "fatigue"
+            ]
         },
         "muscle_soreness": {
             "description": "My whole body aches like I ran a marathon, especially my arms and legs and back",
@@ -62,8 +87,12 @@
             "severity": "5/10",
             "location": "generalized, extremities and back",
             "radiation": null,
-            "aggravating_factors": ["movement"],
-            "alleviating_factors": ["rest"],
+            "aggravating_factors": [
+                "movement"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
             "associated_symptoms": []
         },
         "urinary_incontinence": {
@@ -79,10 +108,19 @@
         }
     },
     "symptoms_absent": [
-        "fever", "neck stiffness", "focal weakness", "numbness",
-        "vision changes", "speech difficulty", "chest pain",
-        "shortness of breath", "abdominal pain", "nausea", "vomiting",
-        "prior aura or warning", "recent head trauma",
+        "fever",
+        "neck stiffness",
+        "focal weakness",
+        "numbness",
+        "vision changes",
+        "speech difficulty",
+        "chest pain",
+        "shortness of breath",
+        "abdominal pain",
+        "nausea",
+        "vomiting",
+        "prior aura or warning",
+        "recent head trauma",
         "rash"
     ],
     "vitals": {
@@ -148,7 +186,15 @@
     "communication_style": "Initially post-ictal and giving short, disjointed answers. As she clears, becomes more coherent and asks many questions: 'Does this mean I have epilepsy?' 'Can I still drive?' 'Will this happen again?' Becomes tearful when discussing the incontinence. Wants her boyfriend called.",
     "pain_description_style": "Focuses more on the emotional distress than physical pain. Describes headache as 'throbbing' and body aches as 'like I worked out for hours.' Rates pain when asked but is more concerned about the implications of the seizure itself.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "First-time generalized tonic-clonic seizure in a 32-year-old with no prior history",
             "Witnessed event with classic tonic-clonic description, tongue bite, and urinary incontinence confirming true seizure",
@@ -185,5 +231,6 @@
             "Observation period (minimum 6-12 hours) before discharge consideration",
             "Follow-up with neurology as outpatient"
         ]
-    }
+    },
+    "category": "Neuro"
 }

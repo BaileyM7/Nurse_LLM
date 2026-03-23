@@ -18,9 +18,21 @@
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["lying flat", "any exertion", "walking more than a few steps"],
-            "alleviating_factors": ["sitting upright", "propping up on 3-4 pillows", "sleeping in recliner"],
-            "associated_symptoms": ["cough", "leg swelling", "fatigue"]
+            "aggravating_factors": [
+                "lying flat",
+                "any exertion",
+                "walking more than a few steps"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "propping up on 3-4 pillows",
+                "sleeping in recliner"
+            ],
+            "associated_symptoms": [
+                "cough",
+                "leg swelling",
+                "fatigue"
+            ]
         },
         "orthopnea": {
             "description": "Can't lie flat at all without feeling like she's suffocating, needs 4 pillows or the recliner",
@@ -29,9 +41,16 @@
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["lying flat", "reclining below 45 degrees"],
-            "alleviating_factors": ["sitting bolt upright"],
-            "associated_symptoms": ["cough when lying down"]
+            "aggravating_factors": [
+                "lying flat",
+                "reclining below 45 degrees"
+            ],
+            "alleviating_factors": [
+                "sitting bolt upright"
+            ],
+            "associated_symptoms": [
+                "cough when lying down"
+            ]
         },
         "peripheral_edema": {
             "description": "Both legs swollen from feet up to knees, skin feels tight and shiny",
@@ -40,9 +59,18 @@
             "severity": "7/10",
             "location": "bilateral lower extremities, feet to knees",
             "radiation": null,
-            "aggravating_factors": ["standing", "sitting with feet down", "end of day"],
-            "alleviating_factors": ["elevating legs helps a little but doesn't go away completely"],
-            "associated_symptoms": ["skin tightness", "difficulty wearing shoes"]
+            "aggravating_factors": [
+                "standing",
+                "sitting with feet down",
+                "end of day"
+            ],
+            "alleviating_factors": [
+                "elevating legs helps a little but doesn't go away completely"
+            ],
+            "associated_symptoms": [
+                "skin tightness",
+                "difficulty wearing shoes"
+            ]
         },
         "cough": {
             "description": "Dry cough that gets worse at night and when trying to lie down",
@@ -51,9 +79,16 @@
             "severity": "4/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["lying flat", "nighttime"],
-            "alleviating_factors": ["sitting up"],
-            "associated_symptoms": ["shortness of breath"]
+            "aggravating_factors": [
+                "lying flat",
+                "nighttime"
+            ],
+            "alleviating_factors": [
+                "sitting up"
+            ],
+            "associated_symptoms": [
+                "shortness of breath"
+            ]
         },
         "fatigue": {
             "description": "So tired she can barely do anything around the house, sleeps poorly because of breathing",
@@ -62,8 +97,12 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any activity"],
-            "alleviating_factors": ["rest, but never feels fully rested"],
+            "aggravating_factors": [
+                "any activity"
+            ],
+            "alleviating_factors": [
+                "rest, but never feels fully rested"
+            ],
             "associated_symptoms": []
         },
         "weight_gain": {
@@ -75,13 +114,27 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["leg swelling", "abdominal bloating"]
+            "associated_symptoms": [
+                "leg swelling",
+                "abdominal bloating"
+            ]
         }
     },
     "symptoms_absent": [
-        "chest pain", "fever", "palpitations", "syncope", "hemoptysis",
-        "nausea", "vomiting", "diarrhea", "headache", "dizziness",
-        "urinary symptoms", "rash", "joint pain", "vision changes"
+        "chest pain",
+        "fever",
+        "palpitations",
+        "syncope",
+        "hemoptysis",
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "headache",
+        "dizziness",
+        "urinary symptoms",
+        "rash",
+        "joint pain",
+        "vision changes"
     ],
     "vitals": {
         "heart_rate": 96,
@@ -151,7 +204,15 @@
     "communication_style": "Very social and will chat about her grandchildren and church if given the opportunity. Tells long stories to get to a point. Needs gentle redirection to stay on topic but is never rude about it. Will admit to dietary non-compliance if asked without judgment.",
     "pain_description_style": "Focuses more on functional limitations ('I can't do my laundry anymore') than pain ratings. Doesn't complain much about pain per se but clearly distressed by inability to breathe.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Known HFrEF with EF 30% presenting with acute decompensation",
             "Orthopnea requiring 4-pillow elevation and paroxysmal nocturnal dyspnea",
@@ -186,5 +247,6 @@
             "Cardiology consult",
             "Social work consult for home support assessment"
         ]
-    }
+    },
+    "category": "Cardiac"
 }

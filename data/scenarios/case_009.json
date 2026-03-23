@@ -18,9 +18,21 @@
             "severity": "8/10",
             "location": "chest",
             "radiation": null,
-            "aggravating_factors": ["any exertion", "lying flat", "talking in full sentences"],
-            "alleviating_factors": ["sitting upright", "leaning forward on table", "pursed lip breathing"],
-            "associated_symptoms": ["productive cough", "wheezing", "fatigue"]
+            "aggravating_factors": [
+                "any exertion",
+                "lying flat",
+                "talking in full sentences"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "leaning forward on table",
+                "pursed lip breathing"
+            ],
+            "associated_symptoms": [
+                "productive cough",
+                "wheezing",
+                "fatigue"
+            ]
         },
         "productive_cough": {
             "description": "Coughing up a lot more junk than usual, it's thicker and turned greenish-yellow",
@@ -29,9 +41,19 @@
             "severity": "6/10",
             "location": "chest",
             "radiation": null,
-            "aggravating_factors": ["deep breathing", "cold air", "lying down at night"],
-            "alleviating_factors": ["nebulizer treatments", "sitting upright"],
-            "associated_symptoms": ["shortness of breath", "wheezing"]
+            "aggravating_factors": [
+                "deep breathing",
+                "cold air",
+                "lying down at night"
+            ],
+            "alleviating_factors": [
+                "nebulizer treatments",
+                "sitting upright"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "wheezing"
+            ]
         },
         "wheezing": {
             "description": "My chest sounds like a squeezebox, I can hear it myself when I breathe out",
@@ -40,9 +62,17 @@
             "severity": "6/10",
             "location": "bilateral chest",
             "radiation": null,
-            "aggravating_factors": ["exertion", "cold air"],
-            "alleviating_factors": ["albuterol inhaler"],
-            "associated_symptoms": ["shortness of breath", "cough"]
+            "aggravating_factors": [
+                "exertion",
+                "cold air"
+            ],
+            "alleviating_factors": [
+                "albuterol inhaler"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "cough"
+            ]
         },
         "fatigue": {
             "description": "I'm wiped out. Even just sitting here I'm exhausted from trying to breathe.",
@@ -51,9 +81,15 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any physical activity"],
-            "alleviating_factors": ["rest"],
-            "associated_symptoms": ["shortness of breath"]
+            "aggravating_factors": [
+                "any physical activity"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
+            "associated_symptoms": [
+                "shortness of breath"
+            ]
         },
         "chest_tightness": {
             "description": "My chest feels like it's in a vice, not really pain but just tight",
@@ -62,9 +98,17 @@
             "severity": "5/10",
             "location": "bilateral chest",
             "radiation": null,
-            "aggravating_factors": ["coughing", "deep breathing attempts"],
-            "alleviating_factors": ["bronchodilator use"],
-            "associated_symptoms": ["wheezing", "dyspnea"]
+            "aggravating_factors": [
+                "coughing",
+                "deep breathing attempts"
+            ],
+            "alleviating_factors": [
+                "bronchodilator use"
+            ],
+            "associated_symptoms": [
+                "wheezing",
+                "dyspnea"
+            ]
         }
     },
     "symptoms_absent": [
@@ -140,10 +184,18 @@
         }
     },
     "personality": "gruff and matter-of-fact, minimizes symptoms because he's 'been through worse', dry sense of humor, gets impatient with what he sees as obvious questions",
-    "communication_style": "Short, blunt answers. Uses blue-collar language and occasional mild profanity. Doesn't volunteer information — you have to pull it out of him. Gets winded mid-sentence and needs to pause to catch his breath.",
+    "communication_style": "Short, blunt answers. Uses blue-collar language and occasional mild profanity. Doesn't volunteer information \u00e2\u20ac\u201d you have to pull it out of him. Gets winded mid-sentence and needs to pause to catch his breath.",
     "pain_description_style": "Downplays everything. 'It's not pain exactly, just can't breathe.' Reluctant to assign numbers to pain scale but will if pressed. More likely to describe function ('I couldn't make it to the john') than sensation.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "SpO2 of 87% indicating significant hypoxemia",
             "Respiratory acidosis on ABG (pH 7.32, pCO2 52)",
@@ -173,5 +225,6 @@
             "Sputum culture",
             "Smoking cessation reinforcement and home oxygen compliance counseling"
         ]
-    }
+    },
+    "category": "Respiratory"
 }

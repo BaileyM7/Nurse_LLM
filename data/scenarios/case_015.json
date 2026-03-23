@@ -18,9 +18,18 @@
             "severity": "moderate volume, approximately 200-300mL total",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["eating", "drinking alcohol"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["epigastric pain", "dizziness", "weakness"]
+            "aggravating_factors": [
+                "eating",
+                "drinking alcohol"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "epigastric pain",
+                "dizziness",
+                "weakness"
+            ]
         },
         "melena": {
             "description": "My stool is black and sticky like tar, smells awful",
@@ -31,7 +40,9 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["hematemesis"]
+            "associated_symptoms": [
+                "hematemesis"
+            ]
         },
         "epigastric_pain": {
             "description": "Burning pain right here in the pit of my stomach, been going on a couple weeks but got way worse yesterday",
@@ -40,9 +51,19 @@
             "severity": "6/10",
             "location": "epigastric",
             "radiation": "slightly to the back",
-            "aggravating_factors": ["eating", "alcohol", "NSAIDs", "lying flat"],
-            "alleviating_factors": ["antacids provided mild temporary relief"],
-            "associated_symptoms": ["nausea", "hematemesis"]
+            "aggravating_factors": [
+                "eating",
+                "alcohol",
+                "NSAIDs",
+                "lying flat"
+            ],
+            "alleviating_factors": [
+                "antacids provided mild temporary relief"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "hematemesis"
+            ]
         },
         "dizziness": {
             "description": "I get real woozy when I stand up, almost blacked out in the bathroom",
@@ -51,9 +72,17 @@
             "severity": "moderate",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["standing", "walking"],
-            "alleviating_factors": ["lying down"],
-            "associated_symptoms": ["weakness", "tachycardia"]
+            "aggravating_factors": [
+                "standing",
+                "walking"
+            ],
+            "alleviating_factors": [
+                "lying down"
+            ],
+            "associated_symptoms": [
+                "weakness",
+                "tachycardia"
+            ]
         },
         "weakness": {
             "description": "I feel wiped out, no energy at all, legs feel like jelly",
@@ -62,16 +91,31 @@
             "severity": "moderate",
             "location": "generalized",
             "radiation": null,
-            "aggravating_factors": ["exertion"],
-            "alleviating_factors": ["rest"],
-            "associated_symptoms": ["dizziness"]
+            "aggravating_factors": [
+                "exertion"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
+            "associated_symptoms": [
+                "dizziness"
+            ]
         }
     },
     "symptoms_absent": [
-        "bright red blood per rectum", "chest pain", "shortness of breath",
-        "fever", "abdominal distension", "jaundice", "confusion",
-        "urinary symptoms", "joint pain", "rash", "vision changes",
-        "dysphagia", "weight loss"
+        "bright red blood per rectum",
+        "chest pain",
+        "shortness of breath",
+        "fever",
+        "abdominal distension",
+        "jaundice",
+        "confusion",
+        "urinary symptoms",
+        "joint pain",
+        "rash",
+        "vision changes",
+        "dysphagia",
+        "weight loss"
     ],
     "vitals": {
         "heart_rate": 112,
@@ -130,7 +174,15 @@
     "communication_style": "Blunt and sometimes rude. Minimizes his alcohol use when first asked. Gets defensive if pressed about lifestyle. Uses profanity casually. Will eventually open up if treated with respect and without judgment. Asks 'how long is this gonna take?' frequently.",
     "pain_description_style": "Understates pain. Describes it in functional terms like 'it ain't nothing I can't handle' but then grimaces. Uses working-class analogies: 'feels like battery acid in my gut.'",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Active upper GI hemorrhage with hematemesis and melena",
             "Hemodynamic instability: tachycardia (HR 112) and hypotension (98/62)",
@@ -164,5 +216,6 @@
             "Serial hemoglobin checks every 4-6 hours",
             "ICU admission for close monitoring"
         ]
-    }
+    },
+    "category": "GI"
 }

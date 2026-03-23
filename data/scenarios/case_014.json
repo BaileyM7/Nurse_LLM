@@ -18,9 +18,20 @@
             "severity": "8/10",
             "location": "right lower quadrant, started periumbilical",
             "radiation": "none",
-            "aggravating_factors": ["movement", "coughing", "walking", "riding in the car over bumps"],
-            "alleviating_factors": ["lying still with knees drawn up"],
-            "associated_symptoms": ["nausea", "loss of appetite", "low-grade fever"]
+            "aggravating_factors": [
+                "movement",
+                "coughing",
+                "walking",
+                "riding in the car over bumps"
+            ],
+            "alleviating_factors": [
+                "lying still with knees drawn up"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "loss of appetite",
+                "low-grade fever"
+            ]
         },
         "nausea": {
             "description": "I feel like I'm gonna throw up but I haven't yet",
@@ -29,9 +40,16 @@
             "severity": "5/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["eating", "the smell of food"],
-            "alleviating_factors": ["nothing really"],
-            "associated_symptoms": ["loss of appetite"]
+            "aggravating_factors": [
+                "eating",
+                "the smell of food"
+            ],
+            "alleviating_factors": [
+                "nothing really"
+            ],
+            "associated_symptoms": [
+                "loss of appetite"
+            ]
         },
         "anorexia": {
             "description": "I haven't been able to eat anything all day, just the thought of food makes me feel sick",
@@ -42,7 +60,9 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["nausea"]
+            "associated_symptoms": [
+                "nausea"
+            ]
         },
         "fever": {
             "description": "I feel a little warm but not like burning up or anything",
@@ -52,15 +72,27 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["took some Tylenol but it didn't help the belly pain"],
+            "alleviating_factors": [
+                "took some Tylenol but it didn't help the belly pain"
+            ],
             "associated_symptoms": []
         }
     },
     "symptoms_absent": [
-        "vomiting", "diarrhea", "constipation", "bloody stool", "melena",
-        "dysuria", "urinary frequency", "hematuria", "chest pain",
-        "shortness of breath", "back pain", "testicular pain",
-        "jaundice", "shoulder pain"
+        "vomiting",
+        "diarrhea",
+        "constipation",
+        "bloody stool",
+        "melena",
+        "dysuria",
+        "urinary frequency",
+        "hematuria",
+        "chest pain",
+        "shortness of breath",
+        "back pain",
+        "testicular pain",
+        "jaundice",
+        "shoulder pain"
     ],
     "vitals": {
         "heart_rate": 98,
@@ -112,7 +144,15 @@
     "communication_style": "Short answers, doesn't elaborate unless prompted. Says things like 'I'm fine' while visibly guarding his abdomen. Uses slang and casual language. Needs direct questions to open up.",
     "pain_description_style": "Rates pain lower than it appears. Says 'it's not that bad' while wincing. When pressed, admits it's the worst stomach pain he's ever had. Describes it as 'like someone stabbing me.'",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Classic migration of pain from periumbilical to RLQ",
             "Rebound tenderness and guarding pattern (pain worse with movement/coughing)",
@@ -139,5 +179,6 @@
             "IV antibiotics (piperacillin-tazobactam or cefoxitin)",
             "Serial abdominal exams"
         ]
-    }
+    },
+    "category": "GI"
 }

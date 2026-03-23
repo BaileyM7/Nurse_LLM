@@ -18,9 +18,20 @@
             "severity": "9/10",
             "location": "right hip and groin",
             "radiation": "radiates to right groin and anterior thigh",
-            "aggravating_factors": ["any movement of right leg", "internal or external rotation", "weight bearing attempt", "log rolling"],
-            "alleviating_factors": ["absolute immobilization", "IV morphine provided by EMS helped slightly"],
-            "associated_symptoms": ["inability to bear weight", "leg shortening and external rotation"]
+            "aggravating_factors": [
+                "any movement of right leg",
+                "internal or external rotation",
+                "weight bearing attempt",
+                "log rolling"
+            ],
+            "alleviating_factors": [
+                "absolute immobilization",
+                "IV morphine provided by EMS helped slightly"
+            ],
+            "associated_symptoms": [
+                "inability to bear weight",
+                "leg shortening and external rotation"
+            ]
         },
         "inability_to_bear_weight": {
             "description": "I can't put any weight on it at all. When the paramedics tried to help me up I nearly screamed.",
@@ -29,9 +40,15 @@
             "severity": "10/10",
             "location": "right lower extremity",
             "radiation": null,
-            "aggravating_factors": ["any attempt to stand or move"],
-            "alleviating_factors": ["keeping leg completely still"],
-            "associated_symptoms": ["hip pain"]
+            "aggravating_factors": [
+                "any attempt to stand or move"
+            ],
+            "alleviating_factors": [
+                "keeping leg completely still"
+            ],
+            "associated_symptoms": [
+                "hip pain"
+            ]
         },
         "right_leg_deformity": {
             "description": "My leg looks funny, it's turned outward and seems shorter than the other one",
@@ -42,7 +59,10 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["hip pain", "inability to bear weight"]
+            "associated_symptoms": [
+                "hip pain",
+                "inability to bear weight"
+            ]
         },
         "bruising": {
             "description": "There's a big bruise forming on my hip already",
@@ -51,7 +71,9 @@
             "severity": "mild",
             "location": "right lateral hip",
             "radiation": null,
-            "aggravating_factors": ["palpation"],
+            "aggravating_factors": [
+                "palpation"
+            ],
             "alleviating_factors": [],
             "associated_symptoms": []
         },
@@ -62,17 +84,36 @@
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["being alone", "talk of surgery", "uncertainty"],
-            "alleviating_factors": ["daughter's presence", "reassurance", "information about plan"],
-            "associated_symptoms": ["tearfulness", "trembling"]
+            "aggravating_factors": [
+                "being alone",
+                "talk of surgery",
+                "uncertainty"
+            ],
+            "alleviating_factors": [
+                "daughter's presence",
+                "reassurance",
+                "information about plan"
+            ],
+            "associated_symptoms": [
+                "tearfulness",
+                "trembling"
+            ]
         }
     },
     "symptoms_absent": [
-        "head injury or loss of consciousness", "neck pain", "back pain",
-        "chest pain", "shortness of breath", "dizziness before the fall",
-        "palpitations before the fall", "numbness or tingling in right foot",
-        "inability to wiggle toes", "open wound or bleeding at hip",
-        "pain in other extremities", "abdominal pain", "confusion"
+        "head injury or loss of consciousness",
+        "neck pain",
+        "back pain",
+        "chest pain",
+        "shortness of breath",
+        "dizziness before the fall",
+        "palpitations before the fall",
+        "numbness or tingling in right foot",
+        "inability to wiggle toes",
+        "open wound or bleeding at hip",
+        "pain in other extremities",
+        "abdominal pain",
+        "confusion"
     ],
     "vitals": {
         "heart_rate": 98,
@@ -146,7 +187,15 @@
     "communication_style": "Articulate and educated. Uses proper grammar and complete sentences. Tends to give thorough, organized answers. Occasionally loses her train of thought but recovers quickly. Asks insightful questions about her care. Gets frustrated when people speak to her loudly as though she's deaf or confused.",
     "pain_description_style": "Precise and descriptive. Uses words like 'excruciating' and 'stabbing.' Will give accurate pain scale numbers. Becomes terse and clipped when pain spikes. May grip the bedrail and close her eyes during painful assessments.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Displaced intracapsular femoral neck fracture requiring surgical intervention",
             "Known severe osteoporosis (T-score -3.2) and vitamin D deficiency",
@@ -184,5 +233,6 @@
             "Fall prevention assessment and home safety evaluation",
             "Continue denosumab schedule postoperatively"
         ]
-    }
+    },
+    "category": "MSK"
 }

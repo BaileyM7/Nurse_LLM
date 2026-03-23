@@ -18,9 +18,21 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["exertion", "lying flat on right side", "walking more than 50 feet"],
-            "alleviating_factors": ["sitting upright", "resting", "sleeping propped up on 3 pillows"],
-            "associated_symptoms": ["right-sided chest heaviness", "fatigue", "dry cough"]
+            "aggravating_factors": [
+                "exertion",
+                "lying flat on right side",
+                "walking more than 50 feet"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "resting",
+                "sleeping propped up on 3 pillows"
+            ],
+            "associated_symptoms": [
+                "right-sided chest heaviness",
+                "fatigue",
+                "dry cough"
+            ]
         },
         "right_sided_chest_heaviness": {
             "description": "It's not sharp pain, more like a weight sitting on the right side of my chest. Feels full and uncomfortable.",
@@ -29,9 +41,19 @@
             "severity": "4/10",
             "location": "right lower chest and right lateral chest",
             "radiation": "right upper back",
-            "aggravating_factors": ["lying on right side", "deep breathing", "coughing"],
-            "alleviating_factors": ["lying on left side", "sitting upright"],
-            "associated_symptoms": ["dyspnea", "dry cough"]
+            "aggravating_factors": [
+                "lying on right side",
+                "deep breathing",
+                "coughing"
+            ],
+            "alleviating_factors": [
+                "lying on left side",
+                "sitting upright"
+            ],
+            "associated_symptoms": [
+                "dyspnea",
+                "dry cough"
+            ]
         },
         "dry_cough": {
             "description": "I've had this nagging cough that won't quit. Nothing comes up, it's just dry and annoying.",
@@ -40,9 +62,19 @@
             "severity": "4/10",
             "location": "chest",
             "radiation": null,
-            "aggravating_factors": ["lying flat", "deep breathing", "talking for extended periods"],
-            "alleviating_factors": ["sitting upright", "sipping water"],
-            "associated_symptoms": ["dyspnea", "chest heaviness"]
+            "aggravating_factors": [
+                "lying flat",
+                "deep breathing",
+                "talking for extended periods"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "sipping water"
+            ],
+            "associated_symptoms": [
+                "dyspnea",
+                "chest heaviness"
+            ]
         },
         "fatigue": {
             "description": "I'm just worn out. More than my usual chemo tiredness. I sleep 10-12 hours and still feel drained.",
@@ -51,9 +83,17 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any physical activity", "chemo days"],
-            "alleviating_factors": ["rest helps somewhat but doesn't resolve it"],
-            "associated_symptoms": ["decreased appetite", "weakness"]
+            "aggravating_factors": [
+                "any physical activity",
+                "chemo days"
+            ],
+            "alleviating_factors": [
+                "rest helps somewhat but doesn't resolve it"
+            ],
+            "associated_symptoms": [
+                "decreased appetite",
+                "weakness"
+            ]
         },
         "decreased_appetite": {
             "description": "Food just doesn't appeal to me. My wife makes my favorite meals and I can only eat a few bites. I've lost about 8 pounds.",
@@ -62,9 +102,18 @@
             "severity": "5/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["nausea from chemo", "large meals"],
-            "alleviating_factors": ["small frequent meals", "ginger ale"],
-            "associated_symptoms": ["weight loss", "fatigue"]
+            "aggravating_factors": [
+                "nausea from chemo",
+                "large meals"
+            ],
+            "alleviating_factors": [
+                "small frequent meals",
+                "ginger ale"
+            ],
+            "associated_symptoms": [
+                "weight loss",
+                "fatigue"
+            ]
         },
         "orthopnea": {
             "description": "I can't lie flat anymore. Started needing two pillows a couple weeks ago, now I'm up to three or I feel like I'm suffocating.",
@@ -73,9 +122,17 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["lying flat"],
-            "alleviating_factors": ["propping up with multiple pillows", "recliner"],
-            "associated_symptoms": ["dyspnea", "cough"]
+            "aggravating_factors": [
+                "lying flat"
+            ],
+            "alleviating_factors": [
+                "propping up with multiple pillows",
+                "recliner"
+            ],
+            "associated_symptoms": [
+                "dyspnea",
+                "cough"
+            ]
         }
     },
     "symptoms_absent": [
@@ -102,11 +159,11 @@
         "pain_scale": 4
     },
     "labs": {
-        "CBC": "WBC 3.8 (low — chemotherapy-related leukopenia), Hgb 10.2 (low — anemia), Plt 142 (low-normal)",
+        "CBC": "WBC 3.8 (low \u00e2\u20ac\u201d chemotherapy-related leukopenia), Hgb 10.2 (low \u00e2\u20ac\u201d anemia), Plt 142 (low-normal)",
         "BMP": "Na 133 (mildly low), K 4.3, Cr 1.2, Glucose 94, BUN 22",
         "LDH": "320 U/L (elevated, suggests effusion is exudative)",
         "total_protein": "5.8 g/dL (low)",
-        "albumin": "2.9 g/dL (low — malnutrition and malignancy)",
+        "albumin": "2.9 g/dL (low \u00e2\u20ac\u201d malnutrition and malignancy)",
         "CRP": "48 mg/L (elevated)",
         "chest_xray": "Large right-sided pleural effusion with meniscus sign, occupying approximately lower one-third of right hemithorax. Mediastinal structures midline. Known 3.2cm right upper lobe mass unchanged. Left lung clear.",
         "CT_chest": "Large right-sided pleural effusion, estimated 1.5L. Right upper lobe mass 3.2cm with mediastinal lymphadenopathy. No PE. Compressive atelectasis of right lower lobe.",
@@ -114,7 +171,7 @@
         "ABG": "pH 7.44, pCO2 34 mmHg, pO2 72 mmHg (mild hypoxemia)"
     },
     "past_medical_history": [
-        "Non-small cell lung cancer (adenocarcinoma), Stage IIIB, diagnosed 8 months ago — currently on carboplatin/pemetrexed cycle 4 of 6",
+        "Non-small cell lung cancer (adenocarcinoma), Stage IIIB, diagnosed 8 months ago \u00e2\u20ac\u201d currently on carboplatin/pemetrexed cycle 4 of 6",
         "Hypertension (20 years, well controlled)",
         "Hyperlipidemia",
         "Benign prostatic hyperplasia",
@@ -139,7 +196,7 @@
     ],
     "allergies": [
         "Morphine (severe itching and confusion)",
-        "Contrast dye (mild hives — premedicated with diphenhydramine and prednisone for CT)"
+        "Contrast dye (mild hives \u00e2\u20ac\u201d premedicated with diphenhydramine and prednisone for CT)"
     ],
     "social_history": {
         "smoking": "Smoked 1 pack/day for 35 years, quit 10 years ago (35 pack-year history)",
@@ -162,7 +219,15 @@
     "communication_style": "Measured and thoughtful. Speaks in complete sentences with a calm, steady voice. Defers to his wife for exact dates and medication names ('Helen, when did I start that new pill?'). Will answer all questions honestly but won't volunteer information about how scared he is. May reference his coaching career when describing his mindset ('I've always told my boys to stay tough').",
     "pain_description_style": "Understates discomfort consistently. Says 'it's not really pain, just heaviness' and 'I've had worse.' Will rate things lower than they probably are. Describes symptoms in functional terms ('I used to be able to mow the lawn, now I can't walk to the mailbox'). His wife may interject that things are worse than he's letting on.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Large malignant pleural effusion (right-sided, ~1.5L) in setting of Stage IIIB NSCLC",
             "Exudative effusion meeting Light's criteria with low glucose and low pH (poor prognostic indicators)",
@@ -172,8 +237,8 @@
             "Significant weight loss (18 lbs since diagnosis, 8 lbs in past month)",
             "Hypoalbuminemia and hyponatremia reflecting malnutrition and malignancy",
             "SpO2 93% at rest",
-            "Morphine allergy — important for pain management planning",
-            "Contrast dye allergy — requires premedication for imaging"
+            "Morphine allergy \u00e2\u20ac\u201d important for pain management planning",
+            "Contrast dye allergy \u00e2\u20ac\u201d requires premedication for imaging"
         ],
         "diagnosis": "Malignant Pleural Effusion secondary to Stage IIIB Non-Small Cell Lung Cancer",
         "differential_diagnoses": [
@@ -191,11 +256,12 @@
             "Post-procedure chest X-ray to confirm lung re-expansion and rule out pneumothorax",
             "Oncology consultation regarding disease progression and treatment plan modification",
             "Discuss indwelling pleural catheter (PleurX) or pleurodesis if effusion recurs",
-            "Nutritional support — dietitian consult for cancer cachexia",
+            "Nutritional support \u00e2\u20ac\u201d dietitian consult for cancer cachexia",
             "Pain management avoiding morphine (use hydromorphone or fentanyl if opioid needed)",
             "Transfusion evaluation given Hgb 10.2 and symptomatic anemia",
             "Psychosocial support and palliative care consult for quality of life optimization",
             "Updated staging discussion with oncology team"
         ]
-    }
+    },
+    "category": "Respiratory"
 }

@@ -18,9 +18,18 @@
             "severity": "7/10 during cramps, 4/10 between",
             "location": "diffuse, worse periumbilical",
             "radiation": "none",
-            "aggravating_factors": ["eating", "drinking"],
-            "alleviating_factors": ["vomiting provides brief relief"],
-            "associated_symptoms": ["abdominal distension", "vomiting", "obstipation"]
+            "aggravating_factors": [
+                "eating",
+                "drinking"
+            ],
+            "alleviating_factors": [
+                "vomiting provides brief relief"
+            ],
+            "associated_symptoms": [
+                "abdominal distension",
+                "vomiting",
+                "obstipation"
+            ]
         },
         "vomiting": {
             "description": "I keep throwing up this green bitter stuff, can't keep anything down, not even water",
@@ -29,9 +38,15 @@
             "severity": "6-7 episodes",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any oral intake"],
-            "alleviating_factors": ["briefly relieves cramping"],
-            "associated_symptoms": ["abdominal pain"]
+            "aggravating_factors": [
+                "any oral intake"
+            ],
+            "alleviating_factors": [
+                "briefly relieves cramping"
+            ],
+            "associated_symptoms": [
+                "abdominal pain"
+            ]
         },
         "abdominal_distension": {
             "description": "My stomach is puffed out like a balloon, my clothes don't fit right anymore",
@@ -40,9 +55,15 @@
             "severity": "marked distension",
             "location": "diffuse",
             "radiation": null,
-            "aggravating_factors": ["eating or drinking"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["high-pitched bowel sounds"]
+            "aggravating_factors": [
+                "eating or drinking"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "high-pitched bowel sounds"
+            ]
         },
         "obstipation": {
             "description": "Haven't passed gas or had a bowel movement in four days, that's not normal for me",
@@ -52,15 +73,28 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["tried prune juice and milk of magnesia at home with no result"],
-            "associated_symptoms": ["abdominal distension"]
+            "alleviating_factors": [
+                "tried prune juice and milk of magnesia at home with no result"
+            ],
+            "associated_symptoms": [
+                "abdominal distension"
+            ]
         }
     },
     "symptoms_absent": [
-        "fever", "bloody stool", "hematemesis", "chest pain",
-        "shortness of breath", "urinary symptoms", "back pain",
-        "diarrhea", "jaundice", "weight loss", "rectal bleeding",
-        "confusion", "dizziness"
+        "fever",
+        "bloody stool",
+        "hematemesis",
+        "chest pain",
+        "shortness of breath",
+        "urinary symptoms",
+        "back pain",
+        "diarrhea",
+        "jaundice",
+        "weight loss",
+        "rectal bleeding",
+        "confusion",
+        "dizziness"
     ],
     "vitals": {
         "heart_rate": 95,
@@ -127,7 +161,15 @@
     "communication_style": "Warm and talkative, tells stories when answering questions. May need gentle redirection to stay on topic. Will mention her daughter and grandchildren. Uses expressions like 'Lord have mercy' and 'I tell you what.' Provides thorough answers when asked directly.",
     "pain_description_style": "Describes pain in waves: 'It cramps up something awful, then it eases off for a minute, then here it comes again.' Uses the phrase 'tolerable' even when in significant pain. Will pray quietly during bad cramps.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Complete obstipation (no flatus or stool for 4 days)",
             "Bilious vomiting progressing from food to bile",
@@ -159,5 +201,6 @@
             "IV analgesics and antiemetics",
             "DVT prophylaxis"
         ]
-    }
+    },
+    "category": "GI"
 }

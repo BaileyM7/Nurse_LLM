@@ -18,9 +18,19 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["exertion", "lying flat", "talking too much"],
-            "alleviating_factors": ["sitting upright", "using inhaler"],
-            "associated_symptoms": ["cough", "chest tightness"]
+            "aggravating_factors": [
+                "exertion",
+                "lying flat",
+                "talking too much"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "using inhaler"
+            ],
+            "associated_symptoms": [
+                "cough",
+                "chest tightness"
+            ]
         },
         "productive_cough": {
             "description": "Coughing up thick yellow-green mucus, sometimes streaked with a tiny bit of blood",
@@ -29,8 +39,14 @@
             "severity": "5/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["deep breathing", "cold air", "nighttime"],
-            "alleviating_factors": ["cough medicine helps a little"],
+            "aggravating_factors": [
+                "deep breathing",
+                "cold air",
+                "nighttime"
+            ],
+            "alleviating_factors": [
+                "cough medicine helps a little"
+            ],
             "associated_symptoms": []
         },
         "fever": {
@@ -40,9 +56,16 @@
             "severity": null,
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["nighttime"],
-            "alleviating_factors": ["Tylenol brings it down for a few hours"],
-            "associated_symptoms": ["night sweats", "chills"]
+            "aggravating_factors": [
+                "nighttime"
+            ],
+            "alleviating_factors": [
+                "Tylenol brings it down for a few hours"
+            ],
+            "associated_symptoms": [
+                "night sweats",
+                "chills"
+            ]
         },
         "chest_tightness": {
             "description": "My chest feels tight, not really a pain, more like pressure when I breathe deep",
@@ -51,8 +74,13 @@
             "severity": "4/10",
             "location": "right side of chest mostly",
             "radiation": null,
-            "aggravating_factors": ["deep breathing", "coughing"],
-            "alleviating_factors": ["shallow breathing"],
+            "aggravating_factors": [
+                "deep breathing",
+                "coughing"
+            ],
+            "alleviating_factors": [
+                "shallow breathing"
+            ],
             "associated_symptoms": []
         },
         "fatigue": {
@@ -62,15 +90,31 @@
             "severity": null,
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any activity"],
-            "alleviating_factors": ["rest helps a little"],
-            "associated_symptoms": ["decreased appetite"]
+            "aggravating_factors": [
+                "any activity"
+            ],
+            "alleviating_factors": [
+                "rest helps a little"
+            ],
+            "associated_symptoms": [
+                "decreased appetite"
+            ]
         }
     },
     "symptoms_absent": [
-        "nausea", "vomiting", "diarrhea", "abdominal pain", "headache",
-        "leg swelling", "palpitations", "syncope", "rash", "joint pain",
-        "urinary symptoms", "weight loss", "vision changes"
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "abdominal pain",
+        "headache",
+        "leg swelling",
+        "palpitations",
+        "syncope",
+        "rash",
+        "joint pain",
+        "urinary symptoms",
+        "weight loss",
+        "vision changes"
     ],
     "vitals": {
         "heart_rate": 98,
@@ -127,7 +171,15 @@
     "communication_style": "Short answers unless pressed for details. Gets frustrated if asked to repeat things. Prefers direct questions over open-ended ones.",
     "pain_description_style": "Reluctant to admit pain. Uses phrases like 'it's not that bad' or 'I've had worse'. Will give a number if asked directly but usually lowballs it.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Productive cough with yellow-green sputum and hemoptysis",
             "Fever with elevated WBC and procalcitonin indicating bacterial infection",
@@ -155,5 +207,6 @@
             "Smoking cessation counseling",
             "Chest X-ray follow-up"
         ]
-    }
+    },
+    "category": "Respiratory"
 }

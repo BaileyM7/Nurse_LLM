@@ -18,9 +18,20 @@
             "severity": "6/10 at worst, currently 3/10 at rest",
             "location": "across the front of the chest, more on the left side",
             "radiation": "left shoulder and inner left arm",
-            "aggravating_factors": ["walking", "climbing stairs", "carrying groceries", "stress"],
-            "alleviating_factors": ["stopping and resting for a few minutes", "sitting down"],
-            "associated_symptoms": ["shortness of breath", "mild lightheadedness"]
+            "aggravating_factors": [
+                "walking",
+                "climbing stairs",
+                "carrying groceries",
+                "stress"
+            ],
+            "alleviating_factors": [
+                "stopping and resting for a few minutes",
+                "sitting down"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "mild lightheadedness"
+            ]
         },
         "shortness_of_breath": {
             "description": "Gets winded much easier than usual, especially when the chest squeezing happens",
@@ -29,9 +40,16 @@
             "severity": "5/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["exertion", "walking uphill"],
-            "alleviating_factors": ["rest"],
-            "associated_symptoms": ["chest pressure"]
+            "aggravating_factors": [
+                "exertion",
+                "walking uphill"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
+            "associated_symptoms": [
+                "chest pressure"
+            ]
         },
         "lightheadedness": {
             "description": "Feels a bit dizzy when the chest pain is at its worst",
@@ -40,8 +58,13 @@
             "severity": "3/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["standing up quickly", "during chest pain episodes"],
-            "alleviating_factors": ["sitting down"],
+            "aggravating_factors": [
+                "standing up quickly",
+                "during chest pain episodes"
+            ],
+            "alleviating_factors": [
+                "sitting down"
+            ],
             "associated_symptoms": []
         },
         "fatigue": {
@@ -51,15 +74,30 @@
             "severity": "4/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any physical activity"],
-            "alleviating_factors": ["rest"],
+            "aggravating_factors": [
+                "any physical activity"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
             "associated_symptoms": []
         }
     },
     "symptoms_absent": [
-        "fever", "cough", "nausea", "vomiting", "palpitations", "syncope",
-        "leg swelling", "orthopnea", "abdominal pain", "diaphoresis at rest",
-        "headache", "vision changes", "rash", "urinary symptoms"
+        "fever",
+        "cough",
+        "nausea",
+        "vomiting",
+        "palpitations",
+        "syncope",
+        "leg swelling",
+        "orthopnea",
+        "abdominal pain",
+        "diaphoresis at rest",
+        "headache",
+        "vision changes",
+        "rash",
+        "urinary symptoms"
     ],
     "vitals": {
         "heart_rate": 88,
@@ -122,7 +160,15 @@
     "communication_style": "Brief and to the point. Answers questions directly without a lot of elaboration. Will say 'it's not that bad' frequently. His wife, who is at bedside, will sometimes add details he leaves out.",
     "pain_description_style": "Uses simple, functional descriptions ('it squeezes,' 'it's tight'). Reluctant to rate pain highly. Will underreport if not pressed for specifics.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Progressive exertional chest pain with decreasing activity threshold (crescendo pattern)",
             "Pain radiates to left shoulder and arm",
@@ -153,5 +199,6 @@
             "Smoking cessation counseling",
             "Lipid management optimization"
         ]
-    }
+    },
+    "category": "Cardiac"
 }

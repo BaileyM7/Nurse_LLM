@@ -18,9 +18,16 @@
             "severity": "left arm 2/5 strength, left leg 4/5 strength",
             "location": "left upper and lower extremity, arm predominant",
             "radiation": null,
-            "aggravating_factors": ["attempted use"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["facial droop", "speech difficulty"]
+            "aggravating_factors": [
+                "attempted use"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "facial droop",
+                "speech difficulty"
+            ]
         },
         "facial_droop": {
             "description": "Wife: 'The left side of his face is sagging, he can't smile right.'",
@@ -29,9 +36,15 @@
             "severity": "moderate",
             "location": "left face",
             "radiation": null,
-            "aggravating_factors": ["attempting to smile or show teeth"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["drooling from left side of mouth"]
+            "aggravating_factors": [
+                "attempting to smile or show teeth"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "drooling from left side of mouth"
+            ]
         },
         "dysarthria": {
             "description": "I know what I... want to shay... the wordsh come out all... mushed up",
@@ -40,9 +53,16 @@
             "severity": "moderate - intelligible with effort",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["longer sentences", "speaking quickly"],
-            "alleviating_factors": ["speaking slowly"],
-            "associated_symptoms": ["facial droop"]
+            "aggravating_factors": [
+                "longer sentences",
+                "speaking quickly"
+            ],
+            "alleviating_factors": [
+                "speaking slowly"
+            ],
+            "associated_symptoms": [
+                "facial droop"
+            ]
         },
         "left_arm_numbness": {
             "description": "It feels tingly and numb, like it fell asleep but it won't wake up",
@@ -53,14 +73,26 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["left arm weakness"]
+            "associated_symptoms": [
+                "left arm weakness"
+            ]
         }
     },
     "symptoms_absent": [
-        "headache", "vision loss", "double vision", "vertigo",
-        "nausea", "vomiting", "seizure", "loss of consciousness",
-        "chest pain", "shortness of breath", "neck stiffness",
-        "fever", "confusion", "right-sided weakness",
+        "headache",
+        "vision loss",
+        "double vision",
+        "vertigo",
+        "nausea",
+        "vomiting",
+        "seizure",
+        "loss of consciousness",
+        "chest pain",
+        "shortness of breath",
+        "neck stiffness",
+        "fever",
+        "confusion",
+        "right-sided weakness",
         "difficulty swallowing"
     ],
     "vitals": {
@@ -127,7 +159,15 @@
     "communication_style": "Speaks slowly with slurred speech but is cognitively intact. Gets frustrated when he can't articulate words clearly. His wife fills in details. He nods or gives thumbs up with right hand to confirm. Occasionally says 'damn it' when struggling with words. Pre-morbid personality was reportedly a quiet, no-nonsense type.",
     "pain_description_style": "Denies pain entirely. Focuses more on the functional deficits: 'I can't use my arm' rather than any discomfort. When asked about headache specifically, firmly denies it.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Acute onset left-sided hemiparesis with facial droop and dysarthria - classic stroke presentation",
             "Last known well approximately 1.5 hours ago - within tPA window (< 4.5 hours)",
@@ -163,5 +203,6 @@
             "Initiate anticoagulation discussion once acute phase managed (given AFib)",
             "Admit to stroke unit or neuro ICU"
         ]
-    }
+    },
+    "category": "Neuro"
 }

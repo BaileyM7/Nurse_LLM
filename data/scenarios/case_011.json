@@ -18,9 +18,20 @@
             "severity": "7/10",
             "location": "right lateral chest",
             "radiation": "right shoulder",
-            "aggravating_factors": ["deep inspiration", "coughing", "lying on right side"],
-            "alleviating_factors": ["shallow breathing", "lying on left side", "sitting upright"],
-            "associated_symptoms": ["dyspnea", "anxiety"]
+            "aggravating_factors": [
+                "deep inspiration",
+                "coughing",
+                "lying on right side"
+            ],
+            "alleviating_factors": [
+                "shallow breathing",
+                "lying on left side",
+                "sitting upright"
+            ],
+            "associated_symptoms": [
+                "dyspnea",
+                "anxiety"
+            ]
         },
         "dyspnea": {
             "description": "I feel like I can't get enough air, even just sitting still. It's not normal for me.",
@@ -29,9 +40,18 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["walking", "climbing stairs", "deep breathing attempts"],
-            "alleviating_factors": ["sitting upright and still"],
-            "associated_symptoms": ["pleuritic chest pain", "tachycardia"]
+            "aggravating_factors": [
+                "walking",
+                "climbing stairs",
+                "deep breathing attempts"
+            ],
+            "alleviating_factors": [
+                "sitting upright and still"
+            ],
+            "associated_symptoms": [
+                "pleuritic chest pain",
+                "tachycardia"
+            ]
         },
         "tachycardia_sensation": {
             "description": "My heart has been racing all morning, I can feel it pounding",
@@ -40,9 +60,17 @@
             "severity": "5/10",
             "location": "chest",
             "radiation": null,
-            "aggravating_factors": ["anxiety", "exertion"],
-            "alleviating_factors": ["rest"],
-            "associated_symptoms": ["dyspnea", "anxiety"]
+            "aggravating_factors": [
+                "anxiety",
+                "exertion"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
+            "associated_symptoms": [
+                "dyspnea",
+                "anxiety"
+            ]
         },
         "right_calf_pain": {
             "description": "Now that you mention it, my right calf has been sore and a little swollen since the flight. I thought it was just from sitting so long.",
@@ -51,9 +79,17 @@
             "severity": "4/10",
             "location": "right posterior calf",
             "radiation": null,
-            "aggravating_factors": ["walking", "dorsiflexion of foot"],
-            "alleviating_factors": ["elevation", "rest"],
-            "associated_symptoms": ["mild warmth to touch in calf area"]
+            "aggravating_factors": [
+                "walking",
+                "dorsiflexion of foot"
+            ],
+            "alleviating_factors": [
+                "elevation",
+                "rest"
+            ],
+            "associated_symptoms": [
+                "mild warmth to touch in calf area"
+            ]
         },
         "anxiety": {
             "description": "I'm very worried. I'm normally healthy, this isn't like me at all.",
@@ -62,9 +98,16 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["worsening symptoms", "not knowing what's wrong"],
-            "alleviating_factors": ["information from medical team"],
-            "associated_symptoms": ["tachycardia"]
+            "aggravating_factors": [
+                "worsening symptoms",
+                "not knowing what's wrong"
+            ],
+            "alleviating_factors": [
+                "information from medical team"
+            ],
+            "associated_symptoms": [
+                "tachycardia"
+            ]
         }
     },
     "symptoms_absent": [
@@ -112,7 +155,7 @@
         "None"
     ],
     "medications": [
-        "Combined oral contraceptive pill (ethinyl estradiol 30mcg/norgestimate 0.25mg) — for 6 years",
+        "Combined oral contraceptive pill (ethinyl estradiol 30mcg/norgestimate 0.25mg) \u00e2\u20ac\u201d for 6 years",
         "Sumatriptan 50mg PRN for migraines (uses 1-2x per month)",
         "Iron supplements 325mg daily (recently discontinued)",
         "Multivitamin daily"
@@ -137,19 +180,27 @@
             "paternal_grandfather": "Died of stroke at age 70"
         }
     },
-    "personality": "calm, analytical, and detail-oriented — approaches her own symptoms almost like debugging a problem. Polite and respectful but asks a lot of thoughtful questions about what tests mean and what the plan is.",
+    "personality": "calm, analytical, and detail-oriented \u00e2\u20ac\u201d approaches her own symptoms almost like debugging a problem. Polite and respectful but asks a lot of thoughtful questions about what tests mean and what the plan is.",
     "communication_style": "Articulate and precise. Provides well-organized answers with timelines. Will ask clarifying questions back. May downplay the calf pain unless specifically asked about leg symptoms. Uses some medical terminology she's picked up from reading online but is not a medical professional.",
     "pain_description_style": "Very specific and descriptive. 'It's a sharp 7 out of 10 that's localized to my right lower chest and worsens on inspiration.' Comfortable with rating scales. Will mention she looked up her symptoms online and is worried about a blood clot.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
-            "Bilateral pulmonary emboli with saddle embolus — submassive PE",
+            "Bilateral pulmonary emboli with saddle embolus \u00e2\u20ac\u201d submassive PE",
             "Right ventricular enlargement (RV/LV ratio 1.3) indicating right heart strain",
             "Elevated troponin and BNP confirming hemodynamic significance",
             "Concurrent DVT in right popliteal and posterior tibial veins",
             "Major risk factors: combined OCP use + prolonged immobilization (14-hour flight)",
             "Family history of DVT (maternal aunt)",
-            "SpO2 92% with tachycardia at 118 — hemodynamically significant",
+            "SpO2 92% with tachycardia at 118 \u00e2\u20ac\u201d hemodynamically significant",
             "Markedly elevated D-dimer at 4.2"
         ],
         "diagnosis": "Submassive (Intermediate-Risk) Pulmonary Embolism with concurrent DVT",
@@ -164,15 +215,16 @@
             "Immediate systemic anticoagulation with IV heparin drip (weight-based protocol)",
             "Supplemental oxygen to maintain SpO2 > 95%",
             "Continuous cardiorespiratory monitoring",
-            "IV access with fluid resuscitation (cautious — avoid volume overload with RV strain)",
+            "IV access with fluid resuscitation (cautious \u00e2\u20ac\u201d avoid volume overload with RV strain)",
             "Echocardiogram to assess RV function",
             "Pulmonology and/or interventional radiology consult",
-            "Monitor for hemodynamic deterioration — if develops hypotension, escalate to massive PE protocol (consider thrombolytics)",
+            "Monitor for hemodynamic deterioration \u00e2\u20ac\u201d if develops hypotension, escalate to massive PE protocol (consider thrombolytics)",
             "Discontinue oral contraceptive pill immediately",
-            "Pain management (avoid NSAIDs if anticoagulated — use acetaminophen)",
+            "Pain management (avoid NSAIDs if anticoagulated \u00e2\u20ac\u201d use acetaminophen)",
             "Hypercoagulability workup after acute phase (Factor V Leiden, prothrombin gene mutation, antiphospholipid antibodies)",
             "Compression stockings for DVT",
             "Transition to oral anticoagulation (rivaroxaban or warfarin with heparin bridge) when stable"
         ]
-    }
+    },
+    "category": "Respiratory"
 }

@@ -18,9 +18,21 @@
             "severity": "9/10",
             "location": "right flank and costovertebral angle",
             "radiation": "radiates to right lower abdomen and groin",
-            "aggravating_factors": ["movement", "palpation of right CVA", "deep breathing", "jarring motions"],
-            "alleviating_factors": ["nothing provides significant relief", "slight relief with knees drawn up"],
-            "associated_symptoms": ["nausea", "vomiting", "fever"]
+            "aggravating_factors": [
+                "movement",
+                "palpation of right CVA",
+                "deep breathing",
+                "jarring motions"
+            ],
+            "alleviating_factors": [
+                "nothing provides significant relief",
+                "slight relief with knees drawn up"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "vomiting",
+                "fever"
+            ]
         },
         "dysuria": {
             "description": "It burns like fire every time I pee. It started a few days ago but it's gotten so much worse.",
@@ -29,9 +41,15 @@
             "severity": "7/10",
             "location": "urethral and suprapubic",
             "radiation": null,
-            "aggravating_factors": ["urination"],
+            "aggravating_factors": [
+                "urination"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["urinary frequency", "urgency", "cloudy urine"]
+            "associated_symptoms": [
+                "urinary frequency",
+                "urgency",
+                "cloudy urine"
+            ]
         },
         "fever": {
             "description": "I started feeling really hot last night and I took my temperature and it was 103. I've been alternating between shivering and sweating.",
@@ -41,8 +59,13 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["ibuprofen taken at home with minimal effect"],
-            "associated_symptoms": ["chills", "diaphoresis"]
+            "alleviating_factors": [
+                "ibuprofen taken at home with minimal effect"
+            ],
+            "associated_symptoms": [
+                "chills",
+                "diaphoresis"
+            ]
         },
         "nausea_and_vomiting": {
             "description": "I've thrown up three times since this morning. I can't keep anything down, not even water.",
@@ -51,9 +74,18 @@
             "severity": "7/10",
             "location": "epigastric",
             "radiation": null,
-            "aggravating_factors": ["eating or drinking", "movement", "pain spikes"],
-            "alleviating_factors": ["lying still"],
-            "associated_symptoms": ["flank pain", "decreased oral intake"]
+            "aggravating_factors": [
+                "eating or drinking",
+                "movement",
+                "pain spikes"
+            ],
+            "alleviating_factors": [
+                "lying still"
+            ],
+            "associated_symptoms": [
+                "flank pain",
+                "decreased oral intake"
+            ]
         },
         "urinary_frequency": {
             "description": "I'm running to the bathroom constantly but only tiny amounts come out each time",
@@ -64,7 +96,10 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["dysuria", "urgency"]
+            "associated_symptoms": [
+                "dysuria",
+                "urgency"
+            ]
         },
         "chills": {
             "description": "I get these terrible shaking episodes where my teeth chatter. My roommate said I was shivering so hard the bed was shaking.",
@@ -73,16 +108,32 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["fever spikes"],
-            "alleviating_factors": ["warm blankets temporarily"],
-            "associated_symptoms": ["fever", "diaphoresis"]
+            "aggravating_factors": [
+                "fever spikes"
+            ],
+            "alleviating_factors": [
+                "warm blankets temporarily"
+            ],
+            "associated_symptoms": [
+                "fever",
+                "diaphoresis"
+            ]
         }
     },
     "symptoms_absent": [
-        "chest pain", "shortness of breath", "cough", "headache",
-        "vaginal discharge", "missed period", "diarrhea", "constipation",
-        "hematuria visible to patient", "rash", "joint pain",
-        "history of kidney stones", "back injury"
+        "chest pain",
+        "shortness of breath",
+        "cough",
+        "headache",
+        "vaginal discharge",
+        "missed period",
+        "diarrhea",
+        "constipation",
+        "hematuria visible to patient",
+        "rash",
+        "joint pain",
+        "history of kidney stones",
+        "back injury"
     ],
     "vitals": {
         "heart_rate": 112,
@@ -145,7 +196,15 @@
     "communication_style": "Clear and organized in describing symptoms. Uses some medical terminology from her own research. Asks pointed questions about diagnosis and treatment plan. Wants to understand the reasoning behind decisions. Can become slightly impatient if she feels she is not being heard.",
     "pain_description_style": "Very precise about pain descriptions. Uses the 0-10 scale comfortably. Differentiates between types of pain (burning vs. aching vs. sharp). Will advocate for pain management actively.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Acute pyelonephritis with systemic inflammatory response (high fever, tachycardia, leukocytosis)",
             "History of recurrent UTIs (2-3/year) requiring workup for underlying cause",
@@ -178,5 +237,6 @@
             "Urology or primary care referral for recurrent UTI workup (voiding cystourethrogram, cystoscopy consideration)",
             "Admit for IV antibiotics given inability to tolerate PO and systemic illness"
         ]
-    }
+    },
+    "category": "Infectious"
 }

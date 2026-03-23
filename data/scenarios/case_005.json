@@ -18,9 +18,19 @@
             "severity": "8/10",
             "location": "entire chest",
             "radiation": null,
-            "aggravating_factors": ["any movement", "walking", "getting anxious about it"],
-            "alleviating_factors": ["nothing has helped"],
-            "associated_symptoms": ["shortness of breath", "lightheadedness", "fatigue"]
+            "aggravating_factors": [
+                "any movement",
+                "walking",
+                "getting anxious about it"
+            ],
+            "alleviating_factors": [
+                "nothing has helped"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "lightheadedness",
+                "fatigue"
+            ]
         },
         "shortness_of_breath": {
             "description": "Feels winded doing anything, even just talking makes me a little breathless",
@@ -29,9 +39,16 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["exertion", "talking at length"],
-            "alleviating_factors": ["sitting still"],
-            "associated_symptoms": ["palpitations"]
+            "aggravating_factors": [
+                "exertion",
+                "talking at length"
+            ],
+            "alleviating_factors": [
+                "sitting still"
+            ],
+            "associated_symptoms": [
+                "palpitations"
+            ]
         },
         "lightheadedness": {
             "description": "Felt woozy and unsteady, like I might pass out, especially when I stood up",
@@ -40,9 +57,16 @@
             "severity": "5/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["standing up", "walking"],
-            "alleviating_factors": ["sitting or lying down"],
-            "associated_symptoms": ["near-syncope episode earlier today"]
+            "aggravating_factors": [
+                "standing up",
+                "walking"
+            ],
+            "alleviating_factors": [
+                "sitting or lying down"
+            ],
+            "associated_symptoms": [
+                "near-syncope episode earlier today"
+            ]
         },
         "chest_discomfort": {
             "description": "Not really pain, more like an uncomfortable pressure or tightness that comes and goes",
@@ -51,9 +75,15 @@
             "severity": "4/10",
             "location": "center of chest",
             "radiation": null,
-            "aggravating_factors": ["when heart is racing fastest"],
-            "alleviating_factors": ["unclear"],
-            "associated_symptoms": ["palpitations"]
+            "aggravating_factors": [
+                "when heart is racing fastest"
+            ],
+            "alleviating_factors": [
+                "unclear"
+            ],
+            "associated_symptoms": [
+                "palpitations"
+            ]
         },
         "fatigue": {
             "description": "Completely wiped out, no energy at all today",
@@ -62,15 +92,30 @@
             "severity": "7/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any activity"],
-            "alleviating_factors": ["rest helps slightly"],
+            "aggravating_factors": [
+                "any activity"
+            ],
+            "alleviating_factors": [
+                "rest helps slightly"
+            ],
             "associated_symptoms": []
         }
     },
     "symptoms_absent": [
-        "fever", "cough", "leg swelling", "orthopnea", "syncope (had near-syncope but did not lose consciousness)",
-        "nausea", "vomiting", "abdominal pain", "headache", "vision changes",
-        "hemoptysis", "rash", "joint pain", "urinary symptoms"
+        "fever",
+        "cough",
+        "leg swelling",
+        "orthopnea",
+        "syncope (had near-syncope but did not lose consciousness)",
+        "nausea",
+        "vomiting",
+        "abdominal pain",
+        "headache",
+        "vision changes",
+        "hemoptysis",
+        "rash",
+        "joint pain",
+        "urinary symptoms"
     ],
     "vitals": {
         "heart_rate": 148,
@@ -137,7 +182,15 @@
     "communication_style": "Blunt and direct. Doesn't like to repeat himself. Gets irritated with what he perceives as unnecessary questions. Uses some profanity when frustrated. Will cooperate if treated with straightforward respect but shuts down if he feels condescended to.",
     "pain_description_style": "Reluctant to call anything 'pain' - prefers 'discomfort' or 'it's annoying.' Focuses on how symptoms affect his ability to work. Will say things like 'I just need you to fix this so I can get back to the job site.'",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Known paroxysmal AFib now presenting with RVR at rate 148",
             "Hemodynamically stable but symptomatic with lightheadedness and near-syncope",
@@ -169,5 +222,6 @@
             "Electrophysiology consult if recurrent episodes despite rate control",
             "Reassess oral rate control medication dosing at discharge"
         ]
-    }
+    },
+    "category": "Cardiac"
 }

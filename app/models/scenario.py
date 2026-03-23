@@ -87,6 +87,7 @@ class PatientScenario(BaseModel):
     onset_description: str | None = Field(None, description="When and how symptoms began")
     severity: str | None = Field(None, description="Overall acuity: 'low', 'medium', 'high', 'critical'")
     setting: str = Field("Emergency Department", description="Where the encounter takes place")
+    category: str | None = Field(None, description="Clinical category: Cardiac, Respiratory, GI, Neuro, Infectious, MSK, Endocrine, Psych, Renal")
 
     # Symptoms
     symptoms_present: dict[str, SymptomDetail] = Field(
@@ -139,3 +140,4 @@ class ScenarioSummary(BaseModel):
     sex: str
     chief_complaint: str
     severity: str | None = None
+    category: str | None = None

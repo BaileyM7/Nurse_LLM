@@ -7,20 +7,30 @@
     "weight_lbs": 205,
     "height_inches": 72,
     "chief_complaint": "I woke up at 2 AM with the worst pain of my life in my side. It comes in waves and I thought I was dying. I can't stop moving, I can't get comfortable.",
-    "onset_description": "Woke from sleep at 2 AM with sudden onset severe left flank pain that radiates to his groin. Pain is colicky, coming in intense waves. He has been pacing, unable to find any comfortable position. Has nausea and vomited twice. This is his second episode of kidney stones — he had one stone 5 years ago that he passed spontaneously.",
+    "onset_description": "Woke from sleep at 2 AM with sudden onset severe left flank pain that radiates to his groin. Pain is colicky, coming in intense waves. He has been pacing, unable to find any comfortable position. Has nausea and vomited twice. This is his second episode of kidney stones \u00e2\u20ac\u201d he had one stone 5 years ago that he passed spontaneously.",
     "severity": "high",
     "setting": "Emergency Department",
     "symptoms_present": {
         "flank_pain": {
-            "description": "It's the worst pain I've ever felt. It's this deep, crampy pain in my left side that comes in waves. One minute it's bearable and the next I want to scream. I know it's a kidney stone — I had one before — but this is way worse.",
+            "description": "It's the worst pain I've ever felt. It's this deep, crampy pain in my left side that comes in waves. One minute it's bearable and the next I want to scream. I know it's a kidney stone \u00e2\u20ac\u201d I had one before \u00e2\u20ac\u201d but this is way worse.",
             "onset": "4 hours ago, sudden onset from sleep",
             "character": "severe colicky pain with crescendo-decrescendo pattern, lasting 20-40 minutes per wave with brief periods of reduced intensity",
             "severity": "10/10 during waves, 6/10 between waves",
             "location": "left flank, costovertebral angle",
             "radiation": "radiates from left flank anteriorly to left lower quadrant and into left groin and testicle",
-            "aggravating_factors": ["nothing specific makes it worse — it comes and goes on its own", "lying still (psychological — feels need to move)"],
-            "alleviating_factors": ["movement and pacing (psychological comfort)", "nothing truly relieves the pain"],
-            "associated_symptoms": ["nausea", "vomiting", "gross hematuria"]
+            "aggravating_factors": [
+                "nothing specific makes it worse \u00e2\u20ac\u201d it comes and goes on its own",
+                "lying still (psychological \u00e2\u20ac\u201d feels need to move)"
+            ],
+            "alleviating_factors": [
+                "movement and pacing (psychological comfort)",
+                "nothing truly relieves the pain"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "vomiting",
+                "gross hematuria"
+            ]
         },
         "nausea_and_vomiting": {
             "description": "I've thrown up twice. The pain is so bad it makes me sick. I still feel like I could puke again.",
@@ -29,9 +39,15 @@
             "severity": "7/10",
             "location": "epigastric",
             "radiation": null,
-            "aggravating_factors": ["peak pain episodes"],
-            "alleviating_factors": ["pain relief"],
-            "associated_symptoms": ["flank pain"]
+            "aggravating_factors": [
+                "peak pain episodes"
+            ],
+            "alleviating_factors": [
+                "pain relief"
+            ],
+            "associated_symptoms": [
+                "flank pain"
+            ]
         },
         "hematuria": {
             "description": "My urine is pink. I noticed it when I tried to go to the bathroom. It kind of freaked me out.",
@@ -42,7 +58,10 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["flank pain", "dysuria"]
+            "associated_symptoms": [
+                "flank pain",
+                "dysuria"
+            ]
         },
         "urinary_urgency_and_frequency": {
             "description": "I keep feeling like I need to go but when I try, barely anything comes out. And it stings when I do go.",
@@ -51,20 +70,31 @@
             "severity": "5/10",
             "location": "suprapubic and urethral",
             "radiation": null,
-            "aggravating_factors": ["urination"],
+            "aggravating_factors": [
+                "urination"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["hematuria"]
+            "associated_symptoms": [
+                "hematuria"
+            ]
         },
         "restlessness": {
             "description": "I can't sit still. I can't lie down. I've been pacing my apartment for hours. There is no comfortable position. I tried every position imaginable.",
             "onset": "4 hours ago",
-            "character": "extreme restlessness, inability to find comfortable position — classic renal colic behavior (unlike peritonitis where patients lie still)",
+            "character": "extreme restlessness, inability to find comfortable position \u00e2\u20ac\u201d classic renal colic behavior (unlike peritonitis where patients lie still)",
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["staying in one position"],
-            "alleviating_factors": ["constant movement provides psychological relief"],
-            "associated_symptoms": ["pain", "anxiety"]
+            "aggravating_factors": [
+                "staying in one position"
+            ],
+            "alleviating_factors": [
+                "constant movement provides psychological relief"
+            ],
+            "associated_symptoms": [
+                "pain",
+                "anxiety"
+            ]
         },
         "testicular_pain": {
             "description": "The pain shoots down into my left testicle. It's a dull ache that comes with the flank pain waves.",
@@ -73,17 +103,29 @@
             "severity": "5/10",
             "location": "left testicle",
             "radiation": "from left flank through groin",
-            "aggravating_factors": ["flank pain exacerbations"],
+            "aggravating_factors": [
+                "flank pain exacerbations"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["flank pain"]
+            "associated_symptoms": [
+                "flank pain"
+            ]
         }
     },
     "symptoms_absent": [
-        "fever", "chills", "chest pain", "shortness of breath",
-        "diarrhea", "constipation", "back pain at rest between episodes",
-        "bilateral flank pain", "testicular swelling or redness",
-        "abdominal distension", "leg symptoms",
-        "history of recent trauma", "penile discharge"
+        "fever",
+        "chills",
+        "chest pain",
+        "shortness of breath",
+        "diarrhea",
+        "constipation",
+        "back pain at rest between episodes",
+        "bilateral flank pain",
+        "testicular swelling or redness",
+        "abdominal distension",
+        "leg symptoms",
+        "history of recent trauma",
+        "penile discharge"
     ],
     "vitals": {
         "heart_rate": 98,
@@ -102,7 +144,7 @@
         "calcium_serum": "10.4 mg/dL (high-normal)",
         "phosphorus": "3.8 mg/dL (normal)",
         "PTH": "Pending",
-        "lipase": "38 U/L (normal — rules out pancreatitis)",
+        "lipase": "38 U/L (normal \u00e2\u20ac\u201d rules out pancreatitis)",
         "CT_abdomen_pelvis_noncontrast": "7mm obstructing calculus at the left ureterovesicular junction (UVJ) with moderate left hydroureter and mild left hydronephrosis. No perinephric stranding or abscess. Right kidney normal. No alternative pathology."
     },
     "past_medical_history": [
@@ -119,7 +161,7 @@
         "Losartan 50mg daily",
         "Allopurinol 100mg daily",
         "Multivitamin daily",
-        "Vitamin C 1000mg daily (HIGH DOSE — increases oxalate excretion and stone risk)",
+        "Vitamin C 1000mg daily (HIGH DOSE \u00e2\u20ac\u201d increases oxalate excretion and stone risk)",
         "Whey protein supplement"
     ],
     "allergies": [
@@ -146,42 +188,51 @@
     "communication_style": "Direct and no-nonsense. Gives clear, concise answers when pain allows. During pain peaks, can only give one-word answers or moans. Since his wife is a nurse, uses some medical terminology. Asks specific questions about his CT results and treatment plan. Wants to know when he can go home. Gets irritated if he feels pain management is delayed.",
     "pain_description_style": "Rates pain 10/10 during peaks without hesitation. Compares it to being stabbed and twisted. Notes the colicky (wave-like) pattern from his prior experience. Between waves, becomes more conversational and says 'it's better right now but it'll come back.' Grips the bedrail, writhes, and paces during peaks.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
-            "7mm obstructing stone at left UVJ — borderline for spontaneous passage (stones >6mm have <20% chance of spontaneous passage)",
+            "7mm obstructing stone at left UVJ \u00e2\u20ac\u201d borderline for spontaneous passage (stones >6mm have <20% chance of spontaneous passage)",
             "Moderate hydroureter and mild hydronephrosis indicating obstruction",
-            "No signs of infection (afebrile, no pyuria) — important because infected obstructed kidney is a urologic emergency",
-            "History of prior calcium oxalate stone — this is likely a recurrence",
+            "No signs of infection (afebrile, no pyuria) \u00e2\u20ac\u201d important because infected obstructed kidney is a urologic emergency",
+            "History of prior calcium oxalate stone \u00e2\u20ac\u201d this is likely a recurrence",
             "Multiple dietary and lifestyle risk factors: high protein, high oxalate foods (spinach, nuts), high vitamin C (1000mg increases urinary oxalate), chronic dehydration, high purine intake",
-            "Elevated uric acid (8.2) and history of gout — may have mixed or uric acid stone component",
-            "High-normal calcium (10.4) — PTH should be checked to rule out primary hyperparathyroidism",
+            "Elevated uric acid (8.2) and history of gout \u00e2\u20ac\u201d may have mixed or uric acid stone component",
+            "High-normal calcium (10.4) \u00e2\u20ac\u201d PTH should be checked to rule out primary hyperparathyroidism",
             "Strong family history of nephrolithiasis (father, brother, uncle)",
             "Gross hematuria with significant microscopic blood confirming stone irritation"
         ],
         "diagnosis": "Acute left nephrolithiasis (kidney stone) with 7mm obstructing calculus at left ureterovesicular junction",
         "differential_diagnoses": [
-            "Pyelonephritis (afebrile, no pyuria — less likely)",
+            "Pyelonephritis (afebrile, no pyuria \u00e2\u20ac\u201d less likely)",
             "Renal infarction",
             "Aortic aneurysm or dissection",
             "Appendicitis (right-sided would be more typical, this is left-sided)",
             "Diverticulitis (left lower quadrant pain)",
             "Testicular torsion (normal testicular exam, referred pain pattern)",
-            "Musculoskeletal back pain (no position of comfort, colicky — not MSK)"
+            "Musculoskeletal back pain (no position of comfort, colicky \u00e2\u20ac\u201d not MSK)"
         ],
         "recommended_interventions": [
             "Aggressive IV pain management: ketorolac 30mg IV (first-line NSAID for renal colic) + opioid for breakthrough (morphine or hydromorphone)",
             "IV ondansetron 4mg for nausea and vomiting",
             "IV normal saline for hydration (but excessive hydration does not speed passage)",
-            "Urology consult for 7mm stone — likely will need intervention (ureteroscopy with laser lithotripsy or extracorporeal shock wave lithotripsy)",
+            "Urology consult for 7mm stone \u00e2\u20ac\u201d likely will need intervention (ureteroscopy with laser lithotripsy or extracorporeal shock wave lithotripsy)",
             "Strain all urine for stone collection and composition analysis",
             "Alpha-blocker therapy (tamsulosin 0.4mg daily) for medical expulsive therapy if trial of passage is attempted",
             "24-hour urine collection as outpatient for metabolic stone workup",
-            "STOP vitamin C 1000mg — increases urinary oxalate and stone risk",
+            "STOP vitamin C 1000mg \u00e2\u20ac\u201d increases urinary oxalate and stone risk",
             "Dietary counseling: reduce animal protein, reduce high-oxalate foods, increase fluid intake to >2.5L/day, reduce sodium",
-            "Follow up PTH result — rule out primary hyperparathyroidism given high-normal calcium and recurrent stones",
+            "Follow up PTH result \u00e2\u20ac\u201d rule out primary hyperparathyroidism given high-normal calcium and recurrent stones",
             "Continue allopurinol for uric acid management",
             "Repeat imaging in 2-4 weeks if trial of passage is attempted to confirm stone movement",
-            "Return precautions: fever, inability to urinate, worsening pain, persistent vomiting (signs of infected obstructed stone — urologic emergency)"
+            "Return precautions: fever, inability to urinate, worsening pain, persistent vomiting (signs of infected obstructed stone \u00e2\u20ac\u201d urologic emergency)"
         ]
-    }
+    },
+    "category": "Renal"
 }

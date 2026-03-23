@@ -18,9 +18,20 @@
             "severity": "8/10",
             "location": "right upper quadrant, below costal margin",
             "radiation": "right shoulder blade and right shoulder tip",
-            "aggravating_factors": ["deep inspiration (stops breathing in mid-breath)", "palpation", "fatty food intake", "movement"],
-            "alleviating_factors": ["nothing, tried ibuprofen and heating pad with no relief"],
-            "associated_symptoms": ["nausea", "vomiting", "fever"]
+            "aggravating_factors": [
+                "deep inspiration (stops breathing in mid-breath)",
+                "palpation",
+                "fatty food intake",
+                "movement"
+            ],
+            "alleviating_factors": [
+                "nothing, tried ibuprofen and heating pad with no relief"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "vomiting",
+                "fever"
+            ]
         },
         "nausea": {
             "description": "I feel really sick to my stomach, threw up twice already",
@@ -29,9 +40,16 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["fatty food", "movement"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["vomiting"]
+            "aggravating_factors": [
+                "fatty food",
+                "movement"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "vomiting"
+            ]
         },
         "vomiting": {
             "description": "I threw up twice, mostly what I ate for dinner, then just dry heaving",
@@ -40,9 +58,14 @@
             "severity": "2 episodes",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any movement"],
+            "aggravating_factors": [
+                "any movement"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["nausea", "RUQ pain"]
+            "associated_symptoms": [
+                "nausea",
+                "RUQ pain"
+            ]
         },
         "fever": {
             "description": "I've been feeling hot and clammy, my husband said I felt warm",
@@ -52,15 +75,29 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["took Tylenol but it didn't help much"],
-            "associated_symptoms": ["chills"]
+            "alleviating_factors": [
+                "took Tylenol but it didn't help much"
+            ],
+            "associated_symptoms": [
+                "chills"
+            ]
         }
     },
     "symptoms_absent": [
-        "jaundice", "dark urine", "clay-colored stools", "diarrhea",
-        "constipation", "hematemesis", "melena", "chest pain",
-        "shortness of breath", "urinary symptoms", "back pain",
-        "vaginal discharge", "headache", "weight loss"
+        "jaundice",
+        "dark urine",
+        "clay-colored stools",
+        "diarrhea",
+        "constipation",
+        "hematemesis",
+        "melena",
+        "chest pain",
+        "shortness of breath",
+        "urinary symptoms",
+        "back pain",
+        "vaginal discharge",
+        "headache",
+        "weight loss"
     ],
     "vitals": {
         "heart_rate": 96,
@@ -120,7 +157,15 @@
     "communication_style": "Talkative and personable. Apologizes frequently for 'bothering' the staff. Mentions her kids often. Will downplay symptoms initially but is honest when asked directly. Uses phrases like 'I probably should have come in sooner' and 'my husband made me come in.'",
     "pain_description_style": "Points to exact location under right ribs. Demonstrates how taking a deep breath makes it worse by catching her breath mid-inhale (positive Murphy's sign equivalent). Describes pain as 'grabbing' and 'it won't let up.' Says previous episodes went away on their own but this one is different.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Persistent RUQ pain with fever (101.2F) - classic acute cholecystitis presentation",
             "Positive Murphy's sign equivalent (catches breath with deep inspiration)",
@@ -153,5 +198,6 @@
             "Monitor for signs of cholangitis (Charcot's triad, Reynolds' pentad)",
             "Use non-adhesive dressings and hypoallergenic tape (tape allergy)"
         ]
-    }
+    },
+    "category": "GI"
 }

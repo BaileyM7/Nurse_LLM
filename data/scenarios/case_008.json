@@ -18,9 +18,22 @@
             "severity": "6/10 at rest, 8/10 with walking or dorsiflexion",
             "location": "left posterior calf, extending toward the inner knee",
             "radiation": "up toward the back of the knee",
-            "aggravating_factors": ["walking", "standing", "pointing foot up toward shin", "any pressure on the calf"],
-            "alleviating_factors": ["elevating the leg", "rest", "ibuprofen takes the edge off slightly"],
-            "associated_symptoms": ["leg swelling", "redness", "warmth"]
+            "aggravating_factors": [
+                "walking",
+                "standing",
+                "pointing foot up toward shin",
+                "any pressure on the calf"
+            ],
+            "alleviating_factors": [
+                "elevating the leg",
+                "rest",
+                "ibuprofen takes the edge off slightly"
+            ],
+            "associated_symptoms": [
+                "leg swelling",
+                "redness",
+                "warmth"
+            ]
         },
         "leg_swelling": {
             "description": "Left leg is noticeably bigger than the right, from the foot up past the knee now",
@@ -29,9 +42,17 @@
             "severity": "7/10",
             "location": "left lower extremity, foot to above knee",
             "radiation": null,
-            "aggravating_factors": ["standing", "dangling leg down"],
-            "alleviating_factors": ["elevation helps slightly"],
-            "associated_symptoms": ["skin tightness", "warmth"]
+            "aggravating_factors": [
+                "standing",
+                "dangling leg down"
+            ],
+            "alleviating_factors": [
+                "elevation helps slightly"
+            ],
+            "associated_symptoms": [
+                "skin tightness",
+                "warmth"
+            ]
         },
         "erythema_and_warmth": {
             "description": "The skin over my calf is red and feels hot to the touch, started this morning",
@@ -42,7 +63,9 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["tenderness"]
+            "associated_symptoms": [
+                "tenderness"
+            ]
         },
         "mild_shortness_of_breath": {
             "description": "I've been a little winded the last day or so, nothing terrible but I noticed it going up the stairs",
@@ -51,16 +74,32 @@
             "severity": "3/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["exertion", "climbing stairs"],
-            "alleviating_factors": ["rest"],
+            "aggravating_factors": [
+                "exertion",
+                "climbing stairs"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
             "associated_symptoms": []
         }
     },
     "symptoms_absent": [
-        "chest pain", "palpitations", "syncope", "hemoptysis", "fever",
-        "cough", "bilateral leg swelling", "nausea", "vomiting",
-        "abdominal pain", "headache", "rash elsewhere", "joint pain",
-        "urinary symptoms", "recent trauma to the leg"
+        "chest pain",
+        "palpitations",
+        "syncope",
+        "hemoptysis",
+        "fever",
+        "cough",
+        "bilateral leg swelling",
+        "nausea",
+        "vomiting",
+        "abdominal pain",
+        "headache",
+        "rash elsewhere",
+        "joint pain",
+        "urinary symptoms",
+        "recent trauma to the leg"
     ],
     "vitals": {
         "heart_rate": 96,
@@ -128,7 +167,15 @@
     "communication_style": "Organized and methodical - will give a clear timeline of events if allowed to tell the story in order. Asks practical questions ('How long will I be on blood thinners? Can I still do physical therapy? Will this delay my knee recovery?'). May get frustrated if she feels she's not getting straight answers.",
     "pain_description_style": "Compares it to known experiences ('It's not like the knee surgery pain, it's deeper, more of a throbbing ache'). Good at distinguishing between surgical pain and this new pain. Will accurately point to where it hurts and describe what makes it worse.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Extensive proximal DVT (common femoral to popliteal vein) - high risk for pulmonary embolism",
             "CRITICAL: History of heparin-induced thrombocytopenia (HIT) - CANNOT use heparin or LMWH",
@@ -165,5 +212,6 @@
             "Thrombophilia workup after acute treatment (Factor V Leiden, prothrombin gene mutation, antiphospholipid antibodies)",
             "Pain management avoiding immobility"
         ]
-    }
+    },
+    "category": "Cardiac"
 }

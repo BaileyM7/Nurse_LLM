@@ -18,9 +18,19 @@
             "severity": "9/10",
             "location": "epigastric, band-like across upper abdomen",
             "radiation": "straight through to the mid-back",
-            "aggravating_factors": ["lying flat", "eating", "deep breathing"],
-            "alleviating_factors": ["leaning forward slightly", "nothing really helps"],
-            "associated_symptoms": ["vomiting", "nausea"]
+            "aggravating_factors": [
+                "lying flat",
+                "eating",
+                "deep breathing"
+            ],
+            "alleviating_factors": [
+                "leaning forward slightly",
+                "nothing really helps"
+            ],
+            "associated_symptoms": [
+                "vomiting",
+                "nausea"
+            ]
         },
         "vomiting": {
             "description": "I've thrown up five or six times now, it's just bile at this point, nothing is staying down",
@@ -29,9 +39,17 @@
             "severity": "persistent",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["any attempt to eat or drink", "movement"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["epigastric pain", "nausea"]
+            "aggravating_factors": [
+                "any attempt to eat or drink",
+                "movement"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "epigastric pain",
+                "nausea"
+            ]
         },
         "nausea": {
             "description": "I feel sick to my stomach constantly, even between vomiting episodes",
@@ -40,9 +58,16 @@
             "severity": "8/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["smell of food", "movement"],
-            "alleviating_factors": ["nothing"],
-            "associated_symptoms": ["vomiting"]
+            "aggravating_factors": [
+                "smell of food",
+                "movement"
+            ],
+            "alleviating_factors": [
+                "nothing"
+            ],
+            "associated_symptoms": [
+                "vomiting"
+            ]
         },
         "abdominal_distension": {
             "description": "My belly feels bloated and tight, especially up top",
@@ -53,14 +78,26 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["decreased bowel sounds"]
+            "associated_symptoms": [
+                "decreased bowel sounds"
+            ]
         }
     },
     "symptoms_absent": [
-        "diarrhea", "constipation", "hematemesis", "melena", "hematochezia",
-        "fever", "chest pain", "shortness of breath", "jaundice",
-        "urinary symptoms", "vaginal bleeding", "headache",
-        "dark urine", "clay-colored stools"
+        "diarrhea",
+        "constipation",
+        "hematemesis",
+        "melena",
+        "hematochezia",
+        "fever",
+        "chest pain",
+        "shortness of breath",
+        "jaundice",
+        "urinary symptoms",
+        "vaginal bleeding",
+        "headache",
+        "dark urine",
+        "clay-colored stools"
     ],
     "vitals": {
         "heart_rate": 108,
@@ -121,7 +158,15 @@
     "communication_style": "Educated and precise in describing symptoms. Uses some medical terminology from her own research. Asks 'what does that mean?' when given lab results. Frequently mentions her kids and husband waiting in the lobby. Wants to understand the plan.",
     "pain_description_style": "Very descriptive and specific about pain quality, location, and timeline. Rates pain accurately. Says things like 'it's a deep, boring pain that radiates straight through to my back, worse when I lie flat.' Does not exaggerate or minimize.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Markedly elevated lipase (1850 U/L) confirming acute pancreatitis",
             "Known gallstone history with elevated liver enzymes and bilirubin suggesting gallstone pancreatitis",
@@ -153,5 +198,6 @@
             "Assess BISAP or Ranson's criteria for severity scoring",
             "Monitor for organ dysfunction (renal, respiratory)"
         ]
-    }
+    },
+    "category": "GI"
 }

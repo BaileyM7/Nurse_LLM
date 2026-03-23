@@ -18,9 +18,19 @@
             "severity": "9/10",
             "location": "diffuse, worst occipitally",
             "radiation": "behind both eyes",
-            "aggravating_factors": ["light", "bending over", "any movement"],
-            "alleviating_factors": ["nothing, ibuprofen didn't help"],
-            "associated_symptoms": ["blurry vision", "nausea", "chest tightness"]
+            "aggravating_factors": [
+                "light",
+                "bending over",
+                "any movement"
+            ],
+            "alleviating_factors": [
+                "nothing, ibuprofen didn't help"
+            ],
+            "associated_symptoms": [
+                "blurry vision",
+                "nausea",
+                "chest tightness"
+            ]
         },
         "visual_changes": {
             "description": "Everything looks blurry and I'm seeing little spots floating around",
@@ -29,9 +39,15 @@
             "severity": "7/10",
             "location": "both eyes",
             "radiation": null,
-            "aggravating_factors": ["trying to read or focus on anything"],
-            "alleviating_factors": ["closing eyes"],
-            "associated_symptoms": ["headache"]
+            "aggravating_factors": [
+                "trying to read or focus on anything"
+            ],
+            "alleviating_factors": [
+                "closing eyes"
+            ],
+            "associated_symptoms": [
+                "headache"
+            ]
         },
         "nausea": {
             "description": "Very nauseous, vomited once in the car on the way here",
@@ -40,9 +56,16 @@
             "severity": "6/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["movement", "trying to drink water"],
-            "alleviating_factors": ["staying still"],
-            "associated_symptoms": ["headache"]
+            "aggravating_factors": [
+                "movement",
+                "trying to drink water"
+            ],
+            "alleviating_factors": [
+                "staying still"
+            ],
+            "associated_symptoms": [
+                "headache"
+            ]
         },
         "chest_tightness": {
             "description": "Feels like a band around my chest, not really pain but very uncomfortable",
@@ -51,9 +74,16 @@
             "severity": "5/10",
             "location": "across the chest",
             "radiation": null,
-            "aggravating_factors": ["anxiety", "deep breathing"],
-            "alleviating_factors": ["nothing specific"],
-            "associated_symptoms": ["shortness of breath"]
+            "aggravating_factors": [
+                "anxiety",
+                "deep breathing"
+            ],
+            "alleviating_factors": [
+                "nothing specific"
+            ],
+            "associated_symptoms": [
+                "shortness of breath"
+            ]
         },
         "shortness_of_breath": {
             "description": "Feeling a little breathless, not terrible but noticeable",
@@ -62,9 +92,15 @@
             "severity": "4/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["walking"],
-            "alleviating_factors": ["sitting still"],
-            "associated_symptoms": ["chest tightness"]
+            "aggravating_factors": [
+                "walking"
+            ],
+            "alleviating_factors": [
+                "sitting still"
+            ],
+            "associated_symptoms": [
+                "chest tightness"
+            ]
         },
         "epistaxis": {
             "description": "Nose started bleeding about an hour ago, hasn't fully stopped",
@@ -74,15 +110,27 @@
             "location": "left nostril",
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["pinching nose"],
+            "alleviating_factors": [
+                "pinching nose"
+            ],
             "associated_symptoms": []
         }
     },
     "symptoms_absent": [
-        "fever", "cough", "leg swelling", "palpitations", "syncope",
-        "focal weakness", "numbness or tingling", "slurred speech",
-        "diarrhea", "abdominal pain", "rash", "joint pain",
-        "urinary symptoms", "seizures"
+        "fever",
+        "cough",
+        "leg swelling",
+        "palpitations",
+        "syncope",
+        "focal weakness",
+        "numbness or tingling",
+        "slurred speech",
+        "diarrhea",
+        "abdominal pain",
+        "rash",
+        "joint pain",
+        "urinary symptoms",
+        "seizures"
     ],
     "vitals": {
         "heart_rate": 108,
@@ -148,7 +196,15 @@
     "communication_style": "Articulate and detailed when describing symptoms. Asks a lot of questions because she wants to understand what is happening. May become tearful when discussing stress. Wants to know every lab result and what it means. Will ask 'Is this a stroke? Am I going to die?'",
     "pain_description_style": "Very precise with descriptions, uses vivid language ('my head feels like it's in a vise,' 'pounding like a drum'). Rates pain accurately and doesn't minimize or exaggerate.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Blood pressure 224/132 - severely elevated meeting criteria for hypertensive emergency",
             "End-organ damage: visual changes (hypertensive retinopathy risk), headache with vomiting (cerebral edema risk), epistaxis, elevated creatinine (renal involvement), proteinuria, elevated troponin (cardiac strain)",
@@ -182,5 +238,6 @@
             "ICU admission for blood pressure titration",
             "Stress management and dietary counseling prior to discharge"
         ]
-    }
+    },
+    "category": "Cardiac"
 }

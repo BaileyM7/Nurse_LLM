@@ -18,9 +18,20 @@
             "severity": "9/10",
             "location": "chest, diffuse",
             "radiation": null,
-            "aggravating_factors": ["talking", "any movement", "lying down"],
-            "alleviating_factors": ["nothing currently providing relief", "tripod position slightly better"],
-            "associated_symptoms": ["wheezing", "chest tightness", "anxiety"]
+            "aggravating_factors": [
+                "talking",
+                "any movement",
+                "lying down"
+            ],
+            "alleviating_factors": [
+                "nothing currently providing relief",
+                "tripod position slightly better"
+            ],
+            "associated_symptoms": [
+                "wheezing",
+                "chest tightness",
+                "anxiety"
+            ]
         },
         "wheezing": {
             "description": "Loud whistling sounds with every breath, can hear it without a stethoscope",
@@ -29,9 +40,16 @@
             "severity": "9/10",
             "location": "bilateral lungs",
             "radiation": null,
-            "aggravating_factors": ["attempted deep breaths"],
-            "alleviating_factors": ["none currently"],
-            "associated_symptoms": ["dyspnea", "chest tightness"]
+            "aggravating_factors": [
+                "attempted deep breaths"
+            ],
+            "alleviating_factors": [
+                "none currently"
+            ],
+            "associated_symptoms": [
+                "dyspnea",
+                "chest tightness"
+            ]
         },
         "chest_tightness": {
             "description": "Feels like someone wrapped a belt around my chest and keeps tightening it",
@@ -40,9 +58,18 @@
             "severity": "8/10",
             "location": "entire chest, bilateral",
             "radiation": null,
-            "aggravating_factors": ["breathing attempts", "coughing"],
-            "alleviating_factors": ["none"],
-            "associated_symptoms": ["wheezing", "dyspnea", "cough"]
+            "aggravating_factors": [
+                "breathing attempts",
+                "coughing"
+            ],
+            "alleviating_factors": [
+                "none"
+            ],
+            "associated_symptoms": [
+                "wheezing",
+                "dyspnea",
+                "cough"
+            ]
         },
         "cough": {
             "description": "Dry, hacking cough that won't stop, makes it even harder to breathe",
@@ -51,9 +78,16 @@
             "severity": "7/10",
             "location": "chest",
             "radiation": null,
-            "aggravating_factors": ["talking", "attempting deep breaths"],
-            "alleviating_factors": ["none"],
-            "associated_symptoms": ["worsening dyspnea"]
+            "aggravating_factors": [
+                "talking",
+                "attempting deep breaths"
+            ],
+            "alleviating_factors": [
+                "none"
+            ],
+            "associated_symptoms": [
+                "worsening dyspnea"
+            ]
         },
         "anxiety": {
             "description": "I'm really scared, I feel like I'm going to die, this is the worst attack I've ever had",
@@ -62,9 +96,17 @@
             "severity": "9/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["inability to breathe", "inhaler not working"],
-            "alleviating_factors": ["reassurance from staff"],
-            "associated_symptoms": ["tachycardia", "diaphoresis"]
+            "aggravating_factors": [
+                "inability to breathe",
+                "inhaler not working"
+            ],
+            "alleviating_factors": [
+                "reassurance from staff"
+            ],
+            "associated_symptoms": [
+                "tachycardia",
+                "diaphoresis"
+            ]
         },
         "diaphoresis": {
             "description": "Sweating all over even though I'm cold",
@@ -73,9 +115,14 @@
             "severity": null,
             "location": "generalized",
             "radiation": null,
-            "aggravating_factors": ["work of breathing"],
+            "aggravating_factors": [
+                "work of breathing"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["anxiety", "dyspnea"]
+            "associated_symptoms": [
+                "anxiety",
+                "dyspnea"
+            ]
         }
     },
     "symptoms_absent": [
@@ -102,10 +149,10 @@
         "pain_scale": 7
     },
     "labs": {
-        "ABG": "pH 7.44, pCO2 33 mmHg, pO2 62 mmHg (hypoxemia with respiratory alkalosis — concerning if pCO2 normalizes or rises, signals fatigue)",
+        "ABG": "pH 7.44, pCO2 33 mmHg, pO2 62 mmHg (hypoxemia with respiratory alkalosis \u00e2\u20ac\u201d concerning if pCO2 normalizes or rises, signals fatigue)",
         "CBC": "WBC 8.9, Hgb 13.5, Plt 280, Eosinophils 6% (mildly elevated)",
         "BMP": "Na 140, K 3.6, Cr 0.7, Glucose 142 (mild stress response), BUN 12",
-        "peak_flow": "120 L/min (predicted ~440 L/min, approximately 27% of predicted — severe obstruction)",
+        "peak_flow": "120 L/min (predicted ~440 L/min, approximately 27% of predicted \u00e2\u20ac\u201d severe obstruction)",
         "lactate": "2.4 mmol/L (mildly elevated, reflecting work of breathing)",
         "chest_xray": "Hyperinflated lungs, no infiltrates, no pneumothorax, no effusions"
     },
@@ -152,10 +199,18 @@
     "communication_style": "Speaks in fragmented, short phrases between gasps. Nods or shakes head for yes/no when too winded to talk. Very honest about medication non-compliance when asked. Will text her mom on her phone if she can't verbalize answers. Uses generation-appropriate language.",
     "pain_description_style": "Describes the chest tightness vividly ('like my lungs are in a fist') but differentiates it from pain clearly. Knows her asthma well and can tell you this is her worst episode. Rates things quickly on a number scale when asked.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
-            "SpO2 89% on room air — significant hypoxemia",
-            "Peak flow 27% of predicted — severe obstruction",
+            "SpO2 89% on room air \u00e2\u20ac\u201d significant hypoxemia",
+            "Peak flow 27% of predicted \u00e2\u20ac\u201d severe obstruction",
             "Tachycardia at 132 bpm reflecting severity and albuterol use",
             "Tachypnea at 34 breaths/min with accessory muscle use",
             "Failed rescue inhaler therapy (4 doses without relief)",
@@ -163,7 +218,7 @@
             "Cat exposure as known trigger",
             "Non-compliance with controller medication (Advair)",
             "NSAID sensitivity (ibuprofen worsens wheezing)",
-            "pCO2 still low at 33 — if it normalizes, patient is tiring and may need intubation"
+            "pCO2 still low at 33 \u00e2\u20ac\u201d if it normalizes, patient is tiring and may need intubation"
         ],
         "diagnosis": "Severe Acute Asthma Exacerbation (Status Asthmaticus)",
         "differential_diagnoses": [
@@ -181,11 +236,12 @@
             "Systemic corticosteroids (IV methylprednisolone 125mg or oral prednisone 60mg)",
             "Continuous cardiorespiratory monitoring and pulse oximetry",
             "Serial peak flow measurements",
-            "Serial ABGs — monitor for rising pCO2 (sign of respiratory fatigue)",
+            "Serial ABGs \u00e2\u20ac\u201d monitor for rising pCO2 (sign of respiratory fatigue)",
             "ICU admission if no improvement within 1-2 hours",
             "Prepare for possible intubation if clinical deterioration",
             "Avoid NSAID-containing medications",
             "Asthma action plan education and controller medication compliance counseling at discharge"
         ]
-    }
+    },
+    "category": "Respiratory"
 }

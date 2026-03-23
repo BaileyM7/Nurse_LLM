@@ -18,9 +18,23 @@
             "severity": "8/10",
             "location": "lumbar spine, L4-S1 region",
             "radiation": "bilateral lower extremities, posterior thighs to calves",
-            "aggravating_factors": ["bending forward", "sitting", "coughing", "straining", "Valsalva maneuver"],
-            "alleviating_factors": ["lying flat on back with knees bent", "ice", "ibuprofen minimally helpful"],
-            "associated_symptoms": ["bilateral leg pain", "saddle numbness", "urinary retention"]
+            "aggravating_factors": [
+                "bending forward",
+                "sitting",
+                "coughing",
+                "straining",
+                "Valsalva maneuver"
+            ],
+            "alleviating_factors": [
+                "lying flat on back with knees bent",
+                "ice",
+                "ibuprofen minimally helpful"
+            ],
+            "associated_symptoms": [
+                "bilateral leg pain",
+                "saddle numbness",
+                "urinary retention"
+            ]
         },
         "bilateral_leg_pain": {
             "description": "Both my legs are aching and burning, from my butt all the way down to my feet. The left is worse than the right.",
@@ -29,9 +43,20 @@
             "severity": "7/10",
             "location": "bilateral posterior thighs, calves, and feet, left greater than right",
             "radiation": "from buttocks to feet bilaterally",
-            "aggravating_factors": ["sitting", "standing", "walking", "straight leg raise"],
-            "alleviating_factors": ["lying flat with knees bent"],
-            "associated_symptoms": ["numbness", "tingling", "weakness"]
+            "aggravating_factors": [
+                "sitting",
+                "standing",
+                "walking",
+                "straight leg raise"
+            ],
+            "alleviating_factors": [
+                "lying flat with knees bent"
+            ],
+            "associated_symptoms": [
+                "numbness",
+                "tingling",
+                "weakness"
+            ]
         },
         "saddle_anesthesia": {
             "description": "The area between my legs and around my rear end feels numb and tingly, like it's falling asleep. It's a really strange feeling.",
@@ -42,7 +67,10 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["urinary retention", "decreased rectal tone"]
+            "associated_symptoms": [
+                "urinary retention",
+                "decreased rectal tone"
+            ]
         },
         "urinary_retention": {
             "description": "I can barely pee. I feel like I have to go really bad but when I try, it just trickles. And I've wet myself twice, which has never happened to me before.",
@@ -53,7 +81,10 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["saddle numbness", "suprapubic discomfort"]
+            "associated_symptoms": [
+                "saddle numbness",
+                "suprapubic discomfort"
+            ]
         },
         "bilateral_leg_weakness": {
             "description": "My legs feel heavy and weak. I'm having trouble lifting my feet when I walk. I tripped twice on the way in because my feet are dragging.",
@@ -62,9 +93,15 @@
             "severity": "7/10",
             "location": "bilateral lower extremities, worse in ankles and feet",
             "radiation": null,
-            "aggravating_factors": ["walking", "standing"],
+            "aggravating_factors": [
+                "walking",
+                "standing"
+            ],
             "alleviating_factors": [],
-            "associated_symptoms": ["gait instability", "leg pain"]
+            "associated_symptoms": [
+                "gait instability",
+                "leg pain"
+            ]
         },
         "numbness_and_tingling_legs": {
             "description": "Both feet and lower legs are tingling and feel like they're going to sleep. The numbness is creeping up.",
@@ -75,15 +112,25 @@
             "radiation": null,
             "aggravating_factors": [],
             "alleviating_factors": [],
-            "associated_symptoms": ["weakness", "gait difficulty"]
+            "associated_symptoms": [
+                "weakness",
+                "gait difficulty"
+            ]
         }
     },
     "symptoms_absent": [
-        "fever", "unexplained weight loss", "history of cancer",
-        "chest pain", "shortness of breath", "abdominal pain",
+        "fever",
+        "unexplained weight loss",
+        "history of cancer",
+        "chest pain",
+        "shortness of breath",
+        "abdominal pain",
         "bowel incontinence (but reports decreased rectal sensation)",
-        "upper extremity symptoms", "headache", "neck pain",
-        "trauma other than lifting injury", "night sweats",
+        "upper extremity symptoms",
+        "headache",
+        "neck pain",
+        "trauma other than lifting injury",
+        "night sweats",
         "IV drug use"
     ],
     "vitals": {
@@ -144,7 +191,15 @@
     "communication_style": "Matter-of-fact and brief. Gives short answers unless prompted for detail. Uses plain working-class language. Avoids eye contact when discussing embarrassing symptoms like incontinence. Needs to be asked directly about sensitive symptoms as he won't volunteer them.",
     "pain_description_style": "Understates pain due to masculine stoicism. Says 'it's bad' rather than elaborating. When asked for a number, tends to rate lower than expected. Will wince or shift position to reveal true pain level. Describes pain in practical terms ('can't work,' 'can't sit').",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Cauda equina syndrome: saddle anesthesia + urinary retention + bilateral leg weakness = surgical emergency",
             "Post-void residual 480 mL confirming neurogenic bladder",
@@ -179,5 +234,6 @@
             "Educate patient about surgical urgency and potential for incomplete neurological recovery given delayed presentation",
             "Social work consult for occupational disability and rehabilitation planning"
         ]
-    }
+    },
+    "category": "MSK"
 }

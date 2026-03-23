@@ -18,9 +18,19 @@
             "severity": "7/10 with deep breath, 4/10 at rest",
             "location": "retrosternal, central chest",
             "radiation": "to the left side of the neck and left trapezius area",
-            "aggravating_factors": ["deep inspiration", "lying flat", "leaning backward", "coughing"],
-            "alleviating_factors": ["sitting up and leaning forward", "shallow breathing"],
-            "associated_symptoms": ["mild shortness of breath from guarding"]
+            "aggravating_factors": [
+                "deep inspiration",
+                "lying flat",
+                "leaning backward",
+                "coughing"
+            ],
+            "alleviating_factors": [
+                "sitting up and leaning forward",
+                "shallow breathing"
+            ],
+            "associated_symptoms": [
+                "mild shortness of breath from guarding"
+            ]
         },
         "shortness_of_breath": {
             "description": "Not really short of breath, more like I'm afraid to take a deep breath because it hurts so bad",
@@ -29,9 +39,15 @@
             "severity": "3/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["deep breathing"],
-            "alleviating_factors": ["shallow breathing"],
-            "associated_symptoms": ["chest pain"]
+            "aggravating_factors": [
+                "deep breathing"
+            ],
+            "alleviating_factors": [
+                "shallow breathing"
+            ],
+            "associated_symptoms": [
+                "chest pain"
+            ]
         },
         "low_grade_fever": {
             "description": "Been feeling warm and achy since last night, kind of like the tail end of being sick",
@@ -41,8 +57,12 @@
             "location": null,
             "radiation": null,
             "aggravating_factors": [],
-            "alleviating_factors": ["ibuprofen helped some"],
-            "associated_symptoms": ["malaise"]
+            "alleviating_factors": [
+                "ibuprofen helped some"
+            ],
+            "associated_symptoms": [
+                "malaise"
+            ]
         },
         "malaise": {
             "description": "Just feeling run down, like I'm not over this cold yet",
@@ -51,15 +71,32 @@
             "severity": "4/10",
             "location": null,
             "radiation": null,
-            "aggravating_factors": ["activity"],
-            "alleviating_factors": ["rest"],
-            "associated_symptoms": ["low-grade fever"]
+            "aggravating_factors": [
+                "activity"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
+            "associated_symptoms": [
+                "low-grade fever"
+            ]
         }
     },
     "symptoms_absent": [
-        "cough currently", "sore throat currently", "palpitations", "syncope",
-        "leg swelling", "orthopnea", "diaphoresis", "nausea", "vomiting",
-        "abdominal pain", "dizziness", "rash", "joint pain", "urinary symptoms",
+        "cough currently",
+        "sore throat currently",
+        "palpitations",
+        "syncope",
+        "leg swelling",
+        "orthopnea",
+        "diaphoresis",
+        "nausea",
+        "vomiting",
+        "abdominal pain",
+        "dizziness",
+        "rash",
+        "joint pain",
+        "urinary symptoms",
         "hemoptysis"
     ],
     "vitals": {
@@ -118,7 +155,15 @@
     "communication_style": "Polite and engaged. Will ask a lot of questions driven by anxiety ('Could this be a heart attack? I'm only 28'). Has done some Googling of his symptoms and may reference things he read online. Responds well to reassurance with clear explanations. Open and honest about all habits including marijuana use.",
     "pain_description_style": "Descriptive and specific ('it's like someone stabbing me when I breathe in'). Can clearly identify what makes it better and worse. Will demonstrate positions that help (leaning forward). Distinguishes well between pain at rest versus with breathing.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Classic pericarditis presentation: sharp pleuritic chest pain relieved by leaning forward",
             "Pain radiates to left trapezius (pathognomonic for pericarditis)",
@@ -151,5 +196,6 @@
             "Return precautions: worsening chest pain, syncope, worsening shortness of breath",
             "Follow-up inflammatory markers in 1-2 weeks"
         ]
-    }
+    },
+    "category": "Cardiac"
 }

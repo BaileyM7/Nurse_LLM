@@ -18,9 +18,18 @@
             "severity": "7/10",
             "location": "substernal",
             "radiation": "left arm and jaw",
-            "aggravating_factors": ["deep breathing", "walking to the car"],
-            "alleviating_factors": ["sitting still", "resting"],
-            "associated_symptoms": ["shortness of breath", "mild nausea"]
+            "aggravating_factors": [
+                "deep breathing",
+                "walking to the car"
+            ],
+            "alleviating_factors": [
+                "sitting still",
+                "resting"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "mild nausea"
+            ]
         },
         "shortness_of_breath": {
             "description": "Feeling like I can't catch my breath, especially with the chest pressure",
@@ -29,8 +38,13 @@
             "location": null,
             "radiation": null,
             "character": "can't get a full breath",
-            "aggravating_factors": ["exertion", "lying flat"],
-            "alleviating_factors": ["sitting upright"],
+            "aggravating_factors": [
+                "exertion",
+                "lying flat"
+            ],
+            "alleviating_factors": [
+                "sitting upright"
+            ],
             "associated_symptoms": []
         },
         "diaphoresis": {
@@ -57,9 +71,20 @@
         }
     },
     "symptoms_absent": [
-        "fever", "cough", "vomiting", "diarrhea", "headache", "dizziness",
-        "leg swelling", "palpitations", "syncope", "abdominal pain",
-        "back pain", "urinary symptoms", "rash", "vision changes"
+        "fever",
+        "cough",
+        "vomiting",
+        "diarrhea",
+        "headache",
+        "dizziness",
+        "leg swelling",
+        "palpitations",
+        "syncope",
+        "abdominal pain",
+        "back pain",
+        "urinary symptoms",
+        "rash",
+        "vision changes"
     ],
     "vitals": {
         "heart_rate": 102,
@@ -120,7 +145,15 @@
     "communication_style": "Wants to minimize her symptoms at first ('I'm sure it's nothing') but becomes more forthcoming when asked directly. Uses everyday language, not medical terms.",
     "pain_description_style": "Describes pain with metaphors ('like an elephant sitting on my chest') rather than precise medical terms. Will give a number if asked for pain scale.",
     "rubric": {
-        "expected_domains": ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"],
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
         "critical_findings": [
             "Substernal chest pressure with left arm and jaw radiation",
             "Elevated troponin suggesting myocardial injury",
@@ -147,5 +180,6 @@
             "Serial troponins",
             "Cardiology consult"
         ]
-    }
+    },
+    "category": "Cardiac"
 }

@@ -108,32 +108,112 @@ def end_session():
         st.error(f"Failed to end session: {e}")
 
 
-# ── Sidebar: Scenario Selection + Session Info ───────────────────────────────
-with st.sidebar:
-    st.header("Patient Selection")
+SEVERITY_BADGES = {
+    "critical": "🔴 CRITICAL",
+    "high": "🟠 HIGH",
+    "medium": "🟡 MEDIUM",
+    "low": "🟢 LOW",
+}
 
-    if not st.session_state.session_active:
-        scenarios = fetch_scenarios()
-        if scenarios:
-            # Build display labels
-            options = {
-                s["patient_id"]: f"{s['name']} ({s['age']}yo {s['sex']}) - {s['chief_complaint'][:40]}..."
-                for s in scenarios
-            }
-            selected = st.selectbox(
-                "Choose a patient:",
-                options.keys(),
-                format_func=lambda x: options[x],
-            )
 
-            if st.button("Start Session", type="primary", use_container_width=True):
-                start_session(selected)
-                st.rerun()
-        else:
-            st.warning("No scenarios available. Check that the API is running and scenarios are loaded.")
-    else:
-        # Active session info
-        st.subheader(f"Patient: {st.session_state.patient_name}")
+# ─────────────────────────────────────────────────────────────────────────────
+# MODE 1: Patient Selection (main pane — no active session)
+# ─────────────────────────────────────────────────────────────────────────────
+if not st.session_state.session_active and not st.session_state.messages:
+    st.title("Select a Patient")
+
+    scenarios = fetch_scenarios()
+    if not scenarios:
+        st.warning("No scenarios available. Make sure the backend is running.")
+        st.stop()
+
+    # ── Filter bar ────────────────────────────────────────────────────────
+    categories = sorted(set(s.get("category", "Other") or "Other" for s in scenarios))
+
+    filter_cols = st.columns([2, 2, 3])
+    with filter_cols[0]:
+        cat_filter = st.selectbox("Category", ["All"] + categories, key="cat_filter")
+    with filter_cols[1]:
+        sev_filter = st.selectbox("Severity", ["All", "Critical", "High", "Medium", "Low"], key="sev_filter")
+    with filter_cols[2]:
+        search = st.text_input("Search", placeholder="Name or complaint...", key="search")
+
+    # Apply filters
+    filtered = scenarios
+    if cat_filter != "All":
+        filtered = [s for s in filtered if s.get("category") == cat_filter]
+    if sev_filter != "All":
+        filtered = [s for s in filtered if (s.get("severity") or "").lower() == sev_filter.lower()]
+    if search:
+        q = search.lower()
+        filtered = [s for s in filtered if q in s["name"].lower() or q in s["chief_complaint"].lower()]
+
+    st.caption(f"Showing {len(filtered)} of {len(scenarios)} patients")
+
+    # Inject CSS to make all patient cards the same height per row
+    st.markdown("""
+    <style>
+    /* Equal-height cards within each row */
+    div[data-testid="stHorizontalBlock"] {
+        align-items: stretch;
+    }
+    div[data-testid="stHorizontalBlock"] > div[data-testid="stColumn"] > div[data-testid="stVerticalBlockBorderWrapper"] {
+        height: 100%;
+    }
+    div[data-testid="stHorizontalBlock"] > div[data-testid="stColumn"] > div[data-testid="stVerticalBlockBorderWrapper"] > div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Cap complaint length so cards have uniform text
+    COMPLAINT_MAX = 80
+
+    # ── Card grid (3 columns) ────────────────────────────────────────────
+    for row_start in range(0, len(filtered), 3):
+        row_items = filtered[row_start:row_start + 3]
+        cols = st.columns(3)
+
+        for col, s in zip(cols, row_items):
+            sev = (s.get("severity") or "").lower()
+            badge = SEVERITY_BADGES.get(sev, "⚪ UNKNOWN")
+            cat_label = s.get("category") or ""
+            complaint = s["chief_complaint"]
+            if len(complaint) > COMPLAINT_MAX:
+                complaint = complaint[:COMPLAINT_MAX].rsplit(" ", 1)[0] + "..."
+
+            with col:
+                with st.container(border=True):
+                    st.markdown(f"**{s['name']}**")
+                    st.caption(f"{s['age']}yo {s['sex']} · {cat_label} · {badge}")
+                    st.markdown(f"*\"{complaint}\"*")
+                    if st.button("Start Assessment", key=f"sel_{s['patient_id']}", use_container_width=True):
+                        start_session(s["patient_id"])
+                        st.rerun()
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# MODE 2: Session complete (no active session, but messages exist)
+# ─────────────────────────────────────────────────────────────────────────────
+elif not st.session_state.session_active and st.session_state.messages:
+    st.title("Session Complete")
+    st.success("Go to **Session Review** in the sidebar to see your feedback.")
+
+    if st.button("Start New Session"):
+        st.session_state.messages = []
+        st.session_state.session_id = None
+        st.rerun()
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# MODE 3: Active chat session (sidebar + chat)
+# ─────────────────────────────────────────────────────────────────────────────
+else:
+    # ── Sidebar: session info + coverage tracker ─────────────────────────
+    with st.sidebar:
+        st.header(f"Patient: {st.session_state.patient_name}")
         st.caption(f"Complaint: {st.session_state.chief_complaint}")
 
         # Timer
@@ -174,29 +254,20 @@ with st.sidebar:
             end_session()
             st.rerun()
 
+    # ── Main area: Chat ──────────────────────────────────────────────────
+    st.title("Patient Assessment Chat")
 
-# ── Main Chat Area ───────────────────────────────────────────────────────────
-st.title("Patient Assessment Chat")
+    # Display chat messages
+    for msg in st.session_state.messages:
+        role = msg["role"]
+        if role == "student":
+            with st.chat_message("user"):
+                st.write(msg["content"])
+        else:
+            with st.chat_message("assistant", avatar="🏥"):
+                st.write(msg["content"])
 
-if not st.session_state.session_active and not st.session_state.messages:
-    st.info("Select a patient from the sidebar and click 'Start Session' to begin.")
-elif not st.session_state.session_active and st.session_state.messages:
-    st.success(
-        "Session complete! Go to **Session Review** in the sidebar to see your feedback."
-    )
-
-# Display chat messages
-for msg in st.session_state.messages:
-    role = msg["role"]
-    if role == "student":
-        with st.chat_message("user"):
-            st.write(msg["content"])
-    else:
-        with st.chat_message("assistant", avatar="🏥"):
-            st.write(msg["content"])
-
-# Chat input
-if st.session_state.session_active:
+    # Chat input
     if prompt := st.chat_input("Ask your patient a question..."):
         # Show student message immediately
         with st.chat_message("user"):
