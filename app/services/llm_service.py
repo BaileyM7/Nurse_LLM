@@ -266,37 +266,6 @@ class LLMService:
         self._scenarios.pop(session_id, None)
         return history
 
-    # async def get_patient_response(self, session_id: str, student_message: str) -> PatientResponse:
-    #     """Send student message to LLM and get structured patient response."""
-    #     if session_id not in self._system_prompts:
-    #         raise ValueError(f"Session '{session_id}' not found. Start a session first.")
-    #
-    #     # Build message list
-    #     messages = [SystemMessage(content=self._system_prompts[session_id])]
-    #     messages.extend(self._histories[session_id])
-    #     messages.append(HumanMessage(content=student_message))
-    #
-    #     # Call LLM
-    #     response = await self._llm.ainvoke(messages)
-    #
-    #     # Parse structured response
-    #     try:
-    #         response_data = json.loads(response.content)
-    #         patient_response = PatientResponse(**response_data)
-    #     except (json.JSONDecodeError, Exception):
-    #         # Fallback: treat entire response as dialogue
-    #         patient_response = PatientResponse(
-    #             dialogue=response.content,
-    #             domain_explored="conversational",
-    #             domain_confidence=0.0,
-    #         )
-    #
-    #     # Update conversation history
-    #     self._histories[session_id].append(HumanMessage(content=student_message))
-    #     self._histories[session_id].append(AIMessage(content=response.content))
-    #
-    #     return patient_response
-
     async def get_patient_response(self, session_id: str, student_message: str) -> PatientResponse:
         """Send student message to LLM and get structured patient response."""
         if session_id not in self._system_prompts:
