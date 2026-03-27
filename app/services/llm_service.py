@@ -158,6 +158,84 @@ def _format_family_hx(family) -> str:
         return "; ".join(f"{member}: {condition}" for member, condition in family.conditions.items())
     return "Noncontributory"
 
+def _detect_requested_vitals(student_message: str, scenario: PatientScenario) -> dict:
+    msg = student_message.lower()
+    revealed = {}
+
+    vitals = scenario.vitals
+
+    if any(term in msg for term in ["blood pressure", "bp", "b/p"]):
+        if (
+            vitals.blood_pressure_systolic is not None
+            and vitals.blood_pressure_diastolic is not None
+        ):
+            revealed["Blood Pressure"] = (
+                f"{vitals.blood_pressure_systolic}/{vitals.blood_pressure_diastolic} mmHg"
+            )
+
+    if any(term in msg for term in ["heart rate", "pulse rate", "hr"]):
+        if vitals.heart_rate is not None:
+            revealed["Heart Rate"] = f"{vitals.heart_rate} bpm"
+
+    # Only use plain "pulse" if "pulse ox" was not what they meant
+    if "pulse" in msg and "pulse ox" not in msg and "pulse oxim" not in msg:
+        if "Heart Rate" not in revealed and vitals.heart_rate is not None:
+            revealed["Heart Rate"] = f"{vitals.heart_rate} bpm"
+
+    if any(term in msg for term in ["respiratory rate", "resp rate", "rr"]):
+        if vitals.respiratory_rate is not None:
+            revealed["Respiratory Rate"] = f"{vitals.respiratory_rate} breaths/min"
+
+    if any(term in msg for term in ["spo2", "oxygen saturation", "pulse ox", "pulse oximetry", "o2 sat", "satting"]):
+        if vitals.spo2 is not None:
+            revealed["SpO2"] = f"{vitals.spo2}%"
+
+    if any(term in msg for term in ["temperature", "temp", "fever"]):
+        if vitals.temperature is not None:
+            revealed["Temperature"] = f"{vitals.temperature}°F"
+
+    if any(term in msg for term in ["pain", "pain score", "pain scale"]):
+        if vitals.pain_scale is not None:
+            revealed["Pain Scale"] = f"{vitals.pain_scale}/10"
+
+    return revealed
+
+
+def _detect_requested_labs(student_message: str, scenario: PatientScenario) -> dict:
+    msg = student_message.lower()
+    revealed = {}
+
+    if not scenario.labs:
+        return revealed
+
+    # direct exact-ish matching against lab names in scenario
+    for lab_name, lab_value in scenario.labs.items():
+        lab_lower = lab_name.lower()
+        if lab_lower in msg:
+            revealed[lab_name] = lab_value
+            continue
+
+        # common aliases
+        aliases = {
+            "cbc": ["cbc", "complete blood count"],
+            "cmp": ["cmp", "comprehensive metabolic panel"],
+            "bmp": ["bmp", "basic metabolic panel"],
+            "troponin": ["troponin"],
+            "abg": ["abg", "arterial blood gas"],
+            "lactate": ["lactate"],
+            "wbc": ["wbc", "white blood cell"],
+            "hemoglobin": ["hemoglobin", "hgb"],
+            "platelets": ["platelets", "plt"],
+            "glucose": ["glucose", "blood sugar"],
+        }
+
+        for key, terms in aliases.items():
+            if key in lab_lower and any(term in msg for term in terms):
+                revealed[lab_name] = lab_value
+                break
+
+    return revealed
+
 
 class LLMService:
     """Manages LLM interactions for patient simulation."""
@@ -172,23 +250,65 @@ class LLMService:
         self._histories: dict[str, list] = {}
         # Per-session system prompts
         self._system_prompts: dict[str, str] = {}
+        self._scenarios: dict[str, PatientScenario] = {}
 
     def start_session(self, session_id: str, scenario: PatientScenario) -> None:
         """Initialize conversation state for a new session."""
         system_prompt = _build_system_prompt(scenario)
         self._system_prompts[session_id] = system_prompt
         self._histories[session_id] = []
+        self._scenarios[session_id] = scenario
 
     def end_session(self, session_id: str) -> list:
         """Clean up session and return conversation history."""
         history = self._histories.pop(session_id, [])
         self._system_prompts.pop(session_id, None)
+        self._scenarios.pop(session_id, None)
         return history
+
+    # async def get_patient_response(self, session_id: str, student_message: str) -> PatientResponse:
+    #     """Send student message to LLM and get structured patient response."""
+    #     if session_id not in self._system_prompts:
+    #         raise ValueError(f"Session '{session_id}' not found. Start a session first.")
+    #
+    #     # Build message list
+    #     messages = [SystemMessage(content=self._system_prompts[session_id])]
+    #     messages.extend(self._histories[session_id])
+    #     messages.append(HumanMessage(content=student_message))
+    #
+    #     # Call LLM
+    #     response = await self._llm.ainvoke(messages)
+    #
+    #     # Parse structured response
+    #     try:
+    #         response_data = json.loads(response.content)
+    #         patient_response = PatientResponse(**response_data)
+    #     except (json.JSONDecodeError, Exception):
+    #         # Fallback: treat entire response as dialogue
+    #         patient_response = PatientResponse(
+    #             dialogue=response.content,
+    #             domain_explored="conversational",
+    #             domain_confidence=0.0,
+    #         )
+    #
+    #     # Update conversation history
+    #     self._histories[session_id].append(HumanMessage(content=student_message))
+    #     self._histories[session_id].append(AIMessage(content=response.content))
+    #
+    #     return patient_response
 
     async def get_patient_response(self, session_id: str, student_message: str) -> PatientResponse:
         """Send student message to LLM and get structured patient response."""
         if session_id not in self._system_prompts:
             raise ValueError(f"Session '{session_id}' not found. Start a session first.")
+
+        scenario = self._scenarios.get(session_id)
+        if scenario is None:
+            raise ValueError(f"Scenario for session '{session_id}' not found.")
+
+        # Deterministically detect requested diagnostics
+        vitals_revealed = _detect_requested_vitals(student_message, scenario)
+        labs_revealed = _detect_requested_labs(student_message, scenario)
 
         # Build message list
         messages = [SystemMessage(content=self._system_prompts[session_id])]
@@ -203,12 +323,28 @@ class LLMService:
             response_data = json.loads(response.content)
             patient_response = PatientResponse(**response_data)
         except (json.JSONDecodeError, Exception):
-            # Fallback: treat entire response as dialogue
             patient_response = PatientResponse(
                 dialogue=response.content,
                 domain_explored="conversational",
                 domain_confidence=0.0,
+                vitals_revealed=None,
+                labs_revealed=None,
             )
+
+        # Override/merge revealed diagnostics with deterministic backend logic
+        merged_vitals = {}
+        merged_labs = {}
+
+        if patient_response.vitals_revealed:
+            merged_vitals.update(patient_response.vitals_revealed)
+        if patient_response.labs_revealed:
+            merged_labs.update(patient_response.labs_revealed)
+
+        merged_vitals.update(vitals_revealed)
+        merged_labs.update(labs_revealed)
+
+        patient_response.vitals_revealed = merged_vitals or None
+        patient_response.labs_revealed = merged_labs or None
 
         # Update conversation history
         self._histories[session_id].append(HumanMessage(content=student_message))
