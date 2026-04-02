@@ -8,6 +8,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import streamlit as st
 
+
+def run_async(coro):
+    """Run an async coroutine safely, whether or not an event loop is already running."""
+    try:
+        loop = asyncio.get_running_loop()
+    except RuntimeError:
+        loop = None
+
+    if loop and loop.is_running():
+        import concurrent.futures
+        with concurrent.futures.ThreadPoolExecutor() as pool:
+            future = pool.submit(asyncio.run, coro)
+            return future.result()
+    else:
+        return run_async(coro)
+
 from app.config import settings
 from app.models.session import ChatMessage, MessageRole
 from app.services.scenario_service import scenario_service
@@ -87,7 +103,7 @@ def send_message(message: str):
             return
 
         # Get LLM response (async call)
-        patient_response = asyncio.run(
+        patient_response = run_async(
             llm_service.get_patient_response(sid, message)
         )
 
@@ -150,7 +166,7 @@ def end_session():
         scenario = scenario_service.get_scenario(session["scenario_id"])
         assessment = session["tracker"].get_result()
 
-        feedback = asyncio.run(
+        feedback = run_async(
             feedback_service.generate_feedback(
                 session_id=sid,
                 scenario=scenario,
