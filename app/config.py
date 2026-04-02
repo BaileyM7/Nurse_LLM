@@ -1,6 +1,9 @@
 from pydantic_settings import BaseSettings
 from pathlib import Path
 
+# Resolve repo root so relative paths work regardless of working directory
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+
 
 def _get_streamlit_secret(key: str, default: str = "") -> str:
     """Try to read a secret from Streamlit secrets (for Streamlit Cloud)."""
@@ -11,17 +14,22 @@ def _get_streamlit_secret(key: str, default: str = "") -> str:
         return default
 
 
+# Determine .env path — may not exist on Streamlit Cloud
+_env_file = _REPO_ROOT / ".env"
+_env_path = str(_env_file) if _env_file.exists() else None
+
+
 class Settings(BaseSettings):
     openai_api_key: str = ""
     model_name: str = "gpt-4o-mini"
-    database_url: str = "sqlite:///./data/nurse_llm.db"
-    scenarios_dir: str = "./data/scenarios"
+    database_url: str = f"sqlite:///{_REPO_ROOT / 'data' / 'nurse_llm.db'}"
+    scenarios_dir: str = str(_REPO_ROOT / "data" / "scenarios")
     max_turns: int = 30
 
     # LangChain conversation memory
     summary_after_turns: int = 15  # Summarize history after this many turns
 
-    model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
+    model_config = {"env_file": _env_path, "env_file_encoding": "utf-8"}
 
 
 settings = Settings()
