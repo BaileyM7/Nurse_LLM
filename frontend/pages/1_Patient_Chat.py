@@ -10,19 +10,17 @@ import streamlit as st
 
 
 def run_async(coro):
-    """Run an async coroutine safely, whether or not an event loop is already running."""
+    """Run an async coroutine safely, even if an event loop is already running."""
     try:
-        loop = asyncio.get_running_loop()
-    except RuntimeError:
-        loop = None
-
-    if loop and loop.is_running():
+        asyncio.get_running_loop()
+        # Loop already running (Streamlit) — run in a new thread with its own loop
         import concurrent.futures
         with concurrent.futures.ThreadPoolExecutor() as pool:
-            future = pool.submit(asyncio.run, coro)
-            return future.result()
-    else:
-        return run_async(coro)
+            future = pool.submit(lambda: asyncio.run(coro))
+            return future.result(timeout=60)
+    except RuntimeError:
+        # No loop running — safe to use asyncio.run directly
+        return asyncio.run(coro)
 
 from app.config import settings
 from app.models.session import ChatMessage, MessageRole
