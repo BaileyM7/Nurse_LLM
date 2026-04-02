@@ -1,7 +1,6 @@
-import httpx
 import streamlit as st
 
-API_URL = "http://localhost:8000"
+from app.services.session_manager import session_manager
 
 st.set_page_config(page_title="Session Review", page_icon="📋", layout="wide")
 st.title("Session Review")
@@ -16,13 +15,18 @@ if st.session_state.get("session_active", False):
     st.warning("Your session is still active. End it in the Patient Chat page first.")
     st.stop()
 
-# Fetch feedback
-try:
-    resp = httpx.get(f"{API_URL}/api/sessions/{session_id}/feedback", timeout=30.0)
-    resp.raise_for_status()
-    feedback = resp.json()
-except Exception as e:
-    st.error(f"Could not load feedback: {e}")
+# Get feedback — check in-memory first, then SQLite
+feedback = None
+session = session_manager.get_session(session_id)
+if session and session.get("feedback"):
+    feedback = session["feedback"].model_dump()
+else:
+    stored = session_manager.get_stored_feedback(session_id)
+    if stored:
+        feedback = stored.model_dump()
+
+if not feedback:
+    st.error("Could not load feedback for this session.")
     st.stop()
 
 # ── Overall Score ────────────────────────────────────────────────────────────

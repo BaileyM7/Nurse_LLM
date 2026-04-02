@@ -1,16 +1,13 @@
-import httpx
 import streamlit as st
 
-API_URL = "http://localhost:8000"
+from app.services.session_manager import session_manager
 
 st.set_page_config(page_title="Session History", page_icon="📊", layout="wide")
 st.title("Session History")
 
-# Fetch all sessions
+# Fetch all sessions directly from the service
 try:
-    resp = httpx.get(f"{API_URL}/api/sessions/")
-    resp.raise_for_status()
-    sessions = resp.json()
+    sessions = session_manager.list_sessions()
 except Exception as e:
     st.error(f"Could not load sessions: {e}")
     st.stop()
@@ -22,7 +19,7 @@ if not sessions:
 # Display sessions as a table
 st.subheader(f"Total Sessions: {len(sessions)}")
 
-for session in reversed(sessions):  # Most recent first
+for session in sessions:  # Already sorted most recent first by session_manager
     status_icon = "🟢" if session["status"] == "active" else "✅"
     with st.expander(
         f"{status_icon} Session {session['session_id']} — "

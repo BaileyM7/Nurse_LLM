@@ -1,9 +1,14 @@
+import asyncio
 import time
 
-import httpx
 import streamlit as st
 
-API_URL = "http://localhost:8000"
+from app.config import settings
+from app.models.session import ChatMessage, MessageRole
+from app.services.scenario_service import scenario_service
+from app.services.llm_service import llm_service
+from app.services.feedback_service import feedback_service
+from app.services.session_manager import session_manager
 
 st.set_page_config(page_title="Patient Chat", page_icon="💬", layout="wide")
 
@@ -33,9 +38,8 @@ if "labs_revealed" not in st.session_state:
 # ── Helper Functions ─────────────────────────────────────────────────────────
 def fetch_scenarios():
     try:
-        resp = httpx.get(f"{API_URL}/api/scenarios/")
-        resp.raise_for_status()
-        return resp.json()
+        summaries = scenario_service.list_scenarios()
+        return [s.model_dump() for s in summaries]
     except Exception as e:
         st.error(f"Failed to load scenarios: {e}")
         return []
@@ -43,16 +47,18 @@ def fetch_scenarios():
 
 def start_session(scenario_id: str):
     try:
-        resp = httpx.post(
-            f"{API_URL}/api/sessions/start",
-            json={"scenario_id": scenario_id},
-        )
-        resp.raise_for_status()
-        data = resp.json()
-        st.session_state.session_id = data["session_id"]
+        scenario = scenario_service.get_scenario(scenario_id)
+        if not scenario:
+            st.error(f"Scenario '{scenario_id}' not found")
+            return
+
+        session = session_manager.create_session(scenario_id)
+        llm_service.start_session(session["session_id"], scenario)
+
+        st.session_state.session_id = session["session_id"]
         st.session_state.session_active = True
-        st.session_state.patient_name = data["patient_name"]
-        st.session_state.chief_complaint = data["chief_complaint"]
+        st.session_state.patient_name = scenario.name
+        st.session_state.chief_complaint = scenario.chief_complaint
         st.session_state.messages = []
         st.session_state.domains_covered = []
         st.session_state.turn_count = 0
@@ -65,32 +71,58 @@ def start_session(scenario_id: str):
 
 def send_message(message: str):
     try:
-        resp = httpx.post(
-            f"{API_URL}/api/chat/",
-            json={
-                "session_id": st.session_state.session_id,
-                "message": message,
-            },
-            timeout=30.0,
-        )
-        resp.raise_for_status()
-        data = resp.json()
+        sid = st.session_state.session_id
+        session = session_manager.get_session(sid)
+        if not session:
+            st.error("Session not found")
+            return
 
-        # Update state
+        if session["turn_count"] >= settings.max_turns:
+            st.error(f"Maximum turns ({settings.max_turns}) reached. Please end the session.")
+            return
+
+        # Get LLM response (async call)
+        patient_response = asyncio.run(
+            llm_service.get_patient_response(sid, message)
+        )
+
+        # Record messages in-memory
+        session["messages"].append(ChatMessage(
+            role=MessageRole.STUDENT,
+            content=message,
+            domain_explored=patient_response.domain_explored,
+        ))
+        session["messages"].append(ChatMessage(
+            role=MessageRole.PATIENT,
+            content=patient_response.dialogue,
+        ))
+        session["turn_count"] += 1
+
+        # Persist to SQLite
+        session_manager.save_message(sid, "student", message, domain=patient_response.domain_explored)
+        session_manager.save_message(sid, "patient", patient_response.dialogue)
+
+        # Update assessment tracker
+        session["tracker"].update(
+            domain_explored=patient_response.domain_explored,
+            confidence=patient_response.domain_confidence,
+            student_message=message,
+        )
+
+        # Update Streamlit state
         st.session_state.messages.append({"role": "student", "content": message})
         st.session_state.messages.append({
             "role": "patient",
-            "content": data["patient_response"]["dialogue"],
+            "content": patient_response.dialogue,
         })
-        st.session_state.turn_count = data["turn_count"]
-        st.session_state.domains_covered = data["domains_covered"]
+        st.session_state.turn_count = session["turn_count"]
+        st.session_state.domains_covered = session["tracker"].get_covered_domains()
 
         # Track revealed vitals/labs
-        pr = data["patient_response"]
-        if pr.get("vitals_revealed"):
-            st.session_state.vitals_revealed.update(pr["vitals_revealed"])
-        if pr.get("labs_revealed"):
-            st.session_state.labs_revealed.update(pr["labs_revealed"])
+        if patient_response.vitals_revealed:
+            st.session_state.vitals_revealed.update(patient_response.vitals_revealed)
+        if patient_response.labs_revealed:
+            st.session_state.labs_revealed.update(patient_response.labs_revealed)
 
     except Exception as e:
         st.error(f"Error communicating with patient: {e}")
@@ -98,11 +130,35 @@ def send_message(message: str):
 
 def end_session():
     try:
-        resp = httpx.post(
-            f"{API_URL}/api/sessions/{st.session_state.session_id}/end",
-            timeout=30.0,
+        sid = st.session_state.session_id
+        session = session_manager.get_session(sid)
+        if not session:
+            st.error("Session not found")
+            return
+
+        session["status"] = "ended"
+
+        # Clean up LLM session
+        llm_service.end_session(sid)
+
+        # Generate feedback
+        scenario = scenario_service.get_scenario(session["scenario_id"])
+        assessment = session["tracker"].get_result()
+
+        feedback = asyncio.run(
+            feedback_service.generate_feedback(
+                session_id=sid,
+                scenario=scenario,
+                messages=session["messages"],
+                assessment=assessment,
+            )
         )
-        resp.raise_for_status()
+        session["feedback"] = feedback
+
+        # Persist to SQLite
+        session_manager.end_session(sid, score=feedback.overall_score)
+        session_manager.save_feedback(sid, feedback)
+
         st.session_state.session_active = False
     except Exception as e:
         st.error(f"Failed to end session: {e}")
@@ -124,7 +180,7 @@ if not st.session_state.session_active and not st.session_state.messages:
 
     scenarios = fetch_scenarios()
     if not scenarios:
-        st.warning("No scenarios available. Make sure the backend is running.")
+        st.warning("No scenarios available.")
         st.stop()
 
     # ── Filter bar ────────────────────────────────────────────────────────

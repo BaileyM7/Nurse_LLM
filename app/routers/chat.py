@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 
 from app.config import settings
 from app.models.session import ChatRequest, ChatResponse, ChatMessage, MessageRole
-from app.routers.sessions import session_manager
+from app.services.session_manager import session_manager
 
 router = APIRouter()
 

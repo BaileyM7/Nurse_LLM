@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>System Architecture</title>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  svg {
+    width: 900px;
+    height: 500px;
+  }
+  .box rect {
+    rx: 8;
+    ry: 8;
+    stroke-width: 2;
+  }
+  .box text {
+    font-weight: bold;
+    font-size: 14px;
+    text-anchor: middle;
+    dominant-baseline: central;
+  }
+  .red rect { fill: #f5e6ec; stroke: #861f41; }
+  .red text { fill: #861f41; }
+  .orange rect { fill: #fdf0e2; stroke: #e5751f; }
+  .orange text { fill: #e5751f; }
+  .arrow { stroke: #861f41; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+  .label {
+    font-size: 11px;
+    fill: #555;
+    text-anchor: middle;
+    dominant-baseline: central;
+  }
+  .label-bg { fill: white; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 900 500">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#861f41" />
+    </marker>
+  </defs>
+
+  <!-- JSON Scenarios (top) -->
+  <g class="box orange" transform="translate(680, 40)">
+    <rect x="-90" y="-30" width="180" height="60" />
+    <text y="-8">JSON Scenarios</text>
+    <text y="12">(39 cases)</text>
+  </g>
+
+  <!-- Top row -->
+  <g class="box red" transform="translate(120, 200)">
+    <rect x="-80" y="-25" width="160" height="50" />
+    <text>Streamlit UI</text>
+  </g>
+
+  <g class="box red" transform="translate(400, 200)">
+    <rect x="-80" y="-25" width="160" height="50" />
+    <text>FastAPI</text>
+  </g>
+
+  <g class="box red" transform="translate(680, 200)">
+    <rect x="-90" y="-25" width="180" height="50" />
+    <text y="-8">LangChain +</text>
+    <text y="12">GPT-4o-mini</text>
+  </g>
+
+  <!-- Bottom row -->
+  <g class="box orange" transform="translate(120, 390)">
+    <rect x="-80" y="-25" width="160" height="50" />
+    <text>SQLite</text>
+  </g>
+
+  <g class="box red" transform="translate(400, 390)">
+    <rect x="-90" y="-25" width="180" height="50" />
+    <text>Assessment Tracker</text>
+  </g>
+
+  <g class="box red" transform="translate(680, 390)">
+    <rect x="-80" y="-25" width="160" height="50" />
+    <text>Feedback Service</text>
+  </g>
+
+  <!-- Arrows: Streamlit <-> FastAPI -->
+  <line class="arrow" x1="200" y1="190" x2="316" y2="190" />
+  <rect class="label-bg" x="230" y="173" width="40" height="16" />
+  <text class="label" x="250" y="182">HTTP</text>
+
+  <!-- FastAPI -> LangChain -->
+  <line class="arrow" x1="480" y1="190" x2="586" y2="190" />
+  <rect class="label-bg" x="507" y="173" width="45" height="16" />
+  <text class="label" x="530" y="182">prompt</text>
+
+  <!-- LangChain -> FastAPI -->
+  <line class="arrow" x1="590" y1="215" x2="480" y2="215" />
+  <rect class="label-bg" x="512" y="218" width="35" height="16" />
+  <text class="label" x="530" y="227">JSON</text>
+
+  <!-- JSON -> LangChain -->
+  <line class="arrow" x1="680" y1="100" x2="680" y2="172" />
+  <rect class="label-bg" x="688" y="124" width="80" height="16" />
+  <text class="label" x="728" y="133">system prompt</text>
+
+  <!-- FastAPI -> Assessment Tracker -->
+  <line class="arrow" x1="400" y1="228" x2="400" y2="362" />
+  <rect class="label-bg" x="407" y="284" width="48" height="16" />
+  <text class="label" x="431" y="293">domain</text>
+
+  <!-- FastAPI -> SQLite -->
+  <line class="arrow" x1="330" y1="228" x2="185" y2="362" />
+  <rect class="label-bg" x="225" y="278" width="58" height="16" />
+  <text class="label" x="254" y="287">messages</text>
+
+  <!-- Assessment Tracker -> SQLite -->
+  <line class="arrow" x1="308" y1="390" x2="202" y2="390" />
+  <rect class="label-bg" x="228" y="395" width="55" height="16" />
+  <text class="label" x="255" y="404">coverage</text>
+
+  <!-- FastAPI -> Feedback Service -->
+  <line class="arrow" x1="475" y1="228" x2="615" y2="362" />
+  <rect class="label-bg" x="530" y="278" width="65" height="16" />
+  <text class="label" x="563" y="287">end session</text>
+
+  <!-- Feedback Service -> SQLite (routed below Assessment Tracker) -->
+  <path class="arrow" d="M 598,415 L 598,455 L 202,455 L 202,415" />
+  <rect class="label-bg" x="378" y="447" width="40" height="16" />
+  <text class="label" x="398" y="456">report</text>
+
+</svg>
+</body>
+</html>

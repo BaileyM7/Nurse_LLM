@@ -2,6 +2,15 @@ from pydantic_settings import BaseSettings
 from pathlib import Path
 
 
+def _get_streamlit_secret(key: str, default: str = "") -> str:
+    """Try to read a secret from Streamlit secrets (for Streamlit Cloud)."""
+    try:
+        import streamlit as st
+        return st.secrets.get(key, default)
+    except Exception:
+        return default
+
+
 class Settings(BaseSettings):
     openai_api_key: str = ""
     model_name: str = "gpt-4o-mini"
@@ -16,3 +25,8 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+# Override with Streamlit secrets if available (for Streamlit Cloud deployment)
+_st_key = _get_streamlit_secret("OPENAI_API_KEY")
+if _st_key:
+    settings.openai_api_key = _st_key

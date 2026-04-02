@@ -33,18 +33,10 @@ The system tracks your coverage across these clinical domains:
 Use the sidebar to navigate to **Patient Chat** and begin a session.
 """)
 
-# Check API connection
-API_URL = "http://localhost:8000"
-
+# Check services are loaded
 try:
-    import httpx
-    response = httpx.get(f"{API_URL}/")
-    if response.status_code == 200:
-        st.success("API connected successfully")
-    else:
-        st.warning("API returned unexpected status. Make sure the backend is running.")
-except Exception:
-    st.error(
-        "Cannot connect to the API. Please start the backend first:\n\n"
-        "`uvicorn app.main:app --reload`"
-    )
+    from app.services.scenario_service import scenario_service
+    count = len(scenario_service.get_scenario_ids())
+    st.success(f"Services loaded successfully — {count} patient scenarios available")
+except Exception as e:
+    st.error(f"Failed to load services: {e}")

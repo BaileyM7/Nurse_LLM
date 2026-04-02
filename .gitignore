@@ -31,4 +31,7 @@ Thumbs.db
 data/seeds/*.csv
 data/seeds/*.json.gz
 
+# Streamlit secrets (never commit real keys)
+.streamlit/secrets.toml
+
 .claude
