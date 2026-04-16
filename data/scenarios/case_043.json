@@ -1,0 +1,156 @@
+{
+    "patient_id": "case_043",
+    "name": "James Carter",
+    "age": 65,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 215,
+    "height_inches": 72,
+    "chief_complaint": "My heart feels like it's racing and I'm really short of breath.",
+    "onset_description": "I started feeling this way about two hours ago while sitting at home watching TV.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "palpitations": {
+            "description": "It feels like my heart is skipping beats and racing at the same time.",
+            "onset": "2 hours ago",
+            "character": "Racing and irregular.",
+            "severity": "8",
+            "location": "In my chest.",
+            "radiation": "None.",
+            "aggravating_factors": [
+                "Being active, like walking around my house."
+            ],
+            "alleviating_factors": [
+                "Sitting still and taking deep breaths."
+            ],
+            "associated_symptoms": [
+                "Shortness of breath",
+                "Dizziness"
+            ]
+        },
+        "shortness_of_breath": {
+            "description": "I can't catch my breath, it's like I'm panting.",
+            "onset": "2 hours ago",
+            "character": "Feels like I'm out of shape.",
+            "severity": "7",
+            "location": "Chest.",
+            "radiation": "None.",
+            "aggravating_factors": [
+                "Walking or climbing stairs."
+            ],
+            "alleviating_factors": [
+                "Sitting upright."
+            ],
+            "associated_symptoms": [
+                "Palpitations",
+                "Anxiety"
+            ]
+        },
+        "dizziness": {
+            "description": "I feel a little lightheaded, especially when I try to stand up.",
+            "onset": "1 hour ago",
+            "character": "Spinning sensation.",
+            "severity": "5",
+            "location": "Head.",
+            "radiation": "None.",
+            "aggravating_factors": [
+                "Standing up quickly."
+            ],
+            "alleviating_factors": [
+                "Sitting down."
+            ],
+            "associated_symptoms": [
+                "Shortness of breath"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Chest pain",
+        "Nausea",
+        "Sweating",
+        "Fainting",
+        "Fatigue",
+        "Headache",
+        "Leg swelling",
+        "Blurred vision",
+        "Cough",
+        "Heartburn"
+    ],
+    "vitals": {
+        "heart_rate": 140,
+        "blood_pressure_systolic": 160,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 24,
+        "spo2": 92,
+        "temperature": 98.6,
+        "pain_scale": 2
+    },
+    "labs": {
+        "Electrolytes": "Normal with slight hypokalemia (Potassium: 3.4 mEq/L)",
+        "CBC": "Normal values",
+        "Thyroid Stimulating Hormone (TSH)": "0.5 mIU/L (low)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Hyperlipidemia"
+    ],
+    "surgical_history": [
+        "Appendectomy (2010)"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Atorvastatin 20 mg daily"
+    ],
+    "allergies": [
+        "Penicillin: rash"
+    ],
+    "social_history": {
+        "smoking": "Former smoker, quit 5 years ago",
+        "alcohol": "Occasional, 1-2 drinks on weekends",
+        "drugs": "Denies any use",
+        "occupation": "Retired school teacher",
+        "living_situation": "Lives alone",
+        "exercise": "Walks 10 minutes a day",
+        "diet": "Generally healthy, watches salt intake"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Coronary artery disease",
+            "Mother": "Type 2 diabetes"
+        }
+    },
+    "personality": "James is anxious about his health but tries to remain calm. He often cracks jokes to lighten the mood.",
+    "communication_style": "He speaks clearly but gets easily distracted and occasionally loses focus when discussing his symptoms.",
+    "pain_description_style": "He describes discomfort as 'annoying' rather than severe, often downplaying his symptoms.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated heart rate and blood pressure",
+            "Shortness of breath and anxiety",
+            "Normal lab values with slight hypokalemia"
+        ],
+        "diagnosis": "Atrial Fibrillation with Rapid Ventricular Response",
+        "differential_diagnoses": [
+            "Supraventricular Tachycardia",
+            "Myocardial Infarction",
+            "Pneumonia",
+            "Pulmonary Embolism",
+            "Anxiety Attack"
+        ],
+        "recommended_interventions": [
+            "Obtain 12-lead ECG",
+            "Administer supplemental oxygen as needed",
+            "Start IV access for potential medication administration",
+            "Monitor cardiac rhythm continuously"
+        ]
+    }
+}

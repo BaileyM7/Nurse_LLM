@@ -1,0 +1,125 @@
+{
+    "patient_id": "case_057",
+    "name": "Maria Gonzalez",
+    "age": 38,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 64,
+    "chief_complaint": "I have this awful pain in my stomach that just won't go away.",
+    "onset_description": "It started suddenly last night after I ate dinner.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal pain": {
+            "description": "It feels like a sharp stabbing pain right in the middle of my belly.",
+            "onset": "About 12 hours ago.",
+            "character": "sharp and intermittent",
+            "severity": "8",
+            "location": "mid-epigastric region",
+            "radiation": "sometimes it feels like it's moving to my back",
+            "aggravating_factors": [
+                "eating",
+                "deep breaths",
+                "lying down"
+            ],
+            "alleviating_factors": [
+                "sitting up",
+                "taking small sips of water"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "vomiting",
+                "loss of appetite"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "diarrhea",
+        "constipation",
+        "fever",
+        "shortness of breath",
+        "chest pain",
+        "headache",
+        "dizziness",
+        "jaundice",
+        "heartburn",
+        "bloating"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 80,
+        "respiratory_rate": 22,
+        "spo2": 97,
+        "temperature": 100.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "WBC": "14,000/mm\u00b3 (elevated)",
+        "Lipase": "120 U/L (elevated)",
+        "Bilirubin": "1.2 mg/dL (normal)",
+        "AST": "45 U/L (slightly elevated)",
+        "ALT": "50 U/L (slightly elevated)"
+    },
+    "past_medical_history": [
+        "Gallstones",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 23"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "social drinker, 1-2 drinks on weekends",
+        "drugs": "denies use",
+        "occupation": "Customer Service Representative",
+        "living_situation": "Lives with her husband and two children",
+        "exercise": "occasional walking",
+        "diet": "generally healthy but often skips meals"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Diabetes",
+            "Father": "Heart disease"
+        }
+    },
+    "personality": "Anxious but cooperative, worried about her health and eager for help.",
+    "communication_style": "Direct and to the point, often asking questions about her care and treatment options.",
+    "pain_description_style": "Describes her discomfort with vivid expressions, often using metaphors like 'it's like a knife in my stomach.'",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated WBC count, abdominal pain severity, nausea and vomiting, history of gallstones"
+        ],
+        "diagnosis": "Cholecystitis",
+        "differential_diagnoses": [
+            "Biliary colic",
+            "Pancreatitis",
+            "Gastritis",
+            "Peptic ulcer disease",
+            "Intestinal obstruction"
+        ],
+        "recommended_interventions": [
+            "Administer IV fluids",
+            "Pain management",
+            "Prepare for potential surgery",
+            "Monitor vital signs closely",
+            "Educate patient on dietary modifications"
+        ]
+    }
+}

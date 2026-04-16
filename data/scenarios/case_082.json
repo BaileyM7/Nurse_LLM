@@ -1,0 +1,149 @@
+{
+    "patient_id": "case_082",
+    "name": "Carlos Ramirez",
+    "age": 64,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I have this terrible pain in my stomach and I've been throwing up blood.",
+    "onset_description": "The pain started about three hours ago after I had lunch, and then I started vomiting.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal_pain": {
+            "description": "It feels like sharp stabbing and it's really intense.",
+            "onset": "About three hours ago.",
+            "character": "Sharp and constant.",
+            "severity": "8",
+            "location": "Upper middle of my stomach.",
+            "radiation": "It doesn't spread, but it hurts a lot.",
+            "aggravating_factors": [
+                "Moving around",
+                "Coughing",
+                "Deep breaths"
+            ],
+            "alleviating_factors": [
+                "Nothing seems to help."
+            ],
+            "associated_symptoms": [
+                "Vomiting",
+                "Dizziness",
+                "Weakness"
+            ]
+        },
+        "vomiting": {
+            "description": "I've thrown up twice, and it's mostly blood mixed with some food.",
+            "onset": "Started about two hours ago.",
+            "character": "Frequent and distressing.",
+            "severity": "9",
+            "location": "N/A",
+            "radiation": "N/A",
+            "aggravating_factors": [
+                "Eating anything",
+                "Movement"
+            ],
+            "alleviating_factors": [
+                "Sitting still"
+            ],
+            "associated_symptoms": [
+                "Nausea",
+                "Abdominal pain"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Diarrhea",
+        "Constipation",
+        "Chest pain",
+        "Shortness of breath",
+        "Fever",
+        "Rash",
+        "Headache",
+        "Leg swelling",
+        "Back pain",
+        "Fatigue"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 88,
+        "blood_pressure_diastolic": 60,
+        "respiratory_rate": 22,
+        "spo2": 96,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "Hemoglobin": "8.5 g/dL (low)",
+        "Hematocrit": "25% (low)",
+        "Platelets": "150,000/uL (normal)",
+        "BUN": "30 mg/dL (high)",
+        "Creatinine": "1.2 mg/dL (high)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 20",
+        "Gallbladder removal at age 50"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Metformin 500 mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin (rash)"
+    ],
+    "social_history": {
+        "smoking": "Former smoker, quit 5 years ago.",
+        "alcohol": "Drinks 1-2 beers a week.",
+        "drugs": "Denies use.",
+        "occupation": "Retired mechanic.",
+        "living_situation": "Lives alone.",
+        "exercise": "Rarely exercises.",
+        "diet": "Mostly fast food and soda."
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Heart disease",
+            "Mother": "Diabetes"
+        }
+    },
+    "personality": "Carlos appears anxious and tense, frequently shifting in his seat and avoiding eye contact. He seems scared about the severity of his condition.",
+    "communication_style": "He speaks in short sentences and seems to struggle to articulate his feelings, often interrupting to mention another symptom.",
+    "pain_description_style": "He describes his pain in intense and dramatic terms, using metaphors that convey urgency and concern.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Signs of hypovolemia",
+            "Elevated heart rate",
+            "Low blood pressure",
+            "Signs of possible anemic condition",
+            "Evidence of upper GI bleeding"
+        ],
+        "diagnosis": "Upper GI Bleed",
+        "differential_diagnoses": [
+            "Peptic Ulcer Disease",
+            "Gastritis",
+            "Esophageal Varices",
+            "Mallory-Weiss Tear",
+            "Cancer"
+        ],
+        "recommended_interventions": [
+            "IV fluid resuscitation",
+            "Blood transfusion as needed",
+            "Gastroenterology consult for possible endoscopy",
+            "Monitor vital signs closely",
+            "Administer medications for nausea"
+        ]
+    }
+}

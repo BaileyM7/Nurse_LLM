@@ -1,0 +1,123 @@
+{
+    "patient_id": "case_068",
+    "name": "Carlos Mendoza",
+    "age": 45,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 72,
+    "chief_complaint": "My lower back really hurts, especially when I try to bend over.",
+    "onset_description": "It started suddenly two days ago when I was lifting some heavy boxes at work.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "Acute Low Back Pain": {
+            "description": "A sharp, stabbing pain in my lower back.",
+            "onset": "Two days ago.",
+            "character": "Sharp and constant.",
+            "severity": "8",
+            "location": "Lower back.",
+            "radiation": "It sometimes feels like it's going into my left leg.",
+            "aggravating_factors": [
+                "Bending over",
+                "Standing up",
+                "Coughing"
+            ],
+            "alleviating_factors": [
+                "Sitting down",
+                "Lying flat on my back"
+            ],
+            "associated_symptoms": [
+                "Mild nausea from pain",
+                "Difficulty sleeping"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Numbness in legs",
+        "Fever",
+        "Weight loss",
+        "Loss of bowel control",
+        "Loss of bladder control",
+        "Radiating pain to both legs",
+        "Stiffness in the neck",
+        "Joint swelling",
+        "Persistent fatigue",
+        "Chest pain"
+    ],
+    "vitals": {
+        "heart_rate": 88,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 18,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "ESR": "10 mm/hr (normal)",
+        "CBC": "Normal with no signs of infection"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Mild asthma"
+    ],
+    "surgical_history": [
+        "Appendectomy in 2000"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Albuterol inhaler as needed"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, about 1-2 drinks on weekends",
+        "drugs": "Denies use",
+        "occupation": "Warehouse worker",
+        "living_situation": "Lives with wife and two children",
+        "exercise": "Walks occasionally, does not have a regular routine",
+        "diet": "Mixed diet, enjoys cooking at home"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Diabetes",
+            "Mother": "Hypertension"
+        }
+    },
+    "personality": "Nervous and fidgety, seems anxious about the pain but makes an effort to stay calm.",
+    "communication_style": "Talks quickly and tends to ask a lot of questions about what is happening.",
+    "pain_description_style": "Describes the pain vividly, using words like 'stabbing' and 'sharp', indicating it is very bothersome.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Acute low back pain description",
+            "Aggravating and alleviating factors",
+            "Absence of red flag symptoms"
+        ],
+        "diagnosis": "Acute Low Back Pain with Red Flags ruled out",
+        "differential_diagnoses": [
+            "Muscle strain",
+            "Herniated disc",
+            "Spinal stenosis",
+            "Kidney stones",
+            "Osteoarthritis"
+        ],
+        "recommended_interventions": [
+            "Pain management strategies",
+            "Education on proper lifting techniques",
+            "Referral for physical therapy if needed",
+            "Follow-up care plan"
+        ]
+    }
+}

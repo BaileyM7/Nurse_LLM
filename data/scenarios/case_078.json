@@ -1,0 +1,146 @@
+{
+    "patient_id": "case_078",
+    "name": "Laura Garcia",
+    "age": 42,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 155,
+    "height_inches": 65,
+    "chief_complaint": "I feel like I can't catch my breath.",
+    "onset_description": "It started suddenly about an hour ago while I was sitting at my desk.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "It's like I'm gasping for air. I feel really tight in my chest.",
+            "onset": "1 hour ago",
+            "character": "sharp and constricting",
+            "severity": "8",
+            "location": "chest and throat",
+            "radiation": "null",
+            "aggravating_factors": [
+                "moving around",
+                "talking"
+            ],
+            "alleviating_factors": [
+                "sitting still",
+                "deep breaths"
+            ],
+            "associated_symptoms": [
+                "lightheadedness",
+                "increased heart rate"
+            ]
+        },
+        "chest pain": {
+            "description": "It feels like a heavy weight on my chest.",
+            "onset": "30 minutes ago",
+            "character": "pressure",
+            "severity": "7",
+            "location": "center of chest",
+            "radiation": "to the left arm",
+            "aggravating_factors": [
+                "coughing",
+                "taking deep breaths"
+            ],
+            "alleviating_factors": [
+                "resting",
+                "lying down"
+            ],
+            "associated_symptoms": [
+                "anxiety",
+                "sweating"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "cough",
+        "fever",
+        "leg swelling",
+        "nausea",
+        "vomiting",
+        "wheezing",
+        "sore throat",
+        "fatigue",
+        "headache",
+        "abdominal pain"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 136,
+        "blood_pressure_diastolic": 84,
+        "respiratory_rate": 24,
+        "spo2": 88,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "D-dimer": "1.5 mg/L (normal <0.5 mg/L indicates low probability of PE)",
+        "CT Pulmonary Angiography": "Positive for pulmonary embolism",
+        "CBC": "Hemoglobin 12.5 g/dL, Hematocrit 38%, WBC 8,500/mm\u00b3"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "high cholesterol"
+    ],
+    "surgical_history": [
+        "appendectomy"
+    ],
+    "medications": [
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "socially, on weekends",
+        "drugs": "denies use",
+        "occupation": "administrative assistant",
+        "living_situation": "lives alone",
+        "exercise": "occasional walks",
+        "diet": "balanced, but sometimes skips meals"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "asthma",
+            "father": "heart disease",
+            "sibling": "diabetes"
+        }
+    },
+    "personality": "Anxious and a bit fidgety, Laura is clearly worried about her health. She frequently checks her pulse and adjusts her position to find comfort.",
+    "communication_style": "She speaks rapidly and often interrupts to ask questions about her condition, expressing her fears about not breathing well.",
+    "pain_description_style": "Laura describes her discomfort in a very expressive manner, often using analogies to describe the weight on her chest.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Signs of respiratory distress",
+            "High heart rate and respiratory rate",
+            "Positive D-dimer and CT results",
+            "Chronic medications impacting health"
+        ],
+        "diagnosis": "Pulmonary Embolism",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Acute coronary syndrome",
+            "Asthma exacerbation",
+            "Anxiety attack",
+            "Heart failure"
+        ],
+        "recommended_interventions": [
+            "Administer oxygen therapy",
+            "Start IV access for potential medications",
+            "Monitor vital signs closely",
+            "Prepare for anticoagulation therapy",
+            "Provide reassurance and support"
+        ]
+    }
+}

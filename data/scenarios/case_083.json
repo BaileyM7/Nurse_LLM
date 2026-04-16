@@ -1,0 +1,146 @@
+{
+    "patient_id": "case_083",
+    "name": "Maria Sanchez",
+    "age": 45,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 160,
+    "height_inches": 64,
+    "chief_complaint": "I feel a terrible pain in my stomach that won't go away.",
+    "onset_description": "The pain started suddenly last night after I ate dinner.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal_pain": {
+            "description": "It feels like a sharp, stabbing pain right in the middle of my belly.",
+            "onset": "Last night around 10 PM.",
+            "character": "Sharp and constant.",
+            "severity": "8",
+            "location": "Center of the abdomen.",
+            "radiation": "It doesn't spread anywhere else.",
+            "aggravating_factors": [
+                "Eating anything",
+                "Moving around"
+            ],
+            "alleviating_factors": [
+                "Sitting still",
+                "Applying a cold pack"
+            ],
+            "associated_symptoms": [
+                "Nausea",
+                "Vomiting",
+                "Fever"
+            ]
+        },
+        "nausea": {
+            "description": "I feel like I might throw up.",
+            "onset": "Started around the same time as the pain.",
+            "character": "Constant feeling of needing to vomit.",
+            "severity": "7",
+            "location": "Stomach",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Smells",
+                "Eating"
+            ],
+            "alleviating_factors": [
+                "Nothing seems to help"
+            ],
+            "associated_symptoms": [
+                "Abdominal pain",
+                "Vomiting"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Diarrhea",
+        "Constipation",
+        "Chest pain",
+        "Headache",
+        "Fatigue",
+        "Shortness of breath",
+        "Palpitations",
+        "Dizziness",
+        "Jaundice",
+        "Weight loss"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 100,
+        "blood_pressure_diastolic": 70,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 101.5,
+        "pain_scale": 8
+    },
+    "labs": {
+        "Amylase": "250 U/L (elevated)",
+        "Lipase": "500 U/L (elevated)",
+        "WBC": "15,000 /\u00b5L (elevated)",
+        "Liver enzymes": "Normal"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Gastritis"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 25"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Omeprazole 20 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, social drinker.",
+        "drugs": "Denies use.",
+        "occupation": "Administrative assistant.",
+        "living_situation": "Lives with husband and two children.",
+        "exercise": "Seldom exercises.",
+        "diet": "Mostly fast food, but tries to cook at home sometimes."
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Diabetes",
+            "Mother": "High cholesterol",
+            "Brother": "Chronic kidney disease"
+        }
+    },
+    "personality": "Anxious and worried about her health, seeks reassurance.",
+    "communication_style": "Open and responsive but often asks a lot of questions.",
+    "pain_description_style": "Describes discomfort in detail, often comparing it to past experiences.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated amylase and lipase",
+            "High heart rate",
+            "Fever",
+            "Nausea and vomiting"
+        ],
+        "diagnosis": "Acute Pancreatitis",
+        "differential_diagnoses": [
+            "Cholecystitis",
+            "Gastritis",
+            "Peptic Ulcer Disease",
+            "Bowel Obstruction"
+        ],
+        "recommended_interventions": [
+            "NPO status",
+            "IV fluids",
+            "Pain management",
+            "Monitor vital signs",
+            "Labs for electrolytes"
+        ]
+    }
+}

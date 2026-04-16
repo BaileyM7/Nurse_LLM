@@ -1,0 +1,124 @@
+{
+    "patient_id": "case_059",
+    "name": "Maria Gonzalez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 145,
+    "height_inches": 64,
+    "chief_complaint": "I have this terrible headache that feels like an explosion in my head.",
+    "onset_description": "The headache started suddenly while I was at work; it felt like a bolt of lightning.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "It's the worst headache I've ever had, like nothing I've experienced before.",
+            "onset": "It started about 30 minutes ago.",
+            "character": "Throbbing and intense.",
+            "severity": "10",
+            "location": "All over my head, but mostly behind my eyes.",
+            "radiation": "None.",
+            "aggravating_factors": [
+                "Bright lights",
+                "Loud noises",
+                "Moving my head"
+            ],
+            "alleviating_factors": [
+                "Nothing seems to help."
+            ],
+            "associated_symptoms": [
+                "Nausea",
+                "Sensitivity to light"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Vision problems",
+        "Weakness in limbs",
+        "Loss of consciousness",
+        "Seizures",
+        "Numbness",
+        "Confusion",
+        "Fever",
+        "Cough",
+        "Stiff neck",
+        "Difficulty speaking"
+    ],
+    "vitals": {
+        "heart_rate": 115,
+        "blood_pressure_systolic": 180,
+        "blood_pressure_diastolic": 100,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 10
+    },
+    "labs": {
+        "CBC": "WBC 12,000 cells/uL (elevated)",
+        "Coagulation": "PT 12 seconds, INR 1.0 (normal)",
+        "CT Scan": "Positive for subarachnoid hemorrhage"
+    },
+    "past_medical_history": [
+        "Migraine headaches",
+        "Anxiety"
+    ],
+    "surgical_history": [
+        "Appendectomy in 2010"
+    ],
+    "medications": [
+        "Ibuprofen 400 mg as needed",
+        "Sertraline 50 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, one drink on weekends",
+        "drugs": "Denies use",
+        "occupation": "Elementary school teacher",
+        "living_situation": "Lives alone",
+        "exercise": "Walks 3 times a week",
+        "diet": "Balanced diet, mostly home-cooked meals"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Hypertension",
+            "Father": "Diabetes",
+            "Brother": "Migraine headaches"
+        }
+    },
+    "personality": "Maria is generally very upbeat but is currently feeling overwhelmed and scared due to her symptoms.",
+    "communication_style": "She is talkative but can become anxious and short-winded when discussing her symptoms.",
+    "pain_description_style": "Describes her pain intensely, using vivid metaphors to express the severity.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Severe headache severity and sudden onset",
+            "Elevated blood pressure",
+            "Positive CT result for SAH"
+        ],
+        "diagnosis": "Subarachnoid Hemorrhage",
+        "differential_diagnoses": [
+            "Migraine",
+            "Tension headache",
+            "Cerebral aneurysm rupture",
+            "Meningitis",
+            "Intracerebral hemorrhage"
+        ],
+        "recommended_interventions": [
+            "Administer pain relief as ordered",
+            "Monitor neurological status",
+            "Prepare for possible neurosurgical consultation",
+            "Educate patient on condition and management"
+        ]
+    }
+}

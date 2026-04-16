@@ -1,0 +1,147 @@
+{
+    "patient_id": "case_052",
+    "name": "Maria Gonzalez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I can't breathe and it feels like I\u2019m drowning.",
+    "onset_description": "It started suddenly about three hours ago while I was at work.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "Shortness of Breath": {
+            "description": "It feels like I can't get enough air in my lungs.",
+            "onset": "3 hours ago",
+            "character": "Constant and worsening",
+            "severity": "8",
+            "location": "Chest",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Moving around",
+                "Lying flat"
+            ],
+            "alleviating_factors": [
+                "Sitting upright",
+                "Using my rescue inhaler"
+            ],
+            "associated_symptoms": [
+                "Cough",
+                "Extreme fatigue",
+                "Chest tightness"
+            ]
+        },
+        "Cough": {
+            "description": "It's a dry cough that just won't stop.",
+            "onset": "Started around the same time as the shortness of breath.",
+            "character": "Dry and persistent",
+            "severity": "5",
+            "location": "Throat",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Talking",
+                "Deep breathing"
+            ],
+            "alleviating_factors": [
+                "Drinking water"
+            ],
+            "associated_symptoms": [
+                "Slight wheezing"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Chest pain",
+        "Fever",
+        "Nausea",
+        "Headache",
+        "Swelling in legs or abdomen",
+        "Skin rash",
+        "Sore throat",
+        "Sinus congestion",
+        "Heart palpitations",
+        "Dizziness"
+    ],
+    "vitals": {
+        "heart_rate": 130,
+        "blood_pressure_systolic": 110,
+        "blood_pressure_diastolic": 70,
+        "respiratory_rate": 28,
+        "spo2": 85,
+        "temperature": 98.6,
+        "pain_scale": 5
+    },
+    "labs": {
+        "CBC": "WBC 15,000 cells/microliter (high)",
+        "ABG": "pH 7.32, PaO2 55 mmHg (acidosis, hypoxemia)",
+        "Chest X-ray": "Bilateral infiltrates present"
+    },
+    "past_medical_history": [
+        "Asthma",
+        "Anxiety"
+    ],
+    "surgical_history": [
+        "Appendectomy"
+    ],
+    "medications": [
+        "Albuterol inhaler as needed",
+        "Sertraline 50 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash",
+        "Environmental allergies - sneezing"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Social drinker, about 2-3 times a month",
+        "drugs": "Denies use",
+        "occupation": "Teacher",
+        "living_situation": "Lives with husband and two children",
+        "exercise": "Rarely exercises due to asthma",
+        "diet": "Balanced diet, but enjoys fast food occasionally"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Asthma",
+            "Father": "Hypertension",
+            "Brother": "Diabetes"
+        }
+    },
+    "personality": "Maria is a worried person, always anxious about things, especially regarding her health and family.",
+    "communication_style": "She tends to be expressive and vocal about her fears, often seeking reassurance.",
+    "pain_description_style": "She describes discomfort in layman's terms, using emotional expressions rather than technical language.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Significant shortness of breath",
+            "Hypoxic Spo2 levels",
+            "Increased respiratory rate",
+            "Bilateral infiltrates in chest X-ray",
+            "Elevated WBC count indicating possible infection"
+        ],
+        "diagnosis": "Acute Respiratory Distress Syndrome (ARDS)",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Pulmonary embolism",
+            "Congestive heart failure",
+            "Chronic obstructive pulmonary disease (COPD) exacerbation",
+            "Anaphylaxis"
+        ],
+        "recommended_interventions": [
+            "Administer oxygen as per protocol",
+            "Position patient upright for comfort",
+            "Start IV access for potential medications and fluids",
+            "Monitor vital signs closely",
+            "Prepare for potential intubation if the patient's condition worsens"
+        ]
+    }
+}

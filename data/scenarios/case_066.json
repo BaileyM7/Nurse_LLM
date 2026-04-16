@@ -1,0 +1,153 @@
+{
+    "patient_id": "case_066",
+    "name": "Maria Gonzalez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I feel like I can't breathe and have a really bad cough.",
+    "onset_description": "It started about three days ago with just a sore throat, but now I feel so weak and my chest hurts a lot.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "cough": {
+            "description": "It's a dry cough that makes me feel like I'm choking.",
+            "onset": "Started three days ago.",
+            "character": "Dry and persistent.",
+            "severity": "8",
+            "location": "Chest",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Cold air",
+                "Talking"
+            ],
+            "alleviating_factors": [
+                "Warm drinks",
+                "Rest"
+            ],
+            "associated_symptoms": [
+                "Shortness of breath",
+                "Fatigue"
+            ]
+        },
+        "fever": {
+            "description": "I feel super hot and sweaty.",
+            "onset": "Started yesterday evening.",
+            "character": "Chills followed by sweating.",
+            "severity": "7",
+            "location": "Body",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Moving around",
+                "Night sweats"
+            ],
+            "alleviating_factors": [
+                "Cold cloth on forehead"
+            ],
+            "associated_symptoms": [
+                "Headaches",
+                "Muscle aches"
+            ]
+        },
+        "fatigue": {
+            "description": "I can barely get out of bed.",
+            "onset": "Started two days ago.",
+            "character": "Extreme tiredness.",
+            "severity": "9",
+            "location": "Whole body",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Any activity",
+                "Not sleeping well"
+            ],
+            "alleviating_factors": [
+                "Lying down"
+            ],
+            "associated_symptoms": [
+                "Weakness",
+                "Dizziness"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Chest pain",
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Sore throat",
+        "Rash",
+        "Joint pain",
+        "Headaches",
+        "Confusion",
+        "Loss of appetite"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 24,
+        "spo2": 93,
+        "temperature": 102.5,
+        "pain_scale": 8
+    },
+    "labs": {
+        "Rapid Influenza Test": "Positive",
+        "CBC": "WBC 12,000 /\u00b5L (elevated), Hgb 13.5 g/dL, Hct 40%"
+    },
+    "past_medical_history": [
+        "Asthma"
+    ],
+    "surgical_history": [],
+    "medications": [
+        "Albuterol inhaler as needed",
+        "Ibuprofen 400mg prn"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, about 1-2 drinks per week",
+        "drugs": "Denies",
+        "occupation": "School teacher",
+        "living_situation": "Lives with spouse and two children",
+        "exercise": "Moderate, walks 2-3 times a week",
+        "diet": "Balanced, but sometimes skips meals when busy"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Diabetes",
+            "Father": "Hypertension",
+            "Sibling": "Asthma"
+        }
+    },
+    "personality": "Maria is typically cheerful and sociable but feels anxious and overwhelmed due to her current illness.",
+    "communication_style": "She is polite but sometimes frustrated, wanting to make sure everyone understands her situation.",
+    "pain_description_style": "She describes her discomfort as a heavy pressure in her chest, indicating it feels like a weight sitting on her.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Positive influenza test, elevated white blood cell count, shortness of breath, high fever, significant fatigue."
+        ],
+        "diagnosis": "Influenza with Complications",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Bronchitis",
+            "COVID-19",
+            "Asthma exacerbation",
+            "Chronic obstructive pulmonary disease"
+        ],
+        "recommended_interventions": [
+            "Administer antipyretics for fever, provide oxygen support, monitor vitals closely, encourage fluid intake, assess respiratory status frequently."
+        ]
+    }
+}

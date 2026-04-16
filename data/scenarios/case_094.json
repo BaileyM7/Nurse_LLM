@@ -1,0 +1,165 @@
+{
+    "patient_id": "case_094",
+    "name": "Maria Gonzalez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I feel like I got hit by a truck and can't breathe well.",
+    "onset_description": "It started about a week ago with a cough and then got worse over the last couple of days.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "cough": {
+            "description": "It\u2019s a dry, hacking cough that keeps me up at night.",
+            "onset": "7 days ago",
+            "character": "dry and persistent",
+            "severity": "8",
+            "location": "throat and chest",
+            "radiation": "null",
+            "aggravating_factors": [
+                "cold air",
+                "talking",
+                "lying down"
+            ],
+            "alleviating_factors": [
+                "drinking warm tea",
+                "cough drops"
+            ],
+            "associated_symptoms": [
+                "chills",
+                "fever",
+                "body aches"
+            ]
+        },
+        "fever": {
+            "description": "I feel hot, like I\u2019m burning up.",
+            "onset": "3 days ago",
+            "character": "persistent",
+            "severity": "7",
+            "location": "body",
+            "radiation": "null",
+            "aggravating_factors": [
+                "moving around",
+                "not taking medicine"
+            ],
+            "alleviating_factors": [
+                "taking ibuprofen"
+            ],
+            "associated_symptoms": [
+                "sweating",
+                "headache"
+            ]
+        },
+        "shortness_of_breath": {
+            "description": "I breathe really fast and feel tight in my chest.",
+            "onset": "2 days ago",
+            "character": "tightness",
+            "severity": "9",
+            "location": "chest",
+            "radiation": "null",
+            "aggravating_factors": [
+                "exertion",
+                "anxiety"
+            ],
+            "alleviating_factors": [
+                "sitting still"
+            ],
+            "associated_symptoms": [
+                "wheezing",
+                "anxiety"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "skin rash",
+        "sore throat",
+        "chest pain",
+        "head injury",
+        "loss of appetite",
+        "fatigue",
+        "confusion"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 80,
+        "respiratory_rate": 24,
+        "spo2": 92,
+        "temperature": 101.5,
+        "pain_scale": 8
+    },
+    "labs": {
+        "Rapid Influenza Test": "Positive",
+        "Complete Blood Count (CBC)": "WBC 12.5 x 10^3/uL (elevated), Hemoglobin 14.0 g/dL (normal), Hematocrit 42.0% (normal)"
+    },
+    "past_medical_history": [
+        "asthma"
+    ],
+    "surgical_history": [
+        "appendectomy"
+    ],
+    "medications": [
+        "albuterol inhaler as needed",
+        "ibuprofen 400 mg every 6 hours"
+    ],
+    "allergies": [
+        "penicillin - hives"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "socially, occasionally",
+        "drugs": "denies use",
+        "occupation": "teacher",
+        "living_situation": "lives with husband and two children",
+        "exercise": "moderate, runs 2-3 times a week",
+        "diet": "mostly healthy, but enjoys sweets"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "diabetes",
+            "father": "heart disease",
+            "brother": "asthma"
+        }
+    },
+    "personality": "Maria is anxious and a bit overwhelmed with her symptoms, often fidgeting and looking around nervously.",
+    "communication_style": "She talks rapidly, often interrupting herself, and seems eager to explain her situation but struggles with articulating her feelings.",
+    "pain_description_style": "Maria describes her discomfort vividly and emotionally, expressing how unable to manage it makes her feel scared.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated heart rate",
+            "high respiratory rate",
+            "positive influenza test",
+            "shortness of breath",
+            "elevated white blood cell count"
+        ],
+        "diagnosis": "Influenza with complications",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Bronchitis",
+            "COVID-19",
+            "Asthma exacerbation",
+            "Pulmonary embolism"
+        ],
+        "recommended_interventions": [
+            "administer oxygen",
+            "monitor vitals closely",
+            "provide antipyretics",
+            "start Tamiflu if appropriate",
+            "encourage fluid intake"
+        ]
+    }
+}

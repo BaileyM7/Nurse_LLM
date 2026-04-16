@@ -1,0 +1,122 @@
+{
+    "patient_id": "case_081",
+    "name": "Maria Gonzalez",
+    "age": 27,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 145,
+    "height_inches": 65,
+    "chief_complaint": "I have this really sharp pain in my belly that won\u2019t go away.",
+    "onset_description": "The pain started suddenly about 10 hours ago after I had lunch.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal pain": {
+            "description": "It feels like someone is stabbing me in the lower right side of my stomach.",
+            "onset": "10 hours ago",
+            "character": "sharp and intense",
+            "severity": "8",
+            "location": "lower right abdomen",
+            "radiation": "it doesn\u2019t really spread anywhere else",
+            "aggravating_factors": [
+                "moving around",
+                "coughing",
+                "laughing"
+            ],
+            "alleviating_factors": [
+                "lying still",
+                "applying pressure"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "loss of appetite"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "fever",
+        "diarrhea",
+        "vomiting",
+        "chest pain",
+        "shortness of breath",
+        "burning during urination",
+        "weight loss",
+        "fatigue",
+        "headaches",
+        "swelling in the abdomen"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 110,
+        "blood_pressure_diastolic": 70,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 99.5,
+        "pain_scale": 8
+    },
+    "labs": {
+        "WBC": "15,000 cells/mcL - elevated",
+        "CRP": "3.2 mg/L - elevated",
+        "Urinalysis": "negative for infection"
+    },
+    "past_medical_history": [
+        "none"
+    ],
+    "surgical_history": [
+        "appendectomy (previously suspected)"
+    ],
+    "medications": [
+        "Ibuprofen 400 mg as needed"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "social drinker",
+        "drugs": "denies use",
+        "occupation": "teacher",
+        "living_situation": "lives alone",
+        "exercise": "moderately active",
+        "diet": "balanced diet"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "diabetes",
+            "father": "hypertension"
+        }
+    },
+    "personality": "Maria is articulate and somewhat anxious about her symptoms, often fidgeting and asking questions about what might be happening.",
+    "communication_style": "She tends to be direct, asking specific questions and seeking reassurance.",
+    "pain_description_style": "She describes her pain with vivid imagery, making it clear how severe it is for her.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated white blood cell count",
+            "localized tenderness in the right lower quadrant",
+            "patient anxious about her condition"
+        ],
+        "diagnosis": "Acute Appendicitis",
+        "differential_diagnoses": [
+            "Ovarian Cyst Rupture",
+            "Ectopic Pregnancy",
+            "Gastroenteritis",
+            "Diverticulitis",
+            "Intestinal Obstruction"
+        ],
+        "recommended_interventions": [
+            "IV fluid administration",
+            "NPO status",
+            "pain management",
+            "surgical consult"
+        ]
+    }
+}

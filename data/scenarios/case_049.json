@@ -1,0 +1,143 @@
+{
+    "patient_id": "case_049",
+    "name": "Marilyn Ortiz",
+    "age": 62,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 165,
+    "height_inches": 64,
+    "chief_complaint": "I can't catch my breath and my chest feels tight.",
+    "onset_description": "I started feeling this way about two hours ago while sitting at home watching TV.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "It feels like I'm trying to breathe through a straw.",
+            "onset": "2 hours ago",
+            "character": "sudden onset of breathlessness",
+            "severity": "8",
+            "location": "chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "exertion",
+                "lying down"
+            ],
+            "alleviating_factors": [
+                "sitting up",
+                "slow breathing"
+            ],
+            "associated_symptoms": [
+                "anxiety",
+                "chest pain"
+            ]
+        },
+        "chest pain": {
+            "description": "It feels like pressure on my chest.",
+            "onset": "1 hour ago",
+            "character": "sharp and stabbing",
+            "severity": "7",
+            "location": "center of chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "coughing",
+                "deep breaths"
+            ],
+            "alleviating_factors": [
+                "resting"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "lightheadedness"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "fever",
+        "cough",
+        "wheezing",
+        "syncope",
+        "hemoptysis",
+        "gastrointestinal symptoms",
+        "leg swelling",
+        "chronic fatigue",
+        "palpitations",
+        "night sweats"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 145,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 28,
+        "spo2": 90,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "D-dimer": "500 ng/mL (elevated)",
+        "Arterial Blood Gas": "pH 7.35, pCO2 50 mmHg, pO2 60 mmHg (respiratory acidosis with hypoxemia)"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "type 2 diabetes"
+    ],
+    "surgical_history": [
+        "gallbladder removal"
+    ],
+    "medications": [
+        "Lisinopril 20mg daily",
+        "Metformin 1000mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "former smoker, quit 5 years ago",
+        "alcohol": "social drinker, occasionally on weekends",
+        "drugs": "denies use",
+        "occupation": "retired school teacher",
+        "living_situation": "lives alone",
+        "exercise": "rarely, does light walking",
+        "diet": "restricts carbs due to diabetes but enjoys cooking"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "heart disease",
+            "father": "lung cancer",
+            "sibling": "asthma"
+        }
+    },
+    "personality": "Marilyn is anxious, easily overwhelmed, and tends to ruminate on her symptoms.",
+    "communication_style": "She speaks in short sentences, often interrupting herself with worries about her health.",
+    "pain_description_style": "She describes discomfort in a very emotional way, often expressing fear of what might be wrong.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated D-dimer",
+            "hypoxemia",
+            "increased respiratory rate",
+            "chest pain description",
+            "patient's anxiety level"
+        ],
+        "diagnosis": "Pulmonary Embolism",
+        "differential_diagnoses": [
+            "pneumonia",
+            "acute coronary syndrome",
+            "anxiety attack",
+            "asthma exacerbation",
+            "pneumothorax"
+        ],
+        "recommended_interventions": [
+            "administer oxygen therapy",
+            "initiate IV access",
+            "obtain further imaging (CT scan), monitor vital signs closely"
+        ]
+    }
+}

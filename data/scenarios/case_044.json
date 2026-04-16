@@ -1,0 +1,123 @@
+{
+    "patient_id": "case_044",
+    "name": "James Thompson",
+    "age": 54,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 72,
+    "chief_complaint": "I feel like my head is going to explode.",
+    "onset_description": "The headache started suddenly about an hour ago while I was at work.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "It feels like a pressure cooker inside my head.",
+            "onset": "1 hour ago",
+            "character": "throbbing and intense",
+            "severity": "8",
+            "location": "whole head",
+            "radiation": "none",
+            "aggravating_factors": [
+                "loud noises",
+                "bright lights"
+            ],
+            "alleviating_factors": [
+                "sitting still in a dark room"
+            ],
+            "associated_symptoms": [
+                "blurred vision",
+                "nausea",
+                "shortness of breath"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "palpitations",
+        "dizziness",
+        "fainting",
+        "fatigue",
+        "numbness",
+        "tingling",
+        "sweating",
+        "tremors",
+        "hot flashes"
+    ],
+    "vitals": {
+        "heart_rate": 112,
+        "blood_pressure_systolic": 220,
+        "blood_pressure_diastolic": 130,
+        "respiratory_rate": 22,
+        "spo2": 97,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "BMP": "Normal with slight elevation in creatinine (1.2 mg/dL)",
+        "CBC": "Normal",
+        "Troponin": "Negative"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 20"
+    ],
+    "medications": [
+        "Lisinopril 40 mg daily",
+        "Metformin 1000 mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "occasionally, about 2-3 drinks on weekends",
+        "drugs": "denies use of recreational drugs",
+        "occupation": "construction worker",
+        "living_situation": "lives alone",
+        "exercise": "rarely exercises",
+        "diet": "high in carbohydrates and fast food"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Heart Disease",
+            "mother": "Hypertension",
+            "sibling": "Type 2 Diabetes"
+        }
+    },
+    "personality": "James is generally stoic but can become anxious when he experiences severe symptoms. He often brushes off minor issues, believing they will resolve on their own.",
+    "communication_style": "He is direct and to the point but may get frustrated if he feels he is not being understood.",
+    "pain_description_style": "He tends to describe his pain in relatable terms, often using metaphors to convey intensity.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated blood pressure readings",
+            "Altered mental status signs",
+            "Identification of headache as key priority"
+        ],
+        "diagnosis": "Hypertensive Emergency",
+        "differential_diagnoses": [
+            "Acute Stroke",
+            "Cardiovascular Accident",
+            "Hypertensive Encephalopathy",
+            "Aortic Dissection"
+        ],
+        "recommended_interventions": [
+            "Administer antihypertensive medications",
+            "Monitor vital signs closely",
+            "Provide oxygen if needed",
+            "Prepare for potential imaging studies"
+        ]
+    }
+}

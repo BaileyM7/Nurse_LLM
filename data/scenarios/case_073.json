@@ -1,0 +1,125 @@
+{
+    "patient_id": "case_073",
+    "name": "Johnathan Smith",
+    "age": 55,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 210,
+    "height_inches": 72,
+    "chief_complaint": "I feel like my head is going to explode.",
+    "onset_description": "It started suddenly while I was watching TV this afternoon.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "Severe headache": {
+            "description": "It feels like a throbbing pain right behind my eyes.",
+            "onset": "about 2 hours ago",
+            "character": "throbbing and intense",
+            "severity": "8 out of 10",
+            "location": "behind the eyes and forehead",
+            "radiation": "none",
+            "aggravating_factors": [
+                "light and noise"
+            ],
+            "alleviating_factors": [
+                "lying down in a dark room"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "blurred vision",
+                "chest tightness"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "shortness of breath",
+        "numbness or tingling",
+        "fever",
+        "cough",
+        "fatigue",
+        "dizziness",
+        "palpitations",
+        "abdominal pain",
+        "visual disturbances"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 210,
+        "blood_pressure_diastolic": 130,
+        "respiratory_rate": 22,
+        "spo2": 96,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "Complete Blood Count": "Normal",
+        "Basic Metabolic Panel": "Normal",
+        "Troponin": "Negative",
+        "BNP": "Low",
+        "Lipid Panel": "Total Cholesterol 240 mg/dL (high)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy in 1995"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Metformin 500 mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Quit 5 years ago",
+        "alcohol": "Occasional use, 2-3 times a month",
+        "drugs": "Denies",
+        "occupation": "Accountant",
+        "living_situation": "Lives alone",
+        "exercise": "Minimal, walks occasionally",
+        "diet": "High in salt and processed foods"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Hypertension",
+            "Mother": "Diabetes"
+        }
+    },
+    "personality": "Johnathan is anxious but tries to maintain a sense of humor despite his discomfort. He is cooperative but fidgety.",
+    "communication_style": "He talks quickly and tends to ramble a bit when he\u2019s nervous, often asking questions about what the doctors are doing.",
+    "pain_description_style": "He describes discomfort in vivid detail, using metaphors like 'a pressure cooker ready to burst'.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated blood pressure readings",
+            "Severe headache with associated symptoms",
+            "Nausea and blurred vision",
+            "Past medical history of hypertension"
+        ],
+        "diagnosis": "Hypertensive Emergency",
+        "differential_diagnoses": [
+            "Stroke",
+            "Hypertensive Encephalopathy",
+            "Acute Coronary Syndrome",
+            "Aortic Dissection",
+            "Pheochromocytoma"
+        ],
+        "recommended_interventions": [
+            "Administer IV antihypertensives",
+            "Continuous blood pressure monitoring",
+            "Provide supplemental oxygen if needed",
+            "Prepare for potential imaging studies"
+        ]
+    }
+}

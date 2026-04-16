@@ -1,0 +1,136 @@
+{
+    "patient_id": "case_051",
+    "name": "Maria Gomez",
+    "age": 72,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 145,
+    "height_inches": 65,
+    "chief_complaint": "I can\u2019t catch my breath, it feels like there\u2019s something heavy in my chest.",
+    "onset_description": "I started feeling this way about a week ago, but it got worse overnight.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "I feel like I have to gasp for air, especially when I lay down.",
+            "onset": "Started about a week ago, worsened last night.",
+            "character": "It feels tight and heavy.",
+            "severity": "8",
+            "location": "Chest",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Lying flat",
+                "Exertion"
+            ],
+            "alleviating_factors": [
+                "Sitting up",
+                "Deep breathing"
+            ],
+            "associated_symptoms": [
+                "Cough",
+                "Fatigue"
+            ]
+        },
+        "cough": {
+            "description": "I\u2019ve been coughing a lot, especially at night.",
+            "onset": "About four days ago.",
+            "character": "Dry and sometimes a little wheezy.",
+            "severity": "4",
+            "location": "Throat",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Cold air"
+            ],
+            "alleviating_factors": [
+                "Warm drinks"
+            ],
+            "associated_symptoms": [
+                "Slight fever"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Chest pain",
+        "Fever over 100\u00b0F",
+        "Swelling in legs",
+        "Nausea or vomiting",
+        "Recent travel",
+        "Heart palpitations",
+        "Weight loss",
+        "Wheezing",
+        "Sore throat",
+        "Loss of appetite"
+    ],
+    "vitals": {
+        "heart_rate": 98,
+        "blood_pressure_systolic": 140,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 24,
+        "spo2": 88,
+        "temperature": 99.1,
+        "pain_scale": 4
+    },
+    "labs": {
+        "Chest X-ray": "Right pleural effusion noted; no signs of pneumonia.",
+        "CBC": "WBC 12,000/uL, indicative of possible infection.",
+        "BMP": "Electrolytes within normal limits."
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Chronic Obstructive Pulmonary Disease (COPD)"
+    ],
+    "surgical_history": [
+        "Right knee replacement 5 years ago"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Albuterol inhaler as needed"
+    ],
+    "allergies": [
+        "Penicillin - rash",
+        "Ibuprofen - stomach upset"
+    ],
+    "social_history": {
+        "smoking": "Former smoker, quit 10 years ago.",
+        "alcohol": "Occasional wine, social use.",
+        "drugs": "Denies illicit drug use.",
+        "occupation": "Retired school teacher.",
+        "living_situation": "Lives alone, children visit regularly.",
+        "exercise": "Light walking, not regularly.",
+        "diet": "Balanced diet, but sometimes skips meals."
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Asthma",
+            "Father": "Heart disease"
+        }
+    },
+    "personality": "Maria is generally stoic but has become anxious due to her current breathing difficulties. She\u2019s often calm but shows signs of distress when discussing her symptoms.",
+    "communication_style": "She is straightforward but can become emotional when discussing her health. Prefers to talk in simple terms.",
+    "pain_description_style": "Describes discomfort as tightness and heaviness rather than sharp pain.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Presence of dyspnea, cough, hypoxia, history of COPD, and pleural effusion on imaging."
+        ],
+        "diagnosis": "Pleural Effusion",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Heart failure",
+            "Pulmonary embolism",
+            "Lung cancer",
+            "COPD exacerbation"
+        ],
+        "recommended_interventions": [
+            "Positioning for comfort, oxygen therapy, possible thoracentesis, monitoring vital signs."
+        ]
+    }
+}

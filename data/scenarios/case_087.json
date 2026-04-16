@@ -1,0 +1,142 @@
+{
+    "patient_id": "case_087",
+    "name": "Maria Gonzalez",
+    "age": 45,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 160,
+    "height_inches": 65,
+    "chief_complaint": "I have this terrible headache that feels different from usual.",
+    "onset_description": "The headache started suddenly while I was watching TV an hour ago.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "It feels like a pressure building inside my head.",
+            "onset": "1 hour ago",
+            "character": "throbbing and severe",
+            "severity": "8",
+            "location": "entire head",
+            "radiation": "none",
+            "aggravating_factors": [
+                "bright lights",
+                "loud noises"
+            ],
+            "alleviating_factors": [
+                "lying still",
+                "quiet environment"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "sensitivity to light",
+                "confusion"
+            ]
+        },
+        "nausea": {
+            "description": "I feel like I might throw up.",
+            "onset": "30 minutes ago",
+            "character": "persistent",
+            "severity": "7",
+            "location": "stomach",
+            "radiation": "none",
+            "aggravating_factors": [
+                "moving around"
+            ],
+            "alleviating_factors": [
+                "sipping water"
+            ],
+            "associated_symptoms": [
+                "headache",
+                "dizziness"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "shortness of breath",
+        "abdominal pain",
+        "fever",
+        "weakness",
+        "numbness",
+        "vision changes",
+        "seizures",
+        "cough",
+        "back pain"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 12,000/\u00b5L (elevated), Hemoglobin 14.5 g/dL, Platelets 250,000/\u00b5L",
+        "PT/INR": "11 seconds, INR 1.0 (normal)",
+        "CMP": "normal electrolytes and liver function"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "anxiety disorder"
+    ],
+    "surgical_history": [
+        "appendectomy in 2000"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Sertraline 50 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "occasionally drinks wine on weekends",
+        "drugs": "denies any illicit drug use",
+        "occupation": "office manager",
+        "living_situation": "lives with husband and two children",
+        "exercise": "moderate exercise a few times a week",
+        "diet": "generally healthy, but loves junk food occasionally"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "hypertension",
+            "father": "stroke",
+            "sibling": "diabetes"
+        }
+    },
+    "personality": "Maria is usually upbeat but right now she feels overwhelmed and anxious about her headache.",
+    "communication_style": "She is cooperative but expresses frustration about not understanding what is happening to her.",
+    "pain_description_style": "She describes her pain in relatable terms, like a pressure or throbbing sensation that she can't shake off.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "severe headache with sudden onset, elevated heart rate and blood pressure, nausea, confusion"
+        ],
+        "diagnosis": "Subarachnoid Hemorrhage",
+        "differential_diagnoses": [
+            "Migraine",
+            "Tension-type headache",
+            "Cerebral aneurysm rupture",
+            "Intracranial hemorrhage",
+            "Meningitis"
+        ],
+        "recommended_interventions": [
+            "Notify the physician immediately",
+            "Prepare for CT scan",
+            "Establish IV access",
+            "Monitor vital signs closely",
+            "Administer antiemetics if ordered"
+        ]
+    }
+}

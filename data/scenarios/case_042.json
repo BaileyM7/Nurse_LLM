@@ -1,0 +1,143 @@
+{
+    "patient_id": "case_042",
+    "name": "James Thompson",
+    "age": 67,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 210,
+    "height_inches": 72,
+    "chief_complaint": "I feel like I'm drowning when I try to breathe.",
+    "onset_description": "It started getting worse over the last few days, but today it feels unbearable.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "shortness_of_breath": {
+            "description": "I can't catch my breath, especially when I lie down.",
+            "onset": "Started worsening over the last two days.",
+            "character": "Feels tight and heavy.",
+            "severity": "8",
+            "location": "Chest",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Lying flat",
+                "Exertion"
+            ],
+            "alleviating_factors": [
+                "Sitting up",
+                "Using my inhaler"
+            ],
+            "associated_symptoms": [
+                "Coughing",
+                "Wheezing"
+            ]
+        },
+        "swelling": {
+            "description": "My legs feel really swollen and tight.",
+            "onset": "I noticed it yesterday.",
+            "character": "Puffy and uncomfortable.",
+            "severity": "6",
+            "location": "Legs",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Standing for long periods"
+            ],
+            "alleviating_factors": [
+                "Elevating my legs"
+            ],
+            "associated_symptoms": [
+                "Feeling heavy in my limbs"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "fever",
+        "nausea",
+        "vomiting",
+        "confusion",
+        "loss of appetite",
+        "palpitations",
+        "syncope",
+        "headache",
+        "abdominal pain"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 24,
+        "spo2": 88,
+        "temperature": 98.6,
+        "pain_scale": 3
+    },
+    "labs": {
+        "B-type natriuretic peptide (BNP)": "980 pg/mL (elevated, indicating heart failure)",
+        "Creatinine": "1.5 mg/dL (slightly elevated)",
+        "Electrolytes": "Sodium 135 mEq/L, Potassium 4.0 mEq/L (normal)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Coronary artery disease",
+        "Type 2 diabetes"
+    ],
+    "surgical_history": [
+        "Coronary artery bypass graft (CABG) in 2015"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Metformin 500 mg twice daily",
+        "Aspirin 81 mg daily"
+    ],
+    "allergies": [
+        "Penicillin (rash)"
+    ],
+    "social_history": {
+        "smoking": "Former smoker, quit 5 years ago",
+        "alcohol": "Occasional, social drinker",
+        "drugs": "Denies drug use",
+        "occupation": "Retired school teacher",
+        "living_situation": "Lives alone",
+        "exercise": "Minimal, mostly sedentary",
+        "diet": "High in salt and processed foods"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Heart failure",
+            "Mother": "Diabetes",
+            "Sister": "Hypertension"
+        }
+    },
+    "personality": "Slightly anxious and frustrated due to his current condition; has a tendency to worry about his health.",
+    "communication_style": "Communicates clearly but tends to ramble when anxious, asking many questions about his condition.",
+    "pain_description_style": "Describes his discomfort as a heaviness in his chest, often using metaphors.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated BNP levels indicating heart failure",
+            "Signs of fluid overload (swelling)",
+            "Shortness of breath on exertion"
+        ],
+        "diagnosis": "Heart Failure Exacerbation",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Pulmonary embolism",
+            "Acute coronary syndrome",
+            "Asthma exacerbation",
+            "Chronic obstructive pulmonary disease (COPD) exacerbation"
+        ],
+        "recommended_interventions": [
+            "Administer diuretics as ordered",
+            "Monitor vital signs closely",
+            "Provide supplemental oxygen",
+            "Educate patient about heart failure management"
+        ]
+    }
+}

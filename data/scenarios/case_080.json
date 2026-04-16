@@ -1,0 +1,145 @@
+{
+    "patient_id": "case_080",
+    "name": "Maria Gonzalez",
+    "age": 62,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I feel like I can't breathe and it's getting worse.",
+    "onset_description": "It started suddenly about three hours ago when I was cooking dinner.",
+    "severity": "critical",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "It's like there's a heavy weight on my chest.",
+            "onset": "3 hours ago",
+            "character": "tightness and shortness of breath",
+            "severity": "8",
+            "location": "chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "moving around",
+                "laying down"
+            ],
+            "alleviating_factors": [
+                "sitting up",
+                "trying to breathe slowly"
+            ],
+            "associated_symptoms": [
+                "cough",
+                "fatigue",
+                "anxiety"
+            ]
+        },
+        "cough": {
+            "description": "It's a dry cough that keeps coming.",
+            "onset": "about an hour ago",
+            "character": "dry and irritating",
+            "severity": "5",
+            "location": "throat",
+            "radiation": "none",
+            "aggravating_factors": [
+                "talking",
+                "deep breaths"
+            ],
+            "alleviating_factors": [
+                "sipping water"
+            ],
+            "associated_symptoms": [
+                "throat irritation"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "fever",
+        "sore throat",
+        "nausea",
+        "vomiting",
+        "headache",
+        "confusion",
+        "swelling in legs",
+        "wheezing",
+        "fainting"
+    ],
+    "vitals": {
+        "heart_rate": 120,
+        "blood_pressure_systolic": 90,
+        "blood_pressure_diastolic": 60,
+        "respiratory_rate": 28,
+        "spo2": 85,
+        "temperature": 98.6,
+        "pain_scale": 2
+    },
+    "labs": {
+        "ABG": "7.35 pH, 60 mmHg CO2, 50 mmHg O2 (Acidosis and hypoxemia)",
+        "CBC": "WBC 15,000/mm3 (leukocytosis)",
+        "D-dimer": "Elevated"
+    },
+    "past_medical_history": [
+        "Chronic Obstructive Pulmonary Disease",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Appendectomy"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Albuterol inhaler as needed"
+    ],
+    "allergies": [
+        "Penicillin - rash",
+        "Peanuts - anaphylaxis"
+    ],
+    "social_history": {
+        "smoking": "quit 5 years ago, smoked for 20 years",
+        "alcohol": "socially, 1-2 drinks on weekends",
+        "drugs": "denies any illegal drug use",
+        "occupation": "retired teacher",
+        "living_situation": "lives alone",
+        "exercise": "walks occasionally",
+        "diet": "tries to eat healthy but has a sweet tooth"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "heart disease",
+            "Mother": "asthma"
+        }
+    },
+    "personality": "Maria is anxious and a bit irritable due to her breathing issues. She is typically independent but feels vulnerable at the moment.",
+    "communication_style": "She is direct but often needs reassurance when explaining her symptoms.",
+    "pain_description_style": "She tends to minimize discomfort, saying she feels 'a little tight' but is clearly struggling.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "signs of respiratory distress",
+            "elevated heart rate",
+            "low oxygen saturation",
+            "anxiety levels",
+            "ABG results indicating acidosis"
+        ],
+        "diagnosis": "Acute Respiratory Distress Syndrome",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Pulmonary embolism",
+            "Congestive heart failure",
+            "Acute asthma exacerbation"
+        ],
+        "recommended_interventions": [
+            "Administer oxygen therapy",
+            "Position the patient upright",
+            "Monitor vital signs frequently",
+            "Prepare for potential intubation",
+            "Administer bronchodilators as ordered"
+        ]
+    }
+}

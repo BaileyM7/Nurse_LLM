@@ -1,0 +1,125 @@
+{
+    "patient_id": "case_055",
+    "name": "Maria Gonzalez",
+    "age": 45,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 165,
+    "height_inches": 65,
+    "chief_complaint": "I have this terrible pain in my stomach that just won't go away.",
+    "onset_description": "The pain started around midnight after I ate a large meal with fatty foods.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal pain": {
+            "description": "It feels like someone is squeezing my stomach really tight.",
+            "onset": "Started 6 hours ago.",
+            "character": "Dull and constant.",
+            "severity": "9",
+            "location": "Upper abdomen.",
+            "radiation": "It sometimes feels like it's moving to my back.",
+            "aggravating_factors": [
+                "Eating",
+                "Lying down"
+            ],
+            "alleviating_factors": [
+                "Sitting up",
+                "Applying heat"
+            ],
+            "associated_symptoms": [
+                "Nausea",
+                "Vomiting",
+                "Diarrhea"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Fever",
+        "Chest pain",
+        "Shortness of breath",
+        "Burning sensation during urination",
+        "Joint pain",
+        "Rash",
+        "Weight loss",
+        "Fatigue",
+        "Confusion",
+        "Difficulty swallowing"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 90,
+        "blood_pressure_diastolic": 60,
+        "respiratory_rate": 22,
+        "spo2": 97,
+        "temperature": 98.6,
+        "pain_scale": 9
+    },
+    "labs": {
+        "Lipase": "300 U/L (elevated, indicating pancreatitis)",
+        "Amylase": "250 U/L (elevated)",
+        "White Blood Cell Count": "15,000/mm\u00b3 (elevated)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Cholecystitis"
+    ],
+    "surgical_history": [
+        "Cholecystectomy in 2019"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Omeprazole 20 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, drinks on weekends.",
+        "drugs": "Denies any illicit drug use.",
+        "occupation": "Office Manager",
+        "living_situation": "Lives with her husband and two children.",
+        "exercise": "Rarely exercises, prefers sedentary activities.",
+        "diet": "Regularly eats takeout, especially high-fat foods."
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Diabetes",
+            "Father": "Heart Disease"
+        }
+    },
+    "personality": "Anxious and somewhat irritable due to the pain.",
+    "communication_style": "Speaks quickly and often interrupts when in pain, easily distracted by discomfort.",
+    "pain_description_style": "Describes her pain with vivid imagery, often comparing it to being squeezed tightly.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated lipase and amylase levels",
+            "History of cholecystitis",
+            "Description of abdominal pain"
+        ],
+        "diagnosis": "Acute Pancreatitis",
+        "differential_diagnoses": [
+            "Cholecystitis",
+            "Peptic Ulcer Disease",
+            "Gastritis",
+            "Mesenteric Ischemia",
+            "Diverticulitis"
+        ],
+        "recommended_interventions": [
+            "NPO status",
+            "IV fluid resuscitation",
+            "Pain management",
+            "Monitoring of vital signs",
+            "Assessment of laboratory values"
+        ]
+    }
+}

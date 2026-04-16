@@ -1,0 +1,160 @@
+{
+    "patient_id": "case_065",
+    "name": "James Rodriguez",
+    "age": 62,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 220,
+    "height_inches": 68,
+    "chief_complaint": "My foot is really red and hurts a lot.",
+    "onset_description": "It started about a week ago after I scraped it on the edge of my bed.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "redness": {
+            "description": "My foot is bright red around the wound.",
+            "onset": "about a week ago",
+            "character": "sharp and tender",
+            "severity": "8",
+            "location": "bottom of my right foot",
+            "radiation": "null",
+            "aggravating_factors": [
+                "when I walk",
+                "when I touch it"
+            ],
+            "alleviating_factors": [
+                "keeping it elevated"
+            ],
+            "associated_symptoms": [
+                "swelling",
+                "pus coming out"
+            ]
+        },
+        "swelling": {
+            "description": "It looks like there\u2019s a balloon on my foot.",
+            "onset": "around the same time",
+            "character": "constant pressure",
+            "severity": "7",
+            "location": "around the wound",
+            "radiation": "null",
+            "aggravating_factors": [
+                "standing too long"
+            ],
+            "alleviating_factors": [
+                "resting my foot"
+            ],
+            "associated_symptoms": [
+                "redness",
+                "pain"
+            ]
+        },
+        "pain": {
+            "description": "It feels like a stabbing pain.",
+            "onset": "started a week ago",
+            "character": "sharp",
+            "severity": "9",
+            "location": "right foot",
+            "radiation": "to my ankle",
+            "aggravating_factors": [
+                "walking",
+                "putting on a shoe"
+            ],
+            "alleviating_factors": [
+                "taking pain meds"
+            ],
+            "associated_symptoms": [
+                "fever"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "nausea",
+        "vomiting",
+        "shortness of breath",
+        "chest pain",
+        "headache",
+        "dizziness",
+        "weakness",
+        "loss of appetite",
+        "fever",
+        "chills"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 145,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 20,
+        "spo2": 95,
+        "temperature": 101.3,
+        "pain_scale": 9
+    },
+    "labs": {
+        "WBC": "15,000 cells/mcL (elevated indicating infection)",
+        "Glucose": "250 mg/dL (elevated)",
+        "ESR": "40 mm/hr (elevated)"
+    },
+    "past_medical_history": [
+        "Type 2 Diabetes",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 25"
+    ],
+    "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 10mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash",
+        "Sulfa drugs - nausea"
+    ],
+    "social_history": {
+        "smoking": "former smoker, quit 5 years ago",
+        "alcohol": "drinks socially, about 1-2 times a month",
+        "drugs": "denies use",
+        "occupation": "retired factory worker",
+        "living_situation": "lives with wife",
+        "exercise": "rarely exercises, prefers watching TV",
+        "diet": "generally high in carbs, trying to reduce sugar"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Diabetes",
+            "father": "Heart Disease",
+            "sibling": "Hypertension"
+        }
+    },
+    "personality": "Anxious and concerned about his health, tends to overthink situations.",
+    "communication_style": "Speaks in short sentences and asks a lot of questions, seems nervous.",
+    "pain_description_style": "Describes discomfort in dramatic language, comparing pain to stabbing.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "signs of infection",
+            "elevated WBC",
+            "high blood glucose levels",
+            "pain management needs"
+        ],
+        "diagnosis": "Diabetic Foot Infection",
+        "differential_diagnoses": [
+            "Cellulitis",
+            "Abscess",
+            "Osteomyelitis",
+            "Venous Stasis Ulcer"
+        ],
+        "recommended_interventions": [
+            "Administer antibiotics",
+            "Wound care and monitoring",
+            "Blood glucose management",
+            "Patient education on foot care"
+        ]
+    }
+}

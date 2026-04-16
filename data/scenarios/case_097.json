@@ -1,0 +1,137 @@
+{
+    "patient_id": "case_097",
+    "name": "Michael Johnson",
+    "age": 32,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "My leg really hurts and feels really tight.",
+    "onset_description": "I hurt my leg while playing basketball about three hours ago and it's been getting worse ever since.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "pain": {
+            "description": "It's a sharp pain that just won\u2019t go away.",
+            "onset": "Started three hours ago after my injury.",
+            "character": "Sharp and throbbing.",
+            "severity": "8",
+            "location": "My lower leg, right above my ankle.",
+            "radiation": "It doesn't seem to spread anywhere.",
+            "aggravating_factors": [
+                "Moving my leg",
+                "putting weight on it"
+            ],
+            "alleviating_factors": [
+                "Resting it",
+                "keeping it elevated slightly"
+            ],
+            "associated_symptoms": [
+                "Numbness in my toes",
+                "a feeling of tightness"
+            ]
+        },
+        "swelling": {
+            "description": "My leg looks bigger than usual.",
+            "onset": "Started about an hour after the injury.",
+            "character": "It\u2019s very swollen and feels hard.",
+            "severity": "7",
+            "location": "Entire lower leg.",
+            "radiation": "None.",
+            "aggravating_factors": [
+                "Walking",
+                "touching it"
+            ],
+            "alleviating_factors": [
+                "Keeping it still"
+            ],
+            "associated_symptoms": [
+                "Discoloration of the skin"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "No fever",
+        "No back pain",
+        "No headache",
+        "No nausea",
+        "No vomiting",
+        "No chest pain",
+        "No shortness of breath",
+        "No dizziness",
+        "No urge to urinate",
+        "No swelling in my hands"
+    ],
+    "vitals": {
+        "heart_rate": 105,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 22,
+        "spo2": 97,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "Creatine Kinase": "1500 U/L (elevated, indicates muscle damage)",
+        "Complete Blood Count": "Within normal limits"
+    },
+    "past_medical_history": [
+        "None"
+    ],
+    "surgical_history": [
+        "None"
+    ],
+    "medications": [
+        "None"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional social drinker",
+        "drugs": "Denies any drug use",
+        "occupation": "Office worker",
+        "living_situation": "Lives alone",
+        "exercise": "Plays basketball regularly",
+        "diet": "Generally balanced diet"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Hypertension",
+            "Mother": "Diabetes"
+        }
+    },
+    "personality": "Michael is generally laid-back but anxious about his current pain. He can be a bit sarcastic but is cooperative when asked questions.",
+    "communication_style": "He talks in a straightforward manner but sometimes adds humor to lighten the mood despite his discomfort.",
+    "pain_description_style": "He describes his discomfort in relatable terms, often using analogies related to sports.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Assessment of leg for '5 P's' of compartment syndrome (pain, paresthesia, pallor, pulselessness, paralysis)",
+            "Assessment of swelling and tightness in the affected leg",
+            "Inquire about recent physical activity and any previous injuries"
+        ],
+        "diagnosis": "Compartment Syndrome",
+        "differential_diagnoses": [
+            "Deep Vein Thrombosis",
+            "Fracture",
+            "Muscle Strain",
+            "Tendon Injury"
+        ],
+        "recommended_interventions": [
+            "Positioning the leg at heart level",
+            "Monitoring vital signs frequently",
+            "Applying ice to reduce swelling",
+            "Preparing for possible fasciotomy if symptoms worsen"
+        ]
+    }
+}

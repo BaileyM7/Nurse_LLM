@@ -1,0 +1,160 @@
+{
+    "patient_id": "case_100",
+    "name": "Maria Gonzalez",
+    "age": 32,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I feel like my heart is racing, and I can't catch my breath.",
+    "onset_description": "It all started this morning when I woke up feeling anxious and shaky.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "palpitations": {
+            "description": "My heart feels like it's pounding out of my chest.",
+            "onset": "Started this morning.",
+            "character": "Fast and irregular.",
+            "severity": "8",
+            "location": "Chest",
+            "radiation": null,
+            "aggravating_factors": [
+                "Stress",
+                "Moving around"
+            ],
+            "alleviating_factors": [
+                "Sitting still"
+            ],
+            "associated_symptoms": [
+                "Sweating",
+                "Dizziness"
+            ]
+        },
+        "fever": {
+            "description": "I feel really hot, like I have a fever.",
+            "onset": "Came on suddenly.",
+            "character": "Persistent",
+            "severity": "7",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [
+                "Being in a warm room"
+            ],
+            "alleviating_factors": [
+                "Drinking cold water"
+            ],
+            "associated_symptoms": [
+                "Chills"
+            ]
+        },
+        "tremors": {
+            "description": "My hands are shaking uncontrollably.",
+            "onset": "Started around the same time as my heart racing.",
+            "character": "Fine motor tremors",
+            "severity": "6",
+            "location": "Hands",
+            "radiation": null,
+            "aggravating_factors": [
+                "Anxiety"
+            ],
+            "alleviating_factors": [
+                "Taking deep breaths"
+            ],
+            "associated_symptoms": [
+                "Nervousness"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Loss of consciousness",
+        "Chest pain",
+        "Nausea",
+        "Vomiting",
+        "Persistent headache",
+        "Extreme fatigue",
+        "Visual disturbances",
+        "Shortness of breath while resting",
+        "Coughing",
+        "Weight loss"
+    ],
+    "vitals": {
+        "heart_rate": 145,
+        "blood_pressure_systolic": 160,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 24,
+        "spo2": 98,
+        "temperature": 101.2,
+        "pain_scale": 2
+    },
+    "labs": {
+        "TSH": "0.01 \u00b5IU/mL (Low)",
+        "Free T4": "5.5 ng/dL (High)",
+        "Free T3": "10.0 pg/mL (High)",
+        "CBC": "Normal",
+        "Electrolytes": "Normal"
+    },
+    "past_medical_history": [
+        "Hyperthyroidism",
+        "Anxiety disorder"
+    ],
+    "surgical_history": [
+        "Thyroidectomy (partial) in 2019"
+    ],
+    "medications": [
+        "Levothyroxine 75 mcg daily",
+        "Alprazolam 0.5 mg as needed"
+    ],
+    "allergies": [
+        "Penicillin (rash)"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional social drinker",
+        "drugs": "Denies drug use",
+        "occupation": "Teacher",
+        "living_situation": "Lives alone",
+        "exercise": "Light exercise, walks on weekends",
+        "diet": "Regular diet, tries to eat healthy"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Thyroid problems",
+            "Mother": "Diabetes"
+        }
+    },
+    "personality": "Maria is generally anxious and tends to worry a lot, especially about her health. She can be easily overwhelmed but tries to remain optimistic.",
+    "communication_style": "She speaks quickly when anxious and tends to ask several questions at once. She appreciates clear, straightforward answers.",
+    "pain_description_style": "Maria describes discomfort in a straightforward manner, often using relatable terms instead of medical jargon.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "High heart rate",
+            "Elevated temperature",
+            "Tremors",
+            "Low TSH and high Free T3/T4 levels"
+        ],
+        "diagnosis": "Thyroid Storm",
+        "differential_diagnoses": [
+            "Panic attack",
+            "Sepsis",
+            "Hyperthyroidism exacerbation",
+            "Cardiac arrhythmia",
+            "Pulmonary embolism"
+        ],
+        "recommended_interventions": [
+            "Monitor vital signs closely",
+            "Administer beta-blockers as ordered",
+            "Provide oxygen if needed",
+            "Initiate IV fluids",
+            "Consult endocrinology"
+        ]
+    }
+}

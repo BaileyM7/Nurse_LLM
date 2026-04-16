@@ -1,0 +1,124 @@
+{
+    "patient_id": "case_085",
+    "name": "Maria Gonzalez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 160,
+    "height_inches": 65,
+    "chief_complaint": "I have this sharp pain in my upper right belly that just won't go away.",
+    "onset_description": "It started suddenly last night after I ate a greasy meal.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal pain": {
+            "description": "It's like a stabbing pain right here in my stomach.",
+            "onset": "Last night around 9 PM.",
+            "character": "Sharp and constant.",
+            "severity": "8",
+            "location": "Upper right abdomen.",
+            "radiation": "Sometimes it feels like it goes to my back.",
+            "aggravating_factors": [
+                "Eating fatty foods",
+                "Movements like bending over"
+            ],
+            "alleviating_factors": [
+                "Sitting still",
+                "Applying a warm compress"
+            ],
+            "associated_symptoms": [
+                "Nausea",
+                "Vomiting",
+                "Feeling bloated"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Diarrhea",
+        "Constipation",
+        "Jaundice",
+        "Chest pain",
+        "Shortness of breath",
+        "Fever",
+        "Urinary problems",
+        "Extreme fatigue",
+        "Dizziness",
+        "Weight loss"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 20,
+        "spo2": 98,
+        "temperature": 100.4,
+        "pain_scale": 8
+    },
+    "labs": {
+        "WBC count": "12,000 cells/uL (elevated)",
+        "Liver function tests": "Normal",
+        "Amylase": "Normal",
+        "Lipase": "Normal"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Mild asthma"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 18"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, mostly during weekends",
+        "drugs": "Denies any use",
+        "occupation": "Office Manager",
+        "living_situation": "Lives with partner",
+        "exercise": "Occasional yoga classes",
+        "diet": "Varies, but admits to eating out frequently"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Gallbladder disease",
+            "Father": "Diabetes",
+            "Brother": "Hypertension"
+        }
+    },
+    "personality": "Anxious and a bit overwhelmed, but tries to stay calm and asks a lot of questions about what will happen next.",
+    "communication_style": "Talks openly and is eager to understand her condition, but can be repetitive due to her anxiety.",
+    "pain_description_style": "Describes it in vivid terms, focusing on the sharpness and the impact on her daily life.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Location and character of abdominal pain",
+            "Associated symptoms of nausea and vomiting",
+            "Elevated WBC count indicating possible infection"
+        ],
+        "diagnosis": "Cholecystitis",
+        "differential_diagnoses": [
+            "Cholelithiasis",
+            "Pancreatitis",
+            "Peptic ulcer disease",
+            "Gastroenteritis"
+        ],
+        "recommended_interventions": [
+            "Administer IV fluids",
+            "Pain management with appropriate analgesics",
+            "Prepare for potential imaging studies (ultrasound)",
+            "Consult surgical team for evaluation"
+        ]
+    }
+}

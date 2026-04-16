@@ -1,0 +1,160 @@
+{
+    "patient_id": "case_048",
+    "name": "Maria Gonzalez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 64,
+    "chief_complaint": "I feel like I can't catch my breath!",
+    "onset_description": "It started this morning after I went for a run; I usually don\u2019t have an issue but today is different.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "shortness_of_breath": {
+            "description": "It feels like there's a weight on my chest.",
+            "onset": "Started this morning.",
+            "character": "Tight and constricted.",
+            "severity": "8",
+            "location": "Chest",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Physical activity",
+                "Cold air"
+            ],
+            "alleviating_factors": [
+                "Sitting upright",
+                "Using my inhaler"
+            ],
+            "associated_symptoms": [
+                "Wheezing",
+                "Coughing"
+            ]
+        },
+        "wheezing": {
+            "description": "I can hear a whistling sound when I breathe.",
+            "onset": "Began around the same time as the shortness of breath.",
+            "character": "High-pitched sound.",
+            "severity": "7",
+            "location": "Lungs",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Breathing deeply"
+            ],
+            "alleviating_factors": [
+                "Using my inhaler"
+            ],
+            "associated_symptoms": [
+                "Shortness of breath",
+                "Cough"
+            ]
+        },
+        "cough": {
+            "description": "I have a dry cough that doesn't go away.",
+            "onset": "Started a few hours ago.",
+            "character": "Dry and persistent.",
+            "severity": "5",
+            "location": "Throat",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Talking",
+                "Laughing"
+            ],
+            "alleviating_factors": [
+                "Drinking water"
+            ],
+            "associated_symptoms": [
+                "Wheezing",
+                "Shortness of breath"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Fever",
+        "Chest pain",
+        "Swelling in legs",
+        "Nausea",
+        "Dizziness",
+        "Fatigue",
+        "Headache",
+        "Sore throat",
+        "Runny nose",
+        "Loss of consciousness"
+    ],
+    "vitals": {
+        "heart_rate": 118,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 26,
+        "spo2": 88,
+        "temperature": 98.6,
+        "pain_scale": 0
+    },
+    "labs": {
+        "Peak Expiratory Flow Rate": "150 L/min (below normal for this patient)"
+    },
+    "past_medical_history": [
+        "Asthma",
+        "Allergic rhinitis"
+    ],
+    "surgical_history": [
+        "Tonsillectomy at age 10"
+    ],
+    "medications": [
+        "Albuterol 90 mcg inhaler as needed",
+        "Montelukast 10 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - hives",
+        "Dust - sneezing and runny nose"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional social drinker",
+        "drugs": "Denies drug use",
+        "occupation": "Elementary school teacher",
+        "living_situation": "Lives with her husband and two children",
+        "exercise": "Runs 2-3 times a week",
+        "diet": "Balanced diet, includes fruits and vegetables"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Asthma",
+            "Father": "Hypertension",
+            "Sister": "Allergies"
+        }
+    },
+    "personality": "Maria is generally optimistic but becomes anxious when experiencing asthma symptoms.",
+    "communication_style": "She is cooperative but talks rapidly when worried.",
+    "pain_description_style": "She tends to use metaphors to describe her discomfort, saying it feels like 'someone is squeezing my chest.'",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Signs of respiratory distress",
+            "Low oxygen saturation",
+            "History of asthma exacerbation"
+        ],
+        "diagnosis": "Asthma Exacerbation",
+        "differential_diagnoses": [
+            "Bronchitis",
+            "Pneumonia",
+            "Anaphylaxis",
+            "COPD exacerbation",
+            "Pulmonary embolism"
+        ],
+        "recommended_interventions": [
+            "Administer bronchodilator as ordered",
+            "Monitor vital signs and oxygen saturation",
+            "Assess peak flow rate",
+            "Educate on asthma action plan"
+        ]
+    }
+}

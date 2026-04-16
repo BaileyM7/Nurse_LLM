@@ -13,6 +13,28 @@ ASSESSMENT_DOMAINS = [
 ]
 
 
+def depth_label(question_count: int) -> str:
+    """Categorize how deeply a domain was explored based on question count."""
+    if question_count == 0:
+        return "Missed"
+    if question_count == 1:
+        return "Surface"
+    if question_count <= 3:
+        return "Explored"
+    return "Deep"
+
+
+def depth_score(question_count: int) -> float:
+    """0-100 score reflecting depth of exploration within a single domain."""
+    if question_count == 0:
+        return 0.0
+    if question_count == 1:
+        return 50.0
+    if question_count <= 3:
+        return 80.0
+    return 100.0
+
+
 class DomainCoverage(BaseModel):
     """Tracking data for a single assessment domain."""
     domain: str
@@ -20,11 +42,19 @@ class DomainCoverage(BaseModel):
     question_count: int = 0
     topics_asked: list[str] = Field(default_factory=list)
 
+    @property
+    def depth(self) -> str:
+        return depth_label(self.question_count)
+
+    @property
+    def depth_score(self) -> float:
+        return depth_score(self.question_count)
+
 
 class AssessmentResult(BaseModel):
     """Overall assessment coverage result for a session."""
     domains: dict[str, DomainCoverage] = Field(default_factory=dict)
-    coverage_score: float = Field(0.0, description="Percentage of domains covered (0-100)")
+    coverage_score: float = Field(0.0, description="Depth-weighted coverage score (0-100)")
     total_questions: int = 0
 
     def get_covered_domains(self) -> list[str]:
@@ -32,6 +62,10 @@ class AssessmentResult(BaseModel):
 
     def get_missed_domains(self) -> list[str]:
         return [d for d, cov in self.domains.items() if not cov.covered]
+
+    def get_depth_breakdown(self) -> dict[str, str]:
+        """Return {domain: depth_label} for all domains."""
+        return {d: cov.depth for d, cov in self.domains.items()}
 
 
 class FeedbackReport(BaseModel):

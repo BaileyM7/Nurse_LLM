@@ -1,0 +1,151 @@
+{
+    "patient_id": "case_054",
+    "name": "Carlos Ramirez",
+    "age": 58,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 68,
+    "chief_complaint": "I\u2019ve been throwing up blood and my stomach hurts a lot.",
+    "onset_description": "It started a couple of hours ago after I had dinner.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "hematemesis": {
+            "description": "I saw bright red blood in my vomit.",
+            "onset": "a few hours ago.",
+            "character": "It\u2019s really alarming and makes me feel weak.",
+            "severity": "9",
+            "location": "stomach area.",
+            "radiation": "null",
+            "aggravating_factors": [
+                "eating",
+                "moving around"
+            ],
+            "alleviating_factors": [
+                "sitting still",
+                "taking deep breaths"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "weakness",
+                "dizziness"
+            ]
+        },
+        "abdominal_pain": {
+            "description": "It feels like a sharp stabbing pain.",
+            "onset": "started around the same time as the vomiting.",
+            "character": "sharp",
+            "severity": "8",
+            "location": "upper middle stomach.",
+            "radiation": "null",
+            "aggravating_factors": [
+                "movement",
+                "pressure on the stomach"
+            ],
+            "alleviating_factors": [
+                "lying down",
+                "ice pack"
+            ],
+            "associated_symptoms": [
+                "bloating",
+                "feeling faint"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "shortness of breath",
+        "diarrhea",
+        "constipation",
+        "fever",
+        "jaundice",
+        "weight loss",
+        "night sweats",
+        "headaches",
+        "sore throat"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 90,
+        "blood_pressure_diastolic": 60,
+        "respiratory_rate": 22,
+        "spo2": 94,
+        "temperature": 98.6,
+        "pain_scale": 9
+    },
+    "labs": {
+        "Hemoglobin": "8.5 g/dL (low)",
+        "Hematocrit": "25% (low)",
+        "Platelets": "200,000/uL (normal)",
+        "PT/INR": "12/1.1 (normal)",
+        "Electrolytes": "within normal limits"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "diabetes type 2"
+    ],
+    "surgical_history": [
+        "appendectomy",
+        "cholecystectomy"
+    ],
+    "medications": [
+        "Lisinopril 10mg daily",
+        "Metformin 500mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin - rash",
+        "Aspirin - stomach upset"
+    ],
+    "social_history": {
+        "smoking": "smokes half a pack a day",
+        "alcohol": "drinks socially on weekends",
+        "drugs": "denies any use",
+        "occupation": "construction worker",
+        "living_situation": "lives with wife and two teenage children",
+        "exercise": "rarely exercises",
+        "diet": "mostly fast food and soda"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "stomach cancer",
+            "mother": "hypertension",
+            "brother": "diabetes"
+        }
+    },
+    "personality": "Carlos is anxious and visibly distressed about his condition. He keeps shifting in his seat and glancing around the room as if he's worried about what might happen next.",
+    "communication_style": "He speaks quickly, often interrupting himself with worries about his health but is also willing to answer questions if he feels they are important.",
+    "pain_description_style": "He describes his pain in vivid terms, saying it feels 'like being stabbed' and that it 'comes in waves'.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated heart rate",
+            "hypotension",
+            "low hemoglobin and hematocrit levels",
+            "presence of hematemesis"
+        ],
+        "diagnosis": "Upper GI bleed",
+        "differential_diagnoses": [
+            "esophageal varices",
+            "gastritis",
+            "peptic ulcer disease",
+            "malignancy",
+            "Mallory-Weiss tear"
+        ],
+        "recommended_interventions": [
+            "IV fluid resuscitation",
+            "monitor vital signs",
+            "administer blood products as needed",
+            "place patient NPO",
+            "prepare for endoscopy"
+        ]
+    }
+}

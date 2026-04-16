@@ -1,0 +1,144 @@
+{
+    "patient_id": "case_069",
+    "name": "James Anderson",
+    "age": 62,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 210,
+    "height_inches": 72,
+    "chief_complaint": "I feel this intense pressure in my chest, like an elephant is sitting on me.",
+    "onset_description": "It started suddenly while I was watching TV about 30 minutes ago.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest pain": {
+            "description": "It feels heavy and tight, and it just won't go away.",
+            "onset": "30 minutes ago",
+            "character": "pressure",
+            "severity": "8",
+            "location": "center of chest",
+            "radiation": "pain goes to my left arm",
+            "aggravating_factors": [
+                "stress",
+                "deep breaths"
+            ],
+            "alleviating_factors": [
+                "none, it just keeps hurting"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "nausea",
+                "sweating"
+            ]
+        },
+        "shortness of breath": {
+            "description": "I feel like I can't catch my breath.",
+            "onset": "15 minutes ago",
+            "character": "tightness",
+            "severity": "7",
+            "location": "chest",
+            "radiation": "null",
+            "aggravating_factors": [
+                "walking",
+                "talking"
+            ],
+            "alleviating_factors": [
+                "sitting still"
+            ],
+            "associated_symptoms": [
+                "dizziness",
+                "fatigue"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "cough",
+        "fever",
+        "palpitations",
+        "headache",
+        "abdominal pain",
+        "swelling in legs",
+        "back pain",
+        "lightheadedness",
+        "vomiting",
+        "choking sensation"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 22,
+        "spo2": 94,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "Troponin I": "1.5 ng/mL (elevated)",
+        "CK-MB": "20 units/L (elevated)",
+        "BNP": "150 pg/mL (elevated)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy"
+    ],
+    "medications": [
+        "Lisinopril 20 mg",
+        "Metformin 500 mg"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "former smoker, quit 10 years ago",
+        "alcohol": "social drinker, 1-2 glasses of wine per week",
+        "drugs": "denies illegal drug use",
+        "occupation": "retired teacher",
+        "living_situation": "lives alone",
+        "exercise": "walks occasionally, not regularly",
+        "diet": "high in carbohydrates, low in vegetables"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Myocardial Infarction",
+            "mother": "Stroke",
+            "sibling": "Hypertension"
+        }
+    },
+    "personality": "James is generally stoic but becomes anxious when discussing his health. He tends to minimize his symptoms.",
+    "communication_style": "He speaks in short sentences and tends to avoid eye contact, often looking away when discussing his pain.",
+    "pain_description_style": "He describes his discomfort using analogies, like feeling pressure or weight.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated troponin and CK-MB levels",
+            "history of hypertension and diabetes",
+            "chest pain with radiation"
+        ],
+        "diagnosis": "Acute Myocardial Infarction (STEMI)",
+        "differential_diagnoses": [
+            "Unstable Angina",
+            "Aortic Dissection",
+            "Pulmonary Embolism",
+            "Acute Pericarditis",
+            "Gastroesophageal Reflux Disease"
+        ],
+        "recommended_interventions": [
+            "Administer aspirin",
+            "Start IV access",
+            "Prepare for ECG",
+            "Administer oxygen if necessary",
+            "Notify physician"
+        ]
+    }
+}

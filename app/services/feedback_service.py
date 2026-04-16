@@ -18,48 +18,63 @@ FEEDBACK_PROMPT = """You are an expert nursing educator evaluating a student's p
 - Critical findings: {critical_findings}
 - Expected assessment domains: {expected_domains}
 
-## Student's Conversation
+## Student's Conversation (numbered turns)
 {conversation_text}
 
 ## Assessment Coverage
 - Domains covered: {domains_covered}
 - Domains missed: {domains_missed}
+- Depth breakdown: {depth_breakdown}
 - Total assessment questions: {total_questions}
 
-## Instructions
-Evaluate the student's assessment performance and generate a detailed feedback report.
-Consider:
-1. Did they systematically cover the key assessment domains?
-2. Did they ask follow-up questions to gather depth?
-3. Did they identify the critical findings?
-4. What did they do well?
-5. What should they improve?
+## Evaluation Rules — READ CAREFULLY
+**Every strength, improvement, and critical-finding observation MUST be grounded in a specific turn from the transcript above.**
 
+- For every bullet in `strengths` and `improvements`, reference the turn number like "(Turn N)" and quote the student's exact words.
+- If you cannot cite a specific turn, don't make the observation. Generic advice like "ask more questions" is forbidden — name the missing question.
+- In `turn_highlights`, each entry MUST have an accurate `turn` number and `student_said` quote taken verbatim from the transcript.
+- If the student used vague questions like "tell me more", flag this in improvements and cite the exact turn.
+- Do not invent quotes. If you can't find a supporting quote, omit the observation.
+
+## Good Examples
+GOOD strength: "Asked about radiation of chest pain (Turn 4: 'Does the pain spread anywhere?') — this is essential for ruling out cardiac vs. musculoskeletal causes."
+BAD strength: "Good job asking about symptoms" — too vague, no citation.
+
+GOOD improvement: "Missed asking about family cardiac history despite patient's age and chest pain presentation. At Turn 8 ('Any other questions I should answer?') was an opening to explore this."
+BAD improvement: "Should ask more follow-up questions" — generic, no citation.
+
+## Output Format
 Respond with valid JSON in this exact format:
 {{
     "session_id": "{session_id}",
-    "overall_score": <0-100 number>,
+    "overall_score": <0-100 number, calibrated to depth-weighted coverage + critical-finding discovery>,
     "domains_covered": [<list of covered domain names>],
     "domains_missed": [<list of missed domain names>],
-    "strengths": [<2-4 specific things the student did well>],
-    "improvements": [<2-4 specific, actionable suggestions>],
-    "critical_findings_caught": [<findings the student discovered>],
-    "critical_findings_missed": [<findings the student failed to discover>],
+    "strengths": [<2-4 specific quote-grounded observations, each with "(Turn N: 'quote')">],
+    "improvements": [<2-4 specific quote-grounded suggestions, each citing a turn>],
+    "critical_findings_caught": [<findings the student discovered, reference turn numbers>],
+    "critical_findings_missed": [<findings not discovered, with suggested questions that would have uncovered them>],
     "diagnosis": "{diagnosis}",
     "differential_diagnoses": {differential},
     "turn_highlights": [
-        {{"turn": <turn number>, "student_said": "<quote>", "commentary": "<why this was good/bad>"}}
+        {{"turn": <turn number>, "student_said": "<exact quote>", "commentary": "<why this mattered>"}}
     ],
-    "summary": "<2-3 sentence overall narrative>"
+    "summary": "<2-3 sentence narrative referencing at least one specific turn>"
 }}"""
 
 
 class FeedbackService:
-    """Generates post-session feedback reports using the LLM."""
+    """Generates post-session feedback reports using a high-quality model.
+
+    Uses GPT-4o (not gpt-4o-mini) because feedback is the student-facing
+    deliverable — worth the ~10x cost increase for one call per session.
+    """
+
+    FEEDBACK_MODEL = "gpt-4o"  # Upgrade from mini for better reasoning/grounding
 
     def __init__(self):
         self._llm = ChatOpenAI(
-            model=settings.model_name,
+            model=self.FEEDBACK_MODEL,
             api_key=settings.openai_api_key,
             temperature=0.3,  # Lower temperature for more consistent evaluation
         )
@@ -73,12 +88,22 @@ class FeedbackService:
     ) -> FeedbackReport:
         """Generate a structured feedback report for a completed session."""
 
-        # Build conversation text
+        # Build conversation text — use student turn numbers only (1, 2, 3...)
+        # so citations in feedback match what the student sees in the UI.
         conversation_lines = []
-        for i, msg in enumerate(messages):
-            role = "Student" if msg.role == "student" else "Patient"
-            conversation_lines.append(f"Turn {i + 1} ({role}): {msg.content}")
+        student_turn = 0
+        for msg in messages:
+            if msg.role == "student":
+                student_turn += 1
+                conversation_lines.append(f"Turn {student_turn} (Student): {msg.content}")
+            else:
+                conversation_lines.append(f"         (Patient): {msg.content}")
         conversation_text = "\n".join(conversation_lines)
+
+        # Build depth breakdown string: "HPI: Deep, ROS: Surface, ..."
+        depth_breakdown = ", ".join(
+            f"{d}: {cov.depth}" for d, cov in assessment.domains.items()
+        )
 
         prompt = FEEDBACK_PROMPT.format(
             name=scenario.name,
@@ -91,18 +116,29 @@ class FeedbackService:
             conversation_text=conversation_text,
             domains_covered=", ".join(assessment.get_covered_domains()),
             domains_missed=", ".join(assessment.get_missed_domains()),
+            depth_breakdown=depth_breakdown,
             total_questions=assessment.total_questions,
             session_id=session_id,
             differential=json.dumps(scenario.rubric.differential_diagnoses),
         )
 
-        response = await self._llm.ainvoke([
-            SystemMessage(content="You are a nursing education assessment expert. Always respond with valid JSON."),
+        # Bind response_format to guarantee JSON output (OpenAI JSON mode)
+        llm_json = self._llm.bind(response_format={"type": "json_object"})
+        response = await llm_json.ainvoke([
+            SystemMessage(content="You are a nursing education assessment expert. Always respond with valid JSON. Every observation must cite a specific turn number and quote the student verbatim."),
             HumanMessage(content=prompt),
         ])
 
+        content = response.content.strip()
+        # Strip markdown fences if the model added them anyway
+        if content.startswith("```"):
+            content = content.split("```", 2)[1]
+            if content.startswith("json"):
+                content = content[4:]
+            content = content.rsplit("```", 1)[0].strip()
+
         try:
-            data = json.loads(response.content)
+            data = json.loads(content)
             return FeedbackReport(**data)
         except (json.JSONDecodeError, Exception) as e:
             # Return a basic report if LLM output fails to parse

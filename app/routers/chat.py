@@ -3,6 +3,7 @@ from fastapi import APIRouter, HTTPException
 from app.config import settings
 from app.models.session import ChatRequest, ChatResponse, ChatMessage, MessageRole
 from app.services.session_manager import session_manager
+from app.services.domain_classifier import domain_classifier
 
 router = APIRouter()
 
@@ -23,17 +24,25 @@ async def send_message(request: ChatRequest):
             detail=f"Maximum turns ({settings.max_turns}) reached. Please end the session."
         )
 
-    # Get LLM response
+    # Classify the student's question (keyword rules first, LLM fallback)
+    classification = await domain_classifier.classify(request.message)
+    primary_domain = classification.domains[0] if classification.domains else "conversational"
+
+    # Get LLM response (patient simulation — still generates dialogue)
     from app.services.llm_service import llm_service
     patient_response = await llm_service.get_patient_response(
         request.session_id, request.message
     )
 
+    # Override the patient sim's self-reported classification with our dedicated classifier
+    patient_response.domain_explored = primary_domain
+    patient_response.domain_confidence = classification.confidence
+
     # Record student message (in-memory)
     session["messages"].append(ChatMessage(
         role=MessageRole.STUDENT,
         content=request.message,
-        domain_explored=patient_response.domain_explored,
+        domain_explored=primary_domain,
     ))
 
     # Record patient response (in-memory)
@@ -47,16 +56,16 @@ async def send_message(request: ChatRequest):
     # Persist both messages to SQLite
     session_manager.save_message(
         request.session_id, "student", request.message,
-        domain=patient_response.domain_explored,
+        domain=primary_domain,
     )
     session_manager.save_message(
         request.session_id, "patient", patient_response.dialogue,
     )
 
-    # Update assessment tracker
+    # Update assessment tracker with multi-label domains
     session["tracker"].update(
-        domain_explored=patient_response.domain_explored,
-        confidence=patient_response.domain_confidence,
+        domains=classification.domains,
+        confidence=classification.confidence,
         student_message=request.message,
     )
 

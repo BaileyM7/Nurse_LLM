@@ -1,0 +1,122 @@
+{
+    "patient_id": "case_056",
+    "name": "Jamal Thompson",
+    "age": 45,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 230,
+    "height_inches": 72,
+    "chief_complaint": "I feel like my stomach is all tied up in knots.",
+    "onset_description": "I started feeling nauseous and bloated two days ago, but it's really gotten worse since last night.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal_pain": {
+            "description": "It's a sharp, cramping pain that comes and goes.",
+            "onset": "Started about 24 hours ago.",
+            "character": "Crampy and intense.",
+            "severity": "8",
+            "location": "Around my belly button.",
+            "radiation": "No radiation.",
+            "aggravating_factors": [
+                "Eating anything",
+                "Moving around too much"
+            ],
+            "alleviating_factors": [
+                "Sitting still",
+                "Trying to breathe slowly"
+            ],
+            "associated_symptoms": [
+                "Nausea",
+                "Vomiting",
+                "Bloating"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Diarrhea",
+        "Constipation",
+        "Fever",
+        "Heartburn",
+        "Chest pain",
+        "Shortness of breath",
+        "Fatigue",
+        "Dizziness",
+        "Jaundice",
+        "Weight loss"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 145,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 20,
+        "spo2": 98,
+        "temperature": 99.2,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 15,000 cells/mcL, elevated (possible infection)",
+        "Electrolytes": "Sodium 135 mEq/L, Potassium 3.5 mEq/L, Chloride 95 mEq/L (within normal limits)",
+        "CT Abdomen": "Dilated loops of small bowel with fluid levels indicative of obstruction"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 25"
+    ],
+    "medications": [
+        "Lisinopril 10 mg once daily",
+        "Metformin 500 mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional social drinker",
+        "drugs": "Denies any recreational drug use",
+        "occupation": "Warehouse manager",
+        "living_situation": "Lives alone, family nearby",
+        "exercise": "Moderate activity, walks 3 times a week",
+        "diet": "Generally healthy, but eats fast food a few times a week"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Hypertension",
+            "Father": "Colon cancer"
+        }
+    },
+    "personality": "Jamal is anxious and visibly uncomfortable, frequently shifting in the bed, but tries to maintain a sense of humor.",
+    "communication_style": "He is direct but often asks a lot of questions about what\u2019s happening.",
+    "pain_description_style": "He describes his pain in terms of intensity and the feeling of pressure; he sometimes mixes in humor to cope with discomfort.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated heart rate and blood pressure, abdominal pain description, nausea, lab results showing obstruction"
+        ],
+        "diagnosis": "Small Bowel Obstruction",
+        "differential_diagnoses": [
+            "Ileus",
+            "Colonic obstruction",
+            "Pancreatitis",
+            "Gastroenteritis",
+            "Perforated viscus"
+        ],
+        "recommended_interventions": [
+            "IV fluid administration",
+            "NPO status",
+            "Monitor vital signs closely",
+            "Consult surgery for possible intervention"
+        ]
+    }
+}

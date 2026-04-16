@@ -1,0 +1,143 @@
+{
+    "patient_id": "case_101",
+    "name": "Maria Gonzalez",
+    "age": 29,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 145,
+    "height_inches": 65,
+    "chief_complaint": "I feel like I can't breathe and my heart is pounding.",
+    "onset_description": "The symptoms started suddenly while I was at work, about 30 minutes ago.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "shortness_of_breath": {
+            "description": "It feels like there's a weight on my chest, and I can't catch my breath.",
+            "onset": "30 minutes ago",
+            "character": "tight and constricting",
+            "severity": "8",
+            "location": "chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "stress at work",
+                "loud noises"
+            ],
+            "alleviating_factors": [
+                "deep breathing",
+                "sitting down"
+            ],
+            "associated_symptoms": [
+                "palpitations",
+                "dizziness"
+            ]
+        },
+        "palpitations": {
+            "description": "My heart feels like it's racing really fast.",
+            "onset": "30 minutes ago",
+            "character": "irregular and fast",
+            "severity": "9",
+            "location": "chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "anxiety",
+                "thinking about work"
+            ],
+            "alleviating_factors": [
+                "closing my eyes",
+                "counting to ten"
+            ],
+            "associated_symptoms": [
+                "trembling",
+                "shaking hands"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "nausea",
+        "sweating",
+        "fainting",
+        "fever",
+        "coughing",
+        "headache",
+        "visual disturbances",
+        "confusion",
+        "seizures"
+    ],
+    "vitals": {
+        "heart_rate": 120,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 0
+    },
+    "labs": {
+        "CBC": "Normal",
+        "BMP": "Normal",
+        "TSH": "Normal"
+    },
+    "past_medical_history": [
+        "generalized anxiety disorder",
+        "occasional migraines"
+    ],
+    "surgical_history": [
+        "appendectomy in childhood"
+    ],
+    "medications": [
+        "sertraline 50mg daily"
+    ],
+    "allergies": [
+        "penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "social drinker, occasionally on weekends",
+        "drugs": "denies any drug use",
+        "occupation": "graphic designer",
+        "living_situation": "lives alone",
+        "exercise": "exercises twice a week",
+        "diet": "generally healthy, but skips meals often when busy"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "depression",
+            "father": "hypertension",
+            "brother": "anxiety disorders"
+        }
+    },
+    "personality": "Maria is generally polite but can become overwhelmed and fidgety in stressful situations. She often avoids talking about her feelings.",
+    "communication_style": "She is hesitant to open up and tends to respond with short answers when anxious, but if calmed, she can be more expressive.",
+    "pain_description_style": "Describes discomfort as a 'heavy feeling' rather than using specific medical terms.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "presence of palpitations and shortness of breath",
+            "evidence of anxiety symptoms",
+            "denial of other serious symptoms like chest pain"
+        ],
+        "diagnosis": "Acute Anxiety / Panic Attack",
+        "differential_diagnoses": [
+            "Asthma exacerbation",
+            "Hyperthyroidism",
+            "Cardiac arrhythmia",
+            "Pulmonary embolism",
+            "Acute coronary syndrome"
+        ],
+        "recommended_interventions": [
+            "administer oxygen as needed",
+            "provide a calm environment",
+            "initiate deep breathing exercises",
+            "monitor vital signs continuously"
+        ]
+    }
+}

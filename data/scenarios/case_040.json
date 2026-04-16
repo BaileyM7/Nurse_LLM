@@ -1,0 +1,126 @@
+{
+    "patient_id": "case_040",
+    "name": "David Johnson",
+    "age": 56,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 68,
+    "chief_complaint": "I've been having this terrible pain in my chest that won't go away.",
+    "onset_description": "The pain started suddenly about an hour ago while I was watching TV.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest pain": {
+            "description": "It's like a heavy weight on my chest, and it feels tight.",
+            "onset": "1 hour ago",
+            "character": "pressure and squeezing",
+            "severity": "8",
+            "location": "center of the chest",
+            "radiation": "to the left arm",
+            "aggravating_factors": [
+                "moving around",
+                "taking deep breaths"
+            ],
+            "alleviating_factors": [
+                "sitting still",
+                "short breaths"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "sweating"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "shortness of breath",
+        "palpitations",
+        "fever",
+        "cough",
+        "dizziness",
+        "headache",
+        "fatigue",
+        "leg swelling",
+        "indigestion",
+        "anxiety"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 160,
+        "blood_pressure_diastolic": 94,
+        "respiratory_rate": 22,
+        "spo2": 95,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "troponin T": "1.2 ng/mL (high)",
+        "CK-MB": "22 IU/L (elevated)",
+        "CBC": "WBC 8.2 x10^9/L (normal), Hemoglobin 14.0 g/dL (normal), Hematocrit 42% (normal)",
+        "BMP": "Potassium 4.2 mEq/L (normal), Sodium 140 mEq/L (normal), Creatinine 1.0 mg/dL (normal)"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "hyperlipidemia"
+    ],
+    "surgical_history": [
+        "appendectomy at age 30"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Atorvastatin 20 mg daily"
+    ],
+    "allergies": [
+        "Penicillin (rash)"
+    ],
+    "social_history": {
+        "smoking": "Quit 5 years ago, smoked 1 pack/day for 20 years",
+        "alcohol": "Occasional, 1-2 drinks on weekends",
+        "drugs": "Denies use",
+        "occupation": "Construction worker",
+        "living_situation": "Lives alone",
+        "exercise": "Rarely exercises, sedentary lifestyle",
+        "diet": "High in fats and processed foods"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "myocardial infarction at age 60",
+            "mother": "diabetes"
+        }
+    },
+    "personality": "David is anxious and visibly distressed. He keeps fidgeting and appears worried about his health.",
+    "communication_style": "He is straightforward but often interrupts with concerns or questions about what is happening.",
+    "pain_description_style": "He describes the discomfort in relatable terms, likening it to a weight on his chest, clearly expressing his fear.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "chest pain description",
+            "elevated troponin levels",
+            "history of smoking",
+            "family history of heart disease"
+        ],
+        "diagnosis": "Acute Myocardial Infarction (STEMI)",
+        "differential_diagnoses": [
+            "unstable angina",
+            "pulmonary embolism",
+            "aortic dissection",
+            "pericarditis",
+            "gastroesophageal reflux disease"
+        ],
+        "recommended_interventions": [
+            "administer nitroglycerin",
+            "monitor vital signs closely",
+            "prepare for possible cardiac catheterization",
+            "provide reassurance to the patient",
+            "initiate IV access"
+        ]
+    }
+}

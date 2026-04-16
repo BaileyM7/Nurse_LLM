@@ -1,12 +1,18 @@
-from app.models.assessment import ASSESSMENT_DOMAINS, AssessmentResult, DomainCoverage
+from app.models.assessment import (
+    ASSESSMENT_DOMAINS,
+    AssessmentResult,
+    DomainCoverage,
+    depth_score,
+)
 
 
 class AssessmentTracker:
     """
     Tracks which clinical assessment domains a student has explored during a session.
 
-    Updated after each patient response using the inline domain classification
-    from the LLM's structured output.
+    Supports multi-label classification (a single question can cover multiple domains)
+    and depth-weighted scoring (exploring a domain deeply counts more than one surface
+    question).
     """
 
     def __init__(self):
@@ -17,26 +23,37 @@ class AssessmentTracker:
             }
         )
 
-    def update(self, domain_explored: str, confidence: float, student_message: str) -> None:
-        """Record that a student explored a given domain."""
-        if domain_explored == "conversational" or confidence < 0.3:
+    def update(self, domains: list[str], confidence: float, student_message: str) -> None:
+        """Record that a student explored one or more domains in a single question.
+
+        Args:
+            domains: list of domain names (supports multi-label)
+            confidence: classifier's confidence (0.0-1.0). Below 0.3, we skip.
+            student_message: the raw question text (stored truncated for feedback)
+        """
+        if confidence < 0.3:
             return
 
-        # Normalize domain name to match our standard list
-        domain_key = self._normalize_domain(domain_explored)
-        if domain_key not in self.result.domains:
-            return
+        credited_any = False
+        for domain_name in domains:
+            if domain_name == "conversational":
+                continue
+            domain_key = self._normalize_domain(domain_name)
+            if domain_key not in self.result.domains:
+                continue
 
-        coverage = self.result.domains[domain_key]
-        coverage.covered = True
-        coverage.question_count += 1
-        # Store a truncated version of what they asked
-        coverage.topics_asked.append(student_message[:100])
-        self.result.total_questions += 1
-        self._recalculate_score()
+            coverage = self.result.domains[domain_key]
+            coverage.covered = True
+            coverage.question_count += 1
+            coverage.topics_asked.append(student_message[:100])
+            credited_any = True
+
+        if credited_any:
+            self.result.total_questions += 1
+            self._recalculate_score()
 
     def _normalize_domain(self, domain: str) -> str:
-        """Map LLM output domain names to our standard domain keys."""
+        """Map classifier output domain names to our standard domain keys."""
         domain_lower = domain.lower().replace(" ", "_")
         mapping = {
             "hpi": "HPI",
@@ -56,9 +73,13 @@ class AssessmentTracker:
         return mapping.get(domain_lower, domain)
 
     def _recalculate_score(self) -> None:
-        covered = sum(1 for c in self.result.domains.values() if c.covered)
-        total = len(self.result.domains)
-        self.result.coverage_score = round((covered / total) * 100, 1) if total > 0 else 0.0
+        """Depth-weighted coverage: each domain contributes 0-100 based on depth,
+        then average across all 7 domains."""
+        if not self.result.domains:
+            self.result.coverage_score = 0.0
+            return
+        total = sum(depth_score(c.question_count) for c in self.result.domains.values())
+        self.result.coverage_score = round(total / len(self.result.domains), 1)
 
     def get_result(self) -> AssessmentResult:
         return self.result

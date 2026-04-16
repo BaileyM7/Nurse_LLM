@@ -1,0 +1,138 @@
+{
+    "patient_id": "case_053",
+    "name": "Samuel Thompson",
+    "age": 25,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 185,
+    "height_inches": 72,
+    "chief_complaint": "It hurts really bad in my stomach, especially on the right side.",
+    "onset_description": "The pain started last night out of nowhere while I was watching TV.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal pain": {
+            "description": "It's a sharp, stabbing pain that just won't go away.",
+            "onset": "Last night, around 10 PM.",
+            "character": "sharp and constant",
+            "severity": "9",
+            "location": "Lower right abdomen",
+            "radiation": "Sometimes it feels like it spreads to my back.",
+            "aggravating_factors": [
+                "Moving around",
+                "Coughing"
+            ],
+            "alleviating_factors": [
+                "Lying still"
+            ],
+            "associated_symptoms": [
+                "Nausea"
+            ]
+        },
+        "nausea": {
+            "description": "I feel like I might throw up.",
+            "onset": "Started this morning.",
+            "character": "constant sick feeling",
+            "severity": "7",
+            "location": "Stomach",
+            "radiation": "null",
+            "aggravating_factors": [
+                "Smells",
+                "Moving too much"
+            ],
+            "alleviating_factors": [
+                "Nothing helps"
+            ],
+            "associated_symptoms": [
+                "Loss of appetite"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Diarrhea",
+        "Fever",
+        "Cough",
+        "Heartburn",
+        "Weight loss",
+        "Constipation",
+        "Fatigue",
+        "Bloody stools",
+        "Headache",
+        "Chest pain"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 80,
+        "respiratory_rate": 20,
+        "spo2": 98,
+        "temperature": 101.2,
+        "pain_scale": 9
+    },
+    "labs": {
+        "WBC": "14,000/\u00b5L (elevated)",
+        "CRP": "6.0 mg/L (elevated)",
+        "Urinalysis": "Normal (no signs of UTI)"
+    },
+    "past_medical_history": [
+        "None"
+    ],
+    "surgical_history": [
+        "Appendix removal (previous appendectomy)"
+    ],
+    "medications": [
+        "Ibuprofen 400 mg prn"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Social drinker, on weekends only",
+        "drugs": "Denies recreational drug use",
+        "occupation": "Software developer",
+        "living_situation": "Lives alone",
+        "exercise": "Occasionally jogs",
+        "diet": "Regular diet, loves junk food"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Diabetes",
+            "Mother": "Hypertension"
+        }
+    },
+    "personality": "Samuel is typically laid-back but appears anxious due to his current pain. He is not easily frightened but is worried about what might be happening.",
+    "communication_style": "He communicates clearly but tends to glance away when uncomfortable. He is concise but does express his feelings.",
+    "pain_description_style": "He describes discomfort using vivid imagery, saying it feels like someone is stabbing him.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated white blood cell count",
+            "Pain localized to the right lower abdomen",
+            "Nausea without diarrhea",
+            "Elevated CRP"
+        ],
+        "diagnosis": "Acute Appendicitis",
+        "differential_diagnoses": [
+            "Gastroenteritis",
+            "Kidney stones",
+            "Intestinal obstruction",
+            "Ectopic pregnancy",
+            "Mesenteric adenitis"
+        ],
+        "recommended_interventions": [
+            "Administer IV fluids",
+            "Provide pain management",
+            "Prepare for potential surgical consultation",
+            "Monitor vital signs closely"
+        ]
+    }
+}

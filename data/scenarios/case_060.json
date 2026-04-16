@@ -1,0 +1,160 @@
+{
+    "patient_id": "case_060",
+    "name": "Maria Gonzalez",
+    "age": 27,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I have this terrible headache and I'm feeling really sick.",
+    "onset_description": "It started suddenly this morning after I got out of bed.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "It's like a really bad pressure in my head, almost like a migraine.",
+            "onset": "This morning.",
+            "character": "throbbing",
+            "severity": "9",
+            "location": "entire head",
+            "radiation": "none",
+            "aggravating_factors": [
+                "bright lights",
+                "loud noises"
+            ],
+            "alleviating_factors": [
+                "lying down in a dark room"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "vomiting",
+                "fever"
+            ]
+        },
+        "fever": {
+            "description": "I've been feeling hot and sweaty.",
+            "onset": "around the same time as my headache.",
+            "character": "persistent",
+            "severity": "8",
+            "location": "body",
+            "radiation": "none",
+            "aggravating_factors": [
+                "not taking medicine"
+            ],
+            "alleviating_factors": [
+                "taking ibuprofen"
+            ],
+            "associated_symptoms": [
+                "chills",
+                "muscle aches"
+            ]
+        },
+        "stiff neck": {
+            "description": "I can't tilt my head backwards without pain.",
+            "onset": "started a few hours after the headache.",
+            "character": "sharp",
+            "severity": "7",
+            "location": "neck",
+            "radiation": "none",
+            "aggravating_factors": [
+                "moving my neck"
+            ],
+            "alleviating_factors": [
+                "resting it"
+            ],
+            "associated_symptoms": [
+                "headache",
+                "fever"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "confusion",
+        "cough",
+        "chest pain",
+        "shortness of breath",
+        "diarrhea",
+        "rash",
+        "fatigue",
+        "visual changes",
+        "seizures",
+        "loss of consciousness"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 80,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 102.5,
+        "pain_scale": 9
+    },
+    "labs": {
+        "CBC": "Elevated white blood cell count: 15,000 cells/mcL (indicating possible infection)",
+        "LP": "Elevated opening pressure with cloudy CSF; positive for bacteria"
+    },
+    "past_medical_history": [
+        "none"
+    ],
+    "surgical_history": [
+        "appendectomy"
+    ],
+    "medications": [
+        "ibuprofen 400 mg every 6 hours as needed for pain"
+    ],
+    "allergies": [
+        "none"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "occasionally on weekends",
+        "drugs": "denies any recreational drug use",
+        "occupation": "teacher",
+        "living_situation": "lives alone",
+        "exercise": "moderate activity, yoga twice a week",
+        "diet": "balanced, but sometimes skips breakfast"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "hypertension",
+            "father": "type 2 diabetes",
+            "brother": "asthma"
+        }
+    },
+    "personality": "Maria is generally upbeat but feels overwhelmed due to her current condition, showing signs of anxiety about her health.",
+    "communication_style": "She expresses herself clearly but tends to ramble when anxious, seeking reassurance from the healthcare team.",
+    "pain_description_style": "She describes her pain in vivid terms, often using relatable analogies to convey her discomfort.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "high fever",
+            "severe headache",
+            "stiff neck",
+            "elevated white blood cell count",
+            "cloudy CSF"
+        ],
+        "diagnosis": "Meningitis (bacterial)",
+        "differential_diagnoses": [
+            "Viral meningitis",
+            "Encephalitis",
+            "Migraine",
+            "Cluster headache",
+            "Subarachnoid hemorrhage"
+        ],
+        "recommended_interventions": [
+            "administer IV fluids",
+            "start IV antibiotics",
+            "monitor vital signs closely",
+            "prepare for lumbar puncture",
+            "assess neurological status frequently"
+        ]
+    }
+}

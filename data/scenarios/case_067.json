@@ -1,0 +1,121 @@
+{
+    "patient_id": "case_067",
+    "name": "Margaret Smith",
+    "age": 82,
+    "sex": "Female",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 145,
+    "height_inches": 62,
+    "chief_complaint": "I can't move my leg and it hurts really bad.",
+    "onset_description": "I fell yesterday while trying to get up from my chair.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "hip pain": {
+            "description": "It feels like a sharp stabbing pain in my hip.",
+            "onset": "Started after I fell yesterday.",
+            "character": "Sharp and intense.",
+            "severity": "8",
+            "location": "Right hip.",
+            "radiation": "None.",
+            "aggravating_factors": [
+                "Moving my leg",
+                "Trying to stand up"
+            ],
+            "alleviating_factors": [
+                "Keeping it still"
+            ],
+            "associated_symptoms": [
+                "Swelling around the hip",
+                "Bruising"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Nausea",
+        "Vomiting",
+        "Headache",
+        "Shortness of breath",
+        "Chest pain",
+        "Fever",
+        "Back pain",
+        "Weakness in arms or legs",
+        "Dizziness",
+        "Confusion"
+    ],
+    "vitals": {
+        "heart_rate": 88,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 82,
+        "respiratory_rate": 20,
+        "spo2": 96,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 7.5 x 10^3/uL (normal), Hemoglobin 12.5 g/dL (slightly low), Hematocrit 38% (normal)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Osteoporosis"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 30"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Calcium 600 mg daily",
+        "Vitamin D 800 IU daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "Occasional wine with dinner",
+        "drugs": "Denies any drug use",
+        "occupation": "Retired school teacher",
+        "living_situation": "Lives alone",
+        "exercise": "Walks occasionally with a walker",
+        "diet": "Balanced diet, but low calcium intake"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Osteoporosis",
+            "Father": "Heart disease"
+        }
+    },
+    "personality": "Margaret is usually cheerful but is currently anxious and frustrated due to her injury.",
+    "communication_style": "She is cooperative but tends to ramble due to anxiety, needing reassurance.",
+    "pain_description_style": "Describes pain in vivid, emotive terms, indicating high distress.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "High pain level in the right hip",
+            "Recent fall",
+            "History of osteoporosis"
+        ],
+        "diagnosis": "Right hip fracture secondary to fall",
+        "differential_diagnoses": [
+            "Hip contusion",
+            "Pelvic fracture",
+            "Muscle strain",
+            "Tendon injury",
+            "Arthritis exacerbation"
+        ],
+        "recommended_interventions": [
+            "Pain management with analgesics",
+            "Immobilization of the affected leg",
+            "Referral for orthopedic consultation",
+            "Evaluation of fall risk factors"
+        ]
+    }
+}

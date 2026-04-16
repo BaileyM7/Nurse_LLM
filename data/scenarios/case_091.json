@@ -1,0 +1,144 @@
+{
+    "patient_id": "case_091",
+    "name": "Maria Gonzalez",
+    "age": 65,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I feel really tired and my back hurts a lot.",
+    "onset_description": "It started a few days ago with some discomfort, but now I just feel awful.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "fatigue": {
+            "description": "I can barely get out of bed; I'm just so tired.",
+            "onset": "Started a couple of days ago.",
+            "character": "Constant tiredness without relief.",
+            "severity": "8",
+            "location": "Whole body",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Not resting",
+                "Moving around"
+            ],
+            "alleviating_factors": [
+                "Resting flat"
+            ],
+            "associated_symptoms": [
+                "Mild fever",
+                "Body aches"
+            ]
+        },
+        "back_pain": {
+            "description": "My lower back feels like someone is squeezing it.",
+            "onset": "It began a few days ago and keeps getting worse.",
+            "character": "Dull yet intense pressure.",
+            "severity": "7",
+            "location": "Lower back",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Standing",
+                "Bending over"
+            ],
+            "alleviating_factors": [
+                "Lying down",
+                "Heat pack"
+            ],
+            "associated_symptoms": [
+                "Fever",
+                "Chills"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Cough",
+        "Shortness of breath",
+        "Chest pain",
+        "Headache",
+        "Skin rash",
+        "Joint pain",
+        "Confusion"
+    ],
+    "vitals": {
+        "heart_rate": 112,
+        "blood_pressure_systolic": 88,
+        "blood_pressure_diastolic": 56,
+        "respiratory_rate": 22,
+        "spo2": 94,
+        "temperature": 101.5,
+        "pain_scale": 7
+    },
+    "labs": {
+        "WBC": "15,000 cells/uL (Elevated)",
+        "Lactate": "2.5 mmol/L (Mildly elevated)",
+        "Urinalysis": "Positive for nitrites and leukocyte esterase"
+    },
+    "past_medical_history": [
+        "Type 2 Diabetes",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Appendectomy in 2005"
+    ],
+    "medications": [
+        "Metformin 500 mg daily",
+        "Lisinopril 10 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, social drinking",
+        "drugs": "Denies use of illicit drugs",
+        "occupation": "Retired school teacher",
+        "living_situation": "Lives alone",
+        "exercise": "Rarely exercises, prefers walking short distances",
+        "diet": "Balanced diet but sometimes skips meals"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Heart disease",
+            "Mother": "Diabetes"
+        }
+    },
+    "personality": "Maria is anxious about her condition but tries to stay positive. She is cooperative but often expresses her worries.",
+    "communication_style": "She asks many questions and seeks reassurance; she speaks clearly but sometimes struggles with medical jargon.",
+    "pain_description_style": "She uses relatable terms and analogies; she describes discomfort as pressure or squeezing instead of technical terms.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated heart rate",
+            "Elevated temperature",
+            "Positive urinalysis",
+            "Elevated WBC count",
+            "Presence of lactate"
+        ],
+        "diagnosis": "Sepsis secondary to a urinary tract infection",
+        "differential_diagnoses": [
+            "Acute pyelonephritis",
+            "Urosepsis",
+            "Dehydration",
+            "Pneumonia",
+            "Cholecystitis"
+        ],
+        "recommended_interventions": [
+            "Administer IV fluids",
+            "Obtain blood cultures",
+            "Administer broad-spectrum antibiotics",
+            "Monitor vital signs closely"
+        ]
+    }
+}

@@ -1,0 +1,160 @@
+{
+    "patient_id": "case_063",
+    "name": "Sophia Martinez",
+    "age": 67,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I feel really weak and I've had a fever for a few days.",
+    "onset_description": "It started about three days ago when I noticed I was getting chills and felt warm to the touch.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "fever": {
+            "description": "I feel so hot and sweaty, like I'm burning up.",
+            "onset": "3 days ago",
+            "character": "Persistent high temperature",
+            "severity": "8",
+            "location": "Whole body",
+            "radiation": "null",
+            "aggravating_factors": [
+                "exertion",
+                "warm environments"
+            ],
+            "alleviating_factors": [
+                "ice packs",
+                "cool baths"
+            ],
+            "associated_symptoms": [
+                "chills",
+                "sweating"
+            ]
+        },
+        "urinary frequency": {
+            "description": "I have to go to the bathroom way too often, like every 15 minutes.",
+            "onset": "2 days ago",
+            "character": "Urgent need to urinate",
+            "severity": "7",
+            "location": "Lower abdomen",
+            "radiation": "null",
+            "aggravating_factors": [
+                "drinking fluids"
+            ],
+            "alleviating_factors": [
+                "going to the bathroom"
+            ],
+            "associated_symptoms": [
+                "burning sensation"
+            ]
+        },
+        "confusion": {
+            "description": "Sometimes I feel like I can't think straight or remember things.",
+            "onset": "yesterday",
+            "character": "Occasional disorientation",
+            "severity": "6",
+            "location": "null",
+            "radiation": "null",
+            "aggravating_factors": [
+                "lack of sleep"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
+            "associated_symptoms": [
+                "dizziness"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "shortness of breath",
+        "headache",
+        "rash",
+        "muscle aches",
+        "heavy coughing",
+        "loss of appetite"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 90,
+        "blood_pressure_diastolic": 60,
+        "respiratory_rate": 20,
+        "spo2": 92,
+        "temperature": 102.5,
+        "pain_scale": 3
+    },
+    "labs": {
+        "white_blood_cell_count": "18,000/mm\u00b3 (high)",
+        "lactate": "3.5 mmol/L (elevated)",
+        "urinalysis": "positive for nitrites and leukocyte esterase",
+        "blood_cultures": "pending"
+    },
+    "past_medical_history": [
+        "Type 2 Diabetes",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Appendectomy in 1985"
+    ],
+    "medications": [
+        "Metformin 500 mg once daily",
+        "Lisinopril 20 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "occasional wine with dinner",
+        "drugs": "denies use",
+        "occupation": "retired teacher",
+        "living_situation": "lives with husband",
+        "exercise": "limited due to arthritis",
+        "diet": "high in carbs, low in vegetables"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Heart disease",
+            "mother": "Alzheimer's disease"
+        }
+    },
+    "personality": "Anxious and somewhat distrustful of medical care, often worried about her health.",
+    "communication_style": "Polite but hesitant; asks many questions about her condition and treatment.",
+    "pain_description_style": "Describes discomfort in a worried tone, often asking if it's serious.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated heart rate",
+            "high white blood cell count",
+            "positive urinalysis",
+            "confusion",
+            "fever"
+        ],
+        "diagnosis": "Sepsis secondary to urinary tract infection",
+        "differential_diagnoses": [
+            "Urinary tract infection",
+            "Pneumonia",
+            "Cholecystitis",
+            "Diverticulitis",
+            "Acute pancreatitis"
+        ],
+        "recommended_interventions": [
+            "Administer IV fluids",
+            "Initiate broad-spectrum antibiotics",
+            "Monitor vitals frequently",
+            "Obtain blood cultures"
+        ]
+    }
+}

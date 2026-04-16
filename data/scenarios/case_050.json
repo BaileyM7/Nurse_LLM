@@ -1,0 +1,139 @@
+{
+    "patient_id": "case_050",
+    "name": "James Carter",
+    "age": 45,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 210,
+    "height_inches": 70,
+    "chief_complaint": "I feel like I can't catch my breath.",
+    "onset_description": "It started suddenly while I was playing basketball an hour ago.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "It's like there's a weight on my chest, and I can't get enough air.",
+            "onset": "1 hour ago",
+            "character": "tight and constricting",
+            "severity": "9",
+            "location": "chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "exertion",
+                "deep breaths"
+            ],
+            "alleviating_factors": [
+                "sitting still"
+            ],
+            "associated_symptoms": [
+                "chest pain",
+                "anxiety"
+            ]
+        },
+        "chest pain": {
+            "description": "Sharp pain on the right side of my chest.",
+            "onset": "1 hour ago",
+            "character": "sharp",
+            "severity": "7",
+            "location": "right side of chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "coughing",
+                "movement"
+            ],
+            "alleviating_factors": [
+                "leaning forward"
+            ],
+            "associated_symptoms": [
+                "dyspnea",
+                "anxiety"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "coughing",
+        "fainting",
+        "fever",
+        "sore throat",
+        "runny nose",
+        "wheezing",
+        "nausea",
+        "vomiting",
+        "fatigue",
+        "swelling in legs"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 140,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 28,
+        "spo2": 92,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "chest_xray": "Pneumothorax seen on right side.",
+        "CBC": "Normal white blood cell count, hemoglobin 14 g/dL.",
+        "ABG": "pH 7.38, PaCO2 45 mmHg, PaO2 60 mmHg."
+    },
+    "past_medical_history": [
+        "Asthma"
+    ],
+    "surgical_history": [
+        "Appendectomy"
+    ],
+    "medications": [
+        "Albuterol 90 mcg inhaler as needed"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "never smoked",
+        "alcohol": "social drinker, weekends",
+        "drugs": "denies use",
+        "occupation": "teacher",
+        "living_situation": "lives with wife and two kids",
+        "exercise": "moderately active",
+        "diet": "mostly healthy, watches portion sizes"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "COPD",
+            "mother": "hypertension"
+        }
+    },
+    "personality": "James is usually calm but is visibly anxious about his breathing difficulties.",
+    "communication_style": "He speaks clearly but tends to rush when he's anxious.",
+    "pain_description_style": "He describes the pain in vivid terms, referring to it as 'sharp' and 'stabbing'.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Signs of respiratory distress",
+            "Tachycardia",
+            "Decreased breath sounds on affected side"
+        ],
+        "diagnosis": "Pneumothorax",
+        "differential_diagnoses": [
+            "Pulmonary embolism",
+            "Pneumonia",
+            "Acute bronchitis",
+            "Anxiety attack",
+            "Rib fracture"
+        ],
+        "recommended_interventions": [
+            "Supplemental oxygen",
+            "Chest tube insertion if confirmed pneumothorax",
+            "Monitor vitals closely",
+            "Administer pain relief"
+        ]
+    }
+}

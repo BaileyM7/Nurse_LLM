@@ -1,0 +1,125 @@
+{
+    "patient_id": "case_046",
+    "name": "James Thompson",
+    "age": 56,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 210,
+    "height_inches": 68,
+    "chief_complaint": "My leg feels really heavy and painful.",
+    "onset_description": "The pain started suddenly two days ago after a long flight.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "leg pain": {
+            "description": "It feels like a deep ache, like my leg is weighed down.",
+            "onset": "Two days ago.",
+            "character": "Dull and aching.",
+            "severity": "8",
+            "location": "Left calf.",
+            "radiation": "No radiation.",
+            "aggravating_factors": [
+                "Standing for long periods",
+                "Walking"
+            ],
+            "alleviating_factors": [
+                "Resting",
+                "Keeping my leg elevated"
+            ],
+            "associated_symptoms": [
+                "Swelling in the left leg",
+                "Warmth in the area"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Shortness of breath",
+        "Chest pain",
+        "Coughing up blood",
+        "Fever",
+        "Nausea",
+        "Dizziness",
+        "Rapid heartbeat",
+        "Sweating",
+        "Fainting",
+        "Pain in the other leg"
+    ],
+    "vitals": {
+        "heart_rate": 95,
+        "blood_pressure_systolic": 135,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 18,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "D-dimer": "500 ng/mL (elevated, indicative of possible clotting issues)",
+        "PT": "12 seconds (normal)",
+        "INR": "1.1 (normal)",
+        "aPTT": "30 seconds (normal)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Hernia repair 5 years ago"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Metformin 1000 mg twice daily"
+    ],
+    "allergies": [
+        "None"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional social drinker",
+        "drugs": "Denies use",
+        "occupation": "Sales manager",
+        "living_situation": "Lives with spouse",
+        "exercise": "Minimal, mostly sedentary",
+        "diet": "High in carbohydrates and sugars"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Coronary artery disease",
+            "Mother": "Stroke"
+        }
+    },
+    "personality": "Anxious and a bit impatient; wants answers quickly and seems worried about his health.",
+    "communication_style": "Direct and straightforward; often interrupts when he feels concerned.",
+    "pain_description_style": "He describes pain in a very relatable way, often using comparisons to common experiences.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Rating of leg pain",
+            "Swelling in left calf",
+            "History of prolonged immobility",
+            "Signs of potential DVT"
+        ],
+        "diagnosis": "Deep Vein Thrombosis (DVT)",
+        "differential_diagnoses": [
+            "Superficial vein thrombosis",
+            "Muscle strain",
+            "Peripheral artery disease",
+            "Cellulitis",
+            "Lymphangitis"
+        ],
+        "recommended_interventions": [
+            "Administer anticoagulants as ordered",
+            "Educate the patient about the condition and treatment",
+            "Encourage leg elevation and periodic movement",
+            "Monitor vital signs closely for changes"
+        ]
+    }
+}

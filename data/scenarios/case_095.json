@@ -1,0 +1,125 @@
+{
+    "patient_id": "case_095",
+    "name": "Marjorie Thompson",
+    "age": 82,
+    "sex": "Female",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 140,
+    "height_inches": 62,
+    "chief_complaint": "I can\u2019t move my leg without a sharp pain.",
+    "onset_description": "I was getting up from my chair when I slipped and fell.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "hip pain": {
+            "description": "It's a very sharp pain right in my hip.",
+            "onset": "Immediately after the fall.",
+            "character": "sharp and constant.",
+            "severity": "8",
+            "location": "right hip",
+            "radiation": "none",
+            "aggravating_factors": [
+                "moving my leg",
+                "sitting down"
+            ],
+            "alleviating_factors": [
+                "keeping still",
+                "lying down"
+            ],
+            "associated_symptoms": [
+                "swelling around the hip",
+                "bruising"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "nausea",
+        "vomiting",
+        "headache",
+        "shortness of breath",
+        "chest pain",
+        "fever",
+        "tingling",
+        "weakness in other limbs",
+        "dizziness",
+        "confusion"
+    ],
+    "vitals": {
+        "heart_rate": 88,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 18,
+        "spo2": 97,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "hemoglobin": "12.5 g/dL (normal)",
+        "creatinine": "0.8 mg/dL (normal)",
+        "glucose": "95 mg/dL (normal)"
+    },
+    "past_medical_history": [
+        "osteoarthritis",
+        "hypertension"
+    ],
+    "surgical_history": [
+        "right knee replacement 5 years ago"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Ibuprofen 400 mg as needed"
+    ],
+    "allergies": [
+        "Penicillin: rash"
+    ],
+    "social_history": {
+        "smoking": "never smoked",
+        "alcohol": "occasionally, a glass of wine with dinner",
+        "drugs": "denies",
+        "occupation": "retired school teacher",
+        "living_situation": "alone in a two-bedroom apartment",
+        "exercise": "walks with a cane for about 10 minutes daily",
+        "diet": "generally healthy, prefers home-cooked meals"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "heart disease",
+            "mother": "diabetes",
+            "sister": "osteoporosis"
+        }
+    },
+    "personality": "Marjorie is generally upbeat but can be anxious when she feels unwell, often expressing worry about her ability to live independently.",
+    "communication_style": "She talks openly and in a straightforward manner yet tends to repeat herself when nervous.",
+    "pain_description_style": "She describes her pain with vivid imagery, saying it feels like 'a knife stabbing' her hip.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "sharp pain in the hip",
+            "history of a fall",
+            "past medical history of osteoarthritis",
+            "living situation concerns"
+        ],
+        "diagnosis": "Hip Fracture",
+        "differential_diagnoses": [
+            "Femoral neck fracture",
+            "Hip contusion",
+            "Pelvic fracture",
+            "Labral tear",
+            "Osteonecrosis"
+        ],
+        "recommended_interventions": [
+            "Pain management",
+            "Imaging studies (X-ray)",
+            "Orthopedic consult",
+            "Fall risk assessment"
+        ]
+    }
+}

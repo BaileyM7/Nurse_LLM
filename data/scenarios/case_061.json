@@ -1,0 +1,120 @@
+{
+    "patient_id": "case_061",
+    "name": "Carlos Martinez",
+    "age": 37,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I had this weird shaking episode and I don't know why.",
+    "onset_description": "It started about an hour ago while I was watching TV. I just felt strange and then it happened.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "seizure activity": {
+            "description": "I was shaking uncontrollably and couldn't control my body.",
+            "onset": "1 hour ago",
+            "character": "shaking and stiffness",
+            "severity": "8",
+            "location": "entire body",
+            "radiation": "null",
+            "aggravating_factors": [
+                "stress",
+                "bright lights"
+            ],
+            "alleviating_factors": [
+                "lying down",
+                "closing my eyes"
+            ],
+            "associated_symptoms": [
+                "confusion afterwards",
+                "tiredness"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "headache",
+        "nausea",
+        "visual disturbances",
+        "difficulty speaking",
+        "tingling in arms",
+        "dizziness",
+        "loss of consciousness",
+        "muscle pain",
+        "fever",
+        "stiff neck"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 135,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 2
+    },
+    "labs": {
+        "CBC": "Normal",
+        "Electrolytes": "Sodium 140 mEq/L, Potassium 4.5 mEq/L, Calcium normal",
+        "Toxicology Screen": "Negative"
+    },
+    "past_medical_history": [
+        "anxiety disorder"
+    ],
+    "surgical_history": [
+        "appendectomy"
+    ],
+    "medications": [
+        "Sertraline 50 mg daily"
+    ],
+    "allergies": [
+        "None"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "social drinker, weekends only",
+        "drugs": "denies",
+        "occupation": "software developer",
+        "living_situation": "lives alone",
+        "exercise": "rarely exercises",
+        "diet": "mostly fast food"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "epilepsy",
+            "father": "hypertension"
+        }
+    },
+    "personality": "Carlos is generally calm but tends to get anxious when discussing his health. He values clear communication and often asks questions.",
+    "communication_style": "He speaks in a straightforward manner but can become overwhelmed when anxious, often needing reassurance.",
+    "pain_description_style": "He rates discomfort on a scale and describes it as mild to moderate pressure rather than sharp pain.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "recent onset of seizure activity, absence of prior seizures, anxiety level, and family history of epilepsy"
+        ],
+        "diagnosis": "New Onset Seizure",
+        "differential_diagnoses": [
+            "Alcohol withdrawal seizures",
+            "Hypoglycemia",
+            "Postictal state",
+            "Sleep deprivation seizures",
+            "Intracranial lesion"
+        ],
+        "recommended_interventions": [
+            "Neurological assessment",
+            "IV access for medication if needed",
+            "Monitor vital signs",
+            "Reassure the patient",
+            "Educate on seizure precautions"
+        ]
+    }
+}

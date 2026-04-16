@@ -1,0 +1,123 @@
+{
+    "patient_id": "case_102",
+    "name": "Emily Rodriguez",
+    "age": 29,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 135,
+    "height_inches": 64,
+    "chief_complaint": "I feel like I'm stuck and can't see a way out.",
+    "onset_description": "I've been feeling this way for the past few weeks after losing my job.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "suicidal ideation": {
+            "description": "I just want to end it all; I can't deal with this pain anymore.",
+            "onset": "Started a few weeks ago.",
+            "character": "Constant and overwhelming, feels like a weight on my chest.",
+            "severity": "9",
+            "location": "Mental anguish, feels everywhere in my life.",
+            "radiation": "N/A",
+            "aggravating_factors": [
+                "Thinking about my future",
+                "Being alone",
+                "Failing to find a job"
+            ],
+            "alleviating_factors": [
+                "Talking to my sister",
+                "Listening to music"
+            ],
+            "associated_symptoms": [
+                "Insomnia",
+                "Loss of appetite",
+                "Feelings of worthlessness"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Hallucinations",
+        "Delusions",
+        "Self-harm",
+        "Substance abuse",
+        "Severe anxiety attacks",
+        "Manic episodes",
+        "Severe depression",
+        "Physical pain",
+        "Panic attacks",
+        "Memory loss"
+    ],
+    "vitals": {
+        "heart_rate": 88,
+        "blood_pressure_systolic": 120,
+        "blood_pressure_diastolic": 80,
+        "respiratory_rate": 18,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 0
+    },
+    "labs": {
+        "Complete Blood Count": "Normal",
+        "Thyroid Function Test": "Normal",
+        "Urinalysis": "Negative for drugs"
+    },
+    "past_medical_history": [
+        "Anxiety disorder",
+        "Depression"
+    ],
+    "surgical_history": [],
+    "medications": [
+        "Sertraline 100mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, about 1-2 drinks per week",
+        "drugs": "Denies use",
+        "occupation": "Unemployed, previously worked as a marketing assistant",
+        "living_situation": "Lives with parents",
+        "exercise": "Inactive, mostly sedentary",
+        "diet": "Irregular meal patterns"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Major depressive disorder",
+            "Father": "Anxiety disorder"
+        }
+    },
+    "personality": "Emily appears anxious and withdrawn, often avoiding eye contact. She is introspective and struggles to articulate her feelings clearly.",
+    "communication_style": "She speaks softly and hesitantly, often looking down and fidgeting with her hands, indicating discomfort while expressing her thoughts.",
+    "pain_description_style": "Emily doesn't mention physical pain but describes emotional pain in a metaphorical way as a burden that she feels is too heavy to bear.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Presence of suicidal ideation",
+            "Loss of job as a triggering factor",
+            "Family history of mental health issues"
+        ],
+        "diagnosis": "Major Depressive Disorder with Suicidal Ideation",
+        "differential_diagnoses": [
+            "Anxiety Disorder",
+            "Bipolar Disorder",
+            "Adjustment Disorder with Depressed Mood",
+            "Post-Traumatic Stress Disorder",
+            "Substance-Induced Mood Disorder"
+        ],
+        "recommended_interventions": [
+            "Conduct a safety assessment",
+            "Develop a safety plan",
+            "Consult psychiatric services",
+            "Provide emotional support",
+            "Encourage family involvement"
+        ]
+    }
+}

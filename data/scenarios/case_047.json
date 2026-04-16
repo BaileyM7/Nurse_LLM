@@ -1,0 +1,154 @@
+{
+    "patient_id": "case_047",
+    "name": "Carlos Ramirez",
+    "age": 67,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I can't catch my breath and feel really tight in my chest.",
+    "onset_description": "The shortness of breath started this morning after I went for a walk.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "shortness_of_breath": {
+            "description": "It feels like I have a weight on my chest, and I can't get enough air.",
+            "onset": "This morning, right after my walk.",
+            "character": "tight and constricting",
+            "severity": "8",
+            "location": "chest",
+            "radiation": "null",
+            "aggravating_factors": [
+                "exertion",
+                "cold air"
+            ],
+            "alleviating_factors": [
+                "sitting up",
+                "using my inhaler"
+            ],
+            "associated_symptoms": [
+                "coughing",
+                "wheezing"
+            ]
+        },
+        "cough": {
+            "description": "I have this dry cough that comes and goes.",
+            "onset": "It started a few days ago.",
+            "character": "dry and irritating",
+            "severity": "5",
+            "location": "throat",
+            "radiation": "null",
+            "aggravating_factors": [
+                "talking",
+                "laughing"
+            ],
+            "alleviating_factors": [
+                "drinking water"
+            ],
+            "associated_symptoms": [
+                "phlegm production"
+            ]
+        },
+        "wheezing": {
+            "description": "I can hear a wheezing sound when I breathe.",
+            "onset": "It started today with the trouble breathing.",
+            "character": "musical, high-pitched",
+            "severity": "7",
+            "location": "chest",
+            "radiation": "null",
+            "aggravating_factors": [
+                "lying down"
+            ],
+            "alleviating_factors": [
+                "inhaler"
+            ],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "fever",
+        "swelling in legs",
+        "sore throat",
+        "nausea",
+        "vomiting",
+        "headache",
+        "confusion",
+        "fatigue",
+        "diarrhea"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 24,
+        "spo2": 88,
+        "temperature": 98.6,
+        "pain_scale": 2
+    },
+    "labs": {
+        "CBC": "WBC 12.5 x 10^9/L, indicative of mild infection",
+        "ABG": "pH 7.32, pCO2 55 mmHg, pO2 60 mmHg, indicating respiratory acidosis"
+    },
+    "past_medical_history": [
+        "COPD",
+        "hypertension"
+    ],
+    "surgical_history": [
+        "none"
+    ],
+    "medications": [
+        "Albuterol 90 mcg inhaler as needed",
+        "Lisinopril 10 mg daily"
+    ],
+    "allergies": [
+        "None"
+    ],
+    "social_history": {
+        "smoking": "smoked 1 pack/day for 30 years, quit 5 years ago",
+        "alcohol": "socially, occasionally drinks beer",
+        "drugs": "denies",
+        "occupation": "retired factory worker",
+        "living_situation": "lives with wife",
+        "exercise": "walks occasionally",
+        "diet": "mostly American diet; tries to eat vegetables"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "COPD",
+            "mother": "hypertension"
+        }
+    },
+    "personality": "Carlos is anxious about his breathing and often fidgets. He appreciates clear explanations.",
+    "communication_style": "He speaks in short sentences and often repeats his concerns about not being able to breathe.",
+    "pain_description_style": "Carlos describes discomfort in terms of 'pressure' rather than pain.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated respiratory rate",
+            "low oxygen saturation",
+            "history of COPD exacerbations"
+        ],
+        "diagnosis": "COPD Exacerbation",
+        "differential_diagnoses": [
+            "pneumonia",
+            "pulmonary embolism",
+            "heart failure",
+            "anxiety attack"
+        ],
+        "recommended_interventions": [
+            "administer bronchodilator",
+            "administer oxygen therapy",
+            "obtain chest x-ray",
+            "evaluate for possible admission"
+        ]
+    }
+}

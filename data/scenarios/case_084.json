@@ -1,0 +1,163 @@
+{
+    "patient_id": "case_084",
+    "name": "Emily Rodriguez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 160,
+    "height_inches": 65,
+    "chief_complaint": "I have this terrible pain in my belly and I can't keep anything down.",
+    "onset_description": "The pain started about 12 hours ago after I ate lunch, and it just got worse.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal_pain": {
+            "description": "It feels like a sharp cramp and sometimes it's a dull ache.",
+            "onset": "12 hours ago",
+            "character": "sharp and crampy",
+            "severity": "8",
+            "location": "Mid to lower abdomen",
+            "radiation": "null",
+            "aggravating_factors": [
+                "Eating",
+                "Movement"
+            ],
+            "alleviating_factors": [
+                "Lying still",
+                "Curling up"
+            ],
+            "associated_symptoms": [
+                "Nausea",
+                "Vomiting",
+                "Bloating"
+            ]
+        },
+        "nausea": {
+            "description": "I feel like I'm going to throw up all the time.",
+            "onset": "started with the pain",
+            "character": "persistent",
+            "severity": "7",
+            "location": "stomach",
+            "radiation": "null",
+            "aggravating_factors": [
+                "Smells",
+                "Eating"
+            ],
+            "alleviating_factors": [
+                "None"
+            ],
+            "associated_symptoms": [
+                "Loss of appetite"
+            ]
+        },
+        "vomiting": {
+            "description": "I\u2019ve thrown up three times, and it was all food.",
+            "onset": "started with the pain",
+            "character": "projectile",
+            "severity": "6",
+            "location": "stomach",
+            "radiation": "null",
+            "aggravating_factors": [
+                "Eating"
+            ],
+            "alleviating_factors": [
+                "Nothing helps"
+            ],
+            "associated_symptoms": [
+                "Dehydration"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Fever",
+        "Chest pain",
+        "Diarrhea",
+        "Constipation",
+        "Weight loss",
+        "Heartburn",
+        "Difficulty swallowing",
+        "Bloating after eating",
+        "Feeling of fullness",
+        "Rash"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 128,
+        "blood_pressure_diastolic": 78,
+        "respiratory_rate": 20,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 15,000 /\u00b5L (Leukocytosis)",
+        "Electrolytes": "Sodium 132 mEq/L (Hyponatremia), Potassium 3.0 mEq/L (Hypokalemia)",
+        "BUN/Creatinine": "BUN 25 mg/dL (elevated), Creatinine 1.2 mg/dL (normal)"
+    },
+    "past_medical_history": [
+        "Irritable Bowel Syndrome",
+        "Anxiety Disorder"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 22",
+        "Cholecystectomy at age 30"
+    ],
+    "medications": [
+        "Lansoprazole 30 mg daily",
+        "Alprazolam 0.5 mg as needed"
+    ],
+    "allergies": [
+        "No known drug allergies",
+        "Peanuts - rash"
+    ],
+    "social_history": {
+        "smoking": "Never smoked",
+        "alcohol": "Social drinker, 1-2 drinks on weekends",
+        "drugs": "Denies any recreational drug use",
+        "occupation": "Graphic Designer",
+        "living_situation": "Lives alone",
+        "exercise": "Moderate activity, jogs occasionally",
+        "diet": "Generally healthy but sometimes skips meals"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Diabetes",
+            "Father": "Hypertension",
+            "Brother": "Crohn's Disease"
+        }
+    },
+    "personality": "Anxious but willing to share her concerns, often fidgeting while talking.",
+    "communication_style": "Expresses herself clearly but often seeks reassurance about her symptoms.",
+    "pain_description_style": "Describes pain in vivid detail and asks for confirmation about her condition.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated heart rate and blood pressure indicating possible dehydration",
+            "Leukocytosis suggesting infection or inflammation",
+            "Electrolyte imbalances indicating possible dehydration and complications"
+        ],
+        "diagnosis": "Small Bowel Obstruction",
+        "differential_diagnoses": [
+            "Ileus",
+            "Gastroenteritis",
+            "Pancreatitis",
+            "Diverticulitis",
+            "Mesenteric Ischemia"
+        ],
+        "recommended_interventions": [
+            "IV fluid resuscitation",
+            "NPO status",
+            "NG tube placement if vomiting persists",
+            "Pain management",
+            "Consult surgery for evaluation"
+        ]
+    }
+}

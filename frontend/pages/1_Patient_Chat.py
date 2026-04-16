@@ -28,6 +28,7 @@ from app.services.scenario_service import scenario_service
 from app.services.llm_service import llm_service
 from app.services.feedback_service import feedback_service
 from app.services.session_manager import session_manager
+from app.services.domain_classifier import domain_classifier
 
 st.set_page_config(page_title="Patient Chat", page_icon="💬", layout="wide")
 
@@ -52,6 +53,10 @@ if "vitals_revealed" not in st.session_state:
     st.session_state.vitals_revealed = {}
 if "labs_revealed" not in st.session_state:
     st.session_state.labs_revealed = {}
+if "patient_page" not in st.session_state:
+    st.session_state.patient_page = 0
+if "last_filter_key" not in st.session_state:
+    st.session_state.last_filter_key = ""
 
 
 # ── Helper Functions ─────────────────────────────────────────────────────────
@@ -100,16 +105,23 @@ def send_message(message: str):
             st.error(f"Maximum turns ({settings.max_turns}) reached. Please end the session.")
             return
 
-        # Get LLM response (async call)
+        # Classify the student's question via dedicated classifier (keyword + LLM fallback)
+        classification = run_async(domain_classifier.classify(message))
+        primary_domain = classification.domains[0] if classification.domains else "conversational"
+
+        # Get patient dialogue from simulation LLM
         patient_response = run_async(
             llm_service.get_patient_response(sid, message)
         )
+        # Override the sim's self-reported domain with the dedicated classifier result
+        patient_response.domain_explored = primary_domain
+        patient_response.domain_confidence = classification.confidence
 
         # Record messages in-memory
         session["messages"].append(ChatMessage(
             role=MessageRole.STUDENT,
             content=message,
-            domain_explored=patient_response.domain_explored,
+            domain_explored=primary_domain,
         ))
         session["messages"].append(ChatMessage(
             role=MessageRole.PATIENT,
@@ -118,13 +130,13 @@ def send_message(message: str):
         session["turn_count"] += 1
 
         # Persist to SQLite
-        session_manager.save_message(sid, "student", message, domain=patient_response.domain_explored)
+        session_manager.save_message(sid, "student", message, domain=primary_domain)
         session_manager.save_message(sid, "patient", patient_response.dialogue)
 
-        # Update assessment tracker
+        # Update assessment tracker with multi-label domains
         session["tracker"].update(
-            domain_explored=patient_response.domain_explored,
-            confidence=patient_response.domain_confidence,
+            domains=classification.domains,
+            confidence=classification.confidence,
             student_message=message,
         )
 
@@ -205,12 +217,14 @@ if not st.session_state.session_active and not st.session_state.messages:
     # ── Filter bar ────────────────────────────────────────────────────────
     categories = sorted(set(s.get("category", "Other") or "Other" for s in scenarios))
 
-    filter_cols = st.columns([2, 2, 3])
+    filter_cols = st.columns([2, 2, 2, 3])
     with filter_cols[0]:
         cat_filter = st.selectbox("Category", ["All"] + categories, key="cat_filter")
     with filter_cols[1]:
         sev_filter = st.selectbox("Severity", ["All", "Critical", "High", "Medium", "Low"], key="sev_filter")
     with filter_cols[2]:
+        sort_by = st.selectbox("Sort by", ["Default", "Name", "Severity", "Category"], key="sort_filter")
+    with filter_cols[3]:
         search = st.text_input("Search", placeholder="Name or complaint...", key="search")
 
     # Apply filters
@@ -223,7 +237,34 @@ if not st.session_state.session_active and not st.session_state.messages:
         q = search.lower()
         filtered = [s for s in filtered if q in s["name"].lower() or q in s["chief_complaint"].lower()]
 
-    st.caption(f"Showing {len(filtered)} of {len(scenarios)} patients")
+    # Apply sort
+    SEVERITY_ORDER = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+    if sort_by == "Name":
+        filtered = sorted(filtered, key=lambda s: s["name"].lower())
+    elif sort_by == "Severity":
+        filtered = sorted(filtered, key=lambda s: SEVERITY_ORDER.get((s.get("severity") or "").lower(), 99))
+    elif sort_by == "Category":
+        filtered = sorted(filtered, key=lambda s: (s.get("category") or "ZZZ"))
+
+    # Reset pagination when filters or sort change
+    filter_key = f"{cat_filter}|{sev_filter}|{sort_by}|{search}"
+    if filter_key != st.session_state.last_filter_key:
+        st.session_state.patient_page = 0
+        st.session_state.last_filter_key = filter_key
+
+    # Pagination math
+    ITEMS_PER_PAGE = 9  # 3 rows of 3 cards
+    total_pages = max(1, (len(filtered) + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE)
+    st.session_state.patient_page = min(st.session_state.patient_page, total_pages - 1)
+
+    page_start = st.session_state.patient_page * ITEMS_PER_PAGE
+    page_end = page_start + ITEMS_PER_PAGE
+    paginated = filtered[page_start:page_end] if filtered else []
+
+    if filtered:
+        st.caption(f"Showing {page_start + 1}–{min(page_end, len(filtered))} of {len(filtered)} patients")
+    else:
+        st.caption(f"No patients match your filters")
 
     # Inject CSS to make all patient cards the same height per row
     st.markdown("""
@@ -246,9 +287,9 @@ if not st.session_state.session_active and not st.session_state.messages:
     # Cap complaint length so cards have uniform text
     COMPLAINT_MAX = 80
 
-    # ── Card grid (3 columns) ────────────────────────────────────────────
-    for row_start in range(0, len(filtered), 3):
-        row_items = filtered[row_start:row_start + 3]
+    # ── Card grid (3 columns × 3 rows = 9 per page) ──────────────────────
+    for row_start in range(0, len(paginated), 3):
+        row_items = paginated[row_start:row_start + 3]
         cols = st.columns(3)
 
         for col, s in zip(cols, row_items):
@@ -267,6 +308,24 @@ if not st.session_state.session_active and not st.session_state.messages:
                     if st.button("Start Assessment", key=f"sel_{s['patient_id']}", use_container_width=True):
                         start_session(s["patient_id"])
                         st.rerun()
+
+    # ── Pagination controls ──────────────────────────────────────────────
+    if total_pages > 1:
+        st.divider()
+        col_prev, col_info, col_next = st.columns([1, 2, 1])
+        with col_prev:
+            if st.button("← Previous", disabled=st.session_state.patient_page == 0, use_container_width=True):
+                st.session_state.patient_page -= 1
+                st.rerun()
+        with col_info:
+            st.markdown(
+                f"<p style='text-align:center; padding-top:0.5em'>Page {st.session_state.patient_page + 1} of {total_pages}</p>",
+                unsafe_allow_html=True,
+            )
+        with col_next:
+            if st.button("Next →", disabled=st.session_state.patient_page >= total_pages - 1, use_container_width=True):
+                st.session_state.patient_page += 1
+                st.rerun()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -299,18 +358,31 @@ else:
 
         st.metric("Turns", st.session_state.turn_count)
 
-        # Assessment Coverage
+        # Assessment Coverage with depth indicators
         st.subheader("Assessment Coverage")
         all_domains = ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"]
-        covered = st.session_state.domains_covered
+
+        # Pull live tracker state for depth info
+        sid = st.session_state.session_id
+        session = session_manager.get_session(sid)
+        tracker_result = session["tracker"].get_result() if session else None
+
+        DEPTH_ICONS = {"Missed": "○", "Surface": "◐", "Explored": "◕", "Deep": "●"}
 
         for domain in all_domains:
-            is_covered = domain in covered
             label = domain.replace("_", " ")
-            st.progress(1.0 if is_covered else 0.0, text=f"{'✓' if is_covered else '○'} {label}")
+            if tracker_result and domain in tracker_result.domains:
+                cov = tracker_result.domains[domain]
+                icon = DEPTH_ICONS.get(cov.depth, "○")
+                pct = cov.depth_score / 100.0
+                st.progress(pct, text=f"{icon} {label} ({cov.question_count} q)")
+            else:
+                st.progress(0.0, text=f"○ {label}")
 
-        coverage_pct = len(covered) / len(all_domains) * 100
-        st.metric("Coverage Score", f"{coverage_pct:.0f}%")
+        # Depth-weighted coverage score from tracker
+        score = tracker_result.coverage_score if tracker_result else 0.0
+        st.metric("Coverage Score", f"{score:.0f}%")
+        st.caption("○ Missed · ◐ Surface · ◕ Explored · ● Deep")
 
         # Revealed vitals
         if st.session_state.vitals_revealed:

@@ -1,0 +1,160 @@
+{
+    "patient_id": "case_098",
+    "name": "Maria Gonzalez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 64,
+    "chief_complaint": "I feel really sick and my stomach hurts a lot.",
+    "onset_description": "It started about 12 hours ago after I felt really thirsty and I couldn't stop drinking water.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "abdominal pain": {
+            "description": "It feels like a tight knot in my belly, and it hurts when I move.",
+            "onset": "Started around the same time as my thirst.",
+            "character": "cramping",
+            "severity": "7",
+            "location": "middle of my stomach",
+            "radiation": "none",
+            "aggravating_factors": [
+                "moving around",
+                "not eating"
+            ],
+            "alleviating_factors": [
+                "sitting still"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "vomiting"
+            ]
+        },
+        "extreme thirst": {
+            "description": "I've been drinking water non-stop but I still feel so dry.",
+            "onset": "Started about 12 hours ago.",
+            "character": "persistent",
+            "severity": "8",
+            "location": "throat and mouth",
+            "radiation": "none",
+            "aggravating_factors": [
+                "not drinking enough water"
+            ],
+            "alleviating_factors": [
+                "drinking water, but it only helps for a little bit"
+            ],
+            "associated_symptoms": [
+                "dry mouth"
+            ]
+        },
+        "frequent urination": {
+            "description": "I keep having to go to the bathroom, it\u2019s so annoying.",
+            "onset": "Began around the same time as my thirst.",
+            "character": "urgent",
+            "severity": "6",
+            "location": "bladder",
+            "radiation": "none",
+            "aggravating_factors": [
+                "drinking more fluids"
+            ],
+            "alleviating_factors": [
+                "none"
+            ],
+            "associated_symptoms": [
+                "feeling tired"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "headache",
+        "shortness of breath",
+        "fever",
+        "diarrhea",
+        "confusion",
+        "dizziness",
+        "swelling in legs",
+        "fatigue",
+        "skin rash"
+    ],
+    "vitals": {
+        "heart_rate": 120,
+        "blood_pressure_systolic": 110,
+        "blood_pressure_diastolic": 70,
+        "respiratory_rate": 24,
+        "spo2": 95,
+        "temperature": 98.6,
+        "pain_scale": 7
+    },
+    "labs": {
+        "blood glucose": "450 mg/dL (elevated)",
+        "elevated ketones": "positive",
+        "anion gap": "20 mEq/L (elevated)",
+        "sodium": "130 mEq/L (low)",
+        "potassium": "5.5 mEq/L (normal)"
+    },
+    "past_medical_history": [
+        "Type 1 Diabetes",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Appendectomy"
+    ],
+    "medications": [
+        "Insulin glargine 20 units daily",
+        "Lisinopril 10 mg daily"
+    ],
+    "allergies": [
+        "No known drug allergies"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "occasionally drinks on weekends",
+        "drugs": "denies any drug use",
+        "occupation": "teacher",
+        "living_situation": "lives with husband and two children",
+        "exercise": "walks occasionally",
+        "diet": "usually follows a low-carb diet but has been eating poorly recently"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "Type 2 Diabetes",
+            "mother": "Hypertension",
+            "sibling": "Thyroid disorder"
+        }
+    },
+    "personality": "Maria is generally upbeat but is feeling anxious and overwhelmed due to her current condition.",
+    "communication_style": "She tends to be more expressive and asks many questions about her condition.",
+    "pain_description_style": "She uses vivid descriptions, stating things like 'it feels like my stomach is tied in knots.'",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated blood glucose",
+            "positive for ketones",
+            "symptoms of polyuria and polydipsia"
+        ],
+        "diagnosis": "Diabetic Ketoacidosis (DKA)",
+        "differential_diagnoses": [
+            "Hyperglycemic Hyperosmolar State",
+            "Acute Pancreatitis",
+            "Renal Failure",
+            "Sepsis",
+            "Cardiac event"
+        ],
+        "recommended_interventions": [
+            "Administer IV fluids",
+            "Monitor blood glucose levels",
+            "Administer insulin as per protocol",
+            "Monitor electrolytes",
+            "Provide patient education on diabetes management"
+        ]
+    }
+}

@@ -1,0 +1,161 @@
+{
+    "patient_id": "case_099",
+    "name": "Carlos Rodriguez",
+    "age": 45,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I feel really shaky and sweaty right now.",
+    "onset_description": "I started feeling shaky about 30 minutes ago after not eating much today.",
+    "severity": "medium",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "shakiness": {
+            "description": "It feels like my hands are quaking.",
+            "onset": "30 minutes ago",
+            "character": "Jittery and unsteady",
+            "severity": "7",
+            "location": "Hands",
+            "radiation": "none",
+            "aggravating_factors": [
+                "Not eating enough",
+                "Stress"
+            ],
+            "alleviating_factors": [
+                "Eating something sweet",
+                "Sitting down"
+            ],
+            "associated_symptoms": [
+                "Sweating",
+                "Nervousness"
+            ]
+        },
+        "sweating": {
+            "description": "I'm sweating a lot, even though I'm not hot.",
+            "onset": "30 minutes ago",
+            "character": "Profuse",
+            "severity": "6",
+            "location": "Arms and forehead",
+            "radiation": "none",
+            "aggravating_factors": [
+                "Stress",
+                "Anxiety"
+            ],
+            "alleviating_factors": [
+                "Cool air",
+                "Drinking water"
+            ],
+            "associated_symptoms": [
+                "Shakiness",
+                "Heart racing"
+            ]
+        },
+        "nervousness": {
+            "description": "I feel really anxious and jittery.",
+            "onset": "30 minutes ago",
+            "character": "Intense",
+            "severity": "5",
+            "location": "Chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "Being in a crowd",
+                "Waiting too long"
+            ],
+            "alleviating_factors": [
+                "Talking to someone",
+                "Taking deep breaths"
+            ],
+            "associated_symptoms": [
+                "Shakiness",
+                "Sweating"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Nausea",
+        "Vomiting",
+        "Dizziness",
+        "Blurred vision",
+        "Confusion",
+        "Headache",
+        "Chest pain",
+        "Shortness of breath",
+        "Fainting",
+        "Palpitations"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 120,
+        "blood_pressure_diastolic": 80,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 2
+    },
+    "labs": {
+        "Blood Glucose": "45 mg/dL, Hypoglycemia"
+    },
+    "past_medical_history": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Appendectomy (2000)",
+        "Gastric Bypass (2015)"
+    ],
+    "medications": [
+        "Metformin 1000 mg twice daily",
+        "Lisinopril 20 mg daily"
+    ],
+    "allergies": [
+        "Penicillin, rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, 1-2 drinks on weekends",
+        "drugs": "Denies",
+        "occupation": "Construction Worker",
+        "living_situation": "Lives with wife and two children",
+        "exercise": "Moderate, I try to walk a few times a week",
+        "diet": "Eating more carbohydrates and fewer vegetables lately"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Type 2 Diabetes",
+            "Mother": "Hypertension"
+        }
+    },
+    "personality": "Carlos is typically calm but becomes anxious when he's not feeling well. He seeks reassurance and is noticeably fidgety during assessments.",
+    "communication_style": "He speaks in a direct manner but struggles to articulate his feelings when anxious, often repeating himself.",
+    "pain_description_style": "Carlos describes discomfort in a straightforward way, focusing more on how it affects his ability to function.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Assess patient's blood glucose level",
+            "Identify signs of hypoglycemia",
+            "Evaluate medication adherence and dietary habits"
+        ],
+        "diagnosis": "Hypoglycemia",
+        "differential_diagnoses": [
+            "Anxiety Attack",
+            "Insulin Overdose",
+            "Adrenal Insufficiency",
+            "Sepsis",
+            "Alcohol Withdrawal"
+        ],
+        "recommended_interventions": [
+            "Administer oral glucose or IV dextrose",
+            "Monitor vital signs",
+            "Provide patient education on managing blood sugar levels"
+        ]
+    }
+}

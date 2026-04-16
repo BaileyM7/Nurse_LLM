@@ -1,0 +1,125 @@
+{
+    "patient_id": "case_079",
+    "name": "Maria Gonzalez",
+    "age": 58,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 160,
+    "height_inches": 64,
+    "chief_complaint": "I feel like I can\u2019t catch my breath, especially when I lie down.",
+    "onset_description": "I started feeling this way about two weeks ago, but it has gotten worse in the last few days.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "It feels like there's a weight on my chest, and I have to breathe really hard.",
+            "onset": "2 weeks ago, worse last 3 days",
+            "character": "stuffy and tight",
+            "severity": "8",
+            "location": "chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "lying flat",
+                "exertion"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "using a fan"
+            ],
+            "associated_symptoms": [
+                "cough",
+                "fatigue",
+                "mild fever"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "coughing up blood",
+        "fever over 101\u00b0F",
+        "swelling in legs",
+        "abdominal pain",
+        "nausea",
+        "vomiting",
+        "headache",
+        "sore throat",
+        "confusion"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 135,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 22,
+        "spo2": 92,
+        "temperature": 99.1,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 9.5 x 10^9/L (normal), Hgb 12.5 g/dL (mild anemia), Hct 37% (normal)",
+        "Chest X-Ray": "Left pleural effusion noted"
+    },
+    "past_medical_history": [
+        "Asthma",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Hysterectomy 5 years ago"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Albuterol inhaler as needed"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "never smoker",
+        "alcohol": "socially, once a week",
+        "drugs": "denies any illicit drug use",
+        "occupation": "teacher",
+        "living_situation": "lives with husband and two daughters",
+        "exercise": "rarely exercises, prefers walking on weekends",
+        "diet": "somewhat healthy, mostly home-cooked meals"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "COPD",
+            "Father": "Heart disease",
+            "Sister": "Asthma"
+        }
+    },
+    "personality": "Maria is cooperative but anxious; she often worries about her health and tends to overthink her symptoms.",
+    "communication_style": "She speaks clearly but frequently asks questions and seeks reassurance from healthcare providers.",
+    "pain_description_style": "When asked about discomfort, Maria explains it as a heavy feeling on her chest that gets worse with certain positions.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Identification of pleural effusion",
+            "Increased respiratory rate and heart rate",
+            "Low oxygen saturation",
+            "Patient's history of asthma"
+        ],
+        "diagnosis": "Pleural Effusion",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Congestive Heart Failure",
+            "Pulmonary Embolism",
+            "Tuberculosis",
+            "Lung Cancer"
+        ],
+        "recommended_interventions": [
+            "Positioning the patient for optimal breathing",
+            "Administering supplemental oxygen",
+            "Monitoring vital signs closely",
+            "Preparing for further imaging or ultrasound"
+        ]
+    }
+}

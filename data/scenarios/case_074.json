@@ -1,0 +1,122 @@
+{
+    "patient_id": "case_074",
+    "name": "Michael Thompson",
+    "age": 34,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 185,
+    "height_inches": 72,
+    "chief_complaint": "I have this sharp pain in my chest that really worries me.",
+    "onset_description": "The pain started suddenly this morning while I was getting ready for work.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest_pain": {
+            "description": "It feels like someone is squeezing my chest tightly.",
+            "onset": "This morning, around 8 AM.",
+            "character": "sharp and stabbing.",
+            "severity": "8",
+            "location": "center of the chest.",
+            "radiation": "it goes to my left shoulder.",
+            "aggravating_factors": [
+                "taking deep breaths",
+                "coughing"
+            ],
+            "alleviating_factors": [
+                "sitting still",
+                "leaning forward"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "fatigue"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "nausea",
+        "vomiting",
+        "fever",
+        "cough",
+        "swelling in legs",
+        "heart palpitations",
+        "dizziness",
+        "lightheadedness",
+        "fainting",
+        "greater than mild anxiety"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 22,
+        "spo2": 95,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "C-reactive protein": "12 mg/L, elevated",
+        "troponin": "0.04 ng/mL, normal",
+        "CBC": "normal with mild leukocytosis",
+        "ESR": "30 mm/hr, elevated"
+    },
+    "past_medical_history": [
+        "anxiety disorder",
+        "previous episodes of chest pain"
+    ],
+    "surgical_history": [
+        "appendectomy in 2010"
+    ],
+    "medications": [
+        "sertraline 50 mg daily",
+        "lisinopril 10 mg daily"
+    ],
+    "allergies": [
+        "penicillin, rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "socially, occasionally",
+        "drugs": "denies use",
+        "occupation": "software developer",
+        "living_situation": "lives alone",
+        "exercise": "sedentary, occasional gym visits",
+        "diet": "mostly fast food, snacks often"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "coronary artery disease",
+            "mother": "diabetes"
+        }
+    },
+    "personality": "Michael is generally calm but becomes anxious when discussing his health. He tends to overthink situations, which sometimes makes him appear more worried than necessary.",
+    "communication_style": "Michael asks many questions and seeks reassurance from healthcare providers, often expressing concern about his symptoms.",
+    "pain_description_style": "He describes his pain in very clear, relatable terms, often comparing it to something he has experienced before, making it easy to understand.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated CRP and ESR, the presence of sharp chest pain, history of anxiety disorder, and family history of heart disease"
+        ],
+        "diagnosis": "Pericarditis",
+        "differential_diagnoses": [
+            "Myocardial infarction",
+            "Pulmonary embolism",
+            "Pneumonia",
+            "Gastroesophageal reflux disease",
+            "Anxiety attack"
+        ],
+        "recommended_interventions": [
+            "Administer NSAIDs as prescribed",
+            "Provide reassurance and education about the condition",
+            "Monitor vital signs closely",
+            "Prepare for possible echocardiogram"
+        ]
+    }
+}

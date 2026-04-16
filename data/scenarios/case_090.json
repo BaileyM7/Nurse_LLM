@@ -1,0 +1,123 @@
+{
+    "patient_id": "case_090",
+    "name": "Carlos Martinez",
+    "age": 34,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I feel like there's a storm in my head, and I can't see well.",
+    "onset_description": "The headache started suddenly at work after I had a stressful meeting.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "Migraine with Aura": {
+            "description": "It's like flashing lights and zigzag lines in front of my eyes, and I have this pounding headache.",
+            "onset": "About 30 minutes before I got here.",
+            "character": "Throbbing and intense.",
+            "severity": "8",
+            "location": "Mainly on the right side of my head.",
+            "radiation": "It sometimes feels like it spreads to my neck.",
+            "aggravating_factors": [
+                "bright lights",
+                "loud noises",
+                "stress"
+            ],
+            "alleviating_factors": [
+                "sitting in a dark room",
+                "taking deep breaths"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "sensitivity to light",
+                "tingling in my fingers"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "fever",
+        "cough",
+        "chest pain",
+        "shortness of breath",
+        "numbness",
+        "loss of consciousness",
+        "blurred vision (other than aura)",
+        "stiff neck",
+        "severe abdominal pain",
+        "rash"
+    ],
+    "vitals": {
+        "heart_rate": 92,
+        "blood_pressure_systolic": 140,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 18,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "Normal with no signs of infection",
+        "Electrolytes": "Normal",
+        "CT Head": "No acute intracranial abnormalities"
+    },
+    "past_medical_history": [
+        "Migraine without aura",
+        "Anxiety disorder"
+    ],
+    "surgical_history": [
+        "Appendectomy in 2010"
+    ],
+    "medications": [
+        "Ibuprofen 400 mg as needed",
+        "Sertraline 50 mg daily"
+    ],
+    "allergies": [
+        "None"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional (2-3 drinks/week)",
+        "drugs": "Denies any drug use",
+        "occupation": "Marketing manager",
+        "living_situation": "Lives with girlfriend",
+        "exercise": "Exercises 2-3 times a week",
+        "diet": "Mostly balanced but skips meals when busy"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Migraine",
+            "Father": "Hypertension"
+        }
+    },
+    "personality": "Carlos is generally optimistic but anxious when dealing with health issues. He tends to fidget and seems restless.",
+    "communication_style": "He speaks clearly but is somewhat reserved, often requires encouragement to share more details.",
+    "pain_description_style": "He describes his pain in vivid terms, using analogies like 'a storm' or 'a hammer hitting my head'.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "History of migraine, presence of aura, associated symptoms like nausea and visual disturbances"
+        ],
+        "diagnosis": "Migraine with Aura",
+        "differential_diagnoses": [
+            "Tension-type headache",
+            "Cluster headache",
+            "Cervicogenic headache",
+            "Intracranial hemorrhage",
+            "Hypoglycemia"
+        ],
+        "recommended_interventions": [
+            "Administer pain relief medication",
+            "Provide a quiet and dim environment",
+            "Administer antiemetics if nausea persists",
+            "Educate on migraine triggers and management"
+        ]
+    }
+}

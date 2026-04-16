@@ -1,0 +1,160 @@
+{
+    "patient_id": "case_088",
+    "name": "Marcus Elliot Johnson",
+    "age": 34,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 185,
+    "height_inches": 70,
+    "chief_complaint": "I have this awful headache and I'm feeling really out of it.",
+    "onset_description": "It started about three days ago, and it just keeps getting worse.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "headache": {
+            "description": "It's like a pounding pain at the front of my head.",
+            "onset": "Three days ago",
+            "character": "Throbbing",
+            "severity": "8",
+            "location": "Forehead",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Bright lights",
+                "Loud noises"
+            ],
+            "alleviating_factors": [
+                "Dark, quiet room",
+                "Over-the-counter pain relief"
+            ],
+            "associated_symptoms": [
+                "Nausea",
+                "Fever",
+                "Stiff neck"
+            ]
+        },
+        "fever": {
+            "description": "I keep feeling hot and sweaty.",
+            "onset": "Yesterday evening",
+            "character": "Persistent",
+            "severity": "7",
+            "location": "N/A",
+            "radiation": "N/A",
+            "aggravating_factors": [
+                "Being active"
+            ],
+            "alleviating_factors": [
+                "Cold compress"
+            ],
+            "associated_symptoms": [
+                "Chills",
+                "Headache"
+            ]
+        },
+        "stiff neck": {
+            "description": "I can't really move my neck without it hurting.",
+            "onset": "Last night",
+            "character": "Constant discomfort",
+            "severity": "6",
+            "location": "N/A",
+            "radiation": "N/A",
+            "aggravating_factors": [
+                "Trying to turn my head"
+            ],
+            "alleviating_factors": [
+                "Resting"
+            ],
+            "associated_symptoms": [
+                "Headache",
+                "Sensitivity to light"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Cough",
+        "Runny nose",
+        "Chest pain",
+        "Shortness of breath",
+        "Rash",
+        "Joint pain",
+        "Numbness",
+        "Vomiting",
+        "Confusion",
+        "Seizures"
+    ],
+    "vitals": {
+        "heart_rate": 108,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 22,
+        "spo2": 98,
+        "temperature": 102.5,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "Elevated WBC 15,000 cells/uL (evidence of infection)",
+        "Lumbar Puncture": "Elevated opening pressure and presence of lymphocytes (suggestive of viral or fungal meningitis)",
+        "CRP": "Increased at 20 mg/L (inflammatory marker)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Seasonal allergies"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 20"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Cetirizine 10 mg as needed"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, drinks on weekends",
+        "drugs": "Denies any drug use",
+        "occupation": "Graphic designer",
+        "living_situation": "Lives alone",
+        "exercise": "Moderate activity, jogs occasionally",
+        "diet": "Generally healthy, but has a sweet tooth"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Diabetes",
+            "Mother": "Asthma"
+        }
+    },
+    "personality": "Generally easy-going but currently anxious due to pain and uncertainty about his condition.",
+    "communication_style": "Talkative but tends to get frustrated when he doesn't understand something.",
+    "pain_description_style": "Uses expressive language to describe feelings, often emphasizing the intensity.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated temperature",
+            "Elevated heart rate",
+            "Stiff neck upon examination",
+            "Positive Kernig's sign"
+        ],
+        "diagnosis": "Meningitis (viral or bacterial pending further testing)",
+        "differential_diagnoses": [
+            "Migraine",
+            "Encephalitis",
+            "Tension headache",
+            "Subarachnoid hemorrhage"
+        ],
+        "recommended_interventions": [
+            "Administer IV fluids",
+            "Start empiric antibiotic therapy if bacterial meningitis is suspected",
+            "Monitor vital signs closely",
+            "Perform neurological assessments frequently"
+        ]
+    }
+}

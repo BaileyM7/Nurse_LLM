@@ -1,0 +1,141 @@
+{
+    "patient_id": "case_086",
+    "name": "James Patel",
+    "age": 67,
+    "sex": "Male",
+    "ethnicity": "South Asian",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I suddenly can't move my right arm and my speech doesn't sound right.",
+    "onset_description": "The symptoms started about 30 minutes ago while I was watching TV.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "right_arm_weakness": {
+            "description": "I feel like my right arm is just heavy and I can't lift it.",
+            "onset": "30 minutes ago",
+            "character": "weakness",
+            "severity": "8",
+            "location": "right arm",
+            "radiation": "null",
+            "aggravating_factors": [
+                "trying to lift it",
+                "moving my shoulder"
+            ],
+            "alleviating_factors": [
+                "resting it on my lap"
+            ],
+            "associated_symptoms": [
+                "slurred speech",
+                "difficulty finding words"
+            ]
+        },
+        "slurred_speech": {
+            "description": "I know what I want to say, but the words just don't come out right.",
+            "onset": "30 minutes ago",
+            "character": "speech difficulty",
+            "severity": "7",
+            "location": "mouth",
+            "radiation": "null",
+            "aggravating_factors": [
+                "trying to talk quickly"
+            ],
+            "alleviating_factors": [
+                "taking a breath"
+            ],
+            "associated_symptoms": [
+                "right arm weakness",
+                "confusion"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "headache",
+        "nausea",
+        "dizziness",
+        "vision changes",
+        "chest pain",
+        "shortness of breath",
+        "loss of consciousness",
+        "seizures",
+        "facial drooping",
+        "fear of dying"
+    ],
+    "vitals": {
+        "heart_rate": 92,
+        "blood_pressure_systolic": 160,
+        "blood_pressure_diastolic": 95,
+        "respiratory_rate": 20,
+        "spo2": 96,
+        "temperature": 98.6,
+        "pain_scale": 0
+    },
+    "labs": {
+        "glucose": "120 mg/dL (normal)",
+        "CBC": "WBC 8.5 (normal), Hgb 14.0 (normal), Hct 42% (normal)",
+        "PT/INR": "11.5 seconds (normal)",
+        "PTT": "30 seconds (normal)"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "type 2 diabetes"
+    ],
+    "surgical_history": [
+        "appendectomy at age 30"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Metformin 500 mg twice daily"
+    ],
+    "allergies": [
+        "None"
+    ],
+    "social_history": {
+        "smoking": "never smoked",
+        "alcohol": "occasionally drinks a glass of wine with dinner",
+        "drugs": "denies any drug use",
+        "occupation": "retired engineer",
+        "living_situation": "lives alone",
+        "exercise": "walks occasionally but not regularly",
+        "diet": "mostly healthy, watches sugar intake"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "myocardial infarction at age 70",
+            "mother": "hypertension"
+        }
+    },
+    "personality": "James is usually calm but appears anxious due to his current condition. He expresses concern about his ability to return to normal.",
+    "communication_style": "He speaks clearly but struggles to articulate thoughts due to speech difficulties, often pausing and frustrated with his inability to express himself.",
+    "pain_description_style": "He rates discomfort as minimal and does not express any pain, focusing more on his inability to move and speak properly.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "right arm weakness",
+            "slurred speech",
+            "hypertension history"
+        ],
+        "diagnosis": "Acute Ischemic Stroke",
+        "differential_diagnoses": [
+            "Transient Ischemic Attack (TIA)",
+            "Hemorrhagic Stroke",
+            "Bell's Palsy",
+            "Seizure"
+        ],
+        "recommended_interventions": [
+            "neuro checks",
+            "administer aspirin if protocol allows",
+            "notify stroke team",
+            "administer IV fluids",
+            "prepare for possible imaging studies"
+        ]
+    }
+}

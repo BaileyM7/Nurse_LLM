@@ -1,0 +1,138 @@
+{
+    "patient_id": "case_058",
+    "name": "Carlos Mendoza",
+    "age": 65,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I felt weakness on my right side and slurred my words.",
+    "onset_description": "The symptoms started suddenly while I was watching TV about an hour ago.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "right_sided_weakness": {
+            "description": "My right arm and leg feel heavy and are difficult to move.",
+            "onset": "1 hour ago",
+            "character": "weakness",
+            "severity": "8",
+            "location": "right side of the body",
+            "radiation": "none",
+            "aggravating_factors": [
+                "trying to use my right side"
+            ],
+            "alleviating_factors": [
+                "resting"
+            ],
+            "associated_symptoms": [
+                "slurred speech",
+                "dizziness"
+            ]
+        },
+        "slurred_speech": {
+            "description": "I can't talk clearly, and it feels like my tongue is thick.",
+            "onset": "1 hour ago",
+            "character": "speech difficulty",
+            "severity": "7",
+            "location": "mouth",
+            "radiation": "none",
+            "aggravating_factors": [
+                "talking fast"
+            ],
+            "alleviating_factors": [
+                "slow down my speech"
+            ],
+            "associated_symptoms": [
+                "confusion"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "shortness of breath",
+        "nausea",
+        "vision problems",
+        "headache",
+        "loss of consciousness",
+        "difficulty swallowing",
+        "pain on the left side",
+        "fever",
+        "seizures"
+    ],
+    "vitals": {
+        "heart_rate": 92,
+        "blood_pressure_systolic": 160,
+        "blood_pressure_diastolic": 95,
+        "respiratory_rate": 22,
+        "spo2": 96,
+        "temperature": 98.6,
+        "pain_scale": 4
+    },
+    "labs": {
+        "CBC": "Normal",
+        "CT_Scan": "Acute ischemic changes in the left hemisphere"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Hyperlipidemia"
+    ],
+    "surgical_history": [
+        "Appendectomy in 1995"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Atorvastatin 40 mg daily"
+    ],
+    "allergies": [
+        "None"
+    ],
+    "social_history": {
+        "smoking": "Former smoker, quit 5 years ago",
+        "alcohol": "Occasional social drinker",
+        "drugs": "Denies",
+        "occupation": "Retired school teacher",
+        "living_situation": "Lives alone",
+        "exercise": "Infrequent, walks occasionally",
+        "diet": "High in salt, low in fruits and vegetables"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Stroke at age 70",
+            "Mother": "Diabetes"
+        }
+    },
+    "personality": "Carlos tends to be anxious, especially about his health, and can be easily frustrated when he struggles to communicate.",
+    "communication_style": "He speaks in short, simple sentences and often asks questions about what is happening to him to understand better.",
+    "pain_description_style": "Describes his pain as a dull ache rather than sharp, indicating a level of discomfort but not severe pain.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Right-sided weakness and slurred speech",
+            "History of hypertension and hyperlipidemia",
+            "Family history of stroke"
+        ],
+        "diagnosis": "Acute Ischemic Stroke",
+        "differential_diagnoses": [
+            "Transient Ischemic Attack (TIA)",
+            "Intracranial Hemorrhage",
+            "Hypoglycemia",
+            "Seizure",
+            "Brain Tumor"
+        ],
+        "recommended_interventions": [
+            "Monitor vital signs closely",
+            "Administer prescribed thrombolytics if applicable",
+            "Establish IV access for medications",
+            "Continuous neurological assessments",
+            "Prepare for potential CT/MRI scans"
+        ]
+    }
+}

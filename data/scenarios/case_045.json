@@ -1,0 +1,126 @@
+{
+    "patient_id": "case_045",
+    "name": "Carlos Mendoza",
+    "age": 45,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 70,
+    "chief_complaint": "It feels like there's a tight band around my chest.",
+    "onset_description": "The pain started suddenly yesterday evening while I was watching TV.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest pain": {
+            "description": "It's sharp, especially when I take a deep breath.",
+            "onset": "Yesterday evening.",
+            "character": "Sharp and stabbing.",
+            "severity": "8",
+            "location": "Center of my chest.",
+            "radiation": "It sometimes goes to my shoulders.",
+            "aggravating_factors": [
+                "Deep breaths",
+                "Coughing",
+                "Lying flat"
+            ],
+            "alleviating_factors": [
+                "Sitting up",
+                "Taking shallow breaths"
+            ],
+            "associated_symptoms": [
+                "Shortness of breath",
+                "Fatigue"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Nausea",
+        "Vomiting",
+        "Fever",
+        "Cough",
+        "Swelling in my legs",
+        "Heart palpitations",
+        "Dizziness",
+        "Headache",
+        "Abdominal pain",
+        "Sore throat"
+    ],
+    "vitals": {
+        "heart_rate": 104,
+        "blood_pressure_systolic": 135,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 22,
+        "spo2": 97,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "Normal",
+        "Troponin": "0.02 ng/mL (negative)",
+        "ESR": "45 mm/hr (elevated)",
+        "CRP": "3.5 mg/dL (elevated)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Asthma"
+    ],
+    "surgical_history": [
+        "Appendectomy in 2000"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Albuterol inhaler as needed"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Occasional, about 1-2 drinks/week",
+        "drugs": "Denies",
+        "occupation": "Construction worker",
+        "living_situation": "Lives with wife and two children",
+        "exercise": "Infrequently exercises, mostly sedentary",
+        "diet": "High in carbohydrates, low in vegetables"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Heart disease",
+            "Mother": "Diabetes"
+        }
+    },
+    "personality": "Carlos is anxious and tends to worry about his health, especially with his family history.",
+    "communication_style": "He shares his concerns openly and seeks reassurance from healthcare providers.",
+    "pain_description_style": "He describes discomfort in vivid terms, often expressing fear of it being something serious.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated ESR and CRP",
+            "High heart rate",
+            "Chest pain exacerbated by deep breaths"
+        ],
+        "diagnosis": "Pericarditis",
+        "differential_diagnoses": [
+            "Myocardial infarction",
+            "Pulmonary embolism",
+            "Aortic dissection",
+            "Pneumonia",
+            "Costochondritis"
+        ],
+        "recommended_interventions": [
+            "Administer NSAIDs for pain relief",
+            "Monitor vital signs closely",
+            "Obtain an ECG",
+            "Educate on symptom management",
+            "Prepare for potential echocardiogram"
+        ]
+    }
+}

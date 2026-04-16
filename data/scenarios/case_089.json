@@ -1,0 +1,121 @@
+{
+    "patient_id": "case_089",
+    "name": "Maria Gonzalez",
+    "age": 34,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 150,
+    "height_inches": 65,
+    "chief_complaint": "I just had this weird shaking episode and I couldn't control my body.",
+    "onset_description": "It started suddenly while I was cooking dinner about 30 minutes ago.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "seizure activity": {
+            "description": "I felt like my whole body was shaking and I couldn't stop it.",
+            "onset": "30 minutes ago",
+            "character": "sudden and uncontrollable",
+            "severity": "8",
+            "location": "whole body",
+            "radiation": "none",
+            "aggravating_factors": [
+                "nothing that I know of"
+            ],
+            "alleviating_factors": [
+                "I was just lying down after it happened"
+            ],
+            "associated_symptoms": [
+                "confusion after the episode",
+                "bitten tongue"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "headache",
+        "vision problems",
+        "nausea",
+        "vomiting",
+        "weakness",
+        "chest pain",
+        "shortness of breath",
+        "fever",
+        "dizziness",
+        "loss of consciousness"
+    ],
+    "vitals": {
+        "heart_rate": 98,
+        "blood_pressure_systolic": 130,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 20,
+        "spo2": 98,
+        "temperature": 98.7,
+        "pain_scale": 0
+    },
+    "labs": {
+        "CBC": "Normal",
+        "Electrolytes": "Normal",
+        "Toxicology Screen": "Negative",
+        "CT Scan": "No acute intracranial findings"
+    },
+    "past_medical_history": [
+        "anxiety disorder"
+    ],
+    "surgical_history": [
+        "appendectomy at age 20"
+    ],
+    "medications": [
+        "Sertraline 50mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "socially, 1-2 drinks on weekends",
+        "drugs": "denies use",
+        "occupation": "teacher",
+        "living_situation": "lives alone",
+        "exercise": "occasional walking",
+        "diet": "balanced diet, watches her sugar intake"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "epilepsy",
+            "father": "hypertension",
+            "brother": "asthma"
+        }
+    },
+    "personality": "Maria is usually calm but today she seems anxious and scared about what just happened.",
+    "communication_style": "She talks rapidly and seems worried, often repeating herself as she seeks reassurance.",
+    "pain_description_style": "Describes her discomfort in a straightforward manner but avoids medical terms.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "New onset of seizure activity",
+            "Family history of epilepsy",
+            "Normal vital signs despite high severity of symptoms"
+        ],
+        "diagnosis": "New Onset Seizure",
+        "differential_diagnoses": [
+            "Epilepsy",
+            "Hypoglycemia",
+            "Alcohol withdrawal seizure",
+            "Intracranial hemorrhage",
+            "Syncope"
+        ],
+        "recommended_interventions": [
+            "Monitor for any subsequent seizures",
+            "Obtain comprehensive metabolic panel",
+            "Administer anti-epileptic medication as ordered",
+            "Provide patient education on seizure precautions"
+        ]
+    }
+}

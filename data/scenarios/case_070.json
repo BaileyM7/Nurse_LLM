@@ -1,0 +1,125 @@
+{
+    "patient_id": "case_070",
+    "name": "Carlos Ramirez",
+    "age": 58,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 68,
+    "chief_complaint": "I feel a tightness in my chest that just won\u2019t go away.",
+    "onset_description": "It started about an hour ago while I was watching TV and hasn\u2019t let up since.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest pain": {
+            "description": "It feels like a heavy weight is pressing down on my chest.",
+            "onset": "1 hour ago",
+            "character": "tight, squeezing",
+            "severity": "8",
+            "location": "center of chest",
+            "radiation": "it spreads to my left arm",
+            "aggravating_factors": [
+                "stress",
+                "exertion",
+                "deep breaths"
+            ],
+            "alleviating_factors": [
+                "rest"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "nausea"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "I don't have a headache",
+        "No dizziness at all",
+        "I'm not sweating excessively",
+        "I haven\u2019t lost consciousness",
+        "No palpitations",
+        "No leg swelling",
+        "I\u2019m not feeling faint",
+        "No cough",
+        "I'm not experiencing heartburn",
+        "No flu-like symptoms"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 160,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 24,
+        "spo2": 95,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "troponin I": "0.15 ng/mL (elevated)",
+        "CBC": "WBC 10,000/\u03bcL (normal), Hemoglobin 14 g/dL (normal), Hematocrit 42% (normal)",
+        "Electrolytes": "Sodium 140 mEq/L, Potassium 4.0 mEq/L (normal)"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "hyperlipidemia"
+    ],
+    "surgical_history": [
+        "appendectomy at age 20"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Atorvastatin 40 mg daily"
+    ],
+    "allergies": [
+        "Penicillin (rash)"
+    ],
+    "social_history": {
+        "smoking": "quit 5 years ago",
+        "alcohol": "drinks socially on weekends",
+        "drugs": "denies any drug use",
+        "occupation": "construction worker",
+        "living_situation": "lives with wife and two children",
+        "exercise": "rarely exercises",
+        "diet": "high in processed foods"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "myocardial infarction at age 60",
+            "mother": "type 2 diabetes"
+        }
+    },
+    "personality": "Carlos tends to be anxious and worried, especially when it comes to his health.",
+    "communication_style": "He speaks in a rushed manner, often interrupts with worries about his health.",
+    "pain_description_style": "He describes the pain as a heavy pressure, and sometimes uses dramatic expressions to convey his discomfort.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated troponin levels",
+            "high blood pressure",
+            "tachycardia",
+            "anxiety about health"
+        ],
+        "diagnosis": "Unstable Angina",
+        "differential_diagnoses": [
+            "Myocardial Infarction",
+            "Aortic Dissection",
+            "Pulmonary Embolism",
+            "Costochondritis",
+            "Gastroesophageal Reflux Disease"
+        ],
+        "recommended_interventions": [
+            "oxygen therapy as needed",
+            "administer nitroglycerin",
+            "monitor vital signs closely",
+            "establish IV access",
+            "prepare for possible cardiac intervention"
+        ]
+    }
+}

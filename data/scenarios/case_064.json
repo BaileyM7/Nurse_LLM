@@ -1,0 +1,160 @@
+{
+    "patient_id": "case_064",
+    "name": "Samuel Thompson",
+    "age": 45,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 70,
+    "chief_complaint": "My leg is really swollen and painful!",
+    "onset_description": "It started two days ago after I bumped my leg against a table.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "Swelling": {
+            "description": "My leg feels really puffy, especially around the ankle.",
+            "onset": "2 days ago",
+            "character": "constant",
+            "severity": "8",
+            "location": "right lower leg",
+            "radiation": "none",
+            "aggravating_factors": [
+                "walking",
+                "touching it"
+            ],
+            "alleviating_factors": [
+                "keeping it elevated"
+            ],
+            "associated_symptoms": [
+                "warmth in the area",
+                "redness"
+            ]
+        },
+        "Pain": {
+            "description": "It hurts a lot when I move it or put weight on it.",
+            "onset": "2 days ago",
+            "character": "throbbing",
+            "severity": "9",
+            "location": "right lower leg",
+            "radiation": "none",
+            "aggravating_factors": [
+                "walking",
+                "standing too long"
+            ],
+            "alleviating_factors": [
+                "resting",
+                "ice"
+            ],
+            "associated_symptoms": [
+                "fever"
+            ]
+        },
+        "Fever": {
+            "description": "I've been feeling hot and chilly at the same time.",
+            "onset": "last night",
+            "character": "intermittent",
+            "severity": "7",
+            "location": "body",
+            "radiation": "none",
+            "aggravating_factors": [
+                "nothing specific"
+            ],
+            "alleviating_factors": [
+                "taking a cool shower"
+            ],
+            "associated_symptoms": [
+                "sweats"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Cough",
+        "Shortness of breath",
+        "Chest pain",
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Headache",
+        "Joint pain",
+        "Skin rash",
+        "Fatigue"
+    ],
+    "vitals": {
+        "heart_rate": 100,
+        "blood_pressure_systolic": 138,
+        "blood_pressure_diastolic": 88,
+        "respiratory_rate": 22,
+        "spo2": 97,
+        "temperature": 101.5,
+        "pain_scale": 9
+    },
+    "labs": {
+        "WBC Count": "15,000 /\u00b5L (elevated)",
+        "CRP": "45 mg/L (elevated)",
+        "Blood Culture": "Pending"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy in 2000"
+    ],
+    "medications": [
+        "Lisinopril 10mg daily",
+        "Metformin 500mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin - rash",
+        "Ibuprofen - stomach upset"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "socially, weekends",
+        "drugs": "denies use",
+        "occupation": "construction worker",
+        "living_situation": "lives with wife and two kids",
+        "exercise": "rarely",
+        "diet": "high in carbs and sugars"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Heart disease",
+            "Mother": "Diabetes"
+        }
+    },
+    "personality": "Samuel is generally stoic but becomes anxious when discussing his health. He appears worried but tries to maintain a brave face.",
+    "communication_style": "He often seeks reassurance and is straightforward but sometimes struggles to articulate his feelings.",
+    "pain_description_style": "He describes his pain in terms of severity and how it impedes his ability to perform daily tasks.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevation of WBC count",
+            "Signs of inflammation in the leg",
+            "High temperature",
+            "Patient's pain management strategies"
+        ],
+        "diagnosis": "Cellulitis with systemic symptoms",
+        "differential_diagnoses": [
+            "Deep vein thrombosis",
+            "Abscess",
+            "Contact dermatitis",
+            "Skin infection",
+            "Lymphedema"
+        ],
+        "recommended_interventions": [
+            "IV Antibiotics",
+            "Pain management",
+            "Assessment of leg for further complications",
+            "Education on leg care"
+        ]
+    }
+}

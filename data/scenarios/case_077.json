@@ -1,0 +1,140 @@
+{
+    "patient_id": "case_077",
+    "name": "Carlos Mendoza",
+    "age": 34,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I can\u2019t catch my breath and my chest feels tight.",
+    "onset_description": "It started this morning after I ran to catch the bus.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "shortness_of_breath": {
+            "description": "It feels like I\u2019m trying to breathe through a straw.",
+            "onset": "this morning",
+            "character": "sudden and persistent",
+            "severity": "8",
+            "location": "chest",
+            "radiation": null,
+            "aggravating_factors": [
+                "cold air",
+                "exercise",
+                "stress"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "using my inhaler"
+            ],
+            "associated_symptoms": [
+                "cough",
+                "wheezing"
+            ]
+        },
+        "cough": {
+            "description": "I have this dry cough that I can\u2019t shake off.",
+            "onset": "started along with the breathing problems",
+            "character": "dry and persistent",
+            "severity": "5",
+            "location": null,
+            "radiation": null,
+            "aggravating_factors": [
+                "talking",
+                "laughing"
+            ],
+            "alleviating_factors": [
+                "drinking water"
+            ],
+            "associated_symptoms": []
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "fever",
+        "sore throat",
+        "nasal congestion",
+        "headache",
+        "nausea",
+        "vomiting",
+        "palpitations",
+        "diarrhea",
+        "fatigue"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 24,
+        "spo2": 88,
+        "temperature": 98.6,
+        "pain_scale": 3
+    },
+    "labs": {
+        "ABG": "pH 7.30, pCO2 50 mmHg, pO2 60 mmHg - indicating respiratory acidosis"
+    },
+    "past_medical_history": [
+        "asthma",
+        "seasonal allergies"
+    ],
+    "surgical_history": [
+        "none"
+    ],
+    "medications": [
+        "Albuterol 90 mcg as needed",
+        "Montelukast 10 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash",
+        "Peanuts - anaphylaxis"
+    ],
+    "social_history": {
+        "smoking": "never smoked",
+        "alcohol": "social drinker",
+        "drugs": "denies use",
+        "occupation": "teacher",
+        "living_situation": "lives with girlfriend",
+        "exercise": "occasionally jogs",
+        "diet": "mostly healthy, but enjoys fast food"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "asthma",
+            "father": "hypertension"
+        }
+    },
+    "personality": "Carlos is an anxious individual who tends to worry a lot. He expresses his concerns openly but also tries to maintain a brave face.",
+    "communication_style": "He speaks in short, quick sentences, often looking for reassurance and confirmation from the healthcare providers.",
+    "pain_description_style": "He describes discomfort in a straightforward manner, using clear language but with a hint of desperation when breathless.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated respiratory rate",
+            "low oxygen saturation",
+            "history of asthma exacerbation"
+        ],
+        "diagnosis": "Asthma Exacerbation",
+        "differential_diagnoses": [
+            "COPD exacerbation",
+            "pneumonia",
+            "anaphylactic reaction",
+            "pulmonary embolism",
+            "anxiety-induced hyperventilation"
+        ],
+        "recommended_interventions": [
+            "administer bronchodilator",
+            "provide oxygen therapy",
+            "position patient upright",
+            "monitor vitals closely",
+            "educate on asthma management"
+        ]
+    }
+}

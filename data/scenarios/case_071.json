@@ -1,0 +1,144 @@
+{
+    "patient_id": "case_071",
+    "name": "Juanita Garcia",
+    "age": 62,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 65,
+    "chief_complaint": "I feel like I can't catch my breath and my legs are swollen.",
+    "onset_description": "I noticed the shortness of breath getting worse over the last few days, especially when I walk.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "It's like a weight on my chest; I can't breathe deeply.",
+            "onset": "Started worsening progressively over the last week.",
+            "character": "Tightness in my chest.",
+            "severity": "8",
+            "location": "Chest",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Walking",
+                "Lying down"
+            ],
+            "alleviating_factors": [
+                "Sitting upright",
+                "Using my inhaler"
+            ],
+            "associated_symptoms": [
+                "Swelling in my legs",
+                "Fatigue"
+            ]
+        },
+        "peripheral edema": {
+            "description": "My feet and ankles look like balloons.",
+            "onset": "Developed over the past few days.",
+            "character": "Swollen and heavy.",
+            "severity": "8",
+            "location": "Legs and feet",
+            "radiation": "None",
+            "aggravating_factors": [
+                "Standing for long periods"
+            ],
+            "alleviating_factors": [
+                "Elevating my legs"
+            ],
+            "associated_symptoms": [
+                "Shortness of breath"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Chest pain",
+        "Coughing up blood",
+        "Fever",
+        "Nausea",
+        "Dizziness",
+        "Confusion",
+        "Rapid weight loss",
+        "Irregular heartbeat",
+        "Headache",
+        "Night sweats"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 95,
+        "respiratory_rate": 24,
+        "spo2": 88,
+        "temperature": 98.6,
+        "pain_scale": 3
+    },
+    "labs": {
+        "BNP": "750 pg/mL, elevated indicating heart failure",
+        "Creatinine": "1.3 mg/dL, borderline kidneys",
+        "Electrolytes": "Sodium 134 mEq/L, Potassium 4.5 mEq/L"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes Mellitus",
+        "Osteoarthritis"
+    ],
+    "surgical_history": [
+        "Appendectomy at age 30"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Metformin 500 mg twice daily",
+        "Aspirin 81 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash",
+        "Shellfish - swelling"
+    ],
+    "social_history": {
+        "smoking": "Former smoker, quit 5 years ago",
+        "alcohol": "Occasional, mainly during family gatherings",
+        "drugs": "Denies illicit drug use",
+        "occupation": "Retired school teacher",
+        "living_situation": "Lives alone in an apartment",
+        "exercise": "Limited due to arthritis",
+        "diet": "High in carbs, trying to eat more vegetables"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Heart disease",
+            "Father": "Diabetes",
+            "Brother": "Hypertension"
+        }
+    },
+    "personality": "Anxious but cooperative, will often express worries about her health to staff.",
+    "communication_style": "Communicates her symptoms clearly but sometimes becomes overwhelmed and anxious when discussing her condition.",
+    "pain_description_style": "Describes discomfort in simple terms, using relatable examples like 'a weight on my chest'.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated BNP indicating heart failure",
+            "Signs of peripheral edema",
+            "Hypertension noted"
+        ],
+        "diagnosis": "Heart Failure Exacerbation",
+        "differential_diagnoses": [
+            "Pulmonary Embolism",
+            "Pneumonia",
+            "Chronic Obstructive Pulmonary Disease (COPD)",
+            "Renal Failure",
+            "Anemia"
+        ],
+        "recommended_interventions": [
+            "Administer diuretics as ordered",
+            "Monitor vital signs closely",
+            "Educate the patient on lifestyle modifications",
+            "Assess oxygen needs and consider supplemental oxygen"
+        ]
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "patient_id": "case_041",
+    "name": "Maria Gonzalez",
+    "age": 57,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 145,
+    "height_inches": 64,
+    "chief_complaint": "I feel a tightness in my chest, like an elephant is sitting on me.",
+    "onset_description": "It started about 30 minutes ago while I was gardening.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "chest pain": {
+            "description": "It feels heavy and tight, like someone is pressing down hard.",
+            "onset": "30 minutes ago",
+            "character": "squeezing",
+            "severity": "8",
+            "location": "center of my chest",
+            "radiation": "it goes up to my left arm and into my jaw",
+            "aggravating_factors": [
+                "walking quickly",
+                "getting stressed"
+            ],
+            "alleviating_factors": [
+                "sitting down",
+                "taking deep breaths"
+            ],
+            "associated_symptoms": [
+                "shortness of breath",
+                "nausea"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "sudden onset of severe pain",
+        "pain only in the right shoulder",
+        "fever or chills",
+        "persistent cough",
+        "blackouts or fainting",
+        "extreme fatigue",
+        "swelling in legs",
+        "palpitations",
+        "headache",
+        "numbness in legs"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 160,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 22,
+        "spo2": 95,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "troponin": "0.5 ng/mL (positive for myocardial injury)",
+        "CBC": "Normal",
+        "BMP": "Normal"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "hyperlipidemia"
+    ],
+    "surgical_history": [
+        "appendectomy in 1995"
+    ],
+    "medications": [
+        "Lisinopril 10 mg daily",
+        "Atorvastatin 20 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - hives"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "socially, occasionally",
+        "drugs": "denies",
+        "occupation": "administrative assistant",
+        "living_situation": "lives with husband",
+        "exercise": "minimal, walks occasionally",
+        "diet": "eats balanced meals but loves sugary snacks"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "myocardial infarction at 62",
+            "mother": "diabetes type 2"
+        }
+    },
+    "personality": "Maria is anxious and worried about her symptoms. She tends to be chatty when nervous but can become quiet and reserved when discussing her health.",
+    "communication_style": "She often asks questions and seeks reassurance, occasionally interrupting with side comments about her experience.",
+    "pain_description_style": "She uses vivid imagery, often describing her pain in terms of pressure or weight.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "elevated blood pressure",
+            "increased heart rate",
+            "positive troponin levels",
+            "chest pain with radiation",
+            "history of hypertension"
+        ],
+        "diagnosis": "Unstable Angina",
+        "differential_diagnoses": [
+            "stable angina",
+            "myocardial infarction",
+            "pulmonary embolism",
+            "aortic dissection",
+            "esophageal spasm"
+        ],
+        "recommended_interventions": [
+            "administer nitroglycerin as ordered",
+            "monitor vital signs closely",
+            "establish IV access",
+            "provide oxygen therapy if needed",
+            "perform an ECG"
+        ]
+    }
+}

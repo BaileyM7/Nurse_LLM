@@ -1,0 +1,159 @@
+{
+    "patient_id": "case_093",
+    "name": "Carlos Rodriguez",
+    "age": 62,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 68,
+    "chief_complaint": "My foot hurts a lot and looks really bad.",
+    "onset_description": "The pain and swelling started about three days ago after I bumped my foot on the furniture.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "foot pain": {
+            "description": "It feels like a burning sensation, and sometimes it throbs.",
+            "onset": "3 days ago",
+            "character": "burning and throbbing",
+            "severity": "8",
+            "location": "left foot, near the big toe",
+            "radiation": "none",
+            "aggravating_factors": [
+                "walking",
+                "putting pressure on it"
+            ],
+            "alleviating_factors": [
+                "keeping it elevated",
+                "ice packs"
+            ],
+            "associated_symptoms": [
+                "swelling",
+                "redness"
+            ]
+        },
+        "swelling": {
+            "description": "The area around my toe is really puffy.",
+            "onset": "2 days ago",
+            "character": "persistent",
+            "severity": "7",
+            "location": "left foot, around the big toe",
+            "radiation": "none",
+            "aggravating_factors": [
+                "standing for too long"
+            ],
+            "alleviating_factors": [
+                "elevating my foot"
+            ],
+            "associated_symptoms": [
+                "pain",
+                "discoloration"
+            ]
+        },
+        "redness": {
+            "description": "The skin is very red and feels warm.",
+            "onset": "2 days ago",
+            "character": "localized",
+            "severity": "6",
+            "location": "left foot, around the toe",
+            "radiation": "none",
+            "aggravating_factors": [
+                "touching it"
+            ],
+            "alleviating_factors": [
+                "cold compress"
+            ],
+            "associated_symptoms": [
+                "swelling",
+                "pain"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "nausea",
+        "vomiting",
+        "chest pain",
+        "fever",
+        "diarrhea",
+        "shortness of breath",
+        "headache",
+        "tingling",
+        "loss of appetite",
+        "sweating"
+    ],
+    "vitals": {
+        "heart_rate": 98,
+        "blood_pressure_systolic": 145,
+        "blood_pressure_diastolic": 80,
+        "respiratory_rate": 18,
+        "spo2": 95,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "WBC": "12.5 x 10^3/\u00b5L (elevated, indicating infection)",
+        "Glucose": "200 mg/dL (elevated, indicating poor management of diabetes)",
+        "ESR": "35 mm/hr (elevated, indicating inflammation)"
+    },
+    "past_medical_history": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Right foot surgery for bunion removal in 2015"
+    ],
+    "medications": [
+        "Metformin 1000 mg bid",
+        "Lisinopril 20 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - hives"
+    ],
+    "social_history": {
+        "smoking": "quit 5 years ago",
+        "alcohol": "occasional, socially",
+        "drugs": "denies any use",
+        "occupation": "retired mechanic",
+        "living_situation": "lives alone",
+        "exercise": "rarely exercises",
+        "diet": "high in carbohydrates, trying to cut down"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "Type 2 Diabetes",
+            "father": "Hypertension"
+        }
+    },
+    "personality": "Carlos is cooperative but anxious about his condition. He expresses concern about how it might affect his independence.",
+    "communication_style": "He tends to speak simply and directly, often asking questions to clarify.",
+    "pain_description_style": "He describes discomfort in a straightforward manner, often using relatable terms like 'throbbing' or 'burning'.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated WBC count indicating infection",
+            "Elevated glucose level reflecting poor diabetes control",
+            "Presence of localized erythema, swelling, and pain related to diabetic foot infection"
+        ],
+        "diagnosis": "Diabetic Foot Infection",
+        "differential_diagnoses": [
+            "Cellulitis",
+            "Gout",
+            "Deep Venous Thrombosis",
+            "Necrotizing Fasciitis",
+            "Osteomyelitis"
+        ],
+        "recommended_interventions": [
+            "Administer IV antibiotics as ordered",
+            "Educate patient on foot care for diabetic patients",
+            "Monitor vital signs and blood glucose levels",
+            "Consult wound care specialists"
+        ]
+    }
+}

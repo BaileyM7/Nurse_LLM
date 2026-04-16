@@ -1,0 +1,143 @@
+{
+    "patient_id": "case_076",
+    "name": "Carlos Mendez",
+    "age": 62,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 68,
+    "chief_complaint": "I can't catch my breath, it's like I'm suffocating.",
+    "onset_description": "Started feeling short of breath a few days ago after cleaning out the garage.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "dyspnea": {
+            "description": "It's hard to breathe, like there's a weight on my chest.",
+            "onset": "3 days ago",
+            "character": "tightness and heavy feeling",
+            "severity": "8",
+            "location": "chest",
+            "radiation": "none",
+            "aggravating_factors": [
+                "exertion",
+                "cold air",
+                "dust"
+            ],
+            "alleviating_factors": [
+                "sitting upright",
+                "using my inhaler"
+            ],
+            "associated_symptoms": [
+                "coughing",
+                "wheezing"
+            ]
+        },
+        "cough": {
+            "description": "I have this cough that won't go away.",
+            "onset": "2 days ago",
+            "character": "dry and persistent",
+            "severity": "6",
+            "location": "throat",
+            "radiation": "none",
+            "aggravating_factors": [
+                "talking",
+                "laughing"
+            ],
+            "alleviating_factors": [
+                "drinking water"
+            ],
+            "associated_symptoms": [
+                "mucus production",
+                "fatigue"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "chest pain",
+        "fever",
+        "headache",
+        "sore throat",
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "dizziness",
+        "leg swelling",
+        "joint pain"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 28,
+        "spo2": 88,
+        "temperature": 98.6,
+        "pain_scale": 3
+    },
+    "labs": {
+        "CBC": "WBC 12,000 cells/uL (mild leukocytosis)",
+        "BMP": "Na 140 mEq/L, K 4.2 mEq/L, Cl 105 mEq/L, CO2 30 mEq/L, Glucose 100 mg/dL",
+        "ABGs": "pH 7.32 (acidic), PaCO2 60 mmHg (elevated), PaO2 55 mmHg (hypoxemia)"
+    },
+    "past_medical_history": [
+        "COPD",
+        "hypertension"
+    ],
+    "surgical_history": [
+        "none"
+    ],
+    "medications": [
+        "Albuterol 90 mcg (2 puffs as needed)",
+        "Lisinopril 10 mg daily"
+    ],
+    "allergies": [
+        "none"
+    ],
+    "social_history": {
+        "smoking": "quit 5 years ago after smoking for 30 years",
+        "alcohol": "socially on weekends",
+        "drugs": "denies",
+        "occupation": "retired mechanic",
+        "living_situation": "lives with wife",
+        "exercise": "minimal, mostly walks around the neighborhood",
+        "diet": "eats a balanced diet but has a preference for salty foods"
+    },
+    "family_history": {
+        "conditions": {
+            "mother": "asthma",
+            "father": "COPD"
+        }
+    },
+    "personality": "Carlos is generally anxious and apprehensive, worried about his health and how it affects his family.",
+    "communication_style": "He talks with urgency, often interrupting to express his concerns and fears about breathing.",
+    "pain_description_style": "He describes his discomfort as a persistent tightness in his chest, often using analogies like 'feeling like a weight is on my chest.'",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "hypoxemia (low SPO2)",
+            "tachycardia",
+            "elevated CO2 levels",
+            "symptoms of COPD exacerbation"
+        ],
+        "diagnosis": "COPD Exacerbation",
+        "differential_diagnoses": [
+            "Pneumonia",
+            "Heart Failure",
+            "Pulmonary Embolism",
+            "Asthma Exacerbation"
+        ],
+        "recommended_interventions": [
+            "administer bronchodilators",
+            "provide oxygen therapy",
+            "assess respiratory effort",
+            "monitor vital signs frequently"
+        ]
+    }
+}

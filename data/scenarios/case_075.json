@@ -1,0 +1,119 @@
+{
+    "patient_id": "case_075",
+    "name": "Maria Gonzalez",
+    "age": 54,
+    "sex": "Female",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 180,
+    "height_inches": 64,
+    "chief_complaint": "I have a terrible pain in my leg that just won't go away.",
+    "onset_description": "The pain started suddenly two days ago while I was sitting at my desk.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "leg pain": {
+            "description": "It feels like a deep, aching pain in my left calf.",
+            "onset": "two days ago",
+            "character": "deep and throbbing",
+            "severity": "8",
+            "location": "left calf",
+            "radiation": "none",
+            "aggravating_factors": [
+                "sitting for long periods",
+                "walking too much"
+            ],
+            "alleviating_factors": [
+                "keeping it elevated",
+                "applying heat"
+            ],
+            "associated_symptoms": [
+                "Swelling in the leg",
+                "warmth in the calf"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "shortness of breath",
+        "chest pain",
+        "nausea",
+        "headaches",
+        "fever",
+        "cough",
+        "palpitations",
+        "dizziness",
+        "rash",
+        "vomiting"
+    ],
+    "vitals": {
+        "heart_rate": 98,
+        "blood_pressure_systolic": 135,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 18,
+        "spo2": 97,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "D-dimer": "450 ng/mL (elevated)",
+        "CBC": "Overall normal with slight leukocytosis"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy in 1992"
+    ],
+    "medications": [
+        "Lisinopril 10mg daily",
+        "Metformin 500mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "never smoked",
+        "alcohol": "rarely drinks",
+        "drugs": "denies any use",
+        "occupation": "Administrative Assistant",
+        "living_situation": "Lives alone",
+        "exercise": "occasionally walks",
+        "diet": "generally healthy but has a sweet tooth"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Heart disease",
+            "Father": "Diabetes"
+        }
+    },
+    "personality": "Maria is anxious about her health, often worrying about what might be wrong, but she tries to stay calm.",
+    "communication_style": "She communicates openly but tends to ask a lot of questions about her symptoms and treatment.",
+    "pain_description_style": "Maria describes her pain in detail, expressing her frustrations about its impact on her daily life.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated D-dimer",
+            "Swelling and warmth in the calf",
+            "Recent prolonged immobility"
+        ],
+        "diagnosis": "Deep Vein Thrombosis (DVT)",
+        "differential_diagnoses": [
+            "Muscle strain",
+            "Superficial thrombophlebitis",
+            "Peripheral artery disease"
+        ],
+        "recommended_interventions": [
+            "Assess for signs of pulmonary embolism",
+            "Administer anticoagulants as prescribed",
+            "Encourage leg elevation and movement"
+        ]
+    }
+}

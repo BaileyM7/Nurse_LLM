@@ -1,0 +1,124 @@
+{
+    "patient_id": "case_096",
+    "name": "Michael Thompson",
+    "age": 54,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 215,
+    "height_inches": 72,
+    "chief_complaint": "My lower back feels like it's on fire and I can't move properly.",
+    "onset_description": "It started suddenly two days ago while I was lifting a heavy box at work.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "Acute Low Back Pain": {
+            "description": "It's a sharp pain that gets worse when I try to bend or stand up straight.",
+            "onset": "2 days ago",
+            "character": "sharp and burning",
+            "severity": "8",
+            "location": "lower back",
+            "radiation": "into my left leg",
+            "aggravating_factors": [
+                "lifting heavy objects",
+                "sitting for long periods"
+            ],
+            "alleviating_factors": [
+                "lying flat on my back",
+                "taking pain medication"
+            ],
+            "associated_symptoms": [
+                "muscle spasms",
+                "stiffness in my back"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "numbness in the legs",
+        "fever",
+        "weakness in the legs",
+        "unexplained weight loss",
+        "bloating",
+        "increased urination",
+        "pain during urination",
+        "changes in bowel habits",
+        "history of cancer",
+        "trauma to the back"
+    ],
+    "vitals": {
+        "heart_rate": 88,
+        "blood_pressure_systolic": 135,
+        "blood_pressure_diastolic": 85,
+        "respiratory_rate": 18,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "CBC": "WBC 8.5 x 10^9/L, normal",
+        "ESR": "5 mm/hr, normal",
+        "CRP": "<1.0 mg/L, normal"
+    },
+    "past_medical_history": [
+        "hypertension",
+        "hyperlipidemia"
+    ],
+    "surgical_history": [
+        "appendectomy in 2003"
+    ],
+    "medications": [
+        "Lisinopril 20 mg daily",
+        "Atorvastatin 10 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "occasionally on weekends",
+        "drugs": "denies any drug use",
+        "occupation": "warehouse manager",
+        "living_situation": "lives with wife and two children",
+        "exercise": "rarely exercises",
+        "diet": "mostly unhealthy fast food"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "diabetes",
+            "Mother": "osteoporosis"
+        }
+    },
+    "personality": "Michael is anxious and worried about his condition; he often seeks reassurance from healthcare providers.",
+    "communication_style": "He tends to ask a lot of questions and wants to understand every detail of his health.",
+    "pain_description_style": "He describes his pain in vivid terms, emphasizing how it affects his daily activities.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "sharp, severe pain in the lower back with radiation",
+            "absence of red flag symptoms such as numbness or loss of bladder control",
+            "history of heavy lifting as an onset factor"
+        ],
+        "diagnosis": "Acute Low Back Pain with Red Flags",
+        "differential_diagnoses": [
+            "Herniated disc",
+            "Spinal stenosis",
+            "Kidney stones",
+            "Muscle strain",
+            "Osteoarthritis"
+        ],
+        "recommended_interventions": [
+            "administer analgesics as prescribed",
+            "educate on proper lifting techniques",
+            "apply heat therapy",
+            "schedule follow-up appointment",
+            "encourage physical therapy referral"
+        ]
+    }
+}
