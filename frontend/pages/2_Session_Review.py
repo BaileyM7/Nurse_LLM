@@ -36,13 +36,19 @@ if not feedback:
     st.stop()
 
 # ── Overall Score ────────────────────────────────────────────────────────────
+duration = st.session_state.get("session_duration", 0)
+minutes, seconds = divmod(duration, 60)
+duration_str = f"{minutes:02d}:{seconds:02d}"
+
 col1, col2, col3 = st.columns(3)
 with col1:
     st.metric("Overall Score", f"{feedback['overall_score']:.0f}/100")
 with col2:
     st.metric("Domains Covered", f"{len(feedback['domains_covered'])}/7")
 with col3:
-    st.metric("Diagnosis", feedback["diagnosis"])
+    st.metric("Time Taken", duration_str)
+
+st.markdown(f"**Diagnosis:** {feedback['diagnosis']}")
 
 st.divider()
 

@@ -57,6 +57,8 @@ if "patient_page" not in st.session_state:
     st.session_state.patient_page = 0
 if "last_filter_key" not in st.session_state:
     st.session_state.last_filter_key = ""
+if "session_duration" not in st.session_state:
+    st.session_state.session_duration = 0
 
 
 # ── Helper Functions ─────────────────────────────────────────────────────────
@@ -189,6 +191,10 @@ def end_session():
         # Persist to SQLite
         session_manager.end_session(sid, score=feedback.overall_score)
         session_manager.save_feedback(sid, feedback)
+
+        # Save duration so Session Review can display it
+        if st.session_state.start_time:
+            st.session_state.session_duration = int(time.time() - st.session_state.start_time)
 
         st.session_state.session_active = False
     except Exception as e:
@@ -345,44 +351,12 @@ elif not st.session_state.session_active and st.session_state.messages:
 # MODE 3: Active chat session (sidebar + chat)
 # ─────────────────────────────────────────────────────────────────────────────
 else:
-    # ── Sidebar: session info + coverage tracker ─────────────────────────
+    # ── Sidebar: session info only (no coverage hints during active session) ──
     with st.sidebar:
         st.header(f"Patient: {st.session_state.patient_name}")
         st.caption(f"Complaint: {st.session_state.chief_complaint}")
 
-        # Timer
-        if st.session_state.start_time:
-            elapsed = int(time.time() - st.session_state.start_time)
-            minutes, seconds = divmod(elapsed, 60)
-            st.metric("Time Elapsed", f"{minutes:02d}:{seconds:02d}")
-
         st.metric("Turns", st.session_state.turn_count)
-
-        # Assessment Coverage with depth indicators
-        st.subheader("Assessment Coverage")
-        all_domains = ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"]
-
-        # Pull live tracker state for depth info
-        sid = st.session_state.session_id
-        session = session_manager.get_session(sid)
-        tracker_result = session["tracker"].get_result() if session else None
-
-        DEPTH_ICONS = {"Missed": "○", "Surface": "◐", "Explored": "◕", "Deep": "●"}
-
-        for domain in all_domains:
-            label = domain.replace("_", " ")
-            if tracker_result and domain in tracker_result.domains:
-                cov = tracker_result.domains[domain]
-                icon = DEPTH_ICONS.get(cov.depth, "○")
-                pct = cov.depth_score / 100.0
-                st.progress(pct, text=f"{icon} {label} ({cov.question_count} q)")
-            else:
-                st.progress(0.0, text=f"○ {label}")
-
-        # Depth-weighted coverage score from tracker
-        score = tracker_result.coverage_score if tracker_result else 0.0
-        st.metric("Coverage Score", f"{score:.0f}%")
-        st.caption("○ Missed · ◐ Surface · ◕ Explored · ● Deep")
 
         # Revealed vitals
         if st.session_state.vitals_revealed:
@@ -414,17 +388,15 @@ else:
             with st.chat_message("assistant", avatar="🏥"):
                 st.write(msg["content"])
 
-    # Chat input
+    # Chat input at page level so it stays pinned to the bottom
     if prompt := st.chat_input("Ask your patient a question..."):
-        # Show student message immediately
         with st.chat_message("user"):
             st.write(prompt)
 
-        # Get and show patient response
         with st.chat_message("assistant", avatar="🏥"):
             with st.spinner("Patient is responding..."):
                 send_message(prompt)
                 if st.session_state.messages:
                     st.write(st.session_state.messages[-1]["content"])
 
-        st.rerun()  # Refresh sidebar coverage
+        st.rerun()  # Refresh sidebar turn count / vitals
