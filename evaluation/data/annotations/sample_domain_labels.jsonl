@@ -1,0 +1,8 @@
+{"question": "Can you tell me when the chest pain started?", "gold_domain": "HPI"}
+{"question": "Any shortness of breath lately?", "gold_domain": "ROS"}
+{"question": "Have you been diagnosed with diabetes before?", "gold_domain": "PMH"}
+{"question": "What medications are you currently taking?", "gold_domain": "Medications"}
+{"question": "Any known drug allergies?", "gold_domain": "Allergies"}
+{"question": "Do you smoke?", "gold_domain": "Social_History"}
+{"question": "Did your father have any heart problems?", "gold_domain": "Family_History"}
+{"question": "How are you feeling overall?", "gold_domain": "conversational"}

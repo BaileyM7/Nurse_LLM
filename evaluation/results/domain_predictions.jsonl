@@ -1,0 +1,8 @@
+{"question": "Can you tell me when the chest pain started?", "gold": "HPI", "pred": "HPI", "correct": true}
+{"question": "Any shortness of breath lately?", "gold": "ROS", "pred": "HPI", "correct": false}
+{"question": "Have you been diagnosed with diabetes before?", "gold": "PMH", "pred": "PMH", "correct": true}
+{"question": "What medications are you currently taking?", "gold": "Medications", "pred": "Medications", "correct": true}
+{"question": "Any known drug allergies?", "gold": "Allergies", "pred": "Allergies", "correct": true}
+{"question": "Do you smoke?", "gold": "Social_History", "pred": "Social_History", "correct": true}
+{"question": "Did your father have any heart problems?", "gold": "Family_History", "pred": "Family_History", "correct": true}
+{"question": "How are you feeling overall?", "gold": "conversational", "pred": "conversational", "correct": true}

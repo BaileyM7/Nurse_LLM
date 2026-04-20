@@ -1,0 +1,126 @@
+"""
+Run the standard interview script through all three systems (rule_based,
+few_shot, full_pipeline) on every scenario, and write a JSONL of patient
+turns that `metrics/fidelity.py` can consume.
+
+Each line of the output JSONL:
+  {"system": "...", "scenario_id": "case_001",
+   "scenario_path": "data/scenarios/case_001.json",
+   "turn_index": 3, "student": "...", "patient": "..."}
+
+Usage:
+    python -m evaluation.runners.run_all_systems
+    python -m evaluation.runners.run_all_systems --limit 5   # first 5 scenarios only
+    python -m evaluation.runners.run_all_systems --systems rule_based,full_pipeline
+
+Costs: each scenario × each LLM-based system = ~20 API calls. Full run with
+39 scenarios × 2 LLM systems ≈ 1,560 gpt-4o-mini calls. Use --limit for a
+sanity check before running everything.
+"""
+
+from __future__ import annotations
+
+import argparse
+import asyncio
+import json
+from pathlib import Path
+
+from app.models.scenario import PatientScenario
+
+from evaluation.baselines.rule_based_patient import RuleBasedPatient
+from evaluation.baselines.few_shot_patient import FewShotPatient
+from evaluation.baselines.full_pipeline import FullPipelinePatient
+
+
+SYSTEM_BUILDERS = {
+    "rule_based": lambda sc: RuleBasedPatient(sc),
+    "few_shot": lambda sc: FewShotPatient(sc),
+    "full_pipeline": lambda sc: FullPipelinePatient(sc),
+}
+
+
+def load_scenario(path: Path) -> PatientScenario:
+    with open(path) as f:
+        return PatientScenario(**json.load(f))
+
+
+def load_interview_script(path: Path) -> list[dict]:
+    with open(path) as f:
+        return json.load(f)["questions"]
+
+
+async def _respond(system, message: str) -> str:
+    """Unified interface: rule_based returns str directly, others are async."""
+    if isinstance(system, RuleBasedPatient):
+        return system.respond(message)
+    return await system.respond(message)
+
+
+async def run_scenario(scenario_path: Path, system_name: str,
+                       questions: list[dict]) -> list[dict]:
+    scenario = load_scenario(scenario_path)
+    system = SYSTEM_BUILDERS[system_name](scenario)
+    records = []
+    try:
+        for i, qobj in enumerate(questions):
+            reply = await _respond(system, qobj["q"])
+            records.append({
+                "system": system_name,
+                "scenario_id": scenario.patient_id,
+                "scenario_path": str(scenario_path),
+                "turn_index": i,
+                "student": qobj["q"],
+                "gold_domain": qobj.get("domain"),
+                "patient": reply,
+            })
+    finally:
+        if hasattr(system, "close"):
+            system.close()
+    return records
+
+
+async def main_async(args) -> None:
+    scenarios_dir = Path(args.scenarios_dir)
+    scenario_paths = sorted(scenarios_dir.glob("case_*.json"))
+    if args.limit:
+        scenario_paths = scenario_paths[: args.limit]
+
+    systems = [s.strip() for s in args.systems.split(",") if s.strip()]
+    for s in systems:
+        if s not in SYSTEM_BUILDERS:
+            raise SystemExit(f"Unknown system: {s}. Choices: {list(SYSTEM_BUILDERS)}")
+
+    questions = load_interview_script(Path(args.script))
+    out_path = Path(args.out)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"Running {len(systems)} systems × {len(scenario_paths)} scenarios "
+          f"× {len(questions)} questions")
+    print(f"Output: {out_path}")
+
+    with open(out_path, "w") as f:
+        for sp in scenario_paths:
+            for system_name in systems:
+                print(f"  [{system_name}] {sp.name}...", flush=True)
+                records = await run_scenario(sp, system_name, questions)
+                for r in records:
+                    f.write(json.dumps(r) + "\n")
+
+    print(f"\nDone. {out_path} written.")
+    print("Next: python -m evaluation.metrics.fidelity", out_path)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--scenarios-dir", default="data/scenarios")
+    parser.add_argument("--script", default="evaluation/data/interview_script.json")
+    parser.add_argument("--systems", default="rule_based,few_shot,full_pipeline")
+    parser.add_argument("--limit", type=int, default=None,
+                        help="Only run first N scenarios (for quick sanity checks)")
+    parser.add_argument("--out", default="evaluation/results/transcripts.jsonl")
+    args = parser.parse_args()
+    asyncio.run(main_async(args))
+
+
+if __name__ == "__main__":
+    main()

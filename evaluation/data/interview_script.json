@@ -1,0 +1,25 @@
+{
+  "description": "Standard nursing assessment interview. Same script run through every system × every scenario so fidelity comparisons are apples-to-apples. Each question is tagged with its gold assessment domain — this doubles as part of the domain-classifier evaluation set.",
+  "questions": [
+    {"q": "Hi, what brings you in today?", "domain": "HPI"},
+    {"q": "When did your symptoms start?", "domain": "HPI"},
+    {"q": "Can you describe the pain or discomfort for me?", "domain": "HPI"},
+    {"q": "On a scale of 1 to 10, how bad is it?", "domain": "HPI"},
+    {"q": "Does anything make it better or worse?", "domain": "HPI"},
+    {"q": "Have you had any shortness of breath?", "domain": "ROS"},
+    {"q": "Any nausea or vomiting?", "domain": "ROS"},
+    {"q": "Any fever or chills?", "domain": "ROS"},
+    {"q": "Any headache or vision changes?", "domain": "ROS"},
+    {"q": "Do you have any chronic medical conditions?", "domain": "PMH"},
+    {"q": "Have you had any surgeries?", "domain": "PMH"},
+    {"q": "What medications do you take?", "domain": "Medications"},
+    {"q": "Do you have any drug or food allergies?", "domain": "Allergies"},
+    {"q": "Do you smoke or use tobacco?", "domain": "Social_History"},
+    {"q": "Do you drink alcohol?", "domain": "Social_History"},
+    {"q": "What do you do for work?", "domain": "Social_History"},
+    {"q": "Are there any medical conditions that run in your family?", "domain": "Family_History"},
+    {"q": "Let me check your blood pressure and heart rate.", "domain": "HPI"},
+    {"q": "I'd like to check your oxygen saturation.", "domain": "HPI"},
+    {"q": "Thank you, that's very helpful.", "domain": "conversational"}
+  ]
+}

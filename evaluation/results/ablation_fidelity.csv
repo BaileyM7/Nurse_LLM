@@ -1,0 +1,5 @@
+system,total_turns,faithful_rate,character_break_rate,hallucination_rate,target_met_90pct
+baseline_full,20,0.9,0.0,0.1,True
+no_memory,20,0.8,0.0,0.2,False
+temp_0,20,0.8,0.0,0.2,False
+minimal_prompt,20,0.95,0.0,0.05,True

@@ -1,0 +1,16 @@
+system,scenario_id,failure_rate,turns
+rule_based,case_001,0.0,20
+rule_based,case_002,0.0,20
+rule_based,case_003,0.0,20
+rule_based,case_004,0.0,20
+rule_based,case_005,0.0,20
+few_shot,case_001,0.05,20
+few_shot,case_002,0.0,20
+few_shot,case_003,0.0,20
+few_shot,case_004,0.0,20
+few_shot,case_005,0.0,20
+full_pipeline,case_002,0.05,20
+full_pipeline,case_001,0.0,20
+full_pipeline,case_003,0.0,20
+full_pipeline,case_004,0.0,20
+full_pipeline,case_005,0.0,20

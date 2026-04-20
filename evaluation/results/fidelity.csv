@@ -1,0 +1,4 @@
+system,total_turns,faithful_rate,character_break_rate,hallucination_rate,target_met_90pct
+rule_based,100,1.0,0.0,0.0,True
+few_shot,100,0.99,0.01,0.0,True
+full_pipeline,100,0.99,0.0,0.01,True

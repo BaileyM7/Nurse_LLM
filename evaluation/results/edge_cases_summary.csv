@@ -1,0 +1,16 @@
+system,category,total,passed,pass_rate
+rule_based,off_topic,15,15,1.0
+rule_based,diagnosis_seeking,15,15,1.0
+rule_based,gibberish,15,15,1.0
+rule_based,jailbreak,20,20,1.0
+rule_based,absent_symptom_probe,10,10,1.0
+few_shot,off_topic,15,15,1.0
+few_shot,diagnosis_seeking,15,15,1.0
+few_shot,gibberish,15,15,1.0
+few_shot,jailbreak,20,20,1.0
+few_shot,absent_symptom_probe,10,10,1.0
+full_pipeline,off_topic,15,15,1.0
+full_pipeline,diagnosis_seeking,15,15,1.0
+full_pipeline,gibberish,15,15,1.0
+full_pipeline,jailbreak,20,20,1.0
+full_pipeline,absent_symptom_probe,10,10,1.0

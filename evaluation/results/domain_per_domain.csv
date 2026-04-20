@@ -1,0 +1,9 @@
+domain,precision,recall,f1,support
+Allergies,1.0,1.0,1.0,1
+Family_History,1.0,1.0,1.0,1
+HPI,0.5,1.0,0.667,1
+Medications,1.0,1.0,1.0,1
+PMH,1.0,1.0,1.0,1
+ROS,0.0,0.0,0.0,1
+Social_History,1.0,1.0,1.0,1
+conversational,1.0,1.0,1.0,1

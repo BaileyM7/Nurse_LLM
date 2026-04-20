@@ -1,0 +1,9 @@
+,Allergies,Family_History,HPI,Medications,PMH,ROS,Social_History,conversational
+Allergies,1,0,0,0,0,0,0,0
+Family_History,0,1,0,0,0,0,0,0
+HPI,0,0,1,0,0,0,0,0
+Medications,0,0,0,1,0,0,0,0
+PMH,0,0,0,0,1,0,0,0
+ROS,0,0,1,0,0,0,0,0
+Social_History,0,0,0,0,0,0,1,0
+conversational,0,0,0,0,0,0,0,1
