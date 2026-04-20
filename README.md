@@ -64,7 +64,7 @@ The API will be available at `http://localhost:8000`. You can view the interacti
 **Terminal 2 — Start the frontend:**
 
 ```bash
-python -m streamlit run frontend/app.py
+python -m streamlit run frontend/Home.py
 ```
 
 Streamlit will open in your browser at `http://localhost:8501`.

@@ -5,10 +5,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import streamlit as st
-
+from frontend.theme import inject_theme
 from app.services.session_manager import session_manager
 
-st.set_page_config(page_title="Session History", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Session History", page_icon="🏥", layout="wide")
+inject_theme()
+
 st.title("Session History")
 
 # Fetch all sessions directly from the service

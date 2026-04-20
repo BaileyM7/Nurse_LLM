@@ -5,11 +5,15 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import streamlit as st
-
+from frontend.theme import inject_theme
 from app.services.session_manager import session_manager
 
-st.set_page_config(page_title="Session Review", page_icon="📋", layout="wide")
+st.set_page_config(page_title="Session Review", page_icon="🏥", layout="wide")
+inject_theme()
+
+st.markdown('<div class="case-eyebrow">Post-session feedback</div>', unsafe_allow_html=True)
 st.title("Session Review")
+st.caption("Review your coverage, strengths, missed findings, and follow-up considerations.")
 
 session_id = st.session_state.get("session_id")
 
@@ -21,9 +25,9 @@ if st.session_state.get("session_active", False):
     st.warning("Your session is still active. End it in the Patient Chat page first.")
     st.stop()
 
-# Get feedback — check in-memory first, then SQLite
 feedback = None
 session = session_manager.get_session(session_id)
+
 if session and session.get("feedback"):
     feedback = session["feedback"].model_dump()
 else:
@@ -35,7 +39,6 @@ if not feedback:
     st.error("Could not load feedback for this session.")
     st.stop()
 
-# ── Overall Score ────────────────────────────────────────────────────────────
 duration = st.session_state.get("session_duration", 0)
 minutes, seconds = divmod(duration, 60)
 duration_str = f"{minutes:02d}:{seconds:02d}"
@@ -48,76 +51,140 @@ with col2:
 with col3:
     st.metric("Time Taken", duration_str)
 
-st.markdown(f"**Diagnosis:** {feedback['diagnosis']}")
+st.markdown(
+    f"""
+    <div class="diagnosis-callout">
+        <span class="diagnosis-label">Primary diagnosis</span>
+        <span class="diagnosis-text">{feedback['diagnosis']}</span>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 st.divider()
 
-# ── Summary ──────────────────────────────────────────────────────────────────
+# Summary
 if feedback.get("summary"):
-    st.subheader("Summary")
-    st.write(feedback["summary"])
+    st.markdown('<div class="section-kicker">Performance overview</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Summary</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="feature-panel">{feedback["summary"]}</div>', unsafe_allow_html=True)
+    st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
 
-# ── Domain Coverage ──────────────────────────────────────────────────────────
-st.subheader("Assessment Coverage")
+# Coverage
+st.markdown('<div class="section-kicker">Assessment breadth</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-title">Assessment Coverage</div>', unsafe_allow_html=True)
+
 col_covered, col_missed = st.columns(2)
 
 with col_covered:
-    st.markdown("**Domains Covered**")
-    for domain in feedback["domains_covered"]:
-        st.markdown(f"- ✅ {domain.replace('_', ' ')}")
+    with st.container(border=True):
+        st.markdown("**Domains Covered**")
+        if feedback.get("domains_covered"):
+            for domain in feedback["domains_covered"]:
+                pretty = domain.replace("_", " ").title()
+                st.markdown(
+                    f"<span style='color:#4E5A47; font-weight:700;'>Covered</span> — {pretty}",
+                    unsafe_allow_html=True,
+                )
+        else:
+            st.caption("No domains were covered.")
 
 with col_missed:
-    st.markdown("**Domains Missed**")
-    for domain in feedback["domains_missed"]:
-        st.markdown(f"- ❌ {domain.replace('_', ' ')}")
+    with st.container(border=True):
+        st.markdown("**Domains Missed**")
+        if feedback.get("domains_missed"):
+            for domain in feedback["domains_missed"]:
+                pretty = domain.replace("_", " ").title()
+                st.markdown(
+                    f"<span style='color:#A86248; font-weight:700;'>Missed</span> — {pretty}",
+                    unsafe_allow_html=True,
+                )
+        else:
+            st.caption("No domains missed.")
 
-st.divider()
+st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
 
-# ── Strengths & Improvements ────────────────────────────────────────────────
+# Strengths / improvement
+st.markdown('<div class="section-kicker">Coaching notes</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-title">Strengths and Improvements</div>', unsafe_allow_html=True)
+
 col_str, col_imp = st.columns(2)
 
 with col_str:
-    st.subheader("Strengths")
-    for item in feedback.get("strengths", []):
-        st.markdown(f"- 💪 {item}")
+    with st.container(border=True):
+        st.markdown("**Strengths**")
+        if feedback.get("strengths"):
+            for item in feedback["strengths"]:
+                st.markdown(f"- {item}")
+        else:
+            st.caption("No strengths listed.")
 
 with col_imp:
-    st.subheader("Areas for Improvement")
-    for item in feedback.get("improvements", []):
-        st.markdown(f"- 📝 {item}")
+    with st.container(border=True):
+        st.markdown("**Areas for Improvement**")
+        if feedback.get("improvements"):
+            for item in feedback["improvements"]:
+                st.markdown(f"- {item}")
+        else:
+            st.caption("No improvement notes listed.")
 
-st.divider()
+st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
 
-# ── Critical Findings ───────────────────────────────────────────────────────
-st.subheader("Critical Findings")
+# Critical findings
+st.markdown('<div class="section-kicker">Clinical misses</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-title">Critical Findings</div>', unsafe_allow_html=True)
+
 col_caught, col_missed_findings = st.columns(2)
 
 with col_caught:
-    st.markdown("**Caught**")
-    for f in feedback.get("critical_findings_caught", []):
-        st.markdown(f"- ✅ {f}")
-    if not feedback.get("critical_findings_caught"):
-        st.caption("None identified")
+    with st.container(border=True):
+        st.markdown("**Caught**")
+        if feedback.get("critical_findings_caught"):
+            for finding in feedback["critical_findings_caught"]:
+                st.markdown(
+                    f"<span style='color:#4E5A47; font-weight:700;'>Identified</span> — {finding}",
+                    unsafe_allow_html=True,
+                )
+        else:
+            st.caption("None identified.")
 
 with col_missed_findings:
-    st.markdown("**Missed**")
-    for f in feedback.get("critical_findings_missed", []):
-        st.markdown(f"- ⚠️ {f}")
-    if not feedback.get("critical_findings_missed"):
-        st.caption("None missed - great job!")
+    with st.container(border=True):
+        st.markdown("**Missed**")
+        if feedback.get("critical_findings_missed"):
+            for finding in feedback["critical_findings_missed"]:
+                st.markdown(
+                    f"<span style='color:#A86248; font-weight:700;'>Missed</span> — {finding}",
+                    unsafe_allow_html=True,
+                )
+        else:
+            st.caption("None missed — great job.")
 
-st.divider()
+st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
 
-# ── Turn Highlights ──────────────────────────────────────────────────────────
+# Notable moments
 if feedback.get("turn_highlights"):
-    st.subheader("Notable Moments")
+    st.markdown('<div class="section-kicker">Conversation review</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Notable Moments</div>', unsafe_allow_html=True)
+
     for highlight in feedback["turn_highlights"]:
-        with st.expander(f"Turn {highlight.get('turn', '?')}: {highlight.get('student_said', '')[:60]}..."):
-            st.markdown(f"**You said:** {highlight.get('student_said', '')}")
+        turn_num = highlight.get("turn", "?")
+        student_said = highlight.get("student_said", "")
+        preview = student_said[:60] + ("..." if len(student_said) > 60 else "")
+
+        with st.expander(f"Turn {turn_num}: {preview}"):
+            st.markdown(f"**You said:** {student_said}")
             st.markdown(f"**Commentary:** {highlight.get('commentary', '')}")
 
-# ── Differential Diagnoses ──────────────────────────────────────────────────
+    st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
+
+# Differentials
 if feedback.get("differential_diagnoses"):
-    st.subheader("Differential Diagnoses to Consider")
-    for dx in feedback["differential_diagnoses"]:
-        st.markdown(f"- {dx}")
+    st.markdown('<div class="section-kicker">Clinical reasoning</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Differential Diagnoses to Consider</div>', unsafe_allow_html=True)
+
+    items = "".join(f"<li>{dx}</li>" for dx in feedback["differential_diagnoses"])
+    st.markdown(
+        f'<div class="feature-panel"><ul style="margin:0; padding-left:1.3rem;">{items}</ul></div>',
+        unsafe_allow_html=True,
+    )

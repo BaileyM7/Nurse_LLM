@@ -8,19 +8,23 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import streamlit as st
 
+from frontend.theme import inject_theme
+
+st.set_page_config(page_title="Patient Chat", page_icon="🏥", layout="wide")
+inject_theme()
+
 
 def run_async(coro):
     """Run an async coroutine safely, even if an event loop is already running."""
     try:
         asyncio.get_running_loop()
-        # Loop already running (Streamlit) — run in a new thread with its own loop
         import concurrent.futures
         with concurrent.futures.ThreadPoolExecutor() as pool:
             future = pool.submit(lambda: asyncio.run(coro))
             return future.result(timeout=60)
     except RuntimeError:
-        # No loop running — safe to use asyncio.run directly
         return asyncio.run(coro)
+
 
 from app.config import settings
 from app.models.session import ChatMessage, MessageRole
@@ -30,9 +34,8 @@ from app.services.feedback_service import feedback_service
 from app.services.session_manager import session_manager
 from app.services.domain_classifier import domain_classifier
 
-st.set_page_config(page_title="Patient Chat", page_icon="💬", layout="wide")
 
-# ── Session State Initialization ─────────────────────────────────────────────
+# ── Session State Initialization ───────────────────────────────────────
 if "session_id" not in st.session_state:
     st.session_state.session_id = None
 if "messages" not in st.session_state:
@@ -61,7 +64,7 @@ if "session_duration" not in st.session_state:
     st.session_state.session_duration = 0
 
 
-# ── Helper Functions ─────────────────────────────────────────────────────────
+# ── Helper Functions ───────────────────────────────────────────────────
 def fetch_scenarios():
     try:
         summaries = scenario_service.list_scenarios()
@@ -107,19 +110,15 @@ def send_message(message: str):
             st.error(f"Maximum turns ({settings.max_turns}) reached. Please end the session.")
             return
 
-        # Classify the student's question via dedicated classifier (keyword + LLM fallback)
         classification = run_async(domain_classifier.classify(message))
         primary_domain = classification.domains[0] if classification.domains else "conversational"
 
-        # Get patient dialogue from simulation LLM
         patient_response = run_async(
             llm_service.get_patient_response(sid, message)
         )
-        # Override the sim's self-reported domain with the dedicated classifier result
         patient_response.domain_explored = primary_domain
         patient_response.domain_confidence = classification.confidence
 
-        # Record messages in-memory
         session["messages"].append(ChatMessage(
             role=MessageRole.STUDENT,
             content=message,
@@ -131,18 +130,15 @@ def send_message(message: str):
         ))
         session["turn_count"] += 1
 
-        # Persist to SQLite
         session_manager.save_message(sid, "student", message, domain=primary_domain)
         session_manager.save_message(sid, "patient", patient_response.dialogue)
 
-        # Update assessment tracker with multi-label domains
         session["tracker"].update(
             domains=classification.domains,
             confidence=classification.confidence,
             student_message=message,
         )
 
-        # Update Streamlit state
         st.session_state.messages.append({"role": "student", "content": message})
         st.session_state.messages.append({
             "role": "patient",
@@ -151,7 +147,6 @@ def send_message(message: str):
         st.session_state.turn_count = session["turn_count"]
         st.session_state.domains_covered = session["tracker"].get_covered_domains()
 
-        # Track revealed vitals/labs
         if patient_response.vitals_revealed:
             st.session_state.vitals_revealed.update(patient_response.vitals_revealed)
         if patient_response.labs_revealed:
@@ -170,11 +165,8 @@ def end_session():
             return
 
         session["status"] = "ended"
-
-        # Clean up LLM session
         llm_service.end_session(sid)
 
-        # Generate feedback
         scenario = scenario_service.get_scenario(session["scenario_id"])
         assessment = session["tracker"].get_result()
 
@@ -188,11 +180,9 @@ def end_session():
         )
         session["feedback"] = feedback
 
-        # Persist to SQLite
         session_manager.end_session(sid, score=feedback.overall_score)
         session_manager.save_feedback(sid, feedback)
 
-        # Save duration so Session Review can display it
         if st.session_state.start_time:
             st.session_state.session_duration = int(time.time() - st.session_state.start_time)
 
@@ -208,10 +198,12 @@ SEVERITY_BADGES = {
     "low": "🟢 LOW",
 }
 
+def prettify_label(key: str) -> str:
+    return key.replace("_", " ").title()
 
-# ─────────────────────────────────────────────────────────────────────────────
-# MODE 1: Patient Selection (main pane — no active session)
-# ─────────────────────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────────
+# MODE 1: Patient Selection
+# ───────────────────────────────────────────────────────────────────────
 if not st.session_state.session_active and not st.session_state.messages:
     st.title("Select a Patient")
 
@@ -220,7 +212,6 @@ if not st.session_state.session_active and not st.session_state.messages:
         st.warning("No scenarios available.")
         st.stop()
 
-    # ── Filter bar ────────────────────────────────────────────────────────
     categories = sorted(set(s.get("category", "Other") or "Other" for s in scenarios))
 
     filter_cols = st.columns([2, 2, 2, 3])
@@ -233,7 +224,6 @@ if not st.session_state.session_active and not st.session_state.messages:
     with filter_cols[3]:
         search = st.text_input("Search", placeholder="Name or complaint...", key="search")
 
-    # Apply filters
     filtered = scenarios
     if cat_filter != "All":
         filtered = [s for s in filtered if s.get("category") == cat_filter]
@@ -243,7 +233,6 @@ if not st.session_state.session_active and not st.session_state.messages:
         q = search.lower()
         filtered = [s for s in filtered if q in s["name"].lower() or q in s["chief_complaint"].lower()]
 
-    # Apply sort
     SEVERITY_ORDER = {"critical": 0, "high": 1, "medium": 2, "low": 3}
     if sort_by == "Name":
         filtered = sorted(filtered, key=lambda s: s["name"].lower())
@@ -252,14 +241,12 @@ if not st.session_state.session_active and not st.session_state.messages:
     elif sort_by == "Category":
         filtered = sorted(filtered, key=lambda s: (s.get("category") or "ZZZ"))
 
-    # Reset pagination when filters or sort change
     filter_key = f"{cat_filter}|{sev_filter}|{sort_by}|{search}"
     if filter_key != st.session_state.last_filter_key:
         st.session_state.patient_page = 0
         st.session_state.last_filter_key = filter_key
 
-    # Pagination math
-    ITEMS_PER_PAGE = 9  # 3 rows of 3 cards
+    ITEMS_PER_PAGE = 9
     total_pages = max(1, (len(filtered) + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE)
     st.session_state.patient_page = min(st.session_state.patient_page, total_pages - 1)
 
@@ -270,12 +257,10 @@ if not st.session_state.session_active and not st.session_state.messages:
     if filtered:
         st.caption(f"Showing {page_start + 1}–{min(page_end, len(filtered))} of {len(filtered)} patients")
     else:
-        st.caption(f"No patients match your filters")
+        st.caption("No patients match your filters")
 
-    # Inject CSS to make all patient cards the same height per row
     st.markdown("""
     <style>
-    /* Equal-height cards within each row */
     div[data-testid="stHorizontalBlock"] {
         align-items: stretch;
     }
@@ -290,10 +275,8 @@ if not st.session_state.session_active and not st.session_state.messages:
     </style>
     """, unsafe_allow_html=True)
 
-    # Cap complaint length so cards have uniform text
     COMPLAINT_MAX = 80
 
-    # ── Card grid (3 columns × 3 rows = 9 per page) ──────────────────────
     for row_start in range(0, len(paginated), 3):
         row_items = paginated[row_start:row_start + 3]
         cols = st.columns(3)
@@ -315,7 +298,6 @@ if not st.session_state.session_active and not st.session_state.messages:
                         start_session(s["patient_id"])
                         st.rerun()
 
-    # ── Pagination controls ──────────────────────────────────────────────
     if total_pages > 1:
         st.divider()
         col_prev, col_info, col_next = st.columns([1, 2, 1])
@@ -334,9 +316,9 @@ if not st.session_state.session_active and not st.session_state.messages:
                 st.rerun()
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# MODE 2: Session complete (no active session, but messages exist)
-# ─────────────────────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────────
+# MODE 2: Session complete
+# ───────────────────────────────────────────────────────────────────────
 elif not st.session_state.session_active and st.session_state.messages:
     st.title("Session Complete")
     st.success("Go to **Session Review** in the sidebar to see your feedback.")
@@ -347,24 +329,18 @@ elif not st.session_state.session_active and st.session_state.messages:
         st.rerun()
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# MODE 3: Active chat session (sidebar + chat)
-# ─────────────────────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────────
+# MODE 3: Active chat session
+# ───────────────────────────────────────────────────────────────────────
 else:
-    # ── Sidebar: session info only (no coverage hints during active session) ──
     with st.sidebar:
-        st.header(f"Patient: {st.session_state.patient_name}")
-        st.caption(f"Complaint: {st.session_state.chief_complaint}")
-
         st.metric("Turns", st.session_state.turn_count)
 
-        # Revealed vitals
         if st.session_state.vitals_revealed:
             st.subheader("Vitals")
             for k, v in st.session_state.vitals_revealed.items():
                 st.text(f"{k}: {v}")
 
-        # Revealed labs
         if st.session_state.labs_revealed:
             st.subheader("Lab Results")
             for k, v in st.session_state.labs_revealed.items():
@@ -375,10 +351,19 @@ else:
             end_session()
             st.rerun()
 
-    # ── Main area: Chat ──────────────────────────────────────────────────
-    st.title("Patient Assessment Chat")
+    st.markdown(
+        f"""
+        <div class="case-header-wrap">
+            <div class="case-eyebrow">Active case</div>
+            <div class="case-title">{st.session_state.patient_name}</div>
+            <div class="case-complaint">{st.session_state.chief_complaint}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-    # Display chat messages
+    st.divider()
+
     for msg in st.session_state.messages:
         role = msg["role"]
         if role == "student":
@@ -388,7 +373,6 @@ else:
             with st.chat_message("assistant", avatar="🏥"):
                 st.write(msg["content"])
 
-    # Chat input at page level so it stays pinned to the bottom
     if prompt := st.chat_input("Ask your patient a question..."):
         with st.chat_message("user"):
             st.write(prompt)
@@ -399,4 +383,4 @@ else:
                 if st.session_state.messages:
                     st.write(st.session_state.messages[-1]["content"])
 
-        st.rerun()  # Refresh sidebar turn count / vitals
+        st.rerun()

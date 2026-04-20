@@ -1,10 +1,10 @@
 import sys
 from pathlib import Path
 
-# Ensure repo root is on sys.path so "from app..." imports work
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import streamlit as st
+from frontend.theme import inject_theme
 
 st.set_page_config(
     page_title="Nurse LLM - Patient Assessment Trainer",
@@ -13,8 +13,18 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+inject_theme()
+
+st.markdown('<div class="case-eyebrow">Training Tool</div>', unsafe_allow_html=True)
+
 st.title("Nurse LLM")
-st.subheader("AI-Powered Patient Assessment Trainer")
+
+st.markdown(
+    "<div style='font-size:1.2rem; color:#7B8A74; margin-bottom:1rem;'>"
+    "AI-Powered Patient Assessment Trainer"
+    "</div>",
+    unsafe_allow_html=True
+)
 
 st.markdown("""
 Welcome to the Nursing Assessment Practice Tool. This application helps nursing students
@@ -38,11 +48,3 @@ The system tracks your coverage across these clinical domains:
 ### Get Started
 Use the sidebar to navigate to **Patient Chat** and begin a session.
 """)
-
-# Check services are loaded
-try:
-    from app.services.scenario_service import scenario_service
-    count = len(scenario_service.get_scenario_ids())
-    st.success(f"Services loaded successfully — {count} patient scenarios available")
-except Exception as e:
-    st.error(f"Failed to load services: {e}")
