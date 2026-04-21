@@ -1,12 +1,12 @@
 import json
 
-from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 from app.config import settings
 from app.models.scenario import PatientScenario
 from app.models.session import PatientResponse
+from app.services.llm_provider import create_chat_model
 
 
 SYSTEM_PROMPT_TEMPLATE = """You are a simulated patient in a nursing assessment training scenario.
@@ -241,11 +241,8 @@ class LLMService:
     """Manages LLM interactions for patient simulation."""
 
     def __init__(self):
-        self._llm = ChatOpenAI(
-            model=settings.model_name,
-            api_key=settings.openai_api_key,
-            temperature=0.7,
-        )
+        # Provider-agnostic — picks OpenAI or Gemini based on settings.llm_provider
+        self._llm = create_chat_model(temperature=0.7)
         # Per-session conversation histories: session_id → list of messages
         self._histories: dict[str, list] = {}
         # Per-session system prompts

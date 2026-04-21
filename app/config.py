@@ -20,8 +20,22 @@ _env_path = str(_env_file) if _env_file.exists() else None
 
 
 class Settings(BaseSettings):
+    # LLM provider selection: "openai" or "gemini"
+    llm_provider: str = "openai"
+
+    # OpenAI
     openai_api_key: str = ""
+    openai_model_name: str = "gpt-4o-mini"      # fast tier — chat + classification
+    openai_feedback_model: str = "gpt-4o"       # quality tier — end-of-session feedback
+
+    # Gemini
+    gemini_api_key: str = ""
+    gemini_model_name: str = "gemini-1.5-flash" # fast tier
+    gemini_feedback_model: str = "gemini-1.5-pro"  # quality tier
+
+    # Legacy alias — some older code/tests may still read `model_name`
     model_name: str = "gpt-4o-mini"
+
     database_url: str = f"sqlite:///{_REPO_ROOT / 'data' / 'nurse_llm.db'}"
     scenarios_dir: str = str(_REPO_ROOT / "data" / "scenarios")
     max_turns: int = 30
@@ -35,6 +49,14 @@ class Settings(BaseSettings):
 settings = Settings()
 
 # Override with Streamlit secrets if available (for Streamlit Cloud deployment)
-_st_key = _get_streamlit_secret("OPENAI_API_KEY")
-if _st_key:
-    settings.openai_api_key = _st_key
+_st_openai_key = _get_streamlit_secret("OPENAI_API_KEY")
+if _st_openai_key:
+    settings.openai_api_key = _st_openai_key
+
+_st_gemini_key = _get_streamlit_secret("GEMINI_API_KEY")
+if _st_gemini_key:
+    settings.gemini_api_key = _st_gemini_key
+
+_st_provider = _get_streamlit_secret("LLM_PROVIDER")
+if _st_provider:
+    settings.llm_provider = _st_provider

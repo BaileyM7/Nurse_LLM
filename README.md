@@ -18,8 +18,8 @@ AI-powered nursing assessment chatbot for student education. Students practice p
 
 - **Backend**: FastAPI (Python) served with uvicorn
 - **Frontend**: Streamlit
-- **LLM**: OpenAI GPT-4o-mini via LangChain
-- **Data**: 39 structured patient scenarios (JSON files)
+- **LLM**: OpenAI (GPT-4o-mini / GPT-4o) **or** Google Gemini (1.5-flash / 1.5-pro) — selectable via `LLM_PROVIDER` env var
+- **Data**: 100+ structured patient scenarios (JSON files)
 - **Database**: SQLite for session history and feedback persistence
 
 ## Setup
@@ -27,7 +27,9 @@ AI-powered nursing assessment chatbot for student education. Students practice p
 ### Prerequisites
 
 - Python 3.11+
-- An OpenAI API key ([get one here](https://platform.openai.com/api-keys))
+- At least one LLM API key:
+  - [OpenAI](https://platform.openai.com/api-keys), or
+  - [Google Gemini](https://aistudio.google.com/app/apikey)
 
 ### Installation
 
