@@ -350,20 +350,13 @@ elif not st.session_state.session_active and st.session_state.messages:
 # ───────────────────────────────────────────────────────────────────────
 else:
     with st.sidebar:
-        # Force sidebar text to a readable light color against the dark background.
-        # Madison's theme paints the sidebar dark, but default Streamlit text
-        # (subheaders, progress labels, metric labels) stays dark — hard to read.
+        # Scope light text ONLY to the per-domain progress-bar labels
+        # (◐ HPI (1q), ○ ROS (0q), etc.) — leave everything else in the
+        # sidebar at its theme default.
         st.markdown("""
         <style>
-            [data-testid="stSidebar"] h3,
-            [data-testid="stSidebar"] [data-testid="stProgress"] p,
-            [data-testid="stSidebar"] [data-testid="stMetricLabel"] p,
-            [data-testid="stSidebar"] [data-testid="stMetricValue"] {
+            [data-testid="stSidebar"] [data-testid="stProgress"] p {
                 color: #F2EDE4 !important;
-            }
-            [data-testid="stSidebar"] p,
-            [data-testid="stSidebar"] .stCaption {
-                color: #E3DACB !important;
             }
         </style>
         """, unsafe_allow_html=True)
