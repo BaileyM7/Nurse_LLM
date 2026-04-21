@@ -147,10 +147,26 @@ def send_message(message: str):
         st.session_state.turn_count = session["turn_count"]
         st.session_state.domains_covered = session["tracker"].get_covered_domains()
 
+        # Merge vitals — the rule-based extractor uses human-formatted keys
+        # like "Pain Scale: 7/10" (preferred), while the LLM's Pydantic schema
+        # dumps raw snake_case keys like "pain_scale: 7.0". De-dup by dropping
+        # snake_case keys whose Title Case equivalent already exists.
         if patient_response.vitals_revealed:
-            st.session_state.vitals_revealed.update(patient_response.vitals_revealed)
+            for k, v in patient_response.vitals_revealed.items():
+                title_key = k.replace("_", " ").title()
+                # Skip if we already have the human-formatted version
+                if title_key in st.session_state.vitals_revealed or title_key in patient_response.vitals_revealed:
+                    if k != title_key:
+                        continue
+                st.session_state.vitals_revealed[title_key if k != title_key else k] = v
+
         if patient_response.labs_revealed:
-            st.session_state.labs_revealed.update(patient_response.labs_revealed)
+            for k, v in patient_response.labs_revealed.items():
+                title_key = k.replace("_", " ").title()
+                if title_key in st.session_state.labs_revealed or title_key in patient_response.labs_revealed:
+                    if k != title_key:
+                        continue
+                st.session_state.labs_revealed[title_key if k != title_key else k] = v
 
     except Exception as e:
         st.error(f"Error communicating with patient: {e}")
@@ -334,7 +350,53 @@ elif not st.session_state.session_active and st.session_state.messages:
 # ───────────────────────────────────────────────────────────────────────
 else:
     with st.sidebar:
+        # Force sidebar text to a readable light color against the dark background.
+        # Madison's theme paints the sidebar dark, but default Streamlit text
+        # (subheaders, progress labels, metric labels) stays dark — hard to read.
+        st.markdown("""
+        <style>
+            [data-testid="stSidebar"] h3,
+            [data-testid="stSidebar"] [data-testid="stProgress"] p,
+            [data-testid="stSidebar"] [data-testid="stMetricLabel"] p,
+            [data-testid="stSidebar"] [data-testid="stMetricValue"] {
+                color: #F2EDE4 !important;
+            }
+            [data-testid="stSidebar"] p,
+            [data-testid="stSidebar"] .stCaption {
+                color: #E3DACB !important;
+            }
+        </style>
+        """, unsafe_allow_html=True)
+
         st.metric("Turns", st.session_state.turn_count)
+
+        # Live coverage with depth indicators — pulled from the tracker each rerun
+        st.subheader("Assessment Coverage")
+        _sid = st.session_state.session_id
+        _session = session_manager.get_session(_sid) if _sid else None
+        _tracker_result = _session["tracker"].get_result() if _session else None
+
+        DEPTH_ICONS = {"Missed": "○", "Surface": "◐", "Explored": "◕", "Deep": "●"}
+        DOMAIN_LABELS = {
+            "HPI": "HPI", "ROS": "ROS", "PMH": "PMH",
+            "Medications": "Medications", "Allergies": "Allergies",
+            "Social_History": "Social History", "Family_History": "Family History",
+        }
+        _all_domains = ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"]
+
+        for _d in _all_domains:
+            _label = DOMAIN_LABELS[_d]
+            if _tracker_result and _d in _tracker_result.domains:
+                _cov = _tracker_result.domains[_d]
+                _icon = DEPTH_ICONS.get(_cov.depth, "○")
+                _pct = _cov.depth_score / 100.0
+                st.progress(_pct, text=f"{_icon} {_label} ({_cov.question_count}q)")
+            else:
+                st.progress(0.0, text=f"○ {_label}")
+
+        _score = _tracker_result.coverage_score if _tracker_result else 0.0
+        st.metric("Depth Score", f"{_score:.0f}%")
+        st.caption("○ Missed · ◐ Surface · ◕ Explored · ● Deep")
 
         if st.session_state.vitals_revealed:
             st.subheader("Vitals")

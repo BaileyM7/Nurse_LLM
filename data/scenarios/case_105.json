@@ -1,0 +1,138 @@
+{
+    "patient_id": "case_105",
+    "name": "David Thompson",
+    "age": 34,
+    "sex": "Male",
+    "ethnicity": "Caucasian",
+    "weight_lbs": 195,
+    "height_inches": 72,
+    "chief_complaint": "I feel a sharp pain in my side that comes and goes.",
+    "onset_description": "The pain started suddenly about two hours ago while I was at work.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "flank pain": {
+            "description": "It feels like a stabbing pain in my lower back, just below my ribs.",
+            "onset": "2 hours ago",
+            "character": "sharp and intermittent",
+            "severity": "8",
+            "location": "right side of my back",
+            "radiation": "sometimes it moves to my abdomen",
+            "aggravating_factors": [
+                "moving around",
+                "taking deep breaths"
+            ],
+            "alleviating_factors": [
+                "lying down",
+                "using a heating pad"
+            ],
+            "associated_symptoms": [
+                "nausea",
+                "sweating"
+            ]
+        },
+        "nausea": {
+            "description": "I feel like I might throw up.",
+            "onset": "about the same time as the pain",
+            "character": "constant",
+            "severity": "6",
+            "location": "stomach",
+            "radiation": "none",
+            "aggravating_factors": [
+                "smells",
+                "movement"
+            ],
+            "alleviating_factors": [
+                "sipping water"
+            ],
+            "associated_symptoms": [
+                "flank pain"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "fever",
+        "cough",
+        "shortness of breath",
+        "burning during urination",
+        "frequency of urination",
+        "blood in urine",
+        "chest pain",
+        "weight loss",
+        "diarrhea",
+        "constipation"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 138,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 20,
+        "spo2": 98,
+        "temperature": 98.6,
+        "pain_scale": 8
+    },
+    "labs": {
+        "Urinalysis": "Positive for hematuria",
+        "CT Scan": "Right-sided nephrolithiasis, 5mm stone"
+    },
+    "past_medical_history": [
+        "hypertension"
+    ],
+    "surgical_history": [
+        "appendectomy"
+    ],
+    "medications": [
+        "Lisinopril 10mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "non-smoker",
+        "alcohol": "socially, a few times a month",
+        "drugs": "denies use",
+        "occupation": "office worker",
+        "living_situation": "lives alone",
+        "exercise": "occasional jogging",
+        "diet": "mostly fast food and takeout"
+    },
+    "family_history": {
+        "conditions": {
+            "father": "kidney stones",
+            "mother": "diabetes"
+        }
+    },
+    "personality": "David is anxious and fidgety, constantly shifting in his seat and glancing around the room.",
+    "communication_style": "He speaks in short sentences and seems hesitant to elaborate on his symptoms.",
+    "pain_description_style": "He describes his pain in a straightforward manner but struggles to articulate the severity.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "positive for hematuria",
+            "history of renal issues in family",
+            "lack of urinary symptoms despite stone diagnosis"
+        ],
+        "diagnosis": "Nephrolithiasis",
+        "differential_diagnoses": [
+            "urinary tract infection",
+            "muscle strain",
+            "gallbladder disease",
+            "pancreatitis",
+            "appendicitis"
+        ],
+        "recommended_interventions": [
+            "IV hydration",
+            "pain management",
+            "monitoring vitals closely",
+            "preparation for possible surgery or lithotripsy"
+        ]
+    }
+}

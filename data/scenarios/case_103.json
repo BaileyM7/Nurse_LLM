@@ -1,0 +1,158 @@
+{
+    "patient_id": "case_103",
+    "name": "David Johnson",
+    "age": 35,
+    "sex": "Male",
+    "ethnicity": "African American",
+    "weight_lbs": 180,
+    "height_inches": 70,
+    "chief_complaint": "I feel like I\u2019m losing my mind and I can\u2019t stop shaking.",
+    "onset_description": "I stopped drinking suddenly four days ago and ever since, I've been feeling awful.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "tremors": {
+            "description": "My whole body shakes, especially my hands.",
+            "onset": "Started about 24 hours after my last drink.",
+            "character": "Shaky and constant.",
+            "severity": "8",
+            "location": "Mainly in hands, but feels like my whole body.",
+            "radiation": "No radiation.",
+            "aggravating_factors": [
+                "Any stress or noise."
+            ],
+            "alleviating_factors": [
+                "When I drink, but I can\u2019t do that now."
+            ],
+            "associated_symptoms": [
+                "Anxiety",
+                "Sweating",
+                "Nausea"
+            ]
+        },
+        "anxiety": {
+            "description": "I feel really anxious, like something bad is going to happen.",
+            "onset": "Started at the same time as the tremors.",
+            "character": "Constant and overwhelming.",
+            "severity": "9",
+            "location": "Chest.",
+            "radiation": "No radiation.",
+            "aggravating_factors": [
+                "Quiet rooms."
+            ],
+            "alleviating_factors": [
+                "Talking to someone helps a little."
+            ],
+            "associated_symptoms": [
+                "Increased heart rate",
+                "Palpitations"
+            ]
+        },
+        "sweating": {
+            "description": "I'm drenched in sweat, like I just stepped out of a shower.",
+            "onset": "Begun around the same time.",
+            "character": "Persistent and clammy.",
+            "severity": "7",
+            "location": "All over.",
+            "radiation": "No radiation.",
+            "aggravating_factors": [
+                "Heat in the room."
+            ],
+            "alleviating_factors": [
+                "Cool air."
+            ],
+            "associated_symptoms": [
+                "Tremors",
+                "Nausea"
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Headaches",
+        "Visual hallucinations",
+        "Delusions",
+        "Seizures",
+        "Chest pain",
+        "Shortness of breath",
+        "Vomiting",
+        "Confusion",
+        "Mood swings",
+        "Fatigue"
+    ],
+    "vitals": {
+        "heart_rate": 110,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 90,
+        "respiratory_rate": 22,
+        "spo2": 96,
+        "temperature": 98.6,
+        "pain_scale": 0
+    },
+    "labs": {
+        "Blood Alcohol Level": "0.0 mg/dL (negative)",
+        "Electrolytes": "Normal",
+        "Liver Function Tests": "Slightly elevated enzymes (ALT 45 U/L, AST 48 U/L)"
+    },
+    "past_medical_history": [
+        "Anxiety disorder",
+        "Hypertension"
+    ],
+    "surgical_history": [
+        "Appendectomy"
+    ],
+    "medications": [
+        "Sertraline 50 mg daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "Non-smoker",
+        "alcohol": "Drinks heavily on weekends, daily use for past 3 years",
+        "drugs": "Denies drug use",
+        "occupation": "Construction worker",
+        "living_situation": "Lives alone in an apartment",
+        "exercise": "Rarely exercises",
+        "diet": "Fast food and snacks"
+    },
+    "family_history": {
+        "conditions": {
+            "Mother": "Anxiety disorder",
+            "Father": "Alcohol dependence"
+        }
+    },
+    "personality": "David is anxious and fidgety, often looking around the room nervously. He struggles to maintain eye contact but is willing to talk.",
+    "communication_style": "He speaks rapidly and often jumps from topic to topic; he seems desperate for reassurance.",
+    "pain_description_style": "He describes discomfort as 'just an overwhelming feeling of dread and constant unease.'",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Presence of tremors",
+            "High anxiety levels",
+            "Severe sweating",
+            "Negative blood alcohol level"
+        ],
+        "diagnosis": "Acute Alcohol Withdrawal",
+        "differential_diagnoses": [
+            "Anxiety Disorder",
+            "Panic Attack",
+            "Hyperthyroidism",
+            "Sepsis",
+            "Severe dehydration"
+        ],
+        "recommended_interventions": [
+            "IV fluids",
+            "Benzodiazepines for severe symptoms",
+            "Monitoring vital signs every 15-30 minutes",
+            "Supportive care and reassurance"
+        ]
+    }
+}

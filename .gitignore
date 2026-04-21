@@ -35,3 +35,4 @@ data/seeds/*.json.gz
 .streamlit/secrets.toml
 
 .claude
+.playwright-mcp/

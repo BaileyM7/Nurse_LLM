@@ -20,14 +20,21 @@ except Exception as e:
     st.error(f"Could not load sessions: {e}")
     st.stop()
 
-if not sessions:
+# Hide abandoned sessions — active with zero turns means the student selected
+# a patient but never sent a message, so there's nothing to review.
+meaningful = [s for s in sessions if not (s["status"] == "active" and s["turn_count"] == 0)]
+hidden = len(sessions) - len(meaningful)
+
+if not meaningful:
     st.info("No sessions yet. Complete a patient assessment to see your history here.")
     st.stop()
 
 # Display sessions as a table
-st.subheader(f"Total Sessions: {len(sessions)}")
+st.subheader(f"Total Sessions: {len(meaningful)}")
+if hidden:
+    st.caption(f"({hidden} empty session{'s' if hidden != 1 else ''} hidden)")
 
-for session in sessions:  # Already sorted most recent first by session_manager
+for session in meaningful:  # Already sorted most recent first by session_manager
     status_icon = "🟢" if session["status"] == "active" else "✅"
     with st.expander(
         f"{status_icon} Session {session['session_id']} — "

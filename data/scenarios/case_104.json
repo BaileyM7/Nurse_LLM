@@ -1,0 +1,144 @@
+{
+    "patient_id": "case_104",
+    "name": "Carlos Ramirez",
+    "age": 45,
+    "sex": "Male",
+    "ethnicity": "Hispanic",
+    "weight_lbs": 210,
+    "height_inches": 70,
+    "chief_complaint": "I feel really tired and my back hurts a lot.",
+    "onset_description": "Started feeling tired and having back pain about a week ago after a bad cold.",
+    "severity": "high",
+    "setting": "Emergency Department",
+    "symptoms_present": {
+        "fatigue": {
+            "description": "I just can't shake off this tiredness, no matter how much I rest.",
+            "onset": "About a week ago.",
+            "character": "Constant and overwhelming.",
+            "severity": "8",
+            "location": "Overall body.",
+            "radiation": "None.",
+            "aggravating_factors": [
+                "Physical activity.",
+                "Stress."
+            ],
+            "alleviating_factors": [
+                "Rest.",
+                "Sitting down."
+            ],
+            "associated_symptoms": [
+                "Nausea.",
+                "Loss of appetite."
+            ]
+        },
+        "back_pain": {
+            "description": "My lower back feels really sore, like I've been lifting heavy stuff.",
+            "onset": "Started at the same time as the tiredness.",
+            "character": "Dull, aching pain.",
+            "severity": "7",
+            "location": "Lower back.",
+            "radiation": "None.",
+            "aggravating_factors": [
+                "Bending over.",
+                "Standing for long periods."
+            ],
+            "alleviating_factors": [
+                "Lying down.",
+                "Heat."
+            ],
+            "associated_symptoms": [
+                "Muscle cramps."
+            ]
+        }
+    },
+    "symptoms_absent": [
+        "Shortness of breath",
+        "Chest pain",
+        "Fever",
+        "Nausea",
+        "Vomiting",
+        "Swelling in limbs",
+        "Confusion",
+        "Changes in urination",
+        "Rash",
+        "Itching"
+    ],
+    "vitals": {
+        "heart_rate": 102,
+        "blood_pressure_systolic": 150,
+        "blood_pressure_diastolic": 95,
+        "respiratory_rate": 22,
+        "spo2": 95,
+        "temperature": 98.6,
+        "pain_scale": 7
+    },
+    "labs": {
+        "Creatinine": "3.5 mg/dL (elevated)",
+        "Blood Urea Nitrogen (BUN)": "45 mg/dL (elevated)",
+        "Potassium": "5.8 mEq/L (elevated)",
+        "Sodium": "138 mEq/L (normal)",
+        "Phosphorus": "6.0 mg/dL (elevated)"
+    },
+    "past_medical_history": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "surgical_history": [
+        "Appendectomy in 2005"
+    ],
+    "medications": [
+        "Lisinopril 20 mg once daily",
+        "Metformin 500 mg twice daily"
+    ],
+    "allergies": [
+        "Penicillin - rash"
+    ],
+    "social_history": {
+        "smoking": "never smoked",
+        "alcohol": "social drinker",
+        "drugs": "denies",
+        "occupation": "Construction worker",
+        "living_situation": "Lives with wife and two children",
+        "exercise": "Occasional walks",
+        "diet": "High in carbohydrates and sugars"
+    },
+    "family_history": {
+        "conditions": {
+            "Father": "Chronic Kidney Disease",
+            "Mother": "Hypertension"
+        }
+    },
+    "personality": "Carlos appears anxious about his health, frequently fidgeting and avoiding eye contact.",
+    "communication_style": "He speaks in short sentences and often seems distracted, rarely asking questions.",
+    "pain_description_style": "He describes his discomfort in simple terms, using analogies like feeling 'crushed' or 'weighed down'.",
+    "rubric": {
+        "expected_domains": [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History"
+        ],
+        "critical_findings": [
+            "Elevated creatinine and BUN levels",
+            "Back pain, fatigue, and muscle cramps",
+            "Family history of kidney disease"
+        ],
+        "diagnosis": "Acute Kidney Injury",
+        "differential_diagnoses": [
+            "Chronic kidney disease",
+            "Dehydration",
+            "Diabetic nephropathy",
+            "Urinary tract obstruction",
+            "Acute glomerulonephritis"
+        ],
+        "recommended_interventions": [
+            "Monitor vital signs regularly",
+            "Assess fluid balance",
+            "Administer prescribed medications",
+            "Educate patient about dietary modifications"
+        ]
+    }
+}

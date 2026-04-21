@@ -48,3 +48,11 @@ The system tracks your coverage across these clinical domains:
 ### Get Started
 Use the sidebar to navigate to **Patient Chat** and begin a session.
 """)
+
+# Smoke-test indicator: confirms the services booted and scenarios loaded
+try:
+    from app.services.scenario_service import scenario_service
+    _count = len(scenario_service.get_scenario_ids())
+    st.success(f"{_count} patient scenarios loaded and ready.")
+except Exception as e:
+    st.error(f"Failed to load patient scenarios: {e}")
