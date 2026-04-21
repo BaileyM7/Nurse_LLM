@@ -1,12 +1,12 @@
 import json
 
-from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from app.config import settings
 from app.models.assessment import FeedbackReport, AssessmentResult
 from app.models.scenario import PatientScenario
 from app.models.session import ChatMessage
+from app.services.llm_provider import create_feedback_model, supports_json_mode
 
 
 FEEDBACK_PROMPT = """You are an expert nursing educator evaluating a student's patient assessment performance.
@@ -66,18 +66,14 @@ Respond with valid JSON in this exact format:
 class FeedbackService:
     """Generates post-session feedback reports using a high-quality model.
 
-    Uses GPT-4o (not gpt-4o-mini) because feedback is the student-facing
-    deliverable — worth the ~10x cost increase for one call per session.
+    Uses the configured provider's quality tier (gpt-4o or gemini-1.5-pro)
+    because feedback is the student-facing deliverable — worth the extra cost
+    for one call per session.
     """
 
-    FEEDBACK_MODEL = "gpt-4o"  # Upgrade from mini for better reasoning/grounding
-
     def __init__(self):
-        self._llm = ChatOpenAI(
-            model=self.FEEDBACK_MODEL,
-            api_key=settings.openai_api_key,
-            temperature=0.3,  # Lower temperature for more consistent evaluation
-        )
+        # Provider-agnostic quality tier — gpt-4o for OpenAI, gemini-1.5-pro for Gemini
+        self._llm = create_feedback_model(temperature=0.3)
 
     async def generate_feedback(
         self,
@@ -122,9 +118,12 @@ class FeedbackService:
             differential=json.dumps(scenario.rubric.differential_diagnoses),
         )
 
-        # Bind response_format to guarantee JSON output (OpenAI JSON mode)
-        llm_json = self._llm.bind(response_format={"type": "json_object"})
-        response = await llm_json.ainvoke([
+        # OpenAI supports `response_format={"type": "json_object"}` as a runtime bind.
+        # Gemini doesn't — it uses `response_mime_type` at construction time.
+        # For Gemini we rely on the prompt + markdown-fence stripping below.
+        llm = self._llm.bind(response_format={"type": "json_object"}) if supports_json_mode() else self._llm
+
+        response = await llm.ainvoke([
             SystemMessage(content="You are a nursing education assessment expert. Always respond with valid JSON. Every observation must cite a specific turn number and quote the student verbatim."),
             HumanMessage(content=prompt),
         ])

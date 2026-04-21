@@ -14,10 +14,9 @@ import json
 import re
 from dataclasses import dataclass, field
 
-from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from app.config import settings
+from app.services.llm_provider import create_chat_model
 
 
 @dataclass
@@ -137,11 +136,8 @@ class DomainClassifier:
     """Two-stage classifier: keywords first, LLM fallback."""
 
     def __init__(self):
-        self._llm = ChatOpenAI(
-            model=settings.model_name,
-            api_key=settings.openai_api_key,
-            temperature=0.0,  # Deterministic classification
-        )
+        # Provider-agnostic — fast tier, deterministic (temp=0)
+        self._llm = create_chat_model(temperature=0.0)
 
     async def classify(self, message: str) -> ClassificationResult:
         """Classify a student question into one or more domains."""
