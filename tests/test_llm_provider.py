@@ -33,6 +33,19 @@ def test_missing_openai_key_raises_value_error():
         create_chat_model(temperature=0.7)
 
 
+def test_missing_openai_key_message_points_to_env_example():
+    """Missing OpenAI key error should mention .env.example for discoverability."""
+    mock_settings = MagicMock()
+    mock_settings.llm_provider = "openai"
+    mock_settings.openai_api_key = ""
+    mock_settings.openai_model_name = "gpt-4o-mini"
+
+    with patch.object(llm_provider_module, "settings", mock_settings), pytest.raises(
+        ValueError, match=r"\.env\.example"
+    ):
+        create_chat_model(temperature=0.7)
+
+
 def test_missing_gemini_key_raises_value_error():
     """create_chat_model with gemini provider and no key should raise ValueError."""
     mock_settings = MagicMock()
@@ -44,6 +57,19 @@ def test_missing_gemini_key_raises_value_error():
     with patch.object(llm_provider_module, "settings", mock_settings), patch.object(
         llm_provider_module, "_GEMINI_AVAILABLE", True
     ), pytest.raises(ValueError, match="GEMINI_API_KEY"):
+        create_chat_model(temperature=0.7)
+
+
+def test_missing_gemini_key_message_points_to_env_example():
+    """Missing Gemini key error should mention .env.example for discoverability."""
+    mock_settings = MagicMock()
+    mock_settings.llm_provider = "gemini"
+    mock_settings.gemini_api_key = ""
+    mock_settings.gemini_model_name = "gemini-1.5-flash"
+
+    with patch.object(llm_provider_module, "settings", mock_settings), patch.object(
+        llm_provider_module, "_GEMINI_AVAILABLE", True
+    ), pytest.raises(ValueError, match=r"\.env\.example"):
         create_chat_model(temperature=0.7)
 
 

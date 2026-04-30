@@ -99,3 +99,19 @@ def test_invalid_pain_scale_raises_validation_error():
     raw["vitals"]["pain_scale"] = 15  # exceeds le=10 constraint
     with pytest.raises(ValidationError):
         PatientScenario(**raw)
+
+
+# ---------------------------------------------------------------------------
+# scenario_service.load_scenario — file-path context in error message
+# ---------------------------------------------------------------------------
+
+
+def test_malformed_scenario_includes_filename(tmp_path):
+    """load_scenario should include the offending file name in the error message."""
+    bad = tmp_path / "case_bad.json"
+    bad.write_text(json.dumps({"identity": {}}), encoding="utf-8")
+
+    from app.services.scenario_service import load_scenario
+
+    with pytest.raises(ValueError, match="case_bad.json"):
+        load_scenario(bad)

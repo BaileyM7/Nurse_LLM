@@ -16,6 +16,10 @@ Usage:
 Costs: each scenario × each LLM-based system = ~20 API calls. Full run with
 39 scenarios × 2 LLM systems ≈ 1,560 gpt-4o-mini calls. Use --limit for a
 sanity check before running everything.
+
+Error handling: if a single scenario fails (LLM error, malformed file, etc.),
+the error is logged to evaluation/results/errors.log and the run continues
+with the remaining scenarios. The whole batch is never aborted for one failure.
 """
 
 from __future__ import annotations
@@ -123,6 +127,9 @@ async def main_async(args) -> None:
             f"  Resuming: {len(done)} (system, scenario_id) pairs already done — skipping."
         )
 
+    errors_path = Path("evaluation/results/errors.log")
+    errors_path.parent.mkdir(parents=True, exist_ok=True)
+
     mode = "a" if args.resume and out_path.exists() else "w"
     with open(out_path, mode) as f:
         for sp in scenario_paths:
@@ -135,7 +142,18 @@ async def main_async(args) -> None:
                     )
                     continue
                 print(f"  [{system_name}] {sp.name}...", flush=True)
-                records = await run_scenario(sp, system_name, questions)
+                try:
+                    records = await run_scenario(sp, system_name, questions)
+                except Exception as exc:  # broad on purpose: never abort a long run
+                    with errors_path.open("a", encoding="utf-8") as ef:
+                        ef.write(
+                            f"{system_name}\t{sp.name}\t{type(exc).__name__}\t{exc}\n"
+                        )
+                    print(
+                        f"  [{system_name}] {sp.name} — error logged, skipping",
+                        flush=True,
+                    )
+                    continue
                 for r in records:
                     f.write(json.dumps(r) + "\n")
 
