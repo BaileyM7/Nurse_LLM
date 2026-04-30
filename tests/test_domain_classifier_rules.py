@@ -48,11 +48,7 @@ def test_keyword_matches_expected_domain(question, expected_domain):
 def test_keyword_returns_empty_for_ambiguous():
     """Completely vague input should return empty list (falls through to LLM tier)."""
     result = classify_by_keywords("Tell me more.")
-    # This is intentionally vague — keyword rules should not fire
-    assert isinstance(result, list)
-    # Either empty OR it matched something — we just verify it's a list of strings
-    for item in result:
-        assert isinstance(item, str)
+    assert result == []
 
 
 def test_keyword_result_is_list():
@@ -84,13 +80,9 @@ def test_keyword_case_insensitive():
 
 
 def test_keyword_does_not_match_unrelated_text():
-    """A clearly unrelated question should not wrongly fire on symptom domains."""
-    # A pure greeting shouldn't match any keyword domain
+    """A clearly unrelated question (pure greeting) should fire no keyword domains."""
     result = classify_by_keywords("Hello, how are you today?")
-    # Greeting shouldn't pull in clinical domains
-    assert "Allergies" not in result
-    assert "Medications" not in result
-    assert "PMH" not in result
+    assert result == []
 
 
 def test_classification_result_dataclass():
