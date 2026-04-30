@@ -23,6 +23,12 @@ build/
 *.db
 *.sqlite3
 
+# Pytest / coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+
 # OS
 .DS_Store
 Thumbs.db
