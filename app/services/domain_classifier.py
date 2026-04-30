@@ -141,7 +141,13 @@ class DomainClassifier:
                     HumanMessage(content=CLASSIFIER_PROMPT.format(message=message)),
                 ]
             )
-            data = json.loads(response.content)
+            content = (response.content or "").strip()
+            if content.startswith("```"):
+                content = content.split("```", 2)[1]
+                if content.startswith("json"):
+                    content = content[4:]
+                content = content.rsplit("```", 1)[0].strip()
+            data = json.loads(content)
             return ClassificationResult(
                 domains=data.get("domains", []),
                 confidence=float(data.get("confidence", 0.0)),

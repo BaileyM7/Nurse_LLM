@@ -338,13 +338,27 @@ class LLMService:
         # Call LLM
         response = await self._llm.ainvoke(messages)
 
-        # Parse structured response
+        # Gemini returns empty content when safety-blocked; treat as a hard failure.
+        if not getattr(response, "content", None) or not str(response.content).strip():
+            raise RuntimeError(
+                "LLM returned an empty response (likely safety-blocked or rate-limited). "
+                "Try rephrasing or switching providers."
+            )
+
+        # Gemini wraps JSON in markdown fences; strip before parsing.
+        content = response.content.strip()
+        if content.startswith("```"):
+            content = content.split("```", 2)[1]
+            if content.startswith("json"):
+                content = content[4:]
+            content = content.rsplit("```", 1)[0].strip()
+
         try:
-            response_data = json.loads(response.content)
+            response_data = json.loads(content)
             patient_response = PatientResponse(**response_data)
         except (json.JSONDecodeError, Exception):
             patient_response = PatientResponse(
-                dialogue=response.content,
+                dialogue=content,
                 domain_explored="conversational",
                 domain_confidence=0.0,
                 vitals_revealed=None,

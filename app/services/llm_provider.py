@@ -7,12 +7,24 @@ from app.config import settings
 # Lazy-import Gemini so the openai-only install path still works if
 # langchain-google-genai is absent.
 try:
-    from langchain_google_genai import ChatGoogleGenerativeAI
+    from langchain_google_genai import (
+        ChatGoogleGenerativeAI,
+        HarmBlockThreshold,
+        HarmCategory,
+    )
 
     _GEMINI_AVAILABLE = True
+    # Medical-training scenarios trip default safety filters; disable for this domain.
+    _GEMINI_SAFETY_OFF = {
+        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+    }
 except ImportError:
     ChatGoogleGenerativeAI = None  # type: ignore[assignment]
     _GEMINI_AVAILABLE = False
+    _GEMINI_SAFETY_OFF = {}
 
 
 def get_provider_name() -> str:
@@ -52,6 +64,10 @@ def _build_gemini(model: str, temperature: float):
         model=model,
         google_api_key=settings.gemini_api_key,
         temperature=temperature,
+        safety_settings=_GEMINI_SAFETY_OFF,
+        # Every caller of this factory expects JSON output; this stops Gemini
+        # from wrapping payloads in markdown ```json fences.
+        response_mime_type="application/json",
     )
 
 

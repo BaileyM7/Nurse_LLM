@@ -30,7 +30,7 @@
 
 - **Frontend:** Streamlit (multi-page app: Home, Patient Chat, Session Review, History)
 - **Backend:** Services live in `app/services/` and are called directly from Streamlit — a FastAPI router layer also exists (`app/routers/`) for when the app is deployed as a traditional two-process service.
-- **LLM:** OpenAI (GPT-4o-mini for chat + GPT-4o for feedback) **or** Google Gemini (1.5-flash / 1.5-pro) — select via `LLM_PROVIDER`
+- **LLM:** OpenAI (GPT-4o-mini for chat + GPT-4o for feedback) **or** Google Gemini (`gemini-2.5-flash` for both tiers; `gemini-2.5-pro` available on paid tier) — select via `LLM_PROVIDER`
 - **Domain classifier:** Two-stage pipeline — regex keyword rules catch clear cases; a dedicated low-temperature LLM call handles ambiguous ones and supports **multi-label** classification (one question can span multiple domains).
 - **Assessment tracker:** Maintains per-domain coverage, question counts, and computes depth-weighted scores.
 - **Feedback service:** Post-session LLM call (quality tier) with quote-grounded prompt + JSON mode (OpenAI) or JSON prompt enforcement (Gemini).
@@ -72,9 +72,13 @@ OPENAI_FEEDBACK_MODEL=gpt-4o
 # Or Gemini
 LLM_PROVIDER=gemini
 GEMINI_API_KEY=your-gemini-key-here
-GEMINI_MODEL_NAME=gemini-1.5-flash
-GEMINI_FEEDBACK_MODEL=gemini-1.5-pro
+GEMINI_MODEL_NAME=gemini-2.5-flash
+GEMINI_FEEDBACK_MODEL=gemini-2.5-flash
 ```
+
+> **Gemini model availability:** the older `gemini-1.5-*` series is retired,
+> and `gemini-2.5-pro` requires a paid-tier project. `gemini-2.5-flash` is
+> the current free-tier default and is plenty for both chat and feedback.
 
 ### Running Locally
 

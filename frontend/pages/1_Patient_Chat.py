@@ -115,6 +115,9 @@ def send_message(message: str):
             classification.domains[0] if classification.domains else "conversational"
         )
 
+        # Persist the student message immediately so it survives an LLM failure.
+        st.session_state.messages.append({"role": "student", "content": message})
+
         patient_response = run_async(llm_service.get_patient_response(sid, message))
         patient_response.domain_explored = primary_domain
         patient_response.domain_confidence = classification.confidence
@@ -143,7 +146,6 @@ def send_message(message: str):
             student_message=message,
         )
 
-        st.session_state.messages.append({"role": "student", "content": message})
         st.session_state.messages.append(
             {
                 "role": "patient",

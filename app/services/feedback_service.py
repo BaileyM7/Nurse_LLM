@@ -62,10 +62,10 @@ Respond with valid JSON in this exact format:
 
 
 class FeedbackService:
-    """Generates post-session feedback using the quality-tier model (gpt-4o / gemini-1.5-pro)."""
+    """Generates post-session feedback using the quality-tier model."""
 
     def __init__(self):
-        # Provider-agnostic quality tier — gpt-4o for OpenAI, gemini-1.5-pro for Gemini
+        # Provider-agnostic quality tier; model picked from settings.
         self._llm = create_feedback_model(temperature=0.3)
 
     async def generate_feedback(
