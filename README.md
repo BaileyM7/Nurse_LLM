@@ -169,8 +169,7 @@ python -m evaluation.reports.generate_plots
 python -m evaluation.reports.generate_report
 ```
 
-All scripts use `random.seed(42)` so a fresh run reproduces the numbers in the
-report. See `evaluation/METHODOLOGY.md` for scoring definitions.
+All evaluation entry points (`run_all_systems`, `run_ablations`, `generate_plots`, `generate_report`) seed `random` (and `numpy.random` when available) with `42` by default. Pass `--seed N` on either runner to override. See `evaluation/METHODOLOGY.md` for scoring definitions.
 
 ---
 
@@ -239,6 +238,7 @@ Nurse_LLM/
 │       └── 3_History.py            # Past sessions
 ├── data/scenarios/                 # 105 patient case JSON files
 ├── evaluation/                     # Baselines, metrics, ablations, reports
+│   ├── METHODOLOGY.md              # Scoring definitions, reproducibility notes
 ├── scripts/
 │   ├── generate_cases.py           # Scenario synthesis via LLM
 │   └── seed_db.py                  # DB initialization
