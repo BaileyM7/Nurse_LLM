@@ -27,8 +27,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown(
-    """
+st.markdown("""
 Welcome to the Nursing Assessment Practice Tool. This application helps nursing students
 practice patient assessment skills through simulated patient interactions.
 
@@ -49,8 +48,7 @@ The system tracks your coverage across these clinical domains:
 
 ### Get Started
 Use the sidebar to navigate to **Patient Chat** and begin a session.
-"""
-)
+""")
 
 # Smoke-test indicator: confirms the services booted and scenarios loaded
 try:
