@@ -1,4 +1,5 @@
 # Pinned for reproducibility (evaluation-only deps).
+# See requirements.txt header for upgrade procedure.
 pandas==3.0.2
 scikit-learn==1.8.0
 matplotlib==3.10.9
