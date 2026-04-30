@@ -8,7 +8,7 @@
 
 ## How It Works
 
-1. **Select a Patient** — Browse 100+ scenarios across 9 clinical categories (Cardiac, Respiratory, GI, Neuro, Infectious, MSK, Endocrine, Psych, Renal) with filters for category, severity, and keyword search, plus sort by name / severity / category. Paginated 9 per page.
+1. **Select a Patient** — Browse 105 scenarios across 9 clinical categories (Cardiac, Respiratory, GI, Neuro, Infectious, MSK, Endocrine, Psych, Renal) with filters for category, severity, and keyword search, plus sort by name / severity / category. Paginated 9 per page.
 
 2. **Conduct Your Assessment** — Chat with the simulated patient. Ask about symptoms, medical history, medications, allergies, social and family history, or request vitals and labs. The patient stays in character and only reveals information you specifically ask about.
 
@@ -34,7 +34,7 @@
 - **Domain classifier:** Two-stage pipeline — regex keyword rules catch clear cases; a dedicated low-temperature LLM call handles ambiguous ones and supports **multi-label** classification (one question can span multiple domains).
 - **Assessment tracker:** Maintains per-domain coverage, question counts, and computes depth-weighted scores.
 - **Feedback service:** Post-session LLM call (quality tier) with quote-grounded prompt + JSON mode (OpenAI) or JSON prompt enforcement (Gemini).
-- **Data:** 100+ structured patient scenarios (JSON files) validated against a Pydantic schema
+- **Data:** 105 structured patient scenarios (JSON files) validated against a Pydantic schema
 - **Database:** SQLite for session history and feedback persistence
 - **Evaluation framework:** Standalone `evaluation/` package with baselines (rule-based, few-shot, full pipeline), metrics (fidelity, domain classification, engagement, edge cases, error analysis), ablation runner, and report/plot generators.
 
@@ -102,7 +102,7 @@ After installing dependencies, verify the install with the smoke test:
 python scripts/smoke_run.py
 ```
 
-Expected output: scenario name (`Mr. ...`) and a short rule-based patient reply.
+Expected output begins with `Scenario: Maria Santos` followed by a short rule-based patient reply.
 No API keys required.
 
 For the full test suite (no API calls — all LLM paths are mocked):
@@ -134,7 +134,7 @@ The app is designed to deploy on **Streamlit Community Cloud**:
 
 ## Generating More Patient Cases
 
-The repo includes 100+ curated scenarios. To generate additional cases using the configured LLM:
+The repo includes 105 curated scenarios. To generate additional cases using the configured LLM:
 
 ```bash
 # List category targets
@@ -237,7 +237,7 @@ Nurse_LLM/
 │       ├── 1_Patient_Chat.py       # Scenario picker + active chat + live coverage
 │       ├── 2_Session_Review.py     # Post-session feedback report
 │       └── 3_History.py            # Past sessions
-├── data/scenarios/                 # 100+ patient case JSON files
+├── data/scenarios/                 # 105 patient case JSON files
 ├── evaluation/                     # Baselines, metrics, ablations, reports
 ├── scripts/
 │   ├── generate_cases.py           # Scenario synthesis via LLM
