@@ -249,6 +249,18 @@ Nurse_LLM/
 
 ---
 
+## Developer Setup
+
+Pre-commit hooks lint with Ruff and format with Black on every commit.
+
+```bash
+pip install pre-commit ruff black
+pre-commit install
+pre-commit run --all-files
+```
+
+---
+
 ## Team
 
 Team 2 (CS 5804 — Virginia Tech):
