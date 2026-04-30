@@ -8,6 +8,7 @@ Usage:
 
 Requires OPENAI_API_KEY in .env or environment.
 """
+
 import argparse
 import json
 import sys
@@ -16,8 +17,8 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from openai import OpenAI
 from dotenv import load_dotenv
+from openai import OpenAI
 
 from app.models.scenario import PatientScenario
 
@@ -197,7 +198,9 @@ Return ONLY valid JSON matching this exact schema (no markdown, no code blocks):
 }}"""
 
 
-def generate_case(client: OpenAI, condition: str, category: str, case_number: int) -> dict | None:
+def generate_case(
+    client: OpenAI, condition: str, category: str, case_number: int
+) -> dict | None:
     """Generate a single patient case using the OpenAI API."""
     prompt = GENERATION_PROMPT.format(condition=condition, category=category)
 
@@ -205,7 +208,10 @@ def generate_case(client: OpenAI, condition: str, category: str, case_number: in
         response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a clinical nursing educator creating realistic patient scenarios. Always respond with valid JSON only."},
+                {
+                    "role": "system",
+                    "content": "You are a clinical nursing educator creating realistic patient scenarios. Always respond with valid JSON only.",
+                },
                 {"role": "user", "content": prompt},
             ],
             temperature=0.9,  # Higher for variety
@@ -247,17 +253,32 @@ def get_existing_case_numbers(output_dir: Path) -> set[int]:
 
 def main():
     parser = argparse.ArgumentParser(description="Generate patient scenario cases")
-    parser.add_argument("--count", type=int, default=0, help="Number of cases to generate (0 = fill all categories)")
-    parser.add_argument("--category", type=str, default=None, help="Specific category to generate")
-    parser.add_argument("--list-categories", action="store_true", help="List available categories")
-    parser.add_argument("--output-dir", type=str, default="data/scenarios", help="Output directory")
-    parser.add_argument("--start-number", type=int, default=0, help="Starting case number (0 = auto)")
+    parser.add_argument(
+        "--count",
+        type=int,
+        default=0,
+        help="Number of cases to generate (0 = fill all categories)",
+    )
+    parser.add_argument(
+        "--category", type=str, default=None, help="Specific category to generate"
+    )
+    parser.add_argument(
+        "--list-categories", action="store_true", help="List available categories"
+    )
+    parser.add_argument(
+        "--output-dir", type=str, default="data/scenarios", help="Output directory"
+    )
+    parser.add_argument(
+        "--start-number", type=int, default=0, help="Starting case number (0 = auto)"
+    )
     args = parser.parse_args()
 
     if args.list_categories:
         print("Available categories:")
         for cat, info in CATEGORIES.items():
-            print(f"  {cat}: {info['count_target']} cases — {', '.join(info['conditions'])}")
+            print(
+                f"  {cat}: {info['count_target']} cases — {', '.join(info['conditions'])}"
+            )
         total = sum(c["count_target"] for c in CATEGORIES.values())
         print(f"\nTotal target: {total} cases")
         return
@@ -282,7 +303,7 @@ def main():
             return
         cat_info = CATEGORIES[args.category]
         count = args.count if args.count > 0 else cat_info["count_target"]
-        for i, condition in enumerate(cat_info["conditions"][:count]):
+        for _i, condition in enumerate(cat_info["conditions"][:count]):
             conditions_to_generate.append((args.category, condition))
     else:
         for cat_name, cat_info in CATEGORIES.items():
@@ -298,7 +319,9 @@ def main():
     failed = 0
 
     for category, condition in conditions_to_generate:
-        print(f"[{generated + failed + 1}/{len(conditions_to_generate)}] Generating: {condition} ({category})...")
+        print(
+            f"[{generated + failed + 1}/{len(conditions_to_generate)}] Generating: {condition} ({category})..."
+        )
 
         data = generate_case(client, condition, category, next_number)
         if data:

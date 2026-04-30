@@ -1,11 +1,10 @@
 import uuid
 from datetime import datetime
 
-from app.models.session import ChatMessage, MessageRole
-from app.models.assessment import FeedbackReport, AssessmentResult
-from app.services.assessment_service import AssessmentTracker
 from app.db.database import SessionLocal, init_db
-from app.db.models import SessionRecord, MessageRecord, FeedbackRecord
+from app.db.models import FeedbackRecord, MessageRecord, SessionRecord
+from app.models.assessment import FeedbackReport
+from app.services.assessment_service import AssessmentTracker
 
 # Ensure tables exist on import
 init_db()
@@ -59,7 +58,9 @@ class SessionManager:
     def get_session(self, session_id: str) -> dict | None:
         return self._active_sessions.get(session_id)
 
-    def save_message(self, session_id: str, role: str, content: str, domain: str | None = None):
+    def save_message(
+        self, session_id: str, role: str, content: str, domain: str | None = None
+    ):
         """Persist a chat message to SQLite."""
         db = SessionLocal()
         try:
@@ -78,7 +79,9 @@ class SessionManager:
         """Mark session as ended in SQLite."""
         db = SessionLocal()
         try:
-            record = db.query(SessionRecord).filter(SessionRecord.id == session_id).first()
+            record = (
+                db.query(SessionRecord).filter(SessionRecord.id == session_id).first()
+            )
             if record:
                 record.status = "ended"
                 record.end_time = datetime.utcnow()
@@ -107,22 +110,30 @@ class SessionManager:
         """List all sessions from SQLite (includes completed ones from past runs)."""
         db = SessionLocal()
         try:
-            records = db.query(SessionRecord).order_by(SessionRecord.start_time.desc()).all()
+            records = (
+                db.query(SessionRecord).order_by(SessionRecord.start_time.desc()).all()
+            )
             result = []
             for r in records:
                 if r.id in self._active_sessions:
-                    score = self._active_sessions[r.id]["tracker"].get_result().coverage_score
+                    score = (
+                        self._active_sessions[r.id]["tracker"]
+                        .get_result()
+                        .coverage_score
+                    )
                 else:
                     score = r.score or 0.0
 
-                result.append({
-                    "session_id": r.id,
-                    "scenario_id": r.scenario_id,
-                    "status": r.status,
-                    "start_time": r.start_time.isoformat() if r.start_time else "",
-                    "turn_count": r.turn_count or 0,
-                    "coverage_score": score,
-                })
+                result.append(
+                    {
+                        "session_id": r.id,
+                        "scenario_id": r.scenario_id,
+                        "status": r.status,
+                        "start_time": r.start_time.isoformat() if r.start_time else "",
+                        "turn_count": r.turn_count or 0,
+                        "coverage_score": score,
+                    }
+                )
             return result
         finally:
             db.close()
@@ -131,9 +142,11 @@ class SessionManager:
         """Retrieve feedback from SQLite for a past session."""
         db = SessionLocal()
         try:
-            record = db.query(FeedbackRecord).filter(
-                FeedbackRecord.session_id == session_id
-            ).first()
+            record = (
+                db.query(FeedbackRecord)
+                .filter(FeedbackRecord.session_id == session_id)
+                .first()
+            )
             if record:
                 return FeedbackReport(**record.report_json)
             return None

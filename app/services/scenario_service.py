@@ -18,7 +18,7 @@ class ScenarioService:
             return
 
         for file_path in sorted(scenarios_dir.glob("*.json")):
-            with open(file_path, "r") as f:
+            with open(file_path) as f:
                 data = json.load(f)
             scenario = PatientScenario(**data)
             self._scenarios[scenario.patient_id] = scenario

@@ -10,12 +10,11 @@ from __future__ import annotations
 
 import json
 
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 from app.config import settings
 from app.models.scenario import PatientScenario
-
 
 FEW_SHOT_SYSTEM = """You are a simulated patient. Stay in character. Only mention \
 symptoms, history, vitals, and labs that appear in the scenario below. If asked \
@@ -60,10 +59,14 @@ class FewShotPatient:
         )
         # Serialize a trimmed scenario to keep the prompt compact
         trimmed = {
-            "name": scenario.name, "age": scenario.age, "sex": scenario.sex,
+            "name": scenario.name,
+            "age": scenario.age,
+            "sex": scenario.sex,
             "chief_complaint": scenario.chief_complaint,
             "onset": scenario.onset_description,
-            "symptoms_present": {k: v.description for k, v in scenario.symptoms_present.items()},
+            "symptoms_present": {
+                k: v.description for k, v in scenario.symptoms_present.items()
+            },
             "symptoms_absent": scenario.symptoms_absent,
             "pmh": scenario.past_medical_history,
             "medications": scenario.medications,
@@ -82,9 +85,11 @@ class FewShotPatient:
         self._history: list = []
 
     async def respond(self, student_message: str) -> str:
-        messages = [SystemMessage(content=self._system)] + self._history + [
-            HumanMessage(content=student_message)
-        ]
+        messages = (
+            [SystemMessage(content=self._system)]
+            + self._history
+            + [HumanMessage(content=student_message)]
+        )
         resp = await self._llm.ainvoke(messages)
         self._history.append(HumanMessage(content=student_message))
         self._history.append(AIMessage(content=resp.content))

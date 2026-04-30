@@ -31,7 +31,7 @@ Layer
 	Presentation Layer
 	Streamlit Web UI
 	Chat interface with: scenario selector, live conversation window, assessment coverage dashboard (progress bar per domain), and post-session feedback report. Deployed locally or on Streamlit Cloud for user testing.
-	
+
 
 Data Flow
 1. User selects a scenario by patient’s name (BOB)  from the case library via the Streamlit UI.
@@ -62,7 +62,7 @@ Tool
 	Evaluation
 	Python (scikit-learn, pandas)
 	Standard libraries for computing metrics, generating plots, and running statistical tests on feedback quality.
-	
+
 
 1.4 Success Criteria
 Metric Type
@@ -86,7 +86,7 @@ Metric Type
 	Business/Proxy
 	Student satisfaction (post-session survey, 1–5 scale)
 	≥4.0 average rating
-	
+
 
 2. Progress Made with Evidence
 Rubric criteria: Demonstrate tangible artifacts, at least one measurable result, clearly separate completed/in-progress/not-started.
@@ -121,7 +121,7 @@ Component
 	Final evaluation & error analysis
 	NOT STARTED
 	Planned: manual annotation of 100 conversation turns, inter-rater reliability, error taxonomy.
-	
+
 
 2.2 Preliminary Results (Quantitative)
 Present at least one table/plot on your slides. Suggested results to show:
@@ -169,7 +169,7 @@ Evaluation Type
 	User Study
 	8–12 nursing students complete 2–3 scenarios each. Post-session survey (Likert scale) + open-ended feedback. Compare perceived learning vs. expectations.
 	Satisfaction score, engagement metrics (turns, time, completion), qualitative themes
-	
+
 
 3.2 Baselines for Comparison
 * Simple baseline (rule-based scripted patient): Fixed keyword-response mappings. No conversational flexibility, no tracking. Represents the floor.
@@ -194,7 +194,7 @@ Failure Mode
 	API rate limits / failures
 	Monitor API response codes and latency.
 	Implement retry logic with exponential backoff. Cache common scenario prompts. Fallback to GPT-3.5-turbo.
-	
+
 
 4. Challenges, Risks, and Mitigation Plan
 Rubric criteria: Identify blockers, propose specific mitigations with decision points, state contingency plan.
@@ -226,7 +226,7 @@ Risk
 	Medium
 	Modular architecture: each component testable independently. Integration tests run after each sprint.
 	If end-to-end integration fails → present strong offline prototype + evaluation + screenshots as deliverable.
-	
+
 
 Contingency Plan (If End-to-End Deployment Infeasible)
 If the full deployed system cannot be completed, the team will deliver: (1) a strong offline prototype with working conversation pipeline and assessment tracking, (2) comprehensive offline evaluation with baseline comparisons and error analysis, (3) UI mockups / screenshots demonstrating the intended user experience, and (4) a detailed analysis of what worked, what didn’t, and lessons learned for future development. This still demonstrates significant engineering and evaluation work.
@@ -243,7 +243,7 @@ Completed Work
 	Complete feedback generation module with turn-specific citations (Week 5). Implement edge-case guardrails (Week 6). Co-write final report: system design + results (Week 8).
 	Built Streamlit UI: chat interface, scenario selector, session state management. Created few-shot LLM baseline for comparison.
 	Finish coverage dashboard with progress bars (Week 5). Integrate feedback report display (Week 6). Lead presentation design and final demo preparation (Week 7–8).
-	
+
 
 5.2 Week-by-Week Timeline to Final Deliverables
 Week
@@ -256,7 +256,7 @@ Week
 	User study with 8–12 nursing students (2–3 sessions each). Collect survey responses and session logs. Begin evaluation and error analysis.
 	Week 8
 	Complete evaluation: baseline comparison table, confusion matrices, feedback quality ratings. Write final report. Polish final presentation and demo.
-	
+
 
 Appendix: Slide-by-Slide Guide for 7-Minute Presentation
 Suggested timing and content for each slide, aligned to the Industry-Focused rubric.
@@ -288,7 +288,7 @@ Slide
 	Stretch Goals (Optional)
 	If on track: user study expansion, additional scenario types, integration with LMS. If behind: contingency deliverable (offline prototype + evaluation). End with “Questions?”
 	~15 sec
-	
+
 
 
 

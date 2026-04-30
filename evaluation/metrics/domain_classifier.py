@@ -27,14 +27,22 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
+
 load_dotenv()  # load OPENAI_API_KEY from .env before reading os.environ
 
-from langchain_openai import ChatOpenAI
-from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage  # noqa: E402
+from langchain_openai import ChatOpenAI  # noqa: E402
 
-
-DOMAINS = ["HPI", "ROS", "PMH", "Medications", "Allergies",
-           "Social_History", "Family_History", "conversational"]
+DOMAINS = [
+    "HPI",
+    "ROS",
+    "PMH",
+    "Medications",
+    "Allergies",
+    "Social_History",
+    "Family_History",
+    "conversational",
+]
 
 
 CLASSIFIER_PROMPT = """You classify nursing-assessment questions into one of these clinical domains:
@@ -64,23 +72,31 @@ def load_labels(path: str) -> list[dict]:
 
 def _normalize(label: str) -> str:
     m = {
-        "hpi": "HPI", "history_of_present_illness": "HPI",
-        "ros": "ROS", "review_of_systems": "ROS",
-        "pmh": "PMH", "past_medical_history": "PMH",
-        "medications": "Medications", "meds": "Medications",
+        "hpi": "HPI",
+        "history_of_present_illness": "HPI",
+        "ros": "ROS",
+        "review_of_systems": "ROS",
+        "pmh": "PMH",
+        "past_medical_history": "PMH",
+        "medications": "Medications",
+        "meds": "Medications",
         "allergies": "Allergies",
-        "social_history": "Social_History", "social_hx": "Social_History",
-        "family_history": "Family_History", "family_hx": "Family_History",
+        "social_history": "Social_History",
+        "social_hx": "Social_History",
+        "family_history": "Family_History",
+        "family_hx": "Family_History",
         "conversational": "conversational",
     }
     return m.get(label.strip().lower().replace(" ", "_"), label.strip())
 
 
 async def classify_one(llm: ChatOpenAI, question: str) -> str:
-    resp = await llm.ainvoke([
-        SystemMessage(content=CLASSIFIER_PROMPT),
-        HumanMessage(content=question),
-    ])
+    resp = await llm.ainvoke(
+        [
+            SystemMessage(content=CLASSIFIER_PROMPT),
+            HumanMessage(content=question),
+        ]
+    )
     return _normalize(resp.content)
 
 
@@ -96,30 +112,38 @@ async def classify_batch(questions: list[str], model: str, api_key: str) -> list
 
 
 def compute_metrics(y_true: list[str], y_pred: list[str]) -> dict:
-    from sklearn.metrics import (
-        accuracy_score, precision_recall_fscore_support, confusion_matrix,
-    )
     import pandas as pd
+    from sklearn.metrics import (
+        accuracy_score,
+        confusion_matrix,
+        precision_recall_fscore_support,
+    )
 
     labels = sorted(set(y_true) | set(y_pred))
     acc = accuracy_score(y_true, y_pred)
     precision, recall, f1, support = precision_recall_fscore_support(
-        y_true, y_pred, labels=labels, zero_division=0,
+        y_true,
+        y_pred,
+        labels=labels,
+        zero_division=0,
     )
     cm = confusion_matrix(y_true, y_pred, labels=labels)
-    per_domain = pd.DataFrame({
-        "domain": labels,
-        "precision": precision.round(3),
-        "recall": recall.round(3),
-        "f1": f1.round(3),
-        "support": support,
-    })
+    per_domain = pd.DataFrame(
+        {
+            "domain": labels,
+            "precision": precision.round(3),
+            "recall": recall.round(3),
+            "f1": f1.round(3),
+            "support": support,
+        }
+    )
     cm_df = pd.DataFrame(cm, index=labels, columns=labels)
     return {"accuracy": acc, "per_domain": per_domain, "confusion_matrix": cm_df}
 
 
 def plot_confusion_matrix(cm_df, out_path: str) -> None:
     import matplotlib.pyplot as plt
+
     fig, ax = plt.subplots(figsize=(8, 7))
     im = ax.imshow(cm_df.values, cmap="Blues")
     ax.set_xticks(range(len(cm_df.columns)))
@@ -131,9 +155,16 @@ def plot_confusion_matrix(cm_df, out_path: str) -> None:
     ax.set_title("Domain Classifier Confusion Matrix")
     for i in range(len(cm_df.index)):
         for j in range(len(cm_df.columns)):
-            ax.text(j, i, int(cm_df.values[i, j]),
-                    ha="center", va="center",
-                    color="white" if cm_df.values[i, j] > cm_df.values.max() / 2 else "black")
+            ax.text(
+                j,
+                i,
+                int(cm_df.values[i, j]),
+                ha="center",
+                va="center",
+                color=(
+                    "white" if cm_df.values[i, j] > cm_df.values.max() / 2 else "black"
+                ),
+            )
     fig.colorbar(im, ax=ax)
     fig.tight_layout()
     fig.savefig(out_path, dpi=150)
@@ -166,9 +197,11 @@ def main() -> None:
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"\n=== Domain Classification (P2 target: ≥85% accuracy) ===")
-    print(f"Accuracy: {metrics['accuracy']:.1%}  "
-          f"[{'PASS' if metrics['accuracy'] >= 0.85 else 'FAIL'}]\n")
+    print("\n=== Domain Classification (P2 target: ≥85% accuracy) ===")
+    print(
+        f"Accuracy: {metrics['accuracy']:.1%}  "
+        f"[{'PASS' if metrics['accuracy'] >= 0.85 else 'FAIL'}]\n"
+    )
     print("Per-domain:")
     print(metrics["per_domain"].to_string(index=False))
     print("\nConfusion matrix:")
@@ -179,12 +212,17 @@ def main() -> None:
 
     # predictions for error analysis
     with open(out_dir / "domain_predictions.jsonl", "w") as f:
-        for q, gold, pred in zip(questions, y_true, y_pred):
-            f.write(json.dumps({"question": q, "gold": gold, "pred": pred,
-                                "correct": gold == pred}) + "\n")
+        for q, gold, pred in zip(questions, y_true, y_pred, strict=False):
+            f.write(
+                json.dumps(
+                    {"question": q, "gold": gold, "pred": pred, "correct": gold == pred}
+                )
+                + "\n"
+            )
 
-    plot_confusion_matrix(metrics["confusion_matrix"],
-                          str(out_dir / "domain_confusion_matrix.png"))
+    plot_confusion_matrix(
+        metrics["confusion_matrix"], str(out_dir / "domain_confusion_matrix.png")
+    )
     print(f"\nResults saved to {out_dir}/")
 
 

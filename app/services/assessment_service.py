@@ -18,12 +18,13 @@ class AssessmentTracker:
     def __init__(self):
         self.result = AssessmentResult(
             domains={
-                domain: DomainCoverage(domain=domain)
-                for domain in ASSESSMENT_DOMAINS
+                domain: DomainCoverage(domain=domain) for domain in ASSESSMENT_DOMAINS
             }
         )
 
-    def update(self, domains: list[str], confidence: float, student_message: str) -> None:
+    def update(
+        self, domains: list[str], confidence: float, student_message: str
+    ) -> None:
         """Record that a student explored one or more domains in a single question.
 
         Args:

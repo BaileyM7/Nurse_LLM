@@ -5,44 +5,47 @@ Uses `classify_by_keywords` directly — no LLM calls, no API keys needed.
 
 import pytest
 
-from app.services.domain_classifier import classify_by_keywords, ClassificationResult
-
+from app.services.domain_classifier import ClassificationResult, classify_by_keywords
 
 # ---------------------------------------------------------------------------
 # classify_by_keywords — parametrized happy-path cases
 # ---------------------------------------------------------------------------
 
-@pytest.mark.parametrize("question,expected_domain", [
-    # Medications
-    ("Are you currently taking any medications?", "Medications"),
-    ("Do you take any pills or supplements?", "Medications"),
-    # Allergies
-    ("Do you have any drug allergies?", "Allergies"),
-    ("Are you allergic to penicillin?", "Allergies"),
-    # PMH
-    ("Do you have any past medical history?", "PMH"),
-    ("Have you ever been hospitalized before?", "PMH"),
-    ("Do you have any chronic conditions?", "PMH"),
-    # Social_History
-    ("Do you smoke or have you ever smoked?", "Social_History"),
-    ("How much alcohol do you drink?", "Social_History"),
-    ("What is your occupation?", "Social_History"),
-    # Family_History
-    ("Is there a family history of heart disease?", "Family_History"),
-    ("Does anyone in your family have diabetes?", "Family_History"),
-    # HPI
-    ("When did the chest pain start?", "HPI"),
-    ("On a scale of 1-10, how would you rate the pain severity?", "HPI"),
-    # ROS
-    ("Have you had any fever or chills?", "ROS"),
-    ("Any nausea or vomiting?", "ROS"),
-])
+
+@pytest.mark.parametrize(
+    "question,expected_domain",
+    [
+        # Medications
+        ("Are you currently taking any medications?", "Medications"),
+        ("Do you take any pills or supplements?", "Medications"),
+        # Allergies
+        ("Do you have any drug allergies?", "Allergies"),
+        ("Are you allergic to penicillin?", "Allergies"),
+        # PMH
+        ("Do you have any past medical history?", "PMH"),
+        ("Have you ever been hospitalized before?", "PMH"),
+        ("Do you have any chronic conditions?", "PMH"),
+        # Social_History
+        ("Do you smoke or have you ever smoked?", "Social_History"),
+        ("How much alcohol do you drink?", "Social_History"),
+        ("What is your occupation?", "Social_History"),
+        # Family_History
+        ("Is there a family history of heart disease?", "Family_History"),
+        ("Does anyone in your family have diabetes?", "Family_History"),
+        # HPI
+        ("When did the chest pain start?", "HPI"),
+        ("On a scale of 1-10, how would you rate the pain severity?", "HPI"),
+        # ROS
+        ("Have you had any fever or chills?", "ROS"),
+        ("Any nausea or vomiting?", "ROS"),
+    ],
+)
 def test_keyword_matches_expected_domain(question, expected_domain):
     """classify_by_keywords should return the expected domain for clear questions."""
     result = classify_by_keywords(question)
-    assert expected_domain in result, (
-        f"Expected {expected_domain!r} in {result} for question: {question!r}"
-    )
+    assert (
+        expected_domain in result
+    ), f"Expected {expected_domain!r} in {result} for question: {question!r}"
 
 
 def test_keyword_returns_empty_for_ambiguous():

@@ -1,5 +1,6 @@
-from pydantic_settings import BaseSettings
 from pathlib import Path
+
+from pydantic_settings import BaseSettings
 
 # Resolve repo root so relative paths work regardless of working directory
 _REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -9,6 +10,7 @@ def _get_streamlit_secret(key: str, default: str = "") -> str:
     """Try to read a secret from Streamlit secrets (for Streamlit Cloud)."""
     try:
         import streamlit as st
+
         return st.secrets.get(key, default)
     except Exception:
         return default
@@ -25,12 +27,12 @@ class Settings(BaseSettings):
 
     # OpenAI
     openai_api_key: str = ""
-    openai_model_name: str = "gpt-4o-mini"      # fast tier — chat + classification
-    openai_feedback_model: str = "gpt-4o"       # quality tier — end-of-session feedback
+    openai_model_name: str = "gpt-4o-mini"  # fast tier — chat + classification
+    openai_feedback_model: str = "gpt-4o"  # quality tier — end-of-session feedback
 
     # Gemini
     gemini_api_key: str = ""
-    gemini_model_name: str = "gemini-1.5-flash" # fast tier
+    gemini_model_name: str = "gemini-1.5-flash"  # fast tier
     gemini_feedback_model: str = "gemini-1.5-pro"  # quality tier
 
     # Legacy alias — some older code/tests may still read `model_name`

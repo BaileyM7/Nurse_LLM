@@ -6,8 +6,7 @@ from pathlib import Path
 import pytest
 from pydantic import ValidationError
 
-from app.models.scenario import PatientScenario, AssessmentRubric
-
+from app.models.scenario import AssessmentRubric, PatientScenario
 
 CASE_001_PATH = Path(__file__).parent.parent / "data" / "scenarios" / "case_001.json"
 
@@ -35,7 +34,10 @@ def test_symptoms_present_nested_model(sample_scenario):
     """symptoms_present should contain SymptomDetail objects with description."""
     assert "chest_pain" in sample_scenario.symptoms_present
     chest = sample_scenario.symptoms_present["chest_pain"]
-    assert "pressure" in chest.description.lower() or "tightness" in chest.description.lower()
+    assert (
+        "pressure" in chest.description.lower()
+        or "tightness" in chest.description.lower()
+    )
     assert chest.radiation is not None
     assert "arm" in chest.radiation.lower() or "jaw" in chest.radiation.lower()
 

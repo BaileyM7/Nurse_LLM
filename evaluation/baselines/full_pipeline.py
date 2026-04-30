@@ -9,8 +9,8 @@ from __future__ import annotations
 
 import uuid
 
-from app.services.llm_service import LLMService
 from app.models.scenario import PatientScenario
+from app.services.llm_service import LLMService
 
 
 class FullPipelinePatient:
@@ -21,7 +21,9 @@ class FullPipelinePatient:
         self._service.start_session(self._session_id, scenario)
 
     async def respond(self, student_message: str) -> str:
-        resp = await self._service.get_patient_response(self._session_id, student_message)
+        resp = await self._service.get_patient_response(
+            self._session_id, student_message
+        )
         return resp.dialogue
 
     def close(self) -> None:

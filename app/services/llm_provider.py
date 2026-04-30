@@ -20,6 +20,7 @@ from app.config import settings
 # langchain-google-genai is absent.
 try:
     from langchain_google_genai import ChatGoogleGenerativeAI
+
     _GEMINI_AVAILABLE = True
 except ImportError:
     ChatGoogleGenerativeAI = None  # type: ignore[assignment]
@@ -29,7 +30,9 @@ except ImportError:
 def get_provider_name() -> str:
     provider = (settings.llm_provider or "openai").strip().lower()
     if provider not in {"openai", "gemini"}:
-        raise ValueError(f"LLM_PROVIDER must be 'openai' or 'gemini', got: {provider!r}")
+        raise ValueError(
+            f"LLM_PROVIDER must be 'openai' or 'gemini', got: {provider!r}"
+        )
     return provider
 
 

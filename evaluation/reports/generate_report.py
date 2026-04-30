@@ -30,6 +30,7 @@ from pathlib import Path
 random.seed(42)
 try:
     import numpy as np
+
     np.random.seed(42)
 except ImportError:
     pass
@@ -54,7 +55,9 @@ def _load_jsonl(path: Path) -> list[dict]:
     return out
 
 
-def _mark_best(rows: list[tuple[str, float]], higher_is_better: bool = True) -> dict[str, str]:
+def _mark_best(
+    rows: list[tuple[str, float]], higher_is_better: bool = True
+) -> dict[str, str]:
     """Given [(system, value), ...], return a mapping system → formatted cell
     with **best** and *second-best* markers."""
     if not rows:
@@ -80,8 +83,6 @@ def build_headline_table(fidelity: list[dict]) -> str:
     if not fidelity:
         return "_No fidelity results found. Run `python -m evaluation.metrics.fidelity ...` first._"
 
-    systems = [r["system"] for r in fidelity]
-
     # Per-metric best/second markers
     faithful_rows = [(r["system"], float(r["faithful_rate"])) for r in fidelity]
     break_rows = [(r["system"], float(r["character_break_rate"])) for r in fidelity]
@@ -101,18 +102,24 @@ def build_headline_table(fidelity: list[dict]) -> str:
             f"| {s} | {faithful_marks[s]} | {break_marks[s]} | {hall_marks[s]} | {r['total_turns']} |"
         )
     lines.append("")
-    lines.append("↑ = higher is better, ↓ = lower is better. "
-                 "**bold** = best, *italic* = second-best.")
+    lines.append(
+        "↑ = higher is better, ↓ = lower is better. "
+        "**bold** = best, *italic* = second-best."
+    )
     return "\n".join(lines)
 
 
 def build_ablation_table(ablation_fidelity: list[dict]) -> str:
     if not ablation_fidelity:
-        return "_No ablation fidelity found at `results/ablation_fidelity.csv`. "\
-               "Run ablations then re-score with fidelity._"
+        return (
+            "_No ablation fidelity found at `results/ablation_fidelity.csv`. "
+            "Run ablations then re-score with fidelity._"
+        )
 
     # Baseline is the reference
-    baseline = next((r for r in ablation_fidelity if r["system"] == "baseline_full"), None)
+    baseline = next(
+        (r for r in ablation_fidelity if r["system"] == "baseline_full"), None
+    )
     lines = [
         "| Variant | Faithful | Δ vs baseline | Char-break | Halluc. |",
         "|---|---|---|---|---|",
@@ -142,7 +149,9 @@ def build_edge_cases_table(edge: list[dict]) -> str:
     for cat in categories:
         row_cells = [cat]
         for sys in systems:
-            cell = next((r for r in edge if r["system"] == sys and r["category"] == cat), None)
+            cell = next(
+                (r for r in edge if r["system"] == sys and r["category"] == cat), None
+            )
             row_cells.append(f"{float(cell['pass_rate']):.1%}" if cell else "—")
         lines.append("| " + " | ".join(row_cells) + " |")
     return "\n".join(lines)
@@ -163,22 +172,32 @@ def build_conclusion(fidelity: list[dict], domain_per_domain: list[dict]) -> str
         # simpler: use the "support"-weighted mean of recall as a proxy
         try:
             total_support = sum(int(r["support"]) for r in domain_per_domain)
-            weighted = sum(float(r["recall"]) * int(r["support"]) for r in domain_per_domain)
+            weighted = sum(
+                float(r["recall"]) * int(r["support"]) for r in domain_per_domain
+            )
             domain_acc = weighted / total_support if total_support else None
         except Exception:
             domain_acc = None
 
     parts = []
-    parts.append(f"**Full pipeline** achieved {full_rate:.1%} response fidelity"
-                 if full_rate is not None else
-                 "**Full pipeline** fidelity not measured in this run")
-    parts.append(f"(P2 target ≥90%: {'MET' if met_90 else 'NOT MET'})" if full_rate is not None else "")
+    parts.append(
+        f"**Full pipeline** achieved {full_rate:.1%} response fidelity"
+        if full_rate is not None
+        else "**Full pipeline** fidelity not measured in this run"
+    )
+    parts.append(
+        f"(P2 target ≥90%: {'MET' if met_90 else 'NOT MET'})"
+        if full_rate is not None
+        else ""
+    )
     if domain_acc is not None:
         parts.append(f"and domain-classification weighted recall ≈ {domain_acc:.1%}")
     if best["system"] != "full_pipeline":
-        parts.append(f"— note that {best['system']} scored higher on faithfulness, "
-                     "suggesting the tracking/feedback layer is not hurting, "
-                     "but is not driving fidelity gains")
+        parts.append(
+            f"— note that {best['system']} scored higher on faithfulness, "
+            "suggesting the tracking/feedback layer is not hurting, "
+            "but is not driving fidelity gains"
+        )
     return " ".join(parts).strip() + "."
 
 
@@ -197,7 +216,9 @@ def build_examples_section(examples: list[dict]) -> str:
             lines.append(f"**Student:** {e['student']}  ")
             lines.append(f"**Patient:** {e['patient']}  ")
             if e.get("hallucinated_symptoms"):
-                lines.append(f"**Hallucinated:** {', '.join(e['hallucinated_symptoms'])}  ")
+                lines.append(
+                    f"**Hallucinated:** {', '.join(e['hallucinated_symptoms'])}  "
+                )
             if e.get("character_break_evidence"):
                 lines.append(f"**Break:** {', '.join(e['character_break_evidence'])}  ")
             lines.append("")
@@ -234,10 +255,14 @@ def main() -> None:
         md.append("\n| Domain | Precision | Recall | F1 | Support |")
         md.append("|---|---|---|---|---|")
         for r in per_domain:
-            md.append(f"| {r['domain']} | {r['precision']} | {r['recall']} | "
-                      f"{r['f1']} | {r['support']} |")
+            md.append(
+                f"| {r['domain']} | {r['precision']} | {r['recall']} | "
+                f"{r['f1']} | {r['support']} |"
+            )
     else:
-        md.append("_Run `python -m evaluation.metrics.domain_classifier <labels.jsonl>` first._")
+        md.append(
+            "_Run `python -m evaluation.metrics.domain_classifier <labels.jsonl>` first._"
+        )
     md.append("")
 
     md.append("## 3. Ablations: What Drives Fidelity?\n")
@@ -250,7 +275,9 @@ def main() -> None:
     md.append(build_examples_section(examples) + "\n")
 
     md.append("## Reproducibility\n")
-    md.append("- Random seed: 42 (set in `run_all_systems.py` and `ablations/run_ablations.py`)")
+    md.append(
+        "- Random seed: 42 (set in `run_all_systems.py` and `ablations/run_ablations.py`)"
+    )
     md.append("- Classifier temperature: 0.0. Patient simulation: 0.7.")
     md.append("- See `evaluation/METHODOLOGY.md` for full methodology.")
     md.append("")

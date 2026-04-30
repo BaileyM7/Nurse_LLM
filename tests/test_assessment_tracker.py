@@ -9,15 +9,13 @@ Actual thresholds from app/models/assessment.py:
 Coverage score = mean depth_score across all 7 domains.
 """
 
-import pytest
-
+from app.models.assessment import ASSESSMENT_DOMAINS, depth_label, depth_score
 from app.services.assessment_service import AssessmentTracker
-from app.models.assessment import depth_label, depth_score, ASSESSMENT_DOMAINS
-
 
 # ---------------------------------------------------------------------------
 # depth_label and depth_score — unit tests for the pure functions
 # ---------------------------------------------------------------------------
+
 
 def test_depth_label_zero():
     assert depth_label(0) == "Missed"
@@ -67,6 +65,7 @@ def test_depth_score_four():
 # AssessmentTracker.update — integration of domain recording
 # ---------------------------------------------------------------------------
 
+
 def test_fresh_tracker_has_zero_score():
     tracker = AssessmentTracker()
     result = tracker.get_result()
@@ -82,21 +81,29 @@ def test_fresh_tracker_all_domains_missed():
 
 def test_update_single_domain_marks_covered():
     tracker = AssessmentTracker()
-    tracker.update(["HPI"], confidence=0.9, student_message="When did your chest pain start?")
+    tracker.update(
+        ["HPI"], confidence=0.9, student_message="When did your chest pain start?"
+    )
     assert "HPI" in tracker.get_covered_domains()
 
 
 def test_update_increments_total_questions():
     tracker = AssessmentTracker()
-    tracker.update(["HPI"], confidence=0.9, student_message="When did your chest pain start?")
-    tracker.update(["PMH"], confidence=0.95, student_message="Any past medical history?")
+    tracker.update(
+        ["HPI"], confidence=0.9, student_message="When did your chest pain start?"
+    )
+    tracker.update(
+        ["PMH"], confidence=0.95, student_message="Any past medical history?"
+    )
     assert tracker.get_result().total_questions == 2
 
 
 def test_update_multi_label_counts_once_total():
     """Multi-label update on one message should add 1 to total_questions, not 2."""
     tracker = AssessmentTracker()
-    tracker.update(["HPI", "ROS"], confidence=0.9, student_message="Any other symptoms?")
+    tracker.update(
+        ["HPI", "ROS"], confidence=0.9, student_message="Any other symptoms?"
+    )
     assert tracker.get_result().total_questions == 1
 
 

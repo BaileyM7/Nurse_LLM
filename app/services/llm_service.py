@@ -1,13 +1,10 @@
 import json
 
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
-from app.config import settings
 from app.models.scenario import PatientScenario
 from app.models.session import PatientResponse
 from app.services.llm_provider import create_chat_model
-
 
 SYSTEM_PROMPT_TEMPLATE = """You are a simulated patient in a nursing assessment training scenario.
 You must stay in character at ALL times.
@@ -90,10 +87,16 @@ def _build_system_prompt(scenario: PatientScenario) -> str:
         if detail.alleviating_factors:
             parts.append(f"  Better with: {', '.join(detail.alleviating_factors)}")
         symptoms_lines.append("\n".join(parts))
-    symptoms_present_text = "\n".join(symptoms_lines) if symptoms_lines else "None specified"
+    symptoms_present_text = (
+        "\n".join(symptoms_lines) if symptoms_lines else "None specified"
+    )
 
     # Format symptoms absent
-    symptoms_absent_text = ", ".join(scenario.symptoms_absent) if scenario.symptoms_absent else "None specified"
+    symptoms_absent_text = (
+        ", ".join(scenario.symptoms_absent)
+        if scenario.symptoms_absent
+        else "None specified"
+    )
 
     # Format vitals
     vitals = scenario.vitals
@@ -101,7 +104,9 @@ def _build_system_prompt(scenario: PatientScenario) -> str:
     if vitals.heart_rate is not None:
         vitals_parts.append(f"Heart Rate: {vitals.heart_rate} bpm")
     if vitals.blood_pressure_systolic is not None:
-        vitals_parts.append(f"Blood Pressure: {vitals.blood_pressure_systolic}/{vitals.blood_pressure_diastolic} mmHg")
+        vitals_parts.append(
+            f"Blood Pressure: {vitals.blood_pressure_systolic}/{vitals.blood_pressure_diastolic} mmHg"
+        )
     if vitals.respiratory_rate is not None:
         vitals_parts.append(f"Respiratory Rate: {vitals.respiratory_rate} breaths/min")
     if vitals.spo2 is not None:
@@ -113,7 +118,11 @@ def _build_system_prompt(scenario: PatientScenario) -> str:
     vitals_text = "\n".join(vitals_parts) if vitals_parts else "Not available"
 
     # Format labs
-    labs_text = "\n".join(f"- {k}: {v}" for k, v in scenario.labs.items()) if scenario.labs else "No labs ordered"
+    labs_text = (
+        "\n".join(f"- {k}: {v}" for k, v in scenario.labs.items())
+        if scenario.labs
+        else "No labs ordered"
+    )
 
     return SYSTEM_PROMPT_TEMPLATE.format(
         name=scenario.name,
@@ -122,13 +131,27 @@ def _build_system_prompt(scenario: PatientScenario) -> str:
         setting=scenario.setting,
         personality=scenario.personality,
         communication_style=scenario.communication_style,
-        pain_style_line=f"- Pain description style: {scenario.pain_description_style}" if scenario.pain_description_style else "",
+        pain_style_line=(
+            f"- Pain description style: {scenario.pain_description_style}"
+            if scenario.pain_description_style
+            else ""
+        ),
         chief_complaint=scenario.chief_complaint,
-        onset_line=f"Onset: {scenario.onset_description}" if scenario.onset_description else "",
+        onset_line=(
+            f"Onset: {scenario.onset_description}" if scenario.onset_description else ""
+        ),
         symptoms_present_text=symptoms_present_text,
         symptoms_absent_text=symptoms_absent_text,
-        pmh_text=", ".join(scenario.past_medical_history) if scenario.past_medical_history else "None",
-        surgical_text=", ".join(scenario.surgical_history) if scenario.surgical_history else "None",
+        pmh_text=(
+            ", ".join(scenario.past_medical_history)
+            if scenario.past_medical_history
+            else "None"
+        ),
+        surgical_text=(
+            ", ".join(scenario.surgical_history)
+            if scenario.surgical_history
+            else "None"
+        ),
         meds_text=", ".join(scenario.medications) if scenario.medications else "None",
         allergies_text=", ".join(scenario.allergies) if scenario.allergies else "NKDA",
         social_hx_text=_format_social_hx(scenario.social_history),
@@ -155,8 +178,11 @@ def _format_social_hx(social) -> str:
 
 def _format_family_hx(family) -> str:
     if family.conditions:
-        return "; ".join(f"{member}: {condition}" for member, condition in family.conditions.items())
+        return "; ".join(
+            f"{member}: {condition}" for member, condition in family.conditions.items()
+        )
     return "Noncontributory"
+
 
 def _detect_requested_vitals(student_message: str, scenario: PatientScenario) -> dict:
     msg = student_message.lower()
@@ -164,39 +190,63 @@ def _detect_requested_vitals(student_message: str, scenario: PatientScenario) ->
 
     vitals = scenario.vitals
 
-    if any(term in msg for term in ["blood pressure", "bp", "b/p"]):
-        if (
-            vitals.blood_pressure_systolic is not None
-            and vitals.blood_pressure_diastolic is not None
-        ):
-            revealed["Blood Pressure"] = (
-                f"{vitals.blood_pressure_systolic}/{vitals.blood_pressure_diastolic} mmHg"
-            )
+    if any(term in msg for term in ["blood pressure", "bp", "b/p"]) and (
+        vitals.blood_pressure_systolic is not None
+        and vitals.blood_pressure_diastolic is not None
+    ):
+        revealed["Blood Pressure"] = (
+            f"{vitals.blood_pressure_systolic}/{vitals.blood_pressure_diastolic} mmHg"
+        )
 
-    if any(term in msg for term in ["heart rate", "pulse rate", "hr"]):
-        if vitals.heart_rate is not None:
-            revealed["Heart Rate"] = f"{vitals.heart_rate} bpm"
+    if (
+        any(term in msg for term in ["heart rate", "pulse rate", "hr"])
+        and vitals.heart_rate is not None
+    ):
+        revealed["Heart Rate"] = f"{vitals.heart_rate} bpm"
 
     # Only use plain "pulse" if "pulse ox" was not what they meant
-    if "pulse" in msg and "pulse ox" not in msg and "pulse oxim" not in msg:
-        if "Heart Rate" not in revealed and vitals.heart_rate is not None:
-            revealed["Heart Rate"] = f"{vitals.heart_rate} bpm"
+    if (
+        "pulse" in msg
+        and "pulse ox" not in msg
+        and "pulse oxim" not in msg
+        and "Heart Rate" not in revealed
+        and vitals.heart_rate is not None
+    ):
+        revealed["Heart Rate"] = f"{vitals.heart_rate} bpm"
 
-    if any(term in msg for term in ["respiratory rate", "resp rate", "rr"]):
-        if vitals.respiratory_rate is not None:
-            revealed["Respiratory Rate"] = f"{vitals.respiratory_rate} breaths/min"
+    if (
+        any(term in msg for term in ["respiratory rate", "resp rate", "rr"])
+        and vitals.respiratory_rate is not None
+    ):
+        revealed["Respiratory Rate"] = f"{vitals.respiratory_rate} breaths/min"
 
-    if any(term in msg for term in ["spo2", "oxygen saturation", "pulse ox", "pulse oximetry", "o2 sat", "satting"]):
-        if vitals.spo2 is not None:
-            revealed["SpO2"] = f"{vitals.spo2}%"
+    if (
+        any(
+            term in msg
+            for term in [
+                "spo2",
+                "oxygen saturation",
+                "pulse ox",
+                "pulse oximetry",
+                "o2 sat",
+                "satting",
+            ]
+        )
+        and vitals.spo2 is not None
+    ):
+        revealed["SpO2"] = f"{vitals.spo2}%"
 
-    if any(term in msg for term in ["temperature", "temp", "fever"]):
-        if vitals.temperature is not None:
-            revealed["Temperature"] = f"{vitals.temperature}°F"
+    if (
+        any(term in msg for term in ["temperature", "temp", "fever"])
+        and vitals.temperature is not None
+    ):
+        revealed["Temperature"] = f"{vitals.temperature}°F"
 
-    if any(term in msg for term in ["pain", "pain score", "pain scale"]):
-        if vitals.pain_scale is not None:
-            revealed["Pain Scale"] = f"{vitals.pain_scale}/10"
+    if (
+        any(term in msg for term in ["pain", "pain score", "pain scale"])
+        and vitals.pain_scale is not None
+    ):
+        revealed["Pain Scale"] = f"{vitals.pain_scale}/10"
 
     return revealed
 
@@ -263,10 +313,14 @@ class LLMService:
         self._scenarios.pop(session_id, None)
         return history
 
-    async def get_patient_response(self, session_id: str, student_message: str) -> PatientResponse:
+    async def get_patient_response(
+        self, session_id: str, student_message: str
+    ) -> PatientResponse:
         """Send student message to LLM and get structured patient response."""
         if session_id not in self._system_prompts:
-            raise ValueError(f"Session '{session_id}' not found. Start a session first.")
+            raise ValueError(
+                f"Session '{session_id}' not found. Start a session first."
+            )
 
         scenario = self._scenarios.get(session_id)
         if scenario is None:

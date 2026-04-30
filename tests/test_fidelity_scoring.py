@@ -28,6 +28,7 @@ def case_001() -> dict:
 # check_character_break
 # ---------------------------------------------------------------------------
 
+
 def test_no_character_break_clean_response(case_001):
     """A normal patient response should return no character-break hits."""
     patient_text = "I've had this chest pressure for about two hours. It feels like someone is sitting on my chest."
@@ -56,6 +57,7 @@ def test_character_break_language_model(case_001):
 # ---------------------------------------------------------------------------
 # check_hallucinated_symptoms
 # ---------------------------------------------------------------------------
+
 
 def test_no_hallucination_for_present_symptoms(case_001):
     """Patient affirming a present symptom should not be flagged as hallucinated."""
@@ -91,6 +93,7 @@ def test_allergy_context_not_hallucinated(case_001):
 # ---------------------------------------------------------------------------
 # score_turn
 # ---------------------------------------------------------------------------
+
 
 def test_score_turn_faithful_clean(case_001):
     """A clean patient turn should be scored faithful=True with no evidence."""

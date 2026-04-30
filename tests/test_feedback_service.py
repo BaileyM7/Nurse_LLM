@@ -6,19 +6,18 @@ import time so the singleton is never constructed with real credentials.
 """
 
 import json
+from unittest.mock import patch
+
 import pytest
-from unittest.mock import patch, AsyncMock, MagicMock
-from datetime import datetime
 
 import app.services.feedback_service as feedback_service_module
-from app.models.assessment import AssessmentResult, DomainCoverage, ASSESSMENT_DOMAINS
-from app.models.scenario import PatientScenario
+from app.models.assessment import ASSESSMENT_DOMAINS, AssessmentResult, DomainCoverage
 from app.models.session import ChatMessage, MessageRole
-
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
 
 def _make_assessment(domains_covered=None) -> AssessmentResult:
     """Build a minimal AssessmentResult with some domains covered."""
@@ -40,35 +39,59 @@ def _make_assessment(domains_covered=None) -> AssessmentResult:
 
 def _make_messages() -> list:
     return [
-        ChatMessage(role=MessageRole.STUDENT, content="When did your chest pain start?"),
+        ChatMessage(
+            role=MessageRole.STUDENT, content="When did your chest pain start?"
+        ),
         ChatMessage(role=MessageRole.PATIENT, content="About two hours ago."),
-        ChatMessage(role=MessageRole.STUDENT, content="Do you have any past medical history?"),
-        ChatMessage(role=MessageRole.PATIENT, content="Yes, I have high blood pressure and diabetes."),
+        ChatMessage(
+            role=MessageRole.STUDENT, content="Do you have any past medical history?"
+        ),
+        ChatMessage(
+            role=MessageRole.PATIENT,
+            content="Yes, I have high blood pressure and diabetes.",
+        ),
     ]
 
 
 def _canned_feedback_json(session_id: str) -> str:
-    return json.dumps({
-        "session_id": session_id,
-        "overall_score": 45.0,
-        "domains_covered": ["HPI", "PMH"],
-        "domains_missed": ["ROS", "Medications", "Allergies", "Social_History", "Family_History"],
-        "strengths": ["Asked about onset (Turn 1: 'When did your chest pain start?') — good HPI opening."],
-        "improvements": ["Missed medications domain entirely — should ask about current prescriptions."],
-        "critical_findings_caught": ["Chest pain onset identified."],
-        "critical_findings_missed": ["Did not explore radiation of chest pain."],
-        "diagnosis": "NSTEMI (Non-ST Elevation Myocardial Infarction)",
-        "differential_diagnoses": ["Unstable angina", "STEMI"],
-        "turn_highlights": [
-            {"turn": 1, "student_said": "When did your chest pain start?", "commentary": "Good opening HPI question."}
-        ],
-        "summary": "The student covered basic HPI and PMH but missed 5 of 7 domains.",
-    })
+    return json.dumps(
+        {
+            "session_id": session_id,
+            "overall_score": 45.0,
+            "domains_covered": ["HPI", "PMH"],
+            "domains_missed": [
+                "ROS",
+                "Medications",
+                "Allergies",
+                "Social_History",
+                "Family_History",
+            ],
+            "strengths": [
+                "Asked about onset (Turn 1: 'When did your chest pain start?') — good HPI opening."
+            ],
+            "improvements": [
+                "Missed medications domain entirely — should ask about current prescriptions."
+            ],
+            "critical_findings_caught": ["Chest pain onset identified."],
+            "critical_findings_missed": ["Did not explore radiation of chest pain."],
+            "diagnosis": "NSTEMI (Non-ST Elevation Myocardial Infarction)",
+            "differential_diagnoses": ["Unstable angina", "STEMI"],
+            "turn_highlights": [
+                {
+                    "turn": 1,
+                    "student_said": "When did your chest pain start?",
+                    "commentary": "Good opening HPI question.",
+                }
+            ],
+            "summary": "The student covered basic HPI and PMH but missed 5 of 7 domains.",
+        }
+    )
 
 
 # ---------------------------------------------------------------------------
 # Test: FeedbackService.generate_feedback with mocked LLM
 # ---------------------------------------------------------------------------
+
 
 @pytest.mark.asyncio
 async def test_generate_feedback_parses_llm_json(sample_scenario):
@@ -90,8 +113,9 @@ async def test_generate_feedback_parses_llm_json(sample_scenario):
             return _FakeMsg()
 
     # Patch create_feedback_model so the FeedbackService singleton uses our stub
-    with patch.object(feedback_service_module, "create_feedback_model", return_value=_FakeLLM()), \
-         patch.object(feedback_service_module, "supports_json_mode", return_value=True):
+    with patch.object(
+        feedback_service_module, "create_feedback_model", return_value=_FakeLLM()
+    ), patch.object(feedback_service_module, "supports_json_mode", return_value=True):
         service = feedback_service_module.FeedbackService()
         report = await service.generate_feedback(
             session_id=session_id,
@@ -126,8 +150,9 @@ async def test_generate_feedback_fallback_on_bad_json(sample_scenario):
         async def ainvoke(self, *_a, **_k):
             return _FakeBadMsg()
 
-    with patch.object(feedback_service_module, "create_feedback_model", return_value=_FakeLLM()), \
-         patch.object(feedback_service_module, "supports_json_mode", return_value=True):
+    with patch.object(
+        feedback_service_module, "create_feedback_model", return_value=_FakeLLM()
+    ), patch.object(feedback_service_module, "supports_json_mode", return_value=True):
         service = feedback_service_module.FeedbackService()
         report = await service.generate_feedback(
             session_id=session_id,
@@ -162,8 +187,9 @@ async def test_generate_feedback_strips_markdown_fences(sample_scenario):
         async def ainvoke(self, *_a, **_k):
             return _FakeFencedMsg()
 
-    with patch.object(feedback_service_module, "create_feedback_model", return_value=_FakeLLM()), \
-         patch.object(feedback_service_module, "supports_json_mode", return_value=True):
+    with patch.object(
+        feedback_service_module, "create_feedback_model", return_value=_FakeLLM()
+    ), patch.object(feedback_service_module, "supports_json_mode", return_value=True):
         service = feedback_service_module.FeedbackService()
         report = await service.generate_feedback(
             session_id=session_id,
@@ -195,8 +221,9 @@ async def test_generate_feedback_domains_missed(sample_scenario):
         async def ainvoke(self, *_a, **_k):
             return _FakeMsg()
 
-    with patch.object(feedback_service_module, "create_feedback_model", return_value=_FakeLLM()), \
-         patch.object(feedback_service_module, "supports_json_mode", return_value=True):
+    with patch.object(
+        feedback_service_module, "create_feedback_model", return_value=_FakeLLM()
+    ), patch.object(feedback_service_module, "supports_json_mode", return_value=True):
         service = feedback_service_module.FeedbackService()
         report = await service.generate_feedback(
             session_id=session_id,

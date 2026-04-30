@@ -16,6 +16,7 @@ def sample_scenario() -> PatientScenario:
 @pytest.fixture
 def fake_llm_response():
     """Returns a callable that builds a stub mimicking LangChain ChatModel.invoke."""
+
     def _make(content: str):
         class _Msg:
             def __init__(self, c):

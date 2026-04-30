@@ -19,6 +19,7 @@ def run_async(coro):
     try:
         asyncio.get_running_loop()
         import concurrent.futures
+
         with concurrent.futures.ThreadPoolExecutor() as pool:
             future = pool.submit(lambda: asyncio.run(coro))
             return future.result(timeout=60)
@@ -26,14 +27,13 @@ def run_async(coro):
         return asyncio.run(coro)
 
 
-from app.config import settings
-from app.models.session import ChatMessage, MessageRole
-from app.services.scenario_service import scenario_service
-from app.services.llm_service import llm_service
-from app.services.feedback_service import feedback_service
-from app.services.session_manager import session_manager
-from app.services.domain_classifier import domain_classifier
-
+from app.config import settings  # noqa: E402
+from app.models.session import ChatMessage, MessageRole  # noqa: E402
+from app.services.domain_classifier import domain_classifier  # noqa: E402
+from app.services.feedback_service import feedback_service  # noqa: E402
+from app.services.llm_service import llm_service  # noqa: E402
+from app.services.scenario_service import scenario_service  # noqa: E402
+from app.services.session_manager import session_manager  # noqa: E402
 
 # ── Session State Initialization ───────────────────────────────────────
 if "session_id" not in st.session_state:
@@ -107,27 +107,33 @@ def send_message(message: str):
             return
 
         if session["turn_count"] >= settings.max_turns:
-            st.error(f"Maximum turns ({settings.max_turns}) reached. Please end the session.")
+            st.error(
+                f"Maximum turns ({settings.max_turns}) reached. Please end the session."
+            )
             return
 
         classification = run_async(domain_classifier.classify(message))
-        primary_domain = classification.domains[0] if classification.domains else "conversational"
-
-        patient_response = run_async(
-            llm_service.get_patient_response(sid, message)
+        primary_domain = (
+            classification.domains[0] if classification.domains else "conversational"
         )
+
+        patient_response = run_async(llm_service.get_patient_response(sid, message))
         patient_response.domain_explored = primary_domain
         patient_response.domain_confidence = classification.confidence
 
-        session["messages"].append(ChatMessage(
-            role=MessageRole.STUDENT,
-            content=message,
-            domain_explored=primary_domain,
-        ))
-        session["messages"].append(ChatMessage(
-            role=MessageRole.PATIENT,
-            content=patient_response.dialogue,
-        ))
+        session["messages"].append(
+            ChatMessage(
+                role=MessageRole.STUDENT,
+                content=message,
+                domain_explored=primary_domain,
+            )
+        )
+        session["messages"].append(
+            ChatMessage(
+                role=MessageRole.PATIENT,
+                content=patient_response.dialogue,
+            )
+        )
         session["turn_count"] += 1
 
         session_manager.save_message(sid, "student", message, domain=primary_domain)
@@ -140,10 +146,12 @@ def send_message(message: str):
         )
 
         st.session_state.messages.append({"role": "student", "content": message})
-        st.session_state.messages.append({
-            "role": "patient",
-            "content": patient_response.dialogue,
-        })
+        st.session_state.messages.append(
+            {
+                "role": "patient",
+                "content": patient_response.dialogue,
+            }
+        )
         st.session_state.turn_count = session["turn_count"]
         st.session_state.domains_covered = session["tracker"].get_covered_domains()
 
@@ -155,17 +163,21 @@ def send_message(message: str):
             for k, v in patient_response.vitals_revealed.items():
                 title_key = k.replace("_", " ").title()
                 # Skip if we already have the human-formatted version
-                if title_key in st.session_state.vitals_revealed or title_key in patient_response.vitals_revealed:
-                    if k != title_key:
-                        continue
+                if (
+                    title_key in st.session_state.vitals_revealed
+                    or title_key in patient_response.vitals_revealed
+                ) and k != title_key:
+                    continue
                 st.session_state.vitals_revealed[title_key if k != title_key else k] = v
 
         if patient_response.labs_revealed:
             for k, v in patient_response.labs_revealed.items():
                 title_key = k.replace("_", " ").title()
-                if title_key in st.session_state.labs_revealed or title_key in patient_response.labs_revealed:
-                    if k != title_key:
-                        continue
+                if (
+                    title_key in st.session_state.labs_revealed
+                    or title_key in patient_response.labs_revealed
+                ) and k != title_key:
+                    continue
                 st.session_state.labs_revealed[title_key if k != title_key else k] = v
 
     except Exception as e:
@@ -200,7 +212,9 @@ def end_session():
         session_manager.save_feedback(sid, feedback)
 
         if st.session_state.start_time:
-            st.session_state.session_duration = int(time.time() - st.session_state.start_time)
+            st.session_state.session_duration = int(
+                time.time() - st.session_state.start_time
+            )
 
         st.session_state.session_active = False
     except Exception as e:
@@ -214,8 +228,10 @@ SEVERITY_BADGES = {
     "low": "🟢 LOW",
 }
 
+
 def prettify_label(key: str) -> str:
     return key.replace("_", " ").title()
+
 
 # ───────────────────────────────────────────────────────────────────────
 # MODE 1: Patient Selection
@@ -234,26 +250,43 @@ if not st.session_state.session_active and not st.session_state.messages:
     with filter_cols[0]:
         cat_filter = st.selectbox("Category", ["All"] + categories, key="cat_filter")
     with filter_cols[1]:
-        sev_filter = st.selectbox("Severity", ["All", "Critical", "High", "Medium", "Low"], key="sev_filter")
+        sev_filter = st.selectbox(
+            "Severity", ["All", "Critical", "High", "Medium", "Low"], key="sev_filter"
+        )
     with filter_cols[2]:
-        sort_by = st.selectbox("Sort by", ["Default", "Name", "Severity", "Category"], key="sort_filter")
+        sort_by = st.selectbox(
+            "Sort by", ["Default", "Name", "Severity", "Category"], key="sort_filter"
+        )
     with filter_cols[3]:
-        search = st.text_input("Search", placeholder="Name or complaint...", key="search")
+        search = st.text_input(
+            "Search", placeholder="Name or complaint...", key="search"
+        )
 
     filtered = scenarios
     if cat_filter != "All":
         filtered = [s for s in filtered if s.get("category") == cat_filter]
     if sev_filter != "All":
-        filtered = [s for s in filtered if (s.get("severity") or "").lower() == sev_filter.lower()]
+        filtered = [
+            s
+            for s in filtered
+            if (s.get("severity") or "").lower() == sev_filter.lower()
+        ]
     if search:
         q = search.lower()
-        filtered = [s for s in filtered if q in s["name"].lower() or q in s["chief_complaint"].lower()]
+        filtered = [
+            s
+            for s in filtered
+            if q in s["name"].lower() or q in s["chief_complaint"].lower()
+        ]
 
     SEVERITY_ORDER = {"critical": 0, "high": 1, "medium": 2, "low": 3}
     if sort_by == "Name":
         filtered = sorted(filtered, key=lambda s: s["name"].lower())
     elif sort_by == "Severity":
-        filtered = sorted(filtered, key=lambda s: SEVERITY_ORDER.get((s.get("severity") or "").lower(), 99))
+        filtered = sorted(
+            filtered,
+            key=lambda s: SEVERITY_ORDER.get((s.get("severity") or "").lower(), 99),
+        )
     elif sort_by == "Category":
         filtered = sorted(filtered, key=lambda s: (s.get("category") or "ZZZ"))
 
@@ -271,11 +304,14 @@ if not st.session_state.session_active and not st.session_state.messages:
     paginated = filtered[page_start:page_end] if filtered else []
 
     if filtered:
-        st.caption(f"Showing {page_start + 1}–{min(page_end, len(filtered))} of {len(filtered)} patients")
+        st.caption(
+            f"Showing {page_start + 1}–{min(page_end, len(filtered))} of {len(filtered)} patients"
+        )
     else:
         st.caption("No patients match your filters")
 
-    st.markdown("""
+    st.markdown(
+        """
     <style>
     div[data-testid="stHorizontalBlock"] {
         align-items: stretch;
@@ -289,15 +325,17 @@ if not st.session_state.session_active and not st.session_state.messages:
         flex-direction: column;
     }
     </style>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
 
     COMPLAINT_MAX = 80
 
     for row_start in range(0, len(paginated), 3):
-        row_items = paginated[row_start:row_start + 3]
+        row_items = paginated[row_start : row_start + 3]
         cols = st.columns(3)
 
-        for col, s in zip(cols, row_items):
+        for col, s in zip(cols, row_items, strict=False):
             sev = (s.get("severity") or "").lower()
             badge = SEVERITY_BADGES.get(sev, "⚪ UNKNOWN")
             cat_label = s.get("category") or ""
@@ -305,20 +343,27 @@ if not st.session_state.session_active and not st.session_state.messages:
             if len(complaint) > COMPLAINT_MAX:
                 complaint = complaint[:COMPLAINT_MAX].rsplit(" ", 1)[0] + "..."
 
-            with col:
-                with st.container(border=True):
-                    st.markdown(f"**{s['name']}**")
-                    st.caption(f"{s['age']}yo {s['sex']} · {cat_label} · {badge}")
-                    st.markdown(f"*\"{complaint}\"*")
-                    if st.button("Start Assessment", key=f"sel_{s['patient_id']}", use_container_width=True):
-                        start_session(s["patient_id"])
-                        st.rerun()
+            with col, st.container(border=True):
+                st.markdown(f"**{s['name']}**")
+                st.caption(f"{s['age']}yo {s['sex']} · {cat_label} · {badge}")
+                st.markdown(f'*"{complaint}"*')
+                if st.button(
+                    "Start Assessment",
+                    key=f"sel_{s['patient_id']}",
+                    use_container_width=True,
+                ):
+                    start_session(s["patient_id"])
+                    st.rerun()
 
     if total_pages > 1:
         st.divider()
         col_prev, col_info, col_next = st.columns([1, 2, 1])
         with col_prev:
-            if st.button("← Previous", disabled=st.session_state.patient_page == 0, use_container_width=True):
+            if st.button(
+                "← Previous",
+                disabled=st.session_state.patient_page == 0,
+                use_container_width=True,
+            ):
                 st.session_state.patient_page -= 1
                 st.rerun()
         with col_info:
@@ -327,7 +372,11 @@ if not st.session_state.session_active and not st.session_state.messages:
                 unsafe_allow_html=True,
             )
         with col_next:
-            if st.button("Next →", disabled=st.session_state.patient_page >= total_pages - 1, use_container_width=True):
+            if st.button(
+                "Next →",
+                disabled=st.session_state.patient_page >= total_pages - 1,
+                use_container_width=True,
+            ):
                 st.session_state.patient_page += 1
                 st.rerun()
 
@@ -353,13 +402,16 @@ else:
         # Scope light text ONLY to the per-domain progress-bar labels
         # (◐ HPI (1q), ○ ROS (0q), etc.) — leave everything else in the
         # sidebar at its theme default.
-        st.markdown("""
+        st.markdown(
+            """
         <style>
             [data-testid="stSidebar"] [data-testid="stProgress"] p {
                 color: #F2EDE4 !important;
             }
         </style>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
         st.metric("Turns", st.session_state.turn_count)
 
@@ -371,11 +423,23 @@ else:
 
         DEPTH_ICONS = {"Missed": "○", "Surface": "◐", "Explored": "◕", "Deep": "●"}
         DOMAIN_LABELS = {
-            "HPI": "HPI", "ROS": "ROS", "PMH": "PMH",
-            "Medications": "Medications", "Allergies": "Allergies",
-            "Social_History": "Social History", "Family_History": "Family History",
+            "HPI": "HPI",
+            "ROS": "ROS",
+            "PMH": "PMH",
+            "Medications": "Medications",
+            "Allergies": "Allergies",
+            "Social_History": "Social History",
+            "Family_History": "Family History",
         }
-        _all_domains = ["HPI", "ROS", "PMH", "Medications", "Allergies", "Social_History", "Family_History"]
+        _all_domains = [
+            "HPI",
+            "ROS",
+            "PMH",
+            "Medications",
+            "Allergies",
+            "Social_History",
+            "Family_History",
+        ]
 
         for _d in _all_domains:
             _label = DOMAIN_LABELS[_d]
@@ -432,10 +496,11 @@ else:
         with st.chat_message("user"):
             st.write(prompt)
 
-        with st.chat_message("assistant", avatar="🏥"):
-            with st.spinner("Patient is responding..."):
-                send_message(prompt)
-                if st.session_state.messages:
-                    st.write(st.session_state.messages[-1]["content"])
+        with st.chat_message("assistant", avatar="🏥"), st.spinner(
+            "Patient is responding..."
+        ):
+            send_message(prompt)
+            if st.session_state.messages:
+                st.write(st.session_state.messages[-1]["content"])
 
         st.rerun()

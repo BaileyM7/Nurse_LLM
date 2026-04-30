@@ -27,11 +27,9 @@ import random
 from pathlib import Path
 
 from app.models.scenario import PatientScenario
-
-from evaluation.baselines.rule_based_patient import RuleBasedPatient
 from evaluation.baselines.few_shot_patient import FewShotPatient
 from evaluation.baselines.full_pipeline import FullPipelinePatient
-
+from evaluation.baselines.rule_based_patient import RuleBasedPatient
 
 SYSTEM_BUILDERS = {
     "rule_based": lambda sc: RuleBasedPatient(sc),
@@ -72,23 +70,26 @@ async def _respond(system, message: str) -> str:
     return await system.respond(message)
 
 
-async def run_scenario(scenario_path: Path, system_name: str,
-                       questions: list[dict]) -> list[dict]:
+async def run_scenario(
+    scenario_path: Path, system_name: str, questions: list[dict]
+) -> list[dict]:
     scenario = load_scenario(scenario_path)
     system = SYSTEM_BUILDERS[system_name](scenario)
     records = []
     try:
         for i, qobj in enumerate(questions):
             reply = await _respond(system, qobj["q"])
-            records.append({
-                "system": system_name,
-                "scenario_id": scenario.patient_id,
-                "scenario_path": str(scenario_path),
-                "turn_index": i,
-                "student": qobj["q"],
-                "gold_domain": qobj.get("domain"),
-                "patient": reply,
-            })
+            records.append(
+                {
+                    "system": system_name,
+                    "scenario_id": scenario.patient_id,
+                    "scenario_path": str(scenario_path),
+                    "turn_index": i,
+                    "student": qobj["q"],
+                    "gold_domain": qobj.get("domain"),
+                    "patient": reply,
+                }
+            )
     finally:
         if hasattr(system, "close"):
             system.close()
@@ -112,11 +113,15 @@ async def main_async(args) -> None:
 
     done = _existing_done(out_path, "system") if args.resume else set()
 
-    print(f"Running {len(systems)} systems × {len(scenario_paths)} scenarios "
-          f"× {len(questions)} questions")
+    print(
+        f"Running {len(systems)} systems × {len(scenario_paths)} scenarios "
+        f"× {len(questions)} questions"
+    )
     print(f"Output: {out_path}")
     if args.resume and done:
-        print(f"  Resuming: {len(done)} (system, scenario_id) pairs already done — skipping.")
+        print(
+            f"  Resuming: {len(done)} (system, scenario_id) pairs already done — skipping."
+        )
 
     mode = "a" if args.resume and out_path.exists() else "w"
     with open(out_path, mode) as f:
@@ -124,7 +129,10 @@ async def main_async(args) -> None:
             for system_name in systems:
                 scenario_id = sp.stem  # e.g. "case_001"
                 if (system_name, scenario_id) in done:
-                    print(f"  [{system_name}] {sp.name} — skipped (already done)", flush=True)
+                    print(
+                        f"  [{system_name}] {sp.name} — skipped (already done)",
+                        flush=True,
+                    )
                     continue
                 print(f"  [{system_name}] {sp.name}...", flush=True)
                 records = await run_scenario(sp, system_name, questions)
@@ -140,17 +148,26 @@ def main() -> None:
     parser.add_argument("--scenarios-dir", default="data/scenarios")
     parser.add_argument("--script", default="evaluation/data/interview_script.json")
     parser.add_argument("--systems", default="rule_based,few_shot,full_pipeline")
-    parser.add_argument("--limit", type=int, default=None,
-                        help="Only run first N scenarios (for quick sanity checks)")
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Only run first N scenarios (for quick sanity checks)",
+    )
     parser.add_argument("--out", default="evaluation/results/transcripts.jsonl")
-    parser.add_argument("--seed", type=int, default=42,
-                        help="Random seed (default: 42).")
-    parser.add_argument("--resume", action="store_true",
-                        help="Skip scenarios already present in the output JSONL.")
+    parser.add_argument(
+        "--seed", type=int, default=42, help="Random seed (default: 42)."
+    )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Skip scenarios already present in the output JSONL.",
+    )
     args = parser.parse_args()
     random.seed(args.seed)
     try:
         import numpy as np
+
         np.random.seed(args.seed)
     except ImportError:
         pass

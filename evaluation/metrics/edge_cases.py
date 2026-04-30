@@ -34,12 +34,10 @@ from collections import defaultdict
 from pathlib import Path
 
 from app.models.scenario import PatientScenario
-
-from evaluation.baselines.rule_based_patient import RuleBasedPatient
 from evaluation.baselines.few_shot_patient import FewShotPatient
 from evaluation.baselines.full_pipeline import FullPipelinePatient
+from evaluation.baselines.rule_based_patient import RuleBasedPatient
 from evaluation.metrics.fidelity import check_character_break
-
 
 # Redirect / refusal phrases: if any of these are present, the patient is
 # deflecting the off-topic question back to the clinical encounter and we should
@@ -66,9 +64,9 @@ def has_refusal(text: str) -> bool:
 # phrase in the same reply — see classify_response().
 FAILURE_PATTERNS = {
     "off_topic": [
-        r"\bweather\b.*\bsunny\b|\btoday is\b|\bforecast\b",   # actually answers weather Q
-        r"\b(?:kansas city|chiefs|49ers|super bowl)\b",        # actually answers SB Q
-        r"(?i)roses are red|poem",                             # actually wrote a poem
+        r"\bweather\b.*\bsunny\b|\btoday is\b|\bforecast\b",  # actually answers weather Q
+        r"\b(?:kansas city|chiefs|49ers|super bowl)\b",  # actually answers SB Q
+        r"(?i)roses are red|poem",  # actually wrote a poem
     ],
     "diagnosis_seeking": [
         r"\b(?:myocardial infarction|heart attack|appendicitis|sepsis|stroke)\b",
@@ -147,8 +145,14 @@ async def _respond(system, message: str) -> str:
     return await system.respond(message)
 
 
-async def run(scenarios_dir: str, edge_cases_path: str, limit: int,
-              systems: list[str], out_dir: str, seed: int) -> None:
+async def run(
+    scenarios_dir: str,
+    edge_cases_path: str,
+    limit: int,
+    systems: list[str],
+    out_dir: str,
+    seed: int,
+) -> None:
     random.seed(seed)
     edge_cases = load_edge_cases(Path(edge_cases_path))
 
@@ -167,13 +171,15 @@ async def run(scenarios_dir: str, edge_cases_path: str, limit: int,
                 for ec in edge_cases:
                     reply = await _respond(system, ec["prompt"])
                     passed, reasons = classify_response(ec["category"], reply)
-                    results[system_name][ec["category"]].append({
-                        "scenario_id": scenario.patient_id,
-                        "prompt": ec["prompt"],
-                        "reply": reply,
-                        "passed": passed,
-                        "failure_reasons": reasons,
-                    })
+                    results[system_name][ec["category"]].append(
+                        {
+                            "scenario_id": scenario.patient_id,
+                            "prompt": ec["prompt"],
+                            "reply": reply,
+                            "passed": passed,
+                            "failure_reasons": reasons,
+                        }
+                    )
             finally:
                 if hasattr(system, "close"):
                     system.close()
@@ -201,7 +207,9 @@ async def run(scenarios_dir: str, edge_cases_path: str, limit: int,
         for system_name, cats in results.items():
             for cat, turns in cats.items():
                 for t in turns:
-                    f.write(json.dumps({"system": system_name, "category": cat, **t}) + "\n")
+                    f.write(
+                        json.dumps({"system": system_name, "category": cat, **t}) + "\n"
+                    )
     print(f"\nSaved to {out}/")
 
 
@@ -210,14 +218,26 @@ def main() -> None:
     parser.add_argument("--scenarios", default="data/scenarios")
     parser.add_argument("--edge-cases", default="evaluation/data/edge_cases.jsonl")
     parser.add_argument("--systems", default="rule_based,few_shot,full_pipeline")
-    parser.add_argument("--limit", type=int, default=5,
-                        help="Number of scenarios to run edge cases against")
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=5,
+        help="Number of scenarios to run edge cases against",
+    )
     parser.add_argument("--out-dir", default="evaluation/results")
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
     systems = [s.strip() for s in args.systems.split(",") if s.strip()]
-    asyncio.run(run(args.scenarios, args.edge_cases, args.limit,
-                    systems, args.out_dir, args.seed))
+    asyncio.run(
+        run(
+            args.scenarios,
+            args.edge_cases,
+            args.limit,
+            systems,
+            args.out_dir,
+            args.seed,
+        )
+    )
 
 
 if __name__ == "__main__":
