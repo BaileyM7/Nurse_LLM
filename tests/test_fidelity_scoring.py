@@ -24,11 +24,6 @@ def case_001() -> dict:
         return json.load(f)
 
 
-# ---------------------------------------------------------------------------
-# check_character_break
-# ---------------------------------------------------------------------------
-
-
 def test_no_character_break_clean_response(case_001):
     """A normal patient response should return no character-break hits."""
     patient_text = "I've had this chest pressure for about two hours. It feels like someone is sitting on my chest."
@@ -52,11 +47,6 @@ def test_character_break_language_model(case_001):
     """Acknowledging being a language model triggers a break."""
     hits = check_character_break("I'm a language model and cannot feel pain.")
     assert len(hits) > 0
-
-
-# ---------------------------------------------------------------------------
-# check_hallucinated_symptoms
-# ---------------------------------------------------------------------------
 
 
 def test_no_hallucination_for_present_symptoms(case_001):
@@ -88,11 +78,6 @@ def test_allergy_context_not_hallucinated(case_001):
     patient_text = "I'm allergic to Penicillin, it causes a rash."
     halluc = check_hallucinated_symptoms(patient_text, case_001)
     assert "rash" not in halluc
-
-
-# ---------------------------------------------------------------------------
-# score_turn
-# ---------------------------------------------------------------------------
 
 
 def test_score_turn_faithful_clean(case_001):

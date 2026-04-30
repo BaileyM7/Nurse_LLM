@@ -1,15 +1,6 @@
-"""
-Error analysis — reads the per-turn fidelity details produced by
-metrics/fidelity.py and produces:
+"""Error analysis — failure rates, hallucinated terms, and char-break patterns from fidelity JSONL.
 
-  (a) failure rate per scenario (which cases trip the patient up?)
-  (b) most common hallucinated symptoms (confusion patterns)
-  (c) character-break frequency per system
-  (d) 5 qualitative failure examples per system (verbatim) for the report
-
-Usage:
-    python -m evaluation.metrics.error_analysis \\
-        evaluation/results/fidelity_details.jsonl
+Usage: python -m evaluation.metrics.error_analysis evaluation/results/fidelity_details.jsonl
 """
 
 from __future__ import annotations

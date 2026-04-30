@@ -1,9 +1,4 @@
-"""
-Full pipeline adapter: wraps the existing app.services.llm_service.LLMService so
-the evaluation runner has a uniform interface across all three systems.
-
-Does NOT modify the app — only imports from it.
-"""
+"""Full pipeline adapter — wraps LLMService for uniform evaluation interface."""
 
 from __future__ import annotations
 

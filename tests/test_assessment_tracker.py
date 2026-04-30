@@ -1,20 +1,7 @@
-"""Tests for AssessmentTracker depth-weighted scoring.
-
-Actual thresholds from app/models/assessment.py:
-  0 questions  -> depth "Missed",   score 0.0
-  1 question   -> depth "Surface",  score 50.0
-  2-3 questions -> depth "Explored", score 80.0
-  4+ questions -> depth "Deep",     score 100.0
-
-Coverage score = mean depth_score across all 7 domains.
-"""
+"""Tests for AssessmentTracker depth-weighted scoring and domain coverage."""
 
 from app.models.assessment import ASSESSMENT_DOMAINS, depth_label, depth_score
 from app.services.assessment_service import AssessmentTracker
-
-# ---------------------------------------------------------------------------
-# depth_label and depth_score — unit tests for the pure functions
-# ---------------------------------------------------------------------------
 
 
 def test_depth_label_zero():
@@ -59,11 +46,6 @@ def test_depth_score_three():
 
 def test_depth_score_four():
     assert depth_score(4) == 100.0
-
-
-# ---------------------------------------------------------------------------
-# AssessmentTracker.update — integration of domain recording
-# ---------------------------------------------------------------------------
 
 
 def test_fresh_tracker_has_zero_score():

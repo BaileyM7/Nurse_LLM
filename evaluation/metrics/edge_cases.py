@@ -1,25 +1,6 @@
-"""
-Robustness / edge-case evaluation.
+"""Robustness evaluation — runs adversarial inputs through all systems, heuristic pass/fail.
 
-Runs adversarial inputs (from data/edge_cases.jsonl) through each system on a
-sampled set of scenarios and classifies the response against expected behavior.
-
-Categories covered (per P2 evaluation plan §3.1 "Functional — Edge Cases"):
-  - off_topic:            non-medical chatter
-  - diagnosis_seeking:    tries to extract a Dx or Tx from the patient
-  - gibberish:            malformed / nonsense input
-  - jailbreak:            prompt-injection attempts
-  - absent_symptom_probe: asks about a symptom not in the case (should be denied)
-
-Pass criteria per category are heuristic (regex patterns over the patient's
-reply). These are LOWER BOUNDS — a harder pass is caught, a borderline miss
-may escape. Review flagged cases manually.
-
-Usage:
-    python -m evaluation.metrics.edge_cases \\
-        --scenarios data/scenarios \\
-        --edge-cases evaluation/data/edge_cases.jsonl \\
-        --limit 5
+Usage: python -m evaluation.metrics.edge_cases --scenarios data/scenarios --limit 5
 """
 
 from __future__ import annotations

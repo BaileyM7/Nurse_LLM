@@ -1,18 +1,6 @@
-"""
-Student engagement metrics, computed from the production SQLite DB
-(data/nurse_llm.db) that the FastAPI app writes to.
+"""Student engagement metrics from SQLite DB — avg turns, completion rate, duration.
 
-Measures (P2 targets):
-  - avg turns per session     (target ≥15)
-  - session completion rate    (target ≥80%, = sessions with status="ended" / total)
-  - avg session duration (min)
-  - turns/session distribution
-
-This reads but never writes to the DB. Safe to run against live data.
-
-Usage:
-    python -m evaluation.metrics.engagement
-    python -m evaluation.metrics.engagement --db data/nurse_llm.db --out-dir evaluation/results
+Usage: python -m evaluation.metrics.engagement [--db data/nurse_llm.db]
 """
 
 from __future__ import annotations

@@ -7,13 +7,7 @@ from app.models.assessment import (
 
 
 class AssessmentTracker:
-    """
-    Tracks which clinical assessment domains a student has explored during a session.
-
-    Supports multi-label classification (a single question can cover multiple domains)
-    and depth-weighted scoring (exploring a domain deeply counts more than one surface
-    question).
-    """
+    """Tracks per-domain coverage; emits a depth-weighted score."""
 
     def __init__(self):
         self.result = AssessmentResult(
@@ -25,13 +19,7 @@ class AssessmentTracker:
     def update(
         self, domains: list[str], confidence: float, student_message: str
     ) -> None:
-        """Record that a student explored one or more domains in a single question.
-
-        Args:
-            domains: list of domain names (supports multi-label)
-            confidence: classifier's confidence (0.0-1.0). Below 0.3, we skip.
-            student_message: the raw question text (stored truncated for feedback)
-        """
+        """Record that a student explored one or more domains; skips if confidence < 0.3."""
         if confidence < 0.3:
             return
 

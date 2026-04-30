@@ -1,24 +1,6 @@
-"""
-Response fidelity: does the simulated patient stay in character and only mention
-symptoms that are actually in the scenario?
+"""Response fidelity — checks each patient turn for hallucinated symptoms and character breaks.
 
-Two automatic checks per patient turn:
-  1. Hallucinated symptom: mentions a symptom listed in `symptoms_absent`, or
-     mentions a body-system symptom not in `symptoms_present` and not in a
-     generic "I'm fine" denial.
-  2. Character break: uses AI-disclosure language ("as an AI", "I'm a language
-     model"), gives explicit diagnostic/treatment advice, or uses meta-commentary.
-
-This is a LOWER BOUND on true fidelity — a human rater may still disagree on
-ambiguous cases. Pair with manual annotation of ~100 turns (Phase 2) to
-validate that this auto-check correlates with human judgment.
-
-Usage:
-    python -m evaluation.metrics.fidelity <transcripts.jsonl> [--out results/fidelity.csv]
-
-Transcript JSONL format (one record per patient turn):
-    {"system": "full_pipeline", "scenario_id": "case_001",
-     "student": "...", "patient": "...", "scenario_path": "data/scenarios/case_001.json"}
+Usage: python -m evaluation.metrics.fidelity <transcripts.jsonl> [--out results/fidelity.csv]
 """
 
 from __future__ import annotations
@@ -142,12 +124,7 @@ def check_character_break(patient_text: str) -> list[str]:
 
 
 def _strip_allergy_context(text: str) -> str:
-    """
-    Return `text` with parenthetical content removed and sentences describing
-    allergic reactions / drug side effects dropped. These are where the auto-
-    checker gets false positives: "Penicillin (rash)" is not a claim that the
-    patient currently has a rash.
-    """
+    """Strip parentheticals and allergy-reaction sentences to avoid false-positive hallucinations."""
     # Remove parenthetical content: "Penicillin (rash)" -> "Penicillin "
     stripped = re.sub(r"\([^)]*\)", "", text)
     kept = []
@@ -160,17 +137,7 @@ def _strip_allergy_context(text: str) -> str:
 
 
 def check_hallucinated_symptoms(patient_text: str, scenario: dict) -> list[str]:
-    """
-    Return list of absent-symptom phrases the patient affirmatively claims.
-
-    Heuristic: the patient's sentence mentions a PHRASE from `symptoms_absent`
-    (matched as a whole phrase, not individual tokens) without a denial word in
-    the same sentence, and not inside an allergy-reaction clause.
-
-    Phrase matching (rather than token matching) eliminates false positives
-    like "back" matching "C-sections back in 1985" when the actual absent
-    symptom is "back pain".
-    """
+    """Return absent-symptom phrases the patient affirmatively claims (phrase match, not token)."""
     cleaned = _strip_allergy_context(patient_text)
     absent_phrases = [
         s.strip().lower()

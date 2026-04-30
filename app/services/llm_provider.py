@@ -1,16 +1,4 @@
-"""LLM provider factory — supports OpenAI and Gemini.
-
-Usage:
-    from app.services.llm_provider import create_chat_model, create_feedback_model
-
-    chat_llm = create_chat_model(temperature=0.7)       # fast tier
-    feedback_llm = create_feedback_model(temperature=0.3)  # quality tier
-
-The provider is selected via the `LLM_PROVIDER` env var (or Streamlit secret),
-defaulting to "openai". Each tier uses a different model size:
-- fast tier: gpt-4o-mini / gemini-1.5-flash — patient sim + domain classification
-- quality tier: gpt-4o / gemini-1.5-pro — end-of-session feedback
-"""
+"""Provider factory for OpenAI and Gemini; fast tier for chat, quality tier for feedback."""
 
 from langchain_openai import ChatOpenAI
 
@@ -76,11 +64,7 @@ def create_chat_model(temperature: float):
 
 
 def create_feedback_model(temperature: float):
-    """Quality tier: end-of-session feedback generation.
-
-    Uses a larger model since feedback is the student-facing deliverable
-    and quality matters more than latency/cost for this single call per session.
-    """
+    """Quality tier: end-of-session feedback (one call per session, bigger model)."""
     provider = get_provider_name()
     if provider == "gemini":
         return _build_gemini(settings.gemini_feedback_model, temperature)
@@ -88,9 +72,5 @@ def create_feedback_model(temperature: float):
 
 
 def supports_json_mode() -> bool:
-    """Whether the current provider supports OpenAI-style `response_format` JSON mode.
-
-    Gemini handles JSON via `response_mime_type` at construction time, not via
-    a runtime `.bind()`. Callers that care can branch on this helper.
-    """
+    """True for OpenAI; Gemini uses response_mime_type at construction instead."""
     return get_provider_name() == "openai"

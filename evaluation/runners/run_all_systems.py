@@ -1,25 +1,6 @@
-"""
-Run the standard interview script through all three systems (rule_based,
-few_shot, full_pipeline) on every scenario, and write a JSONL of patient
-turns that `metrics/fidelity.py` can consume.
+"""Run all three systems on every scenario, writing patient-turn JSONL for fidelity.py.
 
-Each line of the output JSONL:
-  {"system": "...", "scenario_id": "case_001",
-   "scenario_path": "data/scenarios/case_001.json",
-   "turn_index": 3, "student": "...", "patient": "..."}
-
-Usage:
-    python -m evaluation.runners.run_all_systems
-    python -m evaluation.runners.run_all_systems --limit 5   # first 5 scenarios only
-    python -m evaluation.runners.run_all_systems --systems rule_based,full_pipeline
-
-Costs: each scenario × each LLM-based system = ~20 API calls. Full run with
-39 scenarios × 2 LLM systems ≈ 1,560 gpt-4o-mini calls. Use --limit for a
-sanity check before running everything.
-
-Error handling: if a single scenario fails (LLM error, malformed file, etc.),
-the error is logged to evaluation/results/errors.log and the run continues
-with the remaining scenarios. The whole batch is never aborted for one failure.
+Usage: python -m evaluation.runners.run_all_systems [--limit 5] [--systems rule_based,full_pipeline]
 """
 
 from __future__ import annotations

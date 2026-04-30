@@ -1,22 +1,6 @@
-"""
-Final report generator.
+"""Consolidate metric CSVs into a single markdown report.
 
-Reads the CSVs and JSONL artifacts produced by the metric scripts and emits
-one consolidated markdown report with:
-
-  1. Headline table: systems × metrics, best marked **bold**, second-best *italic*.
-  2. Confusion matrix reference (if present).
-  3. Ablation delta table (if present).
-  4. Edge-case pass rates (if present).
-  5. Auto-generated one-sentence conclusion.
-  6. Top 5 qualitative failure examples per system.
-
-All numbers come from files on disk — this script never re-runs the LLM. Run
-the metric scripts first, then this.
-
-Usage:
-    python -m evaluation.reports.generate_report
-    python -m evaluation.reports.generate_report --results-dir evaluation/results
+Usage: python -m evaluation.reports.generate_report [--results-dir evaluation/results]
 """
 
 from __future__ import annotations

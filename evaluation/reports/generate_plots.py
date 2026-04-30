@@ -1,17 +1,6 @@
-"""
-Presentation-ready table and plots, generated from CSVs already on disk.
+"""Generate presentation plots from metric CSVs already on disk.
 
-Outputs (to evaluation/results/):
-  - results_table.png       : rendered headline table with best/2nd-best markers
-  - headline_plot.png       : primary plot — grouped bar chart, systems × fidelity
-                              metrics, with the 90% target line
-  - robustness_plot.png     : edge-case pass rate heatmap (system × category)
-  - ablation_plot.png       : Δ-fidelity from removing each component
-
-Run AFTER the metric scripts have written their CSVs.
-
-Usage:
-    python -m evaluation.reports.generate_plots
+Usage: python -m evaluation.reports.generate_plots
 """
 
 from __future__ import annotations
@@ -42,9 +31,6 @@ def _read_csv(path: Path) -> list[dict]:
         return []
     with open(path) as f:
         return list(csv.DictReader(f))
-
-
-# --- 1. Headline results table (rendered as an image) -----------------------
 
 
 def render_results_table(fidelity: list[dict], out_path: Path) -> None:
@@ -128,9 +114,6 @@ def render_results_table(fidelity: list[dict], out_path: Path) -> None:
     print(f"  wrote {out_path}")
 
 
-# --- 2. Primary plot: grouped bar chart -------------------------------------
-
-
 def render_headline_plot(fidelity: list[dict], out_path: Path) -> None:
     if not fidelity:
         print(f"  skip {out_path.name}: no fidelity data")
@@ -184,9 +167,6 @@ def render_headline_plot(fidelity: list[dict], out_path: Path) -> None:
     print(f"  wrote {out_path}")
 
 
-# --- 3. Robustness heatmap --------------------------------------------------
-
-
 def render_robustness_plot(edge: list[dict], out_path: Path) -> None:
     if not edge:
         print(f"  skip {out_path.name}: no edge-case data")
@@ -225,9 +205,6 @@ def render_robustness_plot(edge: list[dict], out_path: Path) -> None:
     fig.savefig(out_path, dpi=180, bbox_inches="tight")
     plt.close(fig)
     print(f"  wrote {out_path}")
-
-
-# --- 4. Ablation plot -------------------------------------------------------
 
 
 def render_ablation_plot(ablation: list[dict], out_path: Path) -> None:

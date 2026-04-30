@@ -7,10 +7,6 @@ import pytest
 
 from app.services.domain_classifier import ClassificationResult, classify_by_keywords
 
-# ---------------------------------------------------------------------------
-# classify_by_keywords — parametrized happy-path cases
-# ---------------------------------------------------------------------------
-
 
 @pytest.mark.parametrize(
     "question,expected_domain",

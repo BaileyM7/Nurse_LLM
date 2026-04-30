@@ -14,10 +14,6 @@ import app.services.feedback_service as feedback_service_module
 from app.models.assessment import ASSESSMENT_DOMAINS, AssessmentResult, DomainCoverage
 from app.models.session import ChatMessage, MessageRole
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
 
 def _make_assessment(domains_covered=None) -> AssessmentResult:
     """Build a minimal AssessmentResult with some domains covered."""
@@ -86,11 +82,6 @@ def _canned_feedback_json(session_id: str) -> str:
             "summary": "The student covered basic HPI and PMH but missed 5 of 7 domains.",
         }
     )
-
-
-# ---------------------------------------------------------------------------
-# Test: FeedbackService.generate_feedback with mocked LLM
-# ---------------------------------------------------------------------------
 
 
 @pytest.mark.asyncio

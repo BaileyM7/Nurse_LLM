@@ -1,12 +1,4 @@
-"""Domain classifier for student questions.
-
-Two-stage pipeline:
-1. Keyword rules handle clear cases instantly (cheap, deterministic)
-2. Dedicated LLM call handles ambiguous cases (focused prompt, multi-label)
-
-The previous approach piggy-backed classification on the patient-simulation call,
-which forced one LLM to juggle two tasks. Separating them improves accuracy.
-"""
+"""Two-stage domain classifier: keyword rules first, LLM fallback for ambiguous cases."""
 
 from __future__ import annotations
 
@@ -28,15 +20,7 @@ class ClassificationResult:
     source: str = "none"  # "keyword", "llm", or "none"
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Stage 1: Keyword rules
-# ─────────────────────────────────────────────────────────────────────────────
-#
-# Each rule is a regex that matches a clear signal of a domain. Rules are
-# intentionally specific — we'd rather fall through to the LLM than mis-tag.
-#
-# Ordering matters: more specific rules first.
-
+# Stage 1 — intentionally specific; we'd rather fall through to LLM than mis-tag.
 KEYWORD_RULES: dict[str, list[str]] = {
     "Medications": [
         r"\b(medication|medicine|pill|prescription|drug|rx)\b",
@@ -101,10 +85,6 @@ def classify_by_keywords(message: str) -> list[str]:
             matches.append(domain)
     return matches
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Stage 2: LLM classifier (for ambiguous cases)
-# ─────────────────────────────────────────────────────────────────────────────
 
 CLASSIFIER_PROMPT = """You classify nursing-student questions into clinical assessment domains.
 

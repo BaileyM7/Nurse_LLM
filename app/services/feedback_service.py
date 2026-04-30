@@ -62,12 +62,7 @@ Respond with valid JSON in this exact format:
 
 
 class FeedbackService:
-    """Generates post-session feedback reports using a high-quality model.
-
-    Uses the configured provider's quality tier (gpt-4o or gemini-1.5-pro)
-    because feedback is the student-facing deliverable — worth the extra cost
-    for one call per session.
-    """
+    """Generates post-session feedback using the quality-tier model (gpt-4o / gemini-1.5-pro)."""
 
     def __init__(self):
         # Provider-agnostic quality tier — gpt-4o for OpenAI, gemini-1.5-pro for Gemini
@@ -118,9 +113,7 @@ class FeedbackService:
             differential=json.dumps(scenario.rubric.differential_diagnoses),
         )
 
-        # OpenAI supports `response_format={"type": "json_object"}` as a runtime bind.
-        # Gemini doesn't — it uses `response_mime_type` at construction time.
-        # For Gemini we rely on the prompt + markdown-fence stripping below.
+        # Gemini uses response_mime_type at construction; OpenAI uses runtime bind.
         llm = (
             self._llm.bind(response_format={"type": "json_object"})
             if supports_json_mode()

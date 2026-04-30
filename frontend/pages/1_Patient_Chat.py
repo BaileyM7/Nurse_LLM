@@ -35,7 +35,6 @@ from app.services.llm_service import llm_service  # noqa: E402
 from app.services.scenario_service import scenario_service  # noqa: E402
 from app.services.session_manager import session_manager  # noqa: E402
 
-# ── Session State Initialization ───────────────────────────────────────
 if "session_id" not in st.session_state:
     st.session_state.session_id = None
 if "messages" not in st.session_state:
@@ -64,7 +63,6 @@ if "session_duration" not in st.session_state:
     st.session_state.session_duration = 0
 
 
-# ── Helper Functions ───────────────────────────────────────────────────
 def fetch_scenarios():
     try:
         summaries = scenario_service.list_scenarios()
@@ -155,10 +153,7 @@ def send_message(message: str):
         st.session_state.turn_count = session["turn_count"]
         st.session_state.domains_covered = session["tracker"].get_covered_domains()
 
-        # Merge vitals — the rule-based extractor uses human-formatted keys
-        # like "Pain Scale: 7/10" (preferred), while the LLM's Pydantic schema
-        # dumps raw snake_case keys like "pain_scale: 7.0". De-dup by dropping
-        # snake_case keys whose Title Case equivalent already exists.
+        # De-dup: prefer Title Case keys (rule-based) over snake_case (LLM schema).
         if patient_response.vitals_revealed:
             for k, v in patient_response.vitals_revealed.items():
                 title_key = k.replace("_", " ").title()
@@ -233,9 +228,7 @@ def prettify_label(key: str) -> str:
     return key.replace("_", " ").title()
 
 
-# ───────────────────────────────────────────────────────────────────────
 # MODE 1: Patient Selection
-# ───────────────────────────────────────────────────────────────────────
 if not st.session_state.session_active and not st.session_state.messages:
     st.title("Select a Patient")
 
@@ -381,9 +374,7 @@ if not st.session_state.session_active and not st.session_state.messages:
                 st.rerun()
 
 
-# ───────────────────────────────────────────────────────────────────────
 # MODE 2: Session complete
-# ───────────────────────────────────────────────────────────────────────
 elif not st.session_state.session_active and st.session_state.messages:
     st.title("Session Complete")
     st.success("Go to **Session Review** in the sidebar to see your feedback.")
@@ -394,14 +385,10 @@ elif not st.session_state.session_active and st.session_state.messages:
         st.rerun()
 
 
-# ───────────────────────────────────────────────────────────────────────
 # MODE 3: Active chat session
-# ───────────────────────────────────────────────────────────────────────
 else:
     with st.sidebar:
-        # Scope light text ONLY to the per-domain progress-bar labels
-        # (◐ HPI (1q), ○ ROS (0q), etc.) — leave everything else in the
-        # sidebar at its theme default.
+        # Light text scoped only to progress-bar labels; theme default everywhere else.
         st.markdown(
             """
         <style>

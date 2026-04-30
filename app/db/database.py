@@ -17,11 +17,7 @@ _CONNECT_ARGS = {"check_same_thread": False}
 
 
 def _is_sqlite_corruption(exc: Exception) -> bool:
-    """Detect SQLite corruption errors via the underlying message.
-
-    Returns True only for genuine data-corruption conditions
-    (SQLITE_CORRUPT / SQLITE_NOTADB), not for permission or I/O errors.
-    """
+    """True only for SQLITE_CORRUPT / SQLITE_NOTADB — not permission or I/O errors."""
     orig = getattr(exc, "orig", None)
     if orig is None:
         return False
@@ -30,7 +26,7 @@ def _is_sqlite_corruption(exc: Exception) -> bool:
 
 
 def _make_engine(url: str):
-    """Create a SQLAlchemy engine, recovering gracefully from a corrupt SQLite file."""
+    """Create engine; auto-recovers from corrupt SQLite by moving the file aside."""
     try:
         eng = create_engine(url, connect_args=_CONNECT_ARGS)
         # Quick health-check — catches corrupt-file errors at import time.

@@ -101,11 +101,6 @@ def test_invalid_pain_scale_raises_validation_error():
         PatientScenario(**raw)
 
 
-# ---------------------------------------------------------------------------
-# scenario_service.load_scenario — file-path context in error message
-# ---------------------------------------------------------------------------
-
-
 def test_malformed_scenario_includes_filename(tmp_path):
     """load_scenario should include the offending file name in the error message."""
     bad = tmp_path / "case_bad.json"

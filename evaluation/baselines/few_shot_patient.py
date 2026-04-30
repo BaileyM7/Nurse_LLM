@@ -1,10 +1,4 @@
-"""
-Few-shot LLM baseline: GPT-4o-mini with a minimal 3-shot prompt, scenario
-context injected, BUT no assessment tracker and no feedback generator.
-
-Isolates the added value of the full pipeline's tracker + feedback layer.
-Returns only the dialogue string; no structured output.
-"""
+"""Few-shot LLM baseline: 3-shot prompt + scenario context, no tracker or feedback."""
 
 from __future__ import annotations
 

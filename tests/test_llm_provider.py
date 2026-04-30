@@ -15,10 +15,6 @@ from app.services.llm_provider import (
     supports_json_mode,
 )
 
-# ---------------------------------------------------------------------------
-# Missing-key error paths
-# ---------------------------------------------------------------------------
-
 
 def test_missing_openai_key_raises_value_error():
     """create_chat_model with openai provider and no key should raise ValueError."""
@@ -99,11 +95,6 @@ def test_missing_gemini_feedback_key_raises_value_error():
         create_feedback_model(temperature=0.3)
 
 
-# ---------------------------------------------------------------------------
-# get_provider_name
-# ---------------------------------------------------------------------------
-
-
 def test_get_provider_name_openai():
     mock_settings = MagicMock()
     mock_settings.llm_provider = "openai"
@@ -136,11 +127,6 @@ def test_get_provider_name_whitespace_stripped():
         assert get_provider_name() == "openai"
 
 
-# ---------------------------------------------------------------------------
-# supports_json_mode
-# ---------------------------------------------------------------------------
-
-
 def test_supports_json_mode_true_for_openai():
     mock_settings = MagicMock()
     mock_settings.llm_provider = "openai"
@@ -153,11 +139,6 @@ def test_supports_json_mode_false_for_gemini():
     mock_settings.llm_provider = "gemini"
     with patch.object(llm_provider_module, "settings", mock_settings):
         assert supports_json_mode() is False
-
-
-# ---------------------------------------------------------------------------
-# Gemini unavailable path
-# ---------------------------------------------------------------------------
 
 
 def test_gemini_unavailable_raises_import_error():

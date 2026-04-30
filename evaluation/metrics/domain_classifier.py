@@ -1,21 +1,6 @@
-"""
-Domain classification accuracy.
+"""Domain classification accuracy — runs labeled JSONL through the LLM classifier, reports P/R/F1.
 
-Takes a labeled JSONL file of student questions with gold domain labels, runs
-each question through the same LLM prompt the full pipeline uses, then reports
-accuracy, per-domain precision/recall/F1, and a confusion matrix.
-
-Maps to P2 success criterion: "Assessment domain classification accuracy ≥85%".
-
-Label file format (JSONL, one record per question):
-    {"question": "Any chest pain?", "gold_domain": "HPI"}
-    {"question": "Any allergies to medications?", "gold_domain": "Allergies"}
-
-Valid gold labels: HPI, ROS, PMH, Medications, Allergies, Social_History,
-Family_History, conversational.
-
-Usage:
-    python -m evaluation.metrics.domain_classifier <labels.jsonl>
+Usage: python -m evaluation.metrics.domain_classifier <labels.jsonl>
 """
 
 from __future__ import annotations

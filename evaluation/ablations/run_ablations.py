@@ -1,24 +1,6 @@
-"""
-Ablation study: vary one component of the full pipeline at a time and measure
-the impact on response fidelity. Maps to the P2 rubric's "what drives
-improvement" diagnostic.
+"""Ablation study — vary one pipeline component at a time, measure fidelity impact.
 
-Ablations implemented (see METHODOLOGY.md §3):
-  - baseline_full:          unmodified full pipeline (reference)
-  - no_memory:              drop conversation history between turns
-  - temp_0:                 temperature 0.0 (more conservative)
-  - minimal_prompt:         strip personality / communication-style from persona
-
-Each variant runs the standard interview script against the same sampled
-scenarios, writes transcripts, and fidelity is scored by metrics.fidelity.
-
-The goal is to answer: "if we remove component X, how much does fidelity drop?"
-A small drop = X isn't pulling its weight. A big drop = X is load-bearing.
-
-Usage:
-    python -m evaluation.ablations.run_ablations --limit 5
-    python -m evaluation.ablations.run_ablations \\
-        --variants baseline_full,no_memory,temp_0
+Usage: python -m evaluation.ablations.run_ablations --limit 5 [--variants baseline_full,no_memory]
 """
 
 from __future__ import annotations
@@ -39,8 +21,6 @@ from app.services.llm_service import (
     LLMService,
     _build_system_prompt,
 )
-
-# --- Ablation variants ------------------------------------------------------
 
 
 class BaselineFull:
@@ -157,9 +137,6 @@ class MinimalPrompt:
 
 
 VARIANTS = {v.name: v for v in [BaselineFull, NoMemory, Temp0, MinimalPrompt]}
-
-
-# --- Runner ------------------------------------------------------------------
 
 
 def _existing_done(out_path: Path, key_field: str) -> set[tuple[str, str]]:

@@ -77,13 +77,7 @@ class AssessmentRubric(BaseModel):
 
 
 class PatientScenario(BaseModel):
-    """
-    Full patient scenario definition.
-
-    This is the core data contract — every patient case JSON must conform to this schema.
-    The LLM service uses this to construct the patient persona, and the assessment tracker
-    uses the rubric to score student performance.
-    """
+    """Full patient scenario — core data contract for persona construction and rubric scoring."""
 
     # Identity
     patient_id: str = Field(..., description="Unique case identifier, e.g. 'case_001'")

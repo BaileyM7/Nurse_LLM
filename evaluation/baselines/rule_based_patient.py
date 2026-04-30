@@ -1,13 +1,4 @@
-"""
-Rule-based baseline: keyword → canned response.
-
-No LLM. No personality. No conversation memory. Serves as the floor in the
-baseline comparison per the P2 evaluation plan. A student question is matched
-against a small dictionary of keywords and returned with a scripted answer
-sourced directly from the scenario JSON.
-
-This will lose to both other systems — that's the point.
-"""
+"""Rule-based baseline (floor): keyword match → scripted reply from scenario JSON, no LLM."""
 
 from __future__ import annotations
 
