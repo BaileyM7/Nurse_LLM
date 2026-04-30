@@ -148,6 +148,21 @@ VARIANTS = {v.name: v for v in [BaselineFull, NoMemory, Temp0, MinimalPrompt]}
 
 # --- Runner ------------------------------------------------------------------
 
+def _existing_done(out_path: Path, key_field: str) -> set[tuple[str, str]]:
+    """Return set of (key_value, scenario_id) tuples already written to out_path."""
+    done: set[tuple[str, str]] = set()
+    if not out_path.exists():
+        return done
+    with open(out_path, encoding="utf-8") as f:
+        for line in f:
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            done.add((row[key_field], row["scenario_id"]))
+    return done
+
+
 def load_scenario(path: Path) -> PatientScenario:
     with open(path) as f:
         return PatientScenario(**json.load(f))
@@ -195,12 +210,21 @@ async def main_async(args) -> None:
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
+    done = _existing_done(out_path, "system") if args.resume else set()
+
     print(f"Running {len(variants)} variants × {len(scenario_paths)} scenarios "
           f"× {len(questions)} questions → {out_path}")
+    if args.resume and done:
+        print(f"  Resuming: {len(done)} (system, scenario_id) pairs already done — skipping.")
 
-    with open(out_path, "w") as f:
+    mode = "a" if args.resume and out_path.exists() else "w"
+    with open(out_path, mode) as f:
         for sp in scenario_paths:
             for name in variants:
+                scenario_id = sp.stem  # e.g. "case_001"
+                if (name, scenario_id) in done:
+                    print(f"  [{name}] {sp.name} — skipped (already done)", flush=True)
+                    continue
                 print(f"  [{name}] {sp.name}", flush=True)
                 records = await run_scenario(sp, name, questions)
                 for r in records:
@@ -218,6 +242,8 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=5)
     parser.add_argument("--out", default="evaluation/results/ablation_transcripts.jsonl")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--resume", action="store_true",
+                        help="Skip scenarios already present in the output JSONL.")
     args = parser.parse_args()
     asyncio.run(main_async(args))
 

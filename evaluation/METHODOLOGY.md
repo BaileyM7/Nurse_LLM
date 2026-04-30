@@ -117,7 +117,7 @@ Minimum versions pinned in `evaluation/requirements.txt` (in addition to the cor
 
 - **LLM determinism.** The domain classifier in `metrics/domain_classifier.py` uses `temperature=0.0` so repeated runs produce identical outputs modulo OpenAI's internal non-determinism. The patient simulation uses `temperature=0.7` by design — reproducibility there comes from *distribution-level* metrics (fidelity rate over hundreds of turns), not from reproducing individual turns. We report mean ± std across 3 runs in the final report.
 - **Random seeds.** Python `random.seed(42)` and `numpy.random.seed(42)` set at the top of `runners/run_all_systems.py` and `ablations/run_ablations.py`. Scenarios are iterated in sorted filename order.
-- **Checkpointing.** Each system × scenario transcript is written incrementally to JSONL; a crashed run can be resumed by skipping scenario IDs already in the output file.
+- **Checkpointing.** Each system × scenario transcript is written incrementally to JSONL. Both runners accept `--resume` to pick up where a partial run left off: existing transcripts are read from the output JSONL, and `(system, scenario_id)` pairs already present are skipped on the next run. Without `--resume`, the runner truncates the output file and starts from scratch.
 - **Input versioning.** Scenarios and the interview script are tracked in git; the output JSONL includes `scenario_path`, `turn_index`, and `question` for full traceability back to the inputs.
 - **Eval scripts are the ground truth.** Every number in the final report is produced by `reports/generate_report.py` reading from `results/*.csv` and `results/*.jsonl`. No manually transcribed numbers in slides.
 
@@ -153,6 +153,7 @@ LLM provider calls remain non-deterministic at the model layer, but our
 sampler-side seeds keep scenario ordering, sampling-based ablations, and
 plot jitter stable across runs.
 
-JSONL checkpointing is implemented per-scenario in
-`evaluation/runners/run_all_systems.py` and `evaluation/ablations/run_ablations.py`,
-so partial runs are resumable by scenario ID.
+Both runners (`run_all_systems`, `run_ablations`) accept `--resume` to pick up
+where a partial run left off: existing transcripts are read from the output JSONL,
+and `(system, scenario_id)` pairs already present are skipped on the second run.
+Without `--resume`, the runner truncates the output file and starts from scratch.
