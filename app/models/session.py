@@ -1,10 +1,10 @@
 from datetime import datetime
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import BaseModel, Field
 
 
-class MessageRole(str, Enum):
+class MessageRole(StrEnum):
     STUDENT = "student"
     PATIENT = "patient"
     SYSTEM = "system"
@@ -12,20 +12,24 @@ class MessageRole(str, Enum):
 
 class ChatMessage(BaseModel):
     """A single message in the conversation."""
+
     role: MessageRole
     content: str
     timestamp: datetime = Field(default_factory=datetime.utcnow)
-    domain_explored: str | None = Field(None, description="Assessment domain this message relates to")
+    domain_explored: str | None = Field(
+        None, description="Assessment domain this message relates to"
+    )
 
 
 class PatientResponse(BaseModel):
     """Structured output from the LLM — patient response + classification."""
+
     dialogue: str = Field(..., description="What the patient says to the student")
     domain_explored: str = Field(
         "conversational",
         description="Which assessment domain the student's question explored. "
         "One of: HPI, ROS, PMH, Medications, Allergies, Social_History, Family_History, "
-        "Physical_Exam, Vitals, conversational"
+        "Physical_Exam, Vitals, conversational",
     )
     domain_confidence: float = Field(0.0, ge=0.0, le=1.0)
     vitals_revealed: dict[str, str | float] | None = Field(
@@ -36,13 +40,14 @@ class PatientResponse(BaseModel):
     )
 
 
-class SessionStatus(str, Enum):
+class SessionStatus(StrEnum):
     ACTIVE = "active"
     ENDED = "ended"
 
 
 class ChatSession(BaseModel):
     """Active chat session state."""
+
     session_id: str
     scenario_id: str
     status: SessionStatus = SessionStatus.ACTIVE

@@ -5,8 +5,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import streamlit as st
-from frontend.theme import inject_theme
+
 from app.services.session_manager import session_manager
+from frontend.theme import inject_theme
 
 st.set_page_config(page_title="Session Review", page_icon="🏥", layout="wide")
 inject_theme()
@@ -35,9 +36,14 @@ DEPTH_ICONS = {
 def pretty_domain(name: str) -> str:
     return DOMAIN_DISPLAY.get(name, name.replace("_", " "))
 
-st.markdown('<div class="case-eyebrow">Post-session feedback</div>', unsafe_allow_html=True)
+
+st.markdown(
+    '<div class="case-eyebrow">Post-session feedback</div>', unsafe_allow_html=True
+)
 st.title("Session Review")
-st.caption("Review your coverage, strengths, missed findings, and follow-up considerations.")
+st.caption(
+    "Review your coverage, strengths, missed findings, and follow-up considerations."
+)
 
 session_id = st.session_state.get("session_id")
 
@@ -74,12 +80,18 @@ depth_score = tracker_result.coverage_score if tracker_result else None
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    st.metric("Evaluator Score", f"{feedback['overall_score']:.0f}/100",
-              help="GPT-4o's holistic judgement considering depth, critical findings, and clinical reasoning.")
+    st.metric(
+        "Evaluator Score",
+        f"{feedback['overall_score']:.0f}/100",
+        help="GPT-4o's holistic judgement considering depth, critical findings, and clinical reasoning.",
+    )
 with col2:
     if depth_score is not None:
-        st.metric("Depth Score", f"{depth_score:.0f}/100",
-                  help="Depth-weighted coverage: Surface (50) / Explored (80) / Deep (100) per domain, averaged.")
+        st.metric(
+            "Depth Score",
+            f"{depth_score:.0f}/100",
+            help="Depth-weighted coverage: Surface (50) / Explored (80) / Deep (100) per domain, averaged.",
+        )
     else:
         st.metric("Depth Score", "—")
 with col3:
@@ -101,113 +113,125 @@ st.divider()
 
 # Summary
 if feedback.get("summary"):
-    st.markdown('<div class="section-kicker">Performance overview</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="section-kicker">Performance overview</div>', unsafe_allow_html=True
+    )
     st.markdown('<div class="section-title">Summary</div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="feature-panel">{feedback["summary"]}</div>', unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="feature-panel">{feedback["summary"]}</div>',
+        unsafe_allow_html=True,
+    )
     st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
 
 # Coverage
-st.markdown('<div class="section-kicker">Assessment breadth</div>', unsafe_allow_html=True)
-st.markdown('<div class="section-title">Assessment Coverage</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="section-kicker">Assessment breadth</div>', unsafe_allow_html=True
+)
+st.markdown(
+    '<div class="section-title">Assessment Coverage</div>', unsafe_allow_html=True
+)
 
 col_covered, col_missed = st.columns(2)
 
-with col_covered:
-    with st.container(border=True):
-        st.markdown("**Domains Covered**")
-        if feedback.get("domains_covered"):
-            for domain in feedback["domains_covered"]:
-                pretty = pretty_domain(domain)
-                # Attach depth info from tracker when available
-                depth_suffix = ""
-                if tracker_result and domain in tracker_result.domains:
-                    cov = tracker_result.domains[domain]
-                    icon = DEPTH_ICONS.get(cov.depth, "")
-                    depth_suffix = f" &nbsp;<span style='color:#6A7864;'>{icon} {cov.depth} · {cov.question_count}q</span>"
-                st.markdown(
-                    f"<span style='color:#4E5A47; font-weight:700;'>Covered</span> — {pretty}{depth_suffix}",
-                    unsafe_allow_html=True,
-                )
-        else:
-            st.caption("No domains were covered.")
+with col_covered, st.container(border=True):
+    st.markdown("**Domains Covered**")
+    if feedback.get("domains_covered"):
+        for domain in feedback["domains_covered"]:
+            pretty = pretty_domain(domain)
+            # Attach depth info from tracker when available
+            depth_suffix = ""
+            if tracker_result and domain in tracker_result.domains:
+                cov = tracker_result.domains[domain]
+                icon = DEPTH_ICONS.get(cov.depth, "")
+                depth_suffix = f" &nbsp;<span style='color:#6A7864;'>{icon} {cov.depth} · {cov.question_count}q</span>"
+            st.markdown(
+                f"<span style='color:#4E5A47; font-weight:700;'>Covered</span> — {pretty}{depth_suffix}",
+                unsafe_allow_html=True,
+            )
+    else:
+        st.caption("No domains were covered.")
 
-with col_missed:
-    with st.container(border=True):
-        st.markdown("**Domains Missed**")
-        if feedback.get("domains_missed"):
-            for domain in feedback["domains_missed"]:
-                pretty = pretty_domain(domain)
-                st.markdown(
-                    f"<span style='color:#A86248; font-weight:700;'>Missed</span> — {pretty}",
-                    unsafe_allow_html=True,
-                )
-        else:
-            st.caption("No domains missed.")
+with col_missed, st.container(border=True):
+    st.markdown("**Domains Missed**")
+    if feedback.get("domains_missed"):
+        for domain in feedback["domains_missed"]:
+            pretty = pretty_domain(domain)
+            st.markdown(
+                f"<span style='color:#A86248; font-weight:700;'>Missed</span> — {pretty}",
+                unsafe_allow_html=True,
+            )
+    else:
+        st.caption("No domains missed.")
 
 st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
 
 # Strengths / improvement
 st.markdown('<div class="section-kicker">Coaching notes</div>', unsafe_allow_html=True)
-st.markdown('<div class="section-title">Strengths and Improvements</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="section-title">Strengths and Improvements</div>',
+    unsafe_allow_html=True,
+)
 
 col_str, col_imp = st.columns(2)
 
-with col_str:
-    with st.container(border=True):
-        st.markdown("**Strengths**")
-        if feedback.get("strengths"):
-            for item in feedback["strengths"]:
-                st.markdown(f"- {item}")
-        else:
-            st.caption("No strengths listed.")
+with col_str, st.container(border=True):
+    st.markdown("**Strengths**")
+    if feedback.get("strengths"):
+        for item in feedback["strengths"]:
+            st.markdown(f"- {item}")
+    else:
+        st.caption("No strengths listed.")
 
-with col_imp:
-    with st.container(border=True):
-        st.markdown("**Areas for Improvement**")
-        if feedback.get("improvements"):
-            for item in feedback["improvements"]:
-                st.markdown(f"- {item}")
-        else:
-            st.caption("No improvement notes listed.")
+with col_imp, st.container(border=True):
+    st.markdown("**Areas for Improvement**")
+    if feedback.get("improvements"):
+        for item in feedback["improvements"]:
+            st.markdown(f"- {item}")
+    else:
+        st.caption("No improvement notes listed.")
 
 st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
 
 # Critical findings
 st.markdown('<div class="section-kicker">Clinical misses</div>', unsafe_allow_html=True)
-st.markdown('<div class="section-title">Critical Findings</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="section-title">Critical Findings</div>', unsafe_allow_html=True
+)
 
 col_caught, col_missed_findings = st.columns(2)
 
-with col_caught:
-    with st.container(border=True):
-        st.markdown("**Caught**")
-        if feedback.get("critical_findings_caught"):
-            for finding in feedback["critical_findings_caught"]:
-                st.markdown(
-                    f"<span style='color:#4E5A47; font-weight:700;'>Identified</span> — {finding}",
-                    unsafe_allow_html=True,
-                )
-        else:
-            st.caption("None identified.")
+with col_caught, st.container(border=True):
+    st.markdown("**Caught**")
+    if feedback.get("critical_findings_caught"):
+        for finding in feedback["critical_findings_caught"]:
+            st.markdown(
+                f"<span style='color:#4E5A47; font-weight:700;'>Identified</span> — {finding}",
+                unsafe_allow_html=True,
+            )
+    else:
+        st.caption("None identified.")
 
-with col_missed_findings:
-    with st.container(border=True):
-        st.markdown("**Missed**")
-        if feedback.get("critical_findings_missed"):
-            for finding in feedback["critical_findings_missed"]:
-                st.markdown(
-                    f"<span style='color:#A86248; font-weight:700;'>Missed</span> — {finding}",
-                    unsafe_allow_html=True,
-                )
-        else:
-            st.caption("None missed — great job.")
+with col_missed_findings, st.container(border=True):
+    st.markdown("**Missed**")
+    if feedback.get("critical_findings_missed"):
+        for finding in feedback["critical_findings_missed"]:
+            st.markdown(
+                f"<span style='color:#A86248; font-weight:700;'>Missed</span> — {finding}",
+                unsafe_allow_html=True,
+            )
+    else:
+        st.caption("None missed — great job.")
 
 st.markdown("<div style='height: 0.9rem;'></div>", unsafe_allow_html=True)
 
 # Notable moments
 if feedback.get("turn_highlights"):
-    st.markdown('<div class="section-kicker">Conversation review</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-title">Notable Moments</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="section-kicker">Conversation review</div>', unsafe_allow_html=True
+    )
+    st.markdown(
+        '<div class="section-title">Notable Moments</div>', unsafe_allow_html=True
+    )
 
     for highlight in feedback["turn_highlights"]:
         turn_num = highlight.get("turn", "?")
@@ -222,8 +246,13 @@ if feedback.get("turn_highlights"):
 
 # Differentials
 if feedback.get("differential_diagnoses"):
-    st.markdown('<div class="section-kicker">Clinical reasoning</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-title">Differential Diagnoses to Consider</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="section-kicker">Clinical reasoning</div>', unsafe_allow_html=True
+    )
+    st.markdown(
+        '<div class="section-title">Differential Diagnoses to Consider</div>',
+        unsafe_allow_html=True,
+    )
 
     items = "".join(f"<li>{dx}</li>" for dx in feedback["differential_diagnoses"])
     st.markdown(

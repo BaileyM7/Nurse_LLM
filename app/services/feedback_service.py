@@ -1,13 +1,11 @@
 import json
 
-from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 
-from app.config import settings
-from app.models.assessment import FeedbackReport, AssessmentResult
+from app.models.assessment import AssessmentResult, FeedbackReport
 from app.models.scenario import PatientScenario
 from app.models.session import ChatMessage
 from app.services.llm_provider import create_feedback_model, supports_json_mode
-
 
 FEEDBACK_PROMPT = """You are an expert nursing educator evaluating a student's patient assessment performance.
 
@@ -91,7 +89,9 @@ class FeedbackService:
         for msg in messages:
             if msg.role == "student":
                 student_turn += 1
-                conversation_lines.append(f"Turn {student_turn} (Student): {msg.content}")
+                conversation_lines.append(
+                    f"Turn {student_turn} (Student): {msg.content}"
+                )
             else:
                 conversation_lines.append(f"         (Patient): {msg.content}")
         conversation_text = "\n".join(conversation_lines)
@@ -121,12 +121,20 @@ class FeedbackService:
         # OpenAI supports `response_format={"type": "json_object"}` as a runtime bind.
         # Gemini doesn't — it uses `response_mime_type` at construction time.
         # For Gemini we rely on the prompt + markdown-fence stripping below.
-        llm = self._llm.bind(response_format={"type": "json_object"}) if supports_json_mode() else self._llm
+        llm = (
+            self._llm.bind(response_format={"type": "json_object"})
+            if supports_json_mode()
+            else self._llm
+        )
 
-        response = await llm.ainvoke([
-            SystemMessage(content="You are a nursing education assessment expert. Always respond with valid JSON. Every observation must cite a specific turn number and quote the student verbatim."),
-            HumanMessage(content=prompt),
-        ])
+        response = await llm.ainvoke(
+            [
+                SystemMessage(
+                    content="You are a nursing education assessment expert. Always respond with valid JSON. Every observation must cite a specific turn number and quote the student verbatim."
+                ),
+                HumanMessage(content=prompt),
+            ]
+        )
 
         content = response.content.strip()
         # Strip markdown fences if the model added them anyway
@@ -148,7 +156,7 @@ class FeedbackService:
                 domains_missed=assessment.get_missed_domains(),
                 diagnosis=scenario.rubric.diagnosis,
                 summary=f"Feedback generation encountered an error: {str(e)}. "
-                         f"You covered {len(assessment.get_covered_domains())} of 7 domains.",
+                f"You covered {len(assessment.get_covered_domains())} of 7 domains.",
             )
 
 

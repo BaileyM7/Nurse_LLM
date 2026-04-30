@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+from pydantic import ValidationError
+
 from app.config import settings
 from app.models.scenario import PatientScenario, ScenarioSummary
 
@@ -18,9 +20,12 @@ class ScenarioService:
             return
 
         for file_path in sorted(scenarios_dir.glob("*.json")):
-            with open(file_path, "r") as f:
+            with open(file_path) as f:
                 data = json.load(f)
-            scenario = PatientScenario(**data)
+            try:
+                scenario = PatientScenario(**data)
+            except ValidationError as e:
+                raise ValueError(f"Malformed scenario {file_path.name}: {e}") from e
             self._scenarios[scenario.patient_id] = scenario
 
     def reload(self) -> None:
@@ -47,6 +52,16 @@ class ScenarioService:
 
     def get_scenario_ids(self) -> list[str]:
         return list(self._scenarios.keys())
+
+
+def load_scenario(path: Path) -> PatientScenario:
+    """Load and validate a single scenario file, raising ValueError with the file name on error."""
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    try:
+        return PatientScenario(**data)
+    except ValidationError as e:
+        raise ValueError(f"Malformed scenario {path.name}: {e}") from e
 
 
 # Singleton instance

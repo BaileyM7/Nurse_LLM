@@ -2,13 +2,14 @@ from datetime import datetime
 
 from fastapi import APIRouter, HTTPException
 
+from app.models.assessment import FeedbackReport
 from app.models.session import (
-    StartSessionRequest, StartSessionResponse, SessionStatus, ChatMessage, MessageRole,
+    StartSessionRequest,
+    StartSessionResponse,
 )
-from app.models.assessment import FeedbackReport, AssessmentResult
-from app.services.scenario_service import scenario_service
-from app.services.llm_service import llm_service
 from app.services.feedback_service import feedback_service
+from app.services.llm_service import llm_service
+from app.services.scenario_service import scenario_service
 from app.services.session_manager import session_manager
 
 router = APIRouter()
@@ -19,7 +20,9 @@ async def start_session(request: StartSessionRequest):
     """Start a new assessment session with a patient scenario."""
     scenario = scenario_service.get_scenario(request.scenario_id)
     if not scenario:
-        raise HTTPException(status_code=404, detail=f"Scenario '{request.scenario_id}' not found")
+        raise HTTPException(
+            status_code=404, detail=f"Scenario '{request.scenario_id}' not found"
+        )
 
     session = session_manager.create_session(request.scenario_id)
     llm_service.start_session(session["session_id"], scenario)
@@ -109,7 +112,9 @@ async def get_feedback(session_id: str):
         return feedback
 
     if session and session["status"] != "ended":
-        raise HTTPException(status_code=400, detail="Session is still active. End it first.")
+        raise HTTPException(
+            status_code=400, detail="Session is still active. End it first."
+        )
 
     raise HTTPException(status_code=404, detail="Feedback not found")
 

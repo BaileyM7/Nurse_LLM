@@ -446,5 +446,6 @@ div[data-testid="stToolbar"] {
 </style>
 """
 
+
 def inject_theme():
     st.markdown(THEME_CSS, unsafe_allow_html=True)

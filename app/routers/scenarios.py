@@ -17,7 +17,9 @@ async def get_scenario(patient_id: str):
     """Get full details for a specific patient scenario."""
     scenario = scenario_service.get_scenario(patient_id)
     if not scenario:
-        raise HTTPException(status_code=404, detail=f"Scenario '{patient_id}' not found")
+        raise HTTPException(
+            status_code=404, detail=f"Scenario '{patient_id}' not found"
+        )
     return scenario
 
 

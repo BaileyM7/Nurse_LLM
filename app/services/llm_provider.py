@@ -20,6 +20,7 @@ from app.config import settings
 # langchain-google-genai is absent.
 try:
     from langchain_google_genai import ChatGoogleGenerativeAI
+
     _GEMINI_AVAILABLE = True
 except ImportError:
     ChatGoogleGenerativeAI = None  # type: ignore[assignment]
@@ -29,13 +30,18 @@ except ImportError:
 def get_provider_name() -> str:
     provider = (settings.llm_provider or "openai").strip().lower()
     if provider not in {"openai", "gemini"}:
-        raise ValueError(f"LLM_PROVIDER must be 'openai' or 'gemini', got: {provider!r}")
+        raise ValueError(
+            f"LLM_PROVIDER must be 'openai' or 'gemini', got: {provider!r}"
+        )
     return provider
 
 
 def _build_openai(model: str, temperature: float):
     if not settings.openai_api_key:
-        raise ValueError("OPENAI_API_KEY is required when LLM_PROVIDER=openai.")
+        raise ValueError(
+            "OPENAI_API_KEY is not set. Copy .env.example to .env and set the key, "
+            "or set LLM_PROVIDER=gemini and GEMINI_API_KEY to use Gemini instead."
+        )
     return ChatOpenAI(
         model=model,
         api_key=settings.openai_api_key,
@@ -50,7 +56,10 @@ def _build_gemini(model: str, temperature: float):
             "Run: pip install langchain-google-genai"
         )
     if not settings.gemini_api_key:
-        raise ValueError("GEMINI_API_KEY is required when LLM_PROVIDER=gemini.")
+        raise ValueError(
+            "GEMINI_API_KEY is not set. Copy .env.example to .env and set the key, "
+            "or set LLM_PROVIDER=openai and OPENAI_API_KEY to use OpenAI instead."
+        )
     return ChatGoogleGenerativeAI(
         model=model,
         google_api_key=settings.gemini_api_key,

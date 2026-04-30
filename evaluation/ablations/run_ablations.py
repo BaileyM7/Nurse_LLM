@@ -30,21 +30,22 @@ import random
 import uuid
 from pathlib import Path
 
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 from app.config import settings
 from app.models.scenario import PatientScenario
 from app.services.llm_service import (
-    LLMService, _build_system_prompt,
-    _detect_requested_vitals, _detect_requested_labs,
+    LLMService,
+    _build_system_prompt,
 )
-
 
 # --- Ablation variants ------------------------------------------------------
 
+
 class BaselineFull:
     """Unmodified full pipeline — reference point."""
+
     name = "baseline_full"
 
     def __init__(self, scenario: PatientScenario):
@@ -63,18 +64,20 @@ class BaselineFull:
 
 class NoMemory:
     """No conversation history — every turn is stateless."""
+
     name = "no_memory"
 
     def __init__(self, scenario: PatientScenario):
         self.scenario = scenario
         self._system = _build_system_prompt(scenario)
-        self._llm = ChatOpenAI(model=settings.model_name,
-                               api_key=settings.openai_api_key, temperature=0.7)
+        self._llm = ChatOpenAI(
+            model=settings.model_name, api_key=settings.openai_api_key, temperature=0.7
+        )
 
     async def respond(self, msg: str) -> str:
-        resp = await self._llm.ainvoke([
-            SystemMessage(content=self._system), HumanMessage(content=msg)
-        ])
+        resp = await self._llm.ainvoke(
+            [SystemMessage(content=self._system), HumanMessage(content=msg)]
+        )
         try:
             return json.loads(resp.content).get("dialogue", resp.content)
         except Exception:
@@ -86,19 +89,23 @@ class NoMemory:
 
 class Temp0:
     """Full pipeline but temperature = 0.0."""
+
     name = "temp_0"
 
     def __init__(self, scenario: PatientScenario):
         self.scenario = scenario
         self._system = _build_system_prompt(scenario)
-        self._llm = ChatOpenAI(model=settings.model_name,
-                               api_key=settings.openai_api_key, temperature=0.0)
+        self._llm = ChatOpenAI(
+            model=settings.model_name, api_key=settings.openai_api_key, temperature=0.0
+        )
         self._history: list = []
 
     async def respond(self, msg: str) -> str:
-        messages = [SystemMessage(content=self._system)] + self._history + [
-            HumanMessage(content=msg)
-        ]
+        messages = (
+            [SystemMessage(content=self._system)]
+            + self._history
+            + [HumanMessage(content=msg)]
+        )
         resp = await self._llm.ainvoke(messages)
         self._history.append(HumanMessage(content=msg))
         self._history.append(AIMessage(content=resp.content))
@@ -113,24 +120,30 @@ class Temp0:
 
 class MinimalPrompt:
     """Strip personality/communication-style from the system prompt."""
+
     name = "minimal_prompt"
 
     def __init__(self, scenario: PatientScenario):
         # Build a trimmed scenario clone with generic persona
-        trimmed = scenario.model_copy(update={
-            "personality": "cooperative",
-            "communication_style": "direct",
-            "pain_description_style": None,
-        })
+        trimmed = scenario.model_copy(
+            update={
+                "personality": "cooperative",
+                "communication_style": "direct",
+                "pain_description_style": None,
+            }
+        )
         self._system = _build_system_prompt(trimmed)
-        self._llm = ChatOpenAI(model=settings.model_name,
-                               api_key=settings.openai_api_key, temperature=0.7)
+        self._llm = ChatOpenAI(
+            model=settings.model_name, api_key=settings.openai_api_key, temperature=0.7
+        )
         self._history: list = []
 
     async def respond(self, msg: str) -> str:
-        messages = [SystemMessage(content=self._system)] + self._history + [
-            HumanMessage(content=msg)
-        ]
+        messages = (
+            [SystemMessage(content=self._system)]
+            + self._history
+            + [HumanMessage(content=msg)]
+        )
         resp = await self._llm.ainvoke(messages)
         self._history.append(HumanMessage(content=msg))
         self._history.append(AIMessage(content=resp.content))
@@ -148,6 +161,22 @@ VARIANTS = {v.name: v for v in [BaselineFull, NoMemory, Temp0, MinimalPrompt]}
 
 # --- Runner ------------------------------------------------------------------
 
+
+def _existing_done(out_path: Path, key_field: str) -> set[tuple[str, str]]:
+    """Return set of (key_value, scenario_id) tuples already written to out_path."""
+    done: set[tuple[str, str]] = set()
+    if not out_path.exists():
+        return done
+    with open(out_path, encoding="utf-8") as f:
+        for line in f:
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            done.add((row[key_field], row["scenario_id"]))
+    return done
+
+
 def load_scenario(path: Path) -> PatientScenario:
     with open(path) as f:
         return PatientScenario(**json.load(f))
@@ -158,23 +187,26 @@ def load_interview_script(path: Path) -> list[dict]:
         return json.load(f)["questions"]
 
 
-async def run_scenario(scenario_path: Path, variant_name: str,
-                       questions: list[dict]) -> list[dict]:
+async def run_scenario(
+    scenario_path: Path, variant_name: str, questions: list[dict]
+) -> list[dict]:
     scenario = load_scenario(scenario_path)
     variant = VARIANTS[variant_name](scenario)
     records = []
     try:
         for i, q in enumerate(questions):
             reply = await variant.respond(q["q"])
-            records.append({
-                "system": variant_name,
-                "scenario_id": scenario.patient_id,
-                "scenario_path": str(scenario_path),
-                "turn_index": i,
-                "student": q["q"],
-                "gold_domain": q.get("domain"),
-                "patient": reply,
-            })
+            records.append(
+                {
+                    "system": variant_name,
+                    "scenario_id": scenario.patient_id,
+                    "scenario_path": str(scenario_path),
+                    "turn_index": i,
+                    "student": q["q"],
+                    "gold_domain": q.get("domain"),
+                    "patient": reply,
+                }
+            )
     finally:
         variant.close()
     return records
@@ -195,12 +227,25 @@ async def main_async(args) -> None:
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    print(f"Running {len(variants)} variants × {len(scenario_paths)} scenarios "
-          f"× {len(questions)} questions → {out_path}")
+    done = _existing_done(out_path, "system") if args.resume else set()
 
-    with open(out_path, "w") as f:
+    print(
+        f"Running {len(variants)} variants × {len(scenario_paths)} scenarios "
+        f"× {len(questions)} questions → {out_path}"
+    )
+    if args.resume and done:
+        print(
+            f"  Resuming: {len(done)} (system, scenario_id) pairs already done — skipping."
+        )
+
+    mode = "a" if args.resume and out_path.exists() else "w"
+    with open(out_path, mode) as f:
         for sp in scenario_paths:
             for name in variants:
+                scenario_id = sp.stem  # e.g. "case_001"
+                if (name, scenario_id) in done:
+                    print(f"  [{name}] {sp.name} — skipped (already done)", flush=True)
+                    continue
                 print(f"  [{name}] {sp.name}", flush=True)
                 records = await run_scenario(sp, name, questions)
                 for r in records:
@@ -213,11 +258,19 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--scenarios-dir", default="data/scenarios")
     parser.add_argument("--script", default="evaluation/data/interview_script.json")
-    parser.add_argument("--variants",
-                        default="baseline_full,no_memory,temp_0,minimal_prompt")
+    parser.add_argument(
+        "--variants", default="baseline_full,no_memory,temp_0,minimal_prompt"
+    )
     parser.add_argument("--limit", type=int, default=5)
-    parser.add_argument("--out", default="evaluation/results/ablation_transcripts.jsonl")
+    parser.add_argument(
+        "--out", default="evaluation/results/ablation_transcripts.jsonl"
+    )
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Skip scenarios already present in the output JSONL.",
+    )
     args = parser.parse_args()
     asyncio.run(main_async(args))
 

@@ -43,17 +43,17 @@ _Run `python -m evaluation.metrics.domain_classifier <labels.jsonl>` first._
 
 ### few_shot
 
-**Scenario:** `case_001`  
-**Student:** Are there any medical conditions that run in your family?  
-**Patient:** Yes, my father had a myocardial infarction at age 55 and died at 62 from heart failure. My mother has type 2 diabetes and hypertension, and she's alive at 89. My brother has hypertension and high cholesterol.  
-**Break:** myocardial infarction  
+**Scenario:** `case_001`
+**Student:** Are there any medical conditions that run in your family?
+**Patient:** Yes, my father had a myocardial infarction at age 55 and died at 62 from heart failure. My mother has type 2 diabetes and hypertension, and she's alive at 89. My brother has hypertension and high cholesterol.
+**Break:** myocardial infarction
 
 ### full_pipeline
 
-**Scenario:** `case_002`  
-**Student:** Do you have any drug or food allergies?  
-**Patient:** I'm allergic to sulfa drugs. I get a severe rash and swelling.  
-**Hallucinated:** rash  
+**Scenario:** `case_002`
+**Student:** Do you have any drug or food allergies?
+**Patient:** I'm allergic to sulfa drugs. I get a severe rash and swelling.
+**Hallucinated:** rash
 
 
 ## Reproducibility

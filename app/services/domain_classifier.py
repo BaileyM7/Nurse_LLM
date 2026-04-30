@@ -14,7 +14,7 @@ import json
 import re
 from dataclasses import dataclass, field
 
-from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 
 from app.services.llm_provider import create_chat_model
 
@@ -22,6 +22,7 @@ from app.services.llm_provider import create_chat_model
 @dataclass
 class ClassificationResult:
     """Result of classifying a single student question."""
+
     domains: list[str] = field(default_factory=list)
     confidence: float = 0.0
     source: str = "none"  # "keyword", "llm", or "none"
@@ -152,10 +153,14 @@ class DomainClassifier:
 
         # Stage 2: LLM fallback
         try:
-            response = await self._llm.ainvoke([
-                SystemMessage(content="You are a precise clinical-domain classifier. Always respond with valid JSON."),
-                HumanMessage(content=CLASSIFIER_PROMPT.format(message=message)),
-            ])
+            response = await self._llm.ainvoke(
+                [
+                    SystemMessage(
+                        content="You are a precise clinical-domain classifier. Always respond with valid JSON."
+                    ),
+                    HumanMessage(content=CLASSIFIER_PROMPT.format(message=message)),
+                ]
+            )
             data = json.loads(response.content)
             return ClassificationResult(
                 domains=data.get("domains", []),

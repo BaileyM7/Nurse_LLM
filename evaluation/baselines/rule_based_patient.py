@@ -22,8 +22,16 @@ class RuleBasedPatient:
         msg = student_message.lower()
 
         # Chief complaint / opening
-        if any(w in msg for w in ["what brings you", "why are you here", "chief complaint",
-                                   "what's going on", "how can i help"]):
+        if any(
+            w in msg
+            for w in [
+                "what brings you",
+                "why are you here",
+                "chief complaint",
+                "what's going on",
+                "how can i help",
+            ]
+        ):
             return self.scenario.chief_complaint
 
         # HPI: symptom-specific
@@ -31,9 +39,11 @@ class RuleBasedPatient:
             if name.replace("_", " ") in msg:
                 return detail.description or f"Yes, I have {name.replace('_', ' ')}."
 
-        if any(w in msg for w in ["when did", "how long", "onset"]):
-            if self.scenario.onset_description:
-                return self.scenario.onset_description
+        if (
+            any(w in msg for w in ["when did", "how long", "onset"])
+            and self.scenario.onset_description
+        ):
+            return self.scenario.onset_description
 
         # Symptoms absent
         for absent in self.scenario.symptoms_absent:
@@ -41,21 +51,40 @@ class RuleBasedPatient:
                 return f"No, I don't have {absent}."
 
         # PMH
-        if any(w in msg for w in ["medical history", "past medical", "conditions",
-                                   "health problems", "pmh"]):
-            return ("My medical history includes: "
-                    + ", ".join(self.scenario.past_medical_history)
-                    if self.scenario.past_medical_history else "Nothing significant.")
+        if any(
+            w in msg
+            for w in [
+                "medical history",
+                "past medical",
+                "conditions",
+                "health problems",
+                "pmh",
+            ]
+        ):
+            return (
+                "My medical history includes: "
+                + ", ".join(self.scenario.past_medical_history)
+                if self.scenario.past_medical_history
+                else "Nothing significant."
+            )
 
         # Medications
-        if any(w in msg for w in ["medication", "medicine", "pills", "what do you take"]):
-            return ("I take: " + ", ".join(self.scenario.medications)
-                    if self.scenario.medications else "I don't take any medications.")
+        if any(
+            w in msg for w in ["medication", "medicine", "pills", "what do you take"]
+        ):
+            return (
+                "I take: " + ", ".join(self.scenario.medications)
+                if self.scenario.medications
+                else "I don't take any medications."
+            )
 
         # Allergies
         if "allerg" in msg:
-            return ("I'm allergic to: " + ", ".join(self.scenario.allergies)
-                    if self.scenario.allergies else "No known allergies.")
+            return (
+                "I'm allergic to: " + ", ".join(self.scenario.allergies)
+                if self.scenario.allergies
+                else "No known allergies."
+            )
 
         # Social
         if "smok" in msg:
@@ -70,24 +99,31 @@ class RuleBasedPatient:
         # Family
         if "family" in msg:
             if self.scenario.family_history.conditions:
-                parts = [f"{m}: {c}" for m, c in self.scenario.family_history.conditions.items()]
+                parts = [
+                    f"{m}: {c}"
+                    for m, c in self.scenario.family_history.conditions.items()
+                ]
                 return "In my family, " + "; ".join(parts) + "."
             return "No significant family history."
 
         # Vitals / labs — delegate to keywords
         v = self.scenario.vitals
-        if "blood pressure" in msg or "bp" in msg.split():
-            if v.blood_pressure_systolic is not None:
-                return f"Blood pressure is {v.blood_pressure_systolic}/{v.blood_pressure_diastolic}."
-        if any(w in msg for w in ["heart rate", "pulse", "hr"]):
-            if v.heart_rate is not None:
-                return f"Heart rate is {v.heart_rate}."
-        if any(w in msg for w in ["temperature", "temp", "fever"]):
-            if v.temperature is not None:
-                return f"Temperature is {v.temperature}°F."
-        if any(w in msg for w in ["spo2", "oxygen", "pulse ox"]):
-            if v.spo2 is not None:
-                return f"SpO2 is {v.spo2}%."
+        if (
+            "blood pressure" in msg or "bp" in msg.split()
+        ) and v.blood_pressure_systolic is not None:
+            return f"Blood pressure is {v.blood_pressure_systolic}/{v.blood_pressure_diastolic}."
+        if (
+            any(w in msg for w in ["heart rate", "pulse", "hr"])
+            and v.heart_rate is not None
+        ):
+            return f"Heart rate is {v.heart_rate}."
+        if (
+            any(w in msg for w in ["temperature", "temp", "fever"])
+            and v.temperature is not None
+        ):
+            return f"Temperature is {v.temperature}°F."
+        if any(w in msg for w in ["spo2", "oxygen", "pulse ox"]) and v.spo2 is not None:
+            return f"SpO2 is {v.spo2}%."
 
         # Fallback
         return "I don't understand the question. Could you rephrase?"

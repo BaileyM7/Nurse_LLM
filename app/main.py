@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import scenarios, chat, sessions
+from app.routers import chat, scenarios, sessions
 
 app = FastAPI(
     title="Nurse LLM",

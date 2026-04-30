@@ -18,10 +18,23 @@ from __future__ import annotations
 
 import argparse
 import csv
+import random
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
+
+
+def _seed(seed: int = 42) -> None:
+    """Seed Python random and numpy.random; called from main() to avoid
+    resetting global RNG state at import time."""
+    random.seed(seed)
+    try:
+        import numpy as np  # noqa: PLC0415
+
+        np.random.seed(seed)
+    except ImportError:
+        pass
 
 
 def _read_csv(path: Path) -> list[dict]:
@@ -32,6 +45,7 @@ def _read_csv(path: Path) -> list[dict]:
 
 
 # --- 1. Headline results table (rendered as an image) -----------------------
+
 
 def render_results_table(fidelity: list[dict], out_path: Path) -> None:
     if not fidelity:
@@ -57,18 +71,21 @@ def render_results_table(fidelity: list[dict], out_path: Path) -> None:
     col_headers = ["System", "Faithful ↑", "Char-break ↓", "Halluc. ↓", "Turns"]
     rows = []
     for i, sys in enumerate(systems):
-        rows.append([
-            sys,
-            f"{faith[i]:.1%}",
-            f"{breaks[i]:.1%}",
-            f"{halluc[i]:.1%}",
-            str(turns[i]),
-        ])
+        rows.append(
+            [
+                sys,
+                f"{faith[i]:.1%}",
+                f"{breaks[i]:.1%}",
+                f"{halluc[i]:.1%}",
+                str(turns[i]),
+            ]
+        )
 
     fig, ax = plt.subplots(figsize=(9, 2 + 0.5 * len(rows)))
     ax.axis("off")
-    table = ax.table(cellText=rows, colLabels=col_headers,
-                     loc="center", cellLoc="center")
+    table = ax.table(
+        cellText=rows, colLabels=col_headers, loc="center", cellLoc="center"
+    )
     table.auto_set_font_size(False)
     table.set_fontsize(12)
     table.scale(1, 1.7)
@@ -90,15 +107,20 @@ def render_results_table(fidelity: list[dict], out_path: Path) -> None:
 
     for i in range(len(systems)):
         rank = "best" if i == best_f else ("second" if i == second_f else None)
-        if rank: shade(i, 1, rank)
+        if rank:
+            shade(i, 1, rank)
         rank = "best" if i == best_b else ("second" if i == second_b else None)
-        if rank: shade(i, 2, rank)
+        if rank:
+            shade(i, 2, rank)
         rank = "best" if i == best_h else ("second" if i == second_h else None)
-        if rank: shade(i, 3, rank)
+        if rank:
+            shade(i, 3, rank)
 
     ax.set_title(
         "Response Fidelity by System  (green = best, yellow = 2nd-best)",
-        fontsize=14, weight="bold", pad=20,
+        fontsize=14,
+        weight="bold",
+        pad=20,
     )
     fig.tight_layout()
     fig.savefig(out_path, dpi=180, bbox_inches="tight")
@@ -107,6 +129,7 @@ def render_results_table(fidelity: list[dict], out_path: Path) -> None:
 
 
 # --- 2. Primary plot: grouped bar chart -------------------------------------
+
 
 def render_headline_plot(fidelity: list[dict], out_path: Path) -> None:
     if not fidelity:
@@ -123,25 +146,33 @@ def render_headline_plot(fidelity: list[dict], out_path: Path) -> None:
 
     fig, ax = plt.subplots(figsize=(10, 6))
     bar1 = ax.bar(x - width, faith, width, label="Faithful ↑", color="#2e7d32")
-    bar2 = ax.bar(x,         breaks, width, label="Char-break ↓", color="#c62828")
+    bar2 = ax.bar(x, breaks, width, label="Char-break ↓", color="#c62828")
     bar3 = ax.bar(x + width, halluc, width, label="Hallucination ↓", color="#ef6c00")
 
     # 90% target line
-    ax.axhline(90, color="#1565c0", linestyle="--", linewidth=1.5,
-               label="P2 target (90%)")
+    ax.axhline(
+        90, color="#1565c0", linestyle="--", linewidth=1.5, label="P2 target (90%)"
+    )
 
     # Value labels
     for bars in (bar1, bar2, bar3):
         for b in bars:
             h = b.get_height()
-            ax.annotate(f"{h:.0f}%", xy=(b.get_x() + b.get_width() / 2, h),
-                        xytext=(0, 3), textcoords="offset points",
-                        ha="center", va="bottom", fontsize=10)
+            ax.annotate(
+                f"{h:.0f}%",
+                xy=(b.get_x() + b.get_width() / 2, h),
+                xytext=(0, 3),
+                textcoords="offset points",
+                ha="center",
+                va="bottom",
+                fontsize=10,
+            )
 
     ax.set_ylabel("Rate (%)", fontsize=12)
     ax.set_xlabel("System", fontsize=12)
-    ax.set_title("Fidelity Metrics by System (100 turns each)",
-                 fontsize=14, weight="bold")
+    ax.set_title(
+        "Fidelity Metrics by System (100 turns each)", fontsize=14, weight="bold"
+    )
     ax.set_xticks(x)
     ax.set_xticklabels(systems, fontsize=11)
     ax.set_ylim(0, 105)
@@ -154,6 +185,7 @@ def render_headline_plot(fidelity: list[dict], out_path: Path) -> None:
 
 
 # --- 3. Robustness heatmap --------------------------------------------------
+
 
 def render_robustness_plot(edge: list[dict], out_path: Path) -> None:
     if not edge:
@@ -176,11 +208,17 @@ def render_robustness_plot(edge: list[dict], out_path: Path) -> None:
     ax.set_yticklabels(categories, fontsize=11)
     for i in range(len(categories)):
         for j in range(len(systems)):
-            ax.text(j, i, f"{matrix[i, j]:.0%}",
-                    ha="center", va="center",
-                    color="black", fontsize=11, weight="bold")
-    ax.set_title("Edge-Case Pass Rate by System",
-                 fontsize=13, weight="bold", pad=12)
+            ax.text(
+                j,
+                i,
+                f"{matrix[i, j]:.0%}",
+                ha="center",
+                va="center",
+                color="black",
+                fontsize=11,
+                weight="bold",
+            )
+    ax.set_title("Edge-Case Pass Rate by System", fontsize=13, weight="bold", pad=12)
     cbar = fig.colorbar(im, ax=ax, shrink=0.8)
     cbar.set_label("Pass rate")
     fig.tight_layout()
@@ -190,6 +228,7 @@ def render_robustness_plot(edge: list[dict], out_path: Path) -> None:
 
 
 # --- 4. Ablation plot -------------------------------------------------------
+
 
 def render_ablation_plot(ablation: list[dict], out_path: Path) -> None:
     if not ablation:
@@ -215,19 +254,27 @@ def render_ablation_plot(ablation: list[dict], out_path: Path) -> None:
 
     fig, ax = plt.subplots(figsize=(9, 5))
     bars = ax.bar(variants, deltas, color=colors, edgecolor="black")
-    for b, abs_val in zip(bars, absolutes):
+    for b, abs_val in zip(bars, absolutes, strict=False):
         h = b.get_height()
         label = f"{h:+.1f} pp\n({abs_val:.0f}%)"
         y = h + (0.5 if h >= 0 else -0.5)
         va = "bottom" if h >= 0 else "top"
-        ax.annotate(label, xy=(b.get_x() + b.get_width() / 2, y),
-                    ha="center", va=va, fontsize=10)
+        ax.annotate(
+            label,
+            xy=(b.get_x() + b.get_width() / 2, y),
+            ha="center",
+            va=va,
+            fontsize=10,
+        )
 
     ax.axhline(0, color="black", linewidth=0.8)
     ax.set_ylabel("Δ faithful rate vs baseline_full (pp)", fontsize=12)
     ax.set_xlabel("Ablation", fontsize=12)
-    ax.set_title(f"Ablation Impact on Fidelity  (baseline_full = {base_f:.0%})",
-                 fontsize=13, weight="bold")
+    ax.set_title(
+        f"Ablation Impact on Fidelity  (baseline_full = {base_f:.0%})",
+        fontsize=13,
+        weight="bold",
+    )
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(out_path, dpi=180, bbox_inches="tight")
@@ -236,20 +283,21 @@ def render_ablation_plot(ablation: list[dict], out_path: Path) -> None:
 
 
 def main() -> None:
+    _seed()
     parser = argparse.ArgumentParser()
     parser.add_argument("--results-dir", default="evaluation/results")
     args = parser.parse_args()
     rd = Path(args.results_dir)
 
     print("Generating presentation artifacts...")
-    render_results_table(_read_csv(rd / "fidelity.csv"),
-                         rd / "results_table.png")
-    render_headline_plot(_read_csv(rd / "fidelity.csv"),
-                         rd / "headline_plot.png")
-    render_robustness_plot(_read_csv(rd / "edge_cases_summary.csv"),
-                           rd / "robustness_plot.png")
-    render_ablation_plot(_read_csv(rd / "ablation_fidelity.csv"),
-                         rd / "ablation_plot.png")
+    render_results_table(_read_csv(rd / "fidelity.csv"), rd / "results_table.png")
+    render_headline_plot(_read_csv(rd / "fidelity.csv"), rd / "headline_plot.png")
+    render_robustness_plot(
+        _read_csv(rd / "edge_cases_summary.csv"), rd / "robustness_plot.png"
+    )
+    render_ablation_plot(
+        _read_csv(rd / "ablation_fidelity.csv"), rd / "ablation_plot.png"
+    )
     print(f"\nAll outputs in {rd}/")
 
 

@@ -60,17 +60,21 @@ def analyze(records: list[dict]) -> dict:
         for b in r.get("character_break_evidence", []):
             break_patterns[r["system"]][b] += 1
         if not r["faithful"] and len(examples[r["system"]]) < 5:
-            examples[r["system"]].append({
-                "scenario_id": r["scenario_id"],
-                "student": r["student"],
-                "patient": r["patient"],
-                "hallucinated_symptoms": r.get("hallucinated_symptoms", []),
-                "character_break_evidence": r.get("character_break_evidence", []),
-            })
+            examples[r["system"]].append(
+                {
+                    "scenario_id": r["scenario_id"],
+                    "student": r["student"],
+                    "patient": r["patient"],
+                    "hallucinated_symptoms": r.get("hallucinated_symptoms", []),
+                    "character_break_evidence": r.get("character_break_evidence", []),
+                }
+            )
 
     return {
         "scenario_failure_rates": scenario_failure_rates,
-        "hallucinated_terms": {k: v.most_common(10) for k, v in hallucinated_terms.items()},
+        "hallucinated_terms": {
+            k: v.most_common(10) for k, v in hallucinated_terms.items()
+        },
         "break_patterns": {k: v.most_common(10) for k, v in break_patterns.items()},
         "examples": examples,
     }
@@ -78,11 +82,14 @@ def analyze(records: list[dict]) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("details",
-                        help="Path to fidelity_details.jsonl")
+    parser.add_argument("details", help="Path to fidelity_details.jsonl")
     parser.add_argument("--out-dir", default="evaluation/results")
-    parser.add_argument("--top-n", type=int, default=5,
-                        help="How many worst scenarios to list per system")
+    parser.add_argument(
+        "--top-n",
+        type=int,
+        default=5,
+        help="How many worst scenarios to list per system",
+    )
     args = parser.parse_args()
 
     records = load_details(args.details)

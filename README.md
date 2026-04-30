@@ -8,7 +8,7 @@
 
 ## How It Works
 
-1. **Select a Patient** — Browse 100+ scenarios across 9 clinical categories (Cardiac, Respiratory, GI, Neuro, Infectious, MSK, Endocrine, Psych, Renal) with filters for category, severity, and keyword search, plus sort by name / severity / category. Paginated 9 per page.
+1. **Select a Patient** — Browse 105 scenarios across 9 clinical categories (Cardiac, Respiratory, GI, Neuro, Infectious, MSK, Endocrine, Psych, Renal) with filters for category, severity, and keyword search, plus sort by name / severity / category. Paginated 9 per page.
 
 2. **Conduct Your Assessment** — Chat with the simulated patient. Ask about symptoms, medical history, medications, allergies, social and family history, or request vitals and labs. The patient stays in character and only reveals information you specifically ask about.
 
@@ -34,7 +34,7 @@
 - **Domain classifier:** Two-stage pipeline — regex keyword rules catch clear cases; a dedicated low-temperature LLM call handles ambiguous ones and supports **multi-label** classification (one question can span multiple domains).
 - **Assessment tracker:** Maintains per-domain coverage, question counts, and computes depth-weighted scores.
 - **Feedback service:** Post-session LLM call (quality tier) with quote-grounded prompt + JSON mode (OpenAI) or JSON prompt enforcement (Gemini).
-- **Data:** 100+ structured patient scenarios (JSON files) validated against a Pydantic schema
+- **Data:** 105 structured patient scenarios (JSON files) validated against a Pydantic schema
 - **Database:** SQLite for session history and feedback persistence
 - **Evaluation framework:** Standalone `evaluation/` package with baselines (rule-based, few-shot, full pipeline), metrics (fidelity, domain classification, engagement, edge cases, error analysis), ablation runner, and report/plot generators.
 
@@ -94,6 +94,26 @@ The app opens at `http://localhost:8501`.
 
 ---
 
+## Test Instructions
+
+After installing dependencies, verify the install with the smoke test:
+
+```bash
+python scripts/smoke_run.py
+```
+
+Expected output begins with `Scenario: Maria Santos` followed by a short rule-based patient reply.
+No API keys required.
+
+For the full test suite (no API calls — all LLM paths are mocked):
+
+```bash
+pytest -q
+pytest --cov=app --cov=evaluation --cov-report=term-missing
+```
+
+---
+
 ## Deployment
 
 The app is designed to deploy on **Streamlit Community Cloud**:
@@ -114,7 +134,7 @@ The app is designed to deploy on **Streamlit Community Cloud**:
 
 ## Generating More Patient Cases
 
-The repo includes 100+ curated scenarios. To generate additional cases using the configured LLM:
+The repo includes 105 curated scenarios. To generate additional cases using the configured LLM:
 
 ```bash
 # List category targets
@@ -136,18 +156,58 @@ Each generated case is validated against the `PatientScenario` Pydantic schema b
 A full evaluation harness lives under `evaluation/`:
 
 ```bash
-cd evaluation
-pip install -r requirements.txt
+pip install -r evaluation/requirements.txt
 
-# Run baseline comparison (rule-based vs. few-shot vs. full pipeline)
-python runners/run_all_systems.py
+# 1. Baseline comparison (rule_based vs. few_shot vs. full_pipeline)
+python -m evaluation.runners.run_all_systems
 
-# Generate plots and final report
-python reports/generate_plots.py
-python reports/generate_report.py
+# 2. Ablation study (memory on/off, temperature, prompt minimalism, etc.)
+python -m evaluation.ablations.run_ablations
+
+# 3. Regenerate figures and the final report from results CSVs
+python -m evaluation.reports.generate_plots
+python -m evaluation.reports.generate_report
 ```
 
-Results land in `evaluation/results/`: fidelity CSVs, domain confusion matrices, ablation summaries, per-scenario failure rates, and rendered plots. See [`evaluation/METHODOLOGY.md`](evaluation/METHODOLOGY.md) for scoring definitions.
+All evaluation entry points (`run_all_systems`, `run_ablations`, `generate_plots`, `generate_report`) seed `random` (and `numpy.random` when available) with `42` by default. Pass `--seed N` on either runner to override. See `evaluation/METHODOLOGY.md` for scoring definitions.
+
+---
+
+## Expected Outputs
+
+After a full evaluation run, `evaluation/results/` contains:
+
+| File | Source |
+| --- | --- |
+| `fidelity.csv`, `fidelity_details.jsonl` | `run_all_systems` |
+| `transcripts.jsonl` | `run_all_systems` |
+| `domain_confusion_matrix.csv`, `domain_per_domain.csv` | `run_all_systems` |
+| `ablation_fidelity.csv`, `ablation_fidelity_details.jsonl` | `run_ablations` |
+| `headline_plot.png`, `ablation_plot.png`, `robustness_plot.png` | `generate_plots` |
+| `final_report.md` | `generate_report` |
+
+Streamlit session history is persisted in `data/nurse_llm.db` (SQLite; gitignored).
+
+---
+
+## Hardware & Cost
+
+- Runs on a commodity laptop CPU; no GPU required.
+- Python footprint ~200 MB; SQLite DB <50 MB.
+- Full evaluation run: ~$0.11 of OpenAI API spend (gpt-4o-mini for chat,
+  gpt-4o for feedback). Use `--limit N` on the runners for cheaper sanity
+  checks.
+
+---
+
+## Data
+
+All 105 patient scenarios in `data/scenarios/` are **synthetic** — generated
+via `scripts/generate_cases.py` and reviewed by the team. There is **no PHI**
+and no third-party licensed clinical data in this repo. Each scenario is
+validated against `app/models/scenario.PatientScenario` (Pydantic v2) at load
+time; malformed JSON produces a clear validation error rather than a stack
+trace.
 
 ---
 
@@ -176,14 +236,27 @@ Nurse_LLM/
 │       ├── 1_Patient_Chat.py       # Scenario picker + active chat + live coverage
 │       ├── 2_Session_Review.py     # Post-session feedback report
 │       └── 3_History.py            # Past sessions
-├── data/scenarios/                 # 100+ patient case JSON files
+├── data/scenarios/                 # 105 patient case JSON files
 ├── evaluation/                     # Baselines, metrics, ablations, reports
+│   ├── METHODOLOGY.md              # Scoring definitions, reproducibility notes
 ├── scripts/
 │   ├── generate_cases.py           # Scenario synthesis via LLM
 │   └── seed_db.py                  # DB initialization
 ├── architecture_diagram.html       # SVG architecture diagram for slides
 ├── runtime.txt                     # Python version for Streamlit Cloud
 └── requirements.txt
+```
+
+---
+
+## Developer Setup
+
+Pre-commit hooks lint with Ruff and format with Black on every commit.
+
+```bash
+pip install pre-commit ruff black
+pre-commit install
+pre-commit run --all-files
 ```
 
 ---

@@ -5,8 +5,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import streamlit as st
-from frontend.theme import inject_theme
+
 from app.services.session_manager import session_manager
+from frontend.theme import inject_theme
 
 st.set_page_config(page_title="Session History", page_icon="🏥", layout="wide")
 inject_theme()
@@ -22,7 +23,9 @@ except Exception as e:
 
 # Hide abandoned sessions — active with zero turns means the student selected
 # a patient but never sent a message, so there's nothing to review.
-meaningful = [s for s in sessions if not (s["status"] == "active" and s["turn_count"] == 0)]
+meaningful = [
+    s for s in sessions if not (s["status"] == "active" and s["turn_count"] == 0)
+]
 hidden = len(sessions) - len(meaningful)
 
 if not meaningful:
@@ -52,8 +55,9 @@ for session in meaningful:  # Already sorted most recent first by session_manage
 
         st.caption(f"Started: {session['start_time']}")
 
-        if session["status"] == "ended":
-            if st.button(f"View Feedback", key=f"fb_{session['session_id']}"):
-                st.session_state.session_id = session["session_id"]
-                st.session_state.session_active = False
-                st.switch_page("pages/2_Session_Review.py")
+        if session["status"] == "ended" and st.button(
+            "View Feedback", key=f"fb_{session['session_id']}"
+        ):
+            st.session_state.session_id = session["session_id"]
+            st.session_state.session_active = False
+            st.switch_page("pages/2_Session_Review.py")

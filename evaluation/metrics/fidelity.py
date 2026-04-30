@@ -29,7 +29,6 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-
 CHARACTER_BREAK_PATTERNS = [
     r"\bas an? ai\b",
     r"\bi(?:'m| am) (?:an? )?(?:language model|ai|artificial)",
@@ -41,8 +40,10 @@ CHARACTER_BREAK_PATTERNS = [
 ]
 
 DIAGNOSTIC_LANGUAGE = [
-    r"\bmyocardial infarction\b", r"\bheart attack is what\b",
-    r"\bsepsis\b.*\byou have\b", r"\bappendicitis\b.*\byou have\b",
+    r"\bmyocardial infarction\b",
+    r"\bheart attack is what\b",
+    r"\bsepsis\b.*\byou have\b",
+    r"\bappendicitis\b.*\byou have\b",
 ]
 
 # Generic denial phrases — a patient saying "no I don't have that" is fine,
@@ -81,7 +82,11 @@ def _symptom_tokens(scenario: dict) -> tuple[set[str], set[str]]:
             for field in ("character", "location", "radiation"):
                 if detail.get(field):
                     present.update(_tokenize(detail[field]))
-            for field in ("associated_symptoms", "aggravating_factors", "alleviating_factors"):
+            for field in (
+                "associated_symptoms",
+                "aggravating_factors",
+                "alleviating_factors",
+            ):
                 for item in detail.get(field, []):
                     present.update(_tokenize(item))
 
@@ -91,9 +96,32 @@ def _symptom_tokens(scenario: dict) -> tuple[set[str], set[str]]:
 
     # Remove generic words that aren't symptom-specific
     stopwords = {
-        "the", "a", "an", "and", "or", "with", "in", "on", "at", "of", "to", "is", "it",
-        "my", "i", "me", "you", "like", "felt", "feel", "been", "am",
-        "pain", "feeling", "symptom", "symptoms",  # too generic
+        "the",
+        "a",
+        "an",
+        "and",
+        "or",
+        "with",
+        "in",
+        "on",
+        "at",
+        "of",
+        "to",
+        "is",
+        "it",
+        "my",
+        "i",
+        "me",
+        "you",
+        "like",
+        "felt",
+        "feel",
+        "been",
+        "am",
+        "pain",
+        "feeling",
+        "symptom",
+        "symptoms",  # too generic
     }
     return present - stopwords, absent - stopwords
 
@@ -187,12 +215,14 @@ def evaluate_transcripts(transcripts_path: str) -> dict:
             if sp not in scenario_cache:
                 scenario_cache[sp] = _load_scenario(sp)
             result = score_turn(record["patient"], scenario_cache[sp])
-            result.update({
-                "system": record["system"],
-                "scenario_id": record["scenario_id"],
-                "student": record["student"],
-                "patient": record["patient"],
-            })
+            result.update(
+                {
+                    "system": record["system"],
+                    "scenario_id": record["scenario_id"],
+                    "student": record["student"],
+                    "patient": record["patient"],
+                }
+            )
             by_system[record["system"]].append(result)
 
     summary = {}
@@ -216,7 +246,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("transcripts", help="Path to transcripts JSONL")
     parser.add_argument("--out", default="evaluation/results/fidelity.csv")
-    parser.add_argument("--details-out", default="evaluation/results/fidelity_details.jsonl")
+    parser.add_argument(
+        "--details-out", default="evaluation/results/fidelity_details.jsonl"
+    )
     args = parser.parse_args()
 
     results = evaluate_transcripts(args.transcripts)
@@ -224,26 +256,44 @@ def main() -> None:
     print("\n=== Response Fidelity (P2 target: ≥90%) ===\n")
     for system, stats in results["summary"].items():
         status = "PASS" if stats["target_met_90pct"] else "FAIL"
-        print(f"  {system:20s}  faithful={stats['faithful_rate']:.1%}  "
-              f"breaks={stats['character_break_rate']:.1%}  "
-              f"halluc={stats['hallucination_rate']:.1%}  [{status}]")
+        print(
+            f"  {system:20s}  faithful={stats['faithful_rate']:.1%}  "
+            f"breaks={stats['character_break_rate']:.1%}  "
+            f"halluc={stats['hallucination_rate']:.1%}  [{status}]"
+        )
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     import csv
+
     with open(out_path, "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["system", "total_turns", "faithful_rate",
-                    "character_break_rate", "hallucination_rate", "target_met_90pct"])
+        w.writerow(
+            [
+                "system",
+                "total_turns",
+                "faithful_rate",
+                "character_break_rate",
+                "hallucination_rate",
+                "target_met_90pct",
+            ]
+        )
         for system, stats in results["summary"].items():
-            w.writerow([system, stats["total_turns"], stats["faithful_rate"],
-                        stats["character_break_rate"], stats["hallucination_rate"],
-                        stats["target_met_90pct"]])
+            w.writerow(
+                [
+                    system,
+                    stats["total_turns"],
+                    stats["faithful_rate"],
+                    stats["character_break_rate"],
+                    stats["hallucination_rate"],
+                    stats["target_met_90pct"],
+                ]
+            )
     print(f"\nSummary written to {out_path}")
 
     details_path = Path(args.details_out)
     with open(details_path, "w") as f:
-        for system, turns in results["per_turn"].items():
+        for _system, turns in results["per_turn"].items():
             for t in turns:
                 f.write(json.dumps(t) + "\n")
     print(f"Per-turn details written to {details_path}")

@@ -4,6 +4,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import streamlit as st
+
 from frontend.theme import inject_theme
 
 st.set_page_config(
@@ -23,7 +24,7 @@ st.markdown(
     "<div style='font-size:1.2rem; color:#7B8A74; margin-bottom:1rem;'>"
     "AI-Powered Patient Assessment Trainer"
     "</div>",
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 st.markdown("""
@@ -52,6 +53,7 @@ Use the sidebar to navigate to **Patient Chat** and begin a session.
 # Smoke-test indicator: confirms the services booted and scenarios loaded
 try:
     from app.services.scenario_service import scenario_service
+
     _count = len(scenario_service.get_scenario_ids())
     st.success(f"{_count} patient scenarios loaded and ready.")
 except Exception as e:

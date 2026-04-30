@@ -1,4 +1,5 @@
 """Initialize the SQLite database with all tables."""
+
 import sys
 from pathlib import Path
 
