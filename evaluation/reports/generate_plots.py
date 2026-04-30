@@ -24,8 +24,17 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-random.seed(42)
-np.random.seed(42)
+
+def _seed(seed: int = 42) -> None:
+    """Seed Python random and numpy.random; called from main() to avoid
+    resetting global RNG state at import time."""
+    random.seed(seed)
+    try:
+        import numpy as np  # noqa: PLC0415
+
+        np.random.seed(seed)
+    except ImportError:
+        pass
 
 
 def _read_csv(path: Path) -> list[dict]:
@@ -274,6 +283,7 @@ def render_ablation_plot(ablation: list[dict], out_path: Path) -> None:
 
 
 def main() -> None:
+    _seed()
     parser = argparse.ArgumentParser()
     parser.add_argument("--results-dir", default="evaluation/results")
     args = parser.parse_args()

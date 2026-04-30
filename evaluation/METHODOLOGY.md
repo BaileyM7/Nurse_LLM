@@ -116,7 +116,7 @@ Minimum versions pinned in `evaluation/requirements.txt` (in addition to the cor
 ## 8. Reproducibility
 
 - **LLM determinism.** The domain classifier in `metrics/domain_classifier.py` uses `temperature=0.0` so repeated runs produce identical outputs modulo OpenAI's internal non-determinism. The patient simulation uses `temperature=0.7` by design — reproducibility there comes from *distribution-level* metrics (fidelity rate over hundreds of turns), not from reproducing individual turns. We report mean ± std across 3 runs in the final report.
-- **Random seeds.** Python `random.seed(42)` and `numpy.random.seed(42)` set at the top of `runners/run_all_systems.py` and `ablations/run_ablations.py`. Scenarios are iterated in sorted filename order.
+- **Random seeds.** The two runners (`run_all_systems`, `run_ablations`) seed `random` from a `--seed N` CLI argument (default 42); `run_all_systems` and the two report scripts (`generate_plots`, `generate_report`) also seed `numpy.random` when numpy is available. Seeds are applied inside `main()` / `main_async()`, not at module-import time. Scenarios are iterated in sorted filename order.
 - **Checkpointing.** Each system × scenario transcript is written incrementally to JSONL. Both runners accept `--resume` to pick up where a partial run left off: existing transcripts are read from the output JSONL, and `(system, scenario_id)` pairs already present are skipped on the next run. Without `--resume`, the runner truncates the output file and starts from scratch.
 - **Input versioning.** Scenarios and the interview script are tracked in git; the output JSONL includes `scenario_path`, `turn_index`, and `question` for full traceability back to the inputs.
 - **Eval scripts are the ground truth.** Every number in the final report is produced by `reports/generate_report.py` reading from `results/*.csv` and `results/*.jsonl`. No manually transcribed numbers in slides.
@@ -146,12 +146,12 @@ Outputs a single markdown file at `results/final_report.md` plus any referenced 
 
 ## Reproducibility
 
-All evaluation entry points (`run_all_systems`, `run_ablations`,
-`generate_plots`, `generate_report`) seed `random` (and `numpy.random` when
-available) with `42` by default. Override with `--seed N` on the runners.
-LLM provider calls remain non-deterministic at the model layer, but our
-sampler-side seeds keep scenario ordering, sampling-based ablations, and
-plot jitter stable across runs.
+The two runners (`run_all_systems`, `run_ablations`) seed `random` from a
+`--seed N` CLI argument (default 42); `run_all_systems` and the two report
+scripts (`generate_plots`, `generate_report`) also seed `numpy.random` when
+numpy is available. LLM provider calls remain non-deterministic at the model
+layer, but our sampler-side seeds keep scenario ordering, sampling-based
+ablations, and plot jitter stable across runs.
 
 Both runners (`run_all_systems`, `run_ablations`) accept `--resume` to pick up
 where a partial run left off: existing transcripts are read from the output JSONL,

@@ -27,13 +27,17 @@ import json
 import random
 from pathlib import Path
 
-random.seed(42)
-try:
-    import numpy as np
 
-    np.random.seed(42)
-except ImportError:
-    pass
+def _seed(seed: int = 42) -> None:
+    """Seed Python random and numpy.random; called from main() to avoid
+    resetting global RNG state at import time."""
+    random.seed(seed)
+    try:
+        import numpy as np  # noqa: PLC0415
+
+        np.random.seed(seed)
+    except ImportError:
+        pass
 
 
 def _load_csv(path: Path) -> list[dict]:
@@ -226,6 +230,7 @@ def build_examples_section(examples: list[dict]) -> str:
 
 
 def main() -> None:
+    _seed()
     parser = argparse.ArgumentParser()
     parser.add_argument("--results-dir", default="evaluation/results")
     parser.add_argument("--out", default="evaluation/results/final_report.md")
