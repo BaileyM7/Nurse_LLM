@@ -143,3 +143,16 @@ Outputs a single markdown file at `results/final_report.md` plus any referenced 
 - This framework does **not** claim the full pipeline is clinically safe. Faithful ≠ medically appropriate.
 - We do **not** claim the interview script exhausts all ways a student might ask a question — it is a controlled comparison baseline, not a coverage guarantee.
 - Auto-fidelity scores are a lower bound; Phase 2 manual annotation is the final word.
+
+## Reproducibility
+
+All evaluation entry points (`run_all_systems`, `run_ablations`,
+`generate_plots`, `generate_report`) seed `random` (and `numpy.random` when
+available) with `42` by default. Override with `--seed N` on the runners.
+LLM provider calls remain non-deterministic at the model layer, but our
+sampler-side seeds keep scenario ordering, sampling-based ablations, and
+plot jitter stable across runs.
+
+JSONL checkpointing is implemented per-scenario in
+`evaluation/runners/run_all_systems.py` and `evaluation/ablations/run_ablations.py`,
+so partial runs are resumable by scenario ID.

@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import random
 from pathlib import Path
 
 from app.models.scenario import PatientScenario
@@ -118,7 +119,15 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None,
                         help="Only run first N scenarios (for quick sanity checks)")
     parser.add_argument("--out", default="evaluation/results/transcripts.jsonl")
+    parser.add_argument("--seed", type=int, default=42,
+                        help="Random seed (default: 42).")
     args = parser.parse_args()
+    random.seed(args.seed)
+    try:
+        import numpy as np
+        np.random.seed(args.seed)
+    except ImportError:
+        pass
     asyncio.run(main_async(args))
 
 

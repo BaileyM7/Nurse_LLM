@@ -24,7 +24,15 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import random
 from pathlib import Path
+
+random.seed(42)
+try:
+    import numpy as np
+    np.random.seed(42)
+except ImportError:
+    pass
 
 
 def _load_csv(path: Path) -> list[dict]:

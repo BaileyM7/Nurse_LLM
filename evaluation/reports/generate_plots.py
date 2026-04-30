@@ -18,10 +18,14 @@ from __future__ import annotations
 
 import argparse
 import csv
+import random
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
+
+random.seed(42)
+np.random.seed(42)
 
 
 def _read_csv(path: Path) -> list[dict]:
