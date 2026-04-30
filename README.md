@@ -94,6 +94,26 @@ The app opens at `http://localhost:8501`.
 
 ---
 
+## Test Instructions
+
+After installing dependencies, verify the install with the smoke test:
+
+```bash
+python scripts/smoke_run.py
+```
+
+Expected output: scenario name (`Mr. ...`) and a short rule-based patient reply.
+No API keys required.
+
+For the full test suite (no API calls — all LLM paths are mocked):
+
+```bash
+pytest -q
+pytest --cov=app --cov=evaluation --cov-report=term-missing
+```
+
+---
+
 ## Deployment
 
 The app is designed to deploy on **Streamlit Community Cloud**:
@@ -136,18 +156,59 @@ Each generated case is validated against the `PatientScenario` Pydantic schema b
 A full evaluation harness lives under `evaluation/`:
 
 ```bash
-cd evaluation
-pip install -r requirements.txt
+pip install -r evaluation/requirements.txt
 
-# Run baseline comparison (rule-based vs. few-shot vs. full pipeline)
-python runners/run_all_systems.py
+# 1. Baseline comparison (rule_based vs. few_shot vs. full_pipeline)
+python -m evaluation.runners.run_all_systems
 
-# Generate plots and final report
-python reports/generate_plots.py
-python reports/generate_report.py
+# 2. Ablation study (memory on/off, temperature, prompt minimalism, etc.)
+python -m evaluation.ablations.run_ablations
+
+# 3. Regenerate figures and the final report from results CSVs
+python -m evaluation.reports.generate_plots
+python -m evaluation.reports.generate_report
 ```
 
-Results land in `evaluation/results/`: fidelity CSVs, domain confusion matrices, ablation summaries, per-scenario failure rates, and rendered plots. See [`evaluation/METHODOLOGY.md`](evaluation/METHODOLOGY.md) for scoring definitions.
+All scripts use `random.seed(42)` so a fresh run reproduces the numbers in the
+report. See `evaluation/METHODOLOGY.md` for scoring definitions.
+
+---
+
+## Expected Outputs
+
+After a full evaluation run, `evaluation/results/` contains:
+
+| File | Source |
+| --- | --- |
+| `fidelity.csv`, `fidelity_details.jsonl` | `run_all_systems` |
+| `transcripts.jsonl` | `run_all_systems` |
+| `domain_confusion_matrix.csv`, `domain_per_domain.csv` | `run_all_systems` |
+| `ablation_fidelity.csv`, `ablation_fidelity_details.jsonl` | `run_ablations` |
+| `headline_plot.png`, `ablation_plot.png`, `robustness_plot.png` | `generate_plots` |
+| `final_report.md` | `generate_report` |
+
+Streamlit session history is persisted in `data/nurse_llm.db` (SQLite; gitignored).
+
+---
+
+## Hardware & Cost
+
+- Runs on a commodity laptop CPU; no GPU required.
+- Python footprint ~200 MB; SQLite DB <50 MB.
+- Full evaluation run: ~$0.11 of OpenAI API spend (gpt-4o-mini for chat,
+  gpt-4o for feedback). Use `--limit N` on the runners for cheaper sanity
+  checks.
+
+---
+
+## Data
+
+All 105 patient scenarios in `data/scenarios/` are **synthetic** — generated
+via `scripts/generate_cases.py` and reviewed by the team. There is **no PHI**
+and no third-party licensed clinical data in this repo. Each scenario is
+validated against `app/models/scenario.PatientScenario` (Pydantic v2) at load
+time; malformed JSON produces a clear validation error rather than a stack
+trace.
 
 ---
 
